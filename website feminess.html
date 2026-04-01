@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FEMINESS – Marina Henze</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    /* ─── TOKENS ─── */
+    :root {
+      --teal:        #257c6c;
+      --teal-dark:   #1b5c50;
+      --teal-light:  #5ec6b3;
+      --red:         #861627;
+      --red-dark:    #64081b;
+      --rose:        #cf5a73;
+      --sand:        #c2ab8d;
+      --sand-dark:   #8d6a48;
+      --sand-light:  #e4bc95;
+      --black:       #070808;
+      --white:       #ffffff;
+      --off-white:   #f8f6f2;
+      --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-smooth: cubic-bezier(0.76, 0, 0.24, 1);
+      --nav-h:       76px;
+    }
+
+    /* ─── RESET ─── */
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior:smooth; font-size:16px; }
+    body {
+      background: var(--black);
+      color: var(--off-white);
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      line-height: 1.6;
+      overflow-x: hidden;
+      cursor: none;
+    }
+    img { display:block; max-width:100%; }
+    a { text-decoration:none; }
+    ul { list-style:none; }
+    ::selection { background:var(--rose); color:var(--white); }
+    ::-webkit-scrollbar { width:3px; }
+    ::-webkit-scrollbar-track { background:var(--black); }
+    ::-webkit-scrollbar-thumb { background:var(--teal); }
+
+    /* ─── CURSOR ─── */
+    #cur { position:fixed; width:9px; height:9px; background:var(--rose); border-radius:50%; pointer-events:none; z-index:9999; transform:translate(-50%,-50%); mix-blend-mode:normal; transition:width .3s var(--ease-out), height .3s var(--ease-out); }
+    #cur-ring { position:fixed; width:38px; height:38px; border:1px solid rgba(94,198,179,.45); border-radius:50%; pointer-events:none; z-index:9998; transform:translate(-50%,-50%); transition:width .4s var(--ease-out), height .4s var(--ease-out), opacity .3s; }
+    body.h #cur { width:18px; height:18px; }
+    body.h #cur-ring { width:64px; height:64px; opacity:.35; }
+
+    /* ─── PROGRESS ─── */
+    #prog { position:fixed; top:0; left:0; height:2px; background:linear-gradient(90deg,var(--teal-dark),var(--teal),var(--teal-light)); z-index:9001; width:0%; pointer-events:none; }
+
+    /* ─── LOADER ─── */
+    #loader { position:fixed; inset:0; background:var(--black); z-index:10000; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:28px; transition:opacity .9s var(--ease-out), visibility .9s; }
+    #loader.gone { opacity:0; visibility:hidden; }
+    .ld-logo { font-family:'Cormorant Garamond',serif; font-size:2.2rem; font-weight:500; letter-spacing:.45em; text-transform:uppercase; color:var(--sand-light); }
+    .ld-bar-wrap { width:180px; height:1px; background:rgba(255,255,255,.08); overflow:hidden; }
+    .ld-bar { height:100%; background:var(--teal); animation:ldBar 1.8s var(--ease-out) forwards; }
+    @keyframes ldBar { from{width:0} to{width:100%} }
+
+    /* ─── NAV ─── */
+    nav {
+      position:fixed; top:0; left:0; right:0;
+      height:var(--nav-h); z-index:1000;
+      display:flex; align-items:center; justify-content:space-between;
+      padding:0 64px;
+      transition:background .5s, border-color .5s;
+    }
+    nav.sc {
+      background:rgba(7,8,8,.88);
+      backdrop-filter:blur(18px);
+      border-bottom:1px solid rgba(94,198,179,.12);
+    }
+    .nav-logo {
+      font-family:'Cormorant Garamond',serif;
+      font-size:1.55rem; font-weight:600;
+      letter-spacing:.3em; text-transform:uppercase;
+      color:var(--sand-light);
+    }
+    .nav-links { display:flex; gap:44px; }
+    .nav-links a {
+      font-size:.72rem; letter-spacing:.22em; text-transform:uppercase;
+      color:rgba(248,246,242,.6); position:relative; transition:color .3s;
+    }
+    .nav-links a::after {
+      content:''; position:absolute; bottom:-4px; left:0;
+      width:0; height:1px; background:var(--teal-light);
+      transition:width .4s var(--ease-out);
+    }
+    .nav-links a:hover { color:var(--teal-light); }
+    .nav-links a:hover::after { width:100%; }
+    .nav-cta {
+      font-size:.72rem; letter-spacing:.2em; text-transform:uppercase;
+      padding:11px 26px; border:1px solid var(--rose); color:var(--rose);
+      font-weight:400; position:relative; overflow:hidden; transition:color .3s;
+    }
+    .nav-cta::before {
+      content:''; position:absolute; inset:0;
+      background:var(--rose); transform:translateX(-101%);
+      transition:transform .4s var(--ease-out); z-index:-1;
+    }
+    .nav-cta:hover { color:var(--white); }
+    .nav-cta:hover::before { transform:translateX(0); }
+
+    /* ─── HERO ─── */
+    .hero {
+      position:relative; height:100vh; min-height:680px;
+      display:flex; align-items:center; overflow:hidden;
+    }
+    .hero-bg {
+      position:absolute; inset:0;
+      background:linear-gradient(135deg, #040606 0%, #0c201c 55%, #040606 100%);
+    }
+    /* animated soft glow */
+    .hero-aura {
+      position:absolute; top:50%; left:30%;
+      transform:translate(-50%,-50%);
+      width:700px; height:700px;
+      background:radial-gradient(ellipse, rgba(37,124,108,.14) 0%, transparent 68%);
+      pointer-events:none;
+      animation:aura 8s ease-in-out infinite alternate;
+    }
+    .hero-aura2 {
+      position:absolute; top:60%; right:10%;
+      width:500px; height:500px;
+      background:radial-gradient(ellipse, rgba(207,90,115,.08) 0%, transparent 65%);
+      pointer-events:none;
+    }
+    @keyframes aura { from{opacity:.7; transform:translate(-50%,-50%) scale(1)} to{opacity:1; transform:translate(-50%,-50%) scale(1.15)} }
+
+    .hero-grain {
+      position:absolute; inset:-50%; width:200%; height:200%;
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.035'/%3E%3C/svg%3E");
+      animation:grain 8s steps(10) infinite; pointer-events:none;
+    }
+    @keyframes grain {
+      0%,100%{transform:translate(0,0)}10%{transform:translate(-2%,-3%)}
+      20%{transform:translate(3%,2%)}30%{transform:translate(-1%,4%)}
+      40%{transform:translate(4%,-1%)}50%{transform:translate(-3%,3%)}
+      60%{transform:translate(2%,-4%)}70%{transform:translate(-4%,1%)}
+      80%{transform:translate(1%,3%)}90%{transform:translate(3%,-2%)}
+    }
+
+    .hero-inner {
+      position:relative; z-index:2;
+      max-width:1380px; margin:0 auto; padding:0 64px;
+      display:grid; grid-template-columns:1fr 1fr;
+      align-items:center; gap:0; width:100%;
+    }
+    .hero-copy { padding-right:60px; }
+    .hero-eyebrow {
+      display:flex; align-items:center; gap:14px; margin-bottom:36px;
+      opacity:0; animation:fadeUp .9s var(--ease-out) .3s forwards;
+    }
+    .hero-eyebrow-line { width:34px; height:1px; background:var(--teal-light); }
+    .hero-eyebrow-txt { font-size:.68rem; letter-spacing:.35em; text-transform:uppercase; color:var(--teal-light); }
+
+    .hero-h1 {
+      font-family:'Cormorant Garamond',serif;
+      font-size:clamp(3.6rem,5.8vw,6.2rem);
+      font-weight:300; line-height:1.04; letter-spacing:-.01em;
+      margin-bottom:28px;
+      opacity:0; animation:fadeUp .9s var(--ease-out) .5s forwards;
+    }
+    .hero-h1 em { font-style:italic; color:var(--teal-light); }
+    .hero-h1 strong { font-weight:500; color:var(--sand-light); }
+
+    .hero-sub {
+      font-size:.97rem; font-weight:300; line-height:1.8;
+      color:rgba(248,246,242,.55); max-width:460px; margin-bottom:52px;
+      opacity:0; animation:fadeUp .9s var(--ease-out) .7s forwards;
+    }
+    .hero-btns {
+      display:flex; align-items:center; gap:28px; flex-wrap:wrap;
+      opacity:0; animation:fadeUp .9s var(--ease-out) .9s forwards;
+    }
+
+    /* Buttons */
+    .btn-rose {
+      display:inline-flex; align-items:center; gap:10px;
+      padding:17px 38px; background:var(--rose); color:var(--white);
+      font-size:.73rem; letter-spacing:.2em; text-transform:uppercase;
+      font-weight:500; font-family:'Inter',sans-serif;
+      position:relative; overflow:hidden; transition:transform .3s var(--ease-out);
+    }
+    .btn-rose::after {
+      content:''; position:absolute; inset:0;
+      background:rgba(255,255,255,.18);
+      transform:translateX(-101%) skewX(-12deg);
+      transition:transform .5s var(--ease-out);
+    }
+    .btn-rose:hover::after { transform:translateX(200%) skewX(-12deg); }
+    .btn-rose:hover { transform:translateY(-2px); }
+    .btn-rose svg { transition:transform .3s var(--ease-out); }
+    .btn-rose:hover svg { transform:translateX(4px); }
+
+    .btn-outline-teal {
+      display:inline-flex; align-items:center; gap:8px;
+      font-size:.72rem; letter-spacing:.18em; text-transform:uppercase;
+      color:rgba(248,246,242,.6); font-weight:300;
+      border-bottom:1px solid rgba(94,198,179,.3); padding-bottom:3px;
+      transition:color .3s, border-color .3s;
+    }
+    .btn-outline-teal:hover { color:var(--teal-light); border-color:var(--teal-light); }
+
+    /* Hero image */
+    .hero-img-wrap {
+      position:relative; height:100vh; min-height:680px;
+      opacity:0; animation:fadeLeft 1.1s var(--ease-out) .5s forwards;
+    }
+    .hero-img-wrap img {
+      width:100%; height:100%; object-fit:cover; object-position:center top;
+      display:block;
+    }
+    /* dark gradient overlay blending image into bg */
+    .hero-img-wrap::before {
+      content:''; position:absolute; inset:0; z-index:1;
+      background:linear-gradient(to right, var(--black) 0%, transparent 35%),
+                 linear-gradient(to top, var(--black) 0%, transparent 25%);
+    }
+    .hero-stats-card {
+      position:absolute; bottom:60px; left:-50px; z-index:3;
+      background:rgba(7,8,8,.82); backdrop-filter:blur(16px);
+      border:1px solid rgba(94,198,179,.18); padding:22px 30px;
+    }
+    .hero-stats-num {
+      font-family:'Cormorant Garamond',serif; font-size:2.6rem;
+      font-weight:300; color:var(--teal-light); line-height:1;
+    }
+    .hero-stats-lbl {
+      font-size:.65rem; letter-spacing:.2em; text-transform:uppercase;
+      color:rgba(248,246,242,.35); margin-top:6px;
+    }
+
+    /* ─── TICKER ─── */
+    .ticker { background:var(--rose); padding:14px 0; overflow:hidden; }
+    .ticker-track {
+      display:flex; white-space:nowrap;
+      animation:tick 28s linear infinite;
+    }
+    .ticker-item {
+      display:inline-flex; align-items:center; gap:36px; padding-right:72px;
+      font-size:.68rem; letter-spacing:.28em; text-transform:uppercase;
+      color:var(--white); font-weight:500;
+    }
+    .ticker-dot { width:4px; height:4px; background:rgba(255,255,255,.4); border-radius:50%; flex-shrink:0; }
+    @keyframes tick { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+
+    /* ─── SHARED SECTION UTILS ─── */
+    .s-inner { max-width:1380px; margin:0 auto; padding:0 64px; }
+    .s-label { display:flex; align-items:center; gap:14px; }
+    .s-label-line { width:28px; height:1px; background:var(--teal-light); }
+    .s-label-txt { font-size:.66rem; letter-spacing:.35em; text-transform:uppercase; color:var(--teal-light); }
+    .s-title {
+      font-family:'Cormorant Garamond',serif;
+      font-size:clamp(2.4rem,3.8vw,4rem);
+      font-weight:300; line-height:1.1; letter-spacing:-.01em;
+    }
+    .s-title em { font-style:italic; color:var(--sand-light); }
+    .s-title strong { color:var(--teal-light); font-weight:400; }
+
+    /* ─── MANIFESTO ─── */
+    .manifesto { padding:150px 0; background:var(--teal-dark); }
+    .manifesto-grid { display:grid; grid-template-columns:1fr 1fr; gap:100px; align-items:center; }
+    .manifesto-lbl { margin-bottom:28px; }
+    .manifesto-quote {
+      font-family:'Cormorant Garamond',serif;
+      font-size:clamp(2rem,3.2vw,3rem); font-weight:300;
+      line-height:1.35; color:var(--white); margin-bottom:36px;
+      position:relative;
+    }
+    .manifesto-quote::before {
+      content:'\201C'; position:absolute; top:-28px; left:-14px;
+      font-size:5.5rem; color:var(--teal-light); opacity:.25;
+      font-family:'Cormorant Garamond',serif; line-height:1;
+    }
+    .manifesto-body {
+      font-size:.93rem; line-height:1.9; color:rgba(255,255,255,.55); margin-bottom:44px;
+    }
+    .manifesto-media { padding-top:44px; border-top:1px solid rgba(94,198,179,.15); }
+    .manifesto-media-lbl { font-size:.62rem; letter-spacing:.28em; text-transform:uppercase; color:rgba(255,255,255,.28); margin-bottom:18px; }
+    .manifesto-media-logos { display:flex; flex-wrap:wrap; gap:24px 32px; }
+    .manifesto-media-logos span {
+      font-family:'Cormorant Garamond',serif; font-size:1rem; font-weight:500;
+      letter-spacing:.08em; color:rgba(255,255,255,.22); text-transform:uppercase;
+      transition:color .3s; cursor:default;
+    }
+    .manifesto-media-logos span:hover { color:rgba(94,198,179,.55); }
+
+    /* image side */
+    .manifesto-img-wrap { position:relative; }
+    .manifesto-img {
+      width:100%; aspect-ratio:3/4; overflow:hidden;
+      border:1px solid rgba(94,198,179,.15);
+    }
+    .manifesto-img img {
+      width:100%; height:100%; object-fit:cover; object-position:center top;
+      transition:transform .8s var(--ease-out);
+    }
+    .manifesto-img:hover img { transform:scale(1.04); }
+    .manifesto-badge {
+      position:absolute; top:-26px; right:-26px;
+      width:96px; height:96px; border-radius:50%;
+      background:var(--rose);
+      display:flex; flex-direction:column; align-items:center; justify-content:center;
+      text-align:center; padding:12px;
+    }
+    .manifesto-badge-n {
+      font-family:'Cormorant Garamond',serif; font-size:1.7rem; font-weight:500;
+      color:var(--white); line-height:1;
+    }
+    .manifesto-badge-t { font-size:.48rem; letter-spacing:.1em; text-transform:uppercase; color:rgba(255,255,255,.7); margin-top:4px; }
+
+    /* ─── IMPACT STRIP ─── */
+    .impact { background:var(--sand-light); padding:100px 0; }
+    .impact-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:2px; }
+    .impact-cell { background:rgba(0,0,0,.05); padding:52px 36px; text-align:center; }
+    .impact-num {
+      font-family:'Cormorant Garamond',serif; font-size:3.8rem; font-weight:300;
+      color:var(--teal-dark); line-height:1;
+      display:flex; align-items:flex-start; justify-content:center; gap:3px;
+    }
+    .impact-sup { font-size:2rem; margin-top:.35em; }
+    .impact-lbl { font-size:.64rem; letter-spacing:.24em; text-transform:uppercase; color:rgba(0,0,0,.42); margin-top:10px; }
+
+    /* ─── PROGRAMMES ─── */
+    .programmes { padding:150px 0; background:var(--black); }
+    .programmes-hdr {
+      display:grid; grid-template-columns:1fr 1fr; gap:60px;
+      align-items:end; margin-bottom:72px;
+    }
+    .programmes-desc { font-size:.93rem; color:rgba(248,246,242,.45); line-height:1.85; max-width:400px; }
+
+    .prog-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:2px; }
+    .prog-card {
+      background:#0d1614;
+      border:1px solid rgba(37,124,108,.1);
+      padding:52px 40px; position:relative; overflow:hidden;
+      transition:background .45s, border-color .45s;
+      display:flex; flex-direction:column;
+    }
+    .prog-card::after {
+      content:''; position:absolute; bottom:0; left:0;
+      width:100%; height:2px; background:var(--teal-light);
+      transform:scaleX(0); transform-origin:left;
+      transition:transform .5s var(--ease-out);
+    }
+    .prog-card:hover::after { transform:scaleX(1); }
+    .prog-card:hover { background:#121f1c; border-color:rgba(94,198,179,.22); }
+
+    /* accent card */
+    .prog-card.accent { background:var(--red-dark); border-color:rgba(207,90,115,.2); }
+    .prog-card.accent::after { background:var(--rose); }
+    .prog-card.accent:hover { background:var(--red); border-color:rgba(207,90,115,.4); }
+
+    .prog-num { font-family:'Cormorant Garamond',serif; font-size:.78rem; color:var(--teal-light); letter-spacing:.32em; margin-bottom:32px; opacity:.6; }
+    .prog-card.accent .prog-num { color:rgba(228,188,149,.7); }
+    .prog-tag {
+      display:inline-block; font-size:.62rem; letter-spacing:.2em; text-transform:uppercase;
+      color:var(--teal-light); background:rgba(94,198,179,.08);
+      border:1px solid rgba(94,198,179,.18); padding:5px 12px; margin-bottom:22px;
+    }
+    .prog-card.accent .prog-tag { color:var(--sand-light); background:rgba(228,188,149,.1); border-color:rgba(228,188,149,.2); }
+    .prog-title {
+      font-family:'Cormorant Garamond',serif; font-size:1.75rem; font-weight:400;
+      line-height:1.2; color:var(--off-white); margin-bottom:18px;
+      transition:color .3s;
+    }
+    .prog-card:hover .prog-title { color:var(--teal-light); }
+    .prog-card.accent .prog-title { color:var(--sand-light); }
+    .prog-card.accent:hover .prog-title { color:var(--white); }
+    .prog-text { font-size:.86rem; color:rgba(248,246,242,.42); line-height:1.8; margin-bottom:auto; padding-bottom:44px; }
+    .prog-card.accent .prog-text { color:rgba(228,188,149,.55); }
+    .prog-link {
+      display:inline-flex; align-items:center; gap:10px; margin-top:44px;
+      font-size:.68rem; letter-spacing:.2em; text-transform:uppercase;
+      color:rgba(248,246,242,.35); transition:color .3s, gap .3s;
+    }
+    .prog-card:hover .prog-link { color:var(--teal-light); gap:16px; }
+    .prog-card.accent .prog-link { color:rgba(228,188,149,.5); }
+    .prog-card.accent:hover .prog-link { color:var(--sand-light); gap:16px; }
+    .prog-arr { width:22px; height:1px; background:currentColor; position:relative; }
+    .prog-arr::after {
+      content:''; position:absolute; right:0; top:-3px;
+      width:7px; height:7px;
+      border-right:1px solid currentColor; border-top:1px solid currentColor;
+      transform:rotate(45deg);
+    }
+
+    /* ─── METHOD ─── */
+    .method { padding:150px 0; background:var(--teal-dark); }
+    .method-hdr { text-align:center; margin-bottom:90px; }
+    .method-hdr .s-label { justify-content:center; margin-bottom:20px; }
+    .method-hdr .s-title { max-width:660px; margin:0 auto 20px; color:var(--white); }
+    .method-hdr p { font-size:.92rem; color:rgba(255,255,255,.42); max-width:460px; margin:0 auto; }
+
+    .method-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:2px; }
+    .method-cell {
+      padding:52px 32px;
+      background:rgba(255,255,255,.03);
+      border:1px solid rgba(94,198,179,.1);
+      position:relative; overflow:hidden;
+      transition:background .4s, border-color .4s;
+    }
+    .method-cell:hover { background:rgba(94,198,179,.06); border-color:rgba(94,198,179,.25); }
+    .method-bg-n {
+      position:absolute; top:-16px; right:-6px;
+      font-family:'Cormorant Garamond',serif; font-size:8rem;
+      color:rgba(94,198,179,.05); line-height:1; pointer-events:none;
+    }
+    .method-icon {
+      width:44px; height:44px; border:1px solid rgba(94,198,179,.3); border-radius:50%;
+      display:flex; align-items:center; justify-content:center;
+      color:var(--teal-light); margin-bottom:28px;
+    }
+    .method-title { font-family:'Cormorant Garamond',serif; font-size:1.4rem; font-weight:400; color:var(--white); margin-bottom:14px; }
+    .method-txt { font-size:.84rem; color:rgba(255,255,255,.38); line-height:1.8; }
+
+    /* ─── TESTIMONIALS ─── */
+    .testi { padding:150px 0; background:var(--black); overflow:hidden; }
+    .testi-hdr { margin-bottom:72px; }
+    .testi-hdr .s-label { margin-bottom:18px; }
+    .testi-track {
+      display:flex; gap:20px;
+      animation:slide 38s linear infinite;
+    }
+    .testi-track:hover { animation-play-state:paused; }
+    @keyframes slide { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+    .testi-card {
+      flex-shrink:0; width:370px;
+      background:#0c1210; border:1px solid rgba(37,124,108,.14);
+      padding:40px 32px; transition:border-color .4s, transform .4s;
+    }
+    .testi-card:hover { border-color:rgba(94,198,179,.3); transform:translateY(-5px); }
+    .testi-stars { color:var(--teal-light); font-size:.85rem; letter-spacing:3px; margin-bottom:22px; }
+    .testi-txt {
+      font-family:'Cormorant Garamond',serif; font-size:1.1rem; font-weight:300;
+      font-style:italic; color:var(--off-white); line-height:1.65; margin-bottom:28px;
+    }
+    .testi-author { display:flex; align-items:center; gap:14px; }
+    .testi-av {
+      width:40px; height:40px; border-radius:50%; flex-shrink:0;
+      background:linear-gradient(135deg,var(--teal-dark),var(--teal));
+      display:flex; align-items:center; justify-content:center;
+      font-family:'Cormorant Garamond',serif; font-size:.95rem; color:var(--white);
+    }
+    .testi-name { font-size:.75rem; font-weight:500; letter-spacing:.1em; text-transform:uppercase; color:var(--off-white); }
+    .testi-role { font-size:.7rem; color:rgba(248,246,242,.3); margin-top:2px; }
+
+    /* ─── FULL-WIDTH IMAGE CTA ─── */
+    .img-cta {
+      position:relative; min-height:600px;
+      display:flex; align-items:center;
+    }
+    .img-cta-bg {
+      position:absolute; inset:0; overflow:hidden;
+    }
+    .img-cta-bg img {
+      width:100%; height:100%; object-fit:cover; object-position:center 30%;
+    }
+    /* deep overlay */
+    .img-cta-bg::after {
+      content:''; position:absolute; inset:0;
+      background:linear-gradient(to right, rgba(7,8,8,.92) 45%, rgba(7,8,8,.5) 100%);
+    }
+    .img-cta-content {
+      position:relative; z-index:2;
+      max-width:680px; padding:120px 64px;
+    }
+    .img-cta-eyebrow { display:flex; align-items:center; gap:14px; margin-bottom:36px; }
+    .img-cta-eyebrow-line { width:32px; height:1px; background:var(--rose); }
+    .img-cta-eyebrow-txt { font-size:.66rem; letter-spacing:.35em; text-transform:uppercase; color:var(--rose); }
+    .img-cta-title {
+      font-family:'Cormorant Garamond',serif;
+      font-size:clamp(2.8rem,4.5vw,5rem);
+      font-weight:300; line-height:1.08; margin-bottom:28px; color:var(--white);
+    }
+    .img-cta-title em { font-style:italic; color:var(--sand-light); }
+    .img-cta-sub { font-size:.95rem; color:rgba(255,255,255,.52); line-height:1.8; max-width:520px; margin-bottom:52px; }
+    .img-cta-btns { display:flex; align-items:center; gap:28px; flex-wrap:wrap; }
+
+    /* ─── PODCAST ─── */
+    .podcast { padding:150px 0; background:#0a1210; }
+    .podcast-grid { display:grid; grid-template-columns:1fr 1.15fr; gap:100px; align-items:center; }
+    .podcast-img-wrap {
+      position:relative; aspect-ratio:4/5; overflow:hidden;
+      border:1px solid rgba(94,198,179,.15);
+    }
+    .podcast-img-wrap img { width:100%; height:100%; object-fit:cover; object-position:center top; }
+    .podcast-img-wrap::after {
+      content:''; position:absolute; inset:0;
+      background:linear-gradient(to bottom, transparent 55%, rgba(10,18,16,.95) 100%);
+    }
+    .podcast-overlay {
+      position:absolute; bottom:0; left:0; right:0; z-index:2; padding:28px;
+    }
+    .podcast-wave { display:flex; align-items:flex-end; gap:3px; height:40px; margin-bottom:14px; }
+    .pw-bar {
+      flex:1; background:var(--teal-light); opacity:.4; border-radius:2px 2px 0 0;
+      animation:wave 1.6s ease-in-out infinite;
+    }
+    .pw-bar:nth-child(2n) { animation-delay:.25s; opacity:.25; }
+    .pw-bar:nth-child(3n) { animation-delay:.5s; opacity:.5; }
+    @keyframes wave { 0%,100%{transform:scaleY(.25)} 50%{transform:scaleY(1)} }
+    .podcast-overlay-title {
+      font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:400;
+      color:var(--white); letter-spacing:.05em;
+    }
+    .podcast-overlay-sub { font-size:.68rem; letter-spacing:.2em; text-transform:uppercase; color:rgba(94,198,179,.7); margin-top:4px; }
+
+    .podcast-lbl { margin-bottom:20px; }
+    .podcast-title { font-family:'Cormorant Garamond',serif; font-size:clamp(2rem,3vw,3rem); font-weight:300; line-height:1.2; color:var(--white); margin-bottom:20px; }
+    .podcast-title em { font-style:italic; color:var(--sand-light); }
+    .podcast-desc { font-size:.92rem; color:rgba(255,255,255,.45); line-height:1.85; margin-bottom:44px; }
+    .ep {
+      background:rgba(255,255,255,.03); border:1px solid rgba(94,198,179,.1);
+      padding:20px 24px; display:flex; align-items:center; gap:18px;
+      cursor:none; transition:background .3s, border-color .3s; margin-bottom:10px;
+    }
+    .ep:hover { background:rgba(94,198,179,.06); border-color:rgba(94,198,179,.28); }
+    .ep-play {
+      width:38px; height:38px; border:1px solid rgba(94,198,179,.3); border-radius:50%;
+      display:flex; align-items:center; justify-content:center; flex-shrink:0;
+      color:var(--teal-light); transition:background .3s, border-color .3s;
+    }
+    .ep:hover .ep-play { background:var(--teal); border-color:var(--teal); color:var(--white); }
+    .ep-title { font-size:.84rem; color:var(--off-white); margin-bottom:3px; font-weight:400; }
+    .ep-meta { font-size:.7rem; color:rgba(248,246,242,.32); letter-spacing:.1em; }
+
+    /* ─── FOOTER ─── */
+    footer { background:var(--black); border-top:1px solid rgba(37,124,108,.12); }
+    .footer-top { display:grid; grid-template-columns:1.8fr 1fr 1fr 1fr; gap:56px; padding:90px 0 72px; }
+    .footer-logo { font-family:'Cormorant Garamond',serif; font-size:1.5rem; font-weight:600; letter-spacing:.3em; text-transform:uppercase; color:var(--sand-light); margin-bottom:18px; }
+    .footer-tagline { font-size:.82rem; color:rgba(248,246,242,.3); line-height:1.75; max-width:270px; margin-bottom:32px; }
+    .footer-socials { display:flex; gap:12px; }
+    .f-soc {
+      width:36px; height:36px; border:1px solid rgba(37,124,108,.25);
+      display:flex; align-items:center; justify-content:center;
+      color:rgba(248,246,242,.35); transition:border-color .3s, color .3s;
+    }
+    .f-soc:hover { border-color:var(--teal); color:var(--teal-light); }
+    .f-col-title { font-size:.64rem; letter-spacing:.3em; text-transform:uppercase; color:var(--teal); margin-bottom:24px; font-weight:500; }
+    .f-links li { margin-bottom:12px; }
+    .f-links a { font-size:.82rem; color:rgba(248,246,242,.35); transition:color .3s; }
+    .f-links a:hover { color:var(--off-white); }
+    .f-nl { display:flex; margin-top:6px; }
+    .f-nl input {
+      flex:1; background:rgba(255,255,255,.04);
+      border:1px solid rgba(37,124,108,.18); border-right:none;
+      padding:11px 14px; color:var(--off-white); font-size:.78rem;
+      font-family:'Inter',sans-serif; outline:none;
+      transition:border-color .3s;
+    }
+    .f-nl input::placeholder { color:rgba(248,246,242,.22); }
+    .f-nl input:focus { border-color:rgba(94,198,179,.35); }
+    .f-nl button {
+      background:var(--teal); border:none; padding:11px 18px;
+      display:flex; align-items:center; cursor:none;
+      transition:background .3s;
+    }
+    .f-nl button:hover { background:var(--teal-light); }
+    .f-nl button svg { color:var(--white); }
+    .f-nl-note { font-size:.65rem; color:rgba(248,246,242,.25); margin-top:9px; letter-spacing:.05em; }
+    .footer-bottom {
+      display:flex; align-items:center; justify-content:space-between;
+      padding:24px 0; border-top:1px solid rgba(255,255,255,.04);
+    }
+    .f-copy { font-size:.7rem; color:rgba(248,246,242,.18); letter-spacing:.08em; }
+    .f-legal { display:flex; gap:28px; }
+    .f-legal a { font-size:.7rem; color:rgba(248,246,242,.18); letter-spacing:.08em; transition:color .3s; }
+    .f-legal a:hover { color:rgba(94,198,179,.5); }
+
+    /* ─── SCROLL REVEAL ─── */
+    .rv { opacity:0; transform:translateY(36px); transition:opacity .85s var(--ease-out), transform .85s var(--ease-out); }
+    .rv.on { opacity:1; transform:translateY(0); }
+    .rv.d1 { transition-delay:.1s; } .rv.d2 { transition-delay:.2s; }
+    .rv.d3 { transition-delay:.3s; } .rv.d4 { transition-delay:.4s; }
+
+    /* ─── KEYFRAMES ─── */
+    @keyframes fadeUp { from{opacity:0;transform:translateY(28px)} to{opacity:1;transform:translateY(0)} }
+    @keyframes fadeLeft { from{opacity:0;transform:translateX(36px)} to{opacity:1;transform:translateX(0)} }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width:1100px) {
+      .hero-inner { grid-template-columns:1fr; }
+      .hero-img-wrap { display:none; }
+      .manifesto-grid { grid-template-columns:1fr; }
+      .programmes-hdr { grid-template-columns:1fr; }
+      .prog-grid { grid-template-columns:1fr 1fr; }
+      .method-grid { grid-template-columns:1fr 1fr; }
+      .impact-grid { grid-template-columns:1fr 1fr; }
+      .footer-top { grid-template-columns:1fr 1fr; }
+      .podcast-grid { grid-template-columns:1fr; }
+    }
+    @media (max-width:768px) {
+      nav { padding:0 24px; }
+      .nav-links { display:none; }
+      .s-inner, nav { padding-left:24px; padding-right:24px; }
+      .hero-inner { padding:0 24px; }
+      .prog-grid { grid-template-columns:1fr; }
+      .method-grid { grid-template-columns:1fr; }
+      .impact-grid { grid-template-columns:1fr 1fr; }
+      .footer-top { grid-template-columns:1fr; }
+      .footer-bottom { flex-direction:column; gap:14px; text-align:center; }
+      .img-cta-content { padding:80px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="ld-logo">Feminess</div>
+  <div class="ld-bar-wrap"><div class="ld-bar"></div></div>
+</div>
+
+<!-- PROGRESS -->
+<div id="prog"></div>
+
+<!-- CURSOR -->
+<div id="cur"></div>
+<div id="cur-ring"></div>
+
+<!-- ═══════════════════════════════════
+     NAV
+═══════════════════════════════════ -->
+<nav id="nav">
+  <a href="#" class="nav-logo">Feminess</a>
+  <ul class="nav-links">
+    <li><a href="#ueber-uns">Über uns</a></li>
+    <li><a href="#programme">Programme</a></li>
+    <li><a href="#podcast">Podcast</a></li>
+    <li><a href="#events">Events</a></li>
+  </ul>
+  <a href="#training" class="nav-cta">Free Training</a>
+</nav>
+
+<!-- ═══════════════════════════════════
+     HERO
+═══════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-aura"></div>
+  <div class="hero-aura2"></div>
+  <div class="hero-grain"></div>
+
+  <div class="hero-inner">
+    <!-- copy -->
+    <div class="hero-copy">
+      <div class="hero-eyebrow">
+        <div class="hero-eyebrow-line"></div>
+        <span class="hero-eyebrow-txt">Marina Henze · Feminess</span>
+      </div>
+      <h1 class="hero-h1">
+        Strahle.<br>
+        Führe. <em>Wachse</em><br>
+        <strong>ohne Grenzen.</strong>
+      </h1>
+      <p class="hero-sub">
+        Authentische Erfolgsstrategien für Frauen, die mehr wollen – mehr Freiheit, mehr Wirkung, mehr Erfüllung. Jenseits aller Konventionen.
+      </p>
+      <div class="hero-btns">
+        <a href="#training" class="btn-rose">
+          Kostenloses Training
+          <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#programme" class="btn-outline-teal">
+          Programme entdecken →
+        </a>
+      </div>
+    </div>
+
+    <!-- image -->
+    <div class="hero-img-wrap">
+      <img src="../Marina_MAI2314477 Kopie.jpg" alt="Marina Henze" loading="eager" />
+      <div class="hero-stats-card">
+        <div class="hero-stats-num">10.000+</div>
+        <div class="hero-stats-lbl">Frauen in Europa transformiert</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     TICKER
+═══════════════════════════════════ -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span class="ticker-item">First Choice<span class="ticker-dot"></span></span>
+    <span class="ticker-item">Unlimited Fullness<span class="ticker-dot"></span></span>
+    <span class="ticker-item">Highest Selling Launch<span class="ticker-dot"></span></span>
+    <span class="ticker-item">Female Leadership<span class="ticker-dot"></span></span>
+    <span class="ticker-item">Business Freedom<span class="ticker-dot"></span></span>
+    <span class="ticker-item">Authentic Presence<span class="ticker-dot"></span></span>
+    <span class="ticker-item">Inner Transformation<span class="ticker-dot"></span></span>
+    <span class="ticker-item">Marina Henze · Feminess<span class="ticker-dot"></span></span>
+    <!-- dupe für Loop -->
+    <span class="ticker-item">First Choice<span class="ticker-dot"></span></span>
+    <span class="ticker-item">Unlimited Fullness<span class="ticker-dot"></span></span>
+    <span class="ticker-item">Highest Selling Launch<span class="ticker-dot"></span></span>
+    <span class="ticker-item">Female Leadership<span class="ticker-dot"></span></span>
+    <span class="ticker-item">Business Freedom<span class="ticker-dot"></span></span>
+    <span class="ticker-item">Authentic Presence<span class="ticker-dot"></span></span>
+    <span class="ticker-item">Inner Transformation<span class="ticker-dot"></span></span>
+    <span class="ticker-item">Marina Henze · Feminess<span class="ticker-dot"></span></span>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════
+     MANIFESTO / ÜBER UNS
+═══════════════════════════════════ -->
+<section class="manifesto" id="ueber-uns">
+  <div class="s-inner">
+    <div class="manifesto-grid">
+
+      <!-- text -->
+      <div class="rv">
+        <div class="s-label manifesto-lbl">
+          <div class="s-label-line"></div>
+          <span class="s-label-txt">Das Fundament</span>
+        </div>
+        <blockquote class="manifesto-quote">
+          "Hör auf dich zu verbiegen –<br>und beginne zu leuchten."
+        </blockquote>
+        <p class="manifesto-body">
+          Feminess ist mehr als ein Coaching-Unternehmen. Es ist eine Bewegung für Frauen, die aufgehört haben zu performen und begonnen haben, wirklich sie selbst zu sein. Marina Henze hat über 10 Kongresse mit mehr als 10.000 Frauen aus ganz Europa transformiert.
+        </p>
+        <p class="manifesto-body" style="margin-top:-12px">
+          Unsere Mission: Authentischer Erfolg. Echte Freiheit. Ein Business, das zu dir passt – nicht umgekehrt.
+        </p>
+        <div class="manifesto-media">
+          <div class="manifesto-media-lbl">Bekannt aus</div>
+          <div class="manifesto-media-logos">
+            <span>Stern</span>
+            <span>Focus Money</span>
+            <span>W&amp;V</span>
+            <span>HuffPost</span>
+            <span>Cosmopolitan</span>
+            <span>Handelsblatt</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- image -->
+      <div class="rv d2">
+        <div class="manifesto-img-wrap">
+          <div class="manifesto-img">
+            <img src="../Marina_MAI2314136 Kopie.jpg" alt="Marina Henze – Feminess" loading="lazy" />
+          </div>
+          <div class="manifesto-badge">
+            <div class="manifesto-badge-n">10+</div>
+            <div class="manifesto-badge-t">Kongresse in Europa</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     IMPACT STRIP
+═══════════════════════════════════ -->
+<section class="impact">
+  <div class="s-inner">
+    <div class="impact-grid">
+      <div class="impact-cell rv">
+        <div class="impact-num"><span class="ctr" data-t="10000">0</span><span class="impact-sup">+</span></div>
+        <div class="impact-lbl">Frauen transformiert</div>
+      </div>
+      <div class="impact-cell rv d1">
+        <div class="impact-num"><span class="ctr" data-t="10">0</span><span class="impact-sup">+</span></div>
+        <div class="impact-lbl">Kongresse in Europa</div>
+      </div>
+      <div class="impact-cell rv d2">
+        <div class="impact-num"><span class="ctr" data-t="7">0</span></div>
+        <div class="impact-lbl">Stellige Umsätze möglich</div>
+      </div>
+      <div class="impact-cell rv d3">
+        <div class="impact-num"><span class="ctr" data-t="3">0</span></div>
+        <div class="impact-lbl">Signature Programme</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     PROGRAMME
+═══════════════════════════════════ -->
+<section class="programmes" id="programme">
+  <div class="s-inner">
+
+    <div class="programmes-hdr">
+      <div>
+        <div class="s-label rv" style="margin-bottom:20px;">
+          <div class="s-label-line"></div>
+          <span class="s-label-txt">Signature Programme</span>
+        </div>
+        <h2 class="s-title rv d1">
+          Dein Weg zur<br><em>vollständigen</em> Freiheit
+        </h2>
+      </div>
+      <p class="programmes-desc rv d2">
+        Drei fokussierte Programme – entwickelt, um eine tiefgreifende und nachhaltige Transformation in deinem Business und deinem Leben auszulösen.
+      </p>
+    </div>
+
+    <div class="prog-grid">
+
+      <!-- FIRST CHOICE -->
+      <div class="prog-card rv">
+        <div class="prog-num">01</div>
+        <h3 class="prog-title">First Choice</h3>
+        <span class="prog-tag">Intensiv-Programme</span>
+        <p class="prog-text">
+          Werde zur unangefochtenen ersten Wahl für deine idealen Kunden. Positioniere dich mit magnetischer Klarheit – und lass Kunden von selbst auf dich zukommen, ohne Content-Overload oder Druck.
+        </p>
+        <a href="#" class="prog-link">
+          Mehr erfahren
+          <div class="prog-arr"></div>
+        </a>
+      </div>
+
+      <!-- UNLIMITED FULLNESS – accent card -->
+      <div class="prog-card accent rv d1">
+        <div class="prog-num">02</div>
+        <h3 class="prog-title">Unlimited Fullness</h3>
+        <span class="prog-tag">Abundance-Programm</span>
+        <p class="prog-text">
+          Erschaffe unbegrenzte Fülle – finanziell, persönlich und in deinem Business. Löse die inneren Deckelungen auf und lebe den Lifestyle, den du wirklich verdienst. Ohne Kompromisse.
+        </p>
+        <a href="#" class="prog-link">
+          Jetzt bewerben
+          <div class="prog-arr"></div>
+        </a>
+      </div>
+
+      <!-- HIGHEST SELLING LAUNCH -->
+      <div class="prog-card rv d2">
+        <div class="prog-num">03</div>
+        <h3 class="prog-title">Highest Selling Launch</h3>
+        <span class="prog-tag">Launch-Mastery</span>
+        <p class="prog-text">
+          Kreiere deinen erfolgreichsten Launch aller Zeiten. Lerne, wie du Angebote so präsentierst, dass sie sich von selbst verkaufen – mit Strategie, Energie und unwiderstehlicher Präsenz.
+        </p>
+        <a href="#" class="prog-link">
+          Kostenlos starten
+          <div class="prog-arr"></div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     METHOD
+═══════════════════════════════════ -->
+<section class="method">
+  <div class="s-inner">
+    <div class="method-hdr">
+      <div class="s-label">
+        <div class="s-label-line"></div>
+        <span class="s-label-txt">Der Feminess-Ansatz</span>
+      </div>
+      <h2 class="s-title rv" style="margin-top:18px; color:var(--white)">
+        Vier Dimensionen der<br><em>Transformation</em>
+      </h2>
+      <p class="rv d1">Erfolg entsteht nicht durch mehr Disziplin – sondern durch die richtige innere Ausrichtung.</p>
+    </div>
+    <div class="method-grid">
+      <div class="method-cell rv">
+        <div class="method-bg-n">1</div>
+        <div class="method-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+        </div>
+        <h3 class="method-title">Identität</h3>
+        <p class="method-txt">Werde klar darüber, wer du wirklich bist – jenseits aller Erwartungen. Deine Identität ist die Basis für alles andere.</p>
+      </div>
+      <div class="method-cell rv d1">
+        <div class="method-bg-n">2</div>
+        <div class="method-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        </div>
+        <h3 class="method-title">Energie</h3>
+        <p class="method-txt">Aktiviere deine natürliche magnetische Ausstrahlung. Nicht Performance – echte, spürbare Präsenz.</p>
+      </div>
+      <div class="method-cell rv d2">
+        <div class="method-bg-n">3</div>
+        <div class="method-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20h9M16.5 3.5a2.12 2.12 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        </div>
+        <h3 class="method-title">Strategie</h3>
+        <p class="method-txt">Maßgeschneiderte Business-Strategien, die zu deiner Persönlichkeit passen – nicht umgekehrt.</p>
+      </div>
+      <div class="method-cell rv d3">
+        <div class="method-bg-n">4</div>
+        <div class="method-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <h3 class="method-title">Skalierung</h3>
+        <p class="method-txt">Wachse auf 6- oder 7-stellige Umsätze – mit Leichtigkeit, ohne Burnout, ohne Kompromisse.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     TESTIMONIALS
+═══════════════════════════════════ -->
+<section class="testi">
+  <div class="s-inner">
+    <div class="testi-hdr">
+      <div class="s-label rv"><div class="s-label-line"></div><span class="s-label-txt">Stimmen der Community</span></div>
+      <h2 class="s-title rv d1" style="margin-top:16px;">Was unsere Frauen <em>erleben</em></h2>
+    </div>
+  </div>
+  <div style="overflow:hidden; padding:40px 0;">
+    <div class="testi-track">
+      <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-txt">"In drei Monaten hat sich mein Business komplett verändert. Ich verdiene jetzt mehr als je zuvor – und fühle mich dabei vollständig frei."</p><div class="testi-author"><div class="testi-av">S</div><div><div class="testi-name">Sarah M.</div><div class="testi-role">Business Coach · Berlin</div></div></div></div>
+      <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-txt">"Marina hat mir gezeigt, dass Erfolg nicht durch mehr Anstrengung entsteht, sondern durch Ausrichtung. Lifechanging."</p><div class="testi-author"><div class="testi-av">L</div><div><div class="testi-name">Laura K.</div><div class="testi-role">Online Unternehmerin · München</div></div></div></div>
+      <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-txt">"Ich habe endlich aufgehört zu performen und angefangen zu leuchten. Meine Kunden spüren das sofort – und buchen."</p><div class="testi-author"><div class="testi-av">A</div><div><div class="testi-name">Anna P.</div><div class="testi-role">Speaker & Coach · Hamburg</div></div></div></div>
+      <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-txt">"Highest Selling Launch hat alles verändert. Mein erster Launch danach war mein bisher bester – in jeder Hinsicht."</p><div class="testi-author"><div class="testi-av">M</div><div><div class="testi-name">Mia H.</div><div class="testi-role">Unternehmerin · Frankfurt</div></div></div></div>
+      <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-txt">"Dank Marina ist mein Business von 40k auf 180k Jahresumsatz gewachsen – in weniger als einem Jahr. Unfassbar."</p><div class="testi-author"><div class="testi-av">J</div><div><div class="testi-name">Julia R.</div><div class="testi-role">Life Coach · Wien</div></div></div></div>
+      <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-txt">"Die Feminess-Community ist das Beste, was mir je passiert ist. Frauen, die sich gegenseitig wirklich nach oben ziehen."</p><div class="testi-author"><div class="testi-av">K</div><div><div class="testi-name">Kathrin B.</div><div class="testi-role">Entrepreneurin · Zürich</div></div></div></div>
+      <!-- Dupe -->
+      <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-txt">"In drei Monaten hat sich mein Business komplett verändert. Ich verdiene jetzt mehr als je zuvor – und fühle mich dabei vollständig frei."</p><div class="testi-author"><div class="testi-av">S</div><div><div class="testi-name">Sarah M.</div><div class="testi-role">Business Coach · Berlin</div></div></div></div>
+      <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-txt">"Marina hat mir gezeigt, dass Erfolg nicht durch mehr Anstrengung entsteht, sondern durch Ausrichtung. Lifechanging."</p><div class="testi-author"><div class="testi-av">L</div><div><div class="testi-name">Laura K.</div><div class="testi-role">Online Unternehmerin · München</div></div></div></div>
+      <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-txt">"Ich habe endlich aufgehört zu performen und angefangen zu leuchten. Meine Kunden spüren das sofort – und buchen."</p><div class="testi-author"><div class="testi-av">A</div><div><div class="testi-name">Anna P.</div><div class="testi-role">Speaker & Coach · Hamburg</div></div></div></div>
+      <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-txt">"Highest Selling Launch hat alles verändert. Mein erster Launch danach war mein bisher bester – in jeder Hinsicht."</p><div class="testi-author"><div class="testi-av">M</div><div><div class="testi-name">Mia H.</div><div class="testi-role">Unternehmerin · Frankfurt</div></div></div></div>
+      <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-txt">"Dank Marina ist mein Business von 40k auf 180k Jahresumsatz gewachsen – in weniger als einem Jahr. Unfassbar."</p><div class="testi-author"><div class="testi-av">J</div><div><div class="testi-name">Julia R.</div><div class="testi-role">Life Coach · Wien</div></div></div></div>
+      <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-txt">"Die Feminess-Community ist das Beste, was mir je passiert ist. Frauen, die sich gegenseitig wirklich nach oben ziehen."</p><div class="testi-author"><div class="testi-av">K</div><div><div class="testi-name">Kathrin B.</div><div class="testi-role">Entrepreneurin · Zürich</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     FULL-WIDTH IMAGE CTA
+═══════════════════════════════════ -->
+<section class="img-cta" id="training">
+  <div class="img-cta-bg">
+    <img src="../Marina_MAI2314376 Kopie.jpg" alt="Marina Henze – Freiheit" loading="lazy" />
+  </div>
+  <div class="img-cta-content">
+    <div class="img-cta-eyebrow rv">
+      <div class="img-cta-eyebrow-line"></div>
+      <span class="img-cta-eyebrow-txt">Dein nächster Schritt</span>
+    </div>
+    <h2 class="img-cta-title rv d1">
+      Bereit zu leuchten?<br><em>Beginne heute.</em>
+    </h2>
+    <p class="img-cta-sub rv d2">
+      Starte mit dem kostenlosen Training und erlebe, wie dein Business wächst – während du ganz du selbst bleibst.
+    </p>
+    <div class="img-cta-btns rv d3">
+      <a href="#" class="btn-rose">
+        Kostenloses Training sichern
+        <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="#programme" class="btn-outline-teal">Programme ansehen →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     PODCAST
+═══════════════════════════════════ -->
+<section class="podcast" id="podcast">
+  <div class="s-inner">
+    <div class="podcast-grid">
+
+      <!-- artwork -->
+      <div class="rv">
+        <div class="podcast-img-wrap">
+          <img src="../Marina_MAI2314280 Kopie.jpg" alt="Marina Henze Podcast" loading="lazy" />
+          <div class="podcast-overlay">
+            <div class="podcast-wave">
+              <div class="pw-bar" style="height:30%"></div><div class="pw-bar" style="height:65%"></div>
+              <div class="pw-bar" style="height:45%"></div><div class="pw-bar" style="height:80%"></div>
+              <div class="pw-bar" style="height:35%"></div><div class="pw-bar" style="height:70%"></div>
+              <div class="pw-bar" style="height:90%"></div><div class="pw-bar" style="height:50%"></div>
+              <div class="pw-bar" style="height:40%"></div><div class="pw-bar" style="height:75%"></div>
+              <div class="pw-bar" style="height:55%"></div><div class="pw-bar" style="height:85%"></div>
+              <div class="pw-bar" style="height:30%"></div><div class="pw-bar" style="height:60%"></div>
+            </div>
+            <div class="podcast-overlay-title">Coaching Scene Secrets</div>
+            <div class="podcast-overlay-sub">Der Podcast · Marina Henze</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- content -->
+      <div class="rv d2">
+        <div class="s-label podcast-lbl"><div class="s-label-line"></div><span class="s-label-txt">Der Podcast</span></div>
+        <h2 class="podcast-title">Coaching Scene<br><em>Secrets</em></h2>
+        <p class="podcast-desc">Insider-Wissen von führenden Coaches. Finanzielle Freiheit, persönliche Erfüllung und Business-Geheimnisse, die sonst niemand teilt.</p>
+
+        <div class="ep">
+          <div class="ep-play"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
+          <div><div class="ep-title">#47 · Der geheime Hebel für 6-stellige Umsätze</div><div class="ep-meta">42 Min · Marina Henze</div></div>
+        </div>
+        <div class="ep">
+          <div class="ep-play"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
+          <div><div class="ep-title">#46 · Warum Content-Overload dich klein hält</div><div class="ep-meta">38 Min · Marina Henze</div></div>
+        </div>
+        <div class="ep">
+          <div class="ep-play"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
+          <div><div class="ep-title">#45 · First Choice – wie Kunden dich wählen</div><div class="ep-meta">51 Min · Marina Henze</div></div>
+        </div>
+
+        <div style="margin-top:28px;">
+          <a href="#" class="btn-outline-teal">Alle Episoden anhören →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     FOOTER
+═══════════════════════════════════ -->
+<footer>
+  <div class="s-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo">Feminess</div>
+        <p class="footer-tagline">Authentische Erfolgsstrategien für Frauen, die mehr wollen. Mehr Freiheit, mehr Wirkung, mehr Erfüllung.</p>
+        <div class="footer-socials">
+          <a href="#" class="f-soc" aria-label="Instagram">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor"/></svg>
+          </a>
+          <a href="#" class="f-soc" aria-label="LinkedIn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="#" class="f-soc" aria-label="YouTube">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.96A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+          </a>
+          <a href="#" class="f-soc" aria-label="Facebook">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <div class="f-col-title">Programme</div>
+        <ul class="f-links">
+          <li><a href="#">First Choice</a></li>
+          <li><a href="#">Unlimited Fullness</a></li>
+          <li><a href="#">Highest Selling Launch</a></li>
+          <li><a href="#">Free Training</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="f-col-title">Unternehmen</div>
+        <ul class="f-links">
+          <li><a href="#">Über Marina</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Podcast</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Presse & Medien</a></li>
+          <li><a href="#">Affiliate</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="f-col-title">Newsletter</div>
+        <p style="font-size:.8rem;color:rgba(248,246,242,.3);line-height:1.7;margin-bottom:18px;">Exklusive Strategien direkt in dein Postfach.</p>
+        <div class="f-nl">
+          <input type="email" placeholder="deine@email.de" />
+          <button type="button" aria-label="Abonnieren">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+        <p class="f-nl-note">Kein Spam. Jederzeit kündbar.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="f-copy">© 2026 Feminess – Marina Henze. Alle Rechte vorbehalten.</div>
+      <div class="f-legal">
+        <a href="#">Impressum</a>
+        <a href="#">Datenschutz</a>
+        <a href="#">AGB</a>
+        <a href="#">Kontakt</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════
+     JS
+═══════════════════════════════════ -->
+<script>
+  // ── LOADER ──
+  window.addEventListener('load', () => {
+    setTimeout(() => document.getElementById('loader').classList.add('gone'), 1900);
+  });
+
+  // ── CURSOR ──
+  const cur = document.getElementById('cur');
+  const ring = document.getElementById('cur-ring');
+  let mx=0, my=0, rx=0, ry=0;
+  document.addEventListener('mousemove', e => {
+    mx = e.clientX; my = e.clientY;
+    cur.style.left = mx+'px'; cur.style.top = my+'px';
+  });
+  (function loop() {
+    rx += (mx-rx)*.11; ry += (my-ry)*.11;
+    ring.style.left = rx+'px'; ring.style.top = ry+'px';
+    requestAnimationFrame(loop);
+  })();
+  document.querySelectorAll('a,button,.prog-card,.testi-card,.ep,.method-cell').forEach(el => {
+    el.addEventListener('mouseenter', () => document.body.classList.add('h'));
+    el.addEventListener('mouseleave', () => document.body.classList.remove('h'));
+  });
+
+  // ── NAV SCROLL ──
+  const nav = document.getElementById('nav');
+  const prog = document.getElementById('prog');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('sc', scrollY > 60);
+    const pct = scrollY / (document.body.scrollHeight - innerHeight);
+    prog.style.width = (pct*100)+'%';
+  }, {passive:true});
+
+  // ── REVEAL ──
+  const rvObs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('on'); });
+  }, {threshold:.12});
+  document.querySelectorAll('.rv').forEach(el => rvObs.observe(el));
+
+  // ── COUNTERS ──
+  const ctrObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if(!e.isIntersecting || e.target.dataset.done) return;
+      e.target.dataset.done = 1;
+      const tgt = +e.target.dataset.t;
+      const dur = 2000;
+      const t0 = performance.now();
+      const ease = t => 1 - Math.pow(1-t, 3);
+      const tick = now => {
+        const p = Math.min((now-t0)/dur, 1);
+        e.target.textContent = Math.floor(ease(p)*tgt).toLocaleString('de-DE');
+        if(p<1) requestAnimationFrame(tick);
+        else e.target.textContent = tgt.toLocaleString('de-DE');
+      };
+      requestAnimationFrame(tick);
+    });
+  }, {threshold:.5});
+  document.querySelectorAll('.ctr').forEach(el => ctrObs.observe(el));
+
+  // ── MAGNETIC BUTTONS ──
+  document.querySelectorAll('.btn-rose,.btn-outline-teal,.nav-cta').forEach(btn => {
+    btn.addEventListener('mousemove', e => {
+      const r = btn.getBoundingClientRect();
+      const dx = e.clientX-(r.left+r.width/2);
+      const dy = e.clientY-(r.top+r.height/2);
+      btn.style.transform = `translate(${dx*.14}px,${dy*.18}px)`;
+    });
+    btn.addEventListener('mouseleave', () => btn.style.transform = '');
+  });
+
+  // ── PARALLAX HERO AURA ──
+  document.addEventListener('mousemove', e => {
+    const a = document.querySelector('.hero-aura');
+    if(!a) return;
+    const x = (e.clientX/innerWidth-.5)*50;
+    const y = (e.clientY/innerHeight-.5)*35;
+    a.style.transform = `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`;
+  });
+</script>
+</body>
+</html>

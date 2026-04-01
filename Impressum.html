@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Impressum – Feminess</title>
+<meta name="description" content="Impressum von Feminess LTD – Marina Henze. Alle Angaben gemäß gesetzlicher Informationspflicht.">
+<meta name="robots" content="noindex, nofollow">
+<style>
+  @font-face {
+    font-family: 'East Liberty';
+    src: url('../CI/east_liberty_signature%20%281%29/east%20liberty%20signature.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Avenir LT Pro';
+    src: url('../CI/AvenirLTPro-Book%20%281%29.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Avenir LT Pro';
+    src: url('../CI/AvenirLTPro-Heavy%20%281%29.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  :root {
+    --teal:       #257c6c;
+    --teal-dark:  #1b5c50;
+    --teal-light: #5ec6b3;
+    --teal-pale:  #b8ddd8;
+    --rose:       #cf5a73;
+    --sand-light: #e4bc95;
+    --black:      #070808;
+    --dark:       #0d2420;
+    --off-white:  #f8f6f2;
+    --cream:      #f0f5f4;
+    --beige:      #ddecea;
+    --warm-gray:  #5a7a74;
+    --mid-gray:   #9ab8b4;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--off-white);
+    color: var(--black);
+    font-family: 'Avenir LT Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── NAV ── */
+  .nav {
+    background: rgba(13, 36, 32, 0.97);
+    border-bottom: 1px solid rgba(94, 198, 179, 0.10);
+    padding: 0 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 76px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  .nav-logo img {
+    height: 38px;
+    width: auto;
+    display: block;
+  }
+
+  .nav-back {
+    font-family: 'Avenir LT Pro', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--mid-gray);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.2s;
+  }
+
+  .nav-back::before { content: '←'; font-size: 13px; }
+  .nav-back:hover { color: var(--teal-light); }
+
+  /* ── HERO-STRIP ── */
+  .page-hero {
+    background: var(--dark);
+    padding: 72px 80px 64px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .page-hero::before {
+    content: '';
+    position: absolute;
+    top: -100px; right: -100px;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(37,124,108,0.15) 0%, transparent 65%);
+    pointer-events: none;
+  }
+
+  .page-hero-inner {
+    max-width: 760px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .page-hero-kicker {
+    font-family: 'Avenir LT Pro', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--teal-light);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .page-hero-kicker::before {
+    content: '';
+    width: 24px; height: 1px;
+    background: var(--teal-light);
+    opacity: 0.7;
+  }
+
+  .page-hero h1 {
+    font-family: 'East Liberty', Georgia, serif;
+    font-size: clamp(36px, 5vw, 60px);
+    font-weight: 400;
+    color: #fff;
+    line-height: 1.08;
+    letter-spacing: -0.5px;
+    margin-bottom: 16px;
+  }
+
+  .page-hero h1 em {
+    font-style: italic;
+    color: var(--rose);
+  }
+
+  .page-hero-sub {
+    font-size: 15px;
+    color: var(--mid-gray);
+    line-height: 1.7;
+    max-width: 480px;
+  }
+
+  /* ── CONTENT ── */
+  .content-wrap {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 72px 80px 96px;
+  }
+
+  /* Block */
+  .block {
+    margin-bottom: 56px;
+    padding-bottom: 56px;
+    border-bottom: 1px solid var(--beige);
+  }
+
+  .block:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .block-label {
+    font-family: 'Avenir LT Pro', sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 3.5px;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .block-label::after {
+    content: '';
+    flex: 1;
+    max-width: 40px;
+    height: 1px;
+    background: var(--teal);
+    opacity: 0.4;
+  }
+
+  .block h2 {
+    font-family: 'East Liberty', Georgia, serif;
+    font-size: clamp(26px, 3vw, 36px);
+    font-weight: 400;
+    color: var(--black);
+    line-height: 1.12;
+    letter-spacing: -0.3px;
+    margin-bottom: 24px;
+  }
+
+  .block h2 em {
+    font-style: italic;
+    color: var(--rose);
+  }
+
+  /* Info-Karte (Angaben zur Person/Firma) */
+  .info-card {
+    background: #fff;
+    border: 1px solid var(--beige);
+    border-left: 3px solid var(--teal);
+    border-radius: 2px;
+    padding: 32px 36px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px 40px;
+  }
+
+  .info-field-label {
+    font-family: 'Avenir LT Pro', sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--mid-gray);
+    margin-bottom: 6px;
+  }
+
+  .info-field-value {
+    font-size: 15px;
+    color: var(--black);
+    line-height: 1.65;
+  }
+
+  .info-field-value a {
+    color: var(--teal);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .info-field-value a:hover { color: var(--teal-dark); }
+
+  .info-field--full {
+    grid-column: 1 / -1;
+  }
+
+  /* Fließtext-Absätze */
+  .prose p {
+    font-size: 15px;
+    color: var(--warm-gray);
+    line-height: 1.85;
+    margin-bottom: 16px;
+    max-width: 680px;
+  }
+
+  .prose p:last-child { margin-bottom: 0; }
+
+  .prose strong { color: var(--black); font-weight: 700; }
+
+  .prose h3 {
+    font-family: 'Avenir LT Pro', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--black);
+    letter-spacing: 0.3px;
+    margin-top: 28px;
+    margin-bottom: 8px;
+  }
+
+  .prose h3:first-child { margin-top: 0; }
+
+  /* Hinweis-Box */
+  .notice-box {
+    background: var(--cream);
+    border: 1px solid var(--beige);
+    border-top: 3px solid var(--teal-pale);
+    border-radius: 2px;
+    padding: 24px 28px;
+    margin-top: 24px;
+  }
+
+  .notice-box p {
+    font-size: 13px;
+    color: var(--warm-gray);
+    line-height: 1.8;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--black);
+    padding: 40px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .footer-brand {
+    font-family: 'East Liberty', Georgia, serif;
+    font-size: 1.3rem;
+    color: var(--sand-light);
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .footer-links a {
+    font-family: 'Avenir LT Pro', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--mid-gray);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover { color: var(--teal-light); }
+
+  .footer-copy {
+    font-size: 11px;
+    color: var(--warm-gray);
+    width: 100%;
+    padding-top: 16px;
+    border-top: 1px solid rgba(154,184,180,0.10);
+    margin-top: 4px;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    .nav { padding: 0 24px; height: 68px; }
+    .page-hero { padding: 56px 24px 48px; }
+    .content-wrap { padding: 48px 24px 72px; }
+    .footer { padding: 32px 24px; }
+    .info-card { grid-template-columns: 1fr; gap: 20px; }
+    .info-field--full { grid-column: auto; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="../Website/index.html" class="nav-logo" aria-label="Zur Startseite">
+    <img src="../CI/Logo-rosegoldverlauf-rgb.png" alt="Feminess">
+  </a>
+  <a href="../Website/index.html" class="nav-back">Zurück zur Website</a>
+</nav>
+
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="page-hero-kicker">Rechtliche Angaben</div>
+    <h1>Im<em>pressum</em></h1>
+    <p class="page-hero-sub">
+      Angaben gemäß § 5 TMG und § 55 II RStV.
+      Alle Informationen wurden sorgfältig zusammengestellt.
+    </p>
+  </div>
+</div>
+
+
+<!-- CONTENT -->
+<main class="content-wrap">
+
+  <!-- 1 | ANGABEN ZUM UNTERNEHMEN -->
+  <div class="block">
+    <div class="block-label">01 · Anbieter</div>
+    <h2>Angaben zum <em>Unternehmen</em></h2>
+
+    <div class="info-card">
+      <div>
+        <div class="info-field-label">Unternehmen</div>
+        <div class="info-field-value">Feminess LTD</div>
+      </div>
+      <div>
+        <div class="info-field-label">Vertretung</div>
+        <div class="info-field-value">Marina Henze</div>
+      </div>
+      <div class="info-field--full">
+        <div class="info-field-label">Anschrift</div>
+        <div class="info-field-value">
+          Mersinion 5<br>
+          8881 Agia Marina Chrysochous<br>
+          Zypern
+        </div>
+      </div>
+      <div>
+        <div class="info-field-label">Telefon</div>
+        <div class="info-field-value">
+          <a href="tel:+4921831509895">+49 2183 1509895</a>
+        </div>
+      </div>
+      <div>
+        <div class="info-field-label">E-Mail</div>
+        <div class="info-field-value">
+          <a href="mailto:info@feminess.de">info@feminess.de</a>
+        </div>
+      </div>
+      <div>
+        <div class="info-field-label">USt-Identifikationsnummer</div>
+        <div class="info-field-value">CY10438151U</div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- 2 | VERANTWORTLICH -->
+  <div class="block">
+    <div class="block-label">02 · Verantwortlichkeit</div>
+    <h2>Verantwortlich für den <em>Inhalt</em></h2>
+
+    <div class="info-card" style="grid-template-columns: 1fr;">
+      <div>
+        <div class="info-field-label">Verantwortlich gemäß § 55 II RStV</div>
+        <div class="info-field-value">
+          Marina Henze<br>
+          Mersinion 5<br>
+          8881 Agia Marina Chrysochous<br>
+          Zypern
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- 3 | HAFTUNGSAUSSCHLUSS -->
+  <div class="block">
+    <div class="block-label">03 · Haftungsausschluss</div>
+    <h2>Haftung für <em>Inhalte</em></h2>
+
+    <div class="prose">
+      <h3>Inhalt des Onlineangebotes</h3>
+      <p>
+        Der Anbieter übernimmt keinerlei Gewähr für die Aktualität, Korrektheit,
+        Vollständigkeit oder Qualität der bereitgestellten Informationen.
+        Haftungsansprüche gegen den Anbieter, die sich auf Schäden materieller oder
+        ideeller Art beziehen, welche durch die Nutzung oder Nichtnutzung der
+        dargebotenen Informationen bzw. durch die Nutzung fehlerhafter und
+        unvollständiger Informationen verursacht wurden, sind grundsätzlich
+        ausgeschlossen, sofern seitens des Anbieters kein nachweislich vorsätzliches
+        oder grob fahrlässiges Verschulden vorliegt.
+      </p>
+      <p>
+        Alle Angebote sind freibleibend und unverbindlich. Der Anbieter behält es sich
+        ausdrücklich vor, Teile der Seiten oder das gesamte Angebot ohne gesonderte
+        Ankündigung zu verändern, zu ergänzen, zu löschen oder die Veröffentlichung
+        zeitweise oder endgültig einzustellen.
+      </p>
+
+      <h3>Verweise und Links</h3>
+      <p>
+        Bei direkten oder indirekten Verweisen auf fremde Internetseiten (Links),
+        die außerhalb des Verantwortungsbereichs des Anbieters liegen, würde eine
+        Haftungsverpflichtung ausschließlich in dem Fall in Kraft treten, in dem der
+        Anbieter von den Inhalten Kenntnis hat und es ihm technisch möglich und
+        zumutbar wäre, die Nutzung im Falle rechtswidriger Inhalte zu verhindern.
+      </p>
+      <p>
+        Der Anbieter erklärt daher ausdrücklich, dass zum Zeitpunkt der Linksetzung
+        die entsprechenden verlinkten Seiten frei von illegalen Inhalten waren.
+        Auf die aktuelle und zukünftige Gestaltung, die Inhalte oder die Urheberschaft
+        der verlinkten/verknüpften Seiten hat der Anbieter keinerlei Einfluss.
+        Deshalb distanziert er sich hiermit ausdrücklich von allen Inhalten aller
+        verlinkten/verknüpften Seiten, die nach der Linksetzung verändert wurden.
+        Diese Feststellung gilt für alle innerhalb des eigenen Internetangebotes
+        gesetzten Links und Verweise sowie für Fremdeinträge in vom Anbieter
+        eingerichteten Gästebüchern, Diskussionsforen und Mailinglisten.
+        Für illegale, fehlerhafte oder unvollständige Inhalte und insbesondere für
+        Schäden, die aus der Nutzung oder Nichtnutzung solcherart dargebotener
+        Informationen entstehen, haftet allein der Anbieter der Seite, auf welche
+        verwiesen wurde, nicht derjenige, der über Links auf die jeweilige
+        Veröffentlichung lediglich verweist.
+      </p>
+
+      <div class="notice-box">
+        <p>
+          <strong>Hinweis:</strong> Sollten Sie auf dieser Website Inhalte finden,
+          die gegen geltendes Recht verstoßen, bitten wir Sie, uns umgehend zu
+          informieren. Wir werden entsprechende Inhalte schnellstmöglich entfernen.
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- 4 | URHEBERRECHT -->
+  <div class="block">
+    <div class="block-label">04 · Urheberrecht</div>
+    <h2>Urheber- und <em>Kennzeichenrecht</em></h2>
+
+    <div class="prose">
+      <p>
+        Der Anbieter ist bestrebt, in allen Publikationen die Urheberrechte der
+        verwendeten Grafiken, Tondokumente, Videosequenzen und Texte zu beachten,
+        von ihm selbst erstellte Grafiken, Tondokumente, Videosequenzen und Texte
+        zu nutzen oder auf lizenzfreie Grafiken, Tondokumente, Videosequenzen und Texte
+        zurückzugreifen.
+      </p>
+      <p>
+        Das Copyright für veröffentlichte, vom Autor selbst erstellte Objekte bleibt
+        allein beim Autor der Seiten. Eine Vervielfältigung oder Verwendung solcher
+        Grafiken, Tondokumente, Videosequenzen und Texte in anderen elektronischen
+        oder gedruckten Publikationen ist ohne ausdrückliche Zustimmung des Autors
+        nicht gestattet.
+      </p>
+      <p>
+        Alle innerhalb des Internetangebotes genannten und ggf. durch Dritte
+        geschützten Marken- und Warenzeichen unterliegen uneingeschränkt den
+        Bestimmungen des jeweils gültigen Kennzeichenrechts und den Besitzrechten
+        der jeweiligen eingetragenen Eigentümer.
+      </p>
+
+      <div class="notice-box">
+        <p>
+          © 2026 Feminess LTD · Marina Henze · Alle Rechte vorbehalten.
+          Die Inhalte dieser Website sind urheberrechtlich geschützt.
+          Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung
+          außerhalb der Grenzen des Urheberrechts bedürfen der schriftlichen
+          Zustimmung des jeweiligen Autors bzw. Erstellers.
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- 5 | STREITSCHLICHTUNG -->
+  <div class="block">
+    <div class="block-label">05 · Streitschlichtung</div>
+    <h2>Online-Streit&shy;<em>beilegung</em></h2>
+
+    <div class="prose">
+      <p>
+        Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung
+        (OS) bereit:
+        <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer"
+           style="color: var(--teal); text-decoration: none;">
+          https://ec.europa.eu/consumers/odr
+        </a>
+      </p>
+      <p>
+        Unsere E-Mail-Adresse finden Sie oben im Impressum.
+        Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor
+        einer Verbraucherschlichtungsstelle teilzunehmen.
+      </p>
+    </div>
+  </div>
+
+</main>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+  <a href="../Website/index.html" class="footer-brand">Feminess</a>
+  <div class="footer-links">
+    <a href="../Website/index.html">Startseite</a>
+    <a href="#">Datenschutz</a>
+    <a href="#">AGB</a>
+  </div>
+  <div class="footer-copy">
+    © 2026 Feminess LTD · Marina Henze · Alle Rechte vorbehalten
+  </div>
+</footer>
+
+</body>
+</html>
