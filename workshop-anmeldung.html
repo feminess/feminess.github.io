@@ -1,0 +1,2025 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Money Identity Reset – Mehrtägiger Workshop mit Marina Henze</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+@font-face {
+  font-family: 'East Liberty';
+  src: url('./CI/east_liberty_signature (1)/east liberty signature.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Avenir LT Pro';
+  src: url('./CI/AvenirLTPro-Book (1).otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Avenir LT Pro';
+  src: url('./CI/AvenirLTPro-Heavy (1).otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+:root {
+  --teal:        #257c6c;
+  --teal-dark:   #1b5c50;
+  --teal-light:  #5ec6b3;
+  --teal-pale:   #b8ddd8;
+  --teal-deep:   #144a40;
+  --rose:        #cf5a73;
+  --rose-light:  #e8a0b0;
+  --sand:        #c2ab8d;
+  --sand-dark:   #8d6a48;
+  --sand-light:  #e4bc95;
+  --black:       #070808;
+  --dark:        #0d2420;
+  --off-white:   #f8f6f2;
+  --cream:       #f0f5f4;
+  --beige:       #ddecea;
+  --warm-gray:   #5a7a74;
+  --mid-gray:    #9ab8b4;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: #fff;
+  color: var(--black);
+  font-family: 'Avenir LT Pro', 'Inter', system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── TOPBAR ── */
+.topbar {
+  background: var(--teal-deep);
+  padding: 11px 24px;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+.topbar p {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--teal-pale);
+}
+.topbar strong { color: #fff; }
+
+/* ── TOPBAR COUNTDOWN: STICKY ── */
+.topbar-countdown {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(20,74,64,0.97);
+  border-top: 1px solid rgba(94,198,179,0.15);
+  padding: 9px 24px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.topbar-countdown-label {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--teal-pale);
+  white-space: nowrap;
+}
+.topbar-countdown-units {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.topbar-cd-unit {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+.topbar-cd-num {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: #fff;
+  min-width: 30px;
+  text-align: center;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+.topbar-cd-lbl {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--teal-light);
+}
+.topbar-cd-sep {
+  font-size: 18px;
+  color: var(--teal);
+  font-weight: 300;
+  margin: 0 3px;
+  line-height: 1;
+}
+
+/* ── FLOATING CTA BUTTON ── */
+@keyframes pulse-cta {
+  0%, 100% { transform: scale(1);    box-shadow: 0 6px 28px rgba(201,23,74,0.50); }
+  50%       { transform: scale(1.07); box-shadow: 0 10px 36px rgba(201,23,74,0.65); }
+}
+.floating-cta {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 200;
+  background: #c9174a;
+  color: #fff;
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  padding: 16px 28px;
+  border-radius: 2px;
+  text-decoration: none;
+  box-shadow: 0 6px 28px rgba(201,23,74,0.50);
+  animation: pulse-cta 2s ease-in-out infinite;
+  white-space: nowrap;
+}
+.floating-cta:hover {
+  background: #a8103d;
+  animation: none;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 36px rgba(201,23,74,0.65);
+}
+@media (max-width: 640px) {
+  .floating-cta {
+    bottom: 20px;
+    right: 16px;
+    left: 16px;
+    text-align: center;
+    border-radius: 2px;
+  }
+}
+
+/* ════════════════════════════════════
+   HERO – SPLIT LAYOUT
+════════════════════════════════════ */
+.hero {
+  display: grid;
+  grid-template-columns: 55fr 45fr;
+  min-height: 92vh;
+  background: var(--dark);
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -80px; left: -80px;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(37,124,108,0.20) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero-content {
+  padding: 80px 60px 80px 56px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+.hero-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--teal-light);
+  margin-bottom: 32px;
+}
+.hero-kicker::before {
+  content: '';
+  display: block;
+  width: 24px; height: 1px;
+  background: var(--teal-light);
+  flex-shrink: 0;
+}
+
+.hero-headline {
+  margin-bottom: 10px;
+}
+.hero-h1-line {
+  display: block;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(32px, 4.2vw, 52px);
+  font-weight: 400;
+  line-height: 1.1;
+  color: #fff;
+  letter-spacing: -0.3px;
+}
+.hero-h1-accent {
+  display: block;
+  font-family: 'East Liberty', serif;
+  font-size: clamp(64px, 9vw, 112px);
+  font-weight: 400;
+  line-height: 0.95;
+  color: var(--sand-light);
+  letter-spacing: 0px;
+  margin: 4px 0;
+}
+.hero-headline-2 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(18px, 2.2vw, 26px);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--mid-gray);
+  line-height: 1.35;
+  margin-bottom: 32px;
+  padding-top: 8px;
+}
+.hero-sub {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: clamp(15px, 1.6vw, 17px);
+  font-weight: 400;
+  color: var(--warm-gray);
+  max-width: 480px;
+  line-height: 1.65;
+  margin-bottom: 36px;
+}
+.hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 40px;
+}
+.hero-meta-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.10);
+  padding: 7px 14px;
+  border-radius: 100px;
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 11.5px;
+  font-weight: 500;
+  color: var(--teal-pale);
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+}
+.pill-icon {
+  width: 12px; height: 12px;
+  flex-shrink: 0;
+  opacity: 0.70;
+}
+
+/* ── HERO SIGNUP FORM ── */
+.hero-signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 400px;
+  margin-bottom: 12px;
+}
+.hero-input {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.13);
+  border-radius: 2px;
+  padding: 13px 16px;
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 14px;
+  color: #fff;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.hero-input::placeholder { color: rgba(255,255,255,0.28); }
+.hero-input:focus { border-color: var(--teal-light); }
+.cta-btn-submit {
+  display: block;
+  width: 100%;
+  background: #c9174a;
+  color: #fff;
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  padding: 22px 36px;
+  border-radius: 2px;
+  cursor: pointer;
+  border: none;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 22px rgba(201,23,74,0.38);
+}
+.cta-btn-submit:hover { background: #a8103d; box-shadow: 0 8px 30px rgba(201,23,74,0.50); }
+.hero-cta-note {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 12px;
+  color: var(--warm-gray);
+  margin-top: 12px;
+  font-style: italic;
+}
+
+/* ── HERO BILD (rechts) ── */
+.hero-image {
+  position: relative;
+  overflow: hidden;
+}
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+.hero-image::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, var(--dark) 0%, rgba(13,36,32,0.25) 30%, transparent 60%);
+  z-index: 1;
+  pointer-events: none;
+}
+.hero-image::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 30%;
+  background: linear-gradient(to top, var(--dark) 0%, transparent 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* ── CONTAINER & SECTIONS ── */
+.container {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+.section-kicker {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.section-kicker::after {
+  content: '';
+  flex: 1;
+  max-width: 36px;
+  height: 1px;
+  background: var(--teal);
+  opacity: 0.35;
+}
+.section-h2 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 500;
+  line-height: 1.15;
+  color: var(--black);
+  margin-bottom: 18px;
+}
+.section-h2 em {
+  font-style: italic;
+  color: var(--rose);
+}
+.section-intro {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--warm-gray);
+  font-style: italic;
+  max-width: 580px;
+  margin-bottom: 40px;
+  line-height: 1.65;
+}
+
+/* ── PROBLEM SECTION ── */
+.section-problem {
+  padding: 84px 0;
+  border-bottom: 1px solid var(--beige);
+}
+.problem-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.problem-item {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 0 16px;
+  padding: 20px 22px;
+  background: var(--off-white);
+  border-left: 2px solid var(--rose-light);
+  border-radius: 2px;
+  align-items: start;
+}
+.problem-item-icon {
+  font-size: 20px;
+  line-height: 1;
+  color: var(--rose-light);
+  text-align: center;
+  padding-top: 2px;
+}
+.problem-item p {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 15.5px;
+  color: var(--dark);
+  line-height: 1.65;
+}
+.problem-item strong {
+  font-weight: 700;
+  color: var(--black);
+}
+.problem-statement {
+  margin-top: 40px;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(18px, 2.5vw, 22px);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--dark);
+  line-height: 1.55;
+  padding-left: 24px;
+  border-left: 2px solid var(--teal);
+}
+
+/* ── TRANSFORMATION SECTION ── */
+.section-transformation {
+  padding: 84px 0;
+  border-bottom: 1px solid var(--beige);
+  background: var(--off-white);
+}
+.transformation-list {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.transformation-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 22px 26px;
+  background: #fff;
+  border: 1px solid var(--beige);
+  border-left: 3px solid var(--teal);
+  border-radius: 2px;
+}
+.transformation-check {
+  color: var(--teal);
+  font-size: 17px;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.transformation-item p {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 15.5px;
+  color: var(--dark);
+  line-height: 1.65;
+}
+.transformation-item strong {
+  font-weight: 700;
+  color: var(--black);
+}
+
+/* ── PROGRAMM (TAG FÜR TAG) ── */
+.section-programm {
+  padding: 84px 0;
+  border-bottom: 1px solid var(--beige);
+}
+.programm-list {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.programm-tag {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 0 28px;
+  padding: 36px 0;
+  border-bottom: 1px solid var(--beige);
+  align-items: start;
+}
+.programm-tag:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.programm-tag-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding-top: 4px;
+}
+.programm-tag-num {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 42px;
+  font-weight: 300;
+  color: var(--teal-pale);
+  line-height: 1;
+}
+.programm-tag-word {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--teal);
+}
+.programm-tag-content h3 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--teal-dark);
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+.programm-tag-content .programm-subtitle {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--teal-light);
+  margin-bottom: 10px;
+}
+.programm-tag-content p {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 15px;
+  color: var(--warm-gray);
+  line-height: 1.7;
+}
+.programm-tag-content .programm-ergebnis {
+  margin-top: 14px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px 16px;
+  background: var(--cream);
+  border-left: 2px solid var(--teal-light);
+  border-radius: 2px;
+}
+.programm-ergebnis-label {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--teal);
+  white-space: nowrap;
+  padding-top: 2px;
+}
+.programm-ergebnis p {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 14px;
+  color: var(--dark);
+  line-height: 1.6;
+  font-style: italic;
+}
+
+/* ── TRENNBILD (Übergang) ── */
+.section-image-break {
+  height: 480px;
+  position: relative;
+  overflow: hidden;
+}
+.section-image-break img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  display: block;
+}
+.section-image-break-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(13,36,32,0.55) 0%,
+    rgba(13,36,32,0.20) 40%,
+    rgba(13,36,32,0.55) 100%
+  );
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 72px;
+}
+.section-image-break-quote {
+  text-align: center;
+  padding: 0 40px;
+  max-width: 680px;
+}
+.section-image-break-quote p {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(22px, 3.5vw, 36px);
+  font-weight: 300;
+  font-style: italic;
+  color: #fff;
+  line-height: 1.45;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.4);
+}
+.section-image-break-quote p em {
+  font-style: normal;
+  color: var(--sand-light);
+}
+
+/* ── ABOUT SECTION ── */
+.section-about {
+  padding: 84px 0;
+  border-bottom: 1px solid var(--beige);
+}
+.about-inner {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: 64px;
+  align-items: center;
+}
+.about-image-wrap {
+  position: relative;
+}
+.about-image-wrap img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 2px;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  object-position: center top;
+}
+.about-image-wrap::after {
+  content: '';
+  position: absolute;
+  top: 16px; left: 16px;
+  right: -16px; bottom: -16px;
+  border: 1px solid var(--beige);
+  border-radius: 2px;
+  z-index: -1;
+  pointer-events: none;
+}
+.about-text .section-kicker { margin-bottom: 8px; }
+.about-text h2 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(28px, 3.5vw, 38px);
+  font-weight: 500;
+  line-height: 1.1;
+  color: var(--black);
+  margin-bottom: 20px;
+}
+.about-text p {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 15.5px;
+  color: var(--warm-gray);
+  line-height: 1.75;
+  margin-bottom: 14px;
+}
+.about-text p:last-of-type { margin-bottom: 0; }
+.about-text p strong {
+  color: var(--dark);
+  font-weight: 700;
+}
+
+/* ── SOCIAL PROOF SECTION ── */
+.section-proof {
+  padding: 84px 0;
+  background: var(--off-white);
+  border-bottom: 1px solid var(--beige);
+}
+.proof-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 40px;
+}
+.testimonial-card {
+  background: #fff;
+  padding: 28px;
+  border-radius: 2px;
+  border: 1px solid var(--beige);
+  display: flex;
+  flex-direction: column;
+}
+.testimonial-quote-mark {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 64px;
+  font-weight: 300;
+  color: var(--teal-pale);
+  line-height: 0.8;
+  margin-bottom: 16px;
+  display: block;
+}
+.testimonial-card blockquote {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 15px;
+  color: var(--dark);
+  line-height: 1.7;
+  font-style: italic;
+  margin-bottom: 20px;
+  flex: 1;
+}
+.testimonial-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 16px;
+  border-top: 1px solid var(--beige);
+}
+.testimonial-avatar {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: var(--teal-pale);
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.testimonial-avatar img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+.testimonial-name {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--dark);
+}
+.testimonial-role {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 12px;
+  color: var(--warm-gray);
+}
+.testimonial-result-badge {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--teal);
+  background: rgba(37,124,108,0.08);
+  padding: 3px 10px;
+  border-radius: 100px;
+  margin-left: auto;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ── FÜR WEN / FÜR WEN NICHT ── */
+.section-for-whom {
+  padding: 84px 0;
+  background: var(--cream);
+  border-bottom: 1px solid var(--beige);
+}
+.for-whom-grid {
+  margin-top: 36px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.for-whom-col-title {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.for-whom-col-title.yes { color: var(--teal); }
+.for-whom-col-title.no  { color: var(--rose); }
+.for-whom-list-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.for-whom-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px 18px;
+  background: #fff;
+  border-radius: 2px;
+}
+.for-whom-item.yes { border: 1px solid var(--beige); border-left: 2px solid var(--teal); }
+.for-whom-item.no  { border: 1px solid var(--beige); border-left: 2px solid var(--rose-light); }
+.for-whom-icon {
+  font-size: 15px;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.for-whom-icon.yes { color: var(--teal); }
+.for-whom-icon.no  { color: var(--rose-light); }
+.for-whom-item p {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 14.5px;
+  color: var(--dark);
+  line-height: 1.6;
+}
+.for-whom-item strong { font-weight: 700; color: var(--black); }
+
+/* ── PREIS SECTION ── */
+.section-preis {
+  padding: 84px 0;
+  border-bottom: 1px solid var(--beige);
+}
+.preis-inner {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.preis-card {
+  border: 1px solid var(--beige);
+  border-radius: 2px;
+  padding: 36px 32px;
+  background: #fff;
+  position: relative;
+}
+.preis-card.featured {
+  border-color: var(--teal);
+  border-top: 3px solid var(--teal);
+}
+.preis-badge {
+  position: absolute;
+  top: -14px;
+  left: 24px;
+  background: var(--teal);
+  color: #fff;
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 5px 14px;
+  border-radius: 100px;
+}
+.preis-label {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--warm-gray);
+  margin-bottom: 16px;
+}
+.preis-amount {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(38px, 6vw, 54px);
+  font-weight: 400;
+  color: var(--black);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.preis-amount-detail {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 13px;
+  color: var(--warm-gray);
+  margin-bottom: 24px;
+}
+.preis-includes {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+.preis-includes li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 14.5px;
+  color: var(--dark);
+  line-height: 1.5;
+}
+.preis-includes li::before {
+  content: '✓';
+  color: var(--teal);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.preis-cta-btn {
+  display: block;
+  width: 100%;
+  background: #c9174a;
+  color: #fff;
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  padding: 18px 24px;
+  border-radius: 2px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 4px 20px rgba(201,23,74,0.38);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.preis-cta-btn:hover { background: #a8103d; box-shadow: 0 8px 28px rgba(201,23,74,0.50); }
+.preis-note {
+  margin-top: 36px;
+  text-align: center;
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 13px;
+  color: var(--warm-gray);
+  font-style: italic;
+  line-height: 1.65;
+}
+.scarcity-bar {
+  margin-top: 40px;
+  padding: 20px 24px;
+  background: rgba(207,90,115,0.06);
+  border: 1px solid rgba(207,90,115,0.18);
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.scarcity-icon {
+  font-size: 20px;
+  flex-shrink: 0;
+}
+.scarcity-text {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 14.5px;
+  color: var(--dark);
+  line-height: 1.55;
+}
+.scarcity-text strong {
+  font-weight: 700;
+  color: var(--rose);
+}
+
+/* ── BONUS SECTION ── */
+.section-bonus {
+  padding: 84px 0;
+  background: linear-gradient(135deg, var(--teal-deep) 0%, var(--dark) 100%);
+  position: relative;
+  overflow: hidden;
+}
+.section-bonus::before {
+  content: '';
+  position: absolute;
+  top: -100px; right: -100px;
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(94,198,179,0.12) 0%, transparent 65%);
+  pointer-events: none;
+}
+.bonus-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(94,198,179,0.15);
+  border: 1px solid rgba(94,198,179,0.30);
+  padding: 6px 16px;
+  border-radius: 100px;
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--teal-light);
+  margin-bottom: 24px;
+}
+.section-bonus h2 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 400;
+  color: #fff;
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+.section-bonus h2 em { font-style: italic; color: var(--sand-light); }
+.section-bonus .section-intro { color: var(--mid-gray); margin-bottom: 36px; }
+.bonus-list { display: flex; flex-direction: column; gap: 12px; }
+.bonus-item {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  padding: 24px 28px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.09);
+  border-left: 3px solid var(--teal-light);
+  border-radius: 2px;
+}
+.bonus-icon { font-size: 22px; flex-shrink: 0; margin-top: 2px; }
+.bonus-item h3 {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 6px;
+}
+.bonus-item p {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 14.5px;
+  color: var(--mid-gray);
+  line-height: 1.65;
+}
+
+/* ── ANCHOR CTA ── */
+.section-anchor-cta {
+  padding: 48px 0;
+  text-align: center;
+  background: linear-gradient(135deg, var(--teal-deep) 0%, var(--dark) 100%);
+  border-bottom: none;
+}
+.section-anchor-cta .anchor-cta-note {
+  color: var(--mid-gray);
+}
+.cta-btn-anchor {
+  display: inline-block;
+  background: #c9174a;
+  color: #fff;
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  padding: 20px 44px;
+  border-radius: 2px;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  box-shadow: 0 4px 22px rgba(201,23,74,0.38);
+}
+.cta-btn-anchor:hover { background: #a8103d; transform: translateY(-2px); box-shadow: 0 8px 30px rgba(201,23,74,0.50); }
+.anchor-cta-note {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 12px;
+  color: var(--warm-gray);
+  margin-top: 10px;
+  font-style: italic;
+}
+
+/* ── CTA / ANMELDUNG SECTION ── */
+.section-cta {
+  padding: 100px 0;
+  background: var(--dark);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+.section-cta::before {
+  content: '';
+  position: absolute;
+  top: -150px; left: 50%;
+  transform: translateX(-50%);
+  width: 700px; height: 700px;
+  background: radial-gradient(circle, rgba(37,124,108,0.20) 0%, transparent 60%);
+  pointer-events: none;
+}
+.section-cta-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+.section-cta .section-kicker {
+  justify-content: center;
+  color: var(--teal-light);
+}
+.section-cta .section-kicker::after { background: var(--teal-light); }
+.section-cta h2 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 400;
+  color: #fff;
+  line-height: 1.15;
+  margin-bottom: 14px;
+}
+.section-cta h2 em {
+  font-style: italic;
+  color: var(--sand-light);
+}
+.section-cta-desc {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 15px;
+  color: var(--mid-gray);
+  margin-bottom: 36px;
+  line-height: 1.65;
+}
+.cta-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+.cta-input {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.13);
+  border-radius: 2px;
+  padding: 15px 18px;
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 15px;
+  color: #fff;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.cta-input::placeholder { color: rgba(255,255,255,0.28); }
+.cta-input:focus { border-color: var(--teal-light); }
+.cta-privacy {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 12px;
+  color: var(--warm-gray);
+  font-style: italic;
+  line-height: 1.6;
+}
+
+/* ── TRUST LOGOS ── */
+.section-trust {
+  padding: 48px 0;
+  border-bottom: 1px solid var(--beige);
+}
+.trust-logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  margin-top: 24px;
+  opacity: 0.55;
+  filter: grayscale(1);
+}
+.trust-logo-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--warm-gray);
+  border: 1px solid var(--beige);
+  padding: 8px 18px;
+  border-radius: 2px;
+  height: 36px;
+}
+
+/* ── FAQ ── */
+.section-faq {
+  padding: 84px 0;
+  border-bottom: 1px solid var(--beige);
+}
+.faq-list {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+}
+.faq-item {
+  padding: 24px 0;
+  border-bottom: 1px solid var(--beige);
+}
+.faq-item:last-child { border-bottom: none; }
+.faq-item h3 {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 8px;
+}
+.faq-item p {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 15px;
+  color: var(--warm-gray);
+  line-height: 1.7;
+  max-width: 640px;
+}
+
+/* ── EXIT POPUP ── */
+@keyframes popup-in {
+  from { opacity: 0; transform: translateY(24px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0)    scale(1);    }
+}
+.popup-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(7,8,8,0.72);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+.popup-overlay.is-visible {
+  display: flex;
+}
+.popup-box {
+  background: var(--dark);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-top: 3px solid #c9174a;
+  border-radius: 3px;
+  max-width: 520px;
+  width: 100%;
+  padding: 48px 44px 40px;
+  position: relative;
+  animation: popup-in 0.3s ease forwards;
+}
+.popup-close {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--warm-gray);
+  font-size: 22px;
+  line-height: 1;
+  padding: 4px;
+  transition: color 0.15s;
+}
+.popup-close:hover { color: #fff; }
+.popup-kicker {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--teal-light);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.popup-kicker::before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 1px;
+  background: var(--teal-light);
+}
+.popup-box h2 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(26px, 4vw, 36px);
+  font-weight: 400;
+  color: #fff;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+.popup-box h2 em {
+  font-style: italic;
+  color: var(--sand-light);
+}
+.popup-box p {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 15px;
+  color: var(--mid-gray);
+  line-height: 1.65;
+  margin-bottom: 28px;
+}
+.popup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+.popup-input {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.13);
+  border-radius: 2px;
+  padding: 13px 16px;
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 14px;
+  color: #fff;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.popup-input::placeholder { color: rgba(255,255,255,0.28); }
+.popup-input:focus { border-color: var(--teal-light); }
+.popup-btn {
+  display: block;
+  width: 100%;
+  background: #c9174a;
+  color: #fff;
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  padding: 18px 24px;
+  border-radius: 2px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(201,23,74,0.40);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.popup-btn:hover { background: #a8103d; box-shadow: 0 8px 28px rgba(201,23,74,0.50); }
+.popup-dismiss {
+  display: block;
+  text-align: center;
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 12px;
+  color: var(--warm-gray);
+  cursor: pointer;
+  background: none;
+  border: none;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  margin-top: 10px;
+  transition: color 0.15s;
+}
+.popup-dismiss:hover { color: var(--mid-gray); }
+@media (max-width: 560px) {
+  .popup-box { padding: 36px 24px 28px; }
+}
+
+/* ── FOOTER ── */
+.site-footer {
+  background: #fff;
+  border-top: 1px solid var(--beige);
+  padding: 28px 40px;
+  text-align: center;
+}
+.site-footer p {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 12px;
+  color: var(--mid-gray);
+}
+.site-footer a {
+  color: var(--teal);
+  text-decoration: none;
+}
+.site-footer a:hover { text-decoration: underline; }
+
+/* ── PROOF COUNT ── */
+.proof-count {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(18px, 2.5vw, 22px);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--teal-dark);
+  margin-bottom: 32px;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+  .hero-image {
+    height: 55vw;
+    min-height: 300px;
+    max-height: 480px;
+    order: -1;
+  }
+  .hero-image::before {
+    background: linear-gradient(to bottom, transparent 50%, var(--dark) 100%);
+  }
+  .hero-image::after { display: none; }
+  .hero-content {
+    padding: 48px 28px 64px;
+  }
+  .hero-h1-accent { font-size: clamp(56px, 14vw, 80px); }
+  .for-whom-grid { grid-template-columns: 1fr; }
+  .preis-inner { grid-template-columns: 1fr; }
+}
+@media (max-width: 680px) {
+  .container { padding: 0 24px; }
+  .section-problem, .section-transformation, .section-programm,
+  .section-about, .section-proof, .section-for-whom,
+  .section-preis, .section-faq { padding: 56px 0; }
+  .about-inner { grid-template-columns: 1fr; gap: 0; }
+  .about-image-wrap { margin-bottom: 40px; }
+  .about-image-wrap::after { display: none; }
+  .proof-grid { grid-template-columns: 1fr; }
+  .programm-tag { grid-template-columns: 54px 1fr; gap: 0 16px; }
+  .programm-tag-num { font-size: 32px; }
+  .section-cta-inner { padding: 0 24px; }
+  .section-image-break { height: 300px; }
+  .topbar p { font-size: 9.5px; letter-spacing: 1.5px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ── TOPBAR: DRINGLICHKEIT ── -->
+<div class="topbar">
+  <p><strong>Kostenfreier 3-Tage-Workshop</strong> &nbsp;·&nbsp; 12.–14. Juni 2026 &nbsp;·&nbsp; <strong><a href="#anmeldung" style="color:#fff;text-decoration:underline;">Jetzt kostenfrei anmelden</a></strong></p>
+</div>
+
+<!-- ── MINI COUNTDOWN ── -->
+<div class="topbar-countdown">
+  <span class="topbar-countdown-label">Workshop startet in</span>
+  <div class="topbar-countdown-units">
+    <div class="topbar-cd-unit">
+      <span class="topbar-cd-num" id="tcd-days">00</span>
+      <span class="topbar-cd-lbl">Tage</span>
+    </div>
+    <span class="topbar-cd-sep">:</span>
+    <div class="topbar-cd-unit">
+      <span class="topbar-cd-num" id="tcd-hours">00</span>
+      <span class="topbar-cd-lbl">Std</span>
+    </div>
+    <span class="topbar-cd-sep">:</span>
+    <div class="topbar-cd-unit">
+      <span class="topbar-cd-num" id="tcd-minutes">00</span>
+      <span class="topbar-cd-lbl">Min</span>
+    </div>
+    <span class="topbar-cd-sep">:</span>
+    <div class="topbar-cd-unit">
+      <span class="topbar-cd-num" id="tcd-seconds">00</span>
+      <span class="topbar-cd-lbl">Sek</span>
+    </div>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════════
+     HERO – Split: Text links · Bild rechts
+════════════════════════════════════════════ -->
+<section class="hero" id="anmeldung">
+
+  <!-- TEXT LINKS -->
+  <div class="hero-content">
+    <div class="hero-kicker">3-Tage-Workshop &nbsp;·&nbsp; 12.–14. Juni 2026</div>
+
+    <div class="hero-headline">
+      <span class="hero-h1-line">Money Identity</span>
+      <span class="hero-h1-accent">Reset</span>
+    </div>
+
+    <p class="hero-headline-2">Erschaffe deine neue Money Identity, die im vollen Alignment mehr Geld verlangt, verdient und für sich arbeiten lässt, damit dein Business, ohne Dauer-Hustle, expandiert.</p>
+
+    <p class="hero-sub">Der mehrtägige Workshop für selbstständige Frauen, die bereit sind, ihr Business auf das nächste Level zu bringen – mit dem richtigen Shift, nicht mit noch mehr Arbeit.</p>
+
+    <div class="hero-meta">
+      <span class="hero-meta-pill">
+        <svg class="pill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        12.–14. Juni 2026
+      </span>
+      <span class="hero-meta-pill">
+        <svg class="pill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        3 intensive Tage
+      </span>
+      <span class="hero-meta-pill">
+        <svg class="pill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 10l4.553-2.277A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M3 8a2 2 0 012-2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V8z"/></svg>
+        Live &amp; Online
+      </span>
+      <span class="hero-meta-pill">
+        <svg class="pill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 010-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 000-5C13 2 12 7 12 7z"/></svg>
+        Kostenfrei
+      </span>
+    </div>
+
+    <!-- HINWEIS: Formular durch dein echtes E-Mail-Tool ersetzen (z.B. ActiveCampaign, Kajabi, Elopage) -->
+    <form class="hero-signup-form" action="#" method="post">
+      <input type="text" class="hero-input" placeholder="Dein Vorname" autocomplete="given-name">
+      <input type="email" class="hero-input" placeholder="Deine E-Mail-Adresse" autocomplete="email">
+      <button type="submit" class="cta-btn-submit">Meinen Platz sichern &rarr;</button>
+    </form>
+    <p class="hero-cta-note">Kostenfrei &nbsp;·&nbsp; Kein Spam</p>
+  </div>
+
+  <!-- BILD RECHTS -->
+  <div class="hero-image">
+    <img src="./Bilder/Marina_MAI2314477 Kopie.jpg" alt="Marina Henze">
+  </div>
+
+</section>
+
+
+<!-- ── BEKANNT AUS ── -->
+<section class="section-trust">
+  <div class="container">
+    <div class="section-kicker">Bekannt aus</div>
+    <div class="trust-logos">
+      <div class="trust-logo-item">[Medium / Podcast 1]</div>
+      <div class="trust-logo-item">[Medium / Podcast 2]</div>
+      <div class="trust-logo-item">[Medium / Podcast 3]</div>
+      <div class="trust-logo-item">[Medium / Podcast 4]</div>
+      <div class="trust-logo-item">[Medium / Podcast 5]</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── PROBLEM-SECTION ── -->
+<section class="section-problem">
+  <div class="container">
+    <div class="section-kicker">Kennst du das?</div>
+    <h2 class="section-h2">Du gibst alles.<br>Und kommst trotzdem <em>nicht weiter.</em></h2>
+    <p class="section-intro">Du arbeitest, du investierst, du probierst – und findest dich Monat für Monat auf demselben Umsatz-Level wieder. Das hat einen konkreten Grund. Und der liegt tiefer als deine Strategie.</p>
+
+    <ul class="problem-list">
+      <li class="problem-item">
+        <span class="problem-item-icon">↺</span>
+        <div>
+          <p><strong>Du arbeitest mehr – verdienst aber nicht mehr.</strong> Egal ob neues Angebot, mehr Content oder mehr Sichtbarkeit: Der Umsatz bleibt, wo er war. Monat für Monat.</p>
+        </div>
+      </li>
+      <li class="problem-item">
+        <span class="problem-item-icon">↕</span>
+        <div>
+          <p><strong>Dein Umsatz schwankt stark – ohne erkennbaren Grund.</strong> Ein guter Monat, zwei schwache. Verlässliche Planung fühlt sich unmöglich an.</p>
+        </div>
+      </li>
+      <li class="problem-item">
+        <span class="problem-item-icon">↓</span>
+        <div>
+          <p><strong>Du nennst deinen Preis – und zögerst.</strong> Innerlich weißt du, du könntest mehr verlangen. Aber etwas hält dich davon ab. Jedes Mal.</p>
+        </div>
+      </li>
+      <li class="problem-item">
+        <span class="problem-item-icon">✕</span>
+        <div>
+          <p><strong>Neue Strategien bringen nicht das erhoffte Level.</strong> Du probierst, optimierst, startest neu. Und landest wieder da, wo du angefangen hast.</p>
+        </div>
+      </li>
+    </ul>
+
+    <p class="problem-statement">
+      Das ist keine Frage von Fleiß oder Talent.<br>
+      Das ist eine Frage von Mustern – und genau die lösen wir in diesen 3 Tagen.
+    </p>
+  </div>
+</section>
+
+
+<!-- ── WAS SICH VERÄNDERT ── -->
+<section class="section-transformation">
+  <div class="container">
+    <div class="section-kicker">Was sich verändert</div>
+    <h2 class="section-h2">Nach diesen 3 Tagen bist du<br><em>nicht mehr dieselbe.</em></h2>
+    <p class="section-intro">Kein Wissensmüll. Keine Theorie-Stapel. Nur das, was wirklich verändert, wie du dein Business führst – und dich selbst darin siehst.</p>
+
+    <div class="transformation-list">
+      <div class="transformation-item">
+        <span class="transformation-check">✓</span>
+        <p><strong>Du weißt, was dich aufhält – und kannst es loslassen.</strong> Du hast das Muster, das dich unbewusst auf demselben Level hält, vollständig durchleuchtet und weißt, wie du es auflöst.</p>
+      </div>
+      <div class="transformation-item">
+        <span class="transformation-check">✓</span>
+        <p><strong>Du nennst deinen Preis – ohne zu zögern.</strong> Du hast dein Preissystem neu ausgerichtet und kannst deinen Wert klar benennen und vertreten. Ohne Entschuldigung.</p>
+      </div>
+      <div class="transformation-item">
+        <span class="transformation-check">✓</span>
+        <p><strong>Du hast deinen vollständigen nächsten Business-Schritt schriftlich vor dir.</strong> Nicht als vage Idee – als konkreten Plan, den du direkt nach dem Workshop umsetzen kannst.</p>
+      </div>
+      <div class="transformation-item">
+        <span class="transformation-check">✓</span>
+        <p><strong>Du bist Teil einer Gemeinschaft gleichgesinnter Frauen.</strong> Menschen, die auf demselben Weg sind – und die nach diesen 3 Tagen dein Netzwerk sind.</p>
+      </div>
+      <div class="transformation-item">
+        <span class="transformation-check">✓</span>
+        <p><strong>Du hast den Shift vollzogen, der wirklich zählt.</strong> Nicht durch eine neue Strategie – sondern durch die innere Klarheit, die alle äußeren Strategien erst wirksam macht.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── ANCHOR CTA ── -->
+<div class="section-anchor-cta">
+  <div class="container">
+    <a href="#anmeldung" class="cta-btn-anchor">Meinen Platz sichern &rarr;</a>
+    <p class="anchor-cta-note">12.–14. Juni 2026 &nbsp;·&nbsp; Kostenfrei</p>
+  </div>
+</div>
+
+
+<!-- ── PROGRAMM: TAG FÜR TAG ── -->
+<section class="section-programm">
+  <div class="container">
+    <div class="section-kicker">Das Programm</div>
+    <h2 class="section-h2">3 Tage. 3 Shifts.<br><em>1 neues Level.</em></h2>
+    <p class="section-intro">Jeder Tag hat ein klares Thema, eine klare Tiefe – und ein konkretes Ergebnis, das du mit nach Hause nimmst.</p>
+
+    <div class="programm-list">
+
+      <div class="programm-tag">
+        <div class="programm-tag-label">
+          <span class="programm-tag-num">01</span>
+          <span class="programm-tag-word">Tag</span>
+        </div>
+        <div class="programm-tag-content">
+          <div class="programm-subtitle">Positioning-Tag</div>
+          <h3>Dein Wert. Dein Warum. Deine Positionierung.</h3>
+          <p>Wir klären, wofür du wirklich stehst – und warum dein aktuelles Angebot noch nicht das widerspiegelt. Du bearbeitest die Muster, die dich davon abhalten, deinen Wert voll zu beanspruchen, und richtest deine Positionierung so aus, dass sie magnetisch wirkt. Nicht laut. Klar.</p>
+          <div class="programm-ergebnis">
+            <span class="programm-ergebnis-label">Ergebnis</span>
+            <p>Du verlässt Tag 1 mit einer glasklaren Positionierung – schriftlich, in deinen eigenen Worten – und weißt genau, wen du ansprechen willst und warum.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="programm-tag">
+        <div class="programm-tag-label">
+          <span class="programm-tag-num">02</span>
+          <span class="programm-tag-word">Tag</span>
+        </div>
+        <div class="programm-tag-content">
+          <div class="programm-subtitle">Money Mindset & Preis-Tag</div>
+          <h3>Aufhören, sich unter Wert zu verkaufen.</h3>
+          <p>Der tiefste Tag. Wir gehen direkt in das, was dich beim Preis nennen blockiert – die inneren Programme, die echten Glaubenssätze, die verborgenen Muster. Du arbeitest nicht nur daran zu verstehen, was dich aufhält. Du löst es. Wir entwickeln gemeinsam dein neues Preissystem – mit dem du dich nicht mehr rechtfertigen musst.</p>
+          <div class="programm-ergebnis">
+            <span class="programm-ergebnis-label">Ergebnis</span>
+            <p>Du verlässt Tag 2 mit einem neuen Preisrahmen für dein Angebot – und der inneren Sicherheit, ihn zu vertreten. Ohne Zögern. Ohne Entschuldigung.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="programm-tag">
+        <div class="programm-tag-label">
+          <span class="programm-tag-num">03</span>
+          <span class="programm-tag-word">Tag</span>
+        </div>
+        <div class="programm-tag-content">
+          <div class="programm-subtitle">Strategie & Umsetzungs-Tag</div>
+          <h3>Dein nächster Business-Schritt. Konkret.</h3>
+          <p>Heute wird alles, was du in den ersten zwei Tagen erkannt und verändert hast, in einen konkreten Plan übersetzt. Kein vager Aktionsplan, kein Wunschdenken – sondern ein klarer, realistischer nächster Schritt, den du direkt nach dem Workshop umsetzen kannst. Wir schließen mit einem gemeinsamen Commitment-Ritual, das dich in deiner neuen Ausrichtung verankert.</p>
+          <div class="programm-ergebnis">
+            <span class="programm-ergebnis-label">Ergebnis</span>
+            <p>Du verlässt Tag 3 mit deinem vollständigen nächsten Schritt – schriftlich und klar – und dem Netzwerk einer Gruppe von Frauen, die auf demselben Weg sind.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ── TRENNBILD ── -->
+<div class="section-image-break">
+  <img src="./Bilder/Marina_MAI2314376 Kopie.jpg" alt="Marina Henze – Freiheit und Fülle">
+  <div class="section-image-break-overlay">
+    <div class="section-image-break-quote">
+      <p><span style="display:block;white-space:nowrap;text-align:center;">Drei Tage können mehr verändern als drei Jahre des</span><span style="display:block;white-space:nowrap;text-align:center;">Weitermachens – wenn du an der <em>richtigen Stelle ansetzt.</em></span></p>
+    </div>
+  </div>
+</div>
+
+
+<!-- ── ÜBER MARINA ── -->
+<section class="section-about">
+  <div class="container">
+    <div class="about-inner">
+      <div class="about-image-wrap">
+        <img src="./Bilder/Marina_MAI2314280 Kopie.jpg" alt="Marina Henze – Feminess">
+      </div>
+      <div class="about-text">
+        <div class="section-kicker">Deine Gastgeberin</div>
+        <h2>Ich bin Marina Henze.</h2>
+        <p>Als Business Architektin und Gründerin von Feminess begleite ich selbstständige Frauen dabei, ihr Business so aufzubauen, dass es zu ihrem Leben passt – und nicht umgekehrt.</p>
+        <p>Ich kenne die Erschöpfung. Ich kenne das Plateau. Ich weiß, wie es sich anfühlt, wenn du alles gibst – und der Umsatz trotzdem stehenbleibt.</p>
+        <p><strong>In diesen 3 Tagen teile ich genau das, was mir und meinen Kundinnen geholfen hat, echte Umsatz-Durchbrüche zu erzielen – nicht durch mehr Arbeit, sondern durch den richtigen Shift.</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── SOCIAL PROOF ── -->
+<section class="section-proof">
+  <div class="container">
+    <div class="section-kicker">Das sagen Teilnehmerinnen</div>
+    <h2 class="section-h2">Nicht Versprechen.<br><em>Echte Ergebnisse.</em></h2>
+    <p class="proof-count">Echte Ergebnisse echter Frauen – das sagen sie:</p>
+    <div class="proof-grid">
+      <div class="testimonial-card">
+        <span class="testimonial-quote-mark">"</span>
+        <blockquote>Ich bin mit der Erwartung rein, ein paar gute Tipps mitzunehmen. Ich bin raus mit einem völlig neuen Blick auf mein Business – und auf mich selbst. Drei Wochen nach dem Workshop hatte ich meinen ersten 5-stelligen Monat.</blockquote>
+        <div class="testimonial-meta">
+          <div class="testimonial-avatar"></div>
+          <div>
+            <div class="testimonial-name">[Vorname Nachname]</div>
+            <div class="testimonial-role">[Branche / Tätigkeitsfeld]</div>
+          </div>
+          <span class="testimonial-result-badge">5-stellig</span>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <span class="testimonial-quote-mark">"</span>
+        <blockquote>Tag 2 hat mein komplettes Preisgefüge verändert. Ich habe nicht nur verstanden, warum ich immer zu wenig verlangt habe – ich habe es gelöst. Heute verlange ich das Doppelte, und meine Kunden sagen Ja.</blockquote>
+        <div class="testimonial-meta">
+          <div class="testimonial-avatar"></div>
+          <div>
+            <div class="testimonial-name">[Vorname Nachname]</div>
+            <div class="testimonial-role">[Branche / Tätigkeitsfeld]</div>
+          </div>
+          <span class="testimonial-result-badge">2× Preis</span>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <span class="testimonial-quote-mark">"</span>
+        <blockquote>Was mich am meisten überrascht hat: die anderen Frauen. Die Gemeinschaft, die in diesen 3 Tagen entsteht, ist unbeschreiblich. Ich habe dort Geschäftspartnerinnen und Freundinnen gefunden, die heute noch zu meinem engsten Kreis gehören.</blockquote>
+        <div class="testimonial-meta">
+          <div class="testimonial-avatar"></div>
+          <div>
+            <div class="testimonial-name">[Vorname Nachname]</div>
+            <div class="testimonial-role">[Branche / Tätigkeitsfeld]</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <span class="testimonial-quote-mark">"</span>
+        <blockquote>Ich habe in 3 Tagen mehr Klarheit gewonnen als in 2 Jahren mit verschiedenen Coaches und Kursen. Marina schafft einen Raum, in dem echter Wandel möglich ist – nicht nur Theorie. Mein Business ist heute ein anderes.</blockquote>
+        <div class="testimonial-meta">
+          <div class="testimonial-avatar"></div>
+          <div>
+            <div class="testimonial-name">[Vorname Nachname]</div>
+            <div class="testimonial-role">[Branche / Tätigkeitsfeld]</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── ANCHOR CTA ── -->
+<div class="section-anchor-cta">
+  <div class="container">
+    <a href="#anmeldung" class="cta-btn-anchor">Meinen Platz sichern &rarr;</a>
+    <p class="anchor-cta-note">12.–14. Juni 2026 &nbsp;·&nbsp; Kostenfrei</p>
+  </div>
+</div>
+
+
+<!-- ── FÜR WEN / FÜR WEN NICHT ── -->
+<section class="section-for-whom">
+  <div class="container">
+    <div class="section-kicker">Ehrlichkeit</div>
+    <h2 class="section-h2">Dieser Workshop ist für dich –<br>und <em>nicht für dich.</em></h2>
+    <p class="section-intro">Ich möchte, dass du genau weißt, worauf du dich einlässt – damit die richtigen Frauen dabei sind und alle das Maximum herausholen.</p>
+
+    <div class="for-whom-grid">
+      <!-- FÜR WEN -->
+      <div>
+        <div class="for-whom-col-title yes">Dieser Workshop ist für dich, wenn …</div>
+        <div class="for-whom-list-inner">
+          <div class="for-whom-item yes">
+            <span class="for-whom-icon yes">✓</span>
+            <p><strong>Du bereits selbstständig bist</strong> und aktiv im Business – aber der Umsatz nicht wächst, obwohl du alles gibst.</p>
+          </div>
+          <div class="for-whom-item yes">
+            <span class="for-whom-icon yes">✓</span>
+            <p><strong>Du bereit bist, tiefer zu gehen</strong> als Strategie und Taktik – und weißt, dass das Muster in dir liegt, nicht im Markt.</p>
+          </div>
+          <div class="for-whom-item yes">
+            <span class="for-whom-icon yes">✓</span>
+            <p><strong>Du ein echtes Commitment eingehst</strong> – 3 volle Tage, präsent und bereit für Wandel. Nicht als Beobachterin, sondern als Teilnehmerin.</p>
+          </div>
+          <div class="for-whom-item yes">
+            <span class="for-whom-icon yes">✓</span>
+            <p><strong>Du dir wünschst, Teil einer Gemeinschaft gleichgesinnter Frauen zu sein</strong> – die dich versteht, unterstützt und ehrlich spiegelt.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FÜR WEN NICHT -->
+      <div>
+        <div class="for-whom-col-title no">Dieser Workshop ist nicht für dich, wenn …</div>
+        <div class="for-whom-list-inner">
+          <div class="for-whom-item no">
+            <span class="for-whom-icon no">✗</span>
+            <p><strong>Du noch ganz am Anfang stehst</strong> und dein Business erst aufbauen möchtest. Dieses Format setzt voraus, dass du bereits aktiv bist.</p>
+          </div>
+          <div class="for-whom-item no">
+            <span class="for-whom-icon no">✗</span>
+            <p><strong>Du ausschließlich neue Marketing-Taktiken suchst</strong> – ohne bereit zu sein, die inneren Ursachen anzuschauen.</p>
+          </div>
+          <div class="for-whom-item no">
+            <span class="for-whom-icon no">✗</span>
+            <p><strong>Du nicht bereit bist, 3 volle Tage vollständig präsent zu sein.</strong> Dieses Format funktioniert nur mit echter Energie – nicht nebenbei.</p>
+          </div>
+          <div class="for-whom-item no">
+            <span class="for-whom-icon no">✗</span>
+            <p><strong>Du eine Quick-Fix-Lösung erwartest.</strong> Echter Wandel braucht Tiefe – und diese 3 Tage bieten genau das.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── BONUS ── -->
+<section class="section-bonus">
+  <div class="container">
+    <div class="bonus-badge">&#9733; Nur für Live-Teilnehmerinnen</div>
+    <h2>Komm live – und hol dir<br>deinen <em>exklusiven Bonus.</em></h2>
+    <p class="section-intro">Wer live dabei ist, bekommt mehr als den Workshop. Diese Extras sind ausschließlich für Teilnehmerinnen reserviert, die alle 3 Tage live wahrnehmen.</p>
+    <div class="bonus-list">
+      <div class="bonus-item">
+        <span class="bonus-icon">&#127919;</span>
+        <div>
+          <h3>Vorbereitungs-Workbook</h3>
+          <p>Damit du vom ersten Moment an voll dabei bist: Du erhältst vorab ein Workbook mit 3 Fragen, die dich in die Tiefe führen – und sicherstellen, dass du das Maximum aus diesen 3 Tagen herausholst.</p>
+        </div>
+      </div>
+      <div class="bonus-item">
+        <span class="bonus-icon">&#128203;</span>
+        <div>
+          <h3>[Bonus 2: Titel eintragen]</h3>
+          <p>[Beschreibe den Bonus konkret: Was bekommt die Teilnehmerin? Welchen Wert hat es – und wie unterstützt es sie über den Workshop hinaus?]</p>
+        </div>
+      </div>
+      <div class="bonus-item">
+        <span class="bonus-icon">&#128172;</span>
+        <div>
+          <h3>Privater Community-Bereich</h3>
+          <p>Zugang zu einem exklusiven Bereich für alle Workshop-Teilnehmerinnen – zur gegenseitigen Unterstützung, zum Austausch und zur Nachbearbeitung. Die Gemeinschaft hört nach den 3 Tagen nicht auf.</p>
+        </div>
+      </div>
+      <div class="bonus-item">
+        <span class="bonus-icon">&#127775;</span>
+        <div>
+          <h3>30 Tage E-Mail-Support nach dem Workshop</h3>
+          <p>Du hast in den ersten Wochen Fragen bei der Umsetzung? Ich bin 30 Tage nach dem Workshop per E-Mail erreichbar – damit du dein Momentum nicht verlierst.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ── FAQ ── -->
+<section class="section-faq">
+  <div class="container">
+    <div class="section-kicker">Häufige Fragen</div>
+    <h2 class="section-h2">Du hast noch <em>Fragen?</em></h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <h3>Wie läuft der Workshop technisch ab?</h3>
+        <p>Der Workshop findet live online via Zoom statt – 3 volle Tage (Fr–So), jeweils von 9:00 bis ca. 18:00 Uhr mit Pausen. Du brauchst eine stabile Internetverbindung, eine Kamera und ein ruhiges Umfeld. Die genauen Zugangsdaten und das Vorbereitungs-Workbook erhältst du nach der Buchung per E-Mail.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Gibt es eine Aufzeichnung?</h3>
+        <p>Nein. Dieser Workshop ist als geschlossener, intensiver Gruppenraum konzipiert. Die Energie und die Tiefe entstehen nur durch echte Präsenz. Aus Gründen des Vertrauensschutzes aller Teilnehmerinnen wird keine Aufzeichnung angeboten. Bitte stelle sicher, dass du die 3 Tage vollständig freihalten kannst.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Für wen ist dieser Workshop geeignet?</h3>
+        <p>Für selbstständige Frauen, die bereits aktiv im Business sind – und trotz vollem Einsatz nicht das Wachstum erleben, das sie sich wünschen. Wenn du dich unter Wert verkaufst, auf einem Umsatz-Plateau feststeckst oder spürst, dass etwas Unsichtbares dich aufhält, bist du hier richtig.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Was passiert nach der Anmeldung?</h3>
+        <p>Du erhältst sofort eine Bestätigungs-E-Mail mit allen Details. Dazu bekommst du Zugang zum Vorbereitungs-Workbook und zur privaten Community. Zwei Wochen vor dem Workshop melden wir uns mit allen praktischen Details – Uhrzeit, Ablauf, Technik-Check.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Ist der Workshop wirklich kostenfrei?</h3>
+        <p>Ja, vollständig. Keine versteckten Kosten, keine Kreditkarte erforderlich. Du meldest dich an – und bekommst deinen Platz. Da die Plätze auf 20 begrenzt sind, empfehle ich, dich früh anzumelden.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── ABSCHLIESSENDE CTA / ANMELDUNG ── -->
+<!-- HINWEIS: Formular durch dein echtes E-Mail- / Checkout-Tool ersetzen -->
+<section class="section-cta">
+  <div class="section-cta-inner">
+    <div class="section-kicker">Jetzt anmelden</div>
+    <h2>Dein Platz beim<br><em>Money Identity Reset</em> Workshop</h2>
+    <p class="section-cta-desc">
+      12.–14. Juni 2026 &nbsp;·&nbsp; Live &amp; Online &nbsp;·&nbsp; Kostenfrei<br>
+      Sichere dir deinen Platz – bevor er vergeben ist.
+    </p>
+    <div class="cta-form">
+      <input type="text" class="cta-input" placeholder="Dein Vorname" autocomplete="given-name">
+      <input type="email" class="cta-input" placeholder="Deine E-Mail-Adresse" autocomplete="email">
+      <button type="submit" class="cta-btn-submit">Meinen Platz sichern &rarr;</button>
+    </div>
+    <p class="cta-privacy">Kostenfrei &nbsp;·&nbsp; Kein Spam &nbsp;·&nbsp; Bestätigung sofort per E-Mail<br>Bei Fragen: <a href="mailto:hallo@feminess.de" style="color:var(--teal-light);text-decoration:none;">hallo@feminess.de</a></p>
+  </div>
+</section>
+
+
+<!-- ── EXIT POPUP ── -->
+<div class="popup-overlay" id="exitPopup" role="dialog" aria-modal="true" aria-label="Workshop-Anmeldung">
+  <div class="popup-box">
+    <button class="popup-close" id="popupClose" aria-label="Schließen">&times;</button>
+    <div class="popup-kicker">Warte kurz</div>
+    <h2>Nur noch <em>wenige Plätze</em><br>verfügbar.</h2>
+    <p>12.–14. Juni 2026 &nbsp;·&nbsp; Kostenfrei<br>
+    Sichere dir jetzt deinen Platz – in unter 30 Sekunden.</p>
+    <!-- HINWEIS: Formular durch dein echtes E-Mail-Tool ersetzen -->
+    <form class="popup-form" action="#" method="post">
+      <input type="text"  class="popup-input" placeholder="Dein Vorname"        autocomplete="given-name">
+      <input type="email" class="popup-input" placeholder="Deine E-Mail-Adresse" autocomplete="email">
+      <button type="submit" class="popup-btn">Meinen Platz sichern &rarr;</button>
+    </form>
+    <button class="popup-dismiss" id="popupDismiss">Nein danke, ich melde mich nicht an.</button>
+  </div>
+</div>
+
+<!-- ── FLOATING CTA ── -->
+<a href="#anmeldung" class="floating-cta">Platz sichern &rarr;</a>
+
+<!-- ── FOOTER ── -->
+<footer class="site-footer">
+  <p>&copy; 2026 Feminess &nbsp;·&nbsp; Marina Henze &nbsp;&nbsp;|&nbsp;&nbsp; <a href="./Website/Impressum.html">Impressum</a> &nbsp;|&nbsp; <a href="#">Datenschutz</a></p>
+  <p style="margin-top:14px;font-size:11px;color:#b8b8b8;max-width:640px;margin-left:auto;margin-right:auto;line-height:1.6;">This site is not a part of the Facebook website or Facebook Inc. Additionally, This site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc.</p>
+</footer>
+
+<script>
+// ── EXIT POPUP ──
+(function () {
+  var popup     = document.getElementById('exitPopup');
+  var btnClose  = document.getElementById('popupClose');
+  var btnDismiss= document.getElementById('popupDismiss');
+  var shown     = false;
+
+  function show() {
+    if (shown) return;
+    shown = true;
+    popup.classList.add('is-visible');
+    clearTimeout(inactivityTimer);
+  }
+
+  function hide() {
+    popup.classList.remove('is-visible');
+  }
+
+  btnClose.addEventListener('click', hide);
+  btnDismiss.addEventListener('click', hide);
+  popup.addEventListener('click', function (e) {
+    if (e.target === popup) hide();
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') hide();
+  });
+
+  // Trigger 1: Exit Intent – Maus verlässt das Fenster nach oben
+  document.addEventListener('mouseleave', function (e) {
+    if (e.clientY <= 0) show();
+  });
+
+  // Trigger 2: 30 Sekunden Inaktivität (etwas länger – Workshop erfordert mehr Überlegung)
+  var inactivityTimer;
+  function resetTimer() {
+    clearTimeout(inactivityTimer);
+    inactivityTimer = setTimeout(show, 30000);
+  }
+  ['mousemove', 'scroll', 'keypress', 'click', 'touchstart'].forEach(function (evt) {
+    document.addEventListener(evt, resetTimer, { passive: true });
+  });
+  resetTimer();
+}());
+
+// ── COUNTDOWN ──
+(function () {
+  var target = new Date('2026-06-12T09:00:00');
+
+  function pad(n) { return String(n).padStart(2, '0'); }
+
+  function update() {
+    var now  = new Date();
+    var diff = target - now;
+
+    if (diff <= 0) {
+      ['tcd-days','tcd-hours','tcd-minutes','tcd-seconds'].forEach(function(id) {
+        var el = document.getElementById(id);
+        if (el) el.textContent = '00';
+      });
+      return;
+    }
+
+    var days    = Math.floor(diff / 864e5);
+    var hours   = Math.floor((diff % 864e5) / 36e5);
+    var minutes = Math.floor((diff % 36e5)  / 6e4);
+    var seconds = Math.floor((diff % 6e4)   / 1000);
+
+    var td = document.getElementById('tcd-days');
+    var th = document.getElementById('tcd-hours');
+    var tm = document.getElementById('tcd-minutes');
+    var ts = document.getElementById('tcd-seconds');
+
+    if (td) td.textContent = pad(days);
+    if (th) th.textContent = pad(hours);
+    if (tm) tm.textContent = pad(minutes);
+    if (ts) ts.textContent = pad(seconds);
+  }
+
+  update();
+  setInterval(update, 1000);
+}());
+</script>
+</body>
+</html>
