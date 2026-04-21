@@ -1,0 +1,1503 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Du bist dabei – Make more Money Mastery Workshop</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+@font-face {
+  font-family: 'East Liberty';
+  src: url('../CI/east_liberty_signature (1)/east liberty signature.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Avenir LT Pro';
+  src: url('../CI/AvenirLTPro-Book (1).otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Avenir LT Pro';
+  src: url('../CI/AvenirLTPro-Heavy (1).otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+:root {
+  --teal:        #257c6c;
+  --teal-dark:   #1b5c50;
+  --teal-light:  #5ec6b3;
+  --teal-pale:   #b8ddd8;
+  --teal-deep:   #144a40;
+  --rose:        #cf5a73;
+  --rose-light:  #e8a0b0;
+  --sand:        #c2ab8d;
+  --sand-light:  #e4bc95;
+  --black:       #070808;
+  --dark:        #0d2420;
+  --off-white:   #f8f6f2;
+  --cream:       #f0f5f4;
+  --beige:       #ddecea;
+  --warm-gray:   #5a7a74;
+  --mid-gray:    #9ab8b4;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: #fff;
+  color: var(--black);
+  font-family: 'Avenir LT Pro', 'Inter', system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── HEADER ── */
+.site-header {
+  background: #fff;
+  border-bottom: 1px solid var(--beige);
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.site-header-brand {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--teal-dark);
+}
+
+/* ── HERO: BESTÄTIGUNG ── */
+.hero-confirm {
+  background: var(--dark);
+  padding: 80px 40px 100px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+.hero-confirm::before {
+  content: '';
+  position: absolute;
+  top: -100px; left: 50%;
+  transform: translateX(-50%);
+  width: 700px; height: 700px;
+  background: radial-gradient(circle, rgba(37,124,108,0.22) 0%, transparent 60%);
+  pointer-events: none;
+}
+.hero-confirm::after {
+  content: '';
+  position: absolute;
+  bottom: -80px; right: 5%;
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(207,90,115,0.10) 0%, transparent 60%);
+  pointer-events: none;
+}
+.hero-confirm-inner {
+  max-width: 680px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+.confirm-check {
+  width: 56px;
+  height: 56px;
+  background: rgba(37,124,108,0.20);
+  border: 1.5px solid var(--teal-light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 28px;
+}
+.confirm-check svg {
+  width: 22px;
+  height: 22px;
+  color: var(--teal-light);
+}
+.hero-confirm h1 {
+  font-family: 'East Liberty', 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(52px, 9vw, 96px);
+  font-weight: 400;
+  line-height: 1.0;
+  color: #fff;
+  letter-spacing: -0.5px;
+  margin-bottom: 20px;
+}
+.hero-confirm-sub {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: clamp(16px, 2vw, 19px);
+  font-weight: 400;
+  color: var(--mid-gray);
+  line-height: 1.65;
+  max-width: 520px;
+  margin: 0 auto 36px;
+}
+.hero-confirm-sub strong {
+  color: var(--teal-pale);
+  font-weight: 700;
+}
+.confirm-event-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(37,124,108,0.15);
+  border: 1px solid rgba(94,198,179,0.25);
+  padding: 10px 20px;
+  border-radius: 100px;
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--teal-light);
+  letter-spacing: 0.3px;
+}
+.confirm-event-badge::before {
+  content: '';
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--teal-light);
+  flex-shrink: 0;
+}
+
+/* ── CONTAINER ── */
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+.section-kicker {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.section-kicker::after {
+  content: '';
+  flex: 1;
+  max-width: 36px;
+  height: 1px;
+  background: var(--teal);
+  opacity: 0.35;
+}
+
+/* ── EVENT-DETAILS BOX ── */
+.section-event-details {
+  padding: 60px 0;
+  border-bottom: 1px solid var(--beige);
+}
+.event-details-box {
+  background: var(--off-white);
+  border: 1px solid var(--beige);
+  border-left: 3px solid var(--teal);
+  padding: 28px 32px;
+  border-radius: 2px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 40px;
+}
+.event-detail-label {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 4px;
+}
+.event-detail-value {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 15.5px;
+  font-weight: 700;
+  color: var(--dark);
+}
+.event-detail-sub {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 13px;
+  color: var(--warm-gray);
+  margin-top: 2px;
+}
+.event-link-placeholder {
+  grid-column: 1 / -1;
+  background: rgba(37,124,108,0.06);
+  border: 1px dashed var(--teal-pale);
+  border-radius: 2px;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.event-link-placeholder p {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 13px;
+  color: var(--warm-gray);
+  font-style: italic;
+}
+.event-link-placeholder strong {
+  color: var(--teal-dark);
+  font-style: normal;
+}
+
+/* ── NEXT STEPS ── */
+.section-next-steps {
+  padding: 64px 0;
+  border-bottom: 1px solid var(--beige);
+}
+.next-steps-h2 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(24px, 3.5vw, 34px);
+  font-weight: 500;
+  color: var(--black);
+  line-height: 1.15;
+  margin-bottom: 10px;
+}
+.next-steps-h2 em {
+  font-style: italic;
+  color: var(--teal);
+}
+.next-steps-sub {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 15px;
+  color: var(--warm-gray);
+  margin-bottom: 32px;
+  line-height: 1.65;
+}
+.steps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.step-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--beige);
+}
+.step-item:last-child { border-bottom: none; padding-bottom: 0; }
+.step-num {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 28px;
+  font-weight: 300;
+  color: var(--teal-pale);
+  line-height: 1;
+  min-width: 32px;
+  padding-top: 2px;
+  flex-shrink: 0;
+}
+.step-content strong {
+  display: block;
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 3px;
+}
+.step-content p {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 14px;
+  color: var(--warm-gray);
+  line-height: 1.65;
+}
+.step-content .step-timing {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--teal);
+  background: rgba(37,124,108,0.08);
+  padding: 3px 10px;
+  border-radius: 100px;
+  margin-bottom: 6px;
+}
+
+/* ── KALENDER-SECTION ── */
+.section-calendar {
+  padding: 64px 0;
+  border-bottom: 1px solid var(--beige);
+}
+.section-calendar-h2 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(24px, 3.5vw, 34px);
+  font-weight: 500;
+  color: var(--black);
+  line-height: 1.15;
+  margin-bottom: 10px;
+}
+.section-calendar-h2 em {
+  font-style: italic;
+  color: var(--teal);
+}
+.section-calendar-sub {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 15px;
+  color: var(--warm-gray);
+  margin-bottom: 28px;
+  line-height: 1.65;
+}
+.calendar-days {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.calendar-day-row {
+  background: var(--off-white);
+  border: 1px solid var(--beige);
+  border-radius: 2px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.calendar-day-label {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--teal);
+  min-width: 48px;
+}
+.calendar-day-date {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--dark);
+  flex: 1;
+}
+.calendar-day-time {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 13px;
+  color: var(--warm-gray);
+}
+.calendar-day-buttons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.cal-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 16px;
+  border-radius: 2px;
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.15s, box-shadow 0.15s;
+  cursor: pointer;
+  border: none;
+  letter-spacing: 0.2px;
+}
+.cal-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+.cal-btn svg { width: 13px; height: 13px; flex-shrink: 0; }
+.cal-btn-google  { background: var(--teal); color: #fff; }
+.cal-btn-apple   { background: var(--dark); color: var(--teal-pale); }
+.calendar-note {
+  margin-top: 8px;
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 13px;
+  color: var(--mid-gray);
+  font-style: italic;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+.calendar-note::before { content: '→'; flex-shrink: 0; color: var(--teal-pale); }
+
+/* ── COMMUNITY ── */
+.section-community {
+  padding: 64px 0;
+  border-bottom: 1px solid var(--beige);
+  background: var(--cream);
+}
+.section-community-h2 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(24px, 3.5vw, 34px);
+  font-weight: 500;
+  color: var(--black);
+  line-height: 1.15;
+  margin-bottom: 10px;
+}
+.section-community-h2 em {
+  font-style: italic;
+  color: var(--rose);
+}
+.section-community-sub {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 15px;
+  color: var(--warm-gray);
+  margin-bottom: 28px;
+  line-height: 1.65;
+}
+.community-box {
+  background: var(--dark);
+  border-radius: 2px;
+  padding: 36px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+.community-box::before {
+  content: '';
+  position: absolute;
+  top: -60px; right: -60px;
+  width: 300px; height: 300px;
+  background: radial-gradient(circle, rgba(37,124,108,0.18) 0%, transparent 65%);
+  pointer-events: none;
+}
+.community-box-inner { position: relative; z-index: 1; }
+.community-box-icon {
+  font-size: 32px;
+  margin-bottom: 16px;
+  display: block;
+}
+.community-box h3 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(20px, 3vw, 26px);
+  font-weight: 400;
+  color: #fff;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+.community-box p {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 14.5px;
+  color: var(--mid-gray);
+  line-height: 1.65;
+  max-width: 460px;
+  margin: 0 auto 24px;
+}
+.community-cta-btn {
+  display: inline-block;
+  background: var(--teal);
+  color: #fff;
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 16px 32px;
+  border-radius: 2px;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.15s;
+}
+.community-cta-btn:hover { background: var(--teal-dark); transform: translateY(-2px); }
+.community-placeholder-note {
+  margin-top: 20px;
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 12px;
+  color: var(--warm-gray);
+  font-style: italic;
+}
+
+/* ── PRE-WORK ── */
+.section-prework {
+  padding: 64px 0;
+  border-bottom: 1px solid var(--beige);
+}
+.section-prework-h2 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(24px, 3.5vw, 34px);
+  font-weight: 500;
+  color: var(--black);
+  line-height: 1.15;
+  margin-bottom: 10px;
+}
+.section-prework-h2 em {
+  font-style: italic;
+  color: var(--rose);
+}
+.section-prework-intro {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 15px;
+  color: var(--warm-gray);
+  margin-bottom: 28px;
+  line-height: 1.65;
+}
+.prework-questions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.prework-question {
+  background: var(--dark);
+  border-radius: 2px;
+  padding: 28px 32px;
+  position: relative;
+  overflow: hidden;
+}
+.prework-question::before {
+  content: '';
+  position: absolute;
+  top: -40px; right: -40px;
+  width: 200px; height: 200px;
+  background: radial-gradient(circle, rgba(37,124,108,0.15) 0%, transparent 65%);
+  pointer-events: none;
+}
+.prework-question-inner { position: relative; z-index: 1; }
+.prework-num {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--teal-light);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.prework-num::before {
+  content: '';
+  display: block;
+  width: 16px;
+  height: 1px;
+  background: var(--teal-light);
+}
+.prework-question p {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(18px, 2.8vw, 22px);
+  font-weight: 400;
+  font-style: italic;
+  color: #fff;
+  line-height: 1.45;
+}
+.prework-question p em {
+  font-style: normal;
+  color: var(--sand-light);
+}
+.prework-action {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 14px;
+  color: var(--warm-gray);
+  line-height: 1.65;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.prework-action::before {
+  content: '→';
+  color: var(--teal);
+  font-size: 16px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* ── WAS MITBRINGEN ── */
+.bring-box {
+  margin-top: 28px;
+  background: var(--cream);
+  border: 1px solid var(--beige);
+  border-left: 2px solid var(--sand);
+  padding: 20px 24px;
+  border-radius: 2px;
+}
+.bring-box p {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 14.5px;
+  color: var(--warm-gray);
+  line-height: 1.65;
+}
+.bring-box p strong { color: var(--dark); font-weight: 700; }
+.bring-box ul {
+  list-style: none;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.bring-box ul li {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 14px;
+  color: var(--warm-gray);
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.bring-box ul li::before {
+  content: '✓';
+  color: var(--teal);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* ── VIP UPSELL ── */
+.section-vip {
+  padding: 64px 0;
+  border-bottom: 1px solid var(--beige);
+  background: linear-gradient(135deg, var(--teal-deep) 0%, var(--dark) 100%);
+  position: relative;
+  overflow: hidden;
+}
+.section-vip::before {
+  content: '';
+  position: absolute;
+  top: -100px; right: -100px;
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(228,188,149,0.10) 0%, transparent 65%);
+  pointer-events: none;
+}
+.vip-inner {
+  position: relative;
+  z-index: 1;
+}
+.vip-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(228,188,149,0.15);
+  border: 1px solid rgba(228,188,149,0.30);
+  padding: 6px 16px;
+  border-radius: 100px;
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--sand-light);
+  margin-bottom: 20px;
+}
+.vip-h2 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(26px, 4vw, 38px);
+  font-weight: 400;
+  color: #fff;
+  line-height: 1.15;
+  margin-bottom: 14px;
+}
+.vip-h2 em { font-style: italic; color: var(--sand-light); }
+.vip-sub {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 15px;
+  color: var(--mid-gray);
+  line-height: 1.65;
+  margin-bottom: 28px;
+  max-width: 520px;
+}
+.vip-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+.vip-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 14.5px;
+  color: var(--teal-pale);
+  line-height: 1.55;
+}
+.vip-item::before {
+  content: '✦';
+  color: var(--sand-light);
+  flex-shrink: 0;
+  font-size: 11px;
+  margin-top: 4px;
+}
+.vip-cta-btn {
+  display: inline-block;
+  background: var(--sand-light);
+  color: var(--dark);
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 16px 32px;
+  border-radius: 2px;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.15s;
+}
+.vip-cta-btn:hover { background: var(--sand); transform: translateY(-2px); }
+.vip-dismiss {
+  display: block;
+  margin-top: 12px;
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 12px;
+  color: var(--warm-gray);
+  font-style: italic;
+}
+
+/* ── E-MAIL WHITELIST NOTICE ── */
+.section-email {
+  padding: 40px 0;
+  border-bottom: 1px solid var(--beige);
+}
+.email-notice {
+  background: rgba(37,124,108,0.05);
+  border: 1px solid var(--teal-pale);
+  border-radius: 2px;
+  padding: 20px 24px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+.email-notice-icon {
+  width: 36px; height: 36px;
+  background: rgba(37,124,108,0.12);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.email-notice-icon svg { width: 16px; height: 16px; color: var(--teal); }
+.email-notice-text strong {
+  display: block;
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--teal-dark);
+  margin-bottom: 4px;
+}
+.email-notice-text p {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 13.5px;
+  color: var(--warm-gray);
+  line-height: 1.6;
+}
+.email-notice-text p strong { display: inline; color: var(--dark); }
+
+/* ── SHARING ── */
+.section-share {
+  padding: 64px 0;
+  text-align: center;
+}
+.section-share h2 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(22px, 3vw, 30px);
+  font-weight: 500;
+  color: var(--black);
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+.section-share h2 em { font-style: italic; color: var(--rose); }
+.section-share p {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 15px;
+  color: var(--warm-gray);
+  margin-bottom: 24px;
+  line-height: 1.65;
+}
+.share-btn {
+  display: inline-block;
+  background: var(--off-white);
+  color: var(--teal-dark);
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 13.5px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  padding: 14px 28px;
+  border-radius: 2px;
+  text-decoration: none;
+  border: 1px solid var(--beige);
+  transition: background 0.2s, border-color 0.2s;
+}
+.share-btn:hover { background: var(--cream); border-color: var(--teal-pale); }
+
+/* ── FOOTER ── */
+.site-footer {
+  background: var(--off-white);
+  border-top: 1px solid var(--beige);
+  padding: 28px 40px;
+  text-align: center;
+}
+.site-footer p {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 12px;
+  color: var(--mid-gray);
+}
+.site-footer a { color: var(--teal); text-decoration: none; }
+.site-footer a:hover { text-decoration: underline; }
+
+/* ── PROGRESS BAR ── */
+.progress-bar-sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: #fff;
+  border-bottom: 1px solid var(--beige);
+  padding: 10px 40px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transform: translateY(-100%);
+  transition: transform 0.35s ease;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+}
+.progress-bar-sticky.visible { transform: translateY(0); }
+.progress-bar-label {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--teal-dark);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.progress-bar-track {
+  flex: 1;
+  height: 5px;
+  background: var(--beige);
+  border-radius: 100px;
+  overflow: hidden;
+}
+.progress-bar-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--teal) 0%, var(--teal-light) 100%);
+  border-radius: 100px;
+  transition: width 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.progress-bar-pct {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--teal);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.progress-bar-step {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 11px;
+  color: var(--warm-gray);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ── CALENDLY SECTION ── */
+.section-calendly {
+  padding: 80px 0 100px;
+  background: var(--dark);
+  position: relative;
+  overflow: hidden;
+}
+.section-calendly::before {
+  content: '';
+  position: absolute;
+  top: -120px; left: 50%;
+  transform: translateX(-50%);
+  width: 800px; height: 800px;
+  background: radial-gradient(circle, rgba(37,124,108,0.18) 0%, transparent 60%);
+  pointer-events: none;
+}
+.section-calendly::after {
+  content: '';
+  position: absolute;
+  bottom: -60px; right: 0;
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(134,22,39,0.12) 0%, transparent 65%);
+  pointer-events: none;
+}
+.section-calendly .container { position: relative; z-index: 1; }
+.calendly-last-step-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(134,22,39,0.20);
+  border: 1px solid rgba(134,22,39,0.35);
+  padding: 6px 18px;
+  border-radius: 100px;
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #e8a0b0;
+  margin-bottom: 22px;
+}
+.calendly-last-step-badge::before {
+  content: '';
+  display: block;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: #e8a0b0;
+  flex-shrink: 0;
+}
+.section-calendly-h2 {
+  font-family: 'East Liberty', 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(42px, 7vw, 78px);
+  font-weight: 400;
+  color: #fff;
+  line-height: 1.0;
+  margin-bottom: 16px;
+  letter-spacing: -0.5px;
+}
+.section-calendly-h2 em {
+  font-style: italic;
+  color: var(--teal-light);
+}
+.section-calendly-sub {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: clamp(15px, 1.8vw, 18px);
+  color: var(--mid-gray);
+  line-height: 1.65;
+  max-width: 540px;
+  margin-bottom: 12px;
+}
+.section-calendly-sub strong { color: var(--teal-pale); font-weight: 700; }
+.calendly-progress-inline {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 40px;
+}
+.calendly-progress-inline-track {
+  flex: 1;
+  max-width: 280px;
+  height: 6px;
+  background: rgba(255,255,255,0.10);
+  border-radius: 100px;
+  overflow: hidden;
+}
+.calendly-progress-inline-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--teal) 0%, var(--teal-light) 100%);
+  border-radius: 100px;
+  transition: width 1.2s cubic-bezier(0.22, 1, 0.36, 1) 0.3s;
+}
+.calendly-progress-inline-text {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--teal-light);
+  letter-spacing: 0.5px;
+}
+.calendly-widget-wrap {
+  background: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.45);
+  max-width: 800px;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 640px) {
+  .progress-bar-sticky { padding: 10px 16px; gap: 10px; }
+  .progress-bar-step { display: none; }
+  .section-calendly { padding: 56px 0 72px; }
+  .calendly-widget-wrap { border-radius: 3px; }
+
+  .hero-confirm { padding: 56px 24px 72px; }
+  .container { padding: 0 24px; }
+  .event-details-box { grid-template-columns: 1fr; gap: 16px; }
+  .calendar-day-row { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .calendar-day-buttons { width: 100%; }
+  .cal-btn { flex: 1; justify-content: center; }
+  .prework-question { padding: 22px 20px; }
+  .community-box { padding: 28px 20px; }
+  .section-event-details, .section-next-steps, .section-calendar,
+  .section-community, .section-prework, .section-vip, .section-share { padding: 48px 0; }
+}
+</style>
+</head>
+<body>
+
+<!-- ── STICKY PROGRESS BAR ── -->
+<div class="progress-bar-sticky" id="progressBar">
+  <span class="progress-bar-label">Fortschritt</span>
+  <div class="progress-bar-track">
+    <div class="progress-bar-fill" id="progressFill"></div>
+  </div>
+  <span class="progress-bar-pct">80 %</span>
+  <span class="progress-bar-step">· Letzter Schritt: Termin buchen</span>
+</div>
+
+<!-- ── HEADER ── -->
+<header class="site-header">
+  <!-- Logo einsetzen: <img src="./CI/Logo-rosegoldverlauf-rgb.png" alt="Feminess" style="height:36px"> -->
+  <div class="site-header-brand">Feminess &nbsp;·&nbsp; Marina Henze</div>
+</header>
+
+
+<!-- ── HERO: EMOTIONALE BESTÄTIGUNG ── -->
+<section class="hero-confirm">
+  <div class="hero-confirm-inner">
+
+    <div class="confirm-check">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="20 6 9 17 4 12"/>
+      </svg>
+    </div>
+
+    <h1>Du bist dabei.</h1>
+
+    <p class="hero-confirm-sub">
+      Diese Entscheidung wirst du nicht bereuen.<br>
+      Dein Platz beim <strong>Make more Money Mastery</strong> Workshop ist reserviert – für 3 Tage, die dich verändern.
+    </p>
+
+    <div class="confirm-event-badge">
+      Freitag–Sonntag, 12.–14. Juni 2026 &nbsp;·&nbsp; Live &amp; Online
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ── EVENT-DETAILS ── -->
+<section class="section-event-details">
+  <div class="container">
+    <div class="section-kicker">Dein Workshop</div>
+
+    <div class="event-details-box">
+
+      <div class="event-detail-item">
+        <div class="event-detail-label">Tag 1</div>
+        <div class="event-detail-value">Freitag, 12. Juni 2026</div>
+        <div class="event-detail-sub">09:00 – ca. 18:00 Uhr</div>
+      </div>
+
+      <div class="event-detail-item">
+        <div class="event-detail-label">Tag 2</div>
+        <div class="event-detail-value">Samstag, 13. Juni 2026</div>
+        <div class="event-detail-sub">09:00 – ca. 18:00 Uhr</div>
+      </div>
+
+      <div class="event-detail-item">
+        <div class="event-detail-label">Tag 3</div>
+        <div class="event-detail-value">Sonntag, 14. Juni 2026</div>
+        <div class="event-detail-sub">09:00 – ca. 17:00 Uhr</div>
+      </div>
+
+      <div class="event-detail-item">
+        <div class="event-detail-label">Format</div>
+        <div class="event-detail-value">Live &amp; Online</div>
+        <div class="event-detail-sub">Zoom / [dein Tool einsetzen]</div>
+      </div>
+
+      <!-- PLATZHALTER: Zoom-Link hier einsetzen -->
+      <div class="event-link-placeholder">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9ab8b4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+        <p><strong>Zugangslink:</strong> Du erhältst den Workshop-Link 2 Wochen vor dem Start per E-Mail. [Hier eintragen oder automatisch per E-Mail-Tool versenden]</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ── NÄCHSTE SCHRITTE ── -->
+<section class="section-next-steps">
+  <div class="container">
+    <div class="section-kicker">Was jetzt passiert</div>
+    <h2 class="next-steps-h2">Du weißt immer,<br>was als <em>nächstes kommt.</em></h2>
+    <p class="next-steps-sub">Kein Warten im Unklaren. Hier siehst du genau, was dich bis zum Workshop erwartet:</p>
+
+    <div class="steps-list">
+
+      <div class="step-item">
+        <span class="step-num">1</span>
+        <div class="step-content">
+          <span class="step-timing">Jetzt sofort</span>
+          <strong>Bestätigung per E-Mail</strong>
+          <p>Du bekommst in den nächsten Minuten eine Bestätigungs-E-Mail mit allen Details. Falls sie nicht auftaucht: Bitte schau in deinen Spam-Ordner.</p>
+        </div>
+      </div>
+
+      <div class="step-item">
+        <span class="step-num">2</span>
+        <div class="step-content">
+          <span class="step-timing">In den nächsten Tagen</span>
+          <strong>Vorbereitungs-Workbook</strong>
+          <p>Du erhältst dein Workbook per E-Mail – 3 Fragen, die dich in die Tiefe führen und sicherstellen, dass du das Maximum aus diesen 3 Tagen herausholst. Nimm dir Zeit dafür.</p>
+        </div>
+      </div>
+
+      <div class="step-item">
+        <span class="step-num">3</span>
+        <div class="step-content">
+          <span class="step-timing">28. Mai 2026</span>
+          <strong>Einladung in die Community</strong>
+          <p>Zwei Wochen vor dem Workshop erhältst du deinen Zugang zur privaten Teilnehmer-Community – und lernst die anderen Frauen kennen, noch bevor Tag 1 beginnt.</p>
+        </div>
+      </div>
+
+      <div class="step-item">
+        <span class="step-num">4</span>
+        <div class="step-content">
+          <span class="step-timing">5. Juni 2026</span>
+          <strong>Zugangslink &amp; praktische Details</strong>
+          <p>Eine Woche vor dem Start bekommst du deinen Zoom-Link sowie alle praktischen Infos: Tagesablauf, Pausen, was du vorbereiten sollst, technische Details.</p>
+        </div>
+      </div>
+
+      <div class="step-item">
+        <span class="step-num">5</span>
+        <div class="step-content">
+          <span class="step-timing">11. Juni 2026</span>
+          <strong>Erinnerungs-E-Mail am Vorabend</strong>
+          <p>Am Abend vor Tag 1 erhältst du eine letzte Erinnerung – mit allem, was du brauchst, um entspannt und bereit zu starten.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ── KALENDER: 3 TAGE BLOCKIEREN ── -->
+<section class="section-calendar">
+  <div class="container">
+    <div class="section-kicker">Dein erster Schritt</div>
+    <h2 class="section-calendar-h2">Blockiere dir die 3 Tage<br><em>jetzt sofort.</em></h2>
+    <p class="section-calendar-sub">Trag alle drei Tage direkt in deinen Kalender ein – bevor etwas anderes diesen Raum besetzt. Das dauert 2 Minuten und ist der wichtigste Schritt, den du jetzt tun kannst.</p>
+
+    <div class="calendar-days">
+
+      <!-- TAG 1 -->
+      <div class="calendar-day-row">
+        <div class="calendar-day-label">Tag 1</div>
+        <div>
+          <div class="calendar-day-date">Freitag, 12. Juni 2026</div>
+          <div class="calendar-day-time">09:00 – 18:00 Uhr</div>
+        </div>
+        <div class="calendar-day-buttons">
+          <!-- 12.06.2026 09:00 CEST = 07:00 UTC -->
+          <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=MMM+Workshop+Tag+1+%E2%80%93+Positioning&dates=20260612T070000Z%2F20260612T160000Z&details=Make+more+Money+Mastery+Workshop+%7C+Feminess%0ATag+1%3A+Positioning-Tag%0ADein+Zugangslink+kommt+per+E-Mail.&location=Online+%28Zoom%29" target="_blank" rel="noopener" class="cal-btn cal-btn-google">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            Google
+          </a>
+          <a href="#" class="cal-btn cal-btn-apple" onclick="downloadICS(1); return false;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="8 17 12 21 16 17"/><line x1="12" y1="3" x2="12" y2="21"/></svg>
+            .ics
+          </a>
+        </div>
+      </div>
+
+      <!-- TAG 2 -->
+      <div class="calendar-day-row">
+        <div class="calendar-day-label">Tag 2</div>
+        <div>
+          <div class="calendar-day-date">Samstag, 13. Juni 2026</div>
+          <div class="calendar-day-time">09:00 – 18:00 Uhr</div>
+        </div>
+        <div class="calendar-day-buttons">
+          <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=MMM+Workshop+Tag+2+%E2%80%93+Money+Mindset&dates=20260613T070000Z%2F20260613T160000Z&details=Make+more+Money+Mastery+Workshop+%7C+Feminess%0ATag+2%3A+Money+Mindset+%26+Preis-Tag%0ADein+Zugangslink+kommt+per+E-Mail.&location=Online+%28Zoom%29" target="_blank" rel="noopener" class="cal-btn cal-btn-google">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            Google
+          </a>
+          <a href="#" class="cal-btn cal-btn-apple" onclick="downloadICS(2); return false;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="8 17 12 21 16 17"/><line x1="12" y1="3" x2="12" y2="21"/></svg>
+            .ics
+          </a>
+        </div>
+      </div>
+
+      <!-- TAG 3 -->
+      <div class="calendar-day-row">
+        <div class="calendar-day-label">Tag 3</div>
+        <div>
+          <div class="calendar-day-date">Sonntag, 14. Juni 2026</div>
+          <div class="calendar-day-time">09:00 – 17:00 Uhr</div>
+        </div>
+        <div class="calendar-day-buttons">
+          <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=MMM+Workshop+Tag+3+%E2%80%93+Strategie&dates=20260614T070000Z%2F20260614T150000Z&details=Make+more+Money+Mastery+Workshop+%7C+Feminess%0ATag+3%3A+Strategie+%26+Umsetzungs-Tag%0ADein+Zugangslink+kommt+per+E-Mail.&location=Online+%28Zoom%29" target="_blank" rel="noopener" class="cal-btn cal-btn-google">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            Google
+          </a>
+          <a href="#" class="cal-btn cal-btn-apple" onclick="downloadICS(3); return false;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="8 17 12 21 16 17"/><line x1="12" y1="3" x2="12" y2="21"/></svg>
+            .ics
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="calendar-note">Die Kalender-Einträge sind als Blocker gedacht. Den Zugangslink erhältst du eine Woche vor dem Workshop per E-Mail – trag ihn dann direkt in alle drei Einträge ein.</p>
+  </div>
+</section>
+
+
+<!-- ── COMMUNITY ── -->
+<section class="section-community">
+  <div class="container">
+    <div class="section-kicker">Schritt 2</div>
+    <h2 class="section-community-h2">Lerne deine Mitstreiterinnen<br><em>jetzt schon kennen.</em></h2>
+    <p class="section-community-sub">Der Workshop beginnt nicht erst am 12. Juni. Er beginnt in dem Moment, in dem du die anderen Frauen kennenlernst – und merkst, dass du nicht allein bist.</p>
+
+    <div class="community-box">
+      <div class="community-box-inner">
+        <span class="community-box-icon">&#128101;</span>
+        <h3>Tritt der privaten Workshop-Community bei</h3>
+        <p>Alle Teilnehmerinnen treffen sich vorab in unserem geschlossenen Bereich – zum gegenseitigen Kennenlernen, zum Austausch und als Raum, der auch nach den 3 Tagen bestehen bleibt.</p>
+        <!-- HINWEIS: Link zur privaten Gruppe / Community hier einsetzen -->
+        <a href="#" class="community-cta-btn">Jetzt der Community beitreten &rarr;</a>
+        <p class="community-placeholder-note">[Link zur WhatsApp-Gruppe / Facebook-Gruppe / Slack / Circle / etc. einsetzen]</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── PRE-WORK ── -->
+<section class="section-prework">
+  <div class="container">
+    <div class="section-kicker">Deine Vorbereitung</div>
+    <h2 class="section-prework-h2">Drei Fragen.<br><em>Dein persönlicher Kompass.</em></h2>
+    <p class="section-prework-intro">Die Frauen, die das meiste aus diesen 3 Tagen mitnehmen, kommen nicht leer an. Sie kommen mit Klarheit über sich selbst. Diese drei Fragen reichen dafür aus – aber sie wollen ernsthaft beantwortet werden. Schreibe deine Antworten auf und nimm sie mit in den Workshop.</p>
+
+    <div class="prework-questions">
+
+      <div class="prework-question">
+        <div class="prework-question-inner">
+          <div class="prework-num">Frage 1</div>
+          <p>
+            „Wo stehst du <em>gerade wirklich</em> in deinem Business –<br>
+            wenn du vollständig ehrlich zu dir bist?"
+          </p>
+        </div>
+      </div>
+
+      <div class="prework-question">
+        <div class="prework-question-inner">
+          <div class="prework-num">Frage 2</div>
+          <p>
+            „Was glaubst du, <em>hält dich konkret auf?</em><br>
+            Nicht die offensichtliche Antwort – die ehrliche."
+          </p>
+        </div>
+      </div>
+
+      <div class="prework-question">
+        <div class="prework-question-inner">
+          <div class="prework-num">Frage 3</div>
+          <p>
+            „Wie sieht dein Business in 6 Monaten aus,<br>
+            wenn diese 3 Tage <em>genau das bewirkt haben</em>, was du dir wünschst?"
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="prework-action">
+      Dein Vorbereitungs-Workbook mit allen drei Fragen und Schreibraum kommt in Kürze per E-Mail. Nimm dir die Zeit dafür – du wirst sie im Workshop brauchen.
+    </p>
+
+    <div class="bring-box">
+      <p><strong>Das brauchst du an allen 3 Tagen:</strong></p>
+      <ul>
+        <li>Einen ruhigen Platz, an dem du jeweils den ganzen Tag ungestört bist</li>
+        <li>Notizbuch und Stift – es wird sich mehr als lohnen, mitzuschreiben</li>
+        <li>Dein ausgefülltes Vorbereitungs-Workbook</li>
+        <li>Ausreichend Wasser, Essen und Pausen-Vorbereitung für lange Tage</li>
+        <li>Eine offene Haltung – und die Bereitschaft, tiefer zu gehen als gewohnt</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── VIP UPSELL ── -->
+<section class="section-vip">
+  <div class="container">
+    <div class="vip-inner">
+      <div class="vip-badge">&#10022; Optionales Upgrade</div>
+      <h2 class="vip-h2">Möchtest du noch mehr<br><em>persönliche Tiefe?</em></h2>
+      <p class="vip-sub">Das VIP-Upgrade ergänzt deinen Workshop-Platz um einen exklusiven 1:1-Call mit Marina – direkt im Anschluss an die 3 Tage, wenn alles noch frisch und präsent ist.</p>
+      <div class="vip-list">
+        <div class="vip-item">60-minütiger 1:1-Call mit Marina nach dem Workshop</div>
+        <div class="vip-item">Persönliche Bearbeitung deines konkreten nächsten Schritts</div>
+        <div class="vip-item">Individuelle Antworten auf deine spezifische Situation</div>
+        <div class="vip-item">Maximale Klarheit für die ersten Wochen nach dem Workshop</div>
+      </div>
+      <!-- HINWEIS: Link zum Buchungssystem / Kasse einsetzen -->
+      <a href="#" class="vip-cta-btn">VIP-Upgrade anfragen &rarr;</a>
+      <p class="vip-dismiss">Kein Interesse – ich freue mich auf die 3 Tage so wie sie sind.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── E-MAIL WHITELIST NOTICE ── -->
+<section class="section-email">
+  <div class="container">
+    <div class="email-notice">
+      <div class="email-notice-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      </div>
+      <div class="email-notice-text">
+        <strong>Wichtig: Sieh in deinen Posteingang</strong>
+        <p>Du bekommst in Kürze eine Bestätigungs-E-Mail von Marina. Falls sie nicht auftaucht: Bitte schau in deinen <strong>Spam-Ordner</strong> und markiere uns als „kein Spam" – damit alle Workshop-Infos und dein Workbook sicher ankommen.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── SHARING ── -->
+<section class="section-share">
+  <div class="container">
+    <h2>Kennst du eine Frau,<br>die das <em>braucht?</em></h2>
+    <p>Wenn du gerade an jemanden gedacht hast – schick ihr diesen Link. Es ist kostenfrei. Es könnte ihr nächstes Level sein.</p>
+    <a href="../workshop.html" class="share-btn">Anmeldeseite teilen &rarr;</a>
+  </div>
+</section>
+
+
+<!-- ── LETZTER SCHRITT: CALENDLY ── -->
+<section class="section-calendly" id="terminBuchen">
+  <div class="container">
+    <div class="calendly-last-step-badge">Letzter Schritt</div>
+    <h2 class="section-calendly-h2">Buch dir jetzt<br>deinen <em>Rise-Up-Call.</em></h2>
+    <p class="section-calendly-sub">
+      Du hast dich angemeldet. Du hast alles vorbereitet.<br>
+      Jetzt fehlt nur noch <strong>ein einziger Schritt</strong> – wähl deinen Termin und sicher ihn dir.
+    </p>
+    <div class="calendly-progress-inline">
+      <div class="calendly-progress-inline-track">
+        <div class="calendly-progress-inline-fill" id="calendlyProgressFill"></div>
+      </div>
+      <span class="calendly-progress-inline-text">80 % geschafft – fast da!</span>
+    </div>
+    <div class="calendly-widget-wrap">
+      <!-- Calendly Inline-Widget Beginn -->
+      <div class="calendly-inline-widget" data-url="https://calendly.com/feminess-mentorinnen/rise-up-call-experience?primary_color=861627" style="min-width:320px;height:700px;"></div>
+      <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+      <!-- Calendly Inline-Widget Ende -->
+    </div>
+  </div>
+</section>
+
+
+<!-- ── FOOTER ── -->
+<footer class="site-footer">
+  <p>&copy; 2026 Feminess &nbsp;·&nbsp; Marina Henze &nbsp;&nbsp;|&nbsp;&nbsp; <a href="../Impressum.html">Impressum</a> &nbsp;|&nbsp; <a href="#">Datenschutz</a></p>
+</footer>
+
+
+<script>
+// Sticky progress bar
+(function() {
+  var bar = document.getElementById('progressBar');
+  var fill = document.getElementById('progressFill');
+  var inlineFill = document.getElementById('calendlyProgressFill');
+  var triggered = false;
+
+  function onScroll() {
+    if (window.scrollY > 80) {
+      bar.classList.add('visible');
+      if (!triggered) {
+        triggered = true;
+        setTimeout(function() { fill.style.width = '80%'; }, 80);
+      }
+    } else {
+      bar.classList.remove('visible');
+    }
+  }
+
+  // Animate inline progress bar when Calendly section enters viewport
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) {
+        inlineFill.style.width = '80%';
+        observer.disconnect();
+      }
+    });
+  }, { threshold: 0.2 });
+  observer.observe(document.getElementById('terminBuchen'));
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+})();
+
+// ICS-Download für Apple Kalender / Outlook
+// tag: 1, 2 oder 3
+function downloadICS(tag) {
+  var events = {
+    1: {
+      uid:     'mmm-workshop-tag1-2026@feminess.de',
+      start:   '20260612T070000Z',
+      end:     '20260612T160000Z',
+      summary: 'MMM Workshop Tag 1 – Positioning-Tag',
+      desc:    'Make more Money Mastery Workshop | Feminess\\nTag 1: Positioning-Tag\\nDein Zugangslink kommt per E-Mail.',
+      file:    'mmm-workshop-tag1.ics'
+    },
+    2: {
+      uid:     'mmm-workshop-tag2-2026@feminess.de',
+      start:   '20260613T070000Z',
+      end:     '20260613T160000Z',
+      summary: 'MMM Workshop Tag 2 – Money Mindset & Preis-Tag',
+      desc:    'Make more Money Mastery Workshop | Feminess\\nTag 2: Money Mindset & Preis-Tag\\nDein Zugangslink kommt per E-Mail.',
+      file:    'mmm-workshop-tag2.ics'
+    },
+    3: {
+      uid:     'mmm-workshop-tag3-2026@feminess.de',
+      start:   '20260614T070000Z',
+      end:     '20260614T150000Z',
+      summary: 'MMM Workshop Tag 3 – Strategie & Umsetzungs-Tag',
+      desc:    'Make more Money Mastery Workshop | Feminess\\nTag 3: Strategie & Umsetzungs-Tag\\nDein Zugangslink kommt per E-Mail.',
+      file:    'mmm-workshop-tag3.ics'
+    }
+  };
+
+  var e = events[tag];
+  if (!e) return;
+
+  var ics = [
+    'BEGIN:VCALENDAR',
+    'VERSION:2.0',
+    'PRODID:-//Feminess//Marina Henze//DE',
+    'BEGIN:VEVENT',
+    'UID:' + e.uid,
+    'DTSTAMP:20260501T000000Z',
+    'DTSTART:' + e.start,
+    'DTEND:' + e.end,
+    'SUMMARY:' + e.summary,
+    'DESCRIPTION:' + e.desc,
+    'LOCATION:Online (Zoom)',
+    'STATUS:CONFIRMED',
+    'BEGIN:VALARM',
+    'TRIGGER:-PT60M',
+    'ACTION:DISPLAY',
+    'DESCRIPTION:' + e.summary + ' beginnt in 1 Stunde',
+    'END:VALARM',
+    'END:VEVENT',
+    'END:VCALENDAR'
+  ].join('\r\n');
+
+  var blob = new Blob([ics], { type: 'text/calendar;charset=utf-8' });
+  var link = document.createElement('a');
+  link.href = URL.createObjectURL(blob);
+  link.download = e.file;
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
+</script>
+
+</body>
+</html>
