@@ -2586,5 +2586,12 @@ window._load_script = function(url, callback, isSubmit) {
     addEvent(form_to_submit, 'submit', form_submit);
 })();
 </script>
+
+<script>
+// Nach erfolgreicher Anmeldung → Weiterleitung zur Dankeseite
+window._show_thank_you = function(id, message, trackcmp_url, email) {
+  window.location.href = 'https://feminess.github.io/workshop-danke';
+};
+</script>
 </body>
 </html>
