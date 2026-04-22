@@ -62,10 +62,12 @@ body {
 .site-header {
   background: #fff;
   border-bottom: 1px solid var(--beige);
-  padding: 20px 40px;
+  padding: 16px 40px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 .site-header-brand {
   font-family: 'Avenir LT Pro', 'Inter', sans-serif;
@@ -74,6 +76,32 @@ body {
   letter-spacing: 4px;
   text-transform: uppercase;
   color: var(--teal-dark);
+}
+.site-header-event {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(37,124,108,0.08);
+  border: 1px solid rgba(37,124,108,0.20);
+  padding: 6px 14px;
+  border-radius: 100px;
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--teal-dark);
+  letter-spacing: 0.3px;
+}
+.site-header-event::before {
+  content: '';
+  display: block;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--teal);
+  flex-shrink: 0;
+}
+@media (max-width: 520px) {
+  .site-header { justify-content: center; }
+  .site-header-event { font-size: 10px; }
 }
 
 /* ── HERO: BESTÄTIGUNG ── */
@@ -102,10 +130,55 @@ body {
   pointer-events: none;
 }
 .hero-confirm-inner {
-  max-width: 680px;
+  max-width: 720px;
   margin: 0 auto;
   position: relative;
   z-index: 1;
+}
+
+/* ── HERO PROGRESS BAR ── */
+.hero-progress {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 20px auto 32px;
+  max-width: 380px;
+}
+.hero-progress-track {
+  flex: 1;
+  height: 5px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 100px;
+  overflow: hidden;
+}
+.hero-progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--teal) 0%, var(--teal-light) 100%);
+  border-radius: 100px;
+  animation: heroProgressAnim 1.3s cubic-bezier(0.22, 1, 0.36, 1) 0.5s forwards;
+}
+@keyframes heroProgressAnim {
+  from { width: 0%; }
+  to   { width: 80%; }
+}
+.hero-progress-text {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--teal-light);
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+/* ── HERO CALENDLY ── */
+.hero-calendly-wrap {
+  background: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 20px 70px rgba(0,0,0,0.50);
+  margin: 36px auto 0;
+  max-width: 720px;
 }
 .confirm-check {
   width: 56px;
@@ -1039,6 +1112,7 @@ body {
 <header class="site-header">
   <!-- Logo einsetzen: <img src="./CI/Logo-rosegoldverlauf-rgb.png" alt="Feminess" style="height:36px"> -->
   <div class="site-header-brand">Feminess &nbsp;·&nbsp; Marina Henze</div>
+  <div class="site-header-event">Freitag–Sonntag, 12.–14. Juni 2026 &nbsp;·&nbsp; Live &amp; Online</div>
 </header>
 
 
@@ -1052,15 +1126,25 @@ body {
       </svg>
     </div>
 
-    <h1>Du bist dabei.</h1>
+    <h1>Nur noch ein Schritt.</h1>
+
+    <div class="hero-progress">
+      <div class="hero-progress-track">
+        <div class="hero-progress-fill"></div>
+      </div>
+      <span class="hero-progress-text">80 % geschafft</span>
+    </div>
 
     <p class="hero-confirm-sub">
-      Diese Entscheidung wirst du nicht bereuen.<br>
-      Dein Platz beim <strong>Make more Money Mastery</strong> Workshop ist reserviert – für 3 Tage, die dich verändern.
+      Dein Platz beim <strong>Make more Money Mastery</strong> Workshop ist reserviert – für 3 Tage, die dich verändern.<br><br>
+      Zusätzlich schenke ich dir 20 Minuten, die den Unterschied in deinem Erfolg machen. Buche dir jetzt deinen kostenfreien Rise Up Call!
     </p>
 
-    <div class="confirm-event-badge">
-      Freitag–Sonntag, 12.–14. Juni 2026 &nbsp;·&nbsp; Live &amp; Online
+    <div class="hero-calendly-wrap">
+      <!-- Calendly Inline-Widget Beginn -->
+      <div class="calendly-inline-widget" data-url="https://calendly.com/feminess-mentorinnen/rise-up-call-experience?primary_color=861627" style="min-width:320px;height:700px;"></div>
+      <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+      <!-- Calendly Inline-Widget Ende -->
     </div>
 
   </div>
