@@ -2592,6 +2592,24 @@ window._load_script = function(url, callback, isSubmit) {
 window._show_thank_you = function(id, message, trackcmp_url, email) {
   window.location.href = 'https://feminess.github.io/workshop-danke';
 };
+
+// UTM-Parameter (utm_source, utm_medium etc.) in alle AC-Formulare schreiben
+(function() {
+  var params = new URLSearchParams(window.location.search);
+  var utmMap = {
+    'field[217]': params.get('utm_source')   || '',
+    'field[218]': params.get('utm_medium')   || '',
+    'field[219]': params.get('utm_campaign') || '',
+    'field[220]': params.get('utm_content')  || '',
+    'field[221]': params.get('utm_term')     || ''
+  };
+  document.querySelectorAll('form[action*="activehosted.com"]').forEach(function(form) {
+    Object.keys(utmMap).forEach(function(fieldName) {
+      var input = form.querySelector('[name="' + fieldName + '"]');
+      if (input) input.value = utmMap[fieldName];
+    });
+  });
+})();
 </script>
 </body>
 </html>
