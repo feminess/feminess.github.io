@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Datenschutzerklärung – Feminess</title>
+<meta name="description" content="Datenschutzerklärung von Feminess LTD – Marina Henze. Informationen zur Verarbeitung personenbezogener Daten gemäß DSGVO.">
+<meta name="robots" content="noindex, nofollow">
+<style>
+  @font-face {
+    font-family: 'East Liberty';
+    src: url('CI/east_liberty_signature%20%281%29/east%20liberty%20signature.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Avenir LT Pro';
+    src: url('CI/AvenirLTPro-Book%20%281%29.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Avenir LT Pro';
+    src: url('CI/AvenirLTPro-Heavy%20%281%29.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  :root {
+    --teal:       #257c6c;
+    --teal-dark:  #1b5c50;
+    --teal-light: #5ec6b3;
+    --teal-pale:  #b8ddd8;
+    --rose:       #cf5a73;
+    --sand-light: #e4bc95;
+    --black:      #070808;
+    --dark:       #0d2420;
+    --off-white:  #f8f6f2;
+    --cream:      #f0f5f4;
+    --beige:      #ddecea;
+    --warm-gray:  #5a7a74;
+    --mid-gray:   #9ab8b4;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--off-white);
+    color: var(--black);
+    font-family: 'Avenir LT Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── NAV ── */
+  .nav {
+    background: rgba(13, 36, 32, 0.97);
+    border-bottom: 1px solid rgba(94, 198, 179, 0.10);
+    padding: 0 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 76px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  .nav-logo img {
+    height: 38px;
+    width: auto;
+    display: block;
+  }
+
+  .nav-back {
+    font-family: 'Avenir LT Pro', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--mid-gray);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.2s;
+  }
+
+  .nav-back::before { content: '←'; font-size: 13px; }
+  .nav-back:hover { color: var(--teal-light); }
+
+  /* ── HERO-STRIP ── */
+  .page-hero {
+    background: var(--dark);
+    padding: 72px 80px 64px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .page-hero::before {
+    content: '';
+    position: absolute;
+    top: -100px; right: -100px;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(37,124,108,0.15) 0%, transparent 65%);
+    pointer-events: none;
+  }
+
+  .page-hero-inner {
+    max-width: 760px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .page-hero-kicker {
+    font-family: 'Avenir LT Pro', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--teal-light);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .page-hero-kicker::before {
+    content: '';
+    width: 24px; height: 1px;
+    background: var(--teal-light);
+    opacity: 0.7;
+  }
+
+  .page-hero h1 {
+    font-family: 'East Liberty', Georgia, serif;
+    font-size: clamp(36px, 5vw, 60px);
+    font-weight: 400;
+    color: #fff;
+    line-height: 1.08;
+    letter-spacing: -0.5px;
+    margin-bottom: 16px;
+  }
+
+  .page-hero h1 em {
+    font-style: italic;
+    color: var(--rose);
+  }
+
+  .page-hero-sub {
+    font-size: 15px;
+    color: var(--mid-gray);
+    line-height: 1.7;
+    max-width: 480px;
+  }
+
+  /* ── CONTENT ── */
+  .content-wrap {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 72px 80px 96px;
+  }
+
+  .block {
+    margin-bottom: 56px;
+    padding-bottom: 56px;
+    border-bottom: 1px solid var(--beige);
+  }
+
+  .block:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .block-label {
+    font-family: 'Avenir LT Pro', sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 3.5px;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .block-label::after {
+    content: '';
+    flex: 1;
+    max-width: 40px;
+    height: 1px;
+    background: var(--teal);
+    opacity: 0.4;
+  }
+
+  .block h2 {
+    font-family: 'East Liberty', Georgia, serif;
+    font-size: clamp(26px, 3vw, 36px);
+    font-weight: 400;
+    color: var(--black);
+    line-height: 1.12;
+    letter-spacing: -0.3px;
+    margin-bottom: 24px;
+  }
+
+  .block h2 em {
+    font-style: italic;
+    color: var(--rose);
+  }
+
+  .info-card {
+    background: #fff;
+    border: 1px solid var(--beige);
+    border-left: 3px solid var(--teal);
+    border-radius: 2px;
+    padding: 32px 36px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px 40px;
+  }
+
+  .info-field-label {
+    font-family: 'Avenir LT Pro', sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--mid-gray);
+    margin-bottom: 6px;
+  }
+
+  .info-field-value {
+    font-size: 15px;
+    color: var(--black);
+    line-height: 1.65;
+  }
+
+  .info-field-value a {
+    color: var(--teal);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .info-field-value a:hover { color: var(--teal-dark); }
+
+  .info-field--full {
+    grid-column: 1 / -1;
+  }
+
+  .prose p {
+    font-size: 15px;
+    color: var(--warm-gray);
+    line-height: 1.85;
+    margin-bottom: 16px;
+    max-width: 680px;
+  }
+
+  .prose p:last-child { margin-bottom: 0; }
+
+  .prose strong { color: var(--black); font-weight: 700; }
+
+  .prose a {
+    color: var(--teal);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .prose a:hover { color: var(--teal-dark); }
+
+  .prose h3 {
+    font-family: 'Avenir LT Pro', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--black);
+    letter-spacing: 0.3px;
+    margin-top: 28px;
+    margin-bottom: 8px;
+  }
+
+  .prose h3:first-child { margin-top: 0; }
+
+  .prose ul {
+    margin: 12px 0 16px 20px;
+    max-width: 680px;
+  }
+
+  .prose ul li {
+    font-size: 15px;
+    color: var(--warm-gray);
+    line-height: 1.85;
+    margin-bottom: 6px;
+  }
+
+  .notice-box {
+    background: var(--cream);
+    border: 1px solid var(--beige);
+    border-top: 3px solid var(--teal-pale);
+    border-radius: 2px;
+    padding: 24px 28px;
+    margin-top: 24px;
+  }
+
+  .notice-box p {
+    font-size: 13px;
+    color: var(--warm-gray);
+    line-height: 1.8;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--black);
+    padding: 40px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .footer-brand {
+    font-family: 'East Liberty', Georgia, serif;
+    font-size: 1.3rem;
+    color: var(--sand-light);
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .footer-links a {
+    font-family: 'Avenir LT Pro', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--mid-gray);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover { color: var(--teal-light); }
+
+  .footer-copy {
+    font-size: 11px;
+    color: var(--warm-gray);
+    width: 100%;
+    padding-top: 16px;
+    border-top: 1px solid rgba(154,184,180,0.10);
+    margin-top: 4px;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    .nav { padding: 0 24px; height: 68px; }
+    .page-hero { padding: 56px 24px 48px; }
+    .content-wrap { padding: 48px 24px 72px; }
+    .footer { padding: 32px 24px; }
+    .info-card { grid-template-columns: 1fr; gap: 20px; }
+    .info-field--full { grid-column: auto; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="index.html" class="nav-logo" aria-label="Zur Startseite">
+    <img src="CI/Logo-rosegoldverlauf-rgb.png" alt="Feminess">
+  </a>
+  <a href="index.html" class="nav-back">Zurück zur Website</a>
+</nav>
+
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="page-hero-kicker">Rechtliche Angaben</div>
+    <h1>Daten<em>schutz</em></h1>
+    <p class="page-hero-sub">
+      Informationen zur Verarbeitung personenbezogener Daten
+      gemäß Datenschutz-Grundverordnung (DSGVO).
+    </p>
+  </div>
+</div>
+
+
+<!-- CONTENT -->
+<main class="content-wrap">
+
+  <!-- 1 | VERANTWORTLICHER -->
+  <div class="block">
+    <div class="block-label">01 · Verantwortlicher</div>
+    <h2>Angaben zum <em>Verantwortlichen</em></h2>
+
+    <div class="info-card">
+      <div>
+        <div class="info-field-label">Unternehmen</div>
+        <div class="info-field-value">Feminess LTD</div>
+      </div>
+      <div>
+        <div class="info-field-label">Vertretung</div>
+        <div class="info-field-value">Marina Henze</div>
+      </div>
+      <div class="info-field--full">
+        <div class="info-field-label">Anschrift</div>
+        <div class="info-field-value">
+          Mersinion 5<br>
+          8881 Agia Marina Chrysochous<br>
+          Zypern
+        </div>
+      </div>
+      <div>
+        <div class="info-field-label">Telefon</div>
+        <div class="info-field-value">
+          <a href="tel:+4921831509895">+49 2183 – 150 98 95</a>
+        </div>
+      </div>
+      <div>
+        <div class="info-field-label">E-Mail</div>
+        <div class="info-field-value">
+          <a href="mailto:info@feminess.de">info@feminess.de</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- 2 | GRUNDSÄTZE -->
+  <div class="block">
+    <div class="block-label">02 · Grundsätze</div>
+    <h2>Datenschutz auf einen <em>Blick</em></h2>
+
+    <div class="prose">
+      <p>
+        Der Schutz Ihrer persönlichen Daten hat für Feminess LTD einen besonders hohen Stellenwert.
+        Eine Nutzung der Internetseiten von Feminess LTD ist grundsätzlich ohne jede Angabe
+        personenbezogener Daten möglich. Sofern eine betroffene Person besondere Services unseres
+        Unternehmens über unsere Internetseite in Anspruch nehmen möchte, könnte jedoch eine
+        Verarbeitung personenbezogener Daten erforderlich werden.
+      </p>
+      <p>
+        Ist die Verarbeitung personenbezogener Daten erforderlich und besteht für eine solche
+        Verarbeitung keine gesetzliche Grundlage, holen wir generell eine Einwilligung der
+        betroffenen Person ein. Die Verarbeitung personenbezogener Daten erfolgt stets im Einklang
+        mit der Datenschutz-Grundverordnung sowie den für Feminess LTD geltenden
+        landesspezifischen Datenschutzbestimmungen.
+      </p>
+    </div>
+  </div>
+
+
+  <!-- 3 | DATENERFASSUNG -->
+  <div class="block">
+    <div class="block-label">03 · Datenerfassung</div>
+    <h2>Erfassung allgemeiner <em>Daten</em></h2>
+
+    <div class="prose">
+      <p>
+        Die Internetseite von Feminess LTD erfasst mit jedem Aufruf der Internetseite durch
+        eine betroffene Person oder ein automatisiertes System eine Reihe von allgemeinen Daten
+        und Informationen. Diese allgemeinen Daten und Informationen werden in den Logfiles des
+        Servers gespeichert. Erfasst werden können:
+      </p>
+      <ul>
+        <li>die verwendeten Browsertypen und Versionen</li>
+        <li>das vom zugreifenden System verwendete Betriebssystem</li>
+        <li>die Internetseite, von welcher ein zugreifendes System auf unsere Internetseite gelangt (sogenannte Referrer)</li>
+        <li>die Unterwebseiten, welche über ein zugreifendes System auf unserer Internetseite angesteuert werden</li>
+        <li>das Datum und die Uhrzeit eines Zugriffs auf die Internetseite</li>
+        <li>eine Internet-Protokoll-Adresse (IP-Adresse)</li>
+        <li>der Internet-Service-Provider des zugreifenden Systems</li>
+      </ul>
+      <p>
+        Bei der Nutzung dieser allgemeinen Daten und Informationen zieht Feminess LTD keine
+        Rückschlüsse auf die betroffene Person. Diese Informationen werden vielmehr benötigt,
+        um die Inhalte unserer Internetseite korrekt auszuliefern, die Inhalte unserer
+        Internetseite sowie die Werbung für diese zu optimieren, die dauerhafte Funktionsfähigkeit
+        unserer informationstechnologischen Systeme und der Technik unserer Internetseite zu
+        gewährleisten sowie um Strafverfolgungsbehörden im Falle eines Cyberangriffes die zur
+        Strafverfolgung notwendigen Informationen bereitzustellen.
+      </p>
+    </div>
+  </div>
+
+
+  <!-- 4 | COOKIES -->
+  <div class="block">
+    <div class="block-label">04 · Cookies</div>
+    <h2>Verwendung von <em>Cookies</em></h2>
+
+    <div class="prose">
+      <p>
+        Die Internetseiten von Feminess LTD verwenden Cookies. Cookies sind Textdateien,
+        welche über einen Internetbrowser auf einem Computersystem abgelegt und gespeichert werden.
+      </p>
+      <p>
+        Durch den Einsatz von Cookies kann Feminess LTD den Nutzern dieser Internetseite
+        nutzerfreundlichere Services bereitstellen, die ohne die Cookie-Setzung nicht möglich
+        wären. Mittels eines Cookies können die Informationen und Angebote auf unserer
+        Internetseite im Sinne des Benutzers optimiert werden.
+      </p>
+      <p>
+        Die betroffene Person kann die Setzung von Cookies durch unsere Internetseite jederzeit
+        mittels einer entsprechenden Einstellung des genutzten Internetbrowsers verhindern und
+        damit der Setzung von Cookies dauerhaft widersprechen. Ferner können bereits gesetzte
+        Cookies jederzeit über einen Internetbrowser oder andere Softwareprogramme gelöscht werden.
+        Dies ist in allen gängigen Internetbrowsern möglich. Deaktiviert die betroffene Person
+        die Setzung von Cookies in dem genutzten Internetbrowser, sind unter Umständen nicht
+        alle Funktionen unserer Internetseite vollumfänglich nutzbar.
+      </p>
+    </div>
+  </div>
+
+
+  <!-- 5 | NEWSLETTER -->
+  <div class="block">
+    <div class="block-label">05 · Newsletter</div>
+    <h2>Newsletter & <em>E-Mail-Marketing</em></h2>
+
+    <div class="prose">
+      <p>
+        Auf der Internetseite von Feminess LTD wird den Nutzern die Möglichkeit eingeräumt,
+        den Newsletter unseres Unternehmens zu abonnieren. Die für den Versand des Newsletters
+        verwendeten Daten (E-Mail-Adresse sowie optional Name) werden ausschließlich für den
+        Newsletterversand verwendet.
+      </p>
+      <p>
+        Das Abonnement unseres Newsletters kann durch die betroffene Person jederzeit gekündigt
+        werden. Die Einwilligung in die Speicherung personenbezogener Daten, die die betroffene
+        Person uns für den Newsletterversand erteilt hat, kann jederzeit widerrufen werden.
+        Zum Zwecke des Widerrufs der Einwilligung findet sich in jedem Newsletter ein
+        entsprechender Link.
+      </p>
+    </div>
+  </div>
+
+
+  <!-- 6 | GOOGLE ANALYTICS -->
+  <div class="block">
+    <div class="block-label">06 · Analyse</div>
+    <h2>Google <em>Analytics</em></h2>
+
+    <div class="prose">
+      <p>
+        Diese Website benutzt Google Analytics, einen Webanalysedienst der Google LLC
+        („Google"). Google Analytics verwendet sog. „Cookies", Textdateien, die auf Ihrem
+        Computer gespeichert werden und die eine Analyse der Benutzung der Website durch Sie
+        ermöglichen. Die durch den Cookie erzeugten Informationen über Ihre Benutzung dieser
+        Website werden in der Regel an einen Server von Google in den USA übertragen und
+        dort gespeichert.
+      </p>
+      <p>
+        Im Falle der Aktivierung der IP-Anonymisierung auf dieser Website, wird Ihre IP-Adresse
+        von Google jedoch innerhalb von Mitgliedstaaten der Europäischen Union oder in anderen
+        Vertragsstaaten des Abkommens über den Europäischen Wirtschaftsraum zuvor gekürzt.
+        Nur in Ausnahmefällen wird die volle IP-Adresse an einen Server von Google in den USA
+        übertragen und dort gekürzt.
+      </p>
+      <p>
+        Sie können die Speicherung der Cookies durch eine entsprechende Einstellung Ihrer
+        Browser-Software verhindern; wir weisen Sie jedoch darauf hin, dass Sie in diesem Fall
+        gegebenenfalls nicht sämtliche Funktionen dieser Website vollumfänglich werden nutzen
+        können. Sie können darüber hinaus die Erfassung der durch den Cookie erzeugten und auf
+        Ihre Nutzung der Website bezogenen Daten (inkl. Ihrer IP-Adresse) an Google sowie die
+        Verarbeitung dieser Daten durch Google verhindern, indem Sie das unter dem folgenden
+        Link verfügbare Browser-Plugin herunterladen und installieren:
+        <a href="https://tools.google.com/dlpage/gaoptout?hl=de" target="_blank" rel="noopener noreferrer">
+          https://tools.google.com/dlpage/gaoptout?hl=de
+        </a>
+      </p>
+    </div>
+  </div>
+
+
+  <!-- 7 | FACEBOOK -->
+  <div class="block">
+    <div class="block-label">07 · Soziale Medien</div>
+    <h2>Soziale Netzwerke & externe <em>Dienste</em></h2>
+
+    <div class="prose">
+      <h3>Facebook</h3>
+      <p>
+        Auf unserer Internetseite sind Plugins des sozialen Netzwerks Facebook der Facebook
+        Ireland Limited (4 Grand Canal Square, Grand Canal Harbour, Dublin 2, Irland) integriert.
+        Die Facebook-Plugins erkennen Sie an dem Facebook-Logo oder dem „Like-Button" auf
+        unserer Internetseite. Wenn Sie eine Seite unseres Webauftritts aufrufen, die ein
+        solches Plugin enthält, wird eine direkte Verbindung zwischen Ihrem Browser und dem
+        Facebook-Server hergestellt. Facebook erhält dadurch die Information, dass Sie mit
+        Ihrer IP-Adresse unsere Seite besucht haben.
+      </p>
+      <p>
+        Weitere Informationen hierzu finden Sie in der Datenschutzerklärung von Facebook unter
+        <a href="https://de-de.facebook.com/policy.php" target="_blank" rel="noopener noreferrer">
+          https://de-de.facebook.com/policy.php
+        </a>.
+      </p>
+
+      <h3>Instagram</h3>
+      <p>
+        Auf unserer Internetseite sind Funktionen des Dienstes Instagram eingebunden.
+        Diese Funktionen werden angeboten durch die Instagram LLC, 1601 Willow Road,
+        Menlo Park, CA 94025, USA integriert. Wenn Sie in Ihrem Instagram-Account eingeloggt
+        sind, können Sie durch Anklicken des Instagram-Buttons die Inhalte unserer Seiten mit
+        Ihrem Instagram-Profil verlinken. Dadurch kann Instagram den Besuch unserer Seiten
+        Ihrem Benutzerkonto zuordnen.
+      </p>
+      <p>
+        Weitere Informationen hierzu finden Sie in der Datenschutzerklärung von Instagram unter
+        <a href="https://instagram.com/about/legal/privacy/" target="_blank" rel="noopener noreferrer">
+          https://instagram.com/about/legal/privacy/
+        </a>.
+      </p>
+
+      <h3>LinkedIn</h3>
+      <p>
+        Unsere Website nutzt Funktionen des Netzwerks LinkedIn. Anbieter ist die LinkedIn
+        Corporation, 2029 Stierlin Court, Mountain View, CA 94043, USA. Bei jedem Abruf einer
+        unserer Seiten, die Funktionen von LinkedIn enthält, wird eine Verbindung zu Servern
+        von LinkedIn aufgebaut. LinkedIn wird darüber informiert, dass Sie unsere Internetseiten
+        mit Ihrer IP-Adresse besucht haben.
+      </p>
+      <p>
+        Weitere Informationen hierzu finden Sie in der Datenschutzerklärung von LinkedIn unter
+        <a href="https://www.linkedin.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">
+          https://www.linkedin.com/legal/privacy-policy
+        </a>.
+      </p>
+
+      <h3>Pinterest</h3>
+      <p>
+        Auf unserer Website verwenden wir Social Plugins des sozialen Netzwerkes Pinterest,
+        das von der Pinterest Inc., 808 Brannan Street San Francisco, CA 94103-4926, USA
+        betrieben wird. Wenn Sie eine Seite aufrufen, die ein solches Plugin enthält, stellt
+        Ihr Browser eine direkte Verbindung zu den Servern von Pinterest her.
+      </p>
+      <p>
+        Weitere Informationen zu Zweck, Umfang und weiterer Verarbeitung und Nutzung der
+        Daten durch Pinterest sowie Ihre diesbezüglichen Rechte finden Sie in den
+        Datenschutzhinweisen von Pinterest unter
+        <a href="https://about.pinterest.com/de/privacy-policy" target="_blank" rel="noopener noreferrer">
+          https://about.pinterest.com/de/privacy-policy
+        </a>.
+      </p>
+
+      <h3>YouTube</h3>
+      <p>
+        Unsere Website nutzt Plugins der von Google betriebenen Seite YouTube. Betreiber der
+        Seiten ist die YouTube, LLC, 901 Cherry Ave., San Bruno, CA 94066, USA. Wenn Sie eine
+        unserer mit einem YouTube-Plugin ausgestatteten Seiten besuchen, wird eine Verbindung
+        zu den Servern von YouTube hergestellt. Dabei wird dem YouTube-Server mitgeteilt,
+        welche unserer Seiten Sie besucht haben.
+      </p>
+      <p>
+        Weitere Informationen zum Umgang von Nutzerdaten finden Sie in der Datenschutzerklärung
+        von YouTube unter
+        <a href="https://www.google.de/intl/de/policies/privacy" target="_blank" rel="noopener noreferrer">
+          https://www.google.de/intl/de/policies/privacy
+        </a>.
+      </p>
+
+      <h3>Xing</h3>
+      <p>
+        Unsere Website nutzt Funktionen des Netzwerks XING. Anbieter ist die XING AG,
+        Dammtorstraße 29-32, 20354 Hamburg, Deutschland. Bei jedem Abruf einer unserer Seiten,
+        die Funktionen von XING enthält, wird eine Verbindung zu Servern von XING aufgebaut.
+        Eine Speicherung von personenbezogenen Daten erfolgt dabei nach unserer Kenntnis nicht.
+      </p>
+      <p>
+        Weitere Informationen zum Datenschutz und dem XING Share-Button finden Sie in der
+        Datenschutzerklärung von XING unter
+        <a href="https://www.xing.com/app/share?op=data_protection" target="_blank" rel="noopener noreferrer">
+          https://www.xing.com/app/share?op=data_protection
+        </a>.
+      </p>
+
+      <h3>Google Maps</h3>
+      <p>
+        Diese Seite nutzt über eine API den Kartendienst Google Maps. Anbieter ist die
+        Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA. Zur Nutzung
+        der Funktionen von Google Maps ist es notwendig, Ihre IP-Adresse zu speichern.
+        Diese Informationen werden in der Regel an einen Server von Google in den USA übertragen
+        und dort gespeichert.
+      </p>
+      <p>
+        Mehr Informationen zum Umgang mit Nutzerdaten finden Sie in der Datenschutzerklärung
+        von Google unter
+        <a href="https://www.google.de/intl/de/policies/privacy" target="_blank" rel="noopener noreferrer">
+          https://www.google.de/intl/de/policies/privacy
+        </a>.
+      </p>
+    </div>
+  </div>
+
+
+  <!-- 8 | RECHTSGRUNDLAGEN -->
+  <div class="block">
+    <div class="block-label">08 · Rechtsgrundlagen</div>
+    <h2>Rechtsgrundlagen der <em>Verarbeitung</em></h2>
+
+    <div class="prose">
+      <p>
+        Soweit wir für Verarbeitungsvorgänge personenbezogener Daten eine Einwilligung der
+        betroffenen Person einholen, dient Artikel 6 Absatz 1 lit. a EU-Datenschutzgrundverordnung
+        (DSGVO) als Rechtsgrundlage.
+      </p>
+      <p>
+        Bei der Verarbeitung von personenbezogenen Daten, die zur Erfüllung eines Vertrages,
+        dessen Vertragspartei die betroffene Person ist, erforderlich ist, dient Artikel 6
+        Absatz 1 lit. b DSGVO als Rechtsgrundlage.
+      </p>
+      <p>
+        Soweit eine Verarbeitung personenbezogener Daten zur Erfüllung einer rechtlichen
+        Verpflichtung erforderlich ist, der unser Unternehmen unterliegt, dient Artikel 6
+        Absatz 1 lit. c DSGVO als Rechtsgrundlage.
+      </p>
+      <p>
+        Für den Fall, dass lebenswichtige Interessen der betroffenen Person oder einer anderen
+        natürlichen Person eine Verarbeitung personenbezogener Daten erforderlich machen,
+        dient Artikel 6 Absatz 1 lit. d DSGVO als Rechtsgrundlage.
+      </p>
+      <p>
+        Ist die Verarbeitung zur Wahrung eines berechtigten Interesses unseres Unternehmens
+        oder eines Dritten erforderlich und überwiegen die Interessen, Grundrechte und
+        Grundfreiheiten des Betroffenen das erstgenannte Interesse nicht, so dient Artikel 6
+        Absatz 1 lit. f DSGVO als Rechtsgrundlage für die Verarbeitung.
+      </p>
+    </div>
+  </div>
+
+
+  <!-- 9 | BETROFFENENRECHTE -->
+  <div class="block">
+    <div class="block-label">09 · Ihre Rechte</div>
+    <h2>Rechte der <em>betroffenen Person</em></h2>
+
+    <div class="prose">
+      <h3>Auskunftsrecht</h3>
+      <p>
+        Jede von der Verarbeitung personenbezogener Daten betroffene Person hat das Recht,
+        jederzeit von dem Verantwortlichen unentgeltliche Auskunft über die zu seiner Person
+        gespeicherten personenbezogenen Daten und eine Kopie dieser Auskunft zu erhalten.
+      </p>
+
+      <h3>Recht auf Berichtigung</h3>
+      <p>
+        Jede von der Verarbeitung personenbezogener Daten betroffene Person hat das Recht,
+        die unverzügliche Berichtigung sie betreffender unrichtiger personenbezogener Daten
+        zu verlangen. Ferner steht der betroffenen Person das Recht zu, unter Berücksichtigung
+        der Zwecke der Verarbeitung, die Vervollständigung unvollständiger personenbezogener
+        Daten — auch mittels einer ergänzenden Erklärung — zu verlangen.
+      </p>
+
+      <h3>Recht auf Löschung (Recht auf Vergessen)</h3>
+      <p>
+        Jede von der Verarbeitung personenbezogener Daten betroffene Person hat das Recht,
+        von dem Verantwortlichen zu verlangen, dass die sie betreffenden personenbezogenen
+        Daten unverzüglich gelöscht werden, sofern einer der folgenden Gründe zutrifft und
+        soweit die Verarbeitung nicht erforderlich ist.
+      </p>
+
+      <h3>Recht auf Einschränkung der Verarbeitung</h3>
+      <p>
+        Jede von der Verarbeitung personenbezogener Daten betroffene Person hat das Recht,
+        von dem Verantwortlichen die Einschränkung der Verarbeitung zu verlangen.
+      </p>
+
+      <h3>Recht auf Datenübertragbarkeit</h3>
+      <p>
+        Jede von der Verarbeitung personenbezogener Daten betroffene Person hat das Recht,
+        die sie betreffenden personenbezogenen Daten, welche durch die betroffene Person
+        einem Verantwortlichen bereitgestellt wurden, in einem strukturierten, gängigen und
+        maschinenlesbaren Format zu erhalten.
+      </p>
+
+      <h3>Widerspruchsrecht</h3>
+      <p>
+        Jede von der Verarbeitung personenbezogener Daten betroffene Person hat das Recht,
+        aus Gründen, die sich aus ihrer besonderen Situation ergeben, jederzeit gegen die
+        Verarbeitung sie betreffender personenbezogener Daten Widerspruch einzulegen.
+      </p>
+
+      <h3>Automatisierte Entscheidungen im Einzelfall</h3>
+      <p>
+        Jede von der Verarbeitung personenbezogener Daten betroffene Person hat das Recht,
+        nicht einer ausschließlich auf einer automatisierten Verarbeitung beruhenden
+        Entscheidung unterworfen zu werden. Das Unternehmen verzichtet auf automatische
+        Entscheidungsfindung oder Profiling.
+      </p>
+
+      <h3>Recht auf Widerruf einer datenschutzrechtlichen Einwilligung</h3>
+      <p>
+        Jede von der Verarbeitung personenbezogener Daten betroffene Person hat das Recht,
+        eine Einwilligung zur Verarbeitung personenbezogener Daten jederzeit zu widerrufen.
+      </p>
+
+      <div class="notice-box">
+        <p>
+          <strong>Kontakt für Datenschutzanfragen:</strong><br>
+          Feminess LTD · Marina Henze<br>
+          Mersinion 5, 8881 Agia Marina Chrysochous, Zypern<br>
+          E-Mail: <a href="mailto:info@feminess.de" style="color: var(--teal);">info@feminess.de</a> ·
+          Tel.: <a href="tel:+4921831509895" style="color: var(--teal);">+49 2183 – 150 98 95</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- 10 | BESCHWERDERECHT -->
+  <div class="block">
+    <div class="block-label">10 · Aufsichtsbehörde</div>
+    <h2>Recht auf <em>Beschwerde</em></h2>
+
+    <div class="prose">
+      <p>
+        Unbeschadet eines anderweitigen verwaltungsrechtlichen oder gerichtlichen Rechtsbehelfs
+        steht Ihnen das Recht auf Beschwerde bei einer Aufsichtsbehörde, insbesondere in dem
+        Mitgliedstaat ihres Aufenthaltsorts, ihres Arbeitsplatzes oder des Orts des mutmaßlichen
+        Verstoßes zu, wenn Sie der Ansicht sind, dass die Verarbeitung der Sie betreffenden
+        personenbezogenen Daten gegen die DSGVO verstößt.
+      </p>
+      <p>
+        Die Aufsichtsbehörde, bei der die Beschwerde eingereicht wurde, unterrichtet den
+        Beschwerdeführer über den Stand und die Ergebnisse der Beschwerde einschließlich der
+        Möglichkeit eines gerichtlichen Rechtsbehelfs nach Art. 78 DSGVO.
+      </p>
+    </div>
+  </div>
+
+</main>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+  <a href="index.html" class="footer-brand">Feminess</a>
+  <div class="footer-links">
+    <a href="index.html">Startseite</a>
+    <a href="Impressum.html">Impressum</a>
+    <a href="#">AGB</a>
+  </div>
+  <div class="footer-copy">
+    © 2026 Feminess LTD · Marina Henze · Alle Rechte vorbehalten
+  </div>
+</footer>
+
+</body>
+</html>
