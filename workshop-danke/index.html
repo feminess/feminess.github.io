@@ -1627,7 +1627,7 @@ function generateReferralLink() {
     return;
   }
   var utmName = encodeURIComponent((vorname + ' ' + nachname).replace(/\s+/g, '+'));
-  var link = 'https://feminess.github.io/workshop/?utm_source=' + utmName;
+  var link = 'https://feminess.github.io/workshop?utm_source=' + utmName;
   document.getElementById('referralLinkText').textContent = link;
   document.getElementById('referralResult').classList.add('visible');
   document.getElementById('referralResult').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
