@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dein Kennenlerngespräch ist gebucht – Feminess</title>
+<meta name="robots" content="noindex">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NQMQT7QH');</script>
+<!-- End Google Tag Manager -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+@font-face {
+  font-family: 'East Liberty';
+  src: url('./CI/east_liberty_signature (1)/east liberty signature.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Avenir LT Pro';
+  src: url('./CI/AvenirLTPro-Book (1).otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Avenir LT Pro';
+  src: url('./CI/AvenirLTPro-Heavy (1).otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+:root {
+  --teal:        #257c6c;
+  --teal-dark:   #1b5c50;
+  --teal-light:  #5ec6b3;
+  --teal-pale:   #b8ddd8;
+  --teal-deep:   #144a40;
+  --rose:        #cf5a73;
+  --rose-light:  #e8a0b0;
+  --sand:        #c2ab8d;
+  --sand-light:  #e4bc95;
+  --black:       #070808;
+  --dark:        #0d2420;
+  --off-white:   #f8f6f2;
+  --cream:       #f0f5f4;
+  --beige:       #ddecea;
+  --warm-gray:   #5a7a74;
+  --mid-gray:    #9ab8b4;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: #fff;
+  color: var(--black);
+  font-family: 'Avenir LT Pro', 'Inter', system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── HEADER ── */
+.site-header {
+  background: #fff;
+  border-bottom: 1px solid var(--beige);
+  padding: 16px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.site-header-brand {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--teal-dark);
+}
+.site-header-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(37,124,108,0.08);
+  border: 1px solid rgba(37,124,108,0.20);
+  padding: 6px 14px;
+  border-radius: 100px;
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--teal-dark);
+  letter-spacing: 0.3px;
+}
+.site-header-badge::before {
+  content: '';
+  display: block;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--teal);
+  flex-shrink: 0;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+@media (max-width: 520px) {
+  .site-header { justify-content: center; }
+}
+
+/* ── HERO ── */
+.hero {
+  background: var(--dark);
+  padding: 80px 40px 100px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -100px; left: 50%;
+  transform: translateX(-50%);
+  width: 700px; height: 700px;
+  background: radial-gradient(circle, rgba(37,124,108,0.22) 0%, transparent 60%);
+  pointer-events: none;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -80px; right: 5%;
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(207,90,115,0.10) 0%, transparent 60%);
+  pointer-events: none;
+}
+.hero-inner {
+  max-width: 680px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+.confirm-check {
+  width: 64px; height: 64px;
+  background: rgba(37,124,108,0.20);
+  border: 1.5px solid var(--teal-light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 28px;
+  animation: checkAppear 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@keyframes checkAppear {
+  from { transform: scale(0.6); opacity: 0; }
+  to   { transform: scale(1);   opacity: 1; }
+}
+.confirm-check svg {
+  width: 24px; height: 24px;
+  color: var(--teal-light);
+}
+.hero h1 {
+  font-family: 'East Liberty', 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(52px, 9vw, 96px);
+  font-weight: 400;
+  line-height: 1.0;
+  color: #fff;
+  letter-spacing: -0.5px;
+  margin-bottom: 20px;
+  animation: fadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.15s both;
+}
+@keyframes fadeUp {
+  from { transform: translateY(16px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+.hero-sub {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: clamp(16px, 2vw, 19px);
+  color: var(--mid-gray);
+  line-height: 1.65;
+  max-width: 500px;
+  margin: 0 auto 36px;
+  animation: fadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.25s both;
+}
+.hero-sub strong { color: var(--teal-pale); font-weight: 700; }
+
+/* ── BOOKING CARD (Calendly-Daten) ── */
+.booking-card {
+  background: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 20px 70px rgba(0,0,0,0.50);
+  max-width: 520px;
+  margin: 0 auto;
+  animation: fadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.35s both;
+  text-align: left;
+}
+.booking-card-header {
+  background: var(--teal);
+  padding: 18px 28px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.booking-card-header-icon {
+  width: 36px; height: 36px;
+  background: rgba(255,255,255,0.20);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.booking-card-header-icon svg { width: 16px; height: 16px; color: #fff; }
+.booking-card-header-text {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.90);
+}
+.booking-card-body {
+  padding: 28px 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.booking-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--beige);
+}
+.booking-row:last-child { border-bottom: none; padding-bottom: 0; }
+.booking-row-icon {
+  width: 32px; height: 32px;
+  background: var(--cream);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.booking-row-icon svg { width: 14px; height: 14px; color: var(--teal); }
+.booking-row-label {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 2px;
+}
+.booking-row-value {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--dark);
+  line-height: 1.3;
+}
+.booking-row-sub {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 13px;
+  color: var(--warm-gray);
+  margin-top: 1px;
+}
+/* Fallback wenn keine Calendly-Daten vorhanden */
+.booking-card-body.no-data .booking-row-value {
+  color: var(--mid-gray);
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* ── CONTAINER ── */
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+.section-kicker {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.section-kicker::after {
+  content: '';
+  flex: 1;
+  max-width: 36px;
+  height: 1px;
+  background: var(--teal);
+  opacity: 0.35;
+}
+
+/* ── KALENDER ── */
+.section-calendar {
+  padding: 72px 0;
+  border-bottom: 1px solid var(--beige);
+}
+.section-calendar-h2 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(24px, 3.5vw, 34px);
+  font-weight: 500;
+  color: var(--black);
+  line-height: 1.15;
+  margin-bottom: 10px;
+}
+.section-calendar-h2 em { font-style: italic; color: var(--teal); }
+.section-calendar-sub {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 15px;
+  color: var(--warm-gray);
+  margin-bottom: 28px;
+  line-height: 1.65;
+}
+.cal-single-row {
+  background: var(--off-white);
+  border: 1px solid var(--beige);
+  border-left: 3px solid var(--teal);
+  border-radius: 2px;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.cal-single-info {}
+.cal-single-label {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 4px;
+}
+.cal-single-date {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 2px;
+}
+.cal-single-time {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 13px;
+  color: var(--warm-gray);
+}
+.cal-buttons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.cal-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 2px;
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  letter-spacing: 0.2px;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.cal-btn:hover { transform: translateY(-1px); box-shadow: 0 3px 12px rgba(0,0,0,0.08); }
+.cal-btn svg { width: 13px; height: 13px; flex-shrink: 0; }
+.cal-btn-google { background: var(--teal); color: #fff; }
+.cal-btn-apple  { background: var(--dark); color: var(--teal-pale); }
+.cal-note {
+  margin-top: 12px;
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 13px;
+  color: var(--mid-gray);
+  font-style: italic;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+.cal-note::before { content: '→'; color: var(--teal-pale); flex-shrink: 0; }
+
+/* ── NEXT STEPS ── */
+.section-next-steps {
+  padding: 72px 0;
+  border-bottom: 1px solid var(--beige);
+}
+.next-steps-h2 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(24px, 3.5vw, 34px);
+  font-weight: 500;
+  color: var(--black);
+  line-height: 1.15;
+  margin-bottom: 10px;
+}
+.next-steps-h2 em { font-style: italic; color: var(--teal); }
+.next-steps-sub {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 15px;
+  color: var(--warm-gray);
+  margin-bottom: 32px;
+  line-height: 1.65;
+}
+.steps-list { display: flex; flex-direction: column; gap: 0; }
+.step-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--beige);
+}
+.step-item:last-child { border-bottom: none; padding-bottom: 0; }
+.step-num {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 28px;
+  font-weight: 300;
+  color: var(--teal-pale);
+  line-height: 1;
+  min-width: 32px;
+  padding-top: 2px;
+  flex-shrink: 0;
+}
+.step-timing {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--teal);
+  background: rgba(37,124,108,0.08);
+  padding: 3px 10px;
+  border-radius: 100px;
+  margin-bottom: 6px;
+}
+.step-content strong {
+  display: block;
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 3px;
+}
+.step-content p {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 14px;
+  color: var(--warm-gray);
+  line-height: 1.65;
+}
+
+/* ── VORBEREITUNG ── */
+.section-prepare {
+  padding: 72px 0;
+  border-bottom: 1px solid var(--beige);
+  background: var(--cream);
+}
+.prepare-h2 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(24px, 3.5vw, 34px);
+  font-weight: 500;
+  color: var(--black);
+  line-height: 1.15;
+  margin-bottom: 10px;
+}
+.prepare-h2 em { font-style: italic; color: var(--rose); }
+.prepare-sub {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 15px;
+  color: var(--warm-gray);
+  margin-bottom: 28px;
+  line-height: 1.65;
+}
+.prepare-questions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.prepare-q {
+  background: var(--dark);
+  border-radius: 2px;
+  padding: 26px 30px;
+  position: relative;
+  overflow: hidden;
+}
+.prepare-q::before {
+  content: '';
+  position: absolute;
+  top: -40px; right: -40px;
+  width: 200px; height: 200px;
+  background: radial-gradient(circle, rgba(37,124,108,0.15) 0%, transparent 65%);
+  pointer-events: none;
+}
+.prepare-q-inner { position: relative; z-index: 1; }
+.prepare-q-num {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--teal-light);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.prepare-q-num::before {
+  content: '';
+  display: block;
+  width: 16px; height: 1px;
+  background: var(--teal-light);
+}
+.prepare-q p {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(17px, 2.5vw, 21px);
+  font-weight: 400;
+  font-style: italic;
+  color: #fff;
+  line-height: 1.45;
+}
+.prepare-q p em { font-style: normal; color: var(--sand-light); }
+.prepare-hint {
+  background: #fff;
+  border: 1px solid var(--beige);
+  border-left: 2px solid var(--sand);
+  border-radius: 2px;
+  padding: 20px 24px;
+}
+.prepare-hint p {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 14.5px;
+  color: var(--warm-gray);
+  line-height: 1.65;
+}
+.prepare-hint p strong { color: var(--dark); font-weight: 700; }
+
+/* ── E-MAIL NOTICE ── */
+.section-email {
+  padding: 40px 0;
+  border-bottom: 1px solid var(--beige);
+}
+.email-notice {
+  background: rgba(37,124,108,0.05);
+  border: 1px solid var(--teal-pale);
+  border-radius: 2px;
+  padding: 20px 24px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+.email-notice-icon {
+  width: 36px; height: 36px;
+  background: rgba(37,124,108,0.12);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.email-notice-icon svg { width: 16px; height: 16px; color: var(--teal); }
+.email-notice-text strong {
+  display: block;
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--teal-dark);
+  margin-bottom: 4px;
+}
+.email-notice-text p {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 13.5px;
+  color: var(--warm-gray);
+  line-height: 1.6;
+}
+.email-notice-text p strong { display: inline; color: var(--dark); }
+
+/* ── CLOSING ── */
+.section-closing {
+  padding: 80px 40px 100px;
+  background: var(--dark);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.section-closing::before {
+  content: '';
+  position: absolute;
+  top: -100px; left: 50%;
+  transform: translateX(-50%);
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(37,124,108,0.18) 0%, transparent 60%);
+  pointer-events: none;
+}
+.section-closing-inner {
+  max-width: 540px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+.section-closing h2 {
+  font-family: 'East Liberty', 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(38px, 6vw, 72px);
+  font-weight: 400;
+  color: #fff;
+  line-height: 1.05;
+  margin-bottom: 18px;
+  letter-spacing: -0.5px;
+}
+.section-closing h2 em { font-style: italic; color: var(--teal-light); }
+.section-closing p {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 16px;
+  color: var(--mid-gray);
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+.closing-sig {
+  margin-top: 28px;
+  font-family: 'East Liberty', 'Cormorant Garamond', Georgia, serif;
+  font-size: 32px;
+  color: var(--teal-light);
+  font-weight: 400;
+}
+
+/* ── FOOTER ── */
+.site-footer {
+  background: var(--off-white);
+  border-top: 1px solid var(--beige);
+  padding: 28px 40px;
+  text-align: center;
+}
+.site-footer p {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 12px;
+  color: var(--mid-gray);
+}
+.site-footer a { color: var(--teal); text-decoration: none; }
+.site-footer a:hover { text-decoration: underline; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 640px) {
+  .hero { padding: 56px 24px 72px; }
+  .container { padding: 0 24px; }
+  .section-closing { padding: 56px 24px 72px; }
+  .cal-single-row { flex-direction: column; align-items: flex-start; }
+  .cal-buttons { width: 100%; }
+  .cal-btn { flex: 1; justify-content: center; }
+  .section-calendar, .section-next-steps, .section-email { padding: 48px 0; }
+  .section-prepare { padding: 48px 0; }
+}
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NQMQT7QH"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+<!-- ── HEADER ── -->
+<header class="site-header">
+  <div class="site-header-brand">Feminess &nbsp;·&nbsp; Marina Henze</div>
+  <div class="site-header-badge">Kennenlerngespräch bestätigt</div>
+</header>
+
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-inner">
+
+    <div class="confirm-check">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="20 6 9 17 4 12"/>
+      </svg>
+    </div>
+
+    <h1>Dein Termin ist gebucht.</h1>
+
+    <p class="hero-sub">
+      Ich freue mich sehr auf unser Gespräch, <strong id="heroName"></strong>
+      und kann es kaum erwarten, mehr über dich und dein Business zu erfahren.
+    </p>
+
+    <!-- ── BUCHUNGS-KARTE (befüllt per Calendly URL-Parameter) ── -->
+    <div class="booking-card">
+      <div class="booking-card-header">
+        <div class="booking-card-header-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2"/>
+            <line x1="16" y1="2" x2="16" y2="6"/>
+            <line x1="8" y1="2" x2="8" y2="6"/>
+            <line x1="3" y1="10" x2="21" y2="10"/>
+          </svg>
+        </div>
+        <span class="booking-card-header-text">Deine Buchungsdetails</span>
+      </div>
+      <div class="booking-card-body" id="bookingBody">
+
+        <div class="booking-row">
+          <div class="booking-row-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+            </svg>
+          </div>
+          <div>
+            <div class="booking-row-label">Name</div>
+            <div class="booking-row-value" id="bookingName">–</div>
+          </div>
+        </div>
+
+        <div class="booking-row">
+          <div class="booking-row-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2"/>
+              <line x1="16" y1="2" x2="16" y2="6"/>
+              <line x1="8" y1="2" x2="8" y2="6"/>
+              <line x1="3" y1="10" x2="21" y2="10"/>
+            </svg>
+          </div>
+          <div>
+            <div class="booking-row-label">Datum</div>
+            <div class="booking-row-value" id="bookingDate">–</div>
+            <div class="booking-row-sub" id="bookingDateSub"></div>
+          </div>
+        </div>
+
+        <div class="booking-row">
+          <div class="booking-row-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+          </div>
+          <div>
+            <div class="booking-row-label">Uhrzeit</div>
+            <div class="booking-row-value" id="bookingTime">–</div>
+            <div class="booking-row-sub" id="bookingDuration"></div>
+          </div>
+        </div>
+
+        <div class="booking-row">
+          <div class="booking-row-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+          </div>
+          <div>
+            <div class="booking-row-label">Bestätigung an</div>
+            <div class="booking-row-value" id="bookingEmail">–</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ── KALENDER-INTEGRATION ── -->
+<section class="section-calendar">
+  <div class="container">
+    <div class="section-kicker">Jetzt sofort</div>
+    <h2 class="section-calendar-h2">Trag den Termin in deinen<br><em>Kalender ein.</em></h2>
+    <p class="section-calendar-sub">Damit er nicht untergeht – und du entspannt und vorbereitet in unser Gespräch gehst.</p>
+
+    <div class="cal-single-row" id="calRow">
+      <div class="cal-single-info">
+        <div class="cal-single-label">Kennenlerngespräch · Feminess</div>
+        <div class="cal-single-date" id="calDate">Termin aus Buchungsdetails</div>
+        <div class="cal-single-time" id="calTime">Uhrzeit wird automatisch übernommen</div>
+      </div>
+      <div class="cal-buttons">
+        <a href="#" id="calBtnGoogle" target="_blank" rel="noopener" class="cal-btn cal-btn-google">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2"/>
+            <line x1="16" y1="2" x2="16" y2="6"/>
+            <line x1="8" y1="2" x2="8" y2="6"/>
+            <line x1="3" y1="10" x2="21" y2="10"/>
+          </svg>
+          Google
+        </a>
+        <button class="cal-btn cal-btn-apple" onclick="downloadICS()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="8 17 12 21 16 17"/>
+            <line x1="12" y1="3" x2="12" y2="21"/>
+          </svg>
+          .ics
+        </button>
+      </div>
+    </div>
+
+    <p class="cal-note">Calendly hat dir ebenfalls eine Kalendereinladung per E-Mail geschickt – als Sicherheitsnetz.</p>
+  </div>
+</section>
+
+
+<!-- ── NÄCHSTE SCHRITTE ── -->
+<section class="section-next-steps">
+  <div class="container">
+    <div class="section-kicker">Was jetzt passiert</div>
+    <h2 class="next-steps-h2">Kein Rätselraten –<br>nur <em>Vorfreude.</em></h2>
+    <p class="next-steps-sub">So läuft alles ab, damit du entspannt in unser Gespräch gehen kannst:</p>
+
+    <div class="steps-list">
+
+      <div class="step-item">
+        <span class="step-num">1</span>
+        <div class="step-content">
+          <span class="step-timing">Jetzt sofort</span>
+          <strong>Bestätigung per E-Mail</strong>
+          <p>Calendly hat dir soeben eine Bestätigungs-E-Mail mit allen Details geschickt. Falls sie nicht auftaucht: Bitte schau in deinen Spam-Ordner und markiere uns als „kein Spam".</p>
+        </div>
+      </div>
+
+      <div class="step-item">
+        <span class="step-num">2</span>
+        <div class="step-content">
+          <span class="step-timing">1 Tag vorher</span>
+          <strong>Erinnerung per E-Mail</strong>
+          <p>Du bekommst automatisch eine Erinnerung, damit du unseren Termin nicht vergisst – mit dem Link für unser Gespräch.</p>
+        </div>
+      </div>
+
+      <div class="step-item">
+        <span class="step-num">3</span>
+        <div class="step-content">
+          <span class="step-timing">Zu unserem Termin</span>
+          <strong>Unser Kennenlerngespräch</strong>
+          <p>Wir nehmen uns Zeit füreinander. Ich möchte verstehen, wo du stehst, was dein nächster Schritt ist – und ob ich die richtige Person bin, die dich dabei begleitet.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ── VORBEREITUNG ── -->
+<section class="section-prepare">
+  <div class="container">
+    <div class="section-kicker">Deine Vorbereitung</div>
+    <h2 class="prepare-h2">Drei Fragen –<br><em>dein persönlicher Kompass.</em></h2>
+    <p class="prepare-sub">Die Frauen, die das meiste aus unserem Gespräch mitnehmen, kommen nicht unvorbereitet. Diese drei Fragen reichen vollkommen aus – sie wollen nur ernsthaft beantwortet werden.</p>
+
+    <div class="prepare-questions">
+
+      <div class="prepare-q">
+        <div class="prepare-q-inner">
+          <div class="prepare-q-num">Frage 1</div>
+          <p>„Wo stehst du <em>gerade wirklich</em> in deinem Business –<br>wenn du vollständig ehrlich zu dir bist?"</p>
+        </div>
+      </div>
+
+      <div class="prepare-q">
+        <div class="prepare-q-inner">
+          <div class="prepare-q-num">Frage 2</div>
+          <p>„Was <em>wünschst du dir konkret</em> für die nächsten<br>6–12 Monate in deinem Business?"</p>
+        </div>
+      </div>
+
+      <div class="prepare-q">
+        <div class="prepare-q-inner">
+          <div class="prepare-q-num">Frage 3</div>
+          <p>„Was hält dich davon ab,<br><em>diesen Wunsch bereits</em> gelebt zu haben?"</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="prepare-hint">
+      <p><strong>Kein Druck.</strong> Du brauchst keine perfekten Antworten. Schreib einfach auf, was dir spontan dazu einfällt – das reicht vollkommen aus und hilft uns beiden, das Gespräch tief und wirklich wertvoll zu machen.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── E-MAIL NOTICE ── -->
+<section class="section-email">
+  <div class="container">
+    <div class="email-notice">
+      <div class="email-notice-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+          <polyline points="22,6 12,13 2,6"/>
+        </svg>
+      </div>
+      <div class="email-notice-text">
+        <strong>Bestätigung im Posteingang?</strong>
+        <p>Du hast soeben eine Bestätigungs-E-Mail von Calendly erhalten. Falls sie nicht auftaucht, schau bitte in den <strong>Spam-Ordner</strong>. Fragen oder ein Umterminierwunsch? Schreib uns an <a href="mailto:support@feminess.de" style="color:var(--teal);text-decoration:underline;">support@feminess.de</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── ABSCHLUSS ── -->
+<section class="section-closing">
+  <div class="section-closing-inner">
+    <h2>Ich freue mich<br>auf <em>dich.</em></h2>
+    <p>Bis zu unserem Gespräch – schon jetzt herzlich willkommen in meiner Welt.</p>
+    <div class="closing-sig">Marina</div>
+  </div>
+</section>
+
+
+<!-- ── FOOTER ── -->
+<footer class="site-footer">
+  <p>&copy; 2026 Feminess &nbsp;·&nbsp; Marina Henze &nbsp;&nbsp;|&nbsp;&nbsp; <a href="./Website/Impressum.html">Impressum</a> &nbsp;|&nbsp; <a href="#">Datenschutz</a></p>
+</footer>
+
+
+<script>
+// ── CALENDLY URL-PARAMETER AUSLESEN ──
+// Calendly überträgt beim Redirect folgende Parameter:
+//   invitee_full_name, invitee_email,
+//   event_start_time, event_end_time  (ISO 8601)
+//   event_type_name, assigned_to
+
+(function () {
+  var params = new URLSearchParams(window.location.search);
+
+  var name      = params.get('invitee_full_name') || '';
+  var email     = params.get('invitee_email')      || '';
+  var startRaw  = params.get('event_start_time')   || '';
+  var endRaw    = params.get('event_end_time')      || '';
+
+  var DE_DAYS   = ['Sonntag','Montag','Dienstag','Mittwoch','Donnerstag','Freitag','Samstag'];
+  var DE_MONTHS = ['Januar','Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember'];
+
+  function formatDate(iso) {
+    if (!iso) return null;
+    var d = new Date(iso);
+    if (isNaN(d)) return null;
+    return DE_DAYS[d.getDay()] + ', ' + d.getDate() + '. ' + DE_MONTHS[d.getMonth()] + ' ' + d.getFullYear();
+  }
+
+  function formatTime(iso) {
+    if (!iso) return null;
+    var d = new Date(iso);
+    if (isNaN(d)) return null;
+    return d.getHours().toString().padStart(2,'0') + ':' + d.getMinutes().toString().padStart(2,'0') + ' Uhr';
+  }
+
+  function toCalendlyUTC(iso) {
+    if (!iso) return '';
+    var d = new Date(iso);
+    if (isNaN(d)) return '';
+    return d.getUTCFullYear().toString()
+      + (d.getUTCMonth()+1).toString().padStart(2,'0')
+      + d.getUTCDate().toString().padStart(2,'0')
+      + 'T'
+      + d.getUTCHours().toString().padStart(2,'0')
+      + d.getUTCMinutes().toString().padStart(2,'0')
+      + '00Z';
+  }
+
+  // Name
+  var firstName = name.split(' ')[0] || '';
+  if (firstName) {
+    document.getElementById('heroName').textContent = firstName + ',';
+  }
+  document.getElementById('bookingName').textContent = name || '–';
+
+  // E-Mail
+  document.getElementById('bookingEmail').textContent = email || '–';
+
+  // Datum & Uhrzeit
+  var dateStr = formatDate(startRaw);
+  var timeStr = formatTime(startRaw);
+  var timeEndStr = formatTime(endRaw);
+
+  if (dateStr) {
+    document.getElementById('bookingDate').textContent = dateStr;
+    document.getElementById('calDate').textContent = dateStr;
+    document.getElementById('calTime').textContent = timeStr + (timeEndStr ? ' – ' + timeEndStr : '');
+  } else {
+    document.getElementById('bookingDate').textContent = 'Datum aus Buchungsbestätigung';
+    document.getElementById('bookingDateSub').textContent = 'Sieh in deine Bestätigungs-E-Mail';
+  }
+
+  if (timeStr) {
+    document.getElementById('bookingTime').textContent = timeStr + (timeEndStr ? ' – ' + timeEndStr : '');
+  }
+
+  // Dauer berechnen
+  if (startRaw && endRaw) {
+    var start = new Date(startRaw), end = new Date(endRaw);
+    if (!isNaN(start) && !isNaN(end)) {
+      var mins = Math.round((end - start) / 60000);
+      document.getElementById('bookingDuration').textContent = mins + ' Minuten';
+    }
+  }
+
+  // ── GOOGLE CALENDAR LINK ──
+  var startUTC = toCalendlyUTC(startRaw);
+  var endUTC   = toCalendlyUTC(endRaw);
+  if (startUTC && endUTC) {
+    var gcTitle   = encodeURIComponent('Kennenlerngespräch · Feminess / Marina Henze');
+    var gcDetails = encodeURIComponent('Dein Kennenlerngespräch mit Marina Henze\\nFeminess – feminess.de');
+    var gcURL = 'https://calendar.google.com/calendar/render?action=TEMPLATE'
+      + '&text=' + gcTitle
+      + '&dates=' + startUTC + '%2F' + endUTC
+      + '&details=' + gcDetails
+      + '&location=Online+%28Link+per+E-Mail%29';
+    document.getElementById('calBtnGoogle').href = gcURL;
+  }
+
+  // Daten für ICS global speichern
+  window._icsData = { startRaw: startRaw, endRaw: endRaw, name: name, startUTC: startUTC, endUTC: endUTC };
+})();
+
+
+// ── ICS-DOWNLOAD ──
+function downloadICS() {
+  var d = window._icsData || {};
+  var startStr = d.startUTC || '20260101T090000Z';
+  var endStr   = d.endUTC   || '20260101T093000Z';
+
+  var ics = [
+    'BEGIN:VCALENDAR',
+    'VERSION:2.0',
+    'PRODID:-//Feminess//Marina Henze//DE',
+    'BEGIN:VEVENT',
+    'UID:kennenlernen-' + Date.now() + '@feminess.de',
+    'DTSTAMP:' + new Date().toISOString().replace(/[-:]/g,'').split('.')[0] + 'Z',
+    'DTSTART:' + startStr,
+    'DTEND:'   + endStr,
+    'SUMMARY:Kennenlerngespräch · Feminess / Marina Henze',
+    'DESCRIPTION:Dein Kennenlerngespräch mit Marina Henze\\nFeminess – feminess.de\\nDen Zoom-Link erhältst du per E-Mail.',
+    'LOCATION:Online (Link per E-Mail)',
+    'STATUS:CONFIRMED',
+    'BEGIN:VALARM',
+    'TRIGGER:-PT30M',
+    'ACTION:DISPLAY',
+    'DESCRIPTION:Kennenlerngespräch mit Marina – in 30 Minuten',
+    'END:VALARM',
+    'END:VEVENT',
+    'END:VCALENDAR'
+  ].join('\r\n');
+
+  var blob = new Blob([ics], { type: 'text/calendar;charset=utf-8' });
+  var link = document.createElement('a');
+  link.href = URL.createObjectURL(blob);
+  link.download = 'kennenlernen-feminess.ics';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
+</script>
+
+</body>
+</html>
