@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VIP-Upgrade – Money Identity Reset Workshop</title>
+<title>VIP-Upgrade – Breathe & Build Workshop</title>
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -92,25 +92,51 @@ body {
   background: radial-gradient(circle, rgba(37,124,108,0.18) 0%, transparent 60%);
   pointer-events: none;
 }
-.confirm-check {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 64px; height: 64px;
-  border-radius: 50%;
-  background: rgba(94,198,179,0.15);
-  border: 1.5px solid rgba(94,198,179,0.40);
-  margin-bottom: 28px;
+.progress-wrap {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto 28px;
   position: relative;
   z-index: 1;
 }
-.confirm-check svg {
-  width: 28px; height: 28px;
-  stroke: var(--teal-light);
-  stroke-width: 2.2;
-  fill: none;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+.progress-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.progress-label {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--teal-pale);
+}
+.progress-label.right { color: var(--mid-gray); opacity: 0.55; }
+.progress-track {
+  width: 100%;
+  height: 6px;
+  background: rgba(255,255,255,0.10);
+  border-radius: 100px;
+  overflow: hidden;
+}
+.progress-fill {
+  height: 100%;
+  width: 80%;
+  background: linear-gradient(90deg, var(--teal-light) 0%, var(--teal) 100%);
+  border-radius: 100px;
+  position: relative;
+}
+.progress-fill::after {
+  content: '80%';
+  position: absolute;
+  right: -2px;
+  top: -20px;
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--teal-light);
+  letter-spacing: 0.5px;
 }
 .confirm-kicker {
   font-family: 'Avenir LT Pro', 'Inter', sans-serif;
@@ -251,6 +277,120 @@ body {
   font-style: italic;
 }
 .video-note strong { color: var(--rose); font-style: normal; }
+
+/* ── VIDEO in HERO ── */
+.hero-confirm .video-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 640px;
+  background: rgba(0,0,0,0.4);
+  border-radius: 3px;
+  overflow: hidden;
+  aspect-ratio: 16/9;
+  border: 1px solid rgba(94,198,179,0.20);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.40);
+}
+.hero-confirm .video-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+.hero-confirm .video-play-btn {
+  width: 72px; height: 72px;
+  border-radius: 50%;
+  background: rgba(201,23,74,0.90);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 32px rgba(201,23,74,0.45);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.hero-confirm .video-play-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 12px 40px rgba(201,23,74,0.60);
+}
+.hero-confirm .video-play-btn svg {
+  width: 26px; height: 26px;
+  fill: #fff;
+  margin-left: 4px;
+}
+.hero-confirm .video-placeholder p {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--mid-gray);
+  font-weight: 700;
+}
+
+/* ── QUICK UPSELL ── */
+.section-quick-upsell {
+  padding: 56px 0 48px;
+  background: #fff;
+  border-bottom: 1px solid var(--beige);
+  text-align: center;
+}
+.quick-scarcity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 14px;
+  color: var(--dark);
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+.quick-scarcity strong { color: var(--rose); }
+.quick-price-block {
+  margin-bottom: 28px;
+}
+.quick-old-price {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 16px;
+  color: var(--warm-gray);
+  margin-bottom: 4px;
+}
+.quick-old-price span {
+  text-decoration: line-through;
+  text-decoration-color: var(--rose-light);
+}
+.quick-new-price {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(28px, 5vw, 44px);
+  font-weight: 400;
+  color: var(--black);
+  line-height: 1.1;
+}
+.quick-new-price strong {
+  color: var(--teal-dark);
+  font-weight: 500;
+}
+.quick-cta-btn {
+  max-width: 440px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 16px;
+  padding: 20px 32px;
+}
+.quick-decline {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  color: var(--warm-gray);
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 12px;
+  cursor: pointer;
+}
+.quick-decline:hover { color: var(--mid-gray); }
 
 /* ── UPSELL SECTION ── */
 .section-upsell {
@@ -788,38 +928,48 @@ body {
 
 <!-- ── TOPBAR ── -->
 <div class="topbar">
-  <p><strong>Money Identity Reset Workshop</strong> &nbsp;·&nbsp; 12.–14. Juni 2026 &nbsp;·&nbsp; Deine Anmeldung ist bestätigt ✓</p>
+  <p><strong>Breathe &amp; Build Workshop</strong> &nbsp;·&nbsp; 11. – 13. Mai &nbsp;·&nbsp; Nur noch ein Schritt</p>
 </div>
 
 
 <!-- ── HERO BESTÄTIGUNG ── -->
 <section class="hero-confirm">
-  <div class="confirm-check">
-    <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+  <div class="progress-wrap">
+    <div class="progress-labels">
+      <span class="progress-label">Anmeldung</span>
+      <span class="progress-label right">Fast geschafft</span>
+    </div>
+    <div class="progress-track">
+      <div class="progress-fill"></div>
+    </div>
   </div>
   <div class="confirm-kicker">Anmeldung erfolgreich</div>
   <h1>Herzlichen<br><em>Glückwunsch</em></h1>
-  <span class="hero-script">Marina!</span>
-  <p>Du hast dir deinen Platz beim Money Identity Reset Workshop gesichert.<br>Schau dir jetzt das Video bis zum Ende an – denn du hast <strong style="color:#fff;">eine einmalige Gelegenheit.</strong></p>
+  <p style="margin-bottom:28px;">Du hast dich erfolgreich angemeldet! Eine Sache habe ich allerdings noch für dich…<br><br>
+  Schau dir jetzt dieses Video bis zum Ende an, um zu erfahren, wie du das Maximum aus <strong style="color:#fff;">Breathe &amp; Build</strong> herausholst!</p>
+
+  <!-- VIDEO EINBETTEN: Diesen Block durch deinen echten Video-Embed (z.B. Vimeo/Loom) ersetzen -->
+  <div class="video-wrapper" style="max-width:640px;margin:0 auto;">
+    <div class="video-placeholder">
+      <div class="video-play-btn">
+        <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+      </div>
+      <p>Video hier einbetten</p>
+    </div>
+  </div>
 </section>
 
 
-<!-- ── VIDEO ── -->
-<section class="section-video">
+<!-- ── QUICK UPSELL BLOCK (direkt unter Video) ── -->
+<section class="section-quick-upsell">
   <div class="container">
-    <p class="video-intro-text">Bevor du weitergehst – schau dir dieses kurze Video an.<br>Was ich dir hier anbiete, gilt <strong style="font-style:normal;">nur jetzt und nur einmal.</strong></p>
-
-    <!-- VIDEO EINBETTEN: Diesen Block durch deinen echten Video-Embed (z.B. Vimeo/Loom) ersetzen -->
-    <div class="video-wrapper">
-      <div class="video-placeholder">
-        <div class="video-play-btn">
-          <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-        </div>
-        <p>Video hier einbetten</p>
-      </div>
+    <p class="quick-scarcity"><span class="scarcity-dot"></span><strong>Wichtig: Nur noch 20 VIP-Pakete sind verfügbar.</strong></p>
+    <div class="quick-price-block">
+      <p class="quick-old-price">statt <span>488,00&nbsp;€</span></p>
+      <p class="quick-new-price">für nur <strong>17,00&nbsp;€</strong></p>
     </div>
-
-    <p class="video-note"><strong>Wichtig:</strong> Schau das Video bis zum Ende – nur so siehst du das vollständige Angebot und den Preis, der nur jetzt gilt.</p>
+    <a href="#" class="cta-primary-btn quick-cta-btn">Hier klicken und VIP-Paket sichern!</a>
+    <a href="https://feminess.github.io/workshop-danke/" class="cta-decline quick-decline">Nein Danke. Ich möchte nicht das Maximum aus dem Event herausholen.</a>
   </div>
 </section>
 
