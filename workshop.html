@@ -1,16 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-NQMQT7QH');</script>
-<!-- End Google Tag Manager -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Money Identity Reset – Mehrtägiger Workshop mit Marina Henze</title>
+<title>BREATHE &amp; BUILD – Kostenloser Live-Workshop mit Marina Henze</title>
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -61,8 +54,8 @@ body {
   background: #fff;
   color: var(--black);
   font-family: 'Avenir LT Pro', 'Inter', system-ui, sans-serif;
-  font-size: 17px;
-  line-height: 1.75;
+  font-size: 19px;
+  line-height: 1.78;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -71,8 +64,6 @@ body {
   background: var(--teal-deep);
   padding: 11px 24px;
   text-align: center;
-  position: relative;
-  z-index: 10;
 }
 .topbar p {
   font-family: 'Avenir LT Pro', 'Inter', sans-serif;
@@ -83,8 +74,9 @@ body {
   color: var(--teal-pale);
 }
 .topbar strong { color: #fff; }
+.topbar a { color: #fff; text-decoration: underline; }
 
-/* ── TOPBAR COUNTDOWN: STICKY ── */
+/* ── STICKY COUNTDOWN ── */
 .topbar-countdown {
   position: sticky;
   top: 0;
@@ -108,16 +100,8 @@ body {
   color: var(--teal-pale);
   white-space: nowrap;
 }
-.topbar-countdown-units {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-.topbar-cd-unit {
-  display: flex;
-  align-items: baseline;
-  gap: 4px;
-}
+.topbar-countdown-units { display: flex; align-items: center; gap: 4px; }
+.topbar-cd-unit { display: flex; align-items: baseline; gap: 4px; }
 .topbar-cd-num {
   font-family: 'Cormorant Garamond', Georgia, serif;
   font-size: 22px;
@@ -136,25 +120,19 @@ body {
   text-transform: uppercase;
   color: var(--teal-light);
 }
-.topbar-cd-sep {
-  font-size: 18px;
-  color: var(--teal);
-  font-weight: 300;
-  margin: 0 3px;
-  line-height: 1;
-}
+.topbar-cd-sep { font-size: 18px; color: var(--teal); font-weight: 300; margin: 0 3px; line-height: 1; }
 
-/* ── FLOATING CTA BUTTON ── */
+/* ── FLOATING CTA ── */
 @keyframes pulse-cta {
-  0%, 100% { transform: scale(1);    box-shadow: 0 6px 28px rgba(201,23,74,0.50); }
-  50%       { transform: scale(1.07); box-shadow: 0 10px 36px rgba(201,23,74,0.65); }
+  0%, 100% { transform: scale(1);    box-shadow: 0 6px 28px rgba(207,90,115,0.50); }
+  50%       { transform: scale(1.07); box-shadow: 0 10px 36px rgba(207,90,115,0.65); }
 }
 .floating-cta {
   position: fixed;
   bottom: 32px;
   right: 32px;
   z-index: 200;
-  background: #c9174a;
+  background: var(--rose);
   color: #fff;
   font-family: 'Avenir LT Pro', 'Inter', sans-serif;
   font-size: 14px;
@@ -163,225 +141,20 @@ body {
   padding: 16px 28px;
   border-radius: 2px;
   text-decoration: none;
-  box-shadow: 0 6px 28px rgba(201,23,74,0.50);
+  box-shadow: 0 6px 28px rgba(207,90,115,0.50);
   animation: pulse-cta 2s ease-in-out infinite;
   white-space: nowrap;
 }
-.floating-cta:hover {
-  background: #a8103d;
-  animation: none;
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 10px 36px rgba(201,23,74,0.65);
-}
+.floating-cta:hover { background: #b5405a; animation: none; transform: translateY(-3px) scale(1.05); }
 @media (max-width: 640px) {
-  .floating-cta {
-    bottom: 20px;
-    right: 16px;
-    left: 16px;
-    text-align: center;
-    border-radius: 2px;
-  }
+  .floating-cta { bottom: 20px; right: 16px; left: 16px; text-align: center; }
 }
 
-/* ════════════════════════════════════
-   HERO – SPLIT LAYOUT
-════════════════════════════════════ */
-.hero {
-  display: grid;
-  grid-template-columns: 55fr 45fr;
-  min-height: 92vh;
-  background: var(--dark);
-  position: relative;
-  overflow: hidden;
-}
-.hero::before {
-  content: '';
-  position: absolute;
-  top: -80px; left: -80px;
-  width: 600px; height: 600px;
-  background: radial-gradient(circle, rgba(37,124,108,0.20) 0%, transparent 60%);
-  pointer-events: none;
-  z-index: 1;
-}
+/* ── CONTAINER ── */
+.container { max-width: 860px; margin: 0 auto; padding: 0 40px; }
+.container-wide { max-width: 1040px; margin: 0 auto; padding: 0 40px; }
 
-.hero-content {
-  padding: 80px 60px 80px 56px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: relative;
-  z-index: 2;
-}
-.hero-kicker {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: var(--teal-light);
-  margin-bottom: 32px;
-}
-.hero-kicker::before {
-  content: '';
-  display: block;
-  width: 24px; height: 1px;
-  background: var(--teal-light);
-  flex-shrink: 0;
-}
-
-.hero-headline {
-  margin-bottom: 10px;
-}
-.hero-h1-line {
-  display: block;
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: clamp(32px, 4.2vw, 52px);
-  font-weight: 400;
-  line-height: 1.1;
-  color: #fff;
-  letter-spacing: -0.3px;
-}
-.hero-h1-accent {
-  display: block;
-  font-family: 'East Liberty', serif;
-  font-size: clamp(64px, 9vw, 112px);
-  font-weight: 400;
-  line-height: 0.95;
-  color: var(--sand-light);
-  letter-spacing: 0px;
-  margin: 4px 0;
-}
-.hero-headline-2 {
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: clamp(18px, 2.2vw, 26px);
-  font-weight: 300;
-  font-style: italic;
-  color: var(--mid-gray);
-  line-height: 1.35;
-  margin-bottom: 32px;
-  padding-top: 8px;
-}
-.hero-sub {
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
-  font-size: clamp(15px, 1.6vw, 17px);
-  font-weight: 400;
-  color: var(--warm-gray);
-  max-width: 480px;
-  line-height: 1.65;
-  margin-bottom: 36px;
-}
-.hero-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 40px;
-}
-.hero-meta-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.10);
-  padding: 7px 14px;
-  border-radius: 100px;
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
-  font-size: 11.5px;
-  font-weight: 500;
-  color: var(--teal-pale);
-  letter-spacing: 0.2px;
-  white-space: nowrap;
-}
-.pill-icon {
-  width: 12px; height: 12px;
-  flex-shrink: 0;
-  opacity: 0.70;
-}
-
-/* ── HERO SIGNUP FORM ── */
-.hero-signup-form {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  max-width: 400px;
-  margin-bottom: 12px;
-}
-.hero-input {
-  background: rgba(255,255,255,0.07);
-  border: 1px solid rgba(255,255,255,0.13);
-  border-radius: 2px;
-  padding: 13px 16px;
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
-  font-size: 14px;
-  color: #fff;
-  outline: none;
-  transition: border-color 0.2s;
-}
-.hero-input::placeholder { color: rgba(255,255,255,0.28); }
-.hero-input:focus { border-color: var(--teal-light); }
-.cta-btn-submit {
-  display: block;
-  width: 100%;
-  background: #c9174a;
-  color: #fff;
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  letter-spacing: 0.8px;
-  padding: 22px 36px;
-  border-radius: 2px;
-  cursor: pointer;
-  border: none;
-  transition: background 0.2s, box-shadow 0.2s;
-  box-shadow: 0 4px 22px rgba(201,23,74,0.38);
-}
-.cta-btn-submit:hover { background: #a8103d; box-shadow: 0 8px 30px rgba(201,23,74,0.50); }
-.hero-cta-note {
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
-  font-size: 12px;
-  color: var(--warm-gray);
-  margin-top: 12px;
-  font-style: italic;
-}
-
-/* ── HERO BILD (rechts) ── */
-.hero-image {
-  position: relative;
-  overflow: hidden;
-}
-.hero-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center top;
-  display: block;
-}
-.hero-image::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to right, var(--dark) 0%, rgba(13,36,32,0.25) 30%, transparent 60%);
-  z-index: 1;
-  pointer-events: none;
-}
-.hero-image::after {
-  content: '';
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  height: 30%;
-  background: linear-gradient(to top, var(--dark) 0%, transparent 100%);
-  z-index: 1;
-  pointer-events: none;
-}
-
-/* ── CONTAINER & SECTIONS ── */
-.container {
-  max-width: 820px;
-  margin: 0 auto;
-  padding: 0 40px;
-}
+/* ── SECTION KICKER ── */
 .section-kicker {
   font-family: 'Avenir LT Pro', 'Inter', sans-serif;
   font-size: 10px;
@@ -402,157 +175,912 @@ body {
   background: var(--teal);
   opacity: 0.35;
 }
-.section-h2 {
+
+/* ════════════════════════════════════
+   WS INFO BAR (nach Header)
+════════════════════════════════════ */
+.ws-info-bar {
+  background: var(--teal-deep);
+  border-bottom: 1px solid rgba(94,198,179,0.12);
+  padding: 40px 24px;
+}
+.ws-info-bar-inner {
+  max-width: 860px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.ws-info-box {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(94,198,179,0.15);
+  border-radius: 12px;
+  padding: 28px 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.ws-info-emoji {
+  font-size: 32px;
+  line-height: 1;
+}
+.ws-info-box-title {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--teal-light);
+  margin-bottom: 4px;
+}
+.ws-info-box-value {
   font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: clamp(28px, 4vw, 42px);
+  font-size: 20px;
+  font-weight: 400;
+  color: #fff;
+  line-height: 1.35;
+}
+.ws-info-box-sub {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 13px;
+  color: var(--teal-pale);
+  line-height: 1.5;
+}
+@media (max-width: 680px) {
+  .ws-info-bar-inner { grid-template-columns: 1fr; gap: 16px; }
+  .ws-info-box { padding: 22px 20px; }
+}
+
+/* ════════════════════════════════════
+   HERO
+════════════════════════════════════ */
+.hero {
+  background: var(--dark);
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -80px; left: -80px;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(37,124,108,0.20) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Hero 2-column: text left, image right */
+.hero-inner {
+  display: grid;
+  grid-template-columns: 55fr 45fr;
+  min-height: 90vh;
+  position: relative;
+  z-index: 2;
+}
+.hero-content {
+  padding: 72px 56px 72px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.hero-exclusive-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(94,198,179,0.12);
+  border: 1px solid rgba(94,198,179,0.25);
+  padding: 7px 16px;
+  border-radius: 100px;
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--teal-light);
+  margin-bottom: 28px;
+  width: fit-content;
+}
+.hero-exclusive-label span { opacity: 0.6; }
+
+.hero-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--teal-light);
+  margin-bottom: 24px;
+}
+.hero-kicker::before {
+  content: '';
+  display: block;
+  width: 24px; height: 1px;
+  background: var(--teal-light);
+  flex-shrink: 0;
+}
+
+.hero-h1-line {
+  display: block;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(28px, 3.6vw, 46px);
+  font-weight: 400;
+  line-height: 1.1;
+  color: #fff;
+  letter-spacing: -0.3px;
+}
+.hero-h1-accent {
+  display: block;
+  font-family: 'East Liberty', serif;
+  font-size: clamp(58px, 8.5vw, 108px);
+  font-weight: 400;
+  line-height: 0.95;
+  color: var(--sand-light);
+  margin: 4px 0 12px;
+}
+
+.hero-scarcity-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(207,90,115,0.15);
+  border: 1px solid rgba(207,90,115,0.30);
+  padding: 7px 16px;
+  border-radius: 100px;
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #f0a0b8;
+  margin-bottom: 22px;
+  width: fit-content;
+}
+.hero-scarcity-pill::before { content: '●'; font-size: 8px; animation: blink 1.5s ease-in-out infinite; }
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
+
+.hero-sub {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(18px, 2.1vw, 26px);
+  font-weight: 400;
+  font-style: italic;
+  color: #fff;
+  max-width: 500px;
+  line-height: 1.45;
+  margin-bottom: 32px;
+}
+
+.hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+.hero-meta-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.10);
+  padding: 7px 14px;
+  border-radius: 100px;
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 11.5px;
   font-weight: 500;
-  line-height: 1.15;
+  color: var(--teal-pale);
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+}
+.pill-icon { width: 12px; height: 12px; flex-shrink: 0; opacity: 0.70; }
+
+/* FORM */
+.hero-signup-form { display: flex; flex-direction: column; gap: 8px; max-width: 400px; margin-bottom: 10px; }
+.hero-input {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.13);
+  border-radius: 2px;
+  padding: 14px 16px;
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 14px;
+  color: #fff;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.hero-input::placeholder { color: rgba(255,255,255,0.28); }
+.hero-input:focus { border-color: var(--teal-light); }
+
+.cta-btn {
+  display: block;
+  width: 100%;
+  background: var(--rose);
+  color: #fff;
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  padding: 20px 32px;
+  border-radius: 2px;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 22px rgba(207,90,115,0.40);
+}
+.cta-btn:hover { background: #b5405a; box-shadow: 0 8px 30px rgba(207,90,115,0.55); }
+.cta-btn-inline { display: inline-block; width: auto; padding: 18px 44px; }
+
+.hero-cta-note {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 11.5px;
+  color: var(--warm-gray);
+  margin-top: 10px;
+  font-style: italic;
+}
+
+/* HERO IMAGE */
+.hero-image {
+  position: relative;
+  overflow: hidden;
+}
+.hero-image img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+.hero-image::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(to right, var(--dark) 0%, rgba(13,36,32,0.20) 35%, transparent 60%);
+  z-index: 1;
+  pointer-events: none;
+}
+.hero-image::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 30%;
+  background: linear-gradient(to top, var(--dark) 0%, transparent 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* ── INTRO BAND ── */
+.section-intro-band {
+  background: var(--off-white);
+  padding: 64px 0;
+  border-bottom: 1px solid var(--beige);
+  text-align: center;
+}
+.intro-band-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 24px;
+}
+.intro-band-label::before, .intro-band-label::after {
+  content: '';
+  width: 32px; height: 1px;
+  background: var(--teal);
+  opacity: 0.4;
+  flex-shrink: 0;
+}
+.intro-band-headline {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(26px, 3.8vw, 42px);
+  font-weight: 500;
+  line-height: 1.2;
   color: var(--black);
   margin-bottom: 18px;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
 }
-.section-h2 em {
-  font-style: italic;
-  color: var(--rose);
-}
-.section-intro {
+.intro-band-headline em { font-style: italic; color: var(--rose); }
+.intro-band-sub {
   font-family: 'Avenir LT Pro', 'Inter', sans-serif;
   font-size: 16px;
-  font-weight: 400;
   color: var(--warm-gray);
   font-style: italic;
-  max-width: 580px;
-  margin-bottom: 40px;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* ── SOCIAL PROOF BAR ── */
+.section-proof-bar {
+  padding: 40px 0;
+  background: var(--dark);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.proof-bar-inner {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.proof-bar-stars {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.stars-row {
+  display: flex;
+  gap: 3px;
+  color: var(--sand-light);
+  font-size: 18px;
+}
+.stars-label {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--mid-gray);
+}
+.proof-bar-divider {
+  width: 1px;
+  height: 32px;
+  background: rgba(255,255,255,0.10);
+  flex-shrink: 0;
+}
+.proof-bar-host {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.proof-bar-avatar {
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--teal);
+  flex-shrink: 0;
+}
+.proof-bar-avatar img { width: 100%; height: 100%; object-fit: cover; }
+.proof-bar-name {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #fff;
+  line-height: 1.1;
+}
+.proof-bar-title {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 11px;
+  color: var(--mid-gray);
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+.proof-bar-cred {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.proof-bar-cred-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--teal-pale);
+  letter-spacing: 0.3px;
+}
+.proof-bar-cred-item::before { content: '✓'; color: var(--teal-light); }
+
+/* ── BENEFIT FAQ BULLETS ── */
+.section-benefit-faq {
+  padding: 80px 0;
+  background: #fff;
+  border-bottom: 1px solid var(--beige);
+}
+.benefit-faq-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+.benefit-faq-card {
+  padding: 32px 28px;
+  background: var(--off-white);
+  border: 1px solid var(--beige);
+  border-top: 3px solid var(--teal);
+  border-radius: 2px;
+}
+.benefit-faq-q {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 12px;
+}
+.benefit-faq-a {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 19px;
+  font-weight: 500;
+  color: var(--dark);
+  line-height: 1.35;
+  margin-bottom: 12px;
+}
+.benefit-faq-detail {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 14px;
+  color: var(--warm-gray);
   line-height: 1.65;
 }
 
-/* ── PROBLEM SECTION ── */
-.section-problem {
-  padding: 84px 0;
+/* ── BEKANNT AUS SLIDESHOW ── */
+.section-bekannt {
+  padding: 56px 0;
+  background: var(--off-white);
+  text-align: center;
+  overflow: hidden;
+}
+.bekannt-label {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--warm-gray);
+  margin-bottom: 36px;
+}
+.bekannt-track-wrap {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+}
+.bekannt-track {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  width: max-content;
+  animation: logoScroll 24s linear infinite;
+  padding: 8px 0;
+}
+.bekannt-track:hover { animation-play-state: paused; }
+.bekannt-track img {
+  height: 52px;
+  width: auto;
+  object-fit: contain;
+  filter: none;
+  opacity: 0.85;
+  transition: opacity 0.3s ease;
+  flex-shrink: 0;
+}
+.bekannt-track img:hover { opacity: 1; }
+@keyframes logoScroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* ── KOSTENLOS-BLOCK ── */
+.section-kostenlos {
+  padding: 72px 0;
+  background: linear-gradient(135deg, var(--teal-deep) 0%, var(--dark) 100%);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.section-kostenlos::before {
+  content: '';
+  position: absolute;
+  top: -100px; left: 50%;
+  transform: translateX(-50%);
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(94,198,179,0.15) 0%, transparent 65%);
+  pointer-events: none;
+}
+.kostenlos-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(228,188,149,0.15);
+  border: 1px solid rgba(228,188,149,0.30);
+  padding: 8px 20px;
+  border-radius: 100px;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--sand-light);
+  margin-bottom: 20px;
+}
+.kostenlos-headline {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(28px, 4vw, 48px);
+  font-weight: 400;
+  color: #fff;
+  line-height: 1.15;
+  margin-bottom: 12px;
+}
+.kostenlos-headline em { font-style: italic; color: var(--sand-light); }
+.kostenlos-sub {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 15px;
+  color: var(--mid-gray);
+  margin-bottom: 32px;
+  line-height: 1.65;
+}
+.kostenlos-meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+  margin-bottom: 36px;
+}
+.kostenlos-meta-item {
+  text-align: center;
+}
+.kostenlos-meta-label {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--teal-light);
+  margin-bottom: 4px;
+}
+.kostenlos-meta-value {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: #fff;
+  line-height: 1.2;
+}
+
+/* ── DETAILS KARTEN ── */
+.section-details {
+  padding: 72px 0;
+  background: var(--cream);
   border-bottom: 1px solid var(--beige);
 }
-.problem-list {
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 40px;
+}
+.details-card {
+  background: #fff;
+  border: 1px solid var(--beige);
+  border-radius: 2px;
+  padding: 32px 28px;
+  text-align: center;
+}
+.details-card-icon {
+  font-size: 28px;
+  margin-bottom: 14px;
+  display: block;
+}
+.details-card-label {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 8px;
+}
+.details-card-value {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--dark);
+  line-height: 1.25;
+  margin-bottom: 8px;
+}
+.details-card-note {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 13px;
+  color: var(--warm-gray);
+  line-height: 1.55;
+}
+
+/* ── WIE HILFT DIR SECTION ── */
+.section-wie {
+  padding: 80px 0;
+  border-bottom: 1px solid var(--beige);
+}
+.wie-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  margin-top: 40px;
+  align-items: start;
+}
+.wie-col-main { }
+.wie-col-pain { }
+.wie-block {
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--beige);
+}
+.wie-block:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.wie-block-label {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 6px;
+}
+.wie-block-text {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 15px;
+  color: var(--dark);
+  line-height: 1.7;
+}
+.wie-block-text strong { color: var(--black); font-weight: 700; }
+
+.wie-pain-title {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--rose);
+  margin-bottom: 16px;
+}
+.wie-pain-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+.wie-pain-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 16px;
+  color: var(--dark);
+  line-height: 1.6;
+  padding: 14px 16px;
+  background: var(--off-white);
+  border-left: 2px solid var(--rose-light);
+  border-radius: 2px;
+}
+.wie-pain-list li::before { content: '✗'; color: var(--rose-light); font-weight: 700; flex-shrink: 0; }
+.wie-gain-title {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 16px;
+}
+.wie-gain-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.wie-gain-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 16px;
+  color: var(--dark);
+  line-height: 1.6;
+  padding: 14px 16px;
+  background: var(--cream);
+  border-left: 2px solid var(--teal);
+  border-radius: 2px;
+}
+.wie-gain-list li::before { content: '✓'; color: var(--teal); font-weight: 700; flex-shrink: 0; }
+
+.wie-fliesstext {
+  max-width: 700px;
+  margin-bottom: 40px;
+}
+.wie-fliesstext p {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 17px;
+  color: var(--dark);
+  line-height: 1.85;
+  margin-bottom: 20px;
+}
+.wie-fliesstext p:last-child { margin-bottom: 0; }
+.wie-vermeiden-box {
+  max-width: 700px;
+  background: var(--off-white);
+  border: 1px solid var(--beige);
+  border-radius: 4px;
+  padding: 32px 36px;
+  margin-bottom: 20px;
+}
+.wie-freiheit-box {
+  max-width: 700px;
+  background: #d6eeea;
+  border: 1px solid #9ccfc8;
+  border-radius: 4px;
+  padding: 28px 36px;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(18px, 2.2vw, 24px);
+  font-weight: 500;
+  font-style: italic;
+  color: var(--teal-deep);
+  line-height: 1.5;
+}
+
+/* ── FÜR WEN ── */
+.fuer-wen-box {
+  max-width: 700px;
+  border-radius: 4px;
+  padding: 32px 36px;
+  margin-bottom: 20px;
+}
+.fuer-wen-ja {
+  background: #f0faf7;
+  border: 1px solid #9ccfc8;
+}
+.fuer-wen-nein {
+  background: #fdf4f5;
+  border: 1px solid var(--rose-light);
+}
+.fuer-wen-title {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 18px;
+}
+.fuer-wen-list {
   list-style: none;
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
-.problem-item {
-  display: grid;
-  grid-template-columns: 40px 1fr;
-  gap: 0 16px;
-  padding: 20px 22px;
-  background: var(--off-white);
-  border-left: 2px solid var(--rose-light);
-  border-radius: 2px;
-  align-items: start;
-}
-.problem-item-icon {
-  font-size: 20px;
-  line-height: 1;
-  color: var(--rose-light);
-  text-align: center;
-  padding-top: 2px;
-}
-.problem-item p {
+.fuer-wen-list li {
   font-family: 'Avenir LT Pro', 'Inter', sans-serif;
-  font-size: 15.5px;
+  font-size: 16px;
   color: var(--dark);
-  line-height: 1.65;
+  line-height: 1.75;
+  padding-left: 20px;
+  position: relative;
 }
-.problem-item strong {
+.fuer-wen-ja .fuer-wen-list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--teal);
   font-weight: 700;
-  color: var(--black);
 }
-.problem-statement {
-  margin-top: 40px;
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: clamp(18px, 2.5vw, 22px);
-  font-weight: 400;
-  font-style: italic;
-  color: var(--dark);
-  line-height: 1.55;
-  padding-left: 24px;
-  border-left: 2px solid var(--teal);
+.fuer-wen-nein .fuer-wen-list li::before {
+  content: '·';
+  position: absolute;
+  left: 4px;
+  color: var(--rose-light);
+  font-weight: 700;
 }
 
-/* ── TRANSFORMATION SECTION ── */
-.section-transformation {
-  padding: 84px 0;
-  border-bottom: 1px solid var(--beige);
+/* ── BENEFITS DEEP-DIVE ── */
+.section-benefits {
+  padding: 80px 0;
   background: var(--off-white);
+  border-bottom: 1px solid var(--beige);
 }
-.transformation-list {
-  margin-top: 40px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+.benefits-section-h2 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 500;
+  line-height: 1.15;
+  color: var(--black);
+  margin-bottom: 14px;
 }
-.transformation-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 18px;
-  padding: 22px 26px;
+.benefits-section-h2 em { font-style: italic; color: var(--rose); }
+.benefits-intro {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 16px;
+  color: var(--warm-gray);
+  font-style: italic;
+  max-width: 580px;
+  line-height: 1.65;
+  margin-bottom: 48px;
+}
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.benefit-card {
   background: #fff;
   border: 1px solid var(--beige);
-  border-left: 3px solid var(--teal);
   border-radius: 2px;
+  padding: 32px 28px;
 }
-.transformation-check {
-  color: var(--teal);
-  font-size: 17px;
-  font-weight: 700;
-  flex-shrink: 0;
-  margin-top: 2px;
+.benefit-card-num {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 52px;
+  font-weight: 300;
+  color: var(--teal-pale);
+  line-height: 1;
+  margin-bottom: 16px;
 }
-.transformation-item p {
+.benefit-card h3 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--teal-dark);
+  margin-bottom: 12px;
+  line-height: 1.25;
+}
+.benefit-card p {
   font-family: 'Avenir LT Pro', 'Inter', sans-serif;
-  font-size: 15.5px;
-  color: var(--dark);
-  line-height: 1.65;
-}
-.transformation-item strong {
-  font-weight: 700;
-  color: var(--black);
+  font-size: 16px;
+  color: var(--warm-gray);
+  line-height: 1.7;
 }
 
-/* ── PROGRAMM (TAG FÜR TAG) ── */
-.section-programm {
-  padding: 84px 0;
+/* ── AGENDA ── */
+.section-agenda {
+  padding: 80px 0;
   border-bottom: 1px solid var(--beige);
 }
-.programm-list {
-  margin-top: 40px;
-  display: flex;
-  flex-direction: column;
-  gap: 0;
+.agenda-section-h2 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 500;
+  line-height: 1.15;
+  color: var(--black);
+  margin-bottom: 14px;
 }
-.programm-tag {
+.agenda-section-h2 em { font-style: italic; color: var(--rose); }
+.agenda-intro {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 16px;
+  color: var(--warm-gray);
+  font-style: italic;
+  max-width: 580px;
+  line-height: 1.65;
+  margin-bottom: 48px;
+}
+.agenda-list { display: flex; flex-direction: column; gap: 0; }
+.agenda-tag {
   display: grid;
-  grid-template-columns: 80px 1fr;
+  grid-template-columns: 88px 1fr;
   gap: 0 28px;
   padding: 36px 0;
   border-bottom: 1px solid var(--beige);
   align-items: start;
 }
-.programm-tag:last-child {
-  border-bottom: none;
-  padding-bottom: 0;
-}
-.programm-tag-label {
+.agenda-tag:last-child { border-bottom: none; padding-bottom: 0; }
+.agenda-tag-label {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 4px;
   padding-top: 4px;
 }
-.programm-tag-num {
+.agenda-tag-num {
   font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 42px;
+  font-size: 46px;
   font-weight: 300;
   color: var(--teal-pale);
   line-height: 1;
 }
-.programm-tag-word {
+.agenda-tag-word {
   font-family: 'Avenir LT Pro', 'Inter', sans-serif;
   font-size: 9px;
   font-weight: 700;
@@ -560,31 +1088,54 @@ body {
   text-transform: uppercase;
   color: var(--teal);
 }
-.programm-tag-content h3 {
+.agenda-tag-date {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 10px;
+  color: var(--mid-gray);
+  margin-top: 4px;
+  letter-spacing: 0.5px;
+}
+.agenda-tag-content .agenda-subtitle {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--teal-light);
+  margin-bottom: 8px;
+}
+.agenda-tag-content h3 {
   font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 22px;
+  font-size: 23px;
   font-weight: 500;
   color: var(--teal-dark);
   margin-bottom: 10px;
   line-height: 1.2;
 }
-.programm-tag-content .programm-subtitle {
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--teal-light);
-  margin-bottom: 10px;
-}
-.programm-tag-content p {
+.agenda-tag-content p {
   font-family: 'Avenir LT Pro', 'Inter', sans-serif;
   font-size: 15px;
   color: var(--warm-gray);
   line-height: 1.7;
 }
-.programm-tag-content .programm-ergebnis {
-  margin-top: 14px;
+.agenda-themen {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.agenda-thema {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 14px;
+  color: var(--dark);
+  line-height: 1.55;
+}
+.agenda-thema::before { content: '→'; color: var(--teal); font-weight: 700; flex-shrink: 0; }
+.agenda-ergebnis {
+  margin-top: 16px;
   display: flex;
   align-items: flex-start;
   gap: 10px;
@@ -593,9 +1144,9 @@ body {
   border-left: 2px solid var(--teal-light);
   border-radius: 2px;
 }
-.programm-ergebnis-label {
+.agenda-ergebnis-label {
   font-family: 'Avenir LT Pro', 'Inter', sans-serif;
-  font-size: 10px;
+  font-size: 9px;
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -603,36 +1154,46 @@ body {
   white-space: nowrap;
   padding-top: 2px;
 }
-.programm-ergebnis p {
+.agenda-ergebnis p {
   font-family: 'Avenir LT Pro', 'Inter', sans-serif;
   font-size: 14px;
   color: var(--dark);
   line-height: 1.6;
   font-style: italic;
 }
+.agenda-bonus-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(228,188,149,0.15);
+  border: 1px solid rgba(228,188,149,0.30);
+  padding: 4px 12px;
+  border-radius: 100px;
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--sand-dark);
+  margin-bottom: 8px;
+  width: fit-content;
+}
 
-/* ── TRENNBILD (Übergang) ── */
+/* ── TRENNBILD ── */
 .section-image-break {
   height: 480px;
   position: relative;
   overflow: hidden;
 }
 .section-image-break img {
-  width: 100%;
-  height: 100%;
+  width: 100%; height: 100%;
   object-fit: cover;
   object-position: center 30%;
   display: block;
 }
 .section-image-break-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(13,36,32,0.55) 0%,
-    rgba(13,36,32,0.20) 40%,
-    rgba(13,36,32,0.55) 100%
-  );
+  position: absolute; inset: 0;
+  background: linear-gradient(to bottom, rgba(13,36,32,0.55) 0%, rgba(13,36,32,0.20) 40%, rgba(13,36,32,0.60) 100%);
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -652,12 +1213,9 @@ body {
   line-height: 1.45;
   text-shadow: 0 2px 20px rgba(0,0,0,0.4);
 }
-.section-image-break-quote p em {
-  font-style: normal;
-  color: var(--sand-light);
-}
+.section-image-break-quote p em { font-style: normal; color: var(--sand-light); }
 
-/* ── ABOUT SECTION ── */
+/* ── ÜBER MARINA ── */
 .section-about {
   padding: 84px 0;
   border-bottom: 1px solid var(--beige);
@@ -668,12 +1226,9 @@ body {
   gap: 64px;
   align-items: center;
 }
-.about-image-wrap {
-  position: relative;
-}
+.about-image-wrap { position: relative; }
 .about-image-wrap img {
-  width: 100%;
-  height: auto;
+  width: 100%; height: auto;
   display: block;
   border-radius: 2px;
   aspect-ratio: 3/4;
@@ -690,7 +1245,6 @@ body {
   z-index: -1;
   pointer-events: none;
 }
-.about-text .section-kicker { margin-bottom: 8px; }
 .about-text h2 {
   font-family: 'Cormorant Garamond', Georgia, serif;
   font-size: clamp(28px, 3.5vw, 38px);
@@ -701,28 +1255,62 @@ body {
 }
 .about-text p {
   font-family: 'Avenir LT Pro', 'Inter', sans-serif;
-  font-size: 15.5px;
+  font-size: 17px;
   color: var(--warm-gray);
   line-height: 1.75;
   margin-bottom: 14px;
 }
 .about-text p:last-of-type { margin-bottom: 0; }
-.about-text p strong {
-  color: var(--dark);
+.about-text p strong { color: var(--dark); font-weight: 700; }
+.about-cred-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 24px;
+}
+.about-cred-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--cream);
+  border: 1px solid var(--beige);
+  padding: 6px 14px;
+  border-radius: 100px;
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 11px;
   font-weight: 700;
+  color: var(--teal-dark);
+  letter-spacing: 0.3px;
 }
 
-/* ── SOCIAL PROOF SECTION ── */
-.section-proof {
+/* ── TESTIMONIALS ── */
+.section-testimonials {
   padding: 84px 0;
   background: var(--off-white);
   border-bottom: 1px solid var(--beige);
 }
-.proof-grid {
+.section-h2 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 500;
+  line-height: 1.15;
+  color: var(--black);
+  margin-bottom: 18px;
+}
+.section-h2 em { font-style: italic; color: var(--rose); }
+.section-intro-text {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 16px;
+  color: var(--warm-gray);
+  font-style: italic;
+  max-width: 580px;
+  margin-bottom: 40px;
+  line-height: 1.65;
+}
+.testimonials-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px;
-  margin-top: 40px;
 }
 .testimonial-card {
   background: #fff;
@@ -731,6 +1319,7 @@ body {
   border: 1px solid var(--beige);
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 .testimonial-quote-mark {
   font-family: 'Cormorant Garamond', Georgia, serif;
@@ -763,10 +1352,12 @@ body {
   background: var(--teal-pale);
   flex-shrink: 0;
   overflow: hidden;
-}
-.testimonial-avatar img {
-  width: 100%; height: 100%;
-  object-fit: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 16px;
+  color: var(--teal-dark);
 }
 .testimonial-name {
   font-family: 'Avenir LT Pro', 'Inter', sans-serif;
@@ -778,6 +1369,16 @@ body {
   font-family: 'Avenir LT Pro', 'Inter', sans-serif;
   font-size: 12px;
   color: var(--warm-gray);
+}
+.testimonial-card--wide {
+  grid-column: 1 / -1;
+}
+.testimonial-stars {
+  position: absolute;
+  top: 20px;
+  right: 22px;
+  font-size: 14px;
+  letter-spacing: 1px;
 }
 .testimonial-result-badge {
   font-family: 'Avenir LT Pro', 'Inter', sans-serif;
@@ -794,302 +1395,132 @@ body {
   flex-shrink: 0;
 }
 
-/* ── FÜR WEN / FÜR WEN NICHT ── */
-.section-for-whom {
-  padding: 84px 0;
-  background: var(--cream);
-  border-bottom: 1px solid var(--beige);
-}
-.for-whom-grid {
-  margin-top: 36px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-}
-.for-whom-col-title {
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-  margin-bottom: 16px;
-}
-.for-whom-col-title.yes { color: var(--teal); }
-.for-whom-col-title.no  { color: var(--rose); }
-.for-whom-list-inner {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.for-whom-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 14px;
-  padding: 16px 18px;
-  background: #fff;
-  border-radius: 2px;
-}
-.for-whom-item.yes { border: 1px solid var(--beige); border-left: 2px solid var(--teal); }
-.for-whom-item.no  { border: 1px solid var(--beige); border-left: 2px solid var(--rose-light); }
-.for-whom-icon {
-  font-size: 15px;
-  font-weight: 700;
-  flex-shrink: 0;
-  margin-top: 2px;
-}
-.for-whom-icon.yes { color: var(--teal); }
-.for-whom-icon.no  { color: var(--rose-light); }
-.for-whom-item p {
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
-  font-size: 14.5px;
-  color: var(--dark);
-  line-height: 1.6;
-}
-.for-whom-item strong { font-weight: 700; color: var(--black); }
-
-/* ── PREIS SECTION ── */
-.section-preis {
-  padding: 84px 0;
-  border-bottom: 1px solid var(--beige);
-}
-.preis-inner {
-  margin-top: 40px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-}
-.preis-card {
-  border: 1px solid var(--beige);
-  border-radius: 2px;
-  padding: 36px 32px;
-  background: #fff;
-  position: relative;
-}
-.preis-card.featured {
-  border-color: var(--teal);
-  border-top: 3px solid var(--teal);
-}
-.preis-badge {
-  position: absolute;
-  top: -14px;
-  left: 24px;
-  background: var(--teal);
-  color: #fff;
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  padding: 5px 14px;
-  border-radius: 100px;
-}
-.preis-label {
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-  color: var(--warm-gray);
-  margin-bottom: 16px;
-}
-.preis-amount {
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: clamp(38px, 6vw, 54px);
-  font-weight: 400;
-  color: var(--black);
-  line-height: 1;
-  margin-bottom: 6px;
-}
-.preis-amount-detail {
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
-  font-size: 13px;
-  color: var(--warm-gray);
-  margin-bottom: 24px;
-}
-.preis-includes {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-bottom: 28px;
-}
-.preis-includes li {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
-  font-size: 14.5px;
-  color: var(--dark);
-  line-height: 1.5;
-}
-.preis-includes li::before {
-  content: '✓';
-  color: var(--teal);
-  font-weight: 700;
-  flex-shrink: 0;
-}
-.preis-cta-btn {
-  display: block;
-  width: 100%;
-  background: #c9174a;
-  color: #fff;
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
-  font-size: 15px;
-  font-weight: 700;
-  letter-spacing: 0.6px;
-  padding: 18px 24px;
-  border-radius: 2px;
+/* ── MID CTA MIT COUNTDOWN ── */
+.section-mid-cta {
+  padding: 72px 0;
+  background: var(--dark);
   text-align: center;
-  text-decoration: none;
-  cursor: pointer;
-  border: none;
-  box-shadow: 0 4px 20px rgba(201,23,74,0.38);
-  transition: background 0.2s, box-shadow 0.2s;
-}
-.preis-cta-btn:hover { background: #a8103d; box-shadow: 0 8px 28px rgba(201,23,74,0.50); }
-.preis-note {
-  margin-top: 36px;
-  text-align: center;
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
-  font-size: 13px;
-  color: var(--warm-gray);
-  font-style: italic;
-  line-height: 1.65;
-}
-.scarcity-bar {
-  margin-top: 40px;
-  padding: 20px 24px;
-  background: rgba(207,90,115,0.06);
-  border: 1px solid rgba(207,90,115,0.18);
-  border-radius: 2px;
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-.scarcity-icon {
-  font-size: 20px;
-  flex-shrink: 0;
-}
-.scarcity-text {
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
-  font-size: 14.5px;
-  color: var(--dark);
-  line-height: 1.55;
-}
-.scarcity-text strong {
-  font-weight: 700;
-  color: var(--rose);
-}
-
-/* ── BONUS SECTION ── */
-.section-bonus {
-  padding: 84px 0;
-  background: linear-gradient(135deg, var(--teal-deep) 0%, var(--dark) 100%);
   position: relative;
   overflow: hidden;
 }
-.section-bonus::before {
+.section-mid-cta::before {
   content: '';
   position: absolute;
-  top: -100px; right: -100px;
-  width: 400px; height: 400px;
-  background: radial-gradient(circle, rgba(94,198,179,0.12) 0%, transparent 65%);
+  top: -100px; left: 50%;
+  transform: translateX(-50%);
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(37,124,108,0.18) 0%, transparent 60%);
   pointer-events: none;
 }
-.bonus-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: rgba(94,198,179,0.15);
-  border: 1px solid rgba(94,198,179,0.30);
-  padding: 6px 16px;
-  border-radius: 100px;
+.mid-cta-inner { position: relative; z-index: 1; }
+.mid-cta-kicker {
   font-family: 'Avenir LT Pro', 'Inter', sans-serif;
   font-size: 10px;
   font-weight: 700;
-  letter-spacing: 2.5px;
+  letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--teal-light);
-  margin-bottom: 24px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
 }
-.section-bonus h2 {
+.mid-cta-kicker::before, .mid-cta-kicker::after {
+  content: '';
+  width: 28px; height: 1px;
+  background: var(--teal-light);
+  opacity: 0.5;
+}
+.mid-cta-h2 {
   font-family: 'Cormorant Garamond', Georgia, serif;
   font-size: clamp(28px, 4vw, 44px);
   font-weight: 400;
   color: #fff;
   line-height: 1.15;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
-.section-bonus h2 em { font-style: italic; color: var(--sand-light); }
-.section-bonus .section-intro { color: var(--mid-gray); margin-bottom: 36px; }
-.bonus-list { display: flex; flex-direction: column; gap: 12px; }
-.bonus-item {
-  display: flex;
-  gap: 20px;
-  align-items: flex-start;
-  padding: 24px 28px;
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.09);
-  border-left: 3px solid var(--teal-light);
-  border-radius: 2px;
-}
-.bonus-icon { font-size: 22px; flex-shrink: 0; margin-top: 2px; }
-.bonus-item h3 {
+.mid-cta-h2 em { font-style: italic; color: var(--sand-light); }
+.mid-cta-sub {
   font-family: 'Avenir LT Pro', 'Inter', sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  color: #fff;
-  margin-bottom: 6px;
-}
-.bonus-item p {
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
-  font-size: 14.5px;
+  font-size: 15px;
   color: var(--mid-gray);
+  margin-bottom: 32px;
   line-height: 1.65;
 }
+.mid-cta-bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 480px;
+  margin: 0 auto 36px;
+  text-align: left;
+}
+.mid-cta-bullets li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 16px;
+  color: var(--teal-pale);
+  line-height: 1.6;
+}
+.mid-cta-bullets li::before { content: '✓'; color: var(--teal-light); font-weight: 700; flex-shrink: 0; }
 
-/* ── ANCHOR CTA ── */
-.section-anchor-cta {
-  padding: 48px 0;
-  text-align: center;
-  background: linear-gradient(135deg, var(--teal-deep) 0%, var(--dark) 100%);
-  border-bottom: none;
+/* ── FAQ ── */
+.section-faq {
+  padding: 84px 0;
+  border-bottom: 1px solid var(--beige);
 }
-.section-anchor-cta .anchor-cta-note {
-  color: var(--mid-gray);
+.faq-list { margin-top: 40px; display: flex; flex-direction: column; }
+.faq-item {
+  padding: 24px 0;
+  border-bottom: 1px solid var(--beige);
+  cursor: pointer;
 }
-.cta-btn-anchor {
-  display: inline-block;
-  background: #c9174a;
-  color: #fff;
+.faq-item:last-child { border-bottom: none; }
+.faq-item-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.faq-item h3 {
   font-family: 'Avenir LT Pro', 'Inter', sans-serif;
   font-size: 16px;
   font-weight: 700;
-  letter-spacing: 0.8px;
-  padding: 20px 44px;
-  border-radius: 2px;
-  text-decoration: none;
-  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
-  box-shadow: 0 4px 22px rgba(201,23,74,0.38);
+  color: var(--dark);
 }
-.cta-btn-anchor:hover { background: #a8103d; transform: translateY(-2px); box-shadow: 0 8px 30px rgba(201,23,74,0.50); }
-.anchor-cta-note {
+.faq-toggle {
+  font-size: 20px;
+  color: var(--teal);
+  flex-shrink: 0;
+  transition: transform 0.25s;
+  line-height: 1;
+  font-family: monospace;
+}
+.faq-item.open .faq-toggle { transform: rotate(45deg); }
+.faq-item p {
   font-family: 'Avenir LT Pro', 'Inter', sans-serif;
-  font-size: 12px;
+  font-size: 15px;
   color: var(--warm-gray);
-  margin-top: 10px;
-  font-style: italic;
+  line-height: 1.7;
+  max-width: 680px;
+  margin-top: 12px;
+  display: none;
 }
+.faq-item.open p { display: block; }
 
-/* ── CTA / ANMELDUNG SECTION ── */
-.section-cta {
+/* ── FINAL CTA SECTION ── */
+.section-final-cta {
   padding: 100px 0;
   background: var(--dark);
   position: relative;
   overflow: hidden;
   text-align: center;
 }
-.section-cta::before {
+.section-final-cta::before {
   content: '';
   position: absolute;
   top: -150px; left: 50%;
@@ -1098,43 +1529,70 @@ body {
   background: radial-gradient(circle, rgba(37,124,108,0.20) 0%, transparent 60%);
   pointer-events: none;
 }
-.section-cta-inner {
+.final-cta-inner {
   position: relative;
   z-index: 1;
   max-width: 600px;
   margin: 0 auto;
   padding: 0 40px;
 }
-.section-cta .section-kicker {
-  justify-content: center;
+.final-cta-kicker {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
   color: var(--teal-light);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
 }
-.section-cta .section-kicker::after { background: var(--teal-light); }
-.section-cta h2 {
+.final-cta-kicker::before, .final-cta-kicker::after {
+  content: '';
+  width: 28px; height: 1px;
+  background: var(--teal-light);
+  opacity: 0.5;
+}
+.final-cta-h2 {
   font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: clamp(28px, 4vw, 44px);
+  font-size: clamp(28px, 4vw, 48px);
   font-weight: 400;
   color: #fff;
   line-height: 1.15;
   margin-bottom: 14px;
 }
-.section-cta h2 em {
+.final-cta-h2 em { font-style: italic; color: var(--sand-light); }
+.final-cta-worauf {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(18px, 2.5vw, 24px);
+  font-weight: 300;
   font-style: italic;
-  color: var(--sand-light);
-}
-.section-cta-desc {
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
-  font-size: 15px;
   color: var(--mid-gray);
-  margin-bottom: 36px;
-  line-height: 1.65;
+  margin-bottom: 32px;
 }
-.cta-form {
+.final-cta-bullets {
+  list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  margin-bottom: 14px;
+  gap: 8px;
+  max-width: 440px;
+  margin: 0 auto 36px;
+  text-align: left;
 }
+.final-cta-bullets li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 16px;
+  color: var(--teal-pale);
+  line-height: 1.6;
+}
+.final-cta-bullets li::before { content: '✓'; color: var(--teal-light); font-weight: 700; flex-shrink: 0; }
+
+.cta-form { display: flex; flex-direction: column; gap: 10px; margin-bottom: 14px; }
 .cta-input {
   background: rgba(255,255,255,0.07);
   border: 1px solid rgba(255,255,255,0.13);
@@ -1155,76 +1613,24 @@ body {
   font-style: italic;
   line-height: 1.6;
 }
-
-/* ── TRUST LOGOS ── */
-.section-trust {
-  padding: 48px 0;
-  border-bottom: 1px solid var(--beige);
-}
-.trust-logos {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  align-items: center;
-  margin-top: 24px;
-  opacity: 0.55;
-  filter: grayscale(1);
-}
-.trust-logo-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--warm-gray);
-  border: 1px solid var(--beige);
-  padding: 8px 18px;
-  border-radius: 2px;
-  height: 36px;
-}
-
-/* ── FAQ ── */
-.section-faq {
-  padding: 84px 0;
-  border-bottom: 1px solid var(--beige);
-}
-.faq-list {
-  margin-top: 40px;
-  display: flex;
-  flex-direction: column;
-}
-.faq-item {
-  padding: 24px 0;
-  border-bottom: 1px solid var(--beige);
-}
-.faq-item:last-child { border-bottom: none; }
-.faq-item h3 {
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  color: var(--dark);
-  margin-bottom: 8px;
-}
-.faq-item p {
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
-  font-size: 15px;
-  color: var(--warm-gray);
-  line-height: 1.7;
-  max-width: 640px;
+.cta-privacy a { color: var(--teal-light); text-decoration: none; }
+.final-cta-kostenlos-note {
+  margin-top: 20px;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 18px;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--sand-light);
 }
 
 /* ── EXIT POPUP ── */
 @keyframes popup-in {
   from { opacity: 0; transform: translateY(24px) scale(0.97); }
-  to   { opacity: 1; transform: translateY(0)    scale(1);    }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
 }
 .popup-overlay {
   display: none;
-  position: fixed;
-  inset: 0;
+  position: fixed; inset: 0;
   background: rgba(7,8,8,0.72);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
@@ -1233,13 +1639,11 @@ body {
   justify-content: center;
   padding: 24px;
 }
-.popup-overlay.is-visible {
-  display: flex;
-}
+.popup-overlay.is-visible { display: flex; }
 .popup-box {
   background: var(--dark);
   border: 1px solid rgba(255,255,255,0.08);
-  border-top: 3px solid #c9174a;
+  border-top: 3px solid var(--rose);
   border-radius: 3px;
   max-width: 520px;
   width: 100%;
@@ -1248,111 +1652,46 @@ body {
   animation: popup-in 0.3s ease forwards;
 }
 .popup-close {
-  position: absolute;
-  top: 16px;
-  right: 20px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: var(--warm-gray);
-  font-size: 22px;
-  line-height: 1;
-  padding: 4px;
+  position: absolute; top: 16px; right: 20px;
+  background: none; border: none; cursor: pointer;
+  color: var(--warm-gray); font-size: 22px; line-height: 1; padding: 4px;
   transition: color 0.15s;
 }
 .popup-close:hover { color: #fff; }
 .popup-kicker {
   font-family: 'Avenir LT Pro', 'Inter', sans-serif;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: var(--teal-light);
-  margin-bottom: 16px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
+  font-size: 10px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase;
+  color: var(--teal-light); margin-bottom: 16px;
+  display: flex; align-items: center; gap: 10px;
 }
-.popup-kicker::before {
-  content: '';
-  display: block;
-  width: 20px;
-  height: 1px;
-  background: var(--teal-light);
-}
+.popup-kicker::before { content: ''; display: block; width: 20px; height: 1px; background: var(--teal-light); }
 .popup-box h2 {
   font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: clamp(26px, 4vw, 36px);
-  font-weight: 400;
-  color: #fff;
-  line-height: 1.2;
-  margin-bottom: 12px;
+  font-size: clamp(24px, 4vw, 34px);
+  font-weight: 400; color: #fff; line-height: 1.2; margin-bottom: 12px;
 }
-.popup-box h2 em {
-  font-style: italic;
-  color: var(--sand-light);
-}
+.popup-box h2 em { font-style: italic; color: var(--sand-light); }
 .popup-box p {
   font-family: 'Avenir LT Pro', 'Inter', sans-serif;
-  font-size: 15px;
-  color: var(--mid-gray);
-  line-height: 1.65;
-  margin-bottom: 28px;
+  font-size: 15px; color: var(--mid-gray); line-height: 1.65; margin-bottom: 28px;
 }
-.popup-form {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  margin-bottom: 14px;
-}
+.popup-form { display: flex; flex-direction: column; gap: 8px; margin-bottom: 14px; }
 .popup-input {
-  background: rgba(255,255,255,0.07);
-  border: 1px solid rgba(255,255,255,0.13);
-  border-radius: 2px;
-  padding: 13px 16px;
+  background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.13);
+  border-radius: 2px; padding: 13px 16px;
   font-family: 'Avenir LT Pro', 'Inter', sans-serif;
-  font-size: 14px;
-  color: #fff;
-  outline: none;
-  transition: border-color 0.2s;
+  font-size: 14px; color: #fff; outline: none; transition: border-color 0.2s;
 }
 .popup-input::placeholder { color: rgba(255,255,255,0.28); }
 .popup-input:focus { border-color: var(--teal-light); }
-.popup-btn {
-  display: block;
-  width: 100%;
-  background: #c9174a;
-  color: #fff;
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
-  font-size: 15px;
-  font-weight: 700;
-  letter-spacing: 0.6px;
-  padding: 18px 24px;
-  border-radius: 2px;
-  border: none;
-  cursor: pointer;
-  box-shadow: 0 4px 20px rgba(201,23,74,0.40);
-  transition: background 0.2s, box-shadow 0.2s;
-}
-.popup-btn:hover { background: #a8103d; box-shadow: 0 8px 28px rgba(201,23,74,0.50); }
 .popup-dismiss {
-  display: block;
-  text-align: center;
+  display: block; text-align: center;
   font-family: 'Avenir LT Pro', 'Inter', sans-serif;
-  font-size: 12px;
-  color: var(--warm-gray);
-  cursor: pointer;
-  background: none;
-  border: none;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  margin-top: 10px;
-  transition: color 0.15s;
+  font-size: 12px; color: var(--warm-gray); cursor: pointer;
+  background: none; border: none; text-decoration: underline; text-underline-offset: 3px;
+  margin-top: 10px; transition: color 0.15s;
 }
 .popup-dismiss:hover { color: var(--mid-gray); }
-@media (max-width: 560px) {
-  .popup-box { padding: 36px 24px 28px; }
-}
 
 /* ── FOOTER ── */
 .site-footer {
@@ -1366,171 +1705,259 @@ body {
   font-size: 12px;
   color: var(--mid-gray);
 }
-.site-footer a {
-  color: var(--teal);
-  text-decoration: none;
-}
+.site-footer a { color: var(--teal); text-decoration: none; }
 .site-footer a:hover { text-decoration: underline; }
 
-/* ── PROOF COUNT ── */
-.proof-count {
+/* ── ANCHOR CTA BAND ── */
+.section-anchor-cta {
+  padding: 48px 0;
+  text-align: center;
+  background: linear-gradient(135deg, var(--teal-deep) 0%, var(--dark) 100%);
+}
+.anchor-cta-note {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 12px; color: var(--mid-gray);
+  margin-top: 10px; font-style: italic;
+}
+
+/* ── MID CTA INNER: z-index über ::before-Gradient ── */
+.mid-cta-inner {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── MID COUNTDOWN ── */
+.mid-countdown-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+.mid-cd-label {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--teal-light);
+  margin-right: 8px;
+  white-space: nowrap;
+}
+.mid-cd-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 2px;
+  padding: 10px 14px;
+  min-width: 56px;
+}
+.mid-cd-num {
   font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: clamp(18px, 2.5vw, 22px);
-  font-weight: 400;
-  font-style: italic;
-  color: var(--teal-dark);
-  margin-bottom: 32px;
+  font-size: 30px;
+  font-weight: 300;
+  color: #fff;
+  line-height: 1;
+}
+.mid-cd-lbl {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--teal-light);
+}
+.mid-cd-sep {
+  font-size: 20px;
+  color: var(--teal);
+  font-weight: 300;
+  line-height: 1;
+  margin-bottom: 14px;
 }
 
 /* ── RESPONSIVE ── */
-@media (max-width: 900px) {
-  .hero {
-    grid-template-columns: 1fr;
-    min-height: auto;
-  }
-  .hero-image {
-    height: 55vw;
-    min-height: 300px;
-    max-height: 480px;
-    order: -1;
-  }
-  .hero-image::before {
-    background: linear-gradient(to bottom, transparent 50%, var(--dark) 100%);
-  }
-  .hero-image::after { display: none; }
-  .hero-content {
-    padding: 48px 28px 64px;
-  }
-  .hero-h1-accent { font-size: clamp(56px, 14vw, 80px); }
-  .for-whom-grid { grid-template-columns: 1fr; }
-  .preis-inner { grid-template-columns: 1fr; }
+@media (max-width: 960px) {
+  .benefit-faq-grid { grid-template-columns: 1fr 1fr; }
+  .benefits-grid { grid-template-columns: 1fr 1fr; }
+  .details-grid { grid-template-columns: 1fr 1fr; }
+  .wie-inner { grid-template-columns: 1fr; gap: 32px; }
 }
-@media (max-width: 680px) {
-  .container { padding: 0 24px; }
-  .section-problem, .section-transformation, .section-programm,
-  .section-about, .section-proof, .section-for-whom,
-  .section-preis, .section-faq { padding: 56px 0; }
+@media (max-width: 900px) {
+  .hero-inner { grid-template-columns: 1fr; min-height: auto; }
+  .hero-image { height: 55vw; min-height: 300px; max-height: 480px; order: -1; }
+  .hero-image::before { background: linear-gradient(to bottom, transparent 50%, var(--dark) 100%); }
+  .hero-image::after { display: none; }
+  .hero-content { padding: 48px 32px 64px 40px; }
   .about-inner { grid-template-columns: 1fr; gap: 0; }
   .about-image-wrap { margin-bottom: 40px; }
   .about-image-wrap::after { display: none; }
-  .proof-grid { grid-template-columns: 1fr; }
-  .programm-tag { grid-template-columns: 54px 1fr; gap: 0 16px; }
-  .programm-tag-num { font-size: 32px; }
-  .section-cta-inner { padding: 0 24px; }
+}
+@media (max-width: 680px) {
+  .container, .container-wide { padding: 0 24px; }
+  .benefit-faq-grid { grid-template-columns: 1fr; }
+  .benefits-grid { grid-template-columns: 1fr; }
+  .details-grid { grid-template-columns: 1fr; }
+  .testimonials-grid { grid-template-columns: 1fr; }
   .section-image-break { height: 300px; }
+  .proof-bar-divider { display: none; }
+  .proof-bar-cred { display: none; }
+  .kostenlos-meta-row { gap: 20px; flex-direction: column; align-items: center; }
+  .agenda-tag { grid-template-columns: 60px 1fr; gap: 0 16px; }
+  .agenda-tag-num { font-size: 34px; }
+  .final-cta-inner { padding: 0 24px; }
+  .popup-box { padding: 36px 24px 28px; }
   .topbar p { font-size: 9.5px; letter-spacing: 1.5px; }
+  .mid-countdown-wrap { gap: 4px; }
+  .mid-cd-unit { min-width: 46px; padding: 8px 10px; }
+  .mid-cd-num { font-size: 24px; }
 }
 </style>
-<style>@import url(https://fonts.bunny.net/css?family=sans-serif:400|IBM+Plex+Sans:400);</style>
+
+<!-- ── ACTIVECAMPAIGN FORM STYLES ── -->
 <style>
-#_form_561_{font-size:14px;line-height:1.6;font-family:arial, helvetica, sans-serif;margin:0;box-shadow:none}._form_hide{display:none;visibility:hidden}._form_show{display:block;visibility:visible}#_form_561_._form-top{top:0}#_form_561_._form-bottom{bottom:0}#_form_561_._form-left{left:0}#_form_561_._form-right{right:0}#_form_561_ input[type="text"],#_form_561_ input[type="tel"],#_form_561_ input[type="date"],#_form_561_ textarea{padding:12px;height:auto;border:rgba(255,255,255,0.15) 1px solid;border-radius:4px;color:#ffffff !important;font-size:14px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}#_form_561_ textarea{resize:none}#_form_561_ input::placeholder{color:rgba(255,255,255,0.35)}#_form_561_ ._submit{cursor:pointer;font-family:arial, sans-serif;font-size:14px;text-align:center;background:#c9174a !important;border:0 !important;-moz-border-radius:2px !important;-webkit-border-radius:2px !important;border-radius:2px !important;color:#ffffff !important;padding:18px 36px !important}#_form_561_ ._submit:disabled{cursor:not-allowed;opacity:0.4}#_form_561_ ._submit.processing{position:relative}#_form_561_ ._submit.processing::before{content:"";width:1em;height:1em;position:absolute;z-index:1;top:50%;left:50%;border:double 3px transparent;border-radius:50%;background-image:linear-gradient(#004CFF, #004CFF), conic-gradient(#004CFF, #FFFFFF);background-origin:border-box;background-clip:content-box, border-box;animation:1200ms ease 0s infinite normal none running _spin}#_form_561_ ._submit.processing::after{content:"";position:absolute;top:0;bottom:0;left:0;right:0}@keyframes _spin{0%{transform:translate(-50%, -50%) rotate(90deg)}100%{transform:translate(-50%, -50%) rotate(450deg)}}#_form_561_ ._close-icon{cursor:pointer;background-image:url("https://d226aj4ao1t61q.cloudfront.net/esfkyjh1u_forms-close-dark.png");background-repeat:no-repeat;background-size:14.2px 14.2px;position:absolute;display:block;top:11px;right:9px;overflow:hidden;width:16.2px;height:16.2px}#_form_561_ ._close-icon:before{position:relative}#_form_561_ ._form-body{font-family:sans-serif;font-size:14px;font-weight:400;color:black;margin-bottom:30px}#_form_561_ ._form-image-left{width:150px;float:left}#_form_561_ ._form-content-right{margin-left:164px}#_form_561_ ._form-branding{color:#fff;font-size:10px;clear:both;text-align:left;margin-top:30px;font-weight:100}#_form_561_ ._form-branding ._logo{display:block;width:130px;height:14px;margin-top:6px;background-image:url("https://d226aj4ao1t61q.cloudfront.net/hh9ujqgv5_aclogo_li.png");background-size:130px auto;background-repeat:no-repeat}#_form_561_ .form-sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);border:0}#_form_561_ ._form-label,#_form_561_ ._form_element ._form-label{font-weight:bold;margin-bottom:5px;display:block}#_form_561_._dark ._form-branding{color:#333}#_form_561_._dark ._form-branding ._logo{background-image:url("https://d226aj4ao1t61q.cloudfront.net/jftq2c8s_aclogo_dk.png")}#_form_561_ ._form_element{position:relative;margin-bottom:10px;font-size:0;max-width:100%}#_form_561_ ._form_element *{font-size:14px}#_form_561_ ._form_element._clear{clear:both;width:100%;float:none}#_form_561_ ._form_element._clear:after{clear:left}#_form_561_ ._form_element :is(textarea, select, input[type="text"], input[type="date"], input[type="phone"], input[type="email"]),#_form_561_ ._form-element :is(textarea, select, input[type="text"], input[type="date"], input[type="phone"], input[type="email"]){color:#ffffff !important;border-radius:0px}#_form_561_ ._form_element input[type="text"],#_form_561_ ._form_element input[type="date"],#_form_561_ ._form_element select,#_form_561_ ._form_element textarea:not(.g-recaptcha-response){display:block;width:100%;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;font-family:inherit}#_form_561_ ._field-wrapper{position:relative}#_form_561_ ._inline-style{float:left}#_form_561_ ._inline-style input[type="text"]{width:150px}#_form_561_ ._inline-style:not(._clear){margin-right:20px}#_form_561_ ._form_element img._form-image{max-width:100%}#_form_561_ ._form_element ._form-fieldset{border:0;padding:0.01em 0 0 0;margin:0;min-width:0}#_form_561_ ._clear-element{clear:left}#_form_561_ ._full_width{width:100%}#_form_561_ ._form_full_field{display:block;width:100%;margin-bottom:10px}#_form_561_ input[type="text"]._has_error,#_form_561_ textarea._has_error{border:#F37C7B 1px solid}#_form_561_ input[type="checkbox"]._has_error{outline:#F37C7B 1px solid}#_form_561_ ._show_be_error{float:left}#_form_561_ ._error{display:block;position:absolute;font-size:14px;z-index:10000001}#_form_561_ ._error._above{padding-bottom:4px;bottom:39px;right:0}#_form_561_ ._error._below{padding-top:8px;top:100%;right:0}#_form_561_ ._error._above ._error-arrow{bottom:-4px;right:15px;border-left:8px solid transparent;border-right:8px solid transparent;border-top:8px solid #FFDDDD}#_form_561_ ._error._below ._error-arrow{top:0;right:15px;border-left:8px solid transparent;border-right:8px solid transparent;border-bottom:8px solid #FFDDDD}#_form_561_ ._error-inner{padding:12px 12px 12px 36px;background-color:#FFDDDD;background-image:url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8ZM9 3V9H7V3H9ZM9 13V11H7V13H9Z' fill='%23CA0000'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:12px center;font-size:14px;font-family:arial, sans-serif;font-weight:600;line-height:16px;color:#000;text-align:center;text-decoration:none;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;box-shadow:0 1px 4px rgba(31, 33, 41, 0.298295)}@media only screen and (max-width:319px){#_form_561_ ._error-inner{padding:7px 7px 7px 25px;font-size:12px;line-height:12px;background-position:4px center;max-width:100px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}}#_form_561_ ._error-inner._form_error{margin-bottom:5px;text-align:left}#_form_561_ ._button-wrapper ._error-inner._form_error{position:static}#_form_561_ ._error-inner._no_arrow{margin-bottom:10px}#_form_561_ ._error-arrow{position:absolute;width:0;height:0}#_form_561_ ._error-html{margin-bottom:10px}.pika-single{z-index:10000001 !important}#_form_561_ input[type="text"].datetime_date{width:69%;display:inline}#_form_561_ select.datetime_time{width:29%;display:inline;height:32px}#_form_561_ input[type="date"].datetime_date{width:69%;display:inline-flex}#_form_561_ input[type="time"].datetime_time{width:29%;display:inline-flex}#_form_561_ ._form-title,#_form_561_ ._html-code :is(h1, h2, h3, h4, h5, h6){font-family:sans-serif;font-size:24px;font-weight:400;color:black}@media (min-width:320px) and (max-width:667px){::-webkit-scrollbar{display:none}#_form_561_{margin:0;width:100%;min-width:100%;max-width:100%;box-sizing:border-box}#_form_561_ *{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;font-size:1em}#_form_561_ ._form-content{margin:0;width:100%}#_form_561_ ._form-inner{display:block;min-width:100%}#_form_561_ ._form-title,#_form_561_ ._inline-style{margin-top:0;margin-right:0;margin-left:0}#_form_561_ ._form-title{font-size:1.2em}#_form_561_ ._form_element{margin:0 0 20px;padding:0;width:100%}#_form_561_ ._form-element,#_form_561_ ._inline-style,#_form_561_ input[type="text"],#_form_561_ label,#_form_561_ p,#_form_561_ textarea:not(.g-recaptcha-response){float:none;display:block;width:100%}#_form_561_ ._row._checkbox-radio label{display:inline}#_form_561_ ._row,#_form_561_ p,#_form_561_ label{margin-bottom:0.7em;width:100%}#_form_561_ ._row input[type="checkbox"],#_form_561_ ._row input[type="radio"]{margin:0 !important;vertical-align:middle !important}#_form_561_ ._row input[type="checkbox"]+span label{display:inline}#_form_561_ ._row span label{margin:0 !important;width:initial !important;vertical-align:middle !important}#_form_561_ ._form-image{max-width:100%;height:auto !important}#_form_561_ input[type="text"]{padding-left:10px;padding-right:10px;font-size:16px;line-height:1.3em}#_form_561_ input[type="radio"],#_form_561_ input[type="checkbox"]{display:inline-block;width:1.3em;height:1.3em;font-size:1em;margin:0 0.3em 0 0;vertical-align:baseline}#_form_561_ button[type="submit"]{padding:20px;font-size:1.5em}#_form_561_ ._inline-style{margin:20px 0 0 !important}#_form_561_ ._inline-style input[type="text"]{width:100%}}#_form_561_ .sms_consent_checkbox{position:relative;width:100%;display:flex;align-items:flex-start;padding:20px 0}#_form_561_ .sms_consent_checkbox input[type="checkbox"]{float:left;margin:5px 10px 10px 0}#_form_561_ .sms_consent_checkbox .sms_consent_message{display:inline;float:left;text-align:left;margin-bottom:10px;font-size:14px;color:#7D8799}#_form_561_ .sms_consent_checkbox .sms_consent_message.sms_consent_mini{width:90%}#_form_561_ .sms_consent_checkbox ._error._above{right:auto;bottom:0}#_form_561_ .sms_consent_checkbox ._error._above ._error-arrow{right:auto;left:5px}@media (min-width:320px) and (max-width:667px){#_form_561_ .sms_consent_checkbox ._error._above{top:-30px;left:0;bottom:auto}}#_form_561_ .field-required{color:#FF0000}#_form_561_{position:relative;text-align:left;margin:25px auto 0;padding:0;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;background:transparent !important;border:0;max-width:100%;-moz-border-radius:0px !important;-webkit-border-radius:0px !important;border-radius:0px !important;color:transparent}#_form_561_ ._show_be_error{min-width:100%}#_form_561_._inline-form,#_form_561_._inline-form ._form-content{font-family:sans-serif;font-size:14px;font-weight:400}#_form_561_._inline-form ._row span:not(.field-required),#_form_561_._inline-form ._row label{font-family:sans-serif;font-size:14px;font-weight:400;line-height:1.6em;color:#ffffff}#_form_561__inlineform input[type="text"],#_form_561__inlineform input[type="date"],#_form_561__inlineform input[type="tel"],#_form_561__inlineform select,#_form_561__inlineform textarea:not(.g-recaptcha-response){font-family:sans-serif;font-size:14px;font-weight:400;font-color:transparent;line-height:1.6em}#_form_561_._inline-form ._html-code,#_form_561_._inline-form .sms_consent_message,#_form_561_._inline-form ._form-thank-you{font-family:sans-serif;font-size:14px;font-weight:400;color:black}#_form_561_._inline-form ._form-label,#_form_561_._inline-form ._form-emailidentifier,#_form_561_._inline-form ._form-checkbox-option-label{font-family:sans-serif;font-size:14px;font-weight:700;line-height:1.6em;color:#ffffff}#_form_561_._inline-form ._submit{margin-top:12px;font-family:sans-serif;font-size:14px;font-weight:400}#_form_561_._inline-form ._html-code h1,#_form_561_._inline-form ._html-code h2,#_form_561_._inline-form ._html-code h3,#_form_561_._inline-form ._html-code h4,#_form_561_._inline-form ._html-code h5,#_form_561_._inline-form ._html-code h6,#_form_561_._inline-form ._form-title{margin-bottom:0;display:block}#_form_561_._inline-form ._form-branding{font-family:"IBM Plex Sans", Helvetica, sans-serif;font-size:13px;font-weight:100;font-style:normal;text-decoration:none}#_form_561_:before,#_form_561_:after{content:" ";display:table}#_form_561_:after{clear:both}#_form_561_._inline-style{width:auto;display:inline-block}#_form_561_._inline-style input[type="text"],#_form_561_._inline-style input[type="date"]{padding:10px 12px}#_form_561_._inline-style button._inline-style{position:relative;top:27px}#_form_561_._inline-style p{margin:0}#_form_561_._inline-style ._button-wrapper{position:relative;margin:16px 12.5px 0 20px}#_form_561_._inline-style ._button-wrapper:not(._clear){margin-left:0}#_form_561_ ._form-thank-you{position:relative;left:0;right:0;text-align:center;font-size:18px}#_form_561_ ._form-pc-confirmation ._submit{margin-top:16px}@media (min-width:320px) and (max-width:667px){#_form_561_._inline-form._inline-style ._inline-style._button-wrapper{margin-top:20px !important;margin-left:0 !important}}#_form_561_ .iti{width:100%}#_form_561_ .iti.iti--allow-dropdown.iti--separate-dial-code{width:100%}#_form_561_ .iti input{width:100%;border:rgba(255,255,255,0.15) 1px solid;border-radius:4px}#_form_561_ .iti--separate-dial-code .iti__selected-flag{background-color:#FFFFFF;border-radius:4px}#_form_561_ .iti--separate-dial-code .iti__selected-flag:hover{background-color:rgba(0, 0, 0, 0.05)}#_form_561_ .iti__country-list{border-radius:4px;margin-top:4px;min-width:460px}#_form_561_ .iti__country-list--dropup{margin-bottom:4px}#_form_561_ .phone-error-hidden{display:none}#_form_561_ .phone-error{color:#E40E49}#_form_561_ .phone-input-error{border:1px solid #E40E49 !important}#_form_561_._inline-form ._form-content ._form-list-subscriptions-field fieldset{margin:0;margin-bottom:1.1428571429em;border:none;padding:0}#_form_561_._inline-form ._form-content ._form-list-subscriptions-field fieldset:last-child{margin-bottom:0}#_form_561_._inline-form ._form-content ._form-list-subscriptions-field legend{margin-bottom:1.1428571429em}#_form_561_._inline-form ._form-content ._form-list-subscriptions-field label{display:flex;align-items:flex-start;justify-content:flex-start;margin-bottom:0.8571428571em}#_form_561_._inline-form ._form-content ._form-list-subscriptions-field label:last-child{margin-bottom:0}#_form_561_._inline-form ._form-content ._form-list-subscriptions-field input{margin:0;margin-right:8px}#_form_561_._inline-form ._form-content ._form-list-subscriptions-field ._form-checkbox-option-label{display:block;font-weight:400;margin-top:-4px}#_form_561_._inline-form ._form-content ._form-list-subscriptions-field ._form-checkbox-option-label-with-description{display:block;font-weight:700;margin-top:-4px}#_form_561_._inline-form ._form-content ._form-list-subscriptions-field ._form-checkbox-option-description{margin:0;font-size:0.8571428571em}#_form_561_._inline-form ._form-content ._form-list-subscriptions-field ._form-subscriptions-unsubscribe-all-description{line-height:normal;margin-top:-2px}
+#_form_561_{font-size:14px;line-height:1.6;font-family:arial,helvetica,sans-serif;margin:0;box-shadow:none}._form_hide{display:none;visibility:hidden}._form_show{display:block;visibility:visible}#_form_561_ input[type="text"],#_form_561_ input[type="tel"],#_form_561_ input[type="date"],#_form_561_ textarea{padding:12px;height:auto;border:#979797 1px solid;border-radius:4px;color:#000!important;font-size:14px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}#_form_561_ textarea{resize:none}#_form_561_ input::placeholder{color:#142341}#_form_561_ ._submit{cursor:pointer;font-family:arial,sans-serif;font-size:14px;text-align:center;background:#861627!important;border:0!important;-moz-border-radius:4px!important;-webkit-border-radius:4px!important;border-radius:4px!important;color:#ffffff!important;padding:10px!important}#_form_561_ ._submit:disabled{cursor:not-allowed;opacity:.4}#_form_561_ ._submit.processing{position:relative}#_form_561_ ._submit.processing::before{content:"";width:1em;height:1em;position:absolute;z-index:1;top:50%;left:50%;border:double 3px transparent;border-radius:50%;background-image:linear-gradient(#861627,#861627),conic-gradient(#861627,#ffffff);background-origin:border-box;background-clip:content-box,border-box;animation:1200ms ease 0s infinite normal none running _spin}#_form_561_ ._submit.processing::after{content:"";position:absolute;top:0;bottom:0;left:0;right:0}@keyframes _spin{0%{transform:translate(-50%,-50%) rotate(90deg)}100%{transform:translate(-50%,-50%) rotate(450deg)}}#_form_561_ ._form-body{font-size:14px;font-weight:400;color:black;margin-bottom:30px}#_form_561_ ._form-branding{color:#fff;font-size:10px;clear:both;text-align:left;margin-top:30px;font-weight:100}#_form_561_ .form-sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}#_form_561_ ._form-label,#_form_561_ ._form_element ._form-label{font-weight:bold;margin-bottom:5px;display:block}#_form_561_ ._form_element{position:relative;margin-bottom:10px;font-size:0;max-width:100%}#_form_561_ ._form_element *{font-size:14px}#_form_561_ ._form_element._clear{clear:both;width:100%;float:none}#_form_561_ ._form_element :is(textarea,select,input[type="text"],input[type="date"],input[type="phone"],input[type="email"]){background:white;color:#142341!important;border-top:1px solid #ccc;border-left:1px solid #ccc;border-right:1px solid #ccc;border-bottom:1px solid #ccc;border-radius:0}#_form_561_ ._form_element input[type="text"],#_form_561_ ._form_element input[type="date"],#_form_561_ ._form_element select,#_form_561_ ._form_element textarea:not(.g-recaptcha-response){display:block;width:100%;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;font-family:inherit}#_form_561_ ._field-wrapper{position:relative}#_form_561_ ._full_width{width:100%}#_form_561_ ._form_full_field{display:block;width:100%;margin-bottom:10px}#_form_561_ input[type="text"]._has_error,#_form_561_ textarea._has_error{border:#F37C7B 1px solid}#_form_561_ ._show_be_error{float:left}#_form_561_ ._error{display:block;position:absolute;font-size:14px;z-index:10000001}#_form_561_ ._error._above{padding-bottom:4px;bottom:39px;right:0}#_form_561_ ._error._below{padding-top:8px;top:100%;right:0}#_form_561_ ._error._above ._error-arrow{bottom:-4px;right:15px;border-left:8px solid transparent;border-right:8px solid transparent;border-top:8px solid #FFDDDD}#_form_561_ ._error._below ._error-arrow{top:0;right:15px;border-left:8px solid transparent;border-right:8px solid transparent;border-bottom:8px solid #FFDDDD}#_form_561_ ._error-inner{padding:12px 12px 12px 36px;background-color:#FFDDDD;background-image:url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8ZM9 3V9H7V3H9ZM9 13V11H7V13H9Z' fill='%23CA0000'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:12px center;font-size:14px;font-family:arial,sans-serif;font-weight:600;line-height:16px;color:#000;text-align:center;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;box-shadow:0 1px 4px rgba(31,33,41,.3)}#_form_561_ ._error-inner._form_error{margin-bottom:5px;text-align:left}#_form_561_ ._button-wrapper ._error-inner._form_error{position:static}#_form_561_ ._error-inner._no_arrow{margin-bottom:10px}#_form_561_ ._error-arrow{position:absolute;width:0;height:0}#_form_561_ ._form-thank-you{position:relative;left:0;right:0;text-align:center;font-size:18px}
 </style>
 
-<!-- Feminess CI Overrides for ActiveCampaign Form (must come AFTER AC styles) -->
+<!-- ── FEMINESS THEME OVERRIDES FOR AC FORM ── -->
 <style>
 #_form_561_ {
   background: transparent !important;
   border: none !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
   padding: 0 !important;
   margin: 0 !important;
-  max-width: 100% !important;
+  max-width: 420px !important;
   color: #fff !important;
+  box-shadow: none !important;
 }
-#_form_561_ ._form-content {
-  display: flex !important;
-  flex-direction: column !important;
-  gap: 8px !important;
-}
+#_form_561_ ._form-label { display: none !important; }
 #_form_561_ ._form_element {
-  margin-bottom: 0 !important;
-  max-width: 100% !important;
+  margin-bottom: 8px !important;
 }
-#_form_561_ ._form-label {
-  display: none !important;
-}
-#_form_561_ input[type="text"],
-#_form_561_ ._form_element input[type="text"] {
+#_form_561_ ._form_element :is(input[type="text"]) {
   background: rgba(255,255,255,0.07) !important;
-  border: 1px solid rgba(255,255,255,0.13) !important;
+  border-top:    1px solid rgba(255,255,255,0.13) !important;
+  border-left:   1px solid rgba(255,255,255,0.13) !important;
+  border-right:  1px solid rgba(255,255,255,0.13) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.13) !important;
   border-radius: 2px !important;
-  padding: 13px 16px !important;
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif !important;
-  font-size: 14px !important;
   color: #fff !important;
-  height: auto !important;
-  width: 100% !important;
-  box-sizing: border-box !important;
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif !important;
+  font-size: 15px !important;
+  padding: 14px 16px !important;
 }
-#_form_561_ input[type="text"]::placeholder {
-  color: rgba(255,255,255,0.30) !important;
-}
-#_form_561_ input[type="text"]:focus,
 #_form_561_ ._form_element input[type="text"]:focus {
-  border-color: #5ec6b3 !important;
+  border-top:    1px solid rgba(94,198,179,0.5) !important;
+  border-left:   1px solid rgba(94,198,179,0.5) !important;
+  border-right:  1px solid rgba(94,198,179,0.5) !important;
+  border-bottom: 1px solid rgba(94,198,179,0.5) !important;
   outline: none !important;
+  box-shadow: 0 0 0 3px rgba(94,198,179,0.08) !important;
 }
-#_form_561_ ._form_element :is(input[type="text"], input[type="email"]) {
-  color: #fff !important;
-  border-radius: 2px !important;
-  background: rgba(255,255,255,0.07) !important;
-  border: 1px solid rgba(255,255,255,0.13) !important;
-}
+#_form_561_ input::placeholder { color: rgba(255,255,255,0.38) !important; }
 #_form_561_ ._submit {
-  background: #c9174a !important;
+  background: #cf5a73 !important;
+  border: none !important;
+  border-radius: 2px !important;
   color: #fff !important;
   font-family: 'Avenir LT Pro', 'Inter', sans-serif !important;
-  font-size: 16px !important;
+  font-size: 11.5px !important;
   font-weight: 700 !important;
-  letter-spacing: 0.8px !important;
-  padding: 22px 36px !important;
-  border-radius: 2px !important;
-  border: none !important;
+  letter-spacing: 2.5px !important;
+  text-transform: uppercase !important;
+  padding: 18px 24px !important;
+  width: 100% !important;
   cursor: pointer !important;
-  width: 100% !important;
-  display: block !important;
-  box-shadow: 0 4px 22px rgba(201,23,74,0.38) !important;
-  margin-top: 4px !important;
+  transition: background 0.2s, box-shadow 0.2s !important;
+  margin-top: 6px !important;
+  box-shadow: 0 4px 20px rgba(207,90,115,0.35) !important;
 }
-#_form_561_ ._submit:hover {
-  background: #a8103d !important;
-  box-shadow: 0 8px 30px rgba(201,23,74,0.50) !important;
+#_form_561_ ._submit:hover:not(:disabled) {
+  background: #b5405a !important;
+  box-shadow: 0 8px 30px rgba(207,90,115,0.55) !important;
 }
-#_form_561_ ._button-wrapper {
-  margin: 0 !important;
-  float: none !important;
-  width: 100% !important;
-}
-#_form_561_ ._form-branding {
-  display: none !important;
-}
+#_form_561_ ._form-branding,
+#_form_561_ ._form-branding * { display: none !important; }
 #_form_561_ ._form-thank-you {
   color: #5ec6b3 !important;
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif !important;
-  font-size: 16px !important;
-  font-weight: 400 !important;
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-size: 22px !important;
   text-align: center !important;
   padding: 24px 0 !important;
-  line-height: 1.6 !important;
+  line-height: 1.4 !important;
 }
-#_form_561_ ._clear-element {
-  display: none !important;
+#_form_561_ ._error-inner {
+  background-color: rgba(207,90,115,0.18) !important;
+  color: #fff !important;
+  border-radius: 2px !important;
+}
+
+/* ── Alt-Formulare (mid-CTA & Popup) ── */
+.ac-form-alt {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 420px;
+  margin: 0 auto;
+}
+.ac-form-alt input[type="text"],
+.ac-form-alt input[type="email"] {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.13);
+  border-radius: 2px;
+  color: #fff;
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 15px;
+  padding: 14px 16px;
+  width: 100%;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.ac-form-alt input:focus {
+  border-color: rgba(94,198,179,0.5);
+  box-shadow: 0 0 0 3px rgba(94,198,179,0.08);
+}
+.ac-form-alt input::placeholder { color: rgba(255,255,255,0.38); }
+.ac-form-alt .ac-submit {
+  background: #cf5a73;
+  border: none;
+  border-radius: 2px;
+  color: #fff;
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  padding: 18px 24px;
+  width: 100%;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  margin-top: 6px;
+  box-shadow: 0 4px 20px rgba(207,90,115,0.35);
+}
+.ac-form-alt .ac-submit:hover { background: #b5405a; box-shadow: 0 8px 30px rgba(207,90,115,0.55); }
+.ac-form-alt-success {
+  color: #5ec6b3;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 22px;
+  text-align: center;
+  padding: 24px 0;
+  line-height: 1.4;
 }
 </style>
+
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NQMQT7QH"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
 
-<!-- ── TOPBAR: DRINGLICHKEIT ── -->
+<!-- ── TOPBAR ── -->
 <div class="topbar">
-  <p><strong>Kostenfreier 3-Tage-Workshop</strong> &nbsp;·&nbsp; 11.–13. Mai 2026 &nbsp;·&nbsp; <strong><a href="#anmeldung" style="color:#fff;text-decoration:underline;">Jetzt kostenfrei anmelden</a></strong></p>
+  <p><strong>Kostenfreies LIVE-Event</strong> &nbsp;·&nbsp; 11.–13. Mai, jeweils 11–13 Uhr &nbsp;·&nbsp; <strong>Teilnehmerzahl begrenzt</strong></p>
 </div>
 
-<!-- ── MINI COUNTDOWN ── -->
+<!-- ── STICKY COUNTDOWN ── -->
 <div class="topbar-countdown">
   <span class="topbar-countdown-label">Workshop startet in</span>
   <div class="topbar-countdown-units">
@@ -1557,292 +1984,388 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 
 
-<!-- ════════════════════════════════════════════
-     HERO – Split: Text links · Bild rechts
-════════════════════════════════════════════ -->
+<!-- ════════════════════════
+     HERO
+════════════════════════ -->
 <section class="hero" id="anmeldung">
+  <div class="hero-inner">
 
-  <!-- TEXT LINKS -->
-  <div class="hero-content">
-    <div class="hero-kicker">3-Tage-Workshop &nbsp;·&nbsp; 11.–13. Mai 2026</div>
+    <!-- TEXT LINKS -->
+    <div class="hero-content">
 
-    <div class="hero-headline">
-      <span class="hero-h1-line">Money Identity</span>
-      <span class="hero-h1-accent">Reset</span>
+      <div class="hero-exclusive-label">
+        ✦ <span>Exklusives LIVE-Event</span> &nbsp;für weibliche Coaches, die mehr Umsatz wollen, ohne sich zu verausgaben.
+      </div>
+
+      <div class="hero-headline">
+        <span class="hero-h1-line">BREATHE &amp;</span>
+        <span class="hero-h1-accent">build</span>
+      </div>
+
+      <p class="hero-sub">Für Umsetzerinnen, die bei 5–10k Monatsumsatz im Hustle-Rad feststecken: Wie du dein Business skalierst, ohne dein Nervensystem zu crashen.</p>
+
+      <div class="hero-meta">
+        <span class="hero-meta-pill">
+          <svg class="pill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          11.–13. Mai 2026
+        </span>
+        <span class="hero-meta-pill">
+          <svg class="pill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          jeweils 11–13 Uhr
+        </span>
+        <span class="hero-meta-pill">
+          <svg class="pill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 10l4.553-2.277A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M3 8a2 2 0 012-2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V8z"/></svg>
+          Live &amp; Online
+        </span>
+        <span class="hero-meta-pill">
+          <svg class="pill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 010-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 000-5C13 2 12 7 12 7z"/></svg>
+          100% Kostenfrei
+        </span>
+      </div>
+
+      <form method="POST" action="https://marina232.activehosted.com/proc.php" id="_form_561_" class="_form _form_561 _inline-form _dark" novalidate data-styles-version="5">
+        <input type="hidden" name="u" value="561">
+        <input type="hidden" name="f" value="561">
+        <input type="hidden" name="s" value="">
+        <input type="hidden" name="c" value="0">
+        <input type="hidden" name="m" value="0">
+        <input type="hidden" name="act" value="sub">
+        <input type="hidden" name="v" value="2">
+        <input type="hidden" name="or" value="ca8146fc-dd16-4315-936c-5ba7ba0dab59">
+        <div class="_form-content">
+          <div class="_form_element _full_width">
+            <div class="_field-wrapper">
+              <input type="text" id="firstname" name="firstname" placeholder="Dein Vorname" required>
+            </div>
+          </div>
+          <div class="_form_element _full_width">
+            <div class="_field-wrapper">
+              <input type="text" id="lastname" name="lastname" placeholder="Dein Nachname" required>
+            </div>
+          </div>
+          <div class="_form_element _full_width">
+            <div class="_field-wrapper">
+              <input type="text" id="email" name="email" placeholder="Deine E-Mail-Adresse" required>
+            </div>
+          </div>
+          <input type="hidden" name="field[220]" value="">
+          <input type="hidden" name="field[219]" value="">
+          <input type="hidden" name="field[218]" value="">
+          <input type="hidden" name="field[217]" value="">
+          <input type="hidden" name="field[221]" value="">
+          <div class="_button-wrapper _full_width">
+            <button id="_form_561_submit" class="_submit" type="submit">JETZT FÜR 0€ ANMELDEN &rarr;</button>
+          </div>
+          <div class="_clear-element"></div>
+        </div>
+        <div class="_form-thank-you" style="display:none;"></div>
+        <div class="_form-branding"></div>
+      </form>
+      <p style="font-family:'Avenir LT Pro','Inter',sans-serif;font-size:13px;color:rgba(255,255,255,0.5);margin-top:10px;line-height:1.5;">Die Teilnahme zu Breathe &amp; Build vom 11. bis 13.05 ist 100% kostenlos.</p>
     </div>
 
-    <p class="hero-headline-2">Erschaffe deine neue Money Identity, die im vollen Alignment mehr Geld verlangt, verdient und für sich arbeiten lässt, damit dein Business, ohne Dauer-Hustle, expandiert.</p>
-
-    <p class="hero-sub">Der mehrtägige Workshop für selbstständige Frauen, die bereit sind, ihr Business auf das nächste Level zu bringen – mit dem richtigen Shift, nicht mit noch mehr Arbeit.</p>
-
-    <div class="hero-meta">
-      <span class="hero-meta-pill">
-        <svg class="pill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-        11.–13. Mai 2026
-      </span>
-      <span class="hero-meta-pill">
-        <svg class="pill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        3 intensive Tage
-      </span>
-      <span class="hero-meta-pill">
-        <svg class="pill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 10l4.553-2.277A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M3 8a2 2 0 012-2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V8z"/></svg>
-        Live &amp; Online
-      </span>
-      <span class="hero-meta-pill">
-        <svg class="pill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 010-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 000-5C13 2 12 7 12 7z"/></svg>
-        Kostenfrei
-      </span>
+    <!-- BILD RECHTS -->
+    <div class="hero-image">
+      <img src="./Bilder/Marina_MAI2314266 Kopie.jpg" alt="Marina Henze – Feminess">
     </div>
 
-<form method="POST" action="https://marina232.activehosted.com/proc.php" id="_form_561_" class="_form _form_561 _inline-form  _dark" novalidate data-styles-version="5">
-  <input type="hidden" name="u" value="561" />
-  <input type="hidden" name="f" value="561" />
-  <input type="hidden" name="s" />
-  <input type="hidden" name="c" value="0" />
-  <input type="hidden" name="m" value="0" />
-  <input type="hidden" name="act" value="sub" />
-  <input type="hidden" name="v" value="2" />
-  <input type="hidden" name="or" value="b5506d79-4d4a-435f-9209-241f883cca4e" />
-  <div class="_form-content">
-    <div class="_form_element _x85333295 _full_width ">
-      <label for="firstname" class="_form-label">Vorname<span class="field-required">*</span></label>
-      <div class="_field-wrapper">
-        <input type="text" id="firstname" name="firstname" placeholder="Tippen Sie Ihren Vornamen ein." required/>
-      </div>
-    </div>
-    <div class="_form_element _x75546339 _full_width ">
-      <label for="lastname" class="_form-label">Nachname<span class="field-required">*</span></label>
-      <div class="_field-wrapper">
-        <input type="text" id="lastname" name="lastname" placeholder="Tippen Sie Ihren Nachnamen ein." required/>
-      </div>
-    </div>
-    <div class="_form_element _field_email _full_width ">
-      <label for="email" class="_form-label">E-Mail<span class="field-required">*</span></label>
-      <div class="_field-wrapper">
-        <input type="text" id="email" name="email" placeholder="Tippen Sie Ihre E-Mail ein." required/>
-      </div>
-    </div>
-    <div class="_form_element _x40740069 _full_width ">
-      <label for="field[220]" class="_form-label"></label>
-      <div class="_field-wrapper">
-        <input type="hidden" id="field[220]" name="field[220]" value="" placeholder="" />
-      </div>
-    </div>
-    <div class="_form_element _x94257511 _full_width ">
-      <label for="field[219]" class="_form-label"></label>
-      <div class="_field-wrapper">
-        <input type="hidden" id="field[219]" name="field[219]" value="" placeholder="" />
-      </div>
-    </div>
-    <div class="_form_element _x54506385 _full_width ">
-      <label for="field[218]" class="_form-label"></label>
-      <div class="_field-wrapper">
-        <input type="hidden" id="field[218]" name="field[218]" value="" placeholder="" />
-      </div>
-    </div>
-    <div class="_form_element _x71144138 _full_width ">
-      <label for="field[217]" class="_form-label"></label>
-      <div class="_field-wrapper">
-        <input type="hidden" id="field[217]" name="field[217]" value="" placeholder="" />
-      </div>
-    </div>
-    <div class="_form_element _x34666540 _full_width ">
-      <label for="field[221]" class="_form-label"></label>
-      <div class="_field-wrapper">
-        <input type="hidden" id="field[221]" name="field[221]" value="" placeholder="" />
-      </div>
-    </div>
-    <div class="_button-wrapper _full_width">
-      <button id="_form_561_submit" class="_submit" type="submit">Absenden</button>
-    </div>
-    <div class="_clear-element"></div>
   </div>
-  <div class="_form-thank-you" style="display:none;"></div>
-  <div class="_form-branding">
-    <div class="_marketing-by">Marketing von</div>
-    <a href="https://www.activecampaign.com/?utm_medium=referral&utm_campaign=acforms" class="_logo">
-      <span class="form-sr-only">ActiveCampaign</span>
-    </a>
-  </div>
-</form>
-    <p class="hero-cta-note">Kostenfrei &nbsp;·&nbsp; Kein Spam</p>
-  </div>
+</section>
 
-  <!-- BILD RECHTS -->
-  <div class="hero-image">
-    <img src="./Bilder/Marina_MAI2314477 Kopie.jpg" alt="Marina Henze">
-  </div>
 
+<!-- ── DETAILS KARTEN ── -->
+<section class="section-details">
+  <div class="container">
+    <div class="section-kicker">Alle Infos auf einen Blick</div>
+    <div class="details-grid">
+
+      <div class="details-card">
+        <span class="details-card-icon">📅</span>
+        <div class="details-card-label">Veranstaltungsdaten</div>
+        <div class="details-card-value">11.–13. Mai 2026</div>
+        <p class="details-card-note">Drei Live-Sessions, die du dir blockieren solltest. Kein Aufwand, maximale Wirkung.</p>
+      </div>
+
+      <div class="details-card">
+        <span class="details-card-icon">🕘</span>
+        <div class="details-card-label">Startzeiten</div>
+        <div class="details-card-value">jeweils 11–13 Uhr</div>
+        <p class="details-card-note">Zwei intensive Stunden pro Tag. Kein Fulltime-Commitment – aber volle Wirkung.</p>
+      </div>
+
+      <div class="details-card">
+        <span class="details-card-icon">✦</span>
+        <div class="details-card-label">Das Besondere</div>
+        <div class="details-card-value">Live. Interaktiv.<br>Ohne Aufzeichnung.</div>
+        <p class="details-card-note">Die Tiefe entsteht nur durch echte Präsenz. Kein passives Zuschauen – du bist aktiv dabei. Deshalb ist dieser Raum so wirkungsvoll.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ── INTRO BAND ── -->
+<section class="section-intro-band">
+  <div class="container">
+    <div class="intro-band-label">Exklusives LIVE-Event für weibliche Coaches</div>
+    <h2 class="intro-band-headline">In BREATHE &amp; BUILD erfährst du, wie du ein <em>skalierbares Business</em> aufbaust, ohne <em>deine Energie</em> oder deine <em>Authentizität zu opfern.</em></h2>
+    <p class="intro-band-sub">Vergiss „mehr posten", „härter arbeiten" und „immer online sein". Diese Strategien verbrennen dich, ohne echtes Wachstum zu bringen. In diesem Workshop lernst du, wie du ein skalierbares Business aufbaust, das zu deinem Leben und Nervensystem passt, deine Energie schützt und trotzdem Clients und Cash anzieht. Keine Copy-Paste-Lösungen. Nur das, was wirklich zu DIR passt.</p>
+    <div style="margin-top: 40px;">
+      <a href="#anmeldung" class="cta-btn cta-btn-inline">JETZT FÜR 0€ ANMELDEN &rarr;</a>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- ── FAQ-STYLE BENEFITS ── -->
+<section class="section-benefit-faq">
+  <div class="container">
+    <div class="section-kicker">Was dich erwartet</div>
+    <h2 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(26px,3.8vw,40px);font-weight:500;color:var(--black);line-height:1.15;margin-bottom:14px;">Diese Inhalte erwarten dich im BREATHE &amp; BUILD Workshop.</h2>
+    <p style="font-family:'Avenir LT Pro','Inter',sans-serif;font-size:16px;color:var(--warm-gray);font-style:italic;margin-bottom:0;line-height:1.65;">Drei Methoden. Ein Ziel: mehr Umsatz, weniger Hustle.</p>
+    <div class="benefit-faq-grid" style="margin-top:40px;">
+
+      <div class="benefit-faq-card">
+        <div class="benefit-faq-q">NeuroScaling-Strategien</div>
+        <div class="benefit-faq-a">Wachstumsstrategien, die zu deinem Nervensystem passen.</div>
+        <p class="benefit-faq-detail">Damit du endlich aufhörst, dich für dein Business zu verausgaben, und stattdessen mit mehr Leichtigkeit skalierst.</p>
+      </div>
+
+      <div class="benefit-faq-card">
+        <div class="benefit-faq-q">Identity Blueprint Analyse</div>
+        <div class="benefit-faq-a">Die exakte Analyse für Nische, Zielgruppe, Angebot und Marketing-Strategie.</div>
+        <p class="benefit-faq-detail">Um herauszufinden, was wirklich zu dir passt – damit du nie wieder das Gefühl hast, dich verbiegen zu müssen.</p>
+      </div>
+
+      <div class="benefit-faq-card">
+        <div class="benefit-faq-q">Skalieren ohne Ausbrennen</div>
+        <div class="benefit-faq-a">Ein Business-Modell, das nicht von deiner ständigen Präsenz abhängt.</div>
+        <p class="benefit-faq-detail">Damit du endlich wieder Zeit, Energie und Freude an deinem Business hast – ohne Umsatzeinbußen befürchten zu müssen.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ── KOSTENLOS-BLOCK ── -->
+<section class="section-kostenlos">
+  <div class="container mid-cta-inner">
+    <div class="kostenlos-badge">100% Kostenfrei</div>
+    <h2 class="kostenlos-headline">Dein Platz beim <em>BREATHE &amp; BUILD</em><br>Workshop – vollständig kostenfrei.</h2>
+    <p class="kostenlos-sub">Kein Haken. Keine Kreditkarte. Nur du, 3 Sessions und ein echter Shift.</p>
+    <div class="kostenlos-meta-row">
+      <div class="kostenlos-meta-item">
+        <div class="kostenlos-meta-label">Datum</div>
+        <div class="kostenlos-meta-value">11.–13. Mai 2026</div>
+      </div>
+      <div style="width:1px;height:40px;background:rgba(255,255,255,0.12);flex-shrink:0;"></div>
+      <div class="kostenlos-meta-item">
+        <div class="kostenlos-meta-label">Uhrzeit</div>
+        <div class="kostenlos-meta-value">jeweils 11–13 Uhr</div>
+      </div>
+      <div style="width:1px;height:40px;background:rgba(255,255,255,0.12);flex-shrink:0;"></div>
+      <div class="kostenlos-meta-item">
+        <div class="kostenlos-meta-label">Format</div>
+        <div class="kostenlos-meta-value">Live &amp; Online</div>
+      </div>
+    </div>
+    <a href="#anmeldung" class="cta-btn cta-btn-inline">JETZT FÜR 0€ ANMELDEN &rarr;</a>
+  </div>
 </section>
 
 
 <!-- ── BEKANNT AUS ── -->
-<section class="section-trust">
-  <div class="container">
-    <div class="section-kicker">Bekannt aus</div>
-    <div class="trust-logos">
-      <div class="trust-logo-item">[Medium / Podcast 1]</div>
-      <div class="trust-logo-item">[Medium / Podcast 2]</div>
-      <div class="trust-logo-item">[Medium / Podcast 3]</div>
-      <div class="trust-logo-item">[Medium / Podcast 4]</div>
-      <div class="trust-logo-item">[Medium / Podcast 5]</div>
+<section class="section-bekannt">
+  <div class="bekannt-label">Bekannt aus:</div>
+  <div class="bekannt-track-wrap">
+    <div class="bekannt-track">
+      <!-- Logos (doppelt für nahtlosen Loop) -->
+      <img src="./Logos/Cosmopolitan-Logo-neue-Masse.png" alt="Cosmopolitan">
+      <img src="./Logos/Focus-Money-Logo-neue-masse.png" alt="Focus Money">
+      <img src="./Logos/Huffpost-Logo-neue-Masse.png" alt="HuffPost">
+      <img src="./Logos/Stern-Logo.png" alt="Stern">
+      <img src="./Logos/Wirschafwoche.png" alt="Wirtschaftswoche">
+      <img src="./Logos/handelsblatt-logo-1.png" alt="Handelsblatt">
+      <!-- Duplikat für Loop -->
+      <img src="./Logos/Cosmopolitan-Logo-neue-Masse.png" alt="Cosmopolitan">
+      <img src="./Logos/Focus-Money-Logo-neue-masse.png" alt="Focus Money">
+      <img src="./Logos/Huffpost-Logo-neue-Masse.png" alt="HuffPost">
+      <img src="./Logos/Stern-Logo.png" alt="Stern">
+      <img src="./Logos/Wirschafwoche.png" alt="Wirtschaftswoche">
+      <img src="./Logos/handelsblatt-logo-1.png" alt="Handelsblatt">
     </div>
   </div>
 </section>
 
 
-<!-- ── PROBLEM-SECTION ── -->
-<section class="section-problem">
+
+
+<!-- ── WIE HILFT DIR DER WORKSHOP ── -->
+<section class="section-wie">
   <div class="container">
-    <div class="section-kicker">Kennst du das?</div>
-    <h2 class="section-h2">Du gibst alles.<br>Und kommst trotzdem <em>nicht weiter.</em></h2>
-    <p class="section-intro">Du arbeitest, du investierst, du probierst – und findest dich Monat für Monat auf demselben Umsatz-Level wieder. Das hat einen konkreten Grund. Und der liegt tiefer als deine Strategie.</p>
+    <div class="section-kicker">Wie er dir hilft</div>
+    <h2 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(26px,3.8vw,40px);font-weight:500;color:var(--black);line-height:1.15;margin-bottom:40px;">Wie hilft dir BREATHE &amp; BUILD –<br>und <span style="font-style:italic;color:var(--rose);">was verändert sich wirklich?</span></h2>
 
-    <ul class="problem-list">
-      <li class="problem-item">
-        <span class="problem-item-icon">↺</span>
-        <div>
-          <p><strong>Du arbeitest mehr – verdienst aber nicht mehr.</strong> Egal ob neues Angebot, mehr Content oder mehr Sichtbarkeit: Der Umsatz bleibt, wo er war. Monat für Monat.</p>
-        </div>
-      </li>
-      <li class="problem-item">
-        <span class="problem-item-icon">↕</span>
-        <div>
-          <p><strong>Dein Umsatz schwankt stark – ohne erkennbaren Grund.</strong> Ein guter Monat, zwei schwache. Verlässliche Planung fühlt sich unmöglich an.</p>
-        </div>
-      </li>
-      <li class="problem-item">
-        <span class="problem-item-icon">↓</span>
-        <div>
-          <p><strong>Du nennst deinen Preis – und zögerst.</strong> Innerlich weißt du, du könntest mehr verlangen. Aber etwas hält dich davon ab. Jedes Mal.</p>
-        </div>
-      </li>
-      <li class="problem-item">
-        <span class="problem-item-icon">✕</span>
-        <div>
-          <p><strong>Neue Strategien bringen nicht das erhoffte Level.</strong> Du probierst, optimierst, startest neu. Und landest wieder da, wo du angefangen hast.</p>
-        </div>
-      </li>
-    </ul>
+    <!-- Fließtext -->
+    <div class="wie-fliesstext">
+      <p>Du hast ein funktionierendes Business und Kunden. Aber du fühlst dich wie ein Hamster im Rad. Social Media frisst deine Energie, dein Kalender ist voll, aber dein Konto stagniert. Und du fragst dich: „Wie lange halte ich das noch durch?"</p>
+      <p>Dieser Workshop ist anders. Kein Zwang zu „mehr Sichtbarkeit". Kein Druck, dich zu verbiegen, damit du in die Marketing-Welt passt.</p>
+      <p>Sondern ein 6-stündiger Deep Dive in eine Methode, die dir zeigt, wie du ein skalierbares Business aufbaust, das zu dir passt – emotional, strategisch und finanziell.</p>
+      <p>Du bekommst klare Antworten auf die Fragen: Welches Angebot passt wirklich zu mir? Wie verkaufe ich, ohne mich zu verkaufen? Wie skaliere ich, ohne auszubrennen?</p>
+      <p>Du gehst mit einem Blueprint raus, der dir zeigt, wie du dein Business so aufbaust, dass es nicht deine Energie frisst, sondern dir Kraft gibt. Das funktioniert, weil wir nicht nur Strategie besprechen, sondern dein Nervensystem mit einbeziehen. Denn nachhaltiger Erfolg entsteht nur, wenn beides stimmt: die Strategie UND deine innere Ausrichtung.</p>
+    </div>
 
-    <p class="problem-statement">
-      Das ist keine Frage von Fleiß oder Talent.<br>
-      Das ist eine Frage von Mustern – und genau die lösen wir in diesen 3 Tagen.
-    </p>
-  </div>
-</section>
+    <!-- Vermeiden-Box -->
+    <div class="wie-vermeiden-box">
+      <div class="wie-pain-title">Unsere Clients vermeiden es …</div>
+      <ul class="wie-pain-list">
+        <li>sich permanent auf Social Media zu zeigen, nur um „sichtbar" zu bleiben</li>
+        <li>ihre Preise zu erhöhen, ohne wirklich dahinterzustehen</li>
+        <li>ständig zu arbeiten, ohne dass mehr Umsatz reinkommt</li>
+        <li>sich ständig mit anderen zu vergleichen und zu denken: „Die ist schon viel weiter als ich"</li>
+      </ul>
+    </div>
 
-
-<!-- ── WAS SICH VERÄNDERT ── -->
-<section class="section-transformation">
-  <div class="container">
-    <div class="section-kicker">Was sich verändert</div>
-    <h2 class="section-h2">Nach diesen 3 Tagen bist du<br><em>nicht mehr dieselbe.</em></h2>
-    <p class="section-intro">Kein Wissensmüll. Keine Theorie-Stapel. Nur das, was wirklich verändert, wie du dein Business führst – und dich selbst darin siehst.</p>
-
-    <div class="transformation-list">
-      <div class="transformation-item">
-        <span class="transformation-check">✓</span>
-        <p><strong>Du weißt, was dich aufhält – und kannst es loslassen.</strong> Du hast das Muster, das dich unbewusst auf demselben Level hält, vollständig durchleuchtet und weißt, wie du es auflöst.</p>
-      </div>
-      <div class="transformation-item">
-        <span class="transformation-check">✓</span>
-        <p><strong>Du nennst deinen Preis – ohne zu zögern.</strong> Du hast dein Preissystem neu ausgerichtet und kannst deinen Wert klar benennen und vertreten. Ohne Entschuldigung.</p>
-      </div>
-      <div class="transformation-item">
-        <span class="transformation-check">✓</span>
-        <p><strong>Du hast deinen vollständigen nächsten Business-Schritt schriftlich vor dir.</strong> Nicht als vage Idee – als konkreten Plan, den du direkt nach dem Workshop umsetzen kannst.</p>
-      </div>
-      <div class="transformation-item">
-        <span class="transformation-check">✓</span>
-        <p><strong>Du bist Teil einer Gemeinschaft gleichgesinnter Frauen.</strong> Menschen, die auf demselben Weg sind – und die nach diesen 3 Tagen dein Netzwerk sind.</p>
-      </div>
-      <div class="transformation-item">
-        <span class="transformation-check">✓</span>
-        <p><strong>Du hast den Shift vollzogen, der wirklich zählt.</strong> Nicht durch eine neue Strategie – sondern durch die innere Klarheit, die alle äußeren Strategien erst wirksam macht.</p>
-      </div>
+    <!-- Grüner Kasten -->
+    <div class="wie-freiheit-box">
+      Stattdessen bauen sie ein Business auf, das sich nach Freiheit anfühlt – persönlich, emotional und finanziell.
     </div>
   </div>
 </section>
 
 
-<!-- ── ANCHOR CTA ── -->
+<!-- ── ANCHOR CTA (nach "Wie er dir hilft") ── -->
 <div class="section-anchor-cta">
   <div class="container">
-    <a href="#anmeldung" class="cta-btn-anchor">Meinen Platz sichern &rarr;</a>
-    <p class="anchor-cta-note">11.–13. Mai 2026 &nbsp;·&nbsp; Kostenfrei</p>
+    <a href="#anmeldung" class="cta-btn cta-btn-inline">JETZT FÜR 0€ ANMELDEN &rarr;</a>
+    <p class="anchor-cta-note">11.–13. Mai 2026 &nbsp;·&nbsp; jeweils 11–13 Uhr &nbsp;·&nbsp; Kostenfrei</p>
   </div>
 </div>
 
 
-<!-- ── PROGRAMM: TAG FÜR TAG ── -->
-<section class="section-programm">
+<!-- ── AGENDA ── -->
+<section class="section-agenda">
   <div class="container">
     <div class="section-kicker">Das Programm</div>
-    <h2 class="section-h2">3 Tage. 3 Shifts.<br><em>1 neues Level.</em></h2>
-    <p class="section-intro">Jeder Tag hat ein klares Thema, eine klare Tiefe – und ein konkretes Ergebnis, das du mit nach Hause nimmst.</p>
+    <h2 class="agenda-section-h2">3 Sessions. 3 Shifts.<br><em>1 skalierbares Business.</em></h2>
+    <p class="agenda-intro">Jede Session hat ein klares Thema, eine klare Tiefe – und ein konkretes Ergebnis, das du direkt umsetzen kannst.</p>
 
-    <div class="programm-list">
+    <div class="agenda-list">
 
-      <div class="programm-tag">
-        <div class="programm-tag-label">
-          <span class="programm-tag-num">01</span>
-          <span class="programm-tag-word">Tag</span>
+      <div class="agenda-tag">
+        <div class="agenda-tag-label">
+          <span class="agenda-tag-num">01</span>
+          <span class="agenda-tag-word">Tag</span>
+          <span class="agenda-tag-date">11. Mai</span>
         </div>
-        <div class="programm-tag-content">
-          <div class="programm-subtitle">Positioning-Tag</div>
-          <h3>Dein Wert. Dein Warum. Deine Positionierung.</h3>
-          <p>Wir klären, wofür du wirklich stehst – und warum dein aktuelles Angebot noch nicht das widerspiegelt. Du bearbeitest die Muster, die dich davon abhalten, deinen Wert voll zu beanspruchen, und richtest deine Positionierung so aus, dass sie magnetisch wirkt. Nicht laut. Klar.</p>
-          <div class="programm-ergebnis">
-            <span class="programm-ergebnis-label">Ergebnis</span>
-            <p>Du verlässt Tag 1 mit einer glasklaren Positionierung – schriftlich, in deinen eigenen Worten – und weißt genau, wen du ansprechen willst und warum.</p>
+        <div class="agenda-tag-content">
+          <div class="agenda-subtitle">Clients · Positionierung · Angebot</div>
+          <h3>Wen du anziehst – und was du anbietest.</h3>
+          <p>Du lernst, warum du mit den falschen Kunden arbeitest, die dich auslaugen, und wie du deine echten Traumkunden magnetisch anziehst. Du entwickelst eine klare, unverwechselbare Positionierung und kreierst ein unwiderstehliches Angebot, das Kunden sofort Ja sagen lässt.</p>
+          <div class="agenda-themen">
+            <div class="agenda-thema"><strong>Secret of Soulclients</strong> → Wen du wirklich bedienen willst – und wen du endlich loslassen darfst.</div>
+            <div class="agenda-thema"><strong>Power of Positioning</strong> → Eine Positionierung, die Kunden sofort verstehen und kaufen lässt.</div>
+            <div class="agenda-thema"><strong>Art of Offer</strong> → Ein Angebot, das emotional trifft und verkauft – ohne Druck.</div>
+          </div>
+          <div class="agenda-ergebnis">
+            <span class="agenda-ergebnis-label">Ergebnis</span>
+            <p>Du gehst mit einer klaren Nische, einer unverwechselbaren Positionierung und einem Angebot raus, das deine echten Traumkunden sofort anspricht.</p>
           </div>
         </div>
       </div>
 
-      <div class="programm-tag">
-        <div class="programm-tag-label">
-          <span class="programm-tag-num">02</span>
-          <span class="programm-tag-word">Tag</span>
+      <div class="agenda-tag">
+        <div class="agenda-tag-label">
+          <span class="agenda-tag-num">02</span>
+          <span class="agenda-tag-word">Tag</span>
+          <span class="agenda-tag-date">12. Mai</span>
         </div>
-        <div class="programm-tag-content">
-          <div class="programm-subtitle">Money Mindset & Preis-Tag</div>
-          <h3>Aufhören, sich unter Wert zu verkaufen.</h3>
-          <p>Der tiefste Tag. Wir gehen direkt in das, was dich beim Preis nennen blockiert – die inneren Programme, die echten Glaubenssätze, die verborgenen Muster. Du arbeitest nicht nur daran zu verstehen, was dich aufhält. Du löst es. Wir entwickeln gemeinsam dein neues Preissystem – mit dem du dich nicht mehr rechtfertigen musst.</p>
-          <div class="programm-ergebnis">
-            <span class="programm-ergebnis-label">Ergebnis</span>
-            <p>Du verlässt Tag 2 mit einem neuen Preisrahmen für dein Angebot – und der inneren Sicherheit, ihn zu vertreten. Ohne Zögern. Ohne Entschuldigung.</p>
+        <div class="agenda-tag-content">
+          <div class="agenda-subtitle">Marketing · Sales</div>
+          <h3>Wie du sichtbar wirst – und verkaufst, ohne dich zu verkaufen.</h3>
+          <p>Du lernst, warum du viel postest, aber zu wenig Resonanz bekommst – und wie du dein Marketing so ausrichtest, dass du nur noch Menschen ansprichst, die bereits innerlich bereit sind, bei dir zu kaufen. Du entwickelst einen Sales-Prozess, der sich nach echtem Helfen anfühlt, nicht nach Überreden.</p>
+          <div class="agenda-themen">
+            <div class="agenda-thema"><strong>Mastery of Marketing</strong> → Marketing, das nur noch kaufbereite Menschen anspricht.</div>
+            <div class="agenda-thema"><strong>Secret of Sales</strong> → Ein Sales-Prozess, der zu dir passt – und trotzdem konvertiert.</div>
+          </div>
+          <div class="agenda-ergebnis">
+            <span class="agenda-ergebnis-label">Ergebnis</span>
+            <p>Du gehst mit einem Marketing-Ansatz und einem Sales-Prozess raus, der zu dir passt und trotzdem konvertiert.</p>
           </div>
         </div>
       </div>
 
-      <div class="programm-tag">
-        <div class="programm-tag-label">
-          <span class="programm-tag-num">03</span>
-          <span class="programm-tag-word">Tag</span>
+      <div class="agenda-tag">
+        <div class="agenda-tag-label">
+          <span class="agenda-tag-num">03</span>
+          <span class="agenda-tag-word">Tag</span>
+          <span class="agenda-tag-date">13. Mai</span>
         </div>
-        <div class="programm-tag-content">
-          <div class="programm-subtitle">Strategie & Umsetzungs-Tag</div>
-          <h3>Dein nächster Business-Schritt. Konkret.</h3>
-          <p>Heute wird alles, was du in den ersten zwei Tagen erkannt und verändert hast, in einen konkreten Plan übersetzt. Kein vager Aktionsplan, kein Wunschdenken – sondern ein klarer, realistischer nächster Schritt, den du direkt nach dem Workshop umsetzen kannst. Wir schließen mit einem gemeinsamen Commitment-Ritual, das dich in deiner neuen Ausrichtung verankert.</p>
-          <div class="programm-ergebnis">
-            <span class="programm-ergebnis-label">Ergebnis</span>
-            <p>Du verlässt Tag 3 mit deinem vollständigen nächsten Schritt – schriftlich und klar – und dem Netzwerk einer Gruppe von Frauen, die auf demselben Weg sind.</p>
+        <div class="agenda-tag-content">
+          <div class="agenda-subtitle">Skalierung · Systeme · Freiheit</div>
+          <h3>Wie dein Business ohne dich läuft.</h3>
+          <p>Du lernst, warum dein Business nicht ohne dich läuft – und wie du ein System aufbaust, das automatisiert Kunden gewinnt. Du entwickelst ein skalierbares System, das dir echte Freiheit gibt, ohne Umsatzverlust.</p>
+          <div class="agenda-themen">
+            <div class="agenda-thema"><strong>Secret of Scale</strong> → Ein skalierbares System, das dir echte Freiheit gibt – ohne Umsatzverlust.</div>
+          </div>
+          <div class="agenda-ergebnis">
+            <span class="agenda-ergebnis-label">Ergebnis</span>
+            <p>Du entwickelst ein skalierbares System, das automatisiert Kunden gewinnt – und dir endlich echte Freiheit gibt.</p>
           </div>
         </div>
       </div>
 
     </div>
+  </div>
+</section>
+
+
+<!-- ── ANCHOR CTA (nach "Das Programm") ── -->
+<div class="section-anchor-cta">
+  <div class="container">
+    <a href="#anmeldung" class="cta-btn cta-btn-inline">JETZT FÜR 0€ ANMELDEN &rarr;</a>
+    <p class="anchor-cta-note">11.–13. Mai 2026 &nbsp;·&nbsp; jeweils 11–13 Uhr &nbsp;·&nbsp; Kostenfrei</p>
+  </div>
+</div>
+
+
+<!-- ── FÜR WEN IST DIESER WORKSHOP ── -->
+<section class="section-benefits">
+  <div class="container">
+    <div class="section-kicker">Für wen ist dieser Workshop?</div>
+
+    <div class="fuer-wen-box fuer-wen-ja">
+      <div class="fuer-wen-title">✅ Dieser Workshop ist für dich, wenn:</div>
+      <ul class="fuer-wen-list">
+        <li>Dein Kalender vor lauter Meetings und Terminen platzt, aber dein Monatsumsatz trotzdem bei 5–10k festhängt.</li>
+        <li>Du brav deine Reels drehst und 24/7 auf Social Media ackerst, um „sichtbar" zu bleiben, aber der echte Hebel ausbleibt.</li>
+        <li>Ohne dich der Laden komplett stillsteht. Du beantwortest um 22 Uhr noch DMs, weil dein Umsatz sofort einbricht, wenn du mal nicht erreichbar bist.</li>
+      </ul>
+    </div>
+
+    <div class="fuer-wen-box fuer-wen-nein">
+      <div class="fuer-wen-title">❌ Dieser Workshop ist NICHT für dich, wenn:</div>
+      <ul class="fuer-wen-list">
+        <li>Du gerade erst startest und noch keine Kunden hast</li>
+        <li>Du nach Quick-Wins suchst, um morgen Geld zu verdienen</li>
+        <li>Du eine fertige Schritt-für-Schritt-Anleitung erwartest, ohne selbst in die Umsetzung zu kommen</li>
+      </ul>
+    </div>
+
   </div>
 </section>
 
 
 <!-- ── TRENNBILD ── -->
 <div class="section-image-break">
-  <img src="./Bilder/Marina_MAI2314376 Kopie.jpg" alt="Marina Henze – Freiheit und Fülle">
+  <img src="./Bilder/Marina_MAI2314376 Kopie.jpg" alt="Marina Henze – Feminess">
   <div class="section-image-break-overlay">
     <div class="section-image-break-quote">
-      <p><span style="display:block;white-space:nowrap;text-align:center;">Drei Tage können mehr verändern als drei Jahre des</span><span style="display:block;white-space:nowrap;text-align:center;">Weitermachens – wenn du an der <em>richtigen Stelle ansetzt.</em></span></p>
+      <p>Kein Zwang zu mehr Sichtbarkeit. Kein Druck, dich zu verbiegen.<br>Sondern ein Business, das sich nach <em>Freiheit anfühlt.</em></p>
     </div>
   </div>
 </div>
@@ -1856,181 +2379,111 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <img src="./Bilder/Marina_MAI2314280 Kopie.jpg" alt="Marina Henze – Feminess">
       </div>
       <div class="about-text">
-        <div class="section-kicker">Deine Gastgeberin</div>
+        <div class="section-kicker">Von wem wirst du lernen?</div>
         <h2>Ich bin Marina Henze.</h2>
-        <p>Als Business Architektin und Gründerin von Feminess begleite ich selbstständige Frauen dabei, ihr Business so aufzubauen, dass es zu ihrem Leben passt – und nicht umgekehrt.</p>
-        <p>Ich kenne die Erschöpfung. Ich kenne das Plateau. Ich weiß, wie es sich anfühlt, wenn du alles gibst – und der Umsatz trotzdem stehenbleibt.</p>
-        <p><strong>In diesen 3 Tagen teile ich genau das, was mir und meinen Kundinnen geholfen hat, echte Umsatz-Durchbrüche zu erzielen – nicht durch mehr Arbeit, sondern durch den richtigen Shift.</strong></p>
+        <p>Seit über 20 Jahren bin ich Unternehmerin und habe mit Feminess eine Multi-Millionen-Brand aufgebaut und bereits mehr als 20.000 Frauen unterstützt.</p>
+        <p>Ich begleite heute weibliche Coaches dabei, ein skalierbares Online-Business aufzubauen – ohne Hustle, ohne Dauerpräsenz und ohne sich zu verbiegen. Meine Mission ist klar: mehr Umsatz, weniger Hustle.</p>
+        <p><strong>Was meine Arbeit dabei besonders macht, ist nicht einfach nur Strategie. Ich verbinde Business mit deinem Nervensystem. Denn nachhaltiger Erfolg entsteht nicht durch noch mehr Tun oder bessere Tools, sondern dann, wenn deine Strategie wirklich zu dir passt und deine innere Ausrichtung mitzieht.</strong></p>
+        <div class="about-cred-row">
+          <span class="about-cred-tag">✓ 20+ Jahre Unternehmerin</span>
+          <span class="about-cred-tag">✓ Gründerin Feminess</span>
+          <span class="about-cred-tag">✓ 20.000+ Frauen begleitet</span>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 
-<!-- ── SOCIAL PROOF ── -->
-<section class="section-proof">
+<!-- ── TESTIMONIALS ── -->
+<section class="section-testimonials">
   <div class="container">
     <div class="section-kicker">Das sagen Teilnehmerinnen</div>
-    <h2 class="section-h2">Nicht Versprechen.<br><em>Echte Ergebnisse.</em></h2>
-    <p class="proof-count">Echte Ergebnisse echter Frauen – das sagen sie:</p>
-    <div class="proof-grid">
+    <h2 class="section-h2">Keine Versprechen.<br><em>Echte Ergebnisse.</em></h2>
+
+    <div class="testimonials-grid">
+
+      <!-- Karte 1: Sigrid Aviana Waedt -->
       <div class="testimonial-card">
+        <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
         <span class="testimonial-quote-mark">"</span>
-        <blockquote>Ich bin mit der Erwartung rein, ein paar gute Tipps mitzunehmen. Ich bin raus mit einem völlig neuen Blick auf mein Business – und auf mich selbst. Drei Wochen nach dem Workshop hatte ich meinen ersten 5-stelligen Monat.</blockquote>
+        <blockquote>Ich liebe die Zusammenarbeit mit Marina so sehr. Durch sie hat sich so viel in meinem Unternehmen erleichtert. Ich arbeite viel weniger, hab viel mehr Umsatz, es fällt mir viel leichter. Ich mache monatlich 6-stellige Umsätze und bin Marina einfach unendlich dankbar.</blockquote>
         <div class="testimonial-meta">
-          <div class="testimonial-avatar"></div>
           <div>
-            <div class="testimonial-name">[Vorname Nachname]</div>
-            <div class="testimonial-role">[Branche / Tätigkeitsfeld]</div>
-          </div>
-          <span class="testimonial-result-badge">5-stellig</span>
-        </div>
-      </div>
-      <div class="testimonial-card">
-        <span class="testimonial-quote-mark">"</span>
-        <blockquote>Tag 2 hat mein komplettes Preisgefüge verändert. Ich habe nicht nur verstanden, warum ich immer zu wenig verlangt habe – ich habe es gelöst. Heute verlange ich das Doppelte, und meine Kunden sagen Ja.</blockquote>
-        <div class="testimonial-meta">
-          <div class="testimonial-avatar"></div>
-          <div>
-            <div class="testimonial-name">[Vorname Nachname]</div>
-            <div class="testimonial-role">[Branche / Tätigkeitsfeld]</div>
-          </div>
-          <span class="testimonial-result-badge">2× Preis</span>
-        </div>
-      </div>
-      <div class="testimonial-card">
-        <span class="testimonial-quote-mark">"</span>
-        <blockquote>Was mich am meisten überrascht hat: die anderen Frauen. Die Gemeinschaft, die in diesen 3 Tagen entsteht, ist unbeschreiblich. Ich habe dort Geschäftspartnerinnen und Freundinnen gefunden, die heute noch zu meinem engsten Kreis gehören.</blockquote>
-        <div class="testimonial-meta">
-          <div class="testimonial-avatar"></div>
-          <div>
-            <div class="testimonial-name">[Vorname Nachname]</div>
-            <div class="testimonial-role">[Branche / Tätigkeitsfeld]</div>
+            <div class="testimonial-name">Sigrid Aviana Waedt</div>
           </div>
         </div>
       </div>
+
+      <!-- Karte 2: Leonie Rössle -->
       <div class="testimonial-card">
+        <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
         <span class="testimonial-quote-mark">"</span>
-        <blockquote>Ich habe in 3 Tagen mehr Klarheit gewonnen als in 2 Jahren mit verschiedenen Coaches und Kursen. Marina schafft einen Raum, in dem echter Wandel möglich ist – nicht nur Theorie. Mein Business ist heute ein anderes.</blockquote>
+        <blockquote>Also erstmal WOOOW! Ich liebe das Programm so sehr! Was für ein geiler Scheiß! Hatte Gänsehaut, Tränen in den Augen und immer wieder „HELL YES" Momente.</blockquote>
         <div class="testimonial-meta">
-          <div class="testimonial-avatar"></div>
           <div>
-            <div class="testimonial-name">[Vorname Nachname]</div>
-            <div class="testimonial-role">[Branche / Tätigkeitsfeld]</div>
+            <div class="testimonial-name">Leonie Rössle</div>
           </div>
         </div>
       </div>
+
+      <!-- Karte 3: Melanie Preßler – volle Breite -->
+      <div class="testimonial-card testimonial-card--wide">
+        <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+        <span class="testimonial-quote-mark">"</span>
+        <blockquote>Ich habe mit meiner Gründung damals ganz okay gestartet. Die Umsätze, die sind relativ gut losgestartet, also ich hatte damals einen Umsatz von um die 5000 Euro im Monat. Ich habe im ersten Jahr, aber das war ein halbes Jahr, da habe ich 33.000 Umsatz gemacht. Aber das Geld wollte aber nie bei mir bleiben. Durch Zufall bin ich auf euch gekommen. Also ich glaube, das Universum hat mich zu euch geführt. Dann im zweiten Jahr, auch mit durch das Unlimited-Fullness-Programm geschuldet, bin ich dann hoch auf 260.000. Und jetzt, drittes Jahr, wird es über eine Million. Ja. Plus zweites Unternehmen, was ich noch gründe. Also ich bin schon wieder in der nächsten Idee, weil ich eben jetzt weiß, was alles möglich ist und mir das eben auch vorstellen kann. Ich kenne diese Grenzen nicht mehr und ich habe keine Angst mehr vor dem Geld.</blockquote>
+        <div class="testimonial-meta">
+          <div>
+            <div class="testimonial-name">Melanie Preßler</div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
 
 
-<!-- ── ANCHOR CTA ── -->
-<div class="section-anchor-cta">
-  <div class="container">
-    <a href="#anmeldung" class="cta-btn-anchor">Meinen Platz sichern &rarr;</a>
-    <p class="anchor-cta-note">11.–13. Mai 2026 &nbsp;·&nbsp; Kostenfrei</p>
-  </div>
-</div>
+<!-- ── MID CTA MIT COUNTDOWN ── -->
+<section class="section-mid-cta">
+  <div class="container mid-cta-inner">
+    <div class="mid-cta-kicker">Jetzt anmelden</div>
 
-
-<!-- ── FÜR WEN / FÜR WEN NICHT ── -->
-<section class="section-for-whom">
-  <div class="container">
-    <div class="section-kicker">Ehrlichkeit</div>
-    <h2 class="section-h2">Dieser Workshop ist für dich –<br>und <em>nicht für dich.</em></h2>
-    <p class="section-intro">Ich möchte, dass du genau weißt, worauf du dich einlässt – damit die richtigen Frauen dabei sind und alle das Maximum herausholen.</p>
-
-    <div class="for-whom-grid">
-      <!-- FÜR WEN -->
-      <div>
-        <div class="for-whom-col-title yes">Dieser Workshop ist für dich, wenn …</div>
-        <div class="for-whom-list-inner">
-          <div class="for-whom-item yes">
-            <span class="for-whom-icon yes">✓</span>
-            <p><strong>Du bereits selbstständig bist</strong> und aktiv im Business – aber der Umsatz nicht wächst, obwohl du alles gibst.</p>
-          </div>
-          <div class="for-whom-item yes">
-            <span class="for-whom-icon yes">✓</span>
-            <p><strong>Du bereit bist, tiefer zu gehen</strong> als Strategie und Taktik – und weißt, dass das Muster in dir liegt, nicht im Markt.</p>
-          </div>
-          <div class="for-whom-item yes">
-            <span class="for-whom-icon yes">✓</span>
-            <p><strong>Du ein echtes Commitment eingehst</strong> – 3 volle Tage, präsent und bereit für Wandel. Nicht als Beobachterin, sondern als Teilnehmerin.</p>
-          </div>
-          <div class="for-whom-item yes">
-            <span class="for-whom-icon yes">✓</span>
-            <p><strong>Du dir wünschst, Teil einer Gemeinschaft gleichgesinnter Frauen zu sein</strong> – die dich versteht, unterstützt und ehrlich spiegelt.</p>
-          </div>
-        </div>
+    <!-- Mini Countdown -->
+    <div class="mid-countdown-wrap">
+      <span class="mid-cd-label">Workshop startet in</span>
+      <div class="mid-cd-unit">
+        <span class="mid-cd-num" id="mcd-days">00</span>
+        <span class="mid-cd-lbl">Tage</span>
       </div>
-
-      <!-- FÜR WEN NICHT -->
-      <div>
-        <div class="for-whom-col-title no">Dieser Workshop ist nicht für dich, wenn …</div>
-        <div class="for-whom-list-inner">
-          <div class="for-whom-item no">
-            <span class="for-whom-icon no">✗</span>
-            <p><strong>Du noch ganz am Anfang stehst</strong> und dein Business erst aufbauen möchtest. Dieses Format setzt voraus, dass du bereits aktiv bist.</p>
-          </div>
-          <div class="for-whom-item no">
-            <span class="for-whom-icon no">✗</span>
-            <p><strong>Du ausschließlich neue Marketing-Taktiken suchst</strong> – ohne bereit zu sein, die inneren Ursachen anzuschauen.</p>
-          </div>
-          <div class="for-whom-item no">
-            <span class="for-whom-icon no">✗</span>
-            <p><strong>Du nicht bereit bist, 3 volle Tage vollständig präsent zu sein.</strong> Dieses Format funktioniert nur mit echter Energie – nicht nebenbei.</p>
-          </div>
-          <div class="for-whom-item no">
-            <span class="for-whom-icon no">✗</span>
-            <p><strong>Du eine Quick-Fix-Lösung erwartest.</strong> Echter Wandel braucht Tiefe – und diese 3 Tage bieten genau das.</p>
-          </div>
-        </div>
+      <span class="mid-cd-sep">:</span>
+      <div class="mid-cd-unit">
+        <span class="mid-cd-num" id="mcd-hours">00</span>
+        <span class="mid-cd-lbl">Std</span>
+      </div>
+      <span class="mid-cd-sep">:</span>
+      <div class="mid-cd-unit">
+        <span class="mid-cd-num" id="mcd-minutes">00</span>
+        <span class="mid-cd-lbl">Min</span>
+      </div>
+      <span class="mid-cd-sep">:</span>
+      <div class="mid-cd-unit">
+        <span class="mid-cd-num" id="mcd-seconds">00</span>
+        <span class="mid-cd-lbl">Sek</span>
       </div>
     </div>
+
+    <h2 class="mid-cta-h2">Melde dich jetzt kostenlos zum<br><em>BREATHE &amp; BUILD</em> Workshop an</h2>
+    <p class="mid-cta-sub">11.–13. Mai 2026 &nbsp;·&nbsp; jeweils 11–13 Uhr &nbsp;·&nbsp; Kostenfrei</p>
+    <ul class="mid-cta-bullets">
+      <li>NeuroScaling-Strategien, die zu deinem Nervensystem passen</li>
+      <li>Identity Blueprint: deine Nische, dein Angebot, dein Marketing</li>
+      <li>Ein skalierbares Business-Modell ohne ständige Präsenz</li>
+    </ul>
+    <a href="#anmeldung" class="cta-btn cta-btn-inline">JETZT FÜR 0€ ANMELDEN &rarr;</a>
+    <p style="font-family:'Avenir LT Pro','Inter',sans-serif;font-size:12px;color:var(--mid-gray);margin-top:12px;font-style:italic;">Kostenfrei · Begrenzte Plätze · Bestätigung sofort per E-Mail</p>
   </div>
 </section>
-
-
-<!-- ── BONUS ── -->
-<section class="section-bonus">
-  <div class="container">
-    <div class="bonus-badge">&#9733; Nur für Live-Teilnehmerinnen</div>
-    <h2>Komm live – und hol dir<br>deinen <em>exklusiven Bonus.</em></h2>
-    <p class="section-intro">Wer live dabei ist, bekommt mehr als den Workshop. Diese Extras sind ausschließlich für Teilnehmerinnen reserviert, die alle 3 Tage live wahrnehmen.</p>
-    <div class="bonus-list">
-      <div class="bonus-item">
-        <span class="bonus-icon">&#127919;</span>
-        <div>
-          <h3>Vorbereitungs-Workbook</h3>
-          <p>Damit du vom ersten Moment an voll dabei bist: Du erhältst vorab ein Workbook mit 3 Fragen, die dich in die Tiefe führen – und sicherstellen, dass du das Maximum aus diesen 3 Tagen herausholst.</p>
-        </div>
-      </div>
-      <div class="bonus-item">
-        <span class="bonus-icon">&#128203;</span>
-        <div>
-          <h3>[Bonus 2: Titel eintragen]</h3>
-          <p>[Beschreibe den Bonus konkret: Was bekommt die Teilnehmerin? Welchen Wert hat es – und wie unterstützt es sie über den Workshop hinaus?]</p>
-        </div>
-      </div>
-      <div class="bonus-item">
-        <span class="bonus-icon">&#128172;</span>
-        <div>
-          <h3>Privater Community-Bereich</h3>
-          <p>Zugang zu einem exklusiven Bereich für alle Workshop-Teilnehmerinnen – zur gegenseitigen Unterstützung, zum Austausch und zur Nachbearbeitung. Die Gemeinschaft hört nach den 3 Tagen nicht auf.</p>
-        </div>
-      </div>
-      <div class="bonus-item">
-        <span class="bonus-icon">&#127775;</span>
-        <div>
-          <h3>30 Tage E-Mail-Support nach dem Workshop</h3>
-          <p>Du hast in den ersten Wochen Fragen bei der Umsetzung? Ich bin 30 Tage nach dem Workshop per E-Mail erreichbar – damit du dein Momentum nicht verlierst.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 
 
 <!-- ── FAQ ── -->
@@ -2038,114 +2491,76 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="container">
     <div class="section-kicker">Häufige Fragen</div>
     <h2 class="section-h2">Du hast noch <em>Fragen?</em></h2>
+
     <div class="faq-list">
-      <div class="faq-item">
-        <h3>Wie läuft der Workshop technisch ab?</h3>
-        <p>Der Workshop findet live online via Zoom statt – 3 volle Tage (Fr–So), jeweils von 9:00 bis ca. 18:00 Uhr mit Pausen. Du brauchst eine stabile Internetverbindung, eine Kamera und ein ruhiges Umfeld. Die genauen Zugangsdaten und das Vorbereitungs-Workbook erhältst du nach der Buchung per E-Mail.</p>
+
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-item-header">
+          <h3>Wie erhalte ich meinen kostenlosen Platz?</h3>
+          <span class="faq-toggle">+</span>
+        </div>
+        <p>Trag dich einfach mit deinem Vornamen und deiner E-Mail-Adresse ein. Du erhältst sofort eine Bestätigungs-E-Mail mit allen Details zum BREATHE &amp; BUILD Workshop.</p>
       </div>
-      <div class="faq-item">
-        <h3>Gibt es eine Aufzeichnung?</h3>
-        <p>Nein. Dieser Workshop ist als geschlossener, intensiver Gruppenraum konzipiert. Die Energie und die Tiefe entstehen nur durch echte Präsenz. Aus Gründen des Vertrauensschutzes aller Teilnehmerinnen wird keine Aufzeichnung angeboten. Bitte stelle sicher, dass du die 3 Tage vollständig freihalten kannst.</p>
+
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-item-header">
+          <h3>Wie läuft der Workshop technisch ab?</h3>
+          <span class="faq-toggle">+</span>
+        </div>
+        <p>Der Workshop findet live online statt – 3 Sessions am 11., 12. und 13. Mai, jeweils von 11–13 Uhr. Du brauchst eine stabile Internetverbindung und ein ruhiges Umfeld. Die genauen Zugangsdaten erhältst du nach der Anmeldung per E-Mail.</p>
       </div>
-      <div class="faq-item">
-        <h3>Für wen ist dieser Workshop geeignet?</h3>
-        <p>Für selbstständige Frauen, die bereits aktiv im Business sind – und trotz vollem Einsatz nicht das Wachstum erleben, das sie sich wünschen. Wenn du dich unter Wert verkaufst, auf einem Umsatz-Plateau feststeckst oder spürst, dass etwas Unsichtbares dich aufhält, bist du hier richtig.</p>
+
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-item-header">
+          <h3>Gibt es eine Aufzeichnung?</h3>
+          <span class="faq-toggle">+</span>
+        </div>
+        <p>Nein. Dieser Workshop ist als interaktives Live-Event konzipiert. Die Energie und die Tiefe entstehen nur durch echte Präsenz. Bitte stelle sicher, dass du die 3 Sessions vollständig freihalten kannst.</p>
       </div>
-      <div class="faq-item">
-        <h3>Was passiert nach der Anmeldung?</h3>
-        <p>Du erhältst sofort eine Bestätigungs-E-Mail mit allen Details. Dazu bekommst du Zugang zum Vorbereitungs-Workbook und zur privaten Community. Zwei Wochen vor dem Workshop melden wir uns mit allen praktischen Details – Uhrzeit, Ablauf, Technik-Check.</p>
+
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-item-header">
+          <h3>Warum veranstaltest du das kostenlos?</h3>
+          <span class="faq-toggle">+</span>
+        </div>
+        <p>Weil ich überzeugt bin, dass dieser Ansatz für sich selbst spricht. Wenn du erlebst, was in diesen 3 Sessions möglich ist, wirst du verstehen, warum Feminess das tut. Kein Haken. Keine versteckten Kosten. Meld dich einfach an und erhalte nach der Teilnahme keinen ungewollten Spam.</p>
       </div>
-      <div class="faq-item">
-        <h3>Ist der Workshop wirklich kostenfrei?</h3>
-        <p>Ja, vollständig. Keine versteckten Kosten, keine Kreditkarte erforderlich. Du meldest dich an – und bekommst deinen Platz. Da die Plätze auf 20 begrenzt sind, empfehle ich, dich früh anzumelden.</p>
+
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-item-header">
+          <h3>Für wen ist BREATHE &amp; BUILD wirklich geeignet?</h3>
+          <span class="faq-toggle">+</span>
+        </div>
+        <p>Für weibliche Coaches, die bei 5–10k Monatsumsatz feststecken und sich fragen, warum mehr Arbeit nichts bringt. Wenn dein Kalender platzt, dein Konto aber stagniert – und du spürst, dass etwas Grundlegendes fehlt – bist du hier genau richtig.</p>
       </div>
+
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-item-header">
+          <h3>Sind meine Daten sicher?</h3>
+          <span class="faq-toggle">+</span>
+        </div>
+        <p>Ja, vollständig. Deine Daten werden ausschließlich dafür verwendet, dir Informationen zu diesem Workshop und zu weiteren Inhalten von Feminess zu schicken. Du kannst dich jederzeit abmelden. Kein Spam, keine Weitergabe an Dritte.</p>
+      </div>
+
     </div>
   </div>
 </section>
 
 
-<!-- ── ABSCHLIESSENDE CTA / ANMELDUNG ── -->
-<!-- HINWEIS: Formular durch dein echtes E-Mail- / Checkout-Tool ersetzen -->
-<section class="section-cta">
-  <div class="section-cta-inner">
-    <div class="section-kicker">Jetzt anmelden</div>
-    <h2>Dein Platz beim<br><em>Money Identity Reset</em> Workshop</h2>
-    <p class="section-cta-desc">
-      11.–13. Mai 2026 &nbsp;·&nbsp; Live &amp; Online &nbsp;·&nbsp; Kostenfrei<br>
-      Sichere dir deinen Platz – bevor er vergeben ist.
-    </p>
-<form method="POST" action="https://marina232.activehosted.com/proc.php" id="_form_561_" class="_form _form_561 _inline-form  _dark" novalidate data-styles-version="5">
-  <input type="hidden" name="u" value="561" />
-  <input type="hidden" name="f" value="561" />
-  <input type="hidden" name="s" />
-  <input type="hidden" name="c" value="0" />
-  <input type="hidden" name="m" value="0" />
-  <input type="hidden" name="act" value="sub" />
-  <input type="hidden" name="v" value="2" />
-  <input type="hidden" name="or" value="b5506d79-4d4a-435f-9209-241f883cca4e" />
-  <div class="_form-content">
-    <div class="_form_element _x85333295 _full_width ">
-      <label for="firstname" class="_form-label">Vorname<span class="field-required">*</span></label>
-      <div class="_field-wrapper">
-        <input type="text" id="firstname" name="firstname" placeholder="Tippen Sie Ihren Vornamen ein." required/>
-      </div>
-    </div>
-    <div class="_form_element _x75546339 _full_width ">
-      <label for="lastname" class="_form-label">Nachname<span class="field-required">*</span></label>
-      <div class="_field-wrapper">
-        <input type="text" id="lastname" name="lastname" placeholder="Tippen Sie Ihren Nachnamen ein." required/>
-      </div>
-    </div>
-    <div class="_form_element _field_email _full_width ">
-      <label for="email" class="_form-label">E-Mail<span class="field-required">*</span></label>
-      <div class="_field-wrapper">
-        <input type="text" id="email" name="email" placeholder="Tippen Sie Ihre E-Mail ein." required/>
-      </div>
-    </div>
-    <div class="_form_element _x40740069 _full_width ">
-      <label for="field[220]" class="_form-label"></label>
-      <div class="_field-wrapper">
-        <input type="hidden" id="field[220]" name="field[220]" value="" placeholder="" />
-      </div>
-    </div>
-    <div class="_form_element _x94257511 _full_width ">
-      <label for="field[219]" class="_form-label"></label>
-      <div class="_field-wrapper">
-        <input type="hidden" id="field[219]" name="field[219]" value="" placeholder="" />
-      </div>
-    </div>
-    <div class="_form_element _x54506385 _full_width ">
-      <label for="field[218]" class="_form-label"></label>
-      <div class="_field-wrapper">
-        <input type="hidden" id="field[218]" name="field[218]" value="" placeholder="" />
-      </div>
-    </div>
-    <div class="_form_element _x71144138 _full_width ">
-      <label for="field[217]" class="_form-label"></label>
-      <div class="_field-wrapper">
-        <input type="hidden" id="field[217]" name="field[217]" value="" placeholder="" />
-      </div>
-    </div>
-    <div class="_form_element _x34666540 _full_width ">
-      <label for="field[221]" class="_form-label"></label>
-      <div class="_field-wrapper">
-        <input type="hidden" id="field[221]" name="field[221]" value="" placeholder="" />
-      </div>
-    </div>
-    <div class="_button-wrapper _full_width">
-      <button id="_form_561_submit" class="_submit" type="submit">Absenden</button>
-    </div>
-    <div class="_clear-element"></div>
-  </div>
-  <div class="_form-thank-you" style="display:none;"></div>
-  <div class="_form-branding">
-    <div class="_marketing-by">Marketing von</div>
-    <a href="https://www.activecampaign.com/?utm_medium=referral&utm_campaign=acforms" class="_logo">
-      <span class="form-sr-only">ActiveCampaign</span>
-    </a>
-  </div>
-</form>
-    <p class="cta-privacy">Kostenfrei &nbsp;·&nbsp; Kein Spam &nbsp;·&nbsp; Bestätigung sofort per E-Mail<br>Bei Fragen: <a href="mailto:hallo@feminess.de" style="color:var(--teal-light);text-decoration:none;">hallo@feminess.de</a></p>
+<!-- ── FINAL CTA / ANMELDUNG ── -->
+<section class="section-final-cta">
+  <div class="final-cta-inner">
+    <div class="final-cta-kicker">Worauf wartest du noch?</div>
+    <h2 class="final-cta-h2">Melde dich jetzt kostenlos zum<br><em>BREATHE &amp; BUILD</em> Workshop an</h2>
+    <p class="final-cta-worauf">bevor alle Plätze vergeben sind!</p>
+
+    <ul class="final-cta-bullets">
+      <li>NeuroScaling-Strategien, die zu deinem Nervensystem passen</li>
+      <li>Identity Blueprint für Nische, Angebot &amp; Marketing</li>
+      <li>Ein skalierbares System, das dir echte Freiheit gibt – ohne Umsatzverlust</li>
+    </ul>
+
+    <a href="#anmeldung" class="cta-btn cta-btn-inline">JETZT FÜR 0€ ANMELDEN &rarr;</a>
   </div>
 </section>
 
@@ -2156,79 +2571,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <button class="popup-close" id="popupClose" aria-label="Schließen">&times;</button>
     <div class="popup-kicker">Warte kurz</div>
     <h2>Nur noch <em>wenige Plätze</em><br>verfügbar.</h2>
-    <p>11.–13. Mai 2026 &nbsp;·&nbsp; Kostenfrei<br>
-    Sichere dir jetzt deinen Platz – in unter 30 Sekunden.</p>
-<form method="POST" action="https://marina232.activehosted.com/proc.php" id="_form_561_" class="_form _form_561 _inline-form  _dark" novalidate data-styles-version="5">
-  <input type="hidden" name="u" value="561" />
-  <input type="hidden" name="f" value="561" />
-  <input type="hidden" name="s" />
-  <input type="hidden" name="c" value="0" />
-  <input type="hidden" name="m" value="0" />
-  <input type="hidden" name="act" value="sub" />
-  <input type="hidden" name="v" value="2" />
-  <input type="hidden" name="or" value="b5506d79-4d4a-435f-9209-241f883cca4e" />
-  <div class="_form-content">
-    <div class="_form_element _x85333295 _full_width ">
-      <label for="firstname" class="_form-label">Vorname<span class="field-required">*</span></label>
-      <div class="_field-wrapper">
-        <input type="text" id="firstname" name="firstname" placeholder="Tippen Sie Ihren Vornamen ein." required/>
-      </div>
-    </div>
-    <div class="_form_element _x75546339 _full_width ">
-      <label for="lastname" class="_form-label">Nachname<span class="field-required">*</span></label>
-      <div class="_field-wrapper">
-        <input type="text" id="lastname" name="lastname" placeholder="Tippen Sie Ihren Nachnamen ein." required/>
-      </div>
-    </div>
-    <div class="_form_element _field_email _full_width ">
-      <label for="email" class="_form-label">E-Mail<span class="field-required">*</span></label>
-      <div class="_field-wrapper">
-        <input type="text" id="email" name="email" placeholder="Tippen Sie Ihre E-Mail ein." required/>
-      </div>
-    </div>
-    <div class="_form_element _x40740069 _full_width ">
-      <label for="field[220]" class="_form-label"></label>
-      <div class="_field-wrapper">
-        <input type="hidden" id="field[220]" name="field[220]" value="" placeholder="" />
-      </div>
-    </div>
-    <div class="_form_element _x94257511 _full_width ">
-      <label for="field[219]" class="_form-label"></label>
-      <div class="_field-wrapper">
-        <input type="hidden" id="field[219]" name="field[219]" value="" placeholder="" />
-      </div>
-    </div>
-    <div class="_form_element _x54506385 _full_width ">
-      <label for="field[218]" class="_form-label"></label>
-      <div class="_field-wrapper">
-        <input type="hidden" id="field[218]" name="field[218]" value="" placeholder="" />
-      </div>
-    </div>
-    <div class="_form_element _x71144138 _full_width ">
-      <label for="field[217]" class="_form-label"></label>
-      <div class="_field-wrapper">
-        <input type="hidden" id="field[217]" name="field[217]" value="" placeholder="" />
-      </div>
-    </div>
-    <div class="_form_element _x34666540 _full_width ">
-      <label for="field[221]" class="_form-label"></label>
-      <div class="_field-wrapper">
-        <input type="hidden" id="field[221]" name="field[221]" value="" placeholder="" />
-      </div>
-    </div>
-    <div class="_button-wrapper _full_width">
-      <button id="_form_561_submit" class="_submit" type="submit">Absenden</button>
-    </div>
-    <div class="_clear-element"></div>
-  </div>
-  <div class="_form-thank-you" style="display:none;"></div>
-  <div class="_form-branding">
-    <div class="_marketing-by">Marketing von</div>
-    <a href="https://www.activecampaign.com/?utm_medium=referral&utm_campaign=acforms" class="_logo">
-      <span class="form-sr-only">ActiveCampaign</span>
-    </a>
-  </div>
-</form>
+    <p>11.–13. Mai 2026 &nbsp;·&nbsp; jeweils 11–13 Uhr &nbsp;·&nbsp; Kostenfrei<br>Sichere dir jetzt deinen Platz – in unter 30 Sekunden.</p>
+    <form class="ac-form-alt" method="POST" action="https://marina232.activehosted.com/proc.php" onsubmit="acAltSubmit(event, this)">
+      <input type="hidden" name="u" value="561">
+      <input type="hidden" name="f" value="561">
+      <input type="hidden" name="s" value="">
+      <input type="hidden" name="c" value="0">
+      <input type="hidden" name="m" value="0">
+      <input type="hidden" name="act" value="sub">
+      <input type="hidden" name="v" value="2">
+      <input type="hidden" name="or" value="ca8146fc-dd16-4315-936c-5ba7ba0dab59">
+      <input type="text"  name="firstname" placeholder="Dein Vorname" required>
+      <input type="text"  name="lastname"  placeholder="Dein Nachname" required>
+      <input type="text"  name="email"     placeholder="Deine E-Mail-Adresse" required>
+      <input type="hidden" name="field[220]" value="">
+      <input type="hidden" name="field[219]" value="">
+      <input type="hidden" name="field[218]" value="">
+      <input type="hidden" name="field[217]" value="">
+      <input type="hidden" name="field[221]" value="">
+      <button type="submit" class="ac-submit">JETZT FÜR 0€ ANMELDEN &rarr;</button>
+    </form>
     <button class="popup-dismiss" id="popupDismiss">Nein danke, ich melde mich nicht an.</button>
   </div>
 </div>
@@ -2242,13 +2604,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <p style="margin-top:14px;font-size:11px;color:#b8b8b8;max-width:640px;margin-left:auto;margin-right:auto;line-height:1.6;">This site is not a part of the Facebook website or Facebook Inc. Additionally, This site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc.</p>
 </footer>
 
+
 <script>
+// ── FAQ ACCORDION ──
+document.querySelectorAll('.faq-item').forEach(function(item) {
+  item.addEventListener('click', function() {
+    document.querySelectorAll('.faq-item').forEach(function(other) {
+      if (other !== item) other.classList.remove('open');
+    });
+  });
+});
+
 // ── EXIT POPUP ──
 (function () {
-  var popup     = document.getElementById('exitPopup');
-  var btnClose  = document.getElementById('popupClose');
-  var btnDismiss= document.getElementById('popupDismiss');
-  var shown     = false;
+  var popup      = document.getElementById('exitPopup');
+  var btnClose   = document.getElementById('popupClose');
+  var btnDismiss = document.getElementById('popupDismiss');
+  var shown      = false;
 
   function show() {
     if (shown) return;
@@ -2256,26 +2628,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     popup.classList.add('is-visible');
     clearTimeout(inactivityTimer);
   }
-
-  function hide() {
-    popup.classList.remove('is-visible');
-  }
+  function hide() { popup.classList.remove('is-visible'); }
 
   btnClose.addEventListener('click', hide);
   btnDismiss.addEventListener('click', hide);
-  popup.addEventListener('click', function (e) {
-    if (e.target === popup) hide();
-  });
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') hide();
-  });
+  popup.addEventListener('click', function (e) { if (e.target === popup) hide(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') hide(); });
 
-  // Trigger 1: Exit Intent – Maus verlässt das Fenster nach oben
-  document.addEventListener('mouseleave', function (e) {
-    if (e.clientY <= 0) show();
-  });
+  document.addEventListener('mouseleave', function (e) { if (e.clientY <= 0) show(); });
 
-  // Trigger 2: 30 Sekunden Inaktivität (etwas länger – Workshop erfordert mehr Überlegung)
   var inactivityTimer;
   function resetTimer() {
     clearTimeout(inactivityTimer);
@@ -2287,46 +2648,75 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   resetTimer();
 }());
 
-// ── COUNTDOWN ──
+// ── COUNTDOWN (shared) ──
 (function () {
-  var target = new Date('2026-05-11T10:00:00');
+  var target = new Date('2026-05-11T11:00:00');
 
   function pad(n) { return String(n).padStart(2, '0'); }
+
+  // ID-Paare: [topbar, mid-CTA]
+  var ids = [
+    ['tcd-days',    'mcd-days'],
+    ['tcd-hours',   'mcd-hours'],
+    ['tcd-minutes', 'mcd-minutes'],
+    ['tcd-seconds', 'mcd-seconds']
+  ];
 
   function update() {
     var now  = new Date();
     var diff = target - now;
 
+    var vals;
     if (diff <= 0) {
-      ['tcd-days','tcd-hours','tcd-minutes','tcd-seconds'].forEach(function(id) {
-        var el = document.getElementById(id);
-        if (el) el.textContent = '00';
-      });
-      return;
+      vals = ['00','00','00','00'];
+    } else {
+      vals = [
+        pad(Math.floor(diff / 864e5)),
+        pad(Math.floor((diff % 864e5) / 36e5)),
+        pad(Math.floor((diff % 36e5)  / 6e4)),
+        pad(Math.floor((diff % 6e4)   / 1000))
+      ];
     }
 
-    var days    = Math.floor(diff / 864e5);
-    var hours   = Math.floor((diff % 864e5) / 36e5);
-    var minutes = Math.floor((diff % 36e5)  / 6e4);
-    var seconds = Math.floor((diff % 6e4)   / 1000);
-
-    var td = document.getElementById('tcd-days');
-    var th = document.getElementById('tcd-hours');
-    var tm = document.getElementById('tcd-minutes');
-    var ts = document.getElementById('tcd-seconds');
-
-    if (td) td.textContent = pad(days);
-    if (th) th.textContent = pad(hours);
-    if (tm) tm.textContent = pad(minutes);
-    if (ts) ts.textContent = pad(seconds);
+    ids.forEach(function(pair, i) {
+      pair.forEach(function(id) {
+        var el = document.getElementById(id);
+        if (el) el.textContent = vals[i];
+      });
+    });
   }
 
   update();
   setInterval(update, 1000);
 }());
 </script>
+
+<!-- ── ACTIVECAMPAIGN FORM SCRIPT ── -->
 <script>
 window.cfields = {"220":"utmcontent","219":"utmcampaign","218":"utmmedium","217":"utmsource","221":"utmterm"};
+
+// Helper für mid-CTA & Popup (AJAX, kein Seitenwechsel)
+function acAltSubmit(e, form) {
+  e.preventDefault();
+  var btn = form.querySelector('.ac-submit');
+  if (!form.checkValidity()) { form.reportValidity(); return; }
+  btn.disabled = true;
+  btn.textContent = '...';
+  var fd = new FormData(form);
+  var params = [];
+  fd.forEach(function(v, k) { params.push(encodeURIComponent(k) + '=' + encodeURIComponent(v)); });
+  var qs = params.join('&');
+  var s = document.createElement('script');
+  s.src = 'https://marina232.activehosted.com/proc.php?' + qs + '&jsonp=true';
+  s.onerror = function() {
+    form.innerHTML = '<p class="ac-form-alt-success">&#10003; Du bist dabei! Check dein Postfach.</p>';
+  };
+  document.head.appendChild(s);
+  setTimeout(function() {
+    form.innerHTML = '<p class="ac-form-alt-success">&#10003; Du bist dabei!<br>Bestätigung kommt gleich per E-Mail.</p>';
+  }, 1800);
+}
+
 window._show_thank_you = function(id, message, trackcmp_url, email) {
     var form = document.getElementById('_form_' + id + '_'), thank_you = form.querySelector('._form-thank-you');
     form.querySelector('._form-content').style.display = 'none';
@@ -2334,21 +2724,15 @@ window._show_thank_you = function(id, message, trackcmp_url, email) {
     thank_you.style.display = 'block';
     const vgoAlias = typeof visitorGlobalObjectAlias === 'undefined' ? 'vgo' : visitorGlobalObjectAlias;
     var visitorObject = window[vgoAlias];
-    if (email && typeof visitorObject !== 'undefined') {
-        visitorObject('setEmail', email);
-        visitorObject('update');
-    } else if (typeof(trackcmp_url) != 'undefined' && trackcmp_url) {
-        _load_script(trackcmp_url);
-    }
+    if (email && typeof visitorObject !== 'undefined') { visitorObject('setEmail', email); visitorObject('update'); }
+    else if (typeof(trackcmp_url) != 'undefined' && trackcmp_url) { _load_script(trackcmp_url); }
     if (typeof window._form_callback !== 'undefined') window._form_callback(id);
     thank_you.setAttribute('tabindex', '-1');
     thank_you.focus();
 };
 window._show_error = function(id, message, html) {
-    var form = document.getElementById('_form_' + id + '_'),
-        err = document.createElement('div'),
-        button = form.querySelector('button[type="submit"]'),
-        old_error = form.querySelector('._form_error');
+    var form = document.getElementById('_form_' + id + '_'), err = document.createElement('div'),
+        button = form.querySelector('button[type="submit"]'), old_error = form.querySelector('._form_error');
     if (old_error) old_error.parentNode.removeChild(old_error);
     err.innerHTML = message;
     err.className = '_error-inner _form_error _no_arrow';
@@ -2359,12 +2743,7 @@ window._show_error = function(id, message, html) {
     var submitButton = form.querySelector('[id^="_form"][id$="_submit"]');
     submitButton.disabled = false;
     submitButton.classList.remove('processing');
-    if (html) {
-        var div = document.createElement('div');
-        div.className = '_error-html';
-        div.innerHTML = html;
-        err.appendChild(div);
-    }
+    if (html) { var div = document.createElement('div'); div.className = '_error-html'; div.innerHTML = html; err.appendChild(div); }
 };
 window._load_script = function(url, callback, isSubmit) {
     var head = document.querySelector('head'), script = document.createElement('script'), r = false;
@@ -2373,10 +2752,7 @@ window._load_script = function(url, callback, isSubmit) {
     script.src = url;
     if (callback) {
         script.onload = script.onreadystatechange = function() {
-            if (!r && (!this.readyState || this.readyState == 'complete')) {
-                r = true;
-                callback();
-            }
+            if (!r && (!this.readyState || this.readyState == 'complete')) { r = true; callback(); }
         };
     }
     script.onerror = function() {
@@ -2391,224 +2767,87 @@ window._load_script = function(url, callback, isSubmit) {
 (function() {
     var iti;
     if (window.location.search.search("excludeform") !== -1) return false;
-    var getCookie = function(name) {
-        var match = document.cookie.match(new RegExp('(^|; )' + name + '=([^;]+)'));
-        return match ? match[2] : localStorage.getItem(name);
-    };
-    var setCookie = function(name, value) {
-        var now = new Date();
-        var expireTime = now.getTime() + 1000 * 60 * 60 * 24 * 365;
-        now.setTime(expireTime);
-        document.cookie = name + '=' + value + '; expires=' + now + ';path=/; Secure; SameSite=Lax;';
-        localStorage.setItem(name, value);
-    };
-    var addEvent = function(element, event, func) {
-        if (element.addEventListener) {
-            element.addEventListener(event, func);
-        } else {
-            var oldFunc = element['on' + event];
-            element['on' + event] = function() {
-                oldFunc.apply(this, arguments);
-                func.apply(this, arguments);
-            };
-        }
-    };
+    var getCookie = function(name) { var match = document.cookie.match(new RegExp('(^|; )' + name + '=([^;]+)')); return match ? match[2] : localStorage.getItem(name); };
+    var setCookie = function(name, value) { var now = new Date(); var time = now.getTime(); var expireTime = time + 1000*60*60*24*365; now.setTime(expireTime); document.cookie = name+'='+value+'; expires='+now+';path=/; Secure; SameSite=Lax;'; localStorage.setItem(name, value); };
+    var addEvent = function(element, event, func) { if (element.addEventListener) { element.addEventListener(event, func); } else { var oldFunc = element['on'+event]; element['on'+event] = function() { oldFunc.apply(this, arguments); func.apply(this, arguments); }; } };
     var _removed = false;
     var form_to_submit = document.getElementById('_form_561_');
+    if (!form_to_submit) return;
     var allInputs = form_to_submit.querySelectorAll('input, select, textarea'), tooltips = [], submitted = false;
 
     var getUrlParam = function(name) {
-        if (name.toLowerCase() !== 'email') {
-            var params = new URLSearchParams(window.location.search);
-            return params.get(name) || false;
-        }
-        var qString = window.location.search;
-        if (!qString) { return false; }
+        if (name.toLowerCase() !== 'email') { var params = new URLSearchParams(window.location.search); return params.get(name) || false; }
+        var qString = window.location.search; if (!qString) { return false; }
         var parameters = qString.substr(1).split('&');
-        for (var i = 0; i < parameters.length; i++) {
-            var parameter = parameters[i].split('=');
-            if (parameter[0].toLowerCase() === 'email') {
-                return parameter[1] === undefined ? true : decodeURIComponent(parameter[1]);
-            }
-        }
+        for (var i = 0; i < parameters.length; i++) { var parameter = parameters[i].split('='); if (parameter[0].toLowerCase() === 'email') { return parameter[1] === undefined ? true : decodeURIComponent(parameter[1]); } }
         return false;
     };
-
     for (var i = 0; i < allInputs.length; i++) {
-        var regexStr = "field\\[(\\d+)\\]";
-        var results = new RegExp(regexStr).exec(allInputs[i].name);
-        if (results != undefined) {
-            allInputs[i].dataset.name = allInputs[i].name.match(/\[time\]$/)
-                ? `${window.cfields[results[1]]}_time`
-                : window.cfields[results[1]];
-        } else {
-            allInputs[i].dataset.name = allInputs[i].name;
-        }
+        var regexStr = "field\\[(\\d+)\\]", results = new RegExp(regexStr).exec(allInputs[i].name);
+        if (results != undefined) { allInputs[i].dataset.name = window.cfields[results[1]]; } else { allInputs[i].dataset.name = allInputs[i].name; }
         var fieldVal = getUrlParam(allInputs[i].dataset.name);
-        if (fieldVal) {
-            if (allInputs[i].dataset.autofill === "false") { continue; }
-            if (allInputs[i].type == "radio" || allInputs[i].type == "checkbox") {
-                if (allInputs[i].value == fieldVal) { allInputs[i].checked = true; }
-            } else {
-                allInputs[i].value = fieldVal;
-            }
-        }
+        if (fieldVal) { if (allInputs[i].dataset.autofill === "false") { continue; } if (allInputs[i].type == "radio" || allInputs[i].type == "checkbox") { if (allInputs[i].value == fieldVal) { allInputs[i].checked = true; } } else { allInputs[i].value = fieldVal; } }
     }
-
+    var remove_tooltips = function() { for (var i = 0; i < tooltips.length; i++) { tooltips[i].tip.parentNode.removeChild(tooltips[i].tip); } tooltips = []; };
+    var remove_tooltip = function(elem) { for (var i = 0; i < tooltips.length; i++) { if (tooltips[i].elem === elem) { tooltips[i].tip.parentNode.removeChild(tooltips[i].tip); tooltips.splice(i, 1); return; } } };
+    var create_tooltip = function(elem, text) {
+        var tooltip = document.createElement('div'), arrow = document.createElement('div'), inner = document.createElement('div'), new_tooltip = {};
+        tooltip.id = elem.id + '-error'; tooltip.setAttribute('role','alert');
+        if (elem.type != 'radio' && elem.type != 'checkbox') { tooltip.className = '_error'; arrow.className = '_error-arrow'; inner.className = '_error-inner'; inner.innerHTML = text; tooltip.appendChild(arrow); tooltip.appendChild(inner); elem.parentNode.appendChild(tooltip); }
+        else { tooltip.className = '_error-inner _no_arrow'; tooltip.innerHTML = text; elem.parentNode.insertBefore(tooltip, elem); new_tooltip.no_arrow = true; }
+        new_tooltip.tip = tooltip; new_tooltip.elem = elem; tooltips.push(new_tooltip); return new_tooltip;
+    };
+    var resize_tooltip = function(tooltip) { var rect = tooltip.elem.getBoundingClientRect(); var doc = document.documentElement, scrollPosition = rect.top - ((window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0)); if (scrollPosition < 40) { tooltip.tip.className = tooltip.tip.className.replace(/ ?(_above|_below) ?/g, '') + ' _below'; } else { tooltip.tip.className = tooltip.tip.className.replace(/ ?(_above|_below) ?/g, '') + ' _above'; } };
+    var resize_tooltips = function() { if (_removed) return; for (var i = 0; i < tooltips.length; i++) { if (!tooltips[i].no_arrow) resize_tooltip(tooltips[i]); } };
     var validate_field = function(elem, remove) {
         var tooltip = null, value = elem.value, no_error = true;
         remove ? remove_tooltip(elem) : false;
-        elem.removeAttribute('aria-invalid');
-        elem.removeAttribute('aria-describedby');
+        elem.removeAttribute('aria-invalid'); elem.removeAttribute('aria-describedby');
         if (elem.type != 'checkbox') elem.className = elem.className.replace(/ ?_has_error ?/g, '');
         if (elem.getAttribute('required') !== null) {
-            if (value === undefined || value === null || value === '') {
-                elem.className = elem.className + ' _has_error';
-                no_error = false;
-                tooltip = create_tooltip(elem, "Bitte füllen Sie das markierte Pflichtfeld aus.");
-            }
+            if (value === undefined || value === null || value === '') { elem.className = elem.className + ' _has_error'; no_error = false; tooltip = create_tooltip(elem, "Bitte füllen Sie das markierte Pflichtfeld aus."); }
         }
-        if (no_error && elem.name == 'email') {
-            if (!value.match(/^[\+_a-z0-9-'&=]+(\.[+_a-z0-9-']+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,})$/i)) {
-                elem.className = elem.className + ' _has_error';
-                no_error = false;
-                tooltip = create_tooltip(elem, "Geben Sie eine gültige E-Mail-Adresse ein.");
-            }
-        }
+        if (no_error && elem.name == 'email') { if (!value.match(/^[\+_a-z0-9-'&=]+(\.[\+_a-z0-9-']+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,})$/i)) { elem.className = elem.className + ' _has_error'; no_error = false; tooltip = create_tooltip(elem, "Geben Sie eine gültige E-Mail-Adresse ein."); } }
+        tooltip ? resize_tooltip(tooltip) : false;
+        if (!no_error && elem.hasAttribute('id')) { elem.setAttribute('aria-invalid', 'true'); elem.setAttribute('aria-describedby', elem.id + '-error'); }
         return no_error;
     };
-
-    var remove_tooltips = function() {
-        for (var i = 0; i < tooltips.length; i++) {
-            tooltips[i].tip.parentNode.removeChild(tooltips[i].tip);
-        }
-        tooltips = [];
-    };
-    var remove_tooltip = function(elem) {
-        for (var i = 0; i < tooltips.length; i++) {
-            if (tooltips[i].elem === elem) {
-                tooltips[i].tip.parentNode.removeChild(tooltips[i].tip);
-                tooltips.splice(i, 1);
-                return;
-            }
-        }
-    };
-    var create_tooltip = function(elem, text) {
-        var tooltip = document.createElement('div'),
-            arrow = document.createElement('div'),
-            inner = document.createElement('div'), new_tooltip = {};
-        tooltip.id = `${elem.id}-error`;
-        tooltip.setAttribute('role', 'alert');
-        tooltip.className = '_error';
-        arrow.className = '_error-arrow';
-        inner.className = '_error-inner';
-        inner.innerHTML = text;
-        tooltip.appendChild(arrow);
-        tooltip.appendChild(inner);
-        elem.parentNode.appendChild(tooltip);
-        new_tooltip.tip = tooltip;
-        new_tooltip.elem = elem;
-        tooltips.push(new_tooltip);
-        return new_tooltip;
-    };
-
-    var needs_validate = function(el) {
-        if (el.getAttribute('required') !== null) { return true; }
-        if ((el.name === 'email') && el.value !== "") { return true; }
-        return false;
-    };
-
+    var needs_validate = function(el) { if (el.getAttribute('required') !== null) { return true; } if ((el.name === 'email') && el.value !== "") { return true; } return false; };
     var validate_form = function(e) {
-        var no_error = true;
+        var err = form_to_submit.querySelector('._form_error'), no_error = true;
         if (!submitted) {
             submitted = true;
+            for (var i = 0, len = allInputs.length; i < len; i++) {
+                var input = allInputs[i];
+                if (needs_validate(input)) {
+                    if (input.type == 'text') { addEvent(input, 'blur', function() { this.value = this.value.trim(); validate_field(this, true); }); addEvent(input, 'input', function() { validate_field(this, true); }); }
+                }
+            }
         }
         remove_tooltips();
-        for (var i = 0, len = allInputs.length; i < len; i++) {
-            var elem = allInputs[i];
-            if (needs_validate(elem)) {
-                if (elem.tagName.toLowerCase() !== "select") { elem.value = elem.value.trim(); }
-                validate_field(elem) ? true : no_error = false;
-            }
-        }
+        for (var i = 0, len = allInputs.length; i < len; i++) { var elem = allInputs[i]; if (needs_validate(elem)) { if (elem.tagName.toLowerCase() !== "select") { elem.value = elem.value.trim(); } validate_field(elem) ? true : no_error = false; } }
         if (!no_error && e) { e.preventDefault(); }
+        if (!no_error) { var firstFocusableError = form_to_submit.querySelector('._has_error:not([disabled])'); if (firstFocusableError && typeof firstFocusableError.focus === 'function') { firstFocusableError.focus(); } }
+        resize_tooltips();
         return no_error;
     };
-
-    var _form_serialize = function(form) {
-        if (!form || form.nodeName !== "FORM") { return; }
-        var i, j, q = [];
-        for (i = 0; i < form.elements.length; i++) {
-            if (form.elements[i].name === "") { continue; }
-            switch (form.elements[i].nodeName) {
-                case 'INPUT':
-                    switch (form.elements[i].type) {
-                        case 'text': case 'number': case 'date': case 'time': case 'hidden':
-                        case 'password': case 'button': case 'reset': case 'submit':
-                            q.push(form.elements[i].name + "=" + encodeURIComponent(form.elements[i].value));
-                            break;
-                        case 'checkbox': case 'radio':
-                            if (form.elements[i].checked) {
-                                q.push(form.elements[i].name + "=" + encodeURIComponent(form.elements[i].value));
-                            }
-                            break;
-                    }
-                    break;
-                case 'TEXTAREA':
-                    q.push(form.elements[i].name + "=" + encodeURIComponent(form.elements[i].value));
-                    break;
-                case 'SELECT':
-                    q.push(form.elements[i].name + "=" + encodeURIComponent(form.elements[i].value));
-                    break;
-            }
-        }
-        return q.join("&");
-    };
-
-    const formSupportsPost = false;
+    addEvent(window, 'resize', resize_tooltips);
+    addEvent(window, 'scroll', resize_tooltips);
+    var _form_serialize = function(form){if(!form||form.nodeName!=="FORM"){return}var i,j,q=[];for(i=0;i<form.elements.length;i++){if(form.elements[i].name===""){continue}switch(form.elements[i].nodeName){case"INPUT":switch(form.elements[i].type){case"text":case"number":case"date":case"time":case"hidden":case"password":case"button":case"reset":case"submit":q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value));break;case"checkbox":case"radio":if(form.elements[i].checked){q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value))}break}break;case"TEXTAREA":q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value));break;case"SELECT":switch(form.elements[i].type){case"select-one":q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value));break;case"select-multiple":for(j=0;j<form.elements[i].options.length;j++){if(form.elements[i].options[j].selected){q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].options[j].value))}}break}break}}return q.join("&")};
     var form_submit = function(e) {
         e.preventDefault();
-        if (validate_form(e)) {
+        if (validate_form()) {
             var submitButton = e.target.querySelector('#_form_561_submit');
             submitButton.disabled = true;
             submitButton.classList.add('processing');
             var serialized = _form_serialize(document.getElementById('_form_561_')).replace(/%0A/g, '\\n');
             var err = form_to_submit.querySelector('._form_error');
             err ? err.parentNode.removeChild(err) : false;
-            if (formSupportsPost) {
-                // POST mode not used
-            } else {
-                _load_script('https://marina232.activehosted.com/proc.php?' + serialized + '&jsonp=true', null, true);
-            }
+            _load_script('https://marina232.activehosted.com/proc.php?' + serialized + '&jsonp=true', null, true);
         }
         return false;
     };
     addEvent(form_to_submit, 'submit', form_submit);
-})();
-</script>
-
-<script>
-// Nach erfolgreicher Anmeldung → Weiterleitung zur Dankeseite
-window._show_thank_you = function(id, message, trackcmp_url, email) {
-  window.location.href = 'https://feminess.github.io/workshop-danke';
-};
-
-// UTM-Parameter (utm_source, utm_medium etc.) in alle AC-Formulare schreiben
-(function() {
-  var params = new URLSearchParams(window.location.search);
-  var utmMap = {
-    'field[217]': params.get('utm_source')   || '',
-    'field[218]': params.get('utm_medium')   || '',
-    'field[219]': params.get('utm_campaign') || '',
-    'field[220]': params.get('utm_content')  || '',
-    'field[221]': params.get('utm_term')     || ''
-  };
-  document.querySelectorAll('form[action*="activehosted.com"]').forEach(function(form) {
-    Object.keys(utmMap).forEach(function(fieldName) {
-      var input = form.querySelector('[name="' + fieldName + '"]');
-      if (input) input.value = utmMap[fieldName];
-    });
-  });
 })();
 </script>
 </body>

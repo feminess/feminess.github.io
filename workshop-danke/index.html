@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Du bist dabei – Make more Money Mastery Workshop | Feminess</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+@font-face {
+  font-family: 'East Liberty';
+  src: url('../CI/east_liberty_signature (1)/east liberty signature.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Avenir LT Pro';
+  src: url('../CI/AvenirLTPro-Book (1).otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Avenir LT Pro';
+  src: url('../CI/AvenirLTPro-Heavy (1).otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+:root {
+  --teal:        #257c6c;
+  --teal-dark:   #1b5c50;
+  --teal-light:  #5ec6b3;
+  --teal-pale:   #b8ddd8;
+  --teal-deep:   #144a40;
+  --rose:        #cf5a73;
+  --rose-light:  #e8a0b0;
+  --sand:        #c2ab8d;
+  --sand-dark:   #8d6a48;
+  --sand-light:  #e4bc95;
+  --black:       #070808;
+  --dark:        #0d2420;
+  --off-white:   #f8f6f2;
+  --cream:       #f0f5f4;
+  --beige:       #ddecea;
+  --warm-gray:   #5a7a74;
+  --mid-gray:    #9ab8b4;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: #fff;
+  color: var(--black);
+  font-family: 'Avenir LT Pro', 'Inter', system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── HEADER ── */
+.site-header {
+  background: #fff;
+  border-bottom: 1px solid var(--beige);
+  padding: 16px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.site-header-brand {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--teal-dark);
+}
+.site-header-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(37,124,108,0.08);
+  border: 1px solid rgba(37,124,108,0.18);
+  padding: 6px 14px;
+  border-radius: 100px;
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--teal-dark);
+  letter-spacing: 0.3px;
+}
+.site-header-badge::before {
+  content: '';
+  display: block;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--teal);
+  flex-shrink: 0;
+}
+@media (max-width: 520px) {
+  .site-header { justify-content: center; }
+  .site-header-badge { font-size: 10px; }
+}
+
+/* ── HERO ── */
+.hero {
+  background: var(--dark);
+  padding: 80px 40px 90px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -120px; left: 50%;
+  transform: translateX(-50%);
+  width: 800px; height: 800px;
+  background: radial-gradient(circle, rgba(37,124,108,0.22) 0%, transparent 58%);
+  pointer-events: none;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -60px; right: 0;
+  width: 350px; height: 350px;
+  background: radial-gradient(circle, rgba(207,90,115,0.10) 0%, transparent 60%);
+  pointer-events: none;
+}
+.hero-inner {
+  max-width: 740px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.confirm-check {
+  width: 58px; height: 58px;
+  background: rgba(37,124,108,0.18);
+  border: 1.5px solid var(--teal-light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 28px;
+}
+.confirm-check svg {
+  width: 22px; height: 22px;
+  color: var(--teal-light);
+}
+
+.hero-eyebrow {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  color: var(--teal-light);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.hero-eyebrow::before,
+.hero-eyebrow::after {
+  content: '';
+  display: block;
+  width: 24px; height: 1px;
+  background: var(--teal-light);
+  opacity: 0.5;
+  flex-shrink: 0;
+}
+
+.hero h1 {
+  font-family: 'East Liberty', 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(58px, 10vw, 108px);
+  font-weight: 400;
+  line-height: 0.98;
+  color: #fff;
+  letter-spacing: -0.5px;
+  margin-bottom: 18px;
+}
+.hero-h1-sub {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(20px, 2.8vw, 28px);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--sand-light);
+  line-height: 1.3;
+  margin-bottom: 28px;
+}
+.hero-sub {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: clamp(15px, 1.8vw, 17px);
+  color: var(--mid-gray);
+  line-height: 1.7;
+  max-width: 540px;
+  margin: 0 auto 40px;
+}
+.hero-sub strong { color: var(--teal-pale); font-weight: 700; }
+
+.hero-img-wrap {
+  margin: 0 auto;
+  max-width: 340px;
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow: 0 24px 70px rgba(0,0,0,0.50);
+  position: relative;
+}
+.hero-img-wrap::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 55%, rgba(13,36,32,0.70) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+.hero-img-wrap img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center top;
+  max-height: 440px;
+}
+
+/* ── CONTAINER ── */
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+.section-kicker {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.section-kicker::after {
+  content: '';
+  flex: 1;
+  max-width: 36px;
+  height: 1px;
+  background: var(--teal);
+  opacity: 0.35;
+}
+.section-h2 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(26px, 3.8vw, 36px);
+  font-weight: 500;
+  color: var(--black);
+  line-height: 1.15;
+  margin-bottom: 10px;
+}
+.section-h2 em {
+  font-style: italic;
+  color: var(--teal);
+}
+.section-h2-rose em {
+  color: var(--rose);
+}
+.section-intro {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 15px;
+  color: var(--warm-gray);
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+/* ── E-MAIL HINWEIS ── */
+.section-email {
+  padding: 56px 0;
+  border-bottom: 1px solid var(--beige);
+}
+.email-card {
+  background: var(--off-white);
+  border: 1px solid var(--beige);
+  border-left: 3px solid var(--teal);
+  border-radius: 2px;
+  padding: 28px 32px;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+.email-card-icon {
+  width: 44px; height: 44px;
+  background: rgba(37,124,108,0.12);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.email-card-icon svg { width: 18px; height: 18px; color: var(--teal); }
+.email-card-text strong {
+  display: block;
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--teal-dark);
+  margin-bottom: 6px;
+}
+.email-card-text p {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 14px;
+  color: var(--warm-gray);
+  line-height: 1.65;
+}
+.email-card-text p strong { display: inline; color: var(--dark); font-weight: 700; }
+
+/* ── NÄCHSTE SCHRITTE ── */
+.section-steps {
+  padding: 64px 0;
+  border-bottom: 1px solid var(--beige);
+}
+.steps-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.step-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 22px;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--beige);
+}
+.step-item:last-child { border-bottom: none; padding-bottom: 0; }
+.step-num {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 30px;
+  font-weight: 300;
+  color: var(--teal-pale);
+  line-height: 1;
+  min-width: 34px;
+  padding-top: 2px;
+  flex-shrink: 0;
+}
+.step-content {}
+.step-timing {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--teal);
+  background: rgba(37,124,108,0.08);
+  padding: 3px 10px;
+  border-radius: 100px;
+  margin-bottom: 7px;
+}
+.step-content strong {
+  display: block;
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 15.5px;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 4px;
+}
+.step-content p {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 14px;
+  color: var(--warm-gray);
+  line-height: 1.65;
+}
+.step-cta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  background: var(--teal);
+  color: #fff;
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  padding: 12px 22px;
+  border-radius: 2px;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.15s;
+}
+.step-cta-link:hover { background: var(--teal-dark); transform: translateY(-1px); }
+.step-cta-link-sand {
+  background: var(--sand-light);
+  color: var(--dark);
+}
+.step-cta-link-sand:hover { background: var(--sand); }
+
+/* ── AGENDA ── */
+.section-agenda {
+  padding: 80px 0;
+  background: var(--dark);
+  position: relative;
+  overflow: hidden;
+}
+.section-agenda::before {
+  content: '';
+  position: absolute;
+  top: -120px; right: -80px;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(37,124,108,0.18) 0%, transparent 60%);
+  pointer-events: none;
+}
+.section-agenda::after {
+  content: '';
+  position: absolute;
+  bottom: -60px; left: -40px;
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(207,90,115,0.08) 0%, transparent 60%);
+  pointer-events: none;
+}
+.section-agenda .container { position: relative; z-index: 1; }
+.section-agenda .section-kicker { color: var(--teal-light); }
+.section-agenda .section-kicker::after { background: var(--teal-light); }
+.section-agenda .section-h2 { color: #fff; }
+.section-agenda .section-h2 em { color: var(--teal-light); }
+.section-agenda .section-intro { color: var(--mid-gray); margin-bottom: 40px; }
+
+.agenda-day {
+  margin-bottom: 40px;
+}
+.agenda-day:last-child { margin-bottom: 0; }
+
+.agenda-day-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--teal-light);
+  margin-bottom: 16px;
+}
+.agenda-day-label::before {
+  content: '';
+  display: block;
+  width: 18px; height: 1px;
+  background: var(--teal-light);
+  opacity: 0.5;
+}
+.agenda-day-date {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(18px, 2.5vw, 22px);
+  font-weight: 400;
+  color: #fff;
+  margin-bottom: 18px;
+  line-height: 1.2;
+}
+
+.agenda-topics {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.agenda-topic-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.agenda-topic-icon {
+  font-size: 17px;
+  flex-shrink: 0;
+  margin-top: 2px;
+  opacity: 0.85;
+}
+.agenda-topic-text strong {
+  display: block;
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--teal-pale);
+  line-height: 1.3;
+}
+.agenda-topic-text p {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 13.5px;
+  color: var(--mid-gray);
+  line-height: 1.6;
+}
+
+.agenda-divider {
+  border: none;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  margin: 36px 0;
+}
+
+/* ── SECRET BONUS ── */
+.bonus-teaser {
+  background: rgba(228,188,149,0.08);
+  border: 1px solid rgba(228,188,149,0.22);
+  border-radius: 2px;
+  padding: 28px 28px;
+  margin-top: 36px;
+  position: relative;
+  overflow: hidden;
+}
+.bonus-teaser::before {
+  content: '';
+  position: absolute;
+  top: -40px; right: -40px;
+  width: 200px; height: 200px;
+  background: radial-gradient(circle, rgba(228,188,149,0.14) 0%, transparent 65%);
+  pointer-events: none;
+}
+.bonus-teaser-inner { position: relative; z-index: 1; }
+.bonus-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(228,188,149,0.15);
+  border: 1px solid rgba(228,188,149,0.30);
+  padding: 4px 14px;
+  border-radius: 100px;
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--sand-light);
+  margin-bottom: 14px;
+}
+.bonus-badge::before { content: '✦'; font-size: 9px; }
+.bonus-teaser h3 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(20px, 3vw, 24px);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--sand-light);
+  line-height: 1.25;
+  margin-bottom: 8px;
+}
+.bonus-teaser p {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 14px;
+  color: var(--mid-gray);
+  line-height: 1.65;
+}
+
+/* ── LIVESTREAM CTA ── */
+.section-livestream {
+  padding: 80px 0;
+  background: linear-gradient(135deg, var(--teal-deep) 0%, var(--dark) 100%);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.section-livestream::before {
+  content: '';
+  position: absolute;
+  top: -80px; left: 50%;
+  transform: translateX(-50%);
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(37,124,108,0.25) 0%, transparent 60%);
+  pointer-events: none;
+}
+.section-livestream .container { position: relative; z-index: 1; }
+.section-livestream .section-kicker {
+  color: var(--teal-light);
+  justify-content: center;
+}
+.section-livestream .section-kicker::after { display: none; }
+.section-livestream .section-kicker::before {
+  content: '';
+  display: block;
+  width: 24px; height: 1px;
+  background: var(--teal-light);
+  opacity: 0.5;
+}
+.livestream-h2 {
+  font-family: 'East Liberty', 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(52px, 9vw, 96px);
+  font-weight: 400;
+  line-height: 0.98;
+  color: #fff;
+  letter-spacing: -0.5px;
+  margin-bottom: 18px;
+}
+.livestream-sub {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: clamp(15px, 1.8vw, 17px);
+  color: var(--mid-gray);
+  line-height: 1.7;
+  max-width: 500px;
+  margin: 0 auto 36px;
+}
+.livestream-sub strong { color: var(--teal-pale); font-weight: 700; }
+.cta-btn-main {
+  display: inline-block;
+  background: var(--teal);
+  color: #fff;
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  padding: 20px 44px;
+  border-radius: 2px;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  box-shadow: 0 6px 28px rgba(37,124,108,0.40);
+}
+.cta-btn-main:hover {
+  background: var(--teal-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 36px rgba(37,124,108,0.55);
+}
+.cta-note {
+  margin-top: 16px;
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 12px;
+  color: var(--warm-gray);
+  font-style: italic;
+}
+
+/* ── FOOTER ── */
+.site-footer {
+  background: var(--off-white);
+  border-top: 1px solid var(--beige);
+  padding: 28px 40px;
+  text-align: center;
+}
+.site-footer p {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 12px;
+  color: var(--mid-gray);
+}
+.site-footer a { color: var(--teal); text-decoration: none; }
+.site-footer a:hover { text-decoration: underline; }
+
+/* ── VIDEO SECTION ── */
+.section-video {
+  padding: 64px 0;
+  background: var(--cream);
+  border-bottom: 1px solid var(--beige);
+}
+.section-video .section-kicker { color: var(--teal); }
+.video-label {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 15px;
+  color: var(--warm-gray);
+  margin-bottom: 20px;
+  line-height: 1.65;
+}
+.video-placeholder-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: var(--dark);
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow: 0 14px 48px rgba(0,0,0,0.22);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.video-placeholder-wrap img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  opacity: 0.35;
+}
+.video-placeholder-wrap::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(13,36,32,0.60) 0%, rgba(37,124,108,0.25) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+.video-play-btn {
+  position: relative;
+  z-index: 2;
+  width: 76px; height: 76px;
+  background: rgba(255,255,255,0.12);
+  border: 2px solid rgba(255,255,255,0.35);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(6px);
+  transition: background 0.2s, transform 0.2s;
+}
+.video-play-btn:hover { background: rgba(255,255,255,0.22); transform: scale(1.07); }
+.video-play-btn svg { width: 28px; height: 28px; color: #fff; margin-left: 5px; }
+.video-placeholder-label {
+  position: absolute;
+  bottom: 18px; left: 0; right: 0;
+  text-align: center;
+  z-index: 2;
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+}
+.video-caption {
+  margin-top: 12px;
+  text-align: center;
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 12px;
+  color: var(--mid-gray);
+  font-style: italic;
+}
+
+/* ── AGENDA TOPIC (column layout mit Bild) ── */
+.agenda-topic {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-left: 2px solid var(--teal);
+  border-radius: 2px;
+  padding: 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.agenda-topic-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.agenda-topic-img {
+  width: 100%;
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: 14px;
+  position: relative;
+}
+.agenda-topic-img img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center top;
+  max-height: 240px;
+}
+.agenda-topic-img-placeholder {
+  width: 100%;
+  height: 160px;
+  background: rgba(255,255,255,0.03);
+  border: 1px dashed rgba(94,198,179,0.22);
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+.agenda-topic-img-placeholder span {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--teal-light);
+  opacity: 0.40;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 640px) {
+  .hero { padding: 60px 24px 72px; }
+  .container { padding: 0 24px; }
+  .section-steps, .section-email { padding: 48px 0; }
+  .section-agenda { padding: 56px 0; }
+  .section-livestream { padding: 60px 0; }
+  .email-card { flex-direction: column; gap: 14px; }
+  .step-item { gap: 16px; }
+  .video-placeholder-wrap { aspect-ratio: 4 / 3; }
+  .agenda-topic-img img { max-height: 200px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ── HEADER ── -->
+<header class="site-header">
+  <div class="site-header-brand">Feminess &nbsp;·&nbsp; Marina Henze</div>
+  <div class="site-header-badge">Make more Money Mastery &nbsp;·&nbsp; 11.–13. Mai 2026</div>
+</header>
+
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-inner">
+
+    <div class="confirm-check">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="20 6 9 17 4 12"/>
+      </svg>
+    </div>
+
+    <div class="hero-eyebrow">Das hat geklappt</div>
+
+    <h1>Herzlichen<br>Glückwunsch!</h1>
+
+    <p class="hero-h1-sub">Dein Platz ist erfolgreich reserviert.</p>
+
+    <p class="hero-sub">
+      Du bist dabei beim <strong>Make more Money Mastery</strong> Workshop –<br>
+      3 Tage, die dein Verhältnis zu Geld, Wert und Wachstum für immer verändern.
+    </p>
+
+    <div class="hero-img-wrap">
+      <img src="../Bilder/Marina_MAI2314249 Kopie.jpg" alt="Marina Henze – Feminess">
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ── VIDEO ── -->
+<section class="section-video">
+  <div class="container">
+
+    <div class="section-kicker">Persönliche Nachricht</div>
+    <h2 class="section-h2" style="margin-bottom:10px;">Eine kurze Nachricht<br><em>von Marina.</em></h2>
+    <p class="video-label">Bevor es losgeht – schau dir dieses kurze Video an. Marina hat es extra für dich aufgenommen.</p>
+
+    <!-- VIDEO PLATZHALTER: YouTube-Embed hier einsetzen -->
+    <!-- <iframe width="100%" style="aspect-ratio:16/9;border:none;border-radius:2px;" src="https://www.youtube.com/embed/DEIN_VIDEO_ID" allowfullscreen></iframe> -->
+    <div class="video-placeholder-wrap">
+      <img src="../Bilder/Marina_MAI2314305 Kopie.jpg" alt="Marina Henze – Willkommensvideo">
+      <div class="video-play-btn">
+        <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+      </div>
+      <div class="video-placeholder-label">// YouTube-Video hier einbetten</div>
+    </div>
+    <p class="video-caption">Willkommensvideo von Marina · ca. 3 Minuten</p>
+
+  </div>
+</section>
+
+
+<!-- ── E-MAIL HINWEIS ── -->
+<section class="section-email">
+  <div class="container">
+
+    <div class="section-kicker">Wichtige Info</div>
+    <h2 class="section-h2" style="margin-bottom:24px;">Prüfe jetzt<br><em>deinen Posteingang.</em></h2>
+
+    <div class="email-card">
+      <div class="email-card-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+          <polyline points="22,6 12,13 2,6"/>
+        </svg>
+      </div>
+      <div class="email-card-text">
+        <strong>Du erhältst gerade eine Bestätigungs-E-Mail von Marina.</strong>
+        <p>
+          Darin findest du alle Details zum Workshop. Falls die E-Mail nicht auftaucht:
+          Schau bitte in deinen <strong>Spam-Ordner</strong> – und verschiebe die Mail in deinen Posteingang.
+          Am besten speicherst du <strong>marina@feminess.de</strong> direkt als Kontakt, damit alle
+          weiteren Workshop-Infos sicher bei dir ankommen.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ── NÄCHSTE SCHRITTE ── -->
+<section class="section-steps">
+  <div class="container">
+
+    <div class="section-kicker">Was jetzt passiert</div>
+    <h2 class="section-h2">Drei Schritte,<br><em>die jetzt wichtig sind.</em></h2>
+    <p class="section-intro">Kein Warten im Unklaren. Diese drei Dinge machen den Unterschied zwischen Dabeisein – und wirklich präsent sein.</p>
+
+    <div class="steps-grid">
+
+      <div class="step-item">
+        <span class="step-num">1</span>
+        <div class="step-content">
+          <span class="step-timing">Jetzt sofort</span>
+          <strong>Blockiere dir alle 3 Tage im Kalender</strong>
+          <p>Trag dir Montag bis Mittwoch, 11.–13. Mai 2026, jeweils 10–12 Uhr ein – bevor etwas anderes diesen Raum besetzt. Das ist der wichtigste Schritt, den du jetzt tun kannst.</p>
+          <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Make+more+Money+Mastery+Workshop&dates=20260511T080000Z%2F20260513T100000Z&details=Feminess+Make+more+Money+Mastery+Workshop+%7C+11.%E2%80%9313.+Mai+2026%0ADen+Zugangslink+erh%C3%A4ltst+du+morgens+per+SMS.&location=Online+%28Zoom%29" target="_blank" rel="noopener" class="step-cta-link">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            In Google Kalender eintragen &rarr;
+          </a>
+        </div>
+      </div>
+
+      <div class="step-item">
+        <span class="step-num">2</span>
+        <div class="step-content">
+          <span class="step-timing">Schritt 2</span>
+          <strong>Tritt der privaten Workshop-Community bei</strong>
+          <p>Alle Teilnehmerinnen treffen sich vorab in unserer geschlossenen Telegram-Gruppe – zum gegenseitigen Kennenlernen, zum Austausch und als Raum, der auch nach den 3 Tagen weiterlebt.</p>
+          <a href="https://t.me/+jMPD3ni3hgo0YWU6" target="_blank" rel="noopener" class="step-cta-link">
+            Jetzt der Community beitreten &rarr;
+          </a>
+        </div>
+      </div>
+
+      <div class="step-item">
+        <span class="step-num">3</span>
+        <div class="step-content">
+          <span class="step-timing">Schritt 3</span>
+          <strong>Folge Marina auf Instagram &amp; YouTube</strong>
+          <p>Zwischen jetzt und dem Workshop teilt Marina Impulse, die dich ideal vorbereiten – direkt in deinen Feed. Damit du optimal ankommst, wenn es am 11. Mai losgeht.</p>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px;">
+            <a href="https://www.instagram.com/marina.feminess/" target="_blank" rel="noopener" class="step-cta-link">
+              Instagram folgen &rarr;
+            </a>
+            <a href="https://www.youtube.com/@feminess" target="_blank" rel="noopener" class="step-cta-link step-cta-link-sand">
+              YouTube abonnieren &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ── AGENDA ── -->
+<section class="section-agenda">
+  <div class="container">
+
+    <div class="section-kicker">Das erwartet dich</div>
+    <h2 class="section-h2">Was in diesen<br><em>3 Tagen passiert.</em></h2>
+    <p class="section-intro">Diese drei Tage sind kein Kurs. Sie sind ein Wendepunkt. Hier bekommst du einen Vorgeschmack darauf, was dich erwartet:</p>
+
+    <!-- TAG 1 -->
+    <div class="agenda-day">
+      <div class="agenda-day-label">Tag 1</div>
+      <div class="agenda-day-date">Montag, 11. Mai 2026 &nbsp;·&nbsp; 10–12 Uhr</div>
+
+      <div class="agenda-topics">
+
+        <div class="agenda-topic">
+          <div class="agenda-topic-header">
+            <div class="agenda-topic-icon">💡</div>
+            <div class="agenda-topic-text">
+              <strong>Deine Money Identity – wer du wirklich bist</strong>
+            </div>
+          </div>
+          <!-- Bild Platzhalter Tag 1 / Thema 1 -->
+          <div class="agenda-topic-img">
+            <img src="../Bilder/Marina_MAI2314190 Kopie.jpg" alt="Deine Money Identity">
+          </div>
+          <p class="agenda-topic-text" style="font-family:'Avenir LT Pro','Inter',sans-serif;font-size:13.5px;color:var(--mid-gray);line-height:1.6;">Wir gehen an die Wurzel. Was glaubst du wirklich über Geld, über dich und über das, was du verdienen „darfst"? Du wirst erkennen, welche unbewussten Überzeugungen dein Einkommen heute deckeln.</p>
+        </div>
+
+        <div class="agenda-topic">
+          <div class="agenda-topic-header">
+            <div class="agenda-topic-icon">🔓</div>
+            <div class="agenda-topic-text">
+              <strong>Das Money Mindset Reset – der erste Schritt zur Veränderung</strong>
+            </div>
+          </div>
+          <!-- Bild Platzhalter Tag 1 / Thema 2 -->
+          <div class="agenda-topic-img">
+            <img src="../Bilder/Marina_MAI2314232 Kopie.jpg" alt="Money Mindset Reset">
+          </div>
+          <p class="agenda-topic-text" style="font-family:'Avenir LT Pro','Inter',sans-serif;font-size:13.5px;color:var(--mid-gray);line-height:1.6;">Du bekommst konkrete Werkzeuge, mit denen du limitierende Muster in echte Ressourcen verwandelst. Kein Positiv-Denken, sondern tiefe Arbeit, die wirkt.</p>
+        </div>
+
+        <div class="agenda-topic">
+          <div class="agenda-topic-header">
+            <div class="agenda-topic-icon">📊</div>
+            <div class="agenda-topic-text">
+              <strong>Dein Wert – sichtbar, klar und überzeugend</strong>
+            </div>
+          </div>
+          <!-- Bild Platzhalter Tag 1 / Thema 3 -->
+          <div class="agenda-topic-img-placeholder">
+            <span>📸 Bild: Dein Wert</span>
+          </div>
+          <p class="agenda-topic-text" style="font-family:'Avenir LT Pro','Inter',sans-serif;font-size:13.5px;color:var(--mid-gray);line-height:1.6;">Warum fällt es so vielen Frauen schwer, ihren Preis zu nennen? Wir analysieren, wo der Wert verloren geht – und wie du ihn so kommunizierst, dass dein Angebot magnetisch wirkt.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <hr class="agenda-divider">
+
+    <!-- TAG 2 -->
+    <div class="agenda-day">
+      <div class="agenda-day-label">Tag 2</div>
+      <div class="agenda-day-date">Dienstag, 12. Mai 2026 &nbsp;·&nbsp; 10–12 Uhr</div>
+
+      <div class="agenda-topics">
+
+        <div class="agenda-topic">
+          <div class="agenda-topic-header">
+            <div class="agenda-topic-icon">💰</div>
+            <div class="agenda-topic-text">
+              <strong>Preise, die du liebst – und Kunden, die gerne zahlen</strong>
+            </div>
+          </div>
+          <!-- Bild Platzhalter Tag 2 / Thema 1 -->
+          <div class="agenda-topic-img">
+            <img src="../Bilder/Marina_MAI2314254 Kopie.jpg" alt="Preise und Positionierung">
+          </div>
+          <p class="agenda-topic-text" style="font-family:'Avenir LT Pro','Inter',sans-serif;font-size:13.5px;color:var(--mid-gray);line-height:1.6;">Du lernst, wie du deine Angebote so strukturierst und positionierst, dass Hochpreis sich nicht mutig anfühlt – sondern selbstverständlich. Live-Feedback inklusive.</p>
+        </div>
+
+        <div class="agenda-topic">
+          <div class="agenda-topic-header">
+            <div class="agenda-topic-icon">🚀</div>
+            <div class="agenda-topic-text">
+              <strong>Wachstum ohne Burnout – dein skalierbares Business-Modell</strong>
+            </div>
+          </div>
+          <!-- Bild Platzhalter Tag 2 / Thema 2 -->
+          <div class="agenda-topic-img">
+            <img src="../Bilder/Marina_MAI2314266 Kopie.jpg" alt="Skalierbares Business-Modell">
+          </div>
+          <p class="agenda-topic-text" style="font-family:'Avenir LT Pro','Inter',sans-serif;font-size:13.5px;color:var(--mid-gray);line-height:1.6;">Mehr Umsatz muss nicht mehr Arbeit bedeuten. Wir zeigen dir, wie du dein Business so aufbaust, dass es dir Freiheit gibt – nicht mehr nimmt.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <hr class="agenda-divider">
+
+    <!-- TAG 3 -->
+    <div class="agenda-day">
+      <div class="agenda-day-label">Tag 3</div>
+      <div class="agenda-day-date">Mittwoch, 13. Mai 2026 &nbsp;·&nbsp; 10–12 Uhr</div>
+
+      <div class="agenda-topics">
+
+        <div class="agenda-topic">
+          <div class="agenda-topic-header">
+            <div class="agenda-topic-icon">🎯</div>
+            <div class="agenda-topic-text">
+              <strong>Dein persönlicher 90-Tage-Aktionsplan</strong>
+            </div>
+          </div>
+          <!-- Bild Platzhalter Tag 3 / Thema 1 -->
+          <div class="agenda-topic-img">
+            <img src="../Bilder/Marina_MAI2314280 Kopie.jpg" alt="90-Tage-Aktionsplan">
+          </div>
+          <p class="agenda-topic-text" style="font-family:'Avenir LT Pro','Inter',sans-serif;font-size:13.5px;color:var(--mid-gray);line-height:1.6;">Kein gutes Gefühl, das nach 3 Tagen verpufft. Du verlässt den Workshop mit einem konkreten Plan – deinem nächsten Schritt, deiner Strategie, deiner Klarheit.</p>
+        </div>
+
+        <div class="agenda-topic" style="border-left-color: var(--rose);">
+          <div class="agenda-topic-header">
+            <div class="agenda-topic-icon">🔥</div>
+            <div class="agenda-topic-text">
+              <strong>Live-Coaching: Deine größte Blockade lösen</strong>
+            </div>
+          </div>
+          <!-- Bild Platzhalter Tag 3 / Thema 2 -->
+          <div class="agenda-topic-img">
+            <img src="../Bilder/Marina_MAI2314300 Kopie.jpg" alt="Live-Coaching mit Marina">
+          </div>
+          <p class="agenda-topic-text" style="font-family:'Avenir LT Pro','Inter',sans-serif;font-size:13.5px;color:var(--mid-gray);line-height:1.6;">Marina arbeitet live mit einzelnen Teilnehmerinnen – und jede profitiert. Das sind die Momente, die man nicht vergisst.</p>
+        </div>
+
+      </div>
+
+      <!-- SECRET BONUS -->
+      <div class="bonus-teaser">
+        <div class="bonus-teaser-inner">
+          <div class="bonus-badge">Überraschung</div>
+          <h3>+ Ein geheimes Bonus-Thema an Tag 3,<br>das noch niemand kennt.</h3>
+          <p>Marina hat für alle Teilnehmerinnen eine Überraschung vorbereitet – ein Bonus-Impuls, der nur live enthüllt wird. Du wirst es lieben.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ── LIVESTREAM CTA ── -->
+<section class="section-livestream">
+  <div class="container">
+
+    <div class="section-kicker">Du bist dabei</div>
+
+    <div class="livestream-h2">Wir sehen<br>uns live.</div>
+
+    <p class="livestream-sub">
+      Den Zugangslink zum Workshop erhältst du am Morgen des 11. Mai per SMS.
+      Bis dahin: Bereite dich vor, blockiere dir die Zeit – und freu dich.
+      <strong>Diese 3 Tage werden etwas verändern.</strong>
+    </p>
+
+    <a href="#" class="cta-btn-main">Hier geht's zum Live-Stream &rarr;</a>
+    <p class="cta-note">Der Link wird am 11. Mai freigeschaltet.</p>
+
+  </div>
+</section>
+
+
+<!-- ── FOOTER ── -->
+<footer class="site-footer">
+  <p>&copy; 2026 Feminess &nbsp;·&nbsp; Marina Henze &nbsp;&nbsp;|&nbsp;&nbsp;
+    <a href="https://feminess.github.io/Impressum/" target="_blank" rel="noopener">Impressum</a>
+    &nbsp;|&nbsp;
+    <a href="https://feminess.github.io/Datenschutz/" target="_blank" rel="noopener">Datenschutz</a>
+  </p>
+</footer>
+
+</body>
+</html>
