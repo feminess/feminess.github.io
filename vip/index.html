@@ -611,6 +611,28 @@ body {
   transition: color 0.15s;
 }
 .cta-decline:hover { color: var(--mid-gray); }
+.btn-divider {
+  text-align: center;
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--mid-gray);
+  margin: 6px 0;
+  position: relative;
+}
+.btn-divider::before,
+.btn-divider::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 42%;
+  height: 1px;
+  background: var(--beige);
+}
+.btn-divider::before { left: 0; }
+.btn-divider::after  { right: 0; }
 
 /* ── WHAT'S INCLUDED ── */
 .section-includes {
@@ -998,6 +1020,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p class="quick-new-price">für nur <strong>17,00&nbsp;€</strong></p>
     </div>
     <a href="https://feminess.de/kasse/?add-to-cart=76184" class="cta-primary-btn quick-cta-btn">Hier klicken und VIP-Paket sichern!</a>
+    <div class="btn-divider">oder</div>
+    <a href="https://buy.stripe.com/14AfZg0zsbcy1vrb4z6wE00" class="cta-primary-btn quick-cta-btn">Hier klicken und VIP-Paket sichern!</a>
     <a href="https://feminess.github.io/workshop-danke/" class="cta-decline quick-decline">Nein Danke. Ich möchte nicht das Maximum aus dem Event herausholen.</a>
   </div>
 </section>
@@ -1037,6 +1061,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <!-- CTA -->
     <a href="https://feminess.de/kasse/?add-to-cart=76184" class="cta-primary-btn">Ja, ich will das VIP-Upgrade sichern &rarr;</a>
+    <div class="btn-divider">oder</div>
+    <a href="https://buy.stripe.com/14AfZg0zsbcy1vrb4z6wE00" class="cta-primary-btn">Ja, ich will das VIP-Upgrade sichern &rarr;</a>
     <a href="#" class="cta-decline">Nein danke. Ich möchte den Workshop ohne VIP-Upgrade besuchen und auf diese Extras verzichten.</a>
 
   </div>
@@ -1177,6 +1203,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p>Dieses Angebot gilt nur auf dieser Seite und nur einmal.<br>Sobald du weitergehst, ist es weg.</p>
     <div class="cta-2-wrap">
       <a href="https://feminess.de/kasse/?add-to-cart=76184" class="cta-primary-btn">Ja, ich will das VIP-Upgrade sichern &rarr;</a>
+      <div class="btn-divider">oder</div>
+      <a href="https://buy.stripe.com/14AfZg0zsbcy1vrb4z6wE00" class="cta-primary-btn">Ja, ich will das VIP-Upgrade sichern &rarr;</a>
       <a href="https://feminess.github.io/workshop-danke/" class="cta-decline">Nein danke. Ich verzichte auf das VIP-Upgrade und die enthaltenen Extras.</a>
     </div>
   </div>
