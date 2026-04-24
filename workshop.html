@@ -755,7 +755,7 @@ body {
 /* ── DETAILS KARTEN ── */
 .section-details {
   padding: 72px 0;
-  background: var(--cream);
+  background: var(--teal-deep);
   border-bottom: 1px solid var(--beige);
 }
 .details-grid {
@@ -1808,19 +1808,10 @@ body {
   .benefit-faq-grid { grid-template-columns: 1fr; }
   .benefits-grid { grid-template-columns: 1fr; }
   .details-grid {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
+    grid-template-columns: 1fr;
     gap: 12px;
-    padding: 0 24px 12px;
-    margin: 0 -24px;
-    scrollbar-width: none;
   }
-  .details-grid::-webkit-scrollbar { display: none; }
   .details-card {
-    flex: 0 0 72vw;
-    scroll-snap-align: start;
     padding: 20px 16px;
   }
   .testimonials-grid { grid-template-columns: 1fr; }
