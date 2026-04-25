@@ -2971,7 +2971,7 @@ window._load_script = function(url, callback, isSubmit) {
         const style = document.createElement('link'); style.rel = 'stylesheet'; style.href = 'https://cdn.jsdelivr.net/npm/intl-tel-input@25.2.0/build/css/intlTelInput.css'; document.head.appendChild(style);
         window._load_script('https://cdn.jsdelivr.net/npm/intl-tel-input@25.2.0/build/js/intlTelInput.min.js', function() {
             inputPhone.setAttribute("name", "phone-iti");
-            iti = intlTelInput(inputPhone, { loadUtils: () => import('https://cdn.jsdelivr.net/npm/intl-tel-input@25.2.0/build/js/utils.js'), hiddenInput: (telInputName) => ({ phone: 'phone' }), separateDialCode: true, autoPlaceholder: 'aggressive', initialCountry: 'auto', geoIpLookup: (success) => { fetch('https://marina232.activehosted.com/api/public/geo.php').then((res) => res.json()).then((data) => success(data.country_code || 'DE')).catch(() => success('DE')); } });
+            iti = intlTelInput(inputPhone, { loadUtils: () => import('https://cdn.jsdelivr.net/npm/intl-tel-input@25.2.0/build/js/utils.js'), hiddenInput: (telInputName) => ({ phone: 'phone' }), separateDialCode: true, autoPlaceholder: 'aggressive', initialCountry: 'de' });
         }, false);
     };
     var inputPhone = form_to_submit.querySelector("#phone");
