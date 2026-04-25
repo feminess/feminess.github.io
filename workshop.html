@@ -1978,6 +1978,34 @@ body { font-size: 23px; }
   box-shadow: 0 4px 20px rgba(207,90,115,0.35);
 }
 .ac-form-alt .ac-submit:hover { background: #b5405a; box-shadow: 0 8px 30px rgba(207,90,115,0.55); }
+/* intl-tel-input im Popup */
+.ac-form-alt .iti { width: 100%; }
+.ac-form-alt .iti input[type="tel"] {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.13);
+  border-radius: 2px;
+  color: #fff;
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 15px;
+  padding: 14px 16px;
+  width: 100%;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.ac-form-alt .iti input[type="tel"]::placeholder { color: rgba(255,255,255,0.38); }
+.ac-form-alt .iti input[type="tel"]:focus {
+  border-color: rgba(94,198,179,0.5);
+  box-shadow: 0 0 0 3px rgba(94,198,179,0.08);
+}
+.ac-form-alt .iti__selected-flag {
+  background: rgba(255,255,255,0.12);
+  border-radius: 2px 0 0 2px;
+}
+.ac-form-alt .iti--separate-dial-code .iti__selected-flag { border-right: 1px solid rgba(255,255,255,0.15); }
+.ac-form-alt .iti__country-list { background: #1a1a1a; color: #fff; border: 1px solid rgba(255,255,255,0.15); }
+.ac-form-alt .iti__country.iti__highlight { background: rgba(255,255,255,0.08); }
+.ac-form-alt .iti__dial-code { color: rgba(255,255,255,0.6); }
+.ac-form-alt .iti__selected-dial-code { color: #fff; }
 .ac-form-alt-success {
   color: #5ec6b3;
   font-family: 'Cormorant Garamond', Georgia, serif;
@@ -2626,7 +2654,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <input type="hidden" name="or" value="8de4cf03-acf7-415a-a625-53ae90bfaa2d">
       <input type="text"  name="firstname" placeholder="Dein Vorname" required>
       <input type="text"  name="email"     placeholder="Deine E-Mail-Adresse" required>
-      <input type="text"  name="phone"     placeholder="Deine Telefonnummer">
+      <input type="tel" id="popup-phone" name="phone" placeholder="Deine Telefonnummer">
       <input type="hidden" name="field[220]" value="">
       <input type="hidden" name="field[219]" value="">
       <input type="hidden" name="field[218]" value="">
@@ -2639,7 +2667,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 
 <!-- ── FLOATING CTA ── -->
-<a href="#" class="floating-cta" onclick="document.getElementById('exitPopup').classList.add('is-visible'); return false;">Jetzt für 0€ anmelden</a>
+<a href="#" class="floating-cta" onclick="document.getElementById('exitPopup').classList.add('is-visible'); initPopupPhone(); return false;">Jetzt für 0€ anmelden</a>
 
 <!-- ── FOOTER ── -->
 <footer class="site-footer">
@@ -2669,6 +2697,7 @@ document.querySelectorAll('.faq-item').forEach(function(item) {
     if (shown) return;
     shown = true;
     popup.classList.add('is-visible');
+    initPopupPhone();
     clearTimeout(inactivityTimer);
   }
   function hide() { popup.classList.remove('is-visible'); }
@@ -2738,11 +2767,37 @@ document.querySelectorAll('.faq-item').forEach(function(item) {
 <script>
 window.cfields = {"220":"utmcontent","219":"utmcampaign","218":"utmmedium","217":"utmsource","221":"utmterm"};
 
+// intl-tel-input für Popup-Telefon
+var popupIti = null;
+function initPopupPhone() {
+  var phoneEl = document.getElementById('popup-phone');
+  if (!phoneEl || popupIti) return;
+  var tryInit = function() {
+    if (typeof intlTelInput !== 'undefined') {
+      popupIti = intlTelInput(phoneEl, {
+        initialCountry: 'de',
+        separateDialCode: true,
+        autoPlaceholder: 'aggressive',
+        loadUtils: function() { return import('https://cdn.jsdelivr.net/npm/intl-tel-input@25.2.0/build/js/utils.js'); }
+      });
+    } else {
+      // Bibliothek noch nicht geladen – kurz warten und erneut versuchen
+      setTimeout(tryInit, 300);
+    }
+  };
+  tryInit();
+}
+
 // Helper für mid-CTA & Popup (AJAX, kein Seitenwechsel)
 function acAltSubmit(e, form) {
   e.preventDefault();
   var btn = form.querySelector('.ac-submit');
   if (!form.checkValidity()) { form.reportValidity(); return; }
+  // Vollständige Nummer mit Vorwahl übernehmen (optional, nur wenn befüllt)
+  var phoneField = form.querySelector('input[name="phone"]');
+  if (phoneField && popupIti && phoneField.value.trim()) {
+    phoneField.value = popupIti.getNumber();
+  }
   btn.disabled = true;
   btn.textContent = '...';
   var fd = new FormData(form);
