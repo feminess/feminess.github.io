@@ -2791,35 +2791,30 @@ document.querySelectorAll('.faq-item').forEach(function(item) {
 <script>
 window.cfields = {"220":"utmcontent","219":"utmcampaign","218":"utmmedium","217":"utmsource","221":"utmterm"};
 
-// ── UTM PARAMETER IN FORMULAR-FELDER SCHREIBEN ──
-(function() {
-  var map = {
-    'utm_source':   'field[217]',
-    'utm_medium':   'field[218]',
-    'utm_campaign': 'field[219]',
-    'utm_content':  'field[220]',
-    'utm_term':     'field[221]'
-  };
-  var params = new URLSearchParams(window.location.search);
-  // Neue UTMs im sessionStorage speichern, alte behalten
-  Object.keys(map).forEach(function(key) {
-    var val = params.get(key);
-    if (val) sessionStorage.setItem(key, val);
+// ── UTM PARAMETER ──
+window._utms = (function() {
+  var map = { 'utm_source':'field[217]', 'utm_medium':'field[218]', 'utm_campaign':'field[219]', 'utm_content':'field[220]', 'utm_term':'field[221]' };
+  var p = new URLSearchParams(window.location.search), result = {};
+  Object.keys(map).forEach(function(k) {
+    var v = p.get(k);
+    if (v) { sessionStorage.setItem(k, v); result[map[k]] = v; }
+    else { var sv = sessionStorage.getItem(k); if (sv) result[map[k]] = sv; }
   });
-  // Alle Hidden-Felder (Hero + Popup) befüllen – getElementsByName ist sicherer
-  function fillUtmFields() {
-    Object.keys(map).forEach(function(key) {
-      var val = params.get(key) || sessionStorage.getItem(key) || '';
-      var els = document.getElementsByName(map[key]);
-      for (var i = 0; i < els.length; i++) { els[i].value = val; }
-    });
-  }
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', fillUtmFields);
-  } else {
-    fillUtmFields();
-  }
+  return result;
 })();
+
+// UTMs in Hero-Formular eintragen (Submit-Zeitpunkt)
+document.addEventListener('DOMContentLoaded', function() {
+  var heroForm = document.getElementById('_form_561_');
+  if (heroForm) {
+    heroForm.addEventListener('submit', function() {
+      Object.keys(window._utms).forEach(function(fieldName) {
+        var el = heroForm.querySelector('[name="' + fieldName + '"]');
+        if (el) el.value = window._utms[fieldName];
+      });
+    }, true); // capture phase – vor AC-Handler
+  }
+});
 
 // Helper für mid-CTA & Popup (AJAX, kein Seitenwechsel)
 function acAltSubmit(e, form) {
@@ -2834,6 +2829,8 @@ function acAltSubmit(e, form) {
   btn.disabled = true;
   btn.textContent = '...';
   var fd = new FormData(form);
+  // UTMs direkt in FormData injizieren
+  if (window._utms) { Object.keys(window._utms).forEach(function(k) { fd.set(k, window._utms[k]); }); }
   var params = [];
   fd.forEach(function(v, k) { params.push(encodeURIComponent(k) + '=' + encodeURIComponent(v)); });
   var qs = params.join('&');
