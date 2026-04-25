@@ -2016,6 +2016,10 @@ body { font-size: 23px; }
 }
 </style>
 
+<!-- intl-tel-input für Popup-Telefon -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@25.2.0/build/css/intlTelInput.css">
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@25.2.0/build/js/intlTelInput.min.js"></script>
+
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -2771,21 +2775,13 @@ window.cfields = {"220":"utmcontent","219":"utmcampaign","218":"utmmedium","217"
 var popupIti = null;
 function initPopupPhone() {
   var phoneEl = document.getElementById('popup-phone');
-  if (!phoneEl || popupIti) return;
-  var tryInit = function() {
-    if (typeof intlTelInput !== 'undefined') {
-      popupIti = intlTelInput(phoneEl, {
-        initialCountry: 'de',
-        separateDialCode: true,
-        autoPlaceholder: 'aggressive',
-        loadUtils: function() { return import('https://cdn.jsdelivr.net/npm/intl-tel-input@25.2.0/build/js/utils.js'); }
-      });
-    } else {
-      // Bibliothek noch nicht geladen – kurz warten und erneut versuchen
-      setTimeout(tryInit, 300);
-    }
-  };
-  tryInit();
+  if (!phoneEl || popupIti || typeof intlTelInput === 'undefined') return;
+  popupIti = intlTelInput(phoneEl, {
+    initialCountry: 'de',
+    separateDialCode: true,
+    autoPlaceholder: 'aggressive',
+    loadUtils: function() { return import('https://cdn.jsdelivr.net/npm/intl-tel-input@25.2.0/build/js/utils.js'); }
+  });
 }
 
 // Helper für mid-CTA & Popup (AJAX, kein Seitenwechsel)
