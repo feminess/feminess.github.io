@@ -2019,6 +2019,18 @@ body { font-size: 23px; }
 <!-- intl-tel-input für Popup-Telefon -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@25.2.0/build/css/intlTelInput.css">
 <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@25.2.0/build/js/intlTelInput.min.js"></script>
+<script>
+window.popupIti = null;
+document.addEventListener('DOMContentLoaded', function() {
+  var phoneEl = document.getElementById('popup-phone');
+  if (phoneEl && typeof intlTelInput !== 'undefined') {
+    window.popupIti = intlTelInput(phoneEl, {
+      initialCountry: 'de',
+      separateDialCode: true
+    });
+  }
+});
+</script>
 
 </head>
 <body>
@@ -2671,7 +2683,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 
 <!-- ── FLOATING CTA ── -->
-<a href="#" class="floating-cta" onclick="document.getElementById('exitPopup').classList.add('is-visible'); initPopupPhone(); return false;">Jetzt für 0€ anmelden</a>
+<a href="#" class="floating-cta" onclick="document.getElementById('exitPopup').classList.add('is-visible'); return false;">Jetzt für 0€ anmelden</a>
 
 <!-- ── FOOTER ── -->
 <footer class="site-footer">
@@ -2701,7 +2713,6 @@ document.querySelectorAll('.faq-item').forEach(function(item) {
     if (shown) return;
     shown = true;
     popup.classList.add('is-visible');
-    initPopupPhone();
     clearTimeout(inactivityTimer);
   }
   function hide() { popup.classList.remove('is-visible'); }
@@ -2771,19 +2782,6 @@ document.querySelectorAll('.faq-item').forEach(function(item) {
 <script>
 window.cfields = {"220":"utmcontent","219":"utmcampaign","218":"utmmedium","217":"utmsource","221":"utmterm"};
 
-// intl-tel-input für Popup-Telefon
-var popupIti = null;
-function initPopupPhone() {
-  var phoneEl = document.getElementById('popup-phone');
-  if (!phoneEl || popupIti || typeof intlTelInput === 'undefined') return;
-  popupIti = intlTelInput(phoneEl, {
-    initialCountry: 'de',
-    separateDialCode: true,
-    autoPlaceholder: 'aggressive',
-    loadUtils: function() { return import('https://cdn.jsdelivr.net/npm/intl-tel-input@25.2.0/build/js/utils.js'); }
-  });
-}
-
 // Helper für mid-CTA & Popup (AJAX, kein Seitenwechsel)
 function acAltSubmit(e, form) {
   e.preventDefault();
@@ -2791,8 +2789,8 @@ function acAltSubmit(e, form) {
   if (!form.checkValidity()) { form.reportValidity(); return; }
   // Vollständige Nummer mit Vorwahl übernehmen (optional, nur wenn befüllt)
   var phoneField = form.querySelector('input[name="phone"]');
-  if (phoneField && popupIti && phoneField.value.trim()) {
-    phoneField.value = popupIti.getNumber();
+  if (phoneField && window.popupIti && phoneField.value.trim()) {
+    phoneField.value = window.popupIti.getNumber();
   }
   btn.disabled = true;
   btn.textContent = '...';
