@@ -2782,6 +2782,37 @@ document.querySelectorAll('.faq-item').forEach(function(item) {
 <script>
 window.cfields = {"220":"utmcontent","219":"utmcampaign","218":"utmmedium","217":"utmsource","221":"utmterm"};
 
+// ── UTM PARAMETER IN FORMULAR-FELDER SCHREIBEN ──
+(function() {
+  var map = {
+    'utm_source':   'field[217]',
+    'utm_medium':   'field[218]',
+    'utm_campaign': 'field[219]',
+    'utm_content':  'field[220]',
+    'utm_term':     'field[221]'
+  };
+  var params = new URLSearchParams(window.location.search);
+  // Neue UTMs im sessionStorage speichern, alte behalten
+  Object.keys(map).forEach(function(key) {
+    var val = params.get(key);
+    if (val) sessionStorage.setItem(key, val);
+  });
+  // Alle Hidden-Felder (Hero + Popup) befüllen
+  function fillUtmFields() {
+    Object.keys(map).forEach(function(key) {
+      var val = params.get(key) || sessionStorage.getItem(key) || '';
+      document.querySelectorAll('input[name="' + map[key] + '"]').forEach(function(el) {
+        el.value = val;
+      });
+    });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', fillUtmFields);
+  } else {
+    fillUtmFields();
+  }
+})();
+
 // Helper für mid-CTA & Popup (AJAX, kein Seitenwechsel)
 function acAltSubmit(e, form) {
   e.preventDefault();
