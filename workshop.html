@@ -2808,10 +2808,10 @@ document.addEventListener('DOMContentLoaded', function() {
   var heroForm = document.getElementById('_form_561_');
   if (heroForm) {
     heroForm.addEventListener('submit', function() {
-      Object.keys(window._utms).forEach(function(fieldName) {
-        var el = heroForm.querySelector('[name="' + fieldName + '"]');
-        if (el) el.value = window._utms[fieldName];
-      });
+      for (var i = 0; i < heroForm.elements.length; i++) {
+        var el = heroForm.elements[i];
+        if (window._utms[el.name] !== undefined) el.value = window._utms[el.name];
+      }
     }, true); // capture phase – vor AC-Handler
   }
 });
