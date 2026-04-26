@@ -2803,18 +2803,15 @@ window._utms = (function() {
   return result;
 })();
 
-// UTMs in Hero-Formular eintragen (Submit-Zeitpunkt)
-document.addEventListener('DOMContentLoaded', function() {
+// UTMs in Hero-Formular eintragen (capture auf document = feuert vor allen Form-Listenern)
+document.addEventListener('submit', function(e) {
   var heroForm = document.getElementById('_form_561_');
-  if (heroForm) {
-    heroForm.addEventListener('submit', function() {
-      for (var i = 0; i < heroForm.elements.length; i++) {
-        var el = heroForm.elements[i];
-        if (window._utms[el.name] !== undefined) el.value = window._utms[el.name];
-      }
-    }, true); // capture phase – vor AC-Handler
+  if (!heroForm || e.target !== heroForm) return;
+  for (var i = 0; i < heroForm.elements.length; i++) {
+    var el = heroForm.elements[i];
+    if (window._utms[el.name] !== undefined) el.value = window._utms[el.name];
   }
-});
+}, true); // capture phase auf document-Ebene
 
 // Helper für mid-CTA & Popup (AJAX, kein Seitenwechsel)
 function acAltSubmit(e, form) {
