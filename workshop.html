@@ -3170,6 +3170,24 @@ window._load_script = function(url, callback, isSubmit) {
     };
     addEvent(form_to_submit, 'submit', form_submit);
 })();
+
+// ── UTM: direkt in AC's JSONP-Request einhängen ──
+// Überschreibt window._load_script NACH allen AC-Blöcken.
+// Wenn AC die Formulardaten sendet, werden UTM-Werte direkt an die URL angehängt –
+// unabhängig davon, ob die hidden Felder korrekt gelesen wurden.
+(function() {
+  var orig = window._load_script;
+  if (!orig) return;
+  window._load_script = function(url, cb, isSubmit) {
+    if (isSubmit && window._utms) {
+      Object.keys(window._utms).forEach(function(k) {
+        var v = window._utms[k];
+        if (v) url += '&' + k + '=' + encodeURIComponent(v);
+      });
+    }
+    return orig.call(this, url, cb, isSubmit);
+  };
+})();
 </script>
 </body>
 </html>
