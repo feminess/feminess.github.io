@@ -2789,29 +2789,52 @@ document.querySelectorAll('.faq-item').forEach(function(item) {
 
 <!-- ── ACTIVECAMPAIGN FORM SCRIPT ── -->
 <script>
-window.cfields = {"220":"utmcontent","219":"utmcampaign","218":"utmmedium","217":"utmsource","221":"utmterm"};
+window.cfields = {"220":"utm_content","219":"utm_campaign","218":"utm_medium","217":"utm_source","221":"utm_term"};
 
 // ── UTM PARAMETER ──
-window._utms = (function() {
-  var map = { 'utm_source':'field[217]', 'utm_medium':'field[218]', 'utm_campaign':'field[219]', 'utm_content':'field[220]', 'utm_term':'field[221]' };
-  var p = new URLSearchParams(window.location.search), result = {};
+(function() {
+  // Mapping: URL-Param → AC-Feldname (field[XXX])
+  var map = {
+    'utm_source':   'field[217]',
+    'utm_medium':   'field[218]',
+    'utm_campaign': 'field[219]',
+    'utm_content':  'field[220]',
+    'utm_term':     'field[221]'
+  };
+
+  // 1. UTMs aus URL holen (oder sessionStorage als Fallback)
+  var utms = {};
+  var p = new URLSearchParams(window.location.search);
   Object.keys(map).forEach(function(k) {
     var v = p.get(k);
-    if (v) { sessionStorage.setItem(k, v); result[map[k]] = v; }
-    else { var sv = sessionStorage.getItem(k); if (sv) result[map[k]] = sv; }
+    if (v) { sessionStorage.setItem(k, v); utms[map[k]] = v; }
+    else    { var sv = sessionStorage.getItem(k); if (sv) utms[map[k]] = sv; }
   });
-  return result;
-})();
+  window._utms = utms;
 
-// UTMs in Hero-Formular eintragen (capture auf document = feuert vor allen Form-Listenern)
-document.addEventListener('submit', function(e) {
-  var heroForm = document.getElementById('_form_561_');
-  if (!heroForm || e.target !== heroForm) return;
-  for (var i = 0; i < heroForm.elements.length; i++) {
-    var el = heroForm.elements[i];
-    if (window._utms[el.name] !== undefined) el.value = window._utms[el.name];
+  // 2. Felder in alle Formulare eintragen (beim Seitenload – kein Timing-Problem)
+  function fillAll() {
+    if (!Object.keys(utms).length) return;
+    var inputs = document.querySelectorAll('input[type="hidden"]');
+    for (var i = 0; i < inputs.length; i++) {
+      if (utms[inputs[i].name] !== undefined) inputs[i].value = utms[inputs[i].name];
+    }
   }
-}, true); // capture phase auf document-Ebene
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', fillAll);
+  } else {
+    fillAll();
+  }
+
+  // 3. Backup: nochmal beim Submit (falls AC die Felder zwischenzeitlich resettet)
+  document.addEventListener('submit', function(e) {
+    if (!Object.keys(utms).length) return;
+    var form = e.target;
+    for (var i = 0; i < form.elements.length; i++) {
+      if (utms[form.elements[i].name] !== undefined) form.elements[i].value = utms[form.elements[i].name];
+    }
+  }, true);
+})();
 
 // Helper für mid-CTA & Popup (AJAX, kein Seitenwechsel)
 function acAltSubmit(e, form) {
