@@ -1898,8 +1898,9 @@ body { font-size: 23px; }
 #_form_561_ ._form_element {
   margin-bottom: 8px !important;
 }
-#_form_561_ ._form_element :is(input[type="text"], input[type="tel"]),
-#_form_561_ .iti input {
+/* Text-Inputs (Name, E-Mail) */
+#_form_561_ ._form_element input[type="text"],
+#_form_561_ ._form_element input[type="email"] {
   background: rgba(255,255,255,0.07) !important;
   border-top:    1px solid rgba(255,255,255,0.13) !important;
   border-left:   1px solid rgba(255,255,255,0.13) !important;
@@ -1910,6 +1911,22 @@ body { font-size: 23px; }
   font-family: 'Avenir LT Pro', 'Inter', sans-serif !important;
   font-size: 15px !important;
   padding: 14px 16px !important;
+}
+/* Telefon-Input: kein padding-left per !important → intl-tel-input setzt es per JS */
+#_form_561_ .iti input[type="tel"] {
+  background: rgba(255,255,255,0.07) !important;
+  border-top:    1px solid rgba(255,255,255,0.13) !important;
+  border-left:   1px solid rgba(255,255,255,0.13) !important;
+  border-right:  1px solid rgba(255,255,255,0.13) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.13) !important;
+  border-radius: 0 2px 2px 0 !important;
+  color: #fff !important;
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif !important;
+  font-size: 15px !important;
+  padding-top:    14px !important;
+  padding-right:  16px !important;
+  padding-bottom: 14px !important;
+  /* padding-left wird von intl-tel-input per JS gesetzt – kein !important hier */
 }
 #_form_561_ ._form_element input[type="text"]:focus {
   border-top:    1px solid rgba(94,198,179,0.5) !important;
@@ -1973,10 +1990,6 @@ body { font-size: 23px; }
 }
 /* Vorwahl-Ziffer in Weiß */
 #_form_561_ .iti__selected-dial-code { color: #fff !important; font-size: 14px !important; }
-/* Telefon-Input: linkes Padding groß genug für Flag + Vorwahl */
-#_form_561_ .iti input[type="tel"] {
-  padding-left: 90px !important;
-}
 /* Dropdown-Liste */
 #_form_561_ .iti__country-list {
   background: #1c1c1c !important;
