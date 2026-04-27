@@ -1907,9 +1907,10 @@ body { font-size: 23px; }
 #_form_561_ ._form_element {
   margin-bottom: 8px !important;
 }
-/* Text-Inputs (Name, E-Mail) */
+/* Text-Inputs (Name, E-Mail, Telefon) */
 #_form_561_ ._form_element input[type="text"],
-#_form_561_ ._form_element input[type="email"] {
+#_form_561_ ._form_element input[type="email"],
+#_form_561_ ._form_element input[type="tel"] {
   background: rgba(255,255,255,0.07) !important;
   border-top:    1px solid rgba(255,255,255,0.13) !important;
   border-left:   1px solid rgba(255,255,255,0.13) !important;
@@ -1921,22 +1922,6 @@ body { font-size: 23px; }
   font-size: 15px !important;
   padding: 14px 16px !important;
 }
-/* Telefon-Input: kein padding-left per !important → intl-tel-input setzt es per JS */
-#_form_561_ .iti input[type="tel"] {
-  background: rgba(255,255,255,0.07) !important;
-  border-top:    1px solid rgba(255,255,255,0.13) !important;
-  border-left:   1px solid rgba(255,255,255,0.13) !important;
-  border-right:  1px solid rgba(255,255,255,0.13) !important;
-  border-bottom: 1px solid rgba(255,255,255,0.13) !important;
-  border-radius: 0 2px 2px 0 !important;
-  color: #fff !important;
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif !important;
-  font-size: 15px !important;
-  padding-top:    14px !important;
-  padding-right:  16px !important;
-  padding-bottom: 14px !important;
-  /* padding-left wird von intl-tel-input per JS gesetzt – kein !important hier */
-}
 #_form_561_ ._form_element input[type="text"]:focus {
   border-top:    1px solid rgba(94,198,179,0.5) !important;
   border-left:   1px solid rgba(94,198,179,0.5) !important;
@@ -1946,6 +1931,13 @@ body { font-size: 23px; }
   box-shadow: 0 0 0 3px rgba(94,198,179,0.08) !important;
 }
 #_form_561_ input::placeholder { color: rgba(255,255,255,0.38) !important; }
+#_form_561_ ._phone-hint {
+  margin: 5px 0 0 0 !important;
+  font-size: 11.5px !important;
+  color: rgba(255,255,255,0.45) !important;
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif !important;
+  line-height: 1.4 !important;
+}
 #_form_561_ ._submit {
   background: #cf5a73 !important;
   border: none !important;
@@ -1983,31 +1975,6 @@ body { font-size: 23px; }
   border-radius: 2px !important;
 }
 
-/* ── intl-tel-input im Popup ── */
-/* Wrapper nimmt volle Breite */
-#_form_561_ .iti { width: 100%; }
-/* Flag-/Vorwahl-Selektor: passend zum dunklen Hintergrund */
-#_form_561_ .iti__selected-flag,
-#_form_561_ .iti--separate-dial-code .iti__selected-flag {
-  background: rgba(255,255,255,0.10) !important;
-  border-radius: 2px 0 0 2px !important;
-  border-right: 1px solid rgba(255,255,255,0.18) !important;
-  padding: 0 10px !important;
-}
-#_form_561_ .iti--separate-dial-code .iti__selected-flag:hover {
-  background: rgba(255,255,255,0.18) !important;
-}
-/* Vorwahl-Ziffer in Weiß */
-#_form_561_ .iti__selected-dial-code { color: #fff !important; font-size: 14px !important; }
-/* Dropdown-Liste */
-#_form_561_ .iti__country-list {
-  background: #1c1c1c !important;
-  border: 1px solid rgba(255,255,255,0.15) !important;
-  border-radius: 4px !important;
-}
-#_form_561_ .iti__country-name { color: #e0e0e0 !important; }
-#_form_561_ .iti__dial-code { color: rgba(255,255,255,0.55) !important; }
-#_form_561_ .iti__country.iti__highlight { background: rgba(255,255,255,0.08) !important; }
 
 /* ── Alt-Formulare (mid-CTA & Popup) ── */
 .ac-form-alt {
@@ -2053,34 +2020,6 @@ body { font-size: 23px; }
   box-shadow: 0 4px 20px rgba(207,90,115,0.35);
 }
 .ac-form-alt .ac-submit:hover { background: #b5405a; box-shadow: 0 8px 30px rgba(207,90,115,0.55); }
-/* intl-tel-input im Popup */
-.ac-form-alt .iti { width: 100%; }
-.ac-form-alt .iti input[type="tel"] {
-  background: rgba(255,255,255,0.07);
-  border: 1px solid rgba(255,255,255,0.13);
-  border-radius: 2px;
-  color: #fff;
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
-  font-size: 15px;
-  padding: 14px 16px;
-  width: 100%;
-  outline: none;
-  transition: border-color 0.2s;
-}
-.ac-form-alt .iti input[type="tel"]::placeholder { color: rgba(255,255,255,0.38); }
-.ac-form-alt .iti input[type="tel"]:focus {
-  border-color: rgba(94,198,179,0.5);
-  box-shadow: 0 0 0 3px rgba(94,198,179,0.08);
-}
-.ac-form-alt .iti__selected-flag {
-  background: rgba(255,255,255,0.12);
-  border-radius: 2px 0 0 2px;
-}
-.ac-form-alt .iti--separate-dial-code .iti__selected-flag { border-right: 1px solid rgba(255,255,255,0.15); }
-.ac-form-alt .iti__country-list { background: #1a1a1a; color: #fff; border: 1px solid rgba(255,255,255,0.15); }
-.ac-form-alt .iti__country.iti__highlight { background: rgba(255,255,255,0.08); }
-.ac-form-alt .iti__dial-code { color: rgba(255,255,255,0.6); }
-.ac-form-alt .iti__selected-dial-code { color: #fff; }
 .ac-form-alt-success {
   color: #5ec6b3;
   font-family: 'Cormorant Garamond', Georgia, serif;
@@ -2091,9 +2030,6 @@ body { font-size: 23px; }
 }
 </style>
 
-<!-- intl-tel-input für Popup-Telefon -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@25.2.0/build/css/intlTelInput.css">
-<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@25.2.0/build/js/intlTelInput.min.js"></script>
 
 </head>
 <body>
@@ -2752,8 +2688,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="_form_element _x51767879 _full_width">
           <label for="phone" class="_form-label">Telefon</label>
           <div class="_field-wrapper">
-            <input type="text" id="phone" name="phone" placeholder="z. B. 0151 23456789" />
+            <input type="tel" id="phone" name="phone" placeholder="+491601234567" />
           </div>
+          <p class="_phone-hint">Bitte trage die internationale Vorwahl deiner Nummer ein.</p>
         </div>
         <div class="_form_element _x40740069 _full_width">
           <div class="_field-wrapper">
@@ -3077,7 +3014,6 @@ window._load_script = function(url, callback, isSubmit) {
     head.appendChild(script);
 };
 (function() {
-    var iti;
     if (window.location.search.search("excludeform") !== -1) return false;
     var getCookie = function(name) { var match = document.cookie.match(new RegExp('(^|; )' + name + '=([^;]+)')); return match ? match[2] : localStorage.getItem(name); };
     var setCookie = function(name, value) { var now = new Date(); var time = now.getTime(); var expireTime = time + 1000 * 60 * 60 * 24 * 365; now.setTime(expireTime); document.cookie = name + '=' + value + '; expires=' + now + ';path=/; Secure; SameSite=Lax;'; localStorage.setItem(name, value); };
@@ -3118,7 +3054,7 @@ window._load_script = function(url, callback, isSubmit) {
             else if (value === undefined || value === null || value === '') { elem.className = elem.className + ' _has_error'; no_error = false; tooltip = create_tooltip(elem, "Bitte füllen Sie das markierte Pflichtfeld aus."); }
         }
         if (no_error && elem.name == 'email') { if (!value.match(/^[\+_a-z0-9-'&=]+(\.[\+_a-z0-9-']+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,})$/i)) { elem.className = elem.className + ' _has_error'; no_error = false; tooltip = create_tooltip(elem, "Geben Sie eine gültige E-Mail-Adresse ein."); } }
-        if (no_error && (elem.id == 'phone')) { if (elem.value.trim() && typeof iti != 'undefined' && !iti.isValidNumber()) { elem.className = elem.className + ' _has_error'; no_error = false; tooltip = create_tooltip(elem, "Geben Sie eine gültige Telefonnummer ein."); } }
+        if (no_error && (elem.id == 'phone')) { if (elem.value.trim() && !elem.value.trim().match(/^\+?[\d\s\-().]{6,}$/)) { elem.className = elem.className + ' _has_error'; no_error = false; tooltip = create_tooltip(elem, "Geben Sie eine gültige Telefonnummer ein."); } }
         if (no_error && /date_field/.test(elem.className)) { if (!value.match(/^\d\d\d\d-\d\d-\d\d$/)) { elem.className = elem.className + ' _has_error'; no_error = false; tooltip = create_tooltip(elem, "Gültiges Datum eingeben"); } }
         if (no_error && elem.name === 'sms_consent') { var showError = !!elem.attributes.required && !elem.checked; if (showError) { elem.className = elem.className + ' _has_error'; no_error = false; tooltip = create_tooltip(elem, "Bitte markieren Sie dieses Feld, um fortzufahren"); } else { elem.className = elem.className.replace(/ ?_has_error ?/g, ''); } }
         tooltip ? resize_tooltip(tooltip) : false;
@@ -3137,42 +3073,22 @@ window._load_script = function(url, callback, isSubmit) {
     };
     addEvent(window, 'resize', resize_tooltips);
     addEvent(window, 'scroll', resize_tooltips);
-    // Telefon-Initialisierung (intl-tel-input bereits geladen)
-    var inputPhone = form_to_submit.querySelector("#phone");
-    if (inputPhone && typeof intlTelInput !== 'undefined') {
-        inputPhone.setAttribute("name", "phone-iti");
-        iti = intlTelInput(inputPhone, {
-            loadUtils: function() { return import('https://cdn.jsdelivr.net/npm/intl-tel-input@25.2.0/build/js/utils.js'); },
-            hiddenInput: function() { return { phone: 'phone' }; },
-            separateDialCode: true,
-            autoPlaceholder: 'aggressive',
-            initialCountry: 'auto',
-            geoIpLookup: function(success) {
-                fetch('https://marina232.activehosted.com/api/public/geo.php')
-                    .then(function(res) { return res.json(); })
-                    .then(function(data) { success(data.country_code || 'DE'); })
-                    .catch(function() { success('DE'); });
-            }
-        });
-        // URL-Parameter vorausfüllen (nach iti-Init)
-        (function() {
-            var params = new URLSearchParams(window.location.search);
-            var fn = params.get('vorname'), em = params.get('email'), tel = params.get('telefon');
-            var fnField = form_to_submit.querySelector('#firstname');
-            var emField = form_to_submit.querySelector('#email');
-            if (fn && fnField) fnField.value = fn;
-            if (em && emField) emField.value = em;
-            if (tel) {
-                iti.promise.then(function() { iti.setNumber(tel); });
-            }
-        })();
-    }
+    // URL-Parameter vorausfüllen
+    (function() {
+        var params = new URLSearchParams(window.location.search);
+        var fn = params.get('vorname'), em = params.get('email'), tel = params.get('telefon');
+        var fnField = form_to_submit.querySelector('#firstname');
+        var emField = form_to_submit.querySelector('#email');
+        var telField = form_to_submit.querySelector('#phone');
+        if (fn && fnField) fnField.value = fn;
+        if (em && emField) emField.value = em;
+        if (tel && telField) telField.value = tel;
+    })();
     var _form_serialize = function(form){if(!form||form.nodeName!=="FORM"){return }var i,j,q=[];for(i=0;i<form.elements.length;i++){if(form.elements[i].name===""){continue}switch(form.elements[i].nodeName){case"INPUT":switch(form.elements[i].type){case"tel":q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].previousSibling.querySelector('div.iti__selected-dial-code').innerText)+encodeURIComponent(" ")+encodeURIComponent(form.elements[i].value));break;case"text":case"number":case"date":case"time":case"hidden":case"password":case"button":case"reset":case"submit":q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value));break;case"checkbox":case"radio":if(form.elements[i].checked){q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value))}break;case"file":break}break;case"TEXTAREA":q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value));break;case"SELECT":switch(form.elements[i].type){case"select-one":q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value));break;case"select-multiple":for(j=0;j<form.elements[i].options.length;j++){if(form.elements[i].options[j].selected){q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].options[j].value))}}break}break;case"BUTTON":switch(form.elements[i].type){case"reset":case"submit":case"button":q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value));break}break}}return q.join("&")};
     var formSupportsPost = false;
     var form_submit = function(e) {
         e.preventDefault();
         if (validate_form()) {
-            if (typeof iti !== 'undefined') { var ph = form_to_submit.querySelector('input[name="phone"]'); if (ph) ph.value = iti.getNumber(); }
             var submitButton = e.target.querySelector('#_form_561_submit');
             submitButton.disabled = true; submitButton.classList.add('processing');
             var serialized = _form_serialize(document.getElementById('_form_561_')).replace(/%0A/g, '\\n');
