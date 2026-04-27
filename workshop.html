@@ -2146,7 +2146,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <span class="details-card-icon">📅</span>
         <div class="details-card-label">Veranstaltungsdaten</div>
         <div class="details-card-value">11.–13. Mai 2026</div>
-        <p class="details-card-note">Drei Live-Sessions, die du dir blockieren solltest. Kein Aufwand, maximale Wirkung.</p>
+        <p class="details-card-note">Drei Online-Live-Sessions, die du dir blockieren solltest. Kein Aufwand, maximale Wirkung.</p>
       </div>
 
       <div class="details-card">
@@ -2220,6 +2220,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="kostenlos-badge">100% kostenfrei</div>
     <h2 class="kostenlos-headline">Dein Platz beim <em>BREATHE &amp; BUILD</em><br>Workshop – vollständig kostenfrei.</h2>
     <a href="#" onclick="document.getElementById('exitPopup').classList.add('is-visible'); return false;" class="cta-btn cta-btn-inline">JETZT FÜR 0€ ANMELDEN &rarr;</a>
+    <div class="mid-countdown-wrap" style="margin-top:28px;">
+      <span class="mid-cd-label">Workshop startet in</span>
+      <div class="mid-cd-unit">
+        <span class="mid-cd-num" id="kcd-days">00</span>
+        <span class="mid-cd-lbl">Tage</span>
+      </div>
+      <span class="mid-cd-sep">:</span>
+      <div class="mid-cd-unit">
+        <span class="mid-cd-num" id="kcd-hours">00</span>
+        <span class="mid-cd-lbl">Std</span>
+      </div>
+      <span class="mid-cd-sep">:</span>
+      <div class="mid-cd-unit">
+        <span class="mid-cd-num" id="kcd-minutes">00</span>
+        <span class="mid-cd-lbl">Min</span>
+      </div>
+      <span class="mid-cd-sep">:</span>
+      <div class="mid-cd-unit">
+        <span class="mid-cd-num" id="kcd-seconds">00</span>
+        <span class="mid-cd-lbl">Sek</span>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -2264,6 +2286,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p class="anchor-cta-note">11.–13. Mai 2026 &nbsp;·&nbsp; jeweils 11–13 Uhr &nbsp;·&nbsp; kostenfrei</p>
   </div>
 </div>
+
+
+<!-- ── ÜBER MARINA ── -->
+<section class="section-about">
+  <div class="container">
+    <div class="about-inner">
+      <div class="about-image-wrap">
+        <img src="./Bilder/Marina_MAI2314280 Kopie.jpg" alt="Marina Henze – Feminess">
+      </div>
+      <div class="about-text">
+        <div class="section-kicker">Von wem wirst du lernen?</div>
+        <h2>Ich bin Marina Henze.</h2>
+        <p>Seit über 20 Jahren bin ich Unternehmerin und habe mit Feminess eine Multi-Millionen-Brand aufgebaut und bereits mehr als 20.000 Frauen unterstützt.</p>
+        <p>Ich begleite heute weibliche Coaches dabei, ein skalierbares Online-Business aufzubauen – ohne Hustle, ohne Dauerpräsenz und ohne sich zu verbiegen. Meine Mission ist klar: mehr Umsatz, weniger Hustle.</p>
+        <p><strong>Was meine Arbeit dabei besonders macht, ist nicht einfach nur Strategie. Ich verbinde Business mit deinem Nervensystem. Denn nachhaltiger Erfolg entsteht nicht durch noch mehr Tun oder bessere Tools, sondern dann, wenn deine Strategie wirklich zu dir passt und deine innere Ausrichtung mitzieht.</strong></p>
+        <div class="about-cred-row">
+          <span class="about-cred-tag">✓ 20+ Jahre Unternehmerin</span>
+          <span class="about-cred-tag">✓ Gründerin Feminess</span>
+          <span class="about-cred-tag">✓ 20.000+ Frauen begleitet</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 <!-- ── AGENDA ── -->
@@ -2388,30 +2434,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 </div>
-
-
-<!-- ── ÜBER MARINA ── -->
-<section class="section-about">
-  <div class="container">
-    <div class="about-inner">
-      <div class="about-image-wrap">
-        <img src="./Bilder/Marina_MAI2314280 Kopie.jpg" alt="Marina Henze – Feminess">
-      </div>
-      <div class="about-text">
-        <div class="section-kicker">Von wem wirst du lernen?</div>
-        <h2>Ich bin Marina Henze.</h2>
-        <p>Seit über 20 Jahren bin ich Unternehmerin und habe mit Feminess eine Multi-Millionen-Brand aufgebaut und bereits mehr als 20.000 Frauen unterstützt.</p>
-        <p>Ich begleite heute weibliche Coaches dabei, ein skalierbares Online-Business aufzubauen – ohne Hustle, ohne Dauerpräsenz und ohne sich zu verbiegen. Meine Mission ist klar: mehr Umsatz, weniger Hustle.</p>
-        <p><strong>Was meine Arbeit dabei besonders macht, ist nicht einfach nur Strategie. Ich verbinde Business mit deinem Nervensystem. Denn nachhaltiger Erfolg entsteht nicht durch noch mehr Tun oder bessere Tools, sondern dann, wenn deine Strategie wirklich zu dir passt und deine innere Ausrichtung mitzieht.</strong></p>
-        <div class="about-cred-row">
-          <span class="about-cred-tag">✓ 20+ Jahre Unternehmerin</span>
-          <span class="about-cred-tag">✓ Gründerin Feminess</span>
-          <span class="about-cred-tag">✓ 20.000+ Frauen begleitet</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 
 <!-- ── TESTIMONIALS ── -->
@@ -2714,10 +2736,10 @@ document.querySelectorAll('.faq-item').forEach(function(item) {
 
   // ID-Paare: [topbar, mid-CTA]
   var ids = [
-    ['tcd-days',    'mcd-days'],
-    ['tcd-hours',   'mcd-hours'],
-    ['tcd-minutes', 'mcd-minutes'],
-    ['tcd-seconds', 'mcd-seconds']
+    ['tcd-days',    'mcd-days',    'kcd-days'],
+    ['tcd-hours',   'mcd-hours',   'kcd-hours'],
+    ['tcd-minutes', 'mcd-minutes', 'kcd-minutes'],
+    ['tcd-seconds', 'mcd-seconds', 'kcd-seconds']
   ];
 
   function update() {
