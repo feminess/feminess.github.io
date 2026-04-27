@@ -2801,67 +2801,73 @@ document.querySelectorAll('.faq-item').forEach(function(item) {
 <script>
 window.cfields = {"220":"utm_content","219":"utm_campaign","218":"utm_medium","217":"utm_source","221":"utm_term"};
 
-// ── UTM PARAMETER ──
+// ── UTM PARAMETER (MutationObserver) ──
 (function() {
-  // Jede Spalte: [Standard-Format, AC-Format (kein Unterstrich), Feldname]
-  var pairs = [
-    ['utm_source',   'utmsource',   'field[217]'],
-    ['utm_medium',   'utmmedium',   'field[218]'],
-    ['utm_campaign', 'utmcampaign', 'field[219]'],
-    ['utm_content',  'utmcontent',  'field[220]'],
-    ['utm_term',     'utmterm',     'field[221]']
-  ];
+  // Mapping: URL-Parameter → Feldname im Formular
+  var UTM_MAP = {
+    'utm_source':   'field[217]',
+    'utm_medium':   'field[218]',
+    'utm_campaign': 'field[219]',
+    'utm_content':  'field[220]',
+    'utm_term':     'field[221]'
+  };
 
-  // 1. UTMs aus URL lesen – beide Formate werden akzeptiert
-  var utms = {};
-  var p = new URLSearchParams(window.location.search);
-  pairs.forEach(function(trio) {
-    var v = p.get(trio[0]) || p.get(trio[1]);   // utm_source ODER utmsource
-    if (v) {
-      sessionStorage.setItem(trio[0], v);
-      utms[trio[2]] = v;
-    } else {
-      var sv = sessionStorage.getItem(trio[0]);
-      if (sv) utms[trio[2]] = sv;
-    }
-  });
-  window._utms = utms;
-
-  // 2. Felder beim Seitenload befüllen (kein Timing-Problem beim Submit)
-  function fillAll() {
-    if (!Object.keys(utms).length) return;
-    var inputs = document.querySelectorAll('input[type="hidden"]');
-    for (var i = 0; i < inputs.length; i++) {
-      if (utms[inputs[i].name] !== undefined) inputs[i].value = utms[inputs[i].name];
-    }
-  }
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', fillAll);
-  } else {
-    fillAll();
-  }
-
-  // 3. Backup beim Submit (capture-phase, feuert vor AC's Handler)
-  document.addEventListener('submit', function(e) {
-    if (!Object.keys(utms).length) return;
-    var form = e.target;
-    for (var i = 0; i < form.elements.length; i++) {
-      if (utms[form.elements[i].name] !== undefined) form.elements[i].value = utms[form.elements[i].name];
-    }
-  }, true);
-})();
-
-// UTM direkt in Felder schreiben (nach Name utm_source etc.)
-(function() {
+  // 1. UTM-Werte aus URL lesen (sessionStorage als Fallback für spätere Seiten)
   var params = new URLSearchParams(window.location.search);
-  var fields = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
-  fields.forEach(function(field) {
-    var value = params.get(field);
-    if (value) {
-      var input = document.querySelector('input[name="' + field + '"]');
-      if (input) input.value = value;
+  var utmValues = {};
+  Object.keys(UTM_MAP).forEach(function(key) {
+    var v = params.get(key);
+    if (v) {
+      sessionStorage.setItem(key, v);
+      utmValues[key] = v;
+    } else {
+      var stored = sessionStorage.getItem(key);
+      if (stored) utmValues[key] = stored;
     }
   });
+  window._utms = utmValues;
+
+  // Keine UTM-Werte vorhanden → nichts zu tun
+  if (!Object.keys(utmValues).length) return;
+
+  // 2. Befüll-Funktion: setzt Werte in alle gefundenen Felder
+  function fillFields() {
+    var filled = 0;
+    Object.keys(utmValues).forEach(function(key) {
+      var fieldName = UTM_MAP[key];
+      // Alle Inputs mit diesem Feldnamen befüllen (Hero + Popup)
+      var inputs = document.querySelectorAll('input[name="' + fieldName + '"], input[name="' + key + '"]');
+      inputs.forEach(function(input) {
+        input.value = utmValues[key];
+        filled++;
+      });
+    });
+    return filled;
+  }
+
+  // 3. Sofort versuchen (Felder meist schon im DOM)
+  fillFields();
+
+  // 4. MutationObserver: greift falls AC das Formular verzögert rendert
+  var observer = new MutationObserver(function() {
+    if (fillFields() > 0) observer.disconnect();
+  });
+  observer.observe(document.documentElement, { childList: true, subtree: true });
+
+  // Nach 15 Sekunden aufhören zu beobachten
+  setTimeout(function() { observer.disconnect(); }, 15000);
+
+  // 5. Backup beim Submit: nochmals befüllen, direkt bevor AC serialisiert
+  document.addEventListener('submit', function(e) {
+    var form = e.target;
+    Object.keys(utmValues).forEach(function(key) {
+      var fieldName = UTM_MAP[key];
+      for (var i = 0; i < form.elements.length; i++) {
+        var el = form.elements[i];
+        if (el.name === fieldName || el.name === key) el.value = utmValues[key];
+      }
+    });
+  }, true);
 })();
 
 // Helper für mid-CTA & Popup (AJAX, kein Seitenwechsel)
