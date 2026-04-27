@@ -1957,11 +1957,35 @@ body { font-size: 23px; }
   border-radius: 2px !important;
 }
 
-/* ── intl-tel-input Länderliste (Hero-Formular) ── */
-#_form_561_ .iti__country-list { background: #fff; border: 1px solid #ddd; border-radius: 4px; }
-#_form_561_ .iti__country-name { color: #222 !important; }
-#_form_561_ .iti__dial-code { color: #555 !important; }
-#_form_561_ .iti__country.iti__highlight { background: #f5f5f5; }
+/* ── intl-tel-input im Popup ── */
+/* Wrapper nimmt volle Breite */
+#_form_561_ .iti { width: 100%; }
+/* Flag-/Vorwahl-Selektor: passend zum dunklen Hintergrund */
+#_form_561_ .iti__selected-flag,
+#_form_561_ .iti--separate-dial-code .iti__selected-flag {
+  background: rgba(255,255,255,0.10) !important;
+  border-radius: 2px 0 0 2px !important;
+  border-right: 1px solid rgba(255,255,255,0.18) !important;
+  padding: 0 10px !important;
+}
+#_form_561_ .iti--separate-dial-code .iti__selected-flag:hover {
+  background: rgba(255,255,255,0.18) !important;
+}
+/* Vorwahl-Ziffer in Weiß */
+#_form_561_ .iti__selected-dial-code { color: #fff !important; font-size: 14px !important; }
+/* Telefon-Input: linkes Padding groß genug für Flag + Vorwahl */
+#_form_561_ .iti input[type="tel"] {
+  padding-left: 90px !important;
+}
+/* Dropdown-Liste */
+#_form_561_ .iti__country-list {
+  background: #1c1c1c !important;
+  border: 1px solid rgba(255,255,255,0.15) !important;
+  border-radius: 4px !important;
+}
+#_form_561_ .iti__country-name { color: #e0e0e0 !important; }
+#_form_561_ .iti__dial-code { color: rgba(255,255,255,0.55) !important; }
+#_form_561_ .iti__country.iti__highlight { background: rgba(255,255,255,0.08) !important; }
 
 /* ── Alt-Formulare (mid-CTA & Popup) ── */
 .ac-form-alt {
