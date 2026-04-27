@@ -2279,13 +2279,36 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
 
-<!-- ── ANCHOR CTA (nach "Wie er dir hilft") ── -->
-<div class="section-anchor-cta">
-  <div class="container">
+<!-- ── CTA (nach "Wie er dir hilft") ── -->
+<section class="section-kostenlos">
+  <div class="container mid-cta-inner">
+    <div class="kostenlos-badge">100% kostenfrei</div>
+    <h2 class="kostenlos-headline">Dein Platz beim <em>BREATHE &amp; BUILD</em><br>Workshop – vollständig kostenfrei.</h2>
     <a href="#" onclick="document.getElementById('exitPopup').classList.add('is-visible'); return false;" class="cta-btn cta-btn-inline">JETZT FÜR 0€ ANMELDEN &rarr;</a>
-    <p class="anchor-cta-note">11.–13. Mai 2026 &nbsp;·&nbsp; jeweils 11–13 Uhr &nbsp;·&nbsp; kostenfrei</p>
+    <div class="mid-countdown-wrap" style="margin-top:28px;">
+      <span class="mid-cd-label">Workshop startet in</span>
+      <div class="mid-cd-unit">
+        <span class="mid-cd-num" id="wcd-days">00</span>
+        <span class="mid-cd-lbl">Tage</span>
+      </div>
+      <span class="mid-cd-sep">:</span>
+      <div class="mid-cd-unit">
+        <span class="mid-cd-num" id="wcd-hours">00</span>
+        <span class="mid-cd-lbl">Std</span>
+      </div>
+      <span class="mid-cd-sep">:</span>
+      <div class="mid-cd-unit">
+        <span class="mid-cd-num" id="wcd-minutes">00</span>
+        <span class="mid-cd-lbl">Min</span>
+      </div>
+      <span class="mid-cd-sep">:</span>
+      <div class="mid-cd-unit">
+        <span class="mid-cd-num" id="wcd-seconds">00</span>
+        <span class="mid-cd-lbl">Sek</span>
+      </div>
+    </div>
   </div>
-</div>
+</section>
 
 
 <!-- ── ÜBER MARINA ── -->
@@ -2389,13 +2412,36 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
 
-<!-- ── ANCHOR CTA (nach "Das Programm") ── -->
-<div class="section-anchor-cta">
-  <div class="container">
+<!-- ── CTA (nach "Das Programm") ── -->
+<section class="section-kostenlos">
+  <div class="container mid-cta-inner">
+    <div class="kostenlos-badge">100% kostenfrei</div>
+    <h2 class="kostenlos-headline">Dein Platz beim <em>BREATHE &amp; BUILD</em><br>Workshop – vollständig kostenfrei.</h2>
     <a href="#" onclick="document.getElementById('exitPopup').classList.add('is-visible'); return false;" class="cta-btn cta-btn-inline">JETZT FÜR 0€ ANMELDEN &rarr;</a>
-    <p class="anchor-cta-note">11.–13. Mai 2026 &nbsp;·&nbsp; jeweils 11–13 Uhr &nbsp;·&nbsp; kostenfrei</p>
+    <div class="mid-countdown-wrap" style="margin-top:28px;">
+      <span class="mid-cd-label">Workshop startet in</span>
+      <div class="mid-cd-unit">
+        <span class="mid-cd-num" id="pcd-days">00</span>
+        <span class="mid-cd-lbl">Tage</span>
+      </div>
+      <span class="mid-cd-sep">:</span>
+      <div class="mid-cd-unit">
+        <span class="mid-cd-num" id="pcd-hours">00</span>
+        <span class="mid-cd-lbl">Std</span>
+      </div>
+      <span class="mid-cd-sep">:</span>
+      <div class="mid-cd-unit">
+        <span class="mid-cd-num" id="pcd-minutes">00</span>
+        <span class="mid-cd-lbl">Min</span>
+      </div>
+      <span class="mid-cd-sep">:</span>
+      <div class="mid-cd-unit">
+        <span class="mid-cd-num" id="pcd-seconds">00</span>
+        <span class="mid-cd-lbl">Sek</span>
+      </div>
+    </div>
   </div>
-</div>
+</section>
 
 
 <!-- ── FÜR WEN IST DIESER WORKSHOP ── -->
@@ -2736,10 +2782,10 @@ document.querySelectorAll('.faq-item').forEach(function(item) {
 
   // ID-Paare: [topbar, mid-CTA]
   var ids = [
-    ['tcd-days',    'mcd-days',    'kcd-days'],
-    ['tcd-hours',   'mcd-hours',   'kcd-hours'],
-    ['tcd-minutes', 'mcd-minutes', 'kcd-minutes'],
-    ['tcd-seconds', 'mcd-seconds', 'kcd-seconds']
+    ['tcd-days',    'mcd-days',    'kcd-days',    'wcd-days',    'pcd-days'],
+    ['tcd-hours',   'mcd-hours',   'kcd-hours',   'wcd-hours',   'pcd-hours'],
+    ['tcd-minutes', 'mcd-minutes', 'kcd-minutes', 'wcd-minutes', 'pcd-minutes'],
+    ['tcd-seconds', 'mcd-seconds', 'kcd-seconds', 'wcd-seconds', 'pcd-seconds']
   ];
 
   function update() {
