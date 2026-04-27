@@ -2752,7 +2752,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="_form_element _x51767879 _full_width">
           <label for="phone" class="_form-label">Telefon</label>
           <div class="_field-wrapper">
-            <input type="text" id="phone" name="phone" placeholder="Tippen Sie Ihre Telefonnummer ein." />
+            <input type="text" id="phone" name="phone" placeholder="z. B. 0151 23456789" />
           </div>
         </div>
         <div class="_form_element _x40740069 _full_width">
@@ -3154,6 +3154,18 @@ window._load_script = function(url, callback, isSubmit) {
                     .catch(function() { success('DE'); });
             }
         });
+        // URL-Parameter vorausfüllen (nach iti-Init)
+        (function() {
+            var params = new URLSearchParams(window.location.search);
+            var fn = params.get('vorname'), em = params.get('email'), tel = params.get('telefon');
+            var fnField = form_to_submit.querySelector('#firstname');
+            var emField = form_to_submit.querySelector('#email');
+            if (fn && fnField) fnField.value = fn;
+            if (em && emField) emField.value = em;
+            if (tel) {
+                iti.promise.then(function() { iti.setNumber(tel); });
+            }
+        })();
     }
     var _form_serialize = function(form){if(!form||form.nodeName!=="FORM"){return }var i,j,q=[];for(i=0;i<form.elements.length;i++){if(form.elements[i].name===""){continue}switch(form.elements[i].nodeName){case"INPUT":switch(form.elements[i].type){case"tel":q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].previousSibling.querySelector('div.iti__selected-dial-code').innerText)+encodeURIComponent(" ")+encodeURIComponent(form.elements[i].value));break;case"text":case"number":case"date":case"time":case"hidden":case"password":case"button":case"reset":case"submit":q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value));break;case"checkbox":case"radio":if(form.elements[i].checked){q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value))}break;case"file":break}break;case"TEXTAREA":q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value));break;case"SELECT":switch(form.elements[i].type){case"select-one":q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value));break;case"select-multiple":for(j=0;j<form.elements[i].options.length;j++){if(form.elements[i].options[j].selected){q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].options[j].value))}}break}break;case"BUTTON":switch(form.elements[i].type){case"reset":case"submit":case"button":q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value));break}break}}return q.join("&")};
     var formSupportsPost = false;
