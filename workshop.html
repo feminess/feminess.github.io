@@ -2841,6 +2841,19 @@ window.cfields = {"220":"utm_content","219":"utm_campaign","218":"utm_medium","2
   }, true);
 })();
 
+// UTM direkt in Felder schreiben (nach Name utm_source etc.)
+(function() {
+  var params = new URLSearchParams(window.location.search);
+  var fields = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
+  fields.forEach(function(field) {
+    var value = params.get(field);
+    if (value) {
+      var input = document.querySelector('input[name="' + field + '"]');
+      if (input) input.value = value;
+    }
+  });
+})();
+
 // Helper für mid-CTA & Popup (AJAX, kein Seitenwechsel)
 function acAltSubmit(e, form) {
   e.preventDefault();
