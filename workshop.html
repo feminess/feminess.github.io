@@ -151,6 +151,15 @@ body {
   box-shadow: 0 6px 28px rgba(207,90,115,0.50);
   animation: pulse-cta 2s ease-in-out infinite;
   white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  transform: translateY(12px);
+}
+.floating-cta.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
 }
 .floating-cta:hover { background: #b5405a; animation: none; transform: translateY(-3px) scale(1.05); }
 @media (max-width: 640px) {
@@ -2788,6 +2797,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- ── FLOATING CTA ── -->
 <a href="#" class="floating-cta" onclick="document.getElementById('exitPopup').classList.add('is-visible'); return false;">Jetzt für 0€ anmelden</a>
+<script>
+(function() {
+  var btn = document.querySelector('.floating-cta');
+  function onScroll() {
+    if (window.scrollY > 300) {
+      btn.classList.add('is-visible');
+    } else {
+      btn.classList.remove('is-visible');
+    }
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll(); // direkt beim Laden prüfen (z. B. nach Reload mitten auf der Seite)
+})();
+</script>
 
 <!-- ── FOOTER ── -->
 <footer class="site-footer">
