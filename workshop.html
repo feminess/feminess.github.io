@@ -2069,9 +2069,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- TEXT LINKS -->
     <div class="hero-content">
 
-      <div class="hero-exclusive-label">
+      <div class="hero-exclusive-label" id="hero-label">
         ✦ für weibliche Coaches, die einen stabilen GeldFlow wollen, ohne sich dafür aufzugeben.
       </div>
+      <script>
+        (function() {
+          var f = new URLSearchParams(window.location.search).get('f');
+          if (f === 'umc' || f === 'cbc') {
+            document.getElementById('hero-label').textContent = '✦ Du hast dir den Test gesichert und wir haben noch ein Geschenk für dich!';
+          }
+        })();
+      </script>
 
       <div class="hero-headline">
         <span class="hero-h1-line">TRUE SPIRIT</span>
