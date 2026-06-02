@@ -3125,7 +3125,7 @@ window._load_script = function(url, callback, isSubmit) {
             iti = intlTelInput(inputPhone, {
                 loadUtils: function() { return import('https://cdn.jsdelivr.net/npm/intl-tel-input@25.2.0/build/js/utils.js'); },
                 hiddenInput: function() { return { phone: 'phone' }; },
-                separateDialCode: true,
+                separateDialCode: false,
                 autoPlaceholder: 'aggressive',
                 initialCountry: 'auto',
                 geoIpLookup: function(success) {
