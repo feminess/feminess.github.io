@@ -1167,15 +1167,21 @@ body {
   gap: 8px;
 }
 .agenda-thema {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
   font-family: 'Avenir LT Pro', 'Inter', sans-serif;
   font-size: 14px;
   color: var(--dark);
-  line-height: 1.55;
+  line-height: 1.6;
+  border-left: 3px solid var(--teal-light);
+  padding-left: 14px;
+  margin-bottom: 6px;
 }
-.agenda-thema::before { content: '→'; color: var(--teal); font-weight: 700; flex-shrink: 0; }
+.agenda-thema p {
+  margin: 0 0 4px 0;
+}
+.agenda-thema p:last-child {
+  margin-bottom: 0;
+  color: var(--teal);
+}
 .agenda-ergebnis {
   margin-top: 16px;
   display: flex;
@@ -2358,8 +2364,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="agenda-subtitle">NeuroScaling · Identity Blueprint</div>
           <h3>Deine Wachstums-Bremse lösen &amp; Einzigartigkeit entdecken</h3>
           <div class="agenda-themen">
-            <div class="agenda-thema"><strong>NeuroScaling</strong> → Warum dein Umsatz immer wieder <strong>stagniert oder schwankt</strong>. Wie Wachstum zu deinem persönlichen <strong>Nervensystem</strong> passt – du hörst auf, dich zu verausgaben und baust mit mehr <strong>Selbstsicherheit und Gelassenheit</strong>.</div>
-            <div class="agenda-thema"><strong>Identity Blueprint</strong> → Warum du das Gefühl hast, dich für dein Business <strong>verbiegen zu müssen</strong>. Du findest raus, welches Angebot, welche Nische und Strategie <strong>wirklich zu dir passen</strong> – nie wieder das Gefühl, dich in ein Korsett pressen zu müssen.</div>
+            <div class="agenda-thema">
+              <p><strong>NeuroScaling</strong></p>
+              <p>Warum dein Umsatz immer wieder <strong>stagniert oder schwankt</strong> – und wie Wachstum zu deinem persönlichen <strong>Nervensystem</strong> passt.</p>
+              <p>→ Du hörst auf, dich zu verausgaben, und baust mit mehr <strong>Selbstsicherheit und Gelassenheit</strong>.</p>
+            </div>
+            <div class="agenda-thema">
+              <p><strong>Identity Blueprint</strong></p>
+              <p>Warum du das Gefühl hast, dich für dein Business <strong>verbiegen zu müssen</strong>.</p>
+              <p>→ Du findest raus, welches Angebot, welche Nische und Strategie <strong>wirklich zu dir passen</strong> – nie wieder das Gefühl, dich in ein Korsett pressen zu müssen.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -2374,8 +2388,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="agenda-subtitle">Positionierung · Angebot</div>
           <h3>Deine unverwechselbare Positionierung &amp; dein unwiderstehliches Angebot</h3>
           <div class="agenda-themen">
-            <div class="agenda-thema"><strong>Power of Positioning</strong> → Warum du so viel tust und trotzdem nicht den <strong>CashFlow</strong> hast, den du dir wünschst. Du entwickelst eine Positionierung, die dich <strong>einzigartig und unverwechselbar</strong> macht und genau die richtigen Kunden anzieht.</div>
-            <div class="agenda-thema"><strong>Art of Offer</strong> → Warum dein Angebot nicht so viel <strong>Sog</strong> erzeugt, wie du es dir wünschst. Du entwickelst ein Angebot, das bei deinen Soulclients sofort das Gefühl von <strong>„haben wollen"</strong> auslöst – mit weniger Druck und mehr Freude.</div>
+            <div class="agenda-thema">
+              <p><strong>Power of Positioning</strong></p>
+              <p>Warum du so viel tust und trotzdem nicht den <strong>CashFlow</strong> hast, den du dir wünschst.</p>
+              <p>→ Du entwickelst eine Positionierung, die dich <strong>einzigartig und unverwechselbar</strong> macht und genau die richtigen Kunden anzieht.</p>
+            </div>
+            <div class="agenda-thema">
+              <p><strong>Art of Offer</strong></p>
+              <p>Warum dein Angebot nicht so viel <strong>Sog</strong> erzeugt, wie du es dir wünschst.</p>
+              <p>→ Du entwickelst ein Angebot, das bei deinen Soulclients sofort das Gefühl von <strong>„haben wollen"</strong> auslöst – mit weniger Druck und mehr Freude.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -2390,7 +2412,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="agenda-subtitle">Skalierung · Systeme · Freiheit</div>
           <h3>Dein Business auf Autopilot</h3>
           <div class="agenda-themen">
-            <div class="agenda-thema"><strong>Secret of Scale</strong> → Warum dein Business <strong>stillsteht, wenn du nicht da bist</strong> – und wie du das änderst. Du baust ein System auf, das <strong>automatisiert Kundinnen gewinnt</strong> und dir wahre <strong>Freiheit und Freude</strong> gibt.</div>
+            <div class="agenda-thema">
+              <p><strong>Secret of Scale</strong></p>
+              <p>Warum dein Business <strong>stillsteht, wenn du nicht da bist</strong> – und wie du das änderst.</p>
+              <p>→ Du baust ein System auf, das <strong>automatisiert Kundinnen gewinnt</strong> und dir wahre <strong>Freiheit und Freude</strong> gibt.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -2405,7 +2431,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="agenda-subtitle">Marketing · Content</div>
           <h3>Mache aus Followern Kunden</h3>
           <div class="agenda-themen">
-            <div class="agenda-thema"><strong>Mastery of Marketing</strong> → Warum dein Content <strong>nicht die Menschen erreicht</strong>, die wirklich bereit sind, bei dir zu kaufen – und wie du das änderst. Du lernst, wie du Menschen anziehst, die zu dir passen, für die du die <strong>erste Wahl</strong> bist und die bereits <strong>innerlich gekauft haben</strong>, bevor sie in deinen Call oder Launch kommen. <strong>Kein Zerren. Kein Überreden.</strong></div>
+            <div class="agenda-thema">
+              <p><strong>Mastery of Marketing</strong></p>
+              <p>Warum dein Content <strong>nicht die Menschen erreicht</strong>, die wirklich bereit sind, bei dir zu kaufen – und wie du das änderst.</p>
+              <p>→ Du lernst, wie du Menschen anziehst, die zu dir passen, für die du die <strong>erste Wahl</strong> bist und die bereits <strong>innerlich gekauft haben</strong>, bevor sie in deinen Call oder Launch kommen. <strong>Kein Zerren. Kein Überreden.</strong></p>
+            </div>
           </div>
         </div>
       </div>
@@ -2420,7 +2450,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="agenda-subtitle">Money Mindset · Preise</div>
           <h3>Verdiene, was du wert bist</h3>
           <div class="agenda-themen">
-            <div class="agenda-thema"><strong>Mastery of Money</strong> → Warum sich eine <strong>Preiserhöhung</strong> oder das Kommunizieren deines Preises für dich noch immer so <strong>schwer anfühlt</strong>. Du entwickelst eine <strong>Selbstverständlichkeit</strong> zu deiner Leistung, deinem Wert und deinen Preisen, sodass du endlich <strong>mit weniger Zeit mehr verdienst</strong>.</div>
+            <div class="agenda-thema">
+              <p><strong>Mastery of Money</strong></p>
+              <p>Warum sich eine <strong>Preiserhöhung</strong> oder das Kommunizieren deines Preises für dich noch immer so <strong>schwer anfühlt</strong>.</p>
+              <p>→ Du entwickelst eine <strong>Selbstverständlichkeit</strong> zu deiner Leistung, deinem Wert und deinen Preisen – sodass du endlich <strong>mit weniger Zeit mehr verdienst</strong>.</p>
+            </div>
           </div>
         </div>
       </div>
