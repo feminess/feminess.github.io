@@ -3103,7 +3103,7 @@ window._load_script = function(url, callback, isSubmit) {
         if (!no_error && elem.hasAttribute('id')) { elem.setAttribute('aria-invalid', 'true'); elem.setAttribute('aria-describedby', elem.id + '-error'); }
         return no_error;
     };
-    var needs_validate = function(el) { if (el.getAttribute('required') !== null) { return true; } if ((el.name === 'email' || el.id === 'phone' || el.id === 'sms_consent') && el.value !== "") { return true; } return false; };
+    var needs_validate = function(el) { if (el.getAttribute('required') !== null) { return true; } if (el.id === 'phone') { return true; } if ((el.name === 'email' || el.id === 'sms_consent') && el.value !== "") { return true; } return false; };
     var validate_form = function(e) {
         var err = form_to_submit.querySelector('._form_error'), no_error = true;
         if (!submitted) { submitted = true; for (var i = 0, len = allInputs.length; i < len; i++) { var input = allInputs[i]; if (needs_validate(input)) { if (input.type == 'text' || input.type == 'number' || input.type == 'time' || input.type == 'tel') { addEvent(input, 'blur', function() { this.value = this.value.trim(); validate_field(this, true); }); addEvent(input, 'input', function() { validate_field(this, true); }); } else if (input.type == 'radio' || input.type == 'checkbox') { (function(el) { function getElementsArray(name) { var value = form_to_submit.elements[name]; if (Array.isArray(value)) { return value; } return [value]; } var radios = getElementsArray(el.name); for (var i = 0; i < radios.length; i++) { addEvent(radios[i], 'change', function() { validate_field(el, true); }); } })(input); } else if (input.tagName == 'SELECT') { addEvent(input, 'change', function() { validate_field(this, true); }); } else if (input.type == 'textarea') { addEvent(input, 'input', function() { validate_field(this, true); }); } } } }
@@ -3135,6 +3135,8 @@ window._load_script = function(url, callback, isSubmit) {
                         .catch(function() { success('DE'); });
                 }
             });
+            // intl-tel-input entfernt required – nach Init wieder setzen
+            inputPhone.setAttribute('required', '');
         }, false);
     };
     var inputPhone = form_to_submit.querySelector("#phone");
