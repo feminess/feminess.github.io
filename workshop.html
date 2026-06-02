@@ -3063,7 +3063,6 @@ window._load_script = function(url, callback, isSubmit) {
     head.appendChild(script);
 };
 (function() {
-    var iti;
     if (window.location.search.search("excludeform") !== -1) return false;
     var getCookie = function(name) { var match = document.cookie.match(new RegExp('(^|; )' + name + '=([^;]+)')); return match ? match[2] : localStorage.getItem(name); };
     var setCookie = function(name, value) { var now = new Date(); var time = now.getTime(); var expireTime = time + 1000 * 60 * 60 * 24 * 365; now.setTime(expireTime); document.cookie = name + '=' + value + '; expires=' + now + ';path=/; Secure; SameSite=Lax;'; localStorage.setItem(name, value); };
@@ -3123,32 +3122,6 @@ window._load_script = function(url, callback, isSubmit) {
     };
     addEvent(window, 'resize', resize_tooltips);
     addEvent(window, 'scroll', resize_tooltips);
-    var initializePhoneInput = function(inputPhone) {
-        const style = document.createElement('link');
-        style.rel = 'stylesheet';
-        style.href = 'https://cdn.jsdelivr.net/npm/intl-tel-input@25.2.0/build/css/intlTelInput.css';
-        document.head.appendChild(style);
-        window._load_script('https://cdn.jsdelivr.net/npm/intl-tel-input@25.2.0/build/js/intlTelInput.min.js', function() {
-            inputPhone.setAttribute("name", "phone-iti");
-            iti = intlTelInput(inputPhone, {
-                loadUtils: function() { return import('https://cdn.jsdelivr.net/npm/intl-tel-input@25.2.0/build/js/utils.js'); },
-                hiddenInput: function() { return { phone: 'phone' }; },
-                separateDialCode: false,
-                autoPlaceholder: 'aggressive',
-                initialCountry: 'auto',
-                geoIpLookup: function(success) {
-                    fetch('https://marina232.activehosted.com/api/public/geo.php')
-                        .then(function(res) { return res.json(); })
-                        .then(function(data) { success(data.country_code || 'DE'); })
-                        .catch(function() { success('DE'); });
-                }
-            });
-            // intl-tel-input entfernt required – nach Init wieder setzen
-            inputPhone.setAttribute('required', '');
-        }, false);
-    };
-    var inputPhone = form_to_submit.querySelector("#phone");
-    if (inputPhone) { initializePhoneInput(inputPhone); }
     // URL-Parameter vorausfüllen
     (function() {
         var params = new URLSearchParams(window.location.search);
@@ -3165,9 +3138,6 @@ window._load_script = function(url, callback, isSubmit) {
     var form_submit = function(e) {
         e.preventDefault();
         if (validate_form()) {
-            if (form_to_submit.querySelector('input[name="phone"]') && typeof iti != 'undefined') {
-                form_to_submit.querySelector('input[name="phone"]').value = iti.getNumber();
-            }
             var submitButton = e.target.querySelector('#_form_563_submit');
             submitButton.disabled = true; submitButton.classList.add('processing');
             var serialized = _form_serialize(document.getElementById('_form_563_')).replace(/%0A/g, '\\n');
