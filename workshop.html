@@ -2055,7 +2055,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- ── TOPBAR ── -->
 <div class="topbar">
-  <p><strong>kostenfreies LIVE-Event</strong> &nbsp;·&nbsp; 20.–24. Juni, jeweils 11–12:30 Uhr &nbsp;·&nbsp; <strong>Teilnehmerzahl begrenzt</strong></p>
+  <p id="topbar-text"><strong>kostenfreies LIVE-Event</strong> &nbsp;·&nbsp; 20.–24. Juni, jeweils 11–12:30 Uhr &nbsp;·&nbsp; <strong>Teilnehmerzahl begrenzt</strong></p>
 </div>
 
 
@@ -2077,6 +2077,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           var f = new URLSearchParams(window.location.search).get('utm_source');
           if (f === 'umc' || f === 'cbc') {
             document.getElementById('hero-label').textContent = '✦ Du hast dir den Test gesichert und wir haben noch ein Geschenk für dich!';
+            document.getElementById('topbar-text').innerHTML = '<strong>WICHTIG: Wir haben noch ein Geschenk für dich!!</strong>';
           }
         })();
       </script>
