@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Kostenfreie Meditation: Aktiviere deinen natürlichen Geldmagneten und löse Geldblockaden auf. Gratis Audio von Marina Henze / Feminess." />
+  <title>Gratis Meditation – Aktiviere deinen Geldmagneten | Feminess</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet" />
+  <style>
+    @font-face {
+      font-family: 'East Liberty';
+      src: url('../CI/east_liberty_signature (1)/east liberty signature.ttf') format('truetype');
+      font-weight: 400; font-style: normal;
+    }
+    @font-face {
+      font-family: 'Avenir LT Pro';
+      src: url('../CI/AvenirLTPro-Book (1).otf') format('opentype');
+      font-weight: 400; font-style: normal;
+    }
+    @font-face {
+      font-family: 'Avenir LT Pro';
+      src: url('../CI/AvenirLTPro-Heavy (1).otf') format('opentype');
+      font-weight: 700; font-style: normal;
+    }
+
+    :root {
+      --teal:        #257c6c;
+      --teal-dark:   #1b5c50;
+      --teal-light:  #5ec6b3;
+      --teal-pale:   #b8ddd8;
+      --rose:        #cf5a73;
+      --rose-light:  #e8a0b0;
+      --sand:        #c2ab8d;
+      --sand-light:  #e4bc95;
+      --black:       #070808;
+      --dark:        #0d2420;
+      --dark-2:      #163028;
+      --off-white:   #f8f6f2;
+      --cream:       #f0f5f4;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--off-white);
+      color: var(--black);
+      font-family: 'Avenir LT Pro', 'Arial', sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    img { display: block; max-width: 100%; }
+    a { text-decoration: none; }
+
+    /* ── HEADER ── */
+    .site-header {
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      padding: 28px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 10;
+    }
+    .logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.35rem;
+      font-weight: 500;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--sand-light);
+    }
+    .header-tag {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: rgba(248,246,242,0.4);
+    }
+
+    /* ──────────────────────────────────────────
+       HERO – SPLIT LAYOUT
+    ────────────────────────────────────────── */
+    .hero {
+      background: var(--dark);
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+    /* Ambient glows */
+    .hero::before {
+      content: '';
+      position: absolute; top: -100px; left: -100px;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(37,124,108,0.2) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .hero::after {
+      content: '';
+      position: absolute; bottom: -80px; left: 30%;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(228,188,149,0.07) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    /* LEFT: Text */
+    .hero-text {
+      padding: 140px 56px 80px 72px;
+      position: relative; z-index: 2;
+    }
+    .hero-tag {
+      display: inline-block;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 3.5px;
+      text-transform: uppercase;
+      color: var(--teal-light);
+      margin-bottom: 28px;
+    }
+    .hero-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.4rem, 4.5vw, 4.2rem);
+      font-weight: 400;
+      line-height: 1.1;
+      color: var(--off-white);
+      margin-bottom: 28px;
+    }
+    .hero-title em {
+      font-style: italic;
+      color: var(--sand-light);
+      display: block;
+    }
+    .hero-sub {
+      font-size: 1rem;
+      font-weight: 400;
+      color: rgba(248,246,242,0.62);
+      max-width: 440px;
+      margin-bottom: 44px;
+      line-height: 1.8;
+    }
+    .hero-cta {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 14px;
+    }
+    .btn-primary {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--teal) 0%, var(--teal-dark) 100%);
+      color: var(--off-white);
+      font-family: 'Avenir LT Pro', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.4px;
+      padding: 17px 40px;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 10px 36px rgba(37,124,108,0.4);
+    }
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 16px 48px rgba(37,124,108,0.55);
+    }
+    .hero-proof-line {
+      font-size: 0.78rem;
+      color: rgba(248,246,242,0.32);
+      letter-spacing: 0.2px;
+    }
+
+    /* RIGHT: Image */
+    .hero-image-wrap {
+      position: relative;
+      height: 100vh;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+    .hero-image-wrap::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(to right, var(--dark) 0%, transparent 30%),
+                  linear-gradient(to top, var(--dark) 0%, transparent 25%);
+      z-index: 1;
+      pointer-events: none;
+    }
+    .hero-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    /* ──────────────────────────────────────────
+       TRUST BAR
+    ────────────────────────────────────────── */
+    .trust-bar {
+      background: var(--dark-2);
+      padding: 20px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 48px;
+      flex-wrap: wrap;
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.8rem;
+      color: rgba(248,246,242,0.45);
+      letter-spacing: 0.3px;
+    }
+    .trust-item span {
+      color: var(--teal-light);
+      font-size: 1rem;
+    }
+
+    /* ──────────────────────────────────────────
+       BULLETS
+    ────────────────────────────────────────── */
+    .bullets-section {
+      background: var(--off-white);
+      padding: 96px 24px;
+    }
+    .bullets-inner {
+      max-width: 680px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .section-eyebrow {
+      display: block;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 14px;
+    }
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.9rem, 5vw, 2.9rem);
+      font-weight: 400;
+      color: var(--dark);
+      line-height: 1.2;
+      margin-bottom: 56px;
+    }
+    .section-title em { font-style: italic; color: var(--teal); }
+
+    .bullet-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      text-align: left;
+    }
+    .bullet-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      background: white;
+      border-radius: 14px;
+      padding: 22px 26px;
+      box-shadow: 0 2px 16px rgba(13,36,32,0.055);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .bullet-item:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 24px rgba(13,36,32,0.1);
+    }
+    .bullet-icon {
+      flex-shrink: 0;
+      width: 30px; height: 30px;
+      background: linear-gradient(135deg, var(--teal-light), var(--teal));
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      margin-top: 2px;
+    }
+    .bullet-icon svg { width: 14px; height: 14px; fill: white; }
+    .bullet-text {
+      font-size: 0.97rem;
+      line-height: 1.65;
+      color: var(--black);
+    }
+    .bullet-text strong { color: var(--teal-dark); font-weight: 700; }
+
+    /* ──────────────────────────────────────────
+       IMAGE DIVIDER (Sonnenuntergang)
+    ────────────────────────────────────────── */
+    .img-divider {
+      position: relative;
+      height: 480px;
+      overflow: hidden;
+    }
+    .img-divider-bg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+      display: block;
+    }
+    .img-divider-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(13,36,32,0.55) 0%,
+        rgba(13,36,32,0.2) 40%,
+        rgba(13,36,32,0.6) 100%
+      );
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 24px;
+    }
+    .img-divider-quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.8rem, 5vw, 3.2rem);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--off-white);
+      text-align: center;
+      max-width: 720px;
+      line-height: 1.35;
+      text-shadow: 0 2px 24px rgba(0,0,0,0.4);
+    }
+    .img-divider-quote em {
+      font-style: normal;
+      color: var(--sand-light);
+    }
+
+    /* ──────────────────────────────────────────
+       ABOUT – MIT BILD
+    ────────────────────────────────────────── */
+    .about-section {
+      background: var(--dark);
+      padding: 96px 48px;
+    }
+    .about-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      align-items: center;
+      gap: 72px;
+    }
+    .about-portrait {
+      flex-shrink: 0;
+      width: 320px;
+      height: 380px;
+      border-radius: 200px 200px 160px 160px;
+      overflow: hidden;
+      position: relative;
+    }
+    .about-portrait::after {
+      content: '';
+      position: absolute; inset: 0;
+      border-radius: inherit;
+      box-shadow: inset 0 0 0 1px rgba(94,198,179,0.2);
+      pointer-events: none;
+    }
+    .about-portrait img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+    .about-content {}
+    .about-eyebrow {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--teal-light);
+      margin-bottom: 16px;
+      display: block;
+    }
+    .about-name {
+      font-family: 'East Liberty', cursive;
+      font-size: 3.2rem;
+      color: var(--sand-light);
+      margin-bottom: 20px;
+      line-height: 1;
+    }
+    .about-text {
+      font-size: 1rem;
+      color: rgba(248,246,242,0.65);
+      line-height: 1.85;
+      max-width: 480px;
+    }
+    .about-text strong {
+      color: var(--off-white);
+      font-weight: 700;
+    }
+
+    /* ──────────────────────────────────────────
+       FORM
+    ────────────────────────────────────────── */
+    .form-section {
+      background: var(--cream);
+      padding: 96px 24px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .form-section::before {
+      content: '';
+      position: absolute; top: -60px; right: -60px;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(37,124,108,0.08) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .form-inner {
+      max-width: 480px;
+      margin: 0 auto;
+      position: relative; z-index: 1;
+    }
+    .form-eyebrow {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 3.5px;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 18px;
+    }
+    .form-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 5.5vw, 3.1rem);
+      font-weight: 400;
+      color: var(--dark);
+      line-height: 1.18;
+      margin-bottom: 14px;
+    }
+    .form-title em { font-style: italic; color: var(--teal); }
+    .form-sub {
+      font-size: 0.95rem;
+      color: rgba(13,36,32,0.5);
+      margin-bottom: 44px;
+      line-height: 1.7;
+    }
+    .form-card {
+      background: white;
+      border-radius: 20px;
+      padding: 40px 36px;
+      box-shadow: 0 8px 48px rgba(13,36,32,0.1);
+    }
+    .opt-in-form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .form-field {
+      background: var(--cream);
+      border: 1.5px solid transparent;
+      border-radius: 10px;
+      padding: 16px 20px;
+      font-family: 'Avenir LT Pro', 'Arial', sans-serif;
+      font-size: 1rem;
+      color: var(--dark);
+      outline: none;
+      transition: border-color 0.25s, background 0.25s;
+      width: 100%;
+      -webkit-appearance: none;
+    }
+    .form-field::placeholder { color: rgba(13,36,32,0.35); }
+    .form-field:focus {
+      border-color: var(--teal);
+      background: white;
+    }
+    .btn-cta {
+      background: linear-gradient(135deg, var(--teal) 0%, var(--teal-dark) 100%);
+      color: white;
+      font-family: 'Avenir LT Pro', 'Arial', sans-serif;
+      font-size: 0.97rem;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      padding: 18px 32px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 8px 28px rgba(37,124,108,0.35);
+      width: 100%;
+      margin-top: 4px;
+    }
+    .btn-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 40px rgba(37,124,108,0.5);
+    }
+    .form-privacy {
+      font-size: 0.74rem;
+      color: rgba(13,36,32,0.35);
+      text-align: center;
+      line-height: 1.55;
+      padding-top: 6px;
+    }
+
+    /* ──────────────────────────────────────────
+       SOCIAL PROOF
+    ────────────────────────────────────────── */
+    .proof-section {
+      background: var(--dark);
+      padding: 88px 24px;
+      text-align: center;
+    }
+    .proof-inner {
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    .proof-number {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 4.5rem;
+      font-weight: 400;
+      color: var(--teal-light);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .proof-caption {
+      font-size: 0.9rem;
+      color: rgba(248,246,242,0.4);
+      margin-bottom: 48px;
+      letter-spacing: 0.2px;
+    }
+    .testimonial {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(94,198,179,0.15);
+      border-radius: 18px;
+      padding: 36px 40px;
+      text-align: left;
+      position: relative;
+    }
+    .testimonial::before {
+      content: '"';
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 6rem;
+      color: var(--teal);
+      opacity: 0.2;
+      position: absolute;
+      top: -10px; left: 24px;
+      line-height: 1;
+      pointer-events: none;
+    }
+    .testimonial-quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      font-style: italic;
+      font-weight: 400;
+      color: rgba(248,246,242,0.85);
+      line-height: 1.7;
+      margin-bottom: 22px;
+    }
+    .testimonial-author {
+      font-size: 0.77rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--teal-light);
+    }
+
+    /* ── FOOTER ── */
+    .site-footer {
+      background: var(--black);
+      padding: 36px 24px;
+      text-align: center;
+    }
+    .site-footer p {
+      font-size: 0.78rem;
+      color: rgba(248,246,242,0.28);
+      line-height: 2.2;
+    }
+    .site-footer a {
+      color: rgba(248,246,242,0.38);
+      transition: color 0.25s;
+    }
+    .site-footer a:hover { color: var(--teal-light); }
+
+    /* ──────────────────────────────────────────
+       FEMINESS CI – ActiveCampaign Form Overrides
+    ────────────────────────────────────────── */
+    #_form_559_ {
+      border-radius: 20px !important;
+      box-shadow: 0 8px 48px rgba(13,36,32,0.1) !important;
+      padding: 36px 36px 28px !important;
+      margin: 0 auto !important;
+    }
+    #_form_559_ ._submit {
+      background: linear-gradient(135deg, #257c6c 0%, #1b5c50 100%) !important;
+      border-radius: 10px !important;
+      padding: 16px 24px !important;
+      font-size: 0.95rem !important;
+      font-weight: 700 !important;
+      letter-spacing: 0.3px !important;
+      width: 100% !important;
+      box-shadow: 0 8px 28px rgba(37,124,108,0.35) !important;
+      transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+      margin-top: 6px !important;
+    }
+    #_form_559_ ._submit:hover:not(:disabled) {
+      transform: translateY(-2px) !important;
+      box-shadow: 0 12px 40px rgba(37,124,108,0.52) !important;
+    }
+    #_form_559_ ._form_element textarea,
+    #_form_559_ ._form_element select,
+    #_form_559_ ._form_element input[type="text"],
+    #_form_559_ ._form_element input[type="date"],
+    #_form_559_ ._form_element input[type="phone"],
+    #_form_559_ ._form_element input[type="email"] {
+      border: 1.5px solid #b8ddd8 !important;
+      border-radius: 10px !important;
+      padding: 14px 16px !important;
+      font-size: 1rem !important;
+      background: #f0f5f4 !important;
+      color: #0d2420 !important;
+      transition: border-color 0.25s, background 0.25s !important;
+    }
+    #_form_559_ ._form_element input[type="text"]:focus,
+    #_form_559_ ._form_element input[type="email"]:focus {
+      border-color: #257c6c !important;
+      background: white !important;
+      outline: none !important;
+      box-shadow: none !important;
+    }
+    #_form_559_ ._form-label {
+      color: #0d2420 !important;
+      font-family: 'Avenir LT Pro', Arial, sans-serif !important;
+      font-size: 0.82rem !important;
+      letter-spacing: 0.5px !important;
+      text-transform: uppercase !important;
+      margin-bottom: 6px !important;
+    }
+    #_form_559_ .field-required { color: #cf5a73 !important; }
+    #_form_559_ ._form-branding { opacity: 0.3 !important; margin-top: 20px !important; }
+    #_form_559_ input[type="text"]::placeholder,
+    #_form_559_ input[type="email"]::placeholder { color: rgba(13,36,32,0.35) !important; }
+
+    /* ──────────────────────────────────────────
+       RESPONSIVE
+    ────────────────────────────────────────── */
+    @media (max-width: 900px) {
+      /* Hero: Stack on tablet */
+      .hero {
+        grid-template-columns: 1fr;
+        min-height: auto;
+      }
+      .hero-image-wrap {
+        height: 55vw;
+        min-height: 320px;
+        order: -1;
+      }
+      .hero-image-wrap::before {
+        background: linear-gradient(to bottom, transparent 40%, var(--dark) 100%),
+                    linear-gradient(to top, transparent 40%, var(--dark) 100%);
+      }
+      .hero-text {
+        padding: 48px 32px 72px;
+        text-align: center;
+      }
+      .hero-cta { align-items: center; }
+      .hero-title em { display: inline; }
+
+      /* About: Stack */
+      .about-inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+      }
+      .about-portrait {
+        width: 240px;
+        height: 290px;
+        margin: 0 auto;
+      }
+      .about-text { margin: 0 auto; }
+      .about-section { padding: 72px 32px; }
+    }
+
+    @media (max-width: 640px) {
+      .site-header { padding: 22px 20px; }
+      .header-tag { display: none; }
+      .hero-text { padding: 40px 20px 64px; }
+      .hero-image-wrap { height: 70vw; }
+      .trust-bar { padding: 16px 20px; gap: 20px; }
+      .bullets-section,
+      .form-section,
+      .proof-section { padding: 64px 20px; }
+      .about-section { padding: 64px 20px; }
+      .img-divider { height: 340px; }
+      .form-card { padding: 28px 22px; }
+      .testimonial { padding: 28px 24px; }
+      .btn-primary { width: 100%; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <span class="logo">Feminess</span>
+    <span class="header-tag">✦ Kostenfreie Meditation ✦</span>
+  </header>
+
+  <!-- ──────────────────────────────────────────
+       HERO – SPLIT
+  ────────────────────────────────────────── -->
+  <section class="hero" id="hero">
+
+    <!-- LEFT: Text -->
+    <div class="hero-text">
+      <span class="hero-tag">✦ Kostenfreie Meditations-Audio ✦</span>
+
+      <h1 class="hero-title">
+        Was wäre, wenn<br>
+        Geld einfach<br>
+        <em>zu dir fließen darf –<br>weil du bist?</em>
+      </h1>
+
+      <p class="hero-sub">
+        Diese 15-Minuten Meditation öffnet in dir das, was Geld
+        wirklich fließen lässt – nicht mehr Leistung, nicht mehr Kontrolle.
+        Nur du, deine Energie, dein natürlicher Überfluss.
+      </p>
+
+      <div class="hero-cta">
+        <a href="#anmelden" class="btn-primary">
+          Ja! Ich öffne mich für Geldfluss &rarr;
+        </a>
+        <span class="hero-proof-line">Bereits über 1.200 Frauen haben ihre Geldenergie damit transformiert.</span>
+      </div>
+    </div>
+
+    <!-- RIGHT: Image -->
+    <div class="hero-image-wrap">
+      <img
+        class="hero-img"
+        src="../Bilder/Marina_MAI2314433 Kopie.jpg"
+        alt="Marina Henze – Feminess"
+      />
+    </div>
+
+  </section>
+
+  <!-- ──────────────────────────────────────────
+       TRUST BAR
+  ────────────────────────────────────────── -->
+  <div class="trust-bar">
+    <div class="trust-item"><span>✦</span> Kostenfrei</div>
+    <div class="trust-item"><span>✦</span> Sofort per E-Mail</div>
+    <div class="trust-item"><span>✦</span> 15 Minuten</div>
+    <div class="trust-item"><span>✦</span> Kein Vorwissen nötig</div>
+  </div>
+
+  <!-- ──────────────────────────────────────────
+       BULLETS
+  ────────────────────────────────────────── -->
+  <section class="bullets-section">
+    <div class="bullets-inner">
+      <span class="section-eyebrow">✦ Das erwartet dich ✦</span>
+      <h2 class="section-title">Eine Meditation.<br><em>Tiefe Wirkung.</em></h2>
+
+      <ul class="bullet-list">
+
+        <li class="bullet-item">
+          <div class="bullet-icon">
+            <svg viewBox="0 0 20 20"><path d="M8.4 14.4l-4-4 1.4-1.4 2.6 2.6 5.8-5.8 1.4 1.4z"/></svg>
+          </div>
+          <p class="bullet-text">
+            Du erkennst, <strong>warum Geld bei dir nicht bleibt</strong> –
+            selbst wenn du viel verdienst oder verdient hast
+          </p>
+        </li>
+
+        <li class="bullet-item">
+          <div class="bullet-icon">
+            <svg viewBox="0 0 20 20"><path d="M8.4 14.4l-4-4 1.4-1.4 2.6 2.6 5.8-5.8 1.4 1.4z"/></svg>
+          </div>
+          <p class="bullet-text">
+            Du aktivierst deinen <strong>natürlichen Empfangsmodus für Fülle</strong> –
+            auf der körperlichen, emotionalen und energetischen Ebene gleichzeitig
+          </p>
+        </li>
+
+        <li class="bullet-item">
+          <div class="bullet-icon">
+            <svg viewBox="0 0 20 20"><path d="M8.4 14.4l-4-4 1.4-1.4 2.6 2.6 5.8-5.8 1.4 1.4z"/></svg>
+          </div>
+          <p class="bullet-text">
+            Du <strong>löst alte Geldblockaden, schlechte Erfahrungen</strong> und
+            limitierende Glaubenssätze sanft auf – ohne lange Therapiestunden
+          </p>
+        </li>
+
+        <li class="bullet-item">
+          <div class="bullet-icon">
+            <svg viewBox="0 0 20 20"><path d="M8.4 14.4l-4-4 1.4-1.4 2.6 2.6 5.8-5.8 1.4 1.4z"/></svg>
+          </div>
+          <p class="bullet-text">
+            Du verbindest alle Körperebenen –
+            <strong>damit Geld nicht nur im Kopf, sondern in jeder Zelle ankommen kann</strong>
+          </p>
+        </li>
+
+        <li class="bullet-item">
+          <div class="bullet-icon">
+            <svg viewBox="0 0 20 20"><path d="M8.4 14.4l-4-4 1.4-1.4 2.6 2.6 5.8-5.8 1.4 1.4z"/></svg>
+          </div>
+          <p class="bullet-text">
+            Du spürst zum ersten Mal (oder endlich wieder):
+            <strong>Geld darf zu mir fließen – aus 360 Grad, weil ich bin.</strong>
+            Nicht weil ich tue.
+          </p>
+        </li>
+
+      </ul>
+    </div>
+  </section>
+
+  <!-- ──────────────────────────────────────────
+       BILD-DIVIDER (Sonnenuntergang)
+  ────────────────────────────────────────── -->
+  <div class="img-divider">
+    <img
+      class="img-divider-bg"
+      src="../Bilder/Marina_MAI2314477 Kopie.jpg"
+      alt=""
+      aria-hidden="true"
+    />
+    <div class="img-divider-overlay">
+      <p class="img-divider-quote">
+        „Ich ziehe Geld aus 360 Grad zu mir.<br>
+        Ich lebe in <em>unendlicher finanzieller Fülle.</em>"
+      </p>
+    </div>
+  </div>
+
+  <!-- ──────────────────────────────────────────
+       ABOUT – MIT PORTRAIT
+  ────────────────────────────────────────── -->
+  <section class="about-section">
+    <div class="about-inner">
+
+      <div class="about-portrait">
+        <img
+          src="../Bilder/Marina_MAI2314280 Kopie.jpg"
+          alt="Marina Henze"
+        />
+      </div>
+
+      <div class="about-content">
+        <span class="about-eyebrow">✦ Deine Guide ✦</span>
+        <p class="about-name">Marina</p>
+        <p class="about-text">
+          Ich bin Marina Henze – und ich habe selbst jahrelang mehr gearbeitet als ich musste,
+          nur um festzustellen: Das Problem war nie die Strategie.
+          <strong>Es war meine Beziehung zu Geld.</strong><br><br>
+          Diese Meditation ist das, womit ich für mich selbst alles verändert habe.
+          Sie ist keine Technik. Sie ist eine Einladung – an dich, endlich zu empfangen,
+          was schon längst für dich bestimmt ist.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ──────────────────────────────────────────
+       OPT-IN FORM
+  ────────────────────────────────────────── -->
+  <section class="form-section" id="anmelden">
+    <div class="form-inner">
+      <p class="form-eyebrow">✦ Gratis Zugang ✦</p>
+      <h2 class="form-title">
+        Wohin darf ich dir<br>
+        die Meditation <em>schicken?</em>
+      </h2>
+      <p class="form-sub">
+        Trag dich ein – du bekommst die Audio-Meditation sofort ins Postfach.
+        Kostenfrei. Ohne Haken.
+      </p>
+
+      <style>@import url(https://fonts.bunny.net/css?family=sans-serif:400|IBM+Plex+Sans:400);</style>
+      <style>
+#_form_559_{font-size:14px;line-height:1.6;font-family:arial, helvetica, sans-serif;margin:0;box-shadow:none}._form_hide{display:none;visibility:hidden}._form_show{display:block;visibility:visible}#_form_559_._form-top{top:0}#_form_559_._form-bottom{bottom:0}#_form_559_._form-left{left:0}#_form_559_._form-right{right:0}#_form_559_ input[type="text"],#_form_559_ input[type="tel"],#_form_559_ input[type="date"],#_form_559_ textarea{padding:6px;height:auto;border:#979797 1px solid;border-radius:4px;color:#000 !important;font-size:14px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}#_form_559_ textarea{resize:none}#_form_559_ input::placeholder{color:#142341}#_form_559_ ._submit{cursor:pointer;font-family:arial, sans-serif;font-size:14px;text-align:center;background:#004cff !important;border:0 !important;-moz-border-radius:4px !important;-webkit-border-radius:4px !important;border-radius:4px !important;color:#ffffff !important;padding:10px !important}#_form_559_ ._submit:disabled{cursor:not-allowed;opacity:0.4}#_form_559_ ._submit.processing{position:relative}#_form_559_ ._submit.processing::before{content:"";width:1em;height:1em;position:absolute;z-index:1;top:50%;left:50%;border:double 3px transparent;border-radius:50%;background-image:linear-gradient(#004cff, #004cff), conic-gradient(#004cff, #ffffff);background-origin:border-box;background-clip:content-box, border-box;animation:1200ms ease 0s infinite normal none running _spin}#_form_559_ ._submit.processing::after{content:"";position:absolute;top:0;bottom:0;left:0;right:0}@keyframes _spin{0%{transform:translate(-50%, -50%) rotate(90deg)}100%{transform:translate(-50%, -50%) rotate(450deg)}}#_form_559_ ._close-icon{cursor:pointer;background-image:url("https://d226aj4ao1t61q.cloudfront.net/esfkyjh1u_forms-close-dark.png");background-repeat:no-repeat;background-size:14.2px 14.2px;position:absolute;display:block;top:11px;right:9px;overflow:hidden;width:16.2px;height:16.2px}#_form_559_ ._close-icon:before{position:relative}#_form_559_ ._form-body{margin-bottom:30px}#_form_559_ ._form-image-left{width:150px;float:left}#_form_559_ ._form-content-right{margin-left:164px}#_form_559_ ._form-branding{color:#fff;font-size:10px;clear:both;text-align:left;margin-top:30px;font-weight:100}#_form_559_ ._form-branding ._logo{display:block;width:130px;height:14px;margin-top:6px;background-image:url("https://d226aj4ao1t61q.cloudfront.net/hh9ujqgv5_aclogo_li.png");background-size:130px auto;background-repeat:no-repeat}#_form_559_ .form-sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);border:0}#_form_559_ ._form-label,#_form_559_ ._form_element ._form-label{font-weight:bold;margin-bottom:5px;display:block}#_form_559_._dark ._form-branding{color:#333}#_form_559_._dark ._form-branding ._logo{background-image:url("https://d226aj4ao1t61q.cloudfront.net/jftq2c8s_aclogo_dk.png")}#_form_559_ ._form_element{position:relative;margin-bottom:10px;font-size:0;max-width:100%}#_form_559_ ._form_element *{font-size:14px}#_form_559_ ._form_element._clear{clear:both;width:100%;float:none}#_form_559_ ._form_element._clear:after{clear:left}#_form_559_ ._form_element textarea,#_form_559_ ._form_element select,#_form_559_ ._form_element input[type="text"],#_form_559_ ._form_element input[type="date"],#_form_559_ ._form_element input[type="phone"],#_form_559_ ._form_element input[type="email"]{background:white;color:#142341 !important;border-top:1px solid #cccccc;border-left:1px solid #cccccc;border-right:1px solid #cccccc;border-bottom:1px solid #cccccc;border-radius:0px}#_form_559_ ._form_element input[type="text"],#_form_559_ ._form_element input[type="date"],#_form_559_ ._form_element select,#_form_559_ ._form_element textarea:not(.g-recaptcha-response){display:block;width:100%;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;font-family:inherit}#_form_559_ ._field-wrapper{position:relative}#_form_559_ ._inline-style{float:left}#_form_559_ ._inline-style input[type="text"]{width:150px}#_form_559_ ._inline-style:not(._clear){margin-right:20px}#_form_559_ ._form_element img._form-image{max-width:100%}#_form_559_ ._form_element ._form-fieldset{border:0;padding:0.01em 0 0 0;margin:0;min-width:0}#_form_559_ ._clear-element{clear:left}#_form_559_ ._full_width{width:100%}#_form_559_ ._form_full_field{display:block;width:100%;margin-bottom:10px}#_form_559_ input[type="text"]._has_error,#_form_559_ textarea._has_error{border:#F37C7B 1px solid}#_form_559_ input[type="checkbox"]._has_error{outline:#F37C7B 1px solid}#_form_559_ ._show_be_error{float:left}#_form_559_ ._error{display:block;position:absolute;font-size:14px;z-index:10000001}#_form_559_ ._error._above{padding-bottom:4px;bottom:39px;right:0}#_form_559_ ._error._below{padding-top:8px;top:100%;right:0}#_form_559_ ._error._above ._error-arrow{bottom:-4px;right:15px;border-left:8px solid transparent;border-right:8px solid transparent;border-top:8px solid #FFDDDD}#_form_559_ ._error._below ._error-arrow{top:0;right:15px;border-left:8px solid transparent;border-right:8px solid transparent;border-bottom:8px solid #FFDDDD}#_form_559_ ._error-inner{padding:12px 12px 12px 36px;background-color:#FFDDDD;background-image:url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8ZM9 3V9H7V3H9ZM9 13V11H7V13H9Z' fill='%23CA0000'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:12px center;font-size:14px;font-family:arial, sans-serif;font-weight:600;line-height:16px;color:#000;text-align:center;text-decoration:none;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;box-shadow:0 1px 4px rgba(31, 33, 41, 0.298295)}@media only screen and (max-width:319px){#_form_559_ ._error-inner{padding:7px 7px 7px 25px;font-size:12px;line-height:12px;background-position:4px center;max-width:100px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}}#_form_559_ ._error-inner._form_error{margin-bottom:5px;text-align:left}#_form_559_ ._button-wrapper ._error-inner._form_error{position:static}#_form_559_ ._error-inner._no_arrow{margin-bottom:10px}#_form_559_ ._error-arrow{position:absolute;width:0;height:0}#_form_559_ ._error-html{margin-bottom:10px}.pika-single{z-index:10000001 !important}#_form_559_ input[type="text"].datetime_date{width:69%;display:inline}#_form_559_ select.datetime_time{width:29%;display:inline;height:32px}#_form_559_ input[type="date"].datetime_date{width:69%;display:inline-flex}#_form_559_ input[type="time"].datetime_time{width:29%;display:inline-flex}@media (min-width:320px) and (max-width:667px){::-webkit-scrollbar{display:none}#_form_559_{margin:0;width:100%;min-width:100%;max-width:100%;box-sizing:border-box}#_form_559_ *{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;font-size:1em}#_form_559_ ._form-content{margin:0;width:100%}#_form_559_ ._form-inner{display:block;min-width:100%}#_form_559_ ._form-title,#_form_559_ ._inline-style{margin-top:0;margin-right:0;margin-left:0}#_form_559_ ._form-title{font-size:1.2em}#_form_559_ ._form_element{margin:0 0 20px;padding:0;width:100%}#_form_559_ ._form-element,#_form_559_ ._inline-style,#_form_559_ input[type="text"],#_form_559_ label,#_form_559_ p,#_form_559_ textarea:not(.g-recaptcha-response){float:none;display:block;width:100%}#_form_559_ ._row._checkbox-radio label{display:inline}#_form_559_ ._row,#_form_559_ p,#_form_559_ label{margin-bottom:0.7em;width:100%}#_form_559_ ._row input[type="checkbox"],#_form_559_ ._row input[type="radio"]{margin:0 !important;vertical-align:middle !important}#_form_559_ ._row input[type="checkbox"]+span label{display:inline}#_form_559_ ._row span label{margin:0 !important;width:initial !important;vertical-align:middle !important}#_form_559_ ._form-image{max-width:100%;height:auto !important}#_form_559_ input[type="text"]{padding-left:10px;padding-right:10px;font-size:16px;line-height:1.3em}#_form_559_ input[type="radio"],#_form_559_ input[type="checkbox"]{display:inline-block;width:1.3em;height:1.3em;font-size:1em;margin:0 0.3em 0 0;vertical-align:baseline}#_form_559_ button[type="submit"]{padding:20px;font-size:1.5em}#_form_559_ ._inline-style{margin:20px 0 0 !important}#_form_559_ ._inline-style input[type="text"]{width:100%}}#_form_559_ .sms_consent_checkbox{position:relative;width:100%;display:flex;align-items:flex-start;padding:20px 0}#_form_559_ .sms_consent_checkbox input[type="checkbox"]{float:left;margin:5px 10px 10px 0}#_form_559_ .sms_consent_checkbox .sms_consent_message{display:inline;float:left;text-align:left;margin-bottom:10px;font-size:14px;color:#7D8799}#_form_559_ .sms_consent_checkbox .sms_consent_message.sms_consent_mini{width:90%}#_form_559_ .sms_consent_checkbox ._error._above{right:auto;bottom:0}#_form_559_ .sms_consent_checkbox ._error._above ._error-arrow{right:auto;left:5px}@media (min-width:320px) and (max-width:667px){#_form_559_ .sms_consent_checkbox ._error._above{top:-30px;left:0;bottom:auto}}#_form_559_ .field-required{color:#FF0000}#_form_559_{position:relative;text-align:left;margin:25px auto 0;padding-top:20px;padding-right:20px;padding-bottom:20px;padding-left:20px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;background:white !important;border-top:0px solid #b0b0b0 !important;border-right:0px solid #b0b0b0 !important;border-bottom:0px solid #b0b0b0 !important;border-left:0px solid #b0b0b0 !important;max-width:500px;-moz-border-radius:0px !important;-webkit-border-radius:0px !important;border-radius:0px !important;color:#000000}#_form_559_ ._show_be_error{min-width:100%}#_form_559_._inline-form,#_form_559_._inline-form ._form-content{font-family:sans-serif;font-size:14px;font-weight:400}#_form_559_._inline-form ._row span:not(.field-required),#_form_559_._inline-form ._row label{font-family:sans-serif;font-size:14px;font-weight:400;line-height:1.6em;color:black}#_form_559__inlineform input[type="text"],#_form_559__inlineform input[type="date"],#_form_559__inlineform input[type="tel"],#_form_559__inlineform select,#_form_559__inlineform textarea:not(.g-recaptcha-response){font-family:sans-serif;font-size:14px;font-weight:400;font-color:#000000;line-height:1.6em}#_form_559_._inline-form ._html-code *:not(h1, h2, h3, h4, h5, h6),#_form_559_._inline-form .sms_consent_message,#_form_559_._inline-form ._form-thank-you{font-family:sans-serif;font-size:14px;font-weight:400;color:black}#_form_559_._inline-form ._form-label,#_form_559_._inline-form ._form-emailidentifier,#_form_559_._inline-form ._form-checkbox-option-label{font-family:sans-serif;font-size:14px;font-weight:700;line-height:1.6em;color:black}#_form_559_._inline-form ._submit{margin-top:12px;font-family:sans-serif;font-size:14px;font-weight:400}#_form_559_._inline-form ._html-code h1,#_form_559_._inline-form ._html-code h2,#_form_559_._inline-form ._html-code h3,#_form_559_._inline-form ._html-code h4,#_form_559_._inline-form ._html-code h5,#_form_559_._inline-form ._html-code h6,#_form_559_._inline-form ._form-title{font-family:sans-serif;font-size:24px;line-height:normal;font-weight:400;color:black;margin-bottom:0;display:block}#_form_559_._inline-form ._form-branding{font-family:"IBM Plex Sans", Helvetica, sans-serif;font-size:13px;font-weight:100;font-style:normal;text-decoration:none}#_form_559_:before,#_form_559_:after{content:" ";display:table}#_form_559_:after{clear:both}#_form_559_._inline-style{width:auto;display:inline-block}#_form_559_._inline-style input[type="text"],#_form_559_._inline-style input[type="date"]{padding:10px 12px}#_form_559_._inline-style button._inline-style{position:relative;top:27px}#_form_559_._inline-style p{margin:0}#_form_559_._inline-style ._button-wrapper{position:relative;margin:16px 12.5px 0 20px}#_form_559_._inline-style ._button-wrapper:not(._clear){margin-left:0}#_form_559_ ._form-thank-you{position:relative;left:0;right:0;text-align:center;font-size:18px}#_form_559_ ._form-pc-confirmation ._submit{margin-top:16px}@media (min-width:320px) and (max-width:667px){#_form_559_._inline-form._inline-style ._inline-style._button-wrapper{margin-top:20px !important;margin-left:0 !important}}#_form_559_ .iti{width:100%}#_form_559_ .iti.iti--allow-dropdown.iti--separate-dial-code{width:100%}#_form_559_ .iti input{width:100%;border:#979797 1px solid;border-radius:4px}#_form_559_ .iti--separate-dial-code .iti__selected-flag{background-color:#FFFFFF;border-radius:4px}#_form_559_ .iti--separate-dial-code .iti__selected-flag:hover{background-color:rgba(0, 0, 0, 0.05)}#_form_559_ .iti__country-list{border-radius:4px;margin-top:4px;min-width:460px}#_form_559_ .iti__country-list--dropup{margin-bottom:4px}#_form_559_ .phone-error-hidden{display:none}#_form_559_ .phone-error{color:#E40E49}#_form_559_ .phone-input-error{border:1px solid #E40E49 !important}#_form_559_._inline-form ._form-content ._form-list-subscriptions-field fieldset{margin:0;margin-bottom:1.1428571429em;border:none;padding:0}#_form_559_._inline-form ._form-content ._form-list-subscriptions-field fieldset:last-child{margin-bottom:0}#_form_559_._inline-form ._form-content ._form-list-subscriptions-field legend{margin-bottom:1.1428571429em}#_form_559_._inline-form ._form-content ._form-list-subscriptions-field label{display:flex;align-items:flex-start;justify-content:flex-start;margin-bottom:0.8571428571em}#_form_559_._inline-form ._form-content ._form-list-subscriptions-field label:last-child{margin-bottom:0}#_form_559_._inline-form ._form-content ._form-list-subscriptions-field input{margin:0;margin-right:8px}#_form_559_._inline-form ._form-content ._form-list-subscriptions-field ._form-checkbox-option-label{display:block;font-weight:400;margin-top:-4px}#_form_559_._inline-form ._form-content ._form-list-subscriptions-field ._form-checkbox-option-label-with-description{display:block;font-weight:700;margin-top:-4px}#_form_559_._inline-form ._form-content ._form-list-subscriptions-field ._form-checkbox-option-description{margin:0;font-size:0.8571428571em}#_form_559_._inline-form ._form-content ._form-list-subscriptions-field ._form-subscriptions-unsubscribe-all-description{line-height:normal;margin-top:-2px}
+      </style>
+
+      <form method="POST" action="https://marina232.activehosted.com/proc.php" id="_form_559_" class="_form _form_559 _inline-form  _dark" novalidate data-styles-version="5">
+        <input type="hidden" name="u" value="559" />
+        <input type="hidden" name="f" value="559" />
+        <input type="hidden" name="s" />
+        <input type="hidden" name="c" value="0" />
+        <input type="hidden" name="m" value="0" />
+        <input type="hidden" name="act" value="sub" />
+        <input type="hidden" name="v" value="2" />
+        <input type="hidden" name="or" value="87a554a3-d14a-41c7-8bc9-1e9a68b7ac88" />
+        <div class="_form-content">
+          <div class="_form_element _x50601005 _full_width">
+            <label for="firstname" class="_form-label">
+              Vorname<span class="field-required">*</span>
+            </label>
+            <div class="_field-wrapper">
+              <input type="text" id="firstname" name="firstname" placeholder="Dein Vorname" required/>
+            </div>
+          </div>
+          <div class="_form_element _field_email _full_width">
+            <label for="email" class="_form-label">
+              E-Mail<span class="field-required">*</span>
+            </label>
+            <div class="_field-wrapper">
+              <input type="text" id="email" name="email" placeholder="Deine E-Mail-Adresse" required/>
+            </div>
+          </div>
+          <div class="_button-wrapper _full_width">
+            <button id="_form_559_submit" class="_submit" type="submit">
+              Ja! Ich öffne mich jetzt für Geldfluss →
+            </button>
+          </div>
+          <div class="_clear-element"></div>
+        </div>
+        <div class="_form-thank-you" style="display:none;"></div>
+        <div class="_form-branding">
+          <div class="_marketing-by">Marketing von</div>
+          <a href="https://www.activecampaign.com/?utm_medium=referral&utm_campaign=acforms" class="_logo">
+            <span class="form-sr-only">ActiveCampaign</span>
+          </a>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ──────────────────────────────────────────
+       SOCIAL PROOF
+  ────────────────────────────────────────── -->
+  <section class="proof-section">
+    <div class="proof-inner">
+      <p class="proof-number">1.200+</p>
+      <p class="proof-caption">Frauen haben bereits ihre Geldenergie damit transformiert</p>
+
+      <div class="testimonial">
+        <p class="testimonial-quote">
+          „Ich habe diese Meditation morgens und abends genutzt – nach einer Woche
+          hatte ich drei neue Kundinnen und ein Gefühl von Leichtigkeit rund um Geld,
+          das ich noch nie so gespürt hatte. Es ist wie ein Schalter, der sich umlegt."
+        </p>
+        <p class="testimonial-author">— Sabrina K., Business-Coach</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>
+      &copy; 2026 Feminess &middot; Marina Henze<br>
+      <a href="Impressum.html">Impressum</a>
+      &nbsp;&middot;&nbsp;
+      <a href="#">Datenschutz</a>
+    </p>
+  </footer>
+
+  <script>
+window.cfields = [];
+window._show_thank_you = function(id, message, trackcmp_url, email) {
+    var form = document.getElementById('_form_' + id + '_'), thank_you = form.querySelector('._form-thank-you');
+    form.querySelector('._form-content').style.display = 'none';
+    thank_you.innerHTML = message;
+    thank_you.style.display = 'block';
+    const vgoAlias = typeof visitorGlobalObjectAlias === 'undefined' ? 'vgo' : visitorGlobalObjectAlias;
+    var visitorObject = window[vgoAlias];
+    if (email && typeof visitorObject !== 'undefined') { visitorObject('setEmail', email); visitorObject('update'); } else if (typeof(trackcmp_url) != 'undefined' && trackcmp_url) { _load_script(trackcmp_url); }
+    if (typeof window._form_callback !== 'undefined') window._form_callback(id);
+    thank_you.setAttribute('tabindex', '-1'); thank_you.focus();
+};
+window._show_error = function(id, message, html) {
+    var form = document.getElementById('_form_' + id + '_'), err = document.createElement('div'), button = form.querySelector('button[type="submit"]'), old_error = form.querySelector('._form_error');
+    if (old_error) old_error.parentNode.removeChild(old_error);
+    err.innerHTML = message; err.className = '_error-inner _form_error _no_arrow';
+    var wrapper = document.createElement('div'); wrapper.className = '_form-inner _show_be_error'; wrapper.appendChild(err);
+    button.parentNode.insertBefore(wrapper, button);
+    var submitButton = form.querySelector('[id^="_form"][id$="_submit"]');
+    submitButton.disabled = false; submitButton.classList.remove('processing');
+    if (html) { var div = document.createElement('div'); div.className = '_error-html'; div.innerHTML = html; err.appendChild(div); }
+};
+window._load_script = function(url, callback, isSubmit) {
+    var head = document.querySelector('head'), script = document.createElement('script'), r = false;
+    var submitButton = document.querySelector('#_form_559_submit');
+    script.charset = 'utf-8'; script.src = url;
+    if (callback) { script.onload = script.onreadystatechange = function() { if (!r && (!this.readyState || this.readyState == 'complete')) { r = true; callback(); } }; }
+    script.onerror = function() {
+        if (isSubmit) {
+            if (script.src.length > 10000) { _show_error("559", "Ihre Übermittlung konnte nicht gesendet werden. Bitte kürzen Sie Ihre Antworten und versuche es erneut."); }
+            else { _show_error("559", "Ihre Übermittlung konnte nicht gesendet werden. Bitte versuchen Sie es erneut."); }
+            submitButton.disabled = false; submitButton.classList.remove('processing');
+        }
+    }
+    head.appendChild(script);
+};
+(function() {
+    var iti;
+    if (window.location.search.search("excludeform") !== -1) return false;
+    var getCookie = function(name) { var match = document.cookie.match(new RegExp('(^|; )' + name + '=([^;]+)')); return match ? match[2] : localStorage.getItem(name); }
+    var setCookie = function(name, value) { var now = new Date(); var time = now.getTime(); var expireTime = time + 1000 * 60 * 60 * 24 * 365; now.setTime(expireTime); document.cookie = name + '=' + value + '; expires=' + now + ';path=/; Secure; SameSite=Lax;'; localStorage.setItem(name, value); }
+    var addEvent = function(element, event, func) { if (element.addEventListener) { element.addEventListener(event, func); } else { var oldFunc = element['on' + event]; element['on' + event] = function() { oldFunc.apply(this, arguments); func.apply(this, arguments); }; } }
+    var _removed = false;
+    var form_to_submit = document.getElementById('_form_559_');
+    var allInputs = form_to_submit.querySelectorAll('input, select, textarea'), tooltips = [], submitted = false;
+    var getUrlParam = function(name) {
+        if (name.toLowerCase() !== 'email') { var params = new URLSearchParams(window.location.search); return params.get(name) || false; }
+        var qString = window.location.search; if (!qString) { return false; }
+        var parameters = qString.substr(1).split('&');
+        for (var i = 0; i < parameters.length; i++) { var parameter = parameters[i].split('='); if (parameter[0].toLowerCase() === 'email') { return parameter[1] === undefined ? true : decodeURIComponent(parameter[1]); } }
+        return false;
+    };
+    var acctDateFormat = "%d/%m/%Y";
+    var getNormalizedDate = function(date, acctFormat) {
+        var decodedDate = decodeURIComponent(date);
+        if (acctFormat && acctFormat.match(/(%d|%e).*%m/gi) !== null) { return decodedDate.replace(/(\d{2}).*(\d{2}).*(\d{4})/g, '$3-$2-$1'); }
+        else if (Date.parse(decodedDate)) { var dateObj = new Date(decodedDate); var year = dateObj.getFullYear(); var month = dateObj.getMonth() + 1; var day = dateObj.getDate(); return `${year}-${month < 10 ? `0${month}` : month}-${day < 10 ? `0${day}` : day}`; }
+        return false;
+    };
+    var getNormalizedTime = function(time) {
+        var hour, minutes; var decodedTime = decodeURIComponent(time);
+        var timeParts = Array.from(decodedTime.matchAll(/(\d{1,2}):(\d{1,2})\W*([AaPp][Mm])?/gm))[0];
+        if (timeParts[3]) { var isPM = timeParts[3].toLowerCase() === 'pm'; if (isPM) { hour = parseInt(timeParts[1]) === 12 ? '12' : `${parseInt(timeParts[1]) + 12}`; } else { hour = parseInt(timeParts[1]) === 12 ? '0' : timeParts[1]; } } else { hour = timeParts[1]; }
+        var normalizedHour = parseInt(hour) < 10 ? `0${parseInt(hour)}` : hour; var minutes = timeParts[2]; return `${normalizedHour}:${minutes}`;
+    };
+    for (var i = 0; i < allInputs.length; i++) {
+        var regexStr = "field\\[(\\d+)\\]"; var results = new RegExp(regexStr).exec(allInputs[i].name);
+        if (results != undefined) { allInputs[i].dataset.name = allInputs[i].name.match(/\[time\]$/) ? `${window.cfields[results[1]]}_time` : window.cfields[results[1]]; } else { allInputs[i].dataset.name = allInputs[i].name; }
+        var fieldVal = getUrlParam(allInputs[i].dataset.name);
+        if (fieldVal) {
+            if (allInputs[i].dataset.autofill === "false") { continue; }
+            if (allInputs[i].type == "radio" || allInputs[i].type == "checkbox") { if (allInputs[i].value == fieldVal) { allInputs[i].checked = true; } }
+            else if (allInputs[i].type == "date") { allInputs[i].value = getNormalizedDate(fieldVal, acctDateFormat); }
+            else if (allInputs[i].type == "time") { allInputs[i].value = getNormalizedTime(fieldVal); }
+            else { allInputs[i].value = fieldVal; }
+        }
+    }
+    var remove_tooltips = function() { for (var i = 0; i < tooltips.length; i++) { tooltips[i].tip.parentNode.removeChild(tooltips[i].tip); } tooltips = []; };
+    var remove_tooltip = function(elem) { for (var i = 0; i < tooltips.length; i++) { if (tooltips[i].elem === elem) { tooltips[i].tip.parentNode.removeChild(tooltips[i].tip); tooltips.splice(i, 1); return; } } };
+    var create_tooltip = function(elem, text) {
+        var tooltip = document.createElement('div'), arrow = document.createElement('div'), inner = document.createElement('div'), new_tooltip = {};
+        tooltip.id = `${elem.id}-error`; tooltip.setAttribute('role', 'alert');
+        if (elem.type != 'radio' && (elem.type != 'checkbox' || elem.name === 'sms_consent')) { tooltip.className = '_error'; arrow.className = '_error-arrow'; inner.className = '_error-inner'; inner.innerHTML = text; tooltip.appendChild(arrow); tooltip.appendChild(inner); elem.parentNode.appendChild(tooltip); }
+        else { tooltip.className = '_error-inner _no_arrow'; tooltip.innerHTML = text; elem.parentNode.insertBefore(tooltip, elem); new_tooltip.no_arrow = true; }
+        new_tooltip.tip = tooltip; new_tooltip.elem = elem; tooltips.push(new_tooltip); return new_tooltip;
+    };
+    var resize_tooltip = function(tooltip) { var rect = tooltip.elem.getBoundingClientRect(); var doc = document.documentElement, scrollPosition = rect.top - ((window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0)); if (scrollPosition < 40) { tooltip.tip.className = tooltip.tip.className.replace(/ ?(_above|_below) ?/g, '') + ' _below'; } else { tooltip.tip.className = tooltip.tip.className.replace(/ ?(_above|_below) ?/g, '') + ' _above'; } };
+    var resize_tooltips = function() { if (_removed) return; for (var i = 0; i < tooltips.length; i++) { if (!tooltips[i].no_arrow) resize_tooltip(tooltips[i]); } };
+    var validate_field = function(elem, remove) {
+        var tooltip = null, value = elem.value, no_error = true;
+        remove ? remove_tooltip(elem) : false; elem.removeAttribute('aria-invalid'); elem.removeAttribute('aria-describedby');
+        if (elem.type != 'checkbox') elem.className = elem.className.replace(/ ?_has_error ?/g, '');
+        if (elem.getAttribute('required') !== null) {
+            if (elem.type == 'radio' || (elem.type == 'checkbox' && /any/.test(elem.className))) {
+                var elems = form_to_submit.elements[elem.name];
+                if (!(elems instanceof NodeList || elems instanceof HTMLCollection) || elems.length <= 1) { no_error = elem.checked; }
+                else { no_error = false; for (var i = 0; i < elems.length; i++) { if (elems[i].checked) no_error = true; } }
+                if (!no_error) { tooltip = create_tooltip(elem, "Bitte eine Option auswählen."); }
+            } else if (elem.type == 'checkbox') {
+                var elems = form_to_submit.elements[elem.name], found = false, err = []; no_error = true;
+                for (var i = 0; i < elems.length; i++) { if (elems[i].getAttribute('required') === null) continue; if (!found && elems[i] !== elem) return true; found = true; elems[i].className = elems[i].className.replace(/ ?_has_error ?/g, ''); if (!elems[i].checked) { no_error = false; elems[i].className = elems[i].className + ' _has_error'; err.push("Die Markierung von %s ist erforderlich.".replace("%s", elems[i].value)); } }
+                if (!no_error) { tooltip = create_tooltip(elem, err.join('<br/>')); }
+            } else if (elem.tagName == 'SELECT') {
+                var selected = true;
+                if (elem.multiple) { selected = false; for (var i = 0; i < elem.options.length; i++) { if (elem.options[i].selected) { selected = true; break; } } }
+                else { for (var i = 0; i < elem.options.length; i++) { if (elem.options[i].selected && (!elem.options[i].value || (elem.options[i].value.match(/\n/g)))) { selected = false; } } }
+                if (!selected) { elem.className = elem.className + ' _has_error'; no_error = false; tooltip = create_tooltip(elem, "Bitte eine Option auswählen."); }
+            } else if (value === undefined || value === null || value === '') { elem.className = elem.className + ' _has_error'; no_error = false; tooltip = create_tooltip(elem, "Bitte füllen Sie das markierte Pflichtfeld aus."); }
+        }
+        if (no_error && elem.name == 'email') { if (!value.match(/^[\+_a-z0-9-'&=]+(\.[\+_a-z0-9-']+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,})$/i)) { elem.className = elem.className + ' _has_error'; no_error = false; tooltip = create_tooltip(elem, "Geben Sie eine gültige E-Mail-Adresse ein."); } }
+        tooltip ? resize_tooltip(tooltip) : false;
+        if (!no_error && elem.hasAttribute('id')) { elem.setAttribute('aria-invalid', 'true'); elem.setAttribute('aria-describedby', `${elem.id}-error`); }
+        return no_error;
+    };
+    var needs_validate = function(el) { if (el.getAttribute('required') !== null) { return true; } if ((el.name === 'email' || el.id === 'phone') && el.value !== "") { return true; } return false; };
+    var validate_form = function(e) {
+        var err = form_to_submit.querySelector('._form_error'), no_error = true;
+        if (!submitted) {
+            submitted = true;
+            for (var i = 0, len = allInputs.length; i < len; i++) {
+                var input = allInputs[i];
+                if (needs_validate(input)) {
+                    if (input.type == 'text' || input.type == 'number' || input.type == 'time' || input.type == 'tel') { addEvent(input, 'blur', function() { this.value = this.value.trim(); validate_field(this, true); }); addEvent(input, 'input', function() { validate_field(this, true); }); }
+                    else if (input.type == 'radio' || input.type == 'checkbox') { (function(el) { function getElementsArray(name){ const value = form_to_submit.elements[name]; if (Array.isArray(value)){ return value; } return [value]; } var radios = getElementsArray(el.name); for (var i = 0; i < radios.length; i++) { addEvent(radios[i], 'change', function() { validate_field(el, true); }); } })(input); }
+                    else if (input.tagName == 'SELECT') { addEvent(input, 'change', function() { validate_field(this, true); }); }
+                    else if (input.type == 'textarea') { addEvent(input, 'input', function() { validate_field(this, true); }); }
+                }
+            }
+        }
+        remove_tooltips();
+        for (var i = 0, len = allInputs.length; i < len; i++) { var elem = allInputs[i]; if (needs_validate(elem)) { if (elem.tagName.toLowerCase() !== "select") { elem.value = elem.value.trim(); } validate_field(elem) ? true : no_error = false; } }
+        if (!no_error && e) { e.preventDefault(); }
+        if (!no_error) { const firstFocusableError = form_to_submit.querySelector('._has_error:not([disabled])'); if (firstFocusableError && typeof firstFocusableError.focus === 'function') { firstFocusableError.focus(); } }
+        resize_tooltips(); return no_error;
+    };
+    addEvent(window, 'resize', resize_tooltips);
+    addEvent(window, 'scroll', resize_tooltips);
+    var _form_serialize = function(form){if(!form||form.nodeName!=="FORM"){return }var i,j,q=[];for(i=0;i<form.elements.length;i++){if(form.elements[i].name===""){continue}switch(form.elements[i].nodeName){case"INPUT":switch(form.elements[i].type){case"tel":q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].previousSibling.querySelector('div.iti__selected-dial-code').innerText)+encodeURIComponent(" ")+encodeURIComponent(form.elements[i].value));break;case"text":case"number":case"date":case"time":case"hidden":case"password":case"button":case"reset":case"submit":q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value));break;case"checkbox":case"radio":if(form.elements[i].checked){q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value))}break;case"file":break}break;case"TEXTAREA":q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value));break;case"SELECT":switch(form.elements[i].type){case"select-one":q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value));break;case"select-multiple":for(j=0;j<form.elements[i].options.length;j++){if(form.elements[i].options[j].selected){q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].options[j].value))}}break}break;case"BUTTON":switch(form.elements[i].type){case"reset":case"submit":case"button":q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value));break}break}}return q.join("&")};
+    const formSupportsPost = false;
+    var form_submit = function(e) {
+        e.preventDefault();
+        if (validate_form()) {
+            var submitButton = e.target.querySelector('#_form_559_submit');
+            submitButton.disabled = true; submitButton.classList.add('processing');
+            var serialized = _form_serialize(document.getElementById('_form_559_')).replace(/%0A/g, '\\n');
+            var err = form_to_submit.querySelector('._form_error');
+            err ? err.parentNode.removeChild(err) : false;
+            async function submitForm() {
+                var formData = new FormData(); const searchParams = new URLSearchParams(serialized);
+                searchParams.forEach((value, key) => { if (key !== 'hideButton') { formData.append(key, value); } });
+                let request = { headers: { "Accept": "application/json" }, body: formData, method: "POST" };
+                let pageUrlParams = new URLSearchParams(window.location.search);
+                if (pageUrlParams.has('t')) { request.headers.Authorization = 'Bearer ' + pageUrlParams.get('t'); }
+                const response = await fetch('https://marina232.activehosted.com/proc.php?jsonp=true', request);
+                return response.json();
+            }
+            if (formSupportsPost) { submitForm().then((data) => { eval(data.js); }).catch(() => { _show_error("559", "Ihre Übermittlung konnte nicht gesendet werden. Bitte versuchen Sie es erneut."); }); }
+            else { _load_script('https://marina232.activehosted.com/proc.php?' + serialized + '&jsonp=true', null, true); }
+        }
+        return false;
+    };
+    addEvent(form_to_submit, 'submit', form_submit);
+})();
+  </script>
+</body>
+</html>

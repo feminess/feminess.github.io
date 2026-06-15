@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feminess – Corporate Identity</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<style>
+  @font-face {
+    font-family: 'East Liberty';
+    src: url('../east_liberty_signature (1)/east liberty signature.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Avenir LT Pro';
+    src: url('../AvenirLTPro-Book (1).otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Avenir LT Pro';
+    src: url('../AvenirLTPro-Heavy (1).otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+  }
+</style>
+<style>
+  :root {
+    --teal:        #257c6c;
+    --teal-dark:   #1b5c50;
+    --teal-light:  #5ec6b3;
+    --teal-pale:   #b8ddd8;
+    --rose:        #cf5a73;
+    --rose-light:  #e8a0b0;
+    --red:         #861627;
+    --red-dark:    #64081b;
+    --sand:        #c2ab8d;
+    --sand-dark:   #8d6a48;
+    --sand-light:  #e4bc95;
+    --black:       #070808;
+    --dark:        #0d2420;
+    --off-white:   #f8f6f2;
+    --cream:       #f0f5f4;
+    --beige:       #ddecea;
+    --warm-gray:   #5a7a74;
+    --mid-gray:    #9ab8b4;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--off-white);
+    color: var(--black);
+    font-family: 'Avenir LT Pro', sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── COVER ── */
+  .cover {
+    background: var(--dark);
+    padding: 100px 64px;
+    position: relative;
+    overflow: hidden;
+    min-height: 340px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .cover::before {
+    content: '';
+    position: absolute;
+    top: -100px; right: -100px;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(37,124,108,0.25) 0%, transparent 65%);
+    pointer-events: none;
+  }
+
+  .cover::after {
+    content: '';
+    position: absolute;
+    bottom: -80px; left: 200px;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(207,90,115,0.12) 0%, transparent 65%);
+    pointer-events: none;
+  }
+
+  .cover-label {
+    font-family: 'Avenir LT Pro', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--teal-light);
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cover h1 {
+    font-family: 'East Liberty', 'East Liberty', serif;
+    font-size: clamp(52px, 8vw, 96px);
+    font-weight: 300;
+    line-height: 1.0;
+    color: #fff;
+    letter-spacing: -1px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cover h1 em {
+    font-style: italic;
+    color: var(--sand-light);
+  }
+
+  .cover-sub {
+    font-family: 'Avenir LT Pro', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--mid-gray);
+    margin-top: 20px;
+    letter-spacing: 0.5px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ── NAVIGATION ── */
+  .toc {
+    background: #fff;
+    border-bottom: 1px solid var(--beige);
+    padding: 0 64px;
+    display: flex;
+    gap: 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    overflow-x: auto;
+  }
+
+  .toc a {
+    font-family: 'Avenir LT Pro', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--warm-gray);
+    padding: 18px 24px;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    white-space: nowrap;
+    transition: color 0.2s, border-color 0.2s;
+  }
+
+  .toc a:hover {
+    color: var(--teal);
+    border-bottom-color: var(--teal);
+  }
+
+  /* ── LAYOUT ── */
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 64px;
+  }
+
+  .section {
+    padding: 80px 0;
+    border-bottom: 1px solid var(--beige);
+  }
+
+  .section:last-child { border-bottom: none; }
+
+  .section-label {
+    font-family: 'Avenir LT Pro', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .section-label::after {
+    content: '';
+    flex: 1;
+    max-width: 48px;
+    height: 1px;
+    background: var(--teal);
+    opacity: 0.4;
+  }
+
+  .section h2 {
+    font-family: 'East Liberty', 'East Liberty', serif;
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 400;
+    color: var(--black);
+    line-height: 1.1;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+  }
+
+  .section h2 em {
+    font-style: italic;
+    color: var(--rose);
+  }
+
+  .section-intro {
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--warm-gray);
+    max-width: 600px;
+    margin-bottom: 48px;
+    font-style: italic;
+  }
+
+  /* ── FARBEN ── */
+  .color-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 16px;
+    margin-top: 8px;
+  }
+
+  .color-card {
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid var(--beige);
+  }
+
+  .color-swatch {
+    height: 100px;
+    width: 100%;
+  }
+
+  .color-info {
+    background: #fff;
+    padding: 14px 16px;
+  }
+
+  .color-name {
+    font-family: 'Avenir LT Pro', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--black);
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .color-hex {
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    color: var(--warm-gray);
+  }
+
+  .color-use {
+    font-family: 'Avenir LT Pro', sans-serif;
+    font-size: 11px;
+    color: var(--mid-gray);
+    margin-top: 4px;
+    line-height: 1.4;
+  }
+
+  .color-group-label {
+    font-family: 'Avenir LT Pro', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--warm-gray);
+    margin: 36px 0 16px;
+  }
+
+  .color-group-label:first-child { margin-top: 0; }
+
+  /* ── TYPOGRAFIE ── */
+  .font-block {
+    background: #fff;
+    border: 1px solid var(--beige);
+    border-left: 3px solid var(--teal);
+    border-radius: 2px;
+    padding: 40px 44px;
+    margin-bottom: 24px;
+  }
+
+  .font-meta {
+    font-family: 'Avenir LT Pro', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 24px;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .font-meta span {
+    color: var(--warm-gray);
+    font-weight: 400;
+    letter-spacing: 0;
+    text-transform: none;
+    font-size: 11px;
+  }
+
+  .font-sample-heading {
+    font-family: 'East Liberty', 'East Liberty', serif;
+  }
+
+  .font-sample-body {
+    font-family: 'Avenir LT Pro', sans-serif;
+  }
+
+  .type-scale {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 8px;
+  }
+
+  .type-row {
+    display: flex;
+    align-items: baseline;
+    gap: 24px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--beige);
+  }
+
+  .type-row:last-child { border-bottom: none; }
+
+  .type-label {
+    font-family: 'Avenir LT Pro', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--mid-gray);
+    min-width: 120px;
+  }
+
+  .type-spec {
+    font-family: 'Courier New', monospace;
+    font-size: 11px;
+    color: var(--warm-gray);
+    min-width: 160px;
+  }
+
+  /* ── LOGO ── */
+  .logo-showcase {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 8px;
+  }
+
+  .logo-box {
+    padding: 56px 40px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--beige);
+  }
+
+  .logo-box.light { background: #fff; }
+  .logo-box.dark  { background: var(--dark); }
+
+  .logo-wordmark {
+    font-family: 'East Liberty', 'East Liberty', serif;
+    font-size: 2.8rem;
+    font-weight: 500;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+  }
+
+  .logo-wordmark.on-light { color: var(--sand-light); }
+  .logo-wordmark.on-dark  { color: var(--sand-light); }
+
+  .logo-caption {
+    font-family: 'Avenir LT Pro', sans-serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--mid-gray);
+    text-align: center;
+    margin-top: 12px;
+  }
+
+  .logo-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ── BRAND VOICE ── */
+  .voice-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 8px;
+  }
+
+  .voice-card {
+    background: #fff;
+    border: 1px solid var(--beige);
+    border-top: 3px solid var(--teal);
+    padding: 28px 32px;
+    border-radius: 2px;
+  }
+
+  .voice-card.rose { border-top-color: var(--rose); }
+
+  .voice-card-title {
+    font-family: 'Avenir LT Pro', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 16px;
+  }
+
+  .voice-card.rose .voice-card-title { color: var(--rose); }
+
+  .voice-card ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .voice-card ul li {
+    font-size: 14px;
+    color: var(--warm-gray);
+    line-height: 1.5;
+    padding-left: 20px;
+    position: relative;
+  }
+
+  .voice-card ul li::before {
+    content: '–';
+    position: absolute;
+    left: 0;
+    color: var(--teal);
+  }
+
+  .voice-card.rose ul li::before { color: var(--rose); }
+
+  /* ── KEYWORDS ── */
+  .keyword-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 8px;
+  }
+
+  .keyword {
+    font-family: 'Avenir LT Pro', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 8px 18px;
+    border-radius: 2px;
+    border: 1px solid var(--beige);
+    background: #fff;
+    color: var(--teal-dark);
+  }
+
+  .keyword.highlight {
+    background: var(--teal);
+    color: #fff;
+    border-color: var(--teal);
+  }
+
+  /* ── BEISPIEL-TEXTE ── */
+  .example-block {
+    background: var(--dark);
+    border-radius: 4px;
+    padding: 36px 40px;
+    margin-top: 24px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .example-block::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 3px;
+    background: linear-gradient(90deg, var(--teal), var(--teal-light));
+  }
+
+  .example-label {
+    font-family: 'Avenir LT Pro', sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--teal-light);
+    margin-bottom: 16px;
+  }
+
+  .example-text {
+    font-family: 'East Liberty', 'East Liberty', serif;
+    font-size: 22px;
+    font-style: italic;
+    color: var(--sand-light);
+    line-height: 1.5;
+  }
+
+  /* ── ZIELGRUPPE ── */
+  .persona-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 8px;
+  }
+
+  .persona-card {
+    background: var(--cream);
+    border: 1px solid var(--beige);
+    border-radius: 2px;
+    padding: 28px 28px;
+  }
+
+  .persona-icon {
+    font-size: 28px;
+    margin-bottom: 16px;
+    display: block;
+  }
+
+  .persona-title {
+    font-family: 'Avenir LT Pro', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 8px;
+  }
+
+  .persona-text {
+    font-family: 'Avenir LT Pro', sans-serif;
+    font-size: 13px;
+    color: var(--warm-gray);
+    line-height: 1.6;
+  }
+
+  /* ── FOOTER ── */
+  .ci-footer {
+    background: var(--black);
+    padding: 36px 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .ci-footer-brand {
+    font-family: 'East Liberty', 'East Liberty', serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--sand-light);
+  }
+
+  .ci-footer-note {
+    font-family: 'Avenir LT Pro', sans-serif;
+    font-size: 11px;
+    color: var(--mid-gray);
+    font-style: italic;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 720px) {
+    .cover, .container, .ci-footer { padding-left: 24px; padding-right: 24px; }
+    .toc { padding: 0 24px; }
+    .voice-grid, .logo-showcase, .persona-grid { grid-template-columns: 1fr; }
+    .color-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
+  }
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<div class="cover">
+  <div class="cover-label">Corporate Identity · Brand Guidelines</div>
+  <h1>Feminess<br><em>Brand Guide</em></h1>
+  <p class="cover-sub">Farben · Typografie · Bildwelt · Brand Voice · Stand 2026</p>
+</div>
+
+<!-- NAVIGATION -->
+<nav class="toc">
+  <a href="#farben">Farben</a>
+  <a href="#typografie">Typografie</a>
+  <a href="#logo">Logo</a>
+  <a href="#bildwelt">Bildwelt</a>
+  <a href="#brandvoice">Brand Voice</a>
+  <a href="#zielgruppe">Zielgruppe</a>
+</nav>
+
+<!-- FARBEN -->
+<section id="farben" class="section">
+  <div class="container">
+    <div class="section-label">01</div>
+    <h2>Die <em>Farben</em></h2>
+    <p class="section-intro">Teal als kraftvoller Hauptakzent, Rose als emotionaler Gegenpol, Sand und Schwarz als zeitlose Basis. Zusammen strahlen sie Weiblichkeit, Tiefe und Vertrauen aus.</p>
+
+    <div class="color-group-label">Primärfarben</div>
+    <div class="color-grid">
+      <div class="color-card">
+        <div class="color-swatch" style="background:#257c6c;"></div>
+        <div class="color-info">
+          <div class="color-name">Teal</div>
+          <div class="color-hex">#257c6c</div>
+          <div class="color-use">Hauptakzent, Links, CTAs, Highlights</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background:#1b5c50;"></div>
+        <div class="color-info">
+          <div class="color-name">Teal Dark</div>
+          <div class="color-hex">#1b5c50</div>
+          <div class="color-use">Hover-Zustände, Überschriften, Dunkelakzent</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background:#5ec6b3;"></div>
+        <div class="color-info">
+          <div class="color-name">Teal Light</div>
+          <div class="color-hex">#5ec6b3</div>
+          <div class="color-use">Auf dunklem Hintergrund, Scrollbalken, Akzentlinien</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background:#b8ddd8;"></div>
+        <div class="color-info">
+          <div class="color-name">Teal Pale</div>
+          <div class="color-hex">#b8ddd8</div>
+          <div class="color-use">Große Ziffern, dezente Hintergrundflächen</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="color-group-label">Sekundärfarben</div>
+    <div class="color-grid">
+      <div class="color-card">
+        <div class="color-swatch" style="background:#cf5a73;"></div>
+        <div class="color-info">
+          <div class="color-name">Rose</div>
+          <div class="color-hex">#cf5a73</div>
+          <div class="color-use">Kursive Hervorhebungen, emotionale Elemente, Fehler-Nummern</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background:#e8a0b0;"></div>
+        <div class="color-info">
+          <div class="color-name">Rose Light</div>
+          <div class="color-hex">#e8a0b0</div>
+          <div class="color-use">Sanfte Akzente, Hover-Effekte</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background:#861627;"></div>
+        <div class="color-info">
+          <div class="color-name">Red</div>
+          <div class="color-hex">#861627</div>
+          <div class="color-use">Starke Aussagen, sparsam einsetzen</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background:#64081b;"></div>
+        <div class="color-info">
+          <div class="color-name">Red Dark</div>
+          <div class="color-hex">#64081b</div>
+          <div class="color-use">Tiefer Rotakzent, sehr sparsam</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="color-group-label">Neutraltöne &amp; Hintergründe</div>
+    <div class="color-grid">
+      <div class="color-card">
+        <div class="color-swatch" style="background:#c2ab8d;"></div>
+        <div class="color-info">
+          <div class="color-name">Sand</div>
+          <div class="color-hex">#c2ab8d</div>
+          <div class="color-use">Textakzente auf dunklem Hintergrund, Fußzeilen</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background:#e4bc95;"></div>
+        <div class="color-info">
+          <div class="color-name">Sand Light</div>
+          <div class="color-hex">#e4bc95</div>
+          <div class="color-use">Logo-Schrift auf Dunkel, Prompt-Box-Titel</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background:#8d6a48;"></div>
+        <div class="color-info">
+          <div class="color-name">Sand Dark</div>
+          <div class="color-hex">#8d6a48</div>
+          <div class="color-use">Erdiger Akzent, Checkboxen</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background:#070808;"></div>
+        <div class="color-info">
+          <div class="color-name">Black</div>
+          <div class="color-hex">#070808</div>
+          <div class="color-use">Dunkle Sektionen, Footer, Navigation</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background:#0d2420;"></div>
+        <div class="color-info">
+          <div class="color-name">Dark Teal</div>
+          <div class="color-hex">#0d2420</div>
+          <div class="color-use">Prompt-Boxen, Closing-Sektionen, dunkle Blöcke</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background:#f8f6f2;"></div>
+        <div class="color-info">
+          <div class="color-name">Off-White</div>
+          <div class="color-hex">#f8f6f2</div>
+          <div class="color-use">Seitenhintergrund</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background:#f0f5f4;"></div>
+        <div class="color-info">
+          <div class="color-name">Cream</div>
+          <div class="color-hex">#f0f5f4</div>
+          <div class="color-use">Karten-Hintergründe, Checklisten, Intro-Blöcke</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background:#ddecea; border: 1px solid #ccc;"></div>
+        <div class="color-info">
+          <div class="color-name">Beige / Border</div>
+          <div class="color-hex">#ddecea</div>
+          <div class="color-use">Trennlinien, Rahmen, dezente Flächen</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background:#5a7a74;"></div>
+        <div class="color-info">
+          <div class="color-name">Warm Gray</div>
+          <div class="color-hex">#5a7a74</div>
+          <div class="color-use">Fließtext, beschreibende Texte</div>
+        </div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch" style="background:#9ab8b4;"></div>
+        <div class="color-info">
+          <div class="color-name">Mid Gray</div>
+          <div class="color-hex">#9ab8b4</div>
+          <div class="color-use">Meta-Infos, Beschriftungen, Texte auf Dunkel</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TYPOGRAFIE -->
+<section id="typografie" class="section">
+  <div class="container">
+    <div class="section-label">02</div>
+    <h2><em>Typografie</em></h2>
+    <p class="section-intro">Drei Schriften, die sich perfekt ergänzen: die elegante, eigene Handschrift von East Liberty für Überschriften und die klare, moderne Stärke von Avenir LT Pro für alle Texte.</p>
+
+    <!-- Schrift 1 -->
+    <div class="font-block">
+      <div class="font-meta">
+        EAST LIBERTY
+        <span>Google Fonts · Primär für Überschriften &amp; Zitate</span>
+        <span>Einsatz: H1, H2, Zitate, Closing</span>
+      </div>
+      <div class="font-sample-heading" style="font-size: 56px; font-weight: 400; line-height: 1.05; color: var(--black); margin-bottom: 12px;">
+        Be free.
+      </div>
+      <div class="font-sample-heading" style="font-size: 40px; font-weight: 400; font-style: italic; color: var(--rose); margin-bottom: 16px;">
+        Erlaube dir Transformation.
+      </div>
+      <div class="font-sample-heading" style="font-size: 28px; font-weight: 300; color: var(--warm-gray); margin-bottom: 16px;">
+        Dein Business verdient diese Klarheit.
+      </div>
+      <div class="font-sample-heading" style="font-size: 20px; font-weight: 600; color: var(--teal-dark);">
+        Wachstum durch Tiefe, nicht durch Tempo.
+      </div>
+    </div>
+
+    <!-- Schrift 2 -->
+    <div class="font-block">
+      <div class="font-meta">
+        AVENIR LT PRO
+        <span>Lokale Schrift · Primär für Fließtext, Navigation &amp; Labels</span>
+        <span>Einsatz: Body-Text, Labels, Navigation, Buttons, UI</span>
+      </div>
+      <div style="font-family:'Avenir LT Pro', sans-serif; font-size: 19px; font-weight: 400; color: var(--warm-gray); line-height: 1.8; margin-bottom: 16px;">
+        Du hast deine Website gebaut, sie sieht gut aus – und trotzdem kauft niemand. Spürst du das? Der Fehler liegt nicht im Design, nicht im Code und nicht im Tool. Er liegt in der fehlenden Strategie dahinter.
+      </div>
+      <div style="font-family:'Avenir LT Pro', sans-serif; font-size: 15px; font-weight: 400; color: var(--warm-gray); line-height: 1.7; margin-bottom: 16px;">
+        <strong style="color: var(--black); font-weight: 700;">Weiblichkeit als Erfolgskraft.</strong> Feminess inspiriert, ermutigt und befähigt Frauen, beruflich und finanziell frei zu werden.
+      </div>
+      <div style="font-family:'Avenir LT Pro', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--teal);">
+        Vorbereitung · Strategie · Transformation
+      </div>
+    </div>
+
+    <!-- Gewichte -->
+    <div class="font-block" style="margin-top: 0;">
+      <div class="font-meta">AVENIR LT PRO · Gewichte</div>
+      <div style="display:flex; flex-direction:column; gap:20px; margin-top:8px;">
+        <div style="display:flex; align-items:baseline; gap:24px; padding:16px 0; border-bottom:1px solid var(--beige);">
+          <div style="font-family:'Avenir LT Pro',sans-serif; font-size:10px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--mid-gray); min-width:160px;">Book · 400</div>
+          <div style="font-family:'Avenir LT Pro', sans-serif; font-size:26px; font-weight:400; color:var(--black);">Be free, deine Marina.</div>
+        </div>
+        <div style="display:flex; align-items:baseline; gap:24px; padding:16px 0;">
+          <div style="font-family:'Avenir LT Pro',sans-serif; font-size:10px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--mid-gray); min-width:160px;">Heavy · 700</div>
+          <div style="font-family:'Avenir LT Pro', sans-serif; font-size:26px; font-weight:700; color:var(--black);">No more excuses.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Schriftgrößen-Tabelle -->
+    <div style="background:#fff; border:1px solid var(--beige); border-radius:2px; padding: 32px 36px; margin-top: 8px;">
+      <div style="font-family:Inter; font-size:10px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--teal); margin-bottom:24px;">Größenraster</div>
+      <div class="type-scale">
+        <div class="type-row">
+          <div class="type-label">Display H1</div>
+          <div class="type-spec">80px · weight 400</div>
+          <div class="font-sample-heading" style="font-size: 44px; font-weight: 400; color: var(--black); line-height:1;">Überschrift</div>
+        </div>
+        <div class="type-row">
+          <div class="type-label">H2 Section</div>
+          <div class="type-spec">48px · weight 400</div>
+          <div class="font-sample-heading" style="font-size: 34px; font-weight: 400; color: var(--black); line-height:1;">Abschnittstitel</div>
+        </div>
+        <div class="type-row">
+          <div class="type-label">H3 Kicker</div>
+          <div class="type-spec">11px · weight 700 · spaced</div>
+          <div class="font-sample-body" style="font-size: 11px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--teal);">Unter-Label</div>
+        </div>
+        <div class="type-row">
+          <div class="type-label">Body Text</div>
+          <div class="type-spec">Avenir · 19px · Book 400</div>
+          <div style="font-family:'Avenir LT Pro',sans-serif; font-size: 17px; font-weight: 400; color: var(--warm-gray);">Fließtext und Absätze</div>
+        </div>
+        <div class="type-row">
+          <div class="type-label">Small / Meta</div>
+          <div class="type-spec">Avenir · 11–13px · 400</div>
+          <div style="font-family:'Avenir LT Pro',sans-serif; font-size: 12px; color: var(--mid-gray);">Beschriftungen, Datum, Metadaten</div>
+        </div>
+        <div class="type-row">
+          <div class="type-label">Label / Tag</div>
+          <div class="type-spec">Avenir · 9–10px · Heavy 700</div>
+          <div style="font-family:'Avenir LT Pro',sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--warm-gray);">Kategorie · Label</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOGO -->
+<section id="logo" class="section">
+  <div class="container">
+    <div class="section-label">03</div>
+    <h2>Das <em>Logo</em></h2>
+    <p class="section-intro">Das Feminess-Wortmarke in East Liberty – zeitlos, feminin, selbstbewusst. Großgeschrieben mit weitem Buchstabenabstand.</p>
+
+    <!-- Wortmarke -->
+    <div style="margin-bottom: 12px;">
+      <div style="font-family:'Avenir LT Pro', sans-serif; font-size:10px; font-weight:700; letter-spacing:2.5px; text-transform:uppercase; color:var(--warm-gray); margin-bottom:16px;">Wortmarke</div>
+      <div class="logo-wrapper">
+        <div class="logo-box dark" style="padding: 40px 56px;">
+          <img src="../Logo-rosegoldverlauf-rgb.png" alt="Feminess Wortmarke" style="max-width: 420px; width: 100%; height: auto;">
+        </div>
+        <div class="logo-caption">Wortmarke · Rose Gold Verlauf auf Schwarz</div>
+      </div>
+    </div>
+
+    <!-- F-Kreis Logos -->
+    <div style="margin-top: 40px; margin-bottom: 12px;">
+      <div style="font-family:'Avenir LT Pro', sans-serif; font-size:10px; font-weight:700; letter-spacing:2.5px; text-transform:uppercase; color:var(--warm-gray); margin-bottom:16px;">F-Kreis Logo · Varianten</div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; align-items: start;">
+      <div class="logo-wrapper">
+        <div class="logo-box light" style="padding: 28px;">
+          <img src="../Feminess_F-Kreis-Logo_01.png" alt="F-Kreis Rose Gold" style="width:100%; max-width:120px; height:auto;">
+        </div>
+        <div class="logo-caption">Rose Gold</div>
+      </div>
+      <div class="logo-wrapper">
+        <div class="logo-box light" style="padding: 28px;">
+          <img src="../Feminess_F-Kreis-Logo_03 (1).png" alt="F-Kreis Teal" style="width:100%; max-width:120px; height:auto;">
+        </div>
+        <div class="logo-caption">Teal</div>
+      </div>
+      <div class="logo-wrapper">
+        <div class="logo-box light" style="padding: 28px;">
+          <img src="../Feminess_F-Kreis-Logo_04.png" alt="F-Kreis Berry" style="width:100%; max-width:120px; height:auto;">
+        </div>
+        <div class="logo-caption">Berry / Rose</div>
+      </div>
+      <div class="logo-wrapper">
+        <div class="logo-box light" style="padding: 28px;">
+          <img src="../Feminess_F-Kreis-Logo_05.png" alt="F-Kreis Sand" style="width:100%; max-width:120px; height:auto;">
+        </div>
+        <div class="logo-caption">Sand</div>
+      </div>
+      <div class="logo-wrapper">
+        <div class="logo-box dark" style="padding: 28px;">
+          <img src="../Feminess_F-Kreis-Logo_01.png" alt="F-Kreis auf Dunkel" style="width:100%; max-width:120px; height:auto;">
+        </div>
+        <div class="logo-caption">Rose Gold auf Dunkel</div>
+      </div>
+    </div>
+
+    <div style="background: var(--cream); border: 1px solid var(--beige); border-left: 3px solid var(--rose); border-radius: 2px; padding: 24px 28px; margin-top: 24px;">
+      <div style="font-family:Inter; font-size:10px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--rose); margin-bottom:12px;">Wichtige Hinweise</div>
+      <ul style="list-style:none; display:flex; flex-direction:column; gap:8px;">
+        <li style="font-size:14px; color:var(--warm-gray); padding-left:18px; position:relative;">
+          <span style="position:absolute; left:0; color:var(--rose);">–</span>
+          Das Logo nie strecken, quetschen oder drehen
+        </li>
+        <li style="font-size:14px; color:var(--warm-gray); padding-left:18px; position:relative;">
+          <span style="position:absolute; left:0; color:var(--rose);">–</span>
+          Mindestgröße: 120px Breite in digitalen Medien
+        </li>
+        <li style="font-size:14px; color:var(--warm-gray); padding-left:18px; position:relative;">
+          <span style="position:absolute; left:0; color:var(--rose);">–</span>
+          Freiraum um das Logo: mindestens die Höhe des Buchstabens „F"
+        </li>
+        <li style="font-size:14px; color:var(--warm-gray); padding-left:18px; position:relative;">
+          <span style="position:absolute; left:0; color:var(--rose);">–</span>
+          Nie auf unruhigen, gemusterten Hintergründen platzieren
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- BILDWELT -->
+<section id="bildwelt" class="section">
+  <div class="container">
+    <div class="section-label">04</div>
+    <h2><em>Bildwelt</em></h2>
+    <p class="section-intro">Die Bilder von Feminess sind authentisch, feminin und kraftvoll. Sie zeigen Marina und Frauen in ihrer vollen Stärke – nicht gestellt, sondern lebendig und real.</p>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top: 8px;">
+      <div style="background:#fff; border:1px solid var(--beige); border-top:3px solid var(--teal); border-radius:2px; padding:28px 32px;">
+        <div style="font-family:Inter; font-size:10px; font-weight:700; letter-spacing:2.5px; text-transform:uppercase; color:var(--teal); margin-bottom:16px;">Dos ✓</div>
+        <ul style="list-style:none; display:flex; flex-direction:column; gap:10px;">
+          <li style="font-size:14px; color:var(--warm-gray); padding-left:18px; position:relative;"><span style="position:absolute;left:0;color:var(--teal);">–</span> Authentische Fotos von Marina und echten Kundinnen</li>
+          <li style="font-size:14px; color:var(--warm-gray); padding-left:18px; position:relative;"><span style="position:absolute;left:0;color:var(--teal);">–</span> Warmes, natürliches Licht</li>
+          <li style="font-size:14px; color:var(--warm-gray); padding-left:18px; position:relative;"><span style="position:absolute;left:0;color:var(--teal);">–</span> Erdige und kühle Farbtöne (passend zur Palette)</li>
+          <li style="font-size:14px; color:var(--warm-gray); padding-left:18px; position:relative;"><span style="position:absolute;left:0;color:var(--teal);">–</span> Selbstbewusste, offene Körperhaltung</li>
+          <li style="font-size:14px; color:var(--warm-gray); padding-left:18px; position:relative;"><span style="position:absolute;left:0;color:var(--teal);">–</span> Nahaufnahmen, die Emotionen zeigen</li>
+          <li style="font-size:14px; color:var(--warm-gray); padding-left:18px; position:relative;"><span style="position:absolute;left:0;color:var(--teal);">–</span> Hochformat für Social Media bevorzugen</li>
+        </ul>
+      </div>
+      <div style="background:#fff; border:1px solid var(--beige); border-top:3px solid var(--rose); border-radius:2px; padding:28px 32px;">
+        <div style="font-family:Inter; font-size:10px; font-weight:700; letter-spacing:2.5px; text-transform:uppercase; color:var(--rose); margin-bottom:16px;">Don'ts ✗</div>
+        <ul style="list-style:none; display:flex; flex-direction:column; gap:10px;">
+          <li style="font-size:14px; color:var(--warm-gray); padding-left:18px; position:relative;"><span style="position:absolute;left:0;color:var(--rose);">–</span> Generische Stock-Fotos ohne Persönlichkeit</li>
+          <li style="font-size:14px; color:var(--warm-gray); padding-left:18px; position:relative;"><span style="position:absolute;left:0;color:var(--rose);">–</span> Übermäßig bearbeitete, unrealistische Bilder</li>
+          <li style="font-size:14px; color:var(--warm-gray); padding-left:18px; position:relative;"><span style="position:absolute;left:0;color:var(--rose);">–</span> Bilder mit kalten Blautönen oder hartem Blitzlicht</li>
+          <li style="font-size:14px; color:var(--warm-gray); padding-left:18px; position:relative;"><span style="position:absolute;left:0;color:var(--rose);">–</span> Verschlossene, defensive Körperhaltung</li>
+          <li style="font-size:14px; color:var(--warm-gray); padding-left:18px; position:relative;"><span style="position:absolute;left:0;color:var(--rose);">–</span> Bunte Hintergründe, die von der Person ablenken</li>
+          <li style="font-size:14px; color:var(--warm-gray); padding-left:18px; position:relative;"><span style="position:absolute;left:0;color:var(--rose);">–</span> Cliparts oder Illustrationen im Hauptbereich</li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="background:var(--cream); border:1px solid var(--beige); border-radius:2px; padding:28px 32px; margin-top:16px;">
+      <div style="font-family:Inter; font-size:10px; font-weight:700; letter-spacing:2.5px; text-transform:uppercase; color:var(--warm-gray); margin-bottom:12px;">Bilder-Ablage</div>
+      <p style="font-size:14px; color:var(--warm-gray); line-height:1.6;">Alle offiziellen Feminess-Bilder findest du im Ordner: <strong style="color:var(--teal-dark); font-family:'Courier New', monospace;">../Bilder/</strong> — direkt neben diesem Dokument.</p>
+    </div>
+  </div>
+</section>
+
+<!-- BRAND VOICE -->
+<section id="brandvoice" class="section">
+  <div class="container">
+    <div class="section-label">05</div>
+    <h2>Brand <em>Voice</em></h2>
+    <p class="section-intro">Die Stimme von Feminess ist persönlich, warmherzig und direkt – immer mit der Energie einer Frau, die selbst den Weg kennt und ihre Schwestern mitnehmen möchte.</p>
+
+    <div class="voice-grid">
+      <div class="voice-card">
+        <div class="voice-card-title">Ton &amp; Stil</div>
+        <ul>
+          <li>Persönlich, warmherzig, empathisch</li>
+          <li>Direkt, aber liebevoll fordernd</li>
+          <li>Mutmachend, klar, spirituell-aktivierend</li>
+          <li>Coaching-Sprache trifft Alltagssprache</li>
+          <li>Immer "du" – nie "Sie"</li>
+          <li>Emotionale Bilder und Metaphern</li>
+        </ul>
+      </div>
+      <div class="voice-card rose">
+        <div class="voice-card-title">Was Feminess nicht ist</div>
+        <ul>
+          <li>Nicht distanziert oder formell</li>
+          <li>Nicht überheblich oder belehrend</li>
+          <li>Nicht nüchtern oder rein rational</li>
+          <li>Nicht generisch oder austauschbar</li>
+          <li>Nicht reißerisch oder unehrlich</li>
+          <li>Nie "Sie" oder Passiv-Konstruktionen</li>
+        </ul>
+      </div>
+      <div class="voice-card">
+        <div class="voice-card-title">Wiederkehrende Phrasen</div>
+        <ul>
+          <li>"Be free, deine Marina"</li>
+          <li>"Du darfst …" / "Erlaube dir …"</li>
+          <li>"No more excuses"</li>
+          <li>"Spürst du das auch …?"</li>
+          <li>"Ich weiß, du fühlst das."</li>
+          <li>"Sei Schöpferin deines Lebens."</li>
+          <li>"Egal wie – du schaffst das!"</li>
+        </ul>
+      </div>
+      <div class="voice-card rose">
+        <div class="voice-card-title">Kernbotschaften</div>
+        <ul>
+          <li>Freiheit in Business, Finanzen &amp; Leben</li>
+          <li>Erfolg durch Identität, nicht nur Strategie</li>
+          <li>Transformation statt Information</li>
+          <li>Mindset + Emotion + Strategie im Dreiklang</li>
+          <li>Weiblichkeit als Erfolgskraft</li>
+          <li>Wachstum durch Tiefe, nicht durch Tempo</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="example-block">
+      <div class="example-label">Beispiel – Feminess-Stimme</div>
+      <div class="example-text">"Erkenne den Wert deines Angebots und lerne, wie du es so in die Welt bringst, dass deine Traumkundin einfach nicht mehr widerstehen kann. Be free."</div>
+    </div>
+
+    <div style="margin-top: 32px;">
+      <div style="font-family:Inter; font-size:10px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--warm-gray); margin-bottom:16px;">Themenschwerpunkte</div>
+      <div class="keyword-list">
+        <div class="keyword highlight">Money Mindset</div>
+        <div class="keyword highlight">Finanzielle Freiheit</div>
+        <div class="keyword highlight">Online-Business-Aufbau</div>
+        <div class="keyword">Identity Work</div>
+        <div class="keyword">Persönlichkeitsentwicklung</div>
+        <div class="keyword">Emotionale Transformation</div>
+        <div class="keyword">Female Empowerment</div>
+        <div class="keyword">Leadership</div>
+        <div class="keyword">Spiritualität</div>
+        <div class="keyword">Selbstverwirklichung</div>
+        <div class="keyword">Coaching-Business</div>
+        <div class="keyword">Beratung für Frauen</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ZIELGRUPPE -->
+<section id="zielgruppe" class="section">
+  <div class="container">
+    <div class="section-label">06</div>
+    <h2>Die <em>Zielgruppe</em></h2>
+    <p class="section-intro">Frauen zwischen 30 und 50, die an einem Wendepunkt stehen und bereit sind, ihre Freiheit aktiv zu gestalten.</p>
+
+    <div class="persona-grid">
+      <div class="persona-card">
+        <span class="persona-icon">✦</span>
+        <div class="persona-title">Die Wendepunkt-Frau</div>
+        <div class="persona-text">Steht vor beruflicher Neuorientierung oder hat das Gefühl, in einem System zu stecken, das nicht mehr zu ihr passt. Sucht einen klaren nächsten Schritt.</div>
+      </div>
+      <div class="persona-card">
+        <span class="persona-icon">✦</span>
+        <div class="persona-title">Die aufstrebende Coach</div>
+        <div class="persona-text">Coaches, Beraterinnen, Dienstleisterinnen, die bereits Wissen haben, aber noch nicht wissen, wie sie es in ein profitables Business verwandeln.</div>
+      </div>
+      <div class="persona-card">
+        <span class="persona-icon">✦</span>
+        <div class="persona-title">Die 9-to-5-Aussteigerin</div>
+        <div class="persona-text">Möchte den Sprung in die Selbstständigkeit wagen, kämpft aber mit finanziellem Mindset, Selbstzweifeln und dem Drang nach Sicherheit.</div>
+      </div>
+    </div>
+
+    <div style="background:#fff; border:1px solid var(--beige); border-radius:2px; padding:28px 32px; margin-top:16px; display:grid; grid-template-columns:1fr 1fr 1fr; gap:24px;">
+      <div>
+        <div style="font-family:Inter; font-size:10px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--teal); margin-bottom:10px;">Alter</div>
+        <div style="font-family:'East Liberty', 'East Liberty', serif; font-size:36px; font-weight:400; color:var(--black);">30–50</div>
+        <div style="font-size:12px; color:var(--warm-gray);">Jahre</div>
+      </div>
+      <div>
+        <div style="font-family:Inter; font-size:10px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--teal); margin-bottom:10px;">Offen für</div>
+        <div style="font-size:13px; color:var(--warm-gray); line-height:1.6;">Spiritualität, Persönlichkeitsentwicklung, Online-Business</div>
+      </div>
+      <div>
+        <div style="font-family:Inter; font-size:10px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--teal); margin-bottom:10px;">Ansprache</div>
+        <div style="font-size:13px; color:var(--warm-gray); line-height:1.6;">Empowernd, bestärkend, direkt und empathisch</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="ci-footer">
+  <div class="ci-footer-brand">FEMINESS</div>
+  <div class="ci-footer-note">Corporate Identity · Stand 2026 · feminess.de</div>
+</footer>
+
+</body>
+</html>

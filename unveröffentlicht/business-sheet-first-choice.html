@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dein Business-Sheet – First Choice | Feminess</title>
+<style>
+  @font-face {
+    font-family: 'East Liberty';
+    src: url('CI/east_liberty_signature (1)/east liberty signature.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Avenir LT Pro';
+    src: url('CI/AvenirLTPro-Book (1).otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Avenir LT Pro';
+    src: url('CI/AvenirLTPro-Heavy (1).otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  :root {
+    --teal:        #257c6c;
+    --teal-dark:   #1b5c50;
+    --teal-light:  #5ec6b3;
+    --teal-pale:   #b8ddd8;
+    --rose:        #cf5a73;
+    --rose-light:  #e8a0b0;
+    --sand:        #c2ab8d;
+    --sand-dark:   #8d6a48;
+    --sand-light:  #e4bc95;
+    --black:       #070808;
+    --dark:        #0d2420;
+    --off-white:   #f8f6f2;
+    --cream:       #f0f5f4;
+    --beige:       #ddecea;
+    --warm-gray:   #5a7a74;
+    --mid-gray:    #9ab8b4;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--off-white);
+    color: var(--black);
+    font-family: 'Avenir LT Pro', sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── HINWEIS-BANNER ── */
+  .hint-banner {
+    background: var(--dark);
+    border-bottom: 3px solid var(--teal);
+    padding: 20px 64px;
+    position: relative;
+  }
+  .hint-banner-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .hint-banner-title {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--rose-light);
+    margin-bottom: 12px;
+  }
+  .hint-banner-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  .hint-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+  }
+  .hint-icon {
+    font-size: 22px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .hint-text {
+    font-size: 13px;
+    color: var(--mid-gray);
+    line-height: 1.6;
+  }
+  .hint-text strong {
+    color: var(--sand-light);
+    font-weight: 700;
+    display: block;
+    margin-bottom: 2px;
+  }
+  .hint-key {
+    display: inline-block;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 3px;
+    padding: 1px 7px;
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    color: var(--teal-light);
+    margin: 0 1px;
+  }
+
+  /* ── COVER ── */
+  .cover {
+    background: var(--dark);
+    padding: 80px 64px 90px;
+    position: relative;
+    overflow: hidden;
+    min-height: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .cover::before {
+    content: '';
+    position: absolute;
+    top: -100px; right: -100px;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(37,124,108,0.22) 0%, transparent 65%);
+    pointer-events: none;
+  }
+  .cover::after {
+    content: '';
+    position: absolute;
+    bottom: -80px; left: 200px;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(207,90,115,0.10) 0%, transparent 65%);
+    pointer-events: none;
+  }
+  .cover-eyebrow {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--teal-light);
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+  }
+  .cover-title {
+    font-family: 'East Liberty', serif;
+    font-size: clamp(52px, 8vw, 100px);
+    font-weight: 400;
+    line-height: 1.0;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+  }
+  .cover-title em {
+    color: var(--sand-light);
+    font-style: italic;
+  }
+  .cover-sub {
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--mid-gray);
+    margin-top: 20px;
+    letter-spacing: 0.5px;
+    position: relative;
+    z-index: 1;
+  }
+  .cover-logo {
+    position: absolute;
+    top: 40px;
+    right: 64px;
+    z-index: 2;
+  }
+  .cover-logo img {
+    height: 44px;
+    width: auto;
+    opacity: 0.85;
+  }
+
+  /* ── STICKY NAV ── */
+  .toc {
+    background: #fff;
+    border-bottom: 1px solid var(--beige);
+    padding: 0 64px;
+    display: flex;
+    gap: 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    overflow-x: auto;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .toc-links {
+    display: flex;
+  }
+  .toc a {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--warm-gray);
+    padding: 18px 20px;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    white-space: nowrap;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .toc a:hover {
+    color: var(--teal);
+    border-bottom-color: var(--teal);
+  }
+  .save-btn {
+    font-family: 'Avenir LT Pro', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background: var(--teal);
+    color: #fff;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 2px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.2s;
+    flex-shrink: 0;
+  }
+  .save-btn:hover { background: var(--teal-dark); }
+  .save-toast {
+    display: none;
+    font-size: 11px;
+    color: var(--teal);
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-left: 12px;
+    white-space: nowrap;
+  }
+  .save-toast.show { display: inline; }
+
+  /* ── LAYOUT ── */
+  .container {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 64px;
+  }
+
+  .section {
+    padding: 72px 0;
+    border-bottom: 1px solid var(--beige);
+  }
+  .section:last-child { border-bottom: none; }
+
+  .section-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .section-label::after {
+    content: '';
+    flex: 1;
+    max-width: 48px;
+    height: 1px;
+    background: var(--teal);
+    opacity: 0.4;
+  }
+
+  .section h2 {
+    font-family: 'East Liberty', serif;
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 400;
+    color: var(--black);
+    line-height: 1.1;
+    margin-bottom: 6px;
+    letter-spacing: -0.5px;
+  }
+  .section h2 em {
+    font-style: italic;
+    color: var(--rose);
+  }
+  .section-intro {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--warm-gray);
+    max-width: 600px;
+    margin-bottom: 48px;
+    font-style: italic;
+  }
+
+  /* ── SUBSECTIONS ── */
+  .subsection {
+    margin-bottom: 48px;
+  }
+  .subsection-title {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--teal-dark);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--beige);
+  }
+
+  /* ── FORM FIELDS ── */
+  .field-group {
+    margin-bottom: 24px;
+  }
+  .field-label {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 8px;
+    display: block;
+    line-height: 1.4;
+  }
+  .field-label .hint {
+    font-weight: 400;
+    color: var(--warm-gray);
+    font-style: italic;
+    font-size: 12px;
+  }
+  .field-input, .field-textarea {
+    width: 100%;
+    background: #fff;
+    border: 1px solid var(--beige);
+    border-radius: 2px;
+    font-family: 'Avenir LT Pro', sans-serif;
+    font-size: 15px;
+    color: var(--black);
+    padding: 12px 16px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    -webkit-appearance: none;
+  }
+  .field-input:focus, .field-textarea:focus {
+    outline: none;
+    border-color: var(--teal);
+    box-shadow: 0 0 0 3px rgba(37,124,108,0.08);
+  }
+  .field-textarea {
+    resize: vertical;
+    min-height: 90px;
+    line-height: 1.6;
+  }
+  .field-textarea.tall { min-height: 130px; }
+
+  /* ── TRIPLETS (#1 #2 #3) ── */
+  .triplet-group {
+    margin-bottom: 28px;
+  }
+  .triplet-label {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 12px;
+    display: block;
+    line-height: 1.4;
+  }
+  .triplet-label .hint {
+    font-weight: 400;
+    color: var(--warm-gray);
+    font-style: italic;
+    font-size: 12px;
+  }
+  .triplet-row {
+    display: grid;
+    grid-template-columns: 28px 1fr;
+    gap: 10px;
+    align-items: flex-start;
+    margin-bottom: 10px;
+  }
+  .triplet-num {
+    font-family: 'East Liberty', serif;
+    font-size: 22px;
+    color: var(--teal-pale);
+    font-weight: 400;
+    line-height: 1;
+    padding-top: 14px;
+    text-align: right;
+  }
+
+  /* ── RADIO GROUPS ── */
+  .radio-group {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 6px;
+  }
+  .radio-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+  }
+  .radio-option input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--teal);
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+  .radio-option span {
+    font-size: 14px;
+    color: var(--warm-gray);
+    font-weight: 400;
+  }
+
+  /* ── INLINE INPUT GRID ── */
+  .inline-field {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  .inline-label {
+    font-size: 13px;
+    color: var(--warm-gray);
+    font-weight: 400;
+  }
+
+  /* ── SIGNATURE PRODUCT BOX ── */
+  .signature-box {
+    background: var(--dark);
+    border-radius: 4px;
+    padding: 32px 36px;
+    margin-top: 24px;
+    position: relative;
+    overflow: hidden;
+  }
+  .signature-box::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 3px;
+    background: linear-gradient(90deg, var(--teal), var(--teal-light));
+  }
+  .signature-box-label {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--teal-light);
+    margin-bottom: 20px;
+  }
+  .signature-formula {
+    font-family: 'East Liberty', serif;
+    font-size: 20px;
+    font-style: italic;
+    color: var(--mid-gray);
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  .sig-field-row {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  .sig-field-label {
+    font-size: 12px;
+    color: var(--sand);
+    font-weight: 400;
+    letter-spacing: 0.5px;
+  }
+  .sig-input {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 2px;
+    font-family: 'Avenir LT Pro', sans-serif;
+    font-size: 14px;
+    color: #fff;
+    padding: 10px 14px;
+    width: 100%;
+    transition: border-color 0.2s;
+  }
+  .sig-input:focus {
+    outline: none;
+    border-color: var(--teal-light);
+  }
+  .sig-input::placeholder { color: rgba(255,255,255,0.25); }
+
+  /* ── CARD ROWS ── */
+  .card-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  .card {
+    background: #fff;
+    border: 1px solid var(--beige);
+    border-top: 3px solid var(--teal);
+    border-radius: 2px;
+    padding: 24px 24px;
+  }
+  .card.rose { border-top-color: var(--rose); }
+  .card-title {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 14px;
+  }
+  .card.rose .card-title { color: var(--rose); }
+
+  /* ── COMPETITOR GRID ── */
+  .competitor-row {
+    display: grid;
+    grid-template-columns: 100px 1fr 240px;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  .competitor-num {
+    font-family: 'East Liberty', serif;
+    font-size: 28px;
+    color: var(--teal-pale);
+    text-align: center;
+    line-height: 1;
+  }
+
+  /* ── PRICE BOX ── */
+  .price-field {
+    background: var(--cream);
+    border: 1px solid var(--beige);
+    border-left: 3px solid var(--sand);
+    border-radius: 2px;
+    padding: 20px 24px;
+    margin-bottom: 20px;
+  }
+  .price-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--sand-dark);
+    margin-bottom: 10px;
+  }
+  .price-input {
+    width: 200px;
+    background: #fff;
+    border: 1px solid var(--beige);
+    border-radius: 2px;
+    font-family: 'Avenir LT Pro', sans-serif;
+    font-size: 24px;
+    color: var(--black);
+    padding: 10px 16px;
+    font-weight: 700;
+  }
+  .price-input:focus {
+    outline: none;
+    border-color: var(--teal);
+  }
+
+  /* ── FOOTER ── */
+  .page-footer {
+    background: var(--black);
+    padding: 32px 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .footer-brand {
+    font-family: 'East Liberty', serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--sand-light);
+  }
+  .footer-note {
+    font-size: 11px;
+    color: var(--mid-gray);
+    font-style: italic;
+  }
+
+  /* ── PRINT ── */
+  @media print {
+    .hint-banner, .toc { display: none; }
+    .section { page-break-inside: avoid; }
+    .field-textarea, .field-input, .sig-input, .price-input {
+      border: 1px solid #ccc !important;
+      box-shadow: none !important;
+    }
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 720px) {
+    .cover, .container, .page-footer { padding-left: 24px; padding-right: 24px; }
+    .toc { padding: 0 24px; }
+    .hint-banner { padding: 20px 24px; }
+    .hint-banner-grid { grid-template-columns: 1fr; }
+    .card-row { grid-template-columns: 1fr; }
+    .competitor-row { grid-template-columns: 40px 1fr; }
+    .competitor-row .field-input:last-child { grid-column: 2; }
+    .sig-field-row, .inline-field { grid-template-columns: 1fr; }
+    .cover-logo { top: 20px; right: 24px; }
+    .cover-logo img { height: 32px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ── COVER ── -->
+<div class="cover">
+  <div class="cover-logo">
+    <img src="CI/Logo-rosegoldverlauf-rgb.png" alt="Feminess">
+  </div>
+  <div class="cover-eyebrow">Feminess · First Choice</div>
+  <h1 class="cover-title">Dein Business-<em>Sheet</em></h1>
+  <p class="cover-sub">Die Grundlage für dein Business · Power of Purpose · Art of Offer · Mastery of Marketing</p>
+</div>
+
+<!-- ── HINWEIS-BANNER ── -->
+<div class="hint-banner">
+  <div class="hint-banner-inner">
+    <div class="hint-banner-title">Wichtig – Bitte zuerst lesen</div>
+    <div class="hint-banner-grid">
+      <div class="hint-item">
+        <div class="hint-icon">💾</div>
+        <div class="hint-text">
+          <strong>Datei zuerst herunterladen &amp; speichern</strong>
+          Bevor du deine Ergebnisse einträgst, speichere diese Datei lokal:
+          Windows: <span class="hint-key">Strg</span> + <span class="hint-key">S</span> &nbsp;·&nbsp;
+          Mac: <span class="hint-key">Cmd</span> + <span class="hint-key">S</span>
+        </div>
+      </div>
+      <div class="hint-item">
+        <div class="hint-icon">🖨️</div>
+        <div class="hint-text">
+          <strong>Ausdrucken</strong>
+          Wenn du das Sheet lieber auf Papier ausfüllst:
+          Windows: <span class="hint-key">Strg</span> + <span class="hint-key">P</span> &nbsp;·&nbsp;
+          Mac: <span class="hint-key">Cmd</span> + <span class="hint-key">P</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── NAVIGATION ── -->
+<nav class="toc">
+  <div class="toc-links">
+    <a href="#alles">Alles auf einen Blick</a>
+    <a href="#offer">Art of Offer</a>
+    <a href="#marketing">Mastery of Marketing</a>
+  </div>
+  <div style="display:flex;align-items:center;flex-shrink:0;padding-right:0;">
+    <button class="save-btn" onclick="saveAll()">Eingaben speichern</button>
+    <span class="save-toast" id="saveToast">✓ Gespeichert</span>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<!-- SECTION 1: ALLES AUF EINEN BLICK                         -->
+<!-- ══════════════════════════════════════════════════════════ -->
+<section id="alles" class="section">
+  <div class="container">
+    <div class="section-label">01 · Power of Purpose &amp; Positioning</div>
+    <h2>📌 Alles auf einen <em>Blick</em></h2>
+    <p class="section-intro">Dieses Sheet ist die Grundlage für dein Business. Hier legst du alle Dinge ab, die du ausgearbeitet hast, um immer wieder darauf zuzugreifen.</p>
+
+    <!-- Thema & Qualifikationen -->
+    <div class="field-group">
+      <label class="field-label" for="thema">Thema <span class="hint">(Power of Purpose)</span></label>
+      <input class="field-input" type="text" id="thema" placeholder="Dein Thema ...">
+    </div>
+
+    <div class="field-group">
+      <label class="field-label" for="qualifikationen">Welche Qualifikationen hast du? <span class="hint">Ausbildungen, Weiterbildungen, Studium</span></label>
+      <textarea class="field-textarea" id="qualifikationen" placeholder="Trage hier deine Qualifikationen ein ..."></textarea>
+    </div>
+
+    <div class="field-group">
+      <label class="field-label" for="usps">Sonstige USPs <span class="hint">Dozentin, Autorin, Berufserfahrung etc.</span></label>
+      <textarea class="field-textarea" id="usps" placeholder="Was macht dich noch besonders ..."></textarea>
+    </div>
+
+    <div class="field-group">
+      <label class="field-label" for="nischensatz">Positionierungs-/Nischensatz <span class="hint">Power of Positioning · Ich unterstütze ...</span></label>
+      <textarea class="field-textarea tall" id="nischensatz" placeholder="Ich unterstütze ..."></textarea>
+    </div>
+
+    <div class="field-group">
+      <label class="field-label" for="zielgruppe-beschreibung">Wer ist deine Zielgruppe? <span class="hint">Alter, Geschlecht, Beruf, Bildungsgrad</span></label>
+      <textarea class="field-textarea" id="zielgruppe-beschreibung" placeholder="Beschreibe deine Zielgruppe genau ..."></textarea>
+    </div>
+
+    <!-- Ängste & Frustrationen -->
+    <div class="triplet-group">
+      <span class="triplet-label">Definiere die 3 größten Ängste / Frustrationen deiner Zielgruppe <span class="hint">(aus der Attraction List)</span></span>
+      <div class="triplet-row">
+        <div class="triplet-num">#1</div>
+        <textarea class="field-textarea" id="angst-1" placeholder="Angst / Frustration #1 ..."></textarea>
+      </div>
+      <div class="triplet-row">
+        <div class="triplet-num">#2</div>
+        <textarea class="field-textarea" id="angst-2" placeholder="Angst / Frustration #2 ..."></textarea>
+      </div>
+      <div class="triplet-row">
+        <div class="triplet-num">#3</div>
+        <textarea class="field-textarea" id="angst-3" placeholder="Angst / Frustration #3 ..."></textarea>
+      </div>
+    </div>
+
+    <!-- Situationen -->
+    <div class="triplet-group">
+      <span class="triplet-label">Beschreibe die 3 schwierigsten Situationen im Alltag deiner Zielgruppe <span class="hint">(Attraction List)</span></span>
+      <div class="triplet-row">
+        <div class="triplet-num">#1</div>
+        <textarea class="field-textarea" id="situation-1" placeholder="Schwierige Situation #1 ..."></textarea>
+      </div>
+      <div class="triplet-row">
+        <div class="triplet-num">#2</div>
+        <textarea class="field-textarea" id="situation-2" placeholder="Schwierige Situation #2 ..."></textarea>
+      </div>
+      <div class="triplet-row">
+        <div class="triplet-num">#3</div>
+        <textarea class="field-textarea" id="situation-3" placeholder="Schwierige Situation #3 ..."></textarea>
+      </div>
+    </div>
+
+    <!-- Wünsche -->
+    <div class="triplet-group">
+      <span class="triplet-label">Definiere die 3 größten Wünsche deiner Zielgruppe <span class="hint">(aus der Attraction List)</span></span>
+      <div class="triplet-row">
+        <div class="triplet-num">#1</div>
+        <textarea class="field-textarea" id="wunsch-1" placeholder="Wunsch #1 ..."></textarea>
+      </div>
+      <div class="triplet-row">
+        <div class="triplet-num">#2</div>
+        <textarea class="field-textarea" id="wunsch-2" placeholder="Wunsch #2 ..."></textarea>
+      </div>
+      <div class="triplet-row">
+        <div class="triplet-num">#3</div>
+        <textarea class="field-textarea" id="wunsch-3" placeholder="Wunsch #3 ..."></textarea>
+      </div>
+    </div>
+
+    <!-- Einwände -->
+    <div class="triplet-group">
+      <span class="triplet-label">Beschreibe die 3 wichtigsten Einwände deiner Zielgruppe <span class="hint">(Attraction List)</span></span>
+      <div class="triplet-row">
+        <div class="triplet-num">#1</div>
+        <textarea class="field-textarea" id="einwand-1" placeholder="Einwand #1 ..."></textarea>
+      </div>
+      <div class="triplet-row">
+        <div class="triplet-num">#2</div>
+        <textarea class="field-textarea" id="einwand-2" placeholder="Einwand #2 ..."></textarea>
+      </div>
+      <div class="triplet-row">
+        <div class="triplet-num">#3</div>
+        <textarea class="field-textarea" id="einwand-3" placeholder="Einwand #3 ..."></textarea>
+      </div>
+    </div>
+
+    <!-- Emotionale Reaktionen -->
+    <div class="triplet-group">
+      <span class="triplet-label">Beschreibe die 3 typischen emotionalen Reaktionen deiner Zielgruppe <span class="hint">(Attraction List)</span></span>
+      <div class="triplet-row">
+        <div class="triplet-num">#1</div>
+        <textarea class="field-textarea" id="emotion-1" placeholder="Emotionale Reaktion #1 ..."></textarea>
+      </div>
+      <div class="triplet-row">
+        <div class="triplet-num">#2</div>
+        <textarea class="field-textarea" id="emotion-2" placeholder="Emotionale Reaktion #2 ..."></textarea>
+      </div>
+      <div class="triplet-row">
+        <div class="triplet-num">#3</div>
+        <textarea class="field-textarea" id="emotion-3" placeholder="Emotionale Reaktion #3 ..."></textarea>
+      </div>
+    </div>
+
+    <!-- Konsequenzen -->
+    <div class="triplet-group">
+      <span class="triplet-label">Beschreibe die 3 stärksten Konsequenzen deiner Zielgruppe <span class="hint">(Attraction List)</span></span>
+      <div class="triplet-row">
+        <div class="triplet-num">#1</div>
+        <textarea class="field-textarea" id="konsequenz-1" placeholder="Konsequenz #1 ..."></textarea>
+      </div>
+      <div class="triplet-row">
+        <div class="triplet-num">#2</div>
+        <textarea class="field-textarea" id="konsequenz-2" placeholder="Konsequenz #2 ..."></textarea>
+      </div>
+      <div class="triplet-row">
+        <div class="triplet-num">#3</div>
+        <textarea class="field-textarea" id="konsequenz-3" placeholder="Konsequenz #3 ..."></textarea>
+      </div>
+    </div>
+
+    <!-- Falsche Annahmen -->
+    <div class="triplet-group">
+      <span class="triplet-label">Beschreibe die 3 häufigsten falschen / verzerrten Annahmen deiner Zielgruppe <span class="hint">(Attraction List)</span></span>
+      <div class="triplet-row">
+        <div class="triplet-num">#1</div>
+        <textarea class="field-textarea" id="annahme-1" placeholder="Falsche Annahme #1 ..."></textarea>
+      </div>
+      <div class="triplet-row">
+        <div class="triplet-num">#2</div>
+        <textarea class="field-textarea" id="annahme-2" placeholder="Falsche Annahme #2 ..."></textarea>
+      </div>
+      <div class="triplet-row">
+        <div class="triplet-num">#3</div>
+        <textarea class="field-textarea" id="annahme-3" placeholder="Falsche Annahme #3 ..."></textarea>
+      </div>
+    </div>
+
+    <!-- Versuche -->
+    <div class="triplet-group">
+      <span class="triplet-label">Was hat deine Zielgruppe schon alles versucht, um das Problem zu lösen?</span>
+      <div class="triplet-row">
+        <div class="triplet-num">#1</div>
+        <textarea class="field-textarea" id="versuch-1" placeholder="Bisheriger Lösungsversuch #1 ..."></textarea>
+      </div>
+      <div class="triplet-row">
+        <div class="triplet-num">#2</div>
+        <textarea class="field-textarea" id="versuch-2" placeholder="Bisheriger Lösungsversuch #2 ..."></textarea>
+      </div>
+      <div class="triplet-row">
+        <div class="triplet-num">#3</div>
+        <textarea class="field-textarea" id="versuch-3" placeholder="Bisheriger Lösungsversuch #3 ..."></textarea>
+      </div>
+    </div>
+
+    <!-- Werte -->
+    <div class="triplet-group">
+      <span class="triplet-label">Welche 3 Werte sind deiner Zielgruppe am wichtigsten?</span>
+      <div class="triplet-row">
+        <div class="triplet-num">#1</div>
+        <input class="field-input" type="text" id="wert-1" placeholder="Wert #1 ...">
+      </div>
+      <div class="triplet-row">
+        <div class="triplet-num">#2</div>
+        <input class="field-input" type="text" id="wert-2" placeholder="Wert #2 ...">
+      </div>
+      <div class="triplet-row">
+        <div class="triplet-num">#3</div>
+        <input class="field-input" type="text" id="wert-3" placeholder="Wert #3 ...">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<!-- SECTION 2: ART OF OFFER                                  -->
+<!-- ══════════════════════════════════════════════════════════ -->
+<section id="offer" class="section">
+  <div class="container">
+    <div class="section-label">02</div>
+    <h2>Art of <em>Offer</em></h2>
+    <p class="section-intro">Dein Angebot ist der Kern deines Business. Hier definierst du deine Positionierung, deine Verheißung und dein Signature-Produkt.</p>
+
+    <!-- MITBEWERBER-ANALYSE -->
+    <div class="subsection">
+      <div class="subsection-title">Mitbewerber-Analyse</div>
+
+      <div class="field-group" style="margin-bottom:32px;">
+        <label class="field-label">Die Top 3 Mitbewerber in deinem Markt, die ein ähnliches Produkt verkaufen</label>
+        <div class="competitor-row">
+          <div class="competitor-num">#1</div>
+          <input class="field-input" type="text" id="mitbewerber-1-name" placeholder="Name / Unternehmen">
+          <input class="field-input" type="url" id="mitbewerber-1-web" placeholder="Website (URL)">
+        </div>
+        <div class="competitor-row">
+          <div class="competitor-num">#2</div>
+          <input class="field-input" type="text" id="mitbewerber-2-name" placeholder="Name / Unternehmen">
+          <input class="field-input" type="url" id="mitbewerber-2-web" placeholder="Website (URL)">
+        </div>
+        <div class="competitor-row">
+          <div class="competitor-num">#3</div>
+          <input class="field-input" type="text" id="mitbewerber-3-name" placeholder="Name / Unternehmen">
+          <input class="field-input" type="url" id="mitbewerber-3-web" placeholder="Website (URL)">
+        </div>
+      </div>
+
+      <p class="field-label" style="margin-bottom:16px;">Bewertungsportale <span class="hint">(Trustpilot, Google Bewertungen etc.)</span></p>
+
+      <div class="card-row">
+        <div class="card">
+          <div class="card-title">Was wird Positives erzählt?</div>
+          <textarea class="field-textarea" id="bewertung-positiv" placeholder="Positive Aussagen über Mitbewerber ..."></textarea>
+        </div>
+        <div class="card rose">
+          <div class="card-title">Was wird Negatives erzählt?</div>
+          <textarea class="field-textarea" id="bewertung-negativ" placeholder="Negative Aussagen über Mitbewerber ..."></textarea>
+        </div>
+      </div>
+
+      <div class="card-row">
+        <div class="card">
+          <div class="card-title">Was machen deine Konkurrenten schon richtig gut? (Stärken)</div>
+          <textarea class="field-textarea" id="staerken-konkurrenz" placeholder="Stärken der Konkurrenz ..."></textarea>
+        </div>
+        <div class="card rose">
+          <div class="card-title">Was sind die Lücken am Markt, die du besetzen kannst?</div>
+          <textarea class="field-textarea" id="marktluecken" placeholder="Deine Differenzierung und Marktlücken ..."></textarea>
+        </div>
+      </div>
+    </div>
+
+    <!-- DEINE VERHEIßUNG -->
+    <div class="subsection">
+      <div class="subsection-title">Deine Verheißung</div>
+      <div class="field-group">
+        <label class="field-label" for="ist-zustand">Wo steht deine Zielgruppe gerade?</label>
+        <textarea class="field-textarea tall" id="ist-zustand" placeholder="Der aktuelle IST-Zustand deiner Zielgruppe ..."></textarea>
+      </div>
+      <div class="field-group">
+        <label class="field-label" for="soll-zustand">Wo soll sie in 3–6 Monaten stehen?</label>
+        <textarea class="field-textarea tall" id="soll-zustand" placeholder="Der angestrebte SOLL-Zustand nach 3–6 Monaten ..."></textarea>
+      </div>
+      <div class="field-group">
+        <label class="field-label" for="transformation-satz">In einem Satz: Was verändert sich konkret durch dein Produkt?</label>
+        <textarea class="field-textarea" id="transformation-satz" placeholder="In einem Satz zusammengefasst ..."></textarea>
+      </div>
+    </div>
+
+    <!-- WIRKUNGSELEMENTE -->
+    <div class="subsection">
+      <div class="subsection-title">Die 3 Wirkungselemente deines Signature-Produkts</div>
+
+      <!-- #1 Wissen -->
+      <div style="background:var(--cream); border:1px solid var(--beige); border-left:3px solid var(--teal); border-radius:2px; padding:24px 28px; margin-bottom:20px;">
+        <div style="font-size:10px; font-weight:700; letter-spacing:2.5px; text-transform:uppercase; color:var(--teal); margin-bottom:16px;">#1 Wissen</div>
+        <div class="field-group">
+          <label class="field-label" for="wissen-aufbau">Wie sieht der Aufbau aus? <span class="hint">z.&thinsp;B. Anzahl Module (Achte bitte bei der Formulierung auf die ZFU)</span></label>
+          <textarea class="field-textarea" id="wissen-aufbau" placeholder="Aufbau und Struktur deines Kurses / Programms ..."></textarea>
+        </div>
+        <div class="field-group" style="margin-bottom:0;">
+          <label class="field-label" for="wissen-module">Was muss der Kunde verstehen, um JETZT ins Handeln zu kommen? <span class="hint">→ Liste alle Module in der richtigen Reihenfolge auf</span></label>
+          <textarea class="field-textarea tall" id="wissen-module" placeholder="Module in der richtigen Reihenfolge (von A nach B) ..."></textarea>
+        </div>
+      </div>
+
+      <!-- #2 Umsetzung -->
+      <div style="background:var(--cream); border:1px solid var(--beige); border-left:3px solid var(--rose); border-radius:2px; padding:24px 28px; margin-bottom:20px;">
+        <div style="font-size:10px; font-weight:700; letter-spacing:2.5px; text-transform:uppercase; color:var(--rose); margin-bottom:16px;">#2 Umsetzung</div>
+        <div class="field-group">
+          <label class="field-label" for="umsetzung-allg">Wie unterstützt du bei der Umsetzung? <span class="hint">z.&thinsp;B. Calls, Templates, Tools, 1:1, Telegram/WhatsApp Gruppe</span></label>
+          <textarea class="field-textarea" id="umsetzung-allg" placeholder="Deine Umsetzungs-Unterstützung ..."></textarea>
+        </div>
+        <div class="inline-field">
+          <label class="inline-label">Wöchentliche Live-Calls:</label>
+          <input class="field-input" type="text" id="umsetzung-calls" placeholder="z.&thinsp;B. 1× pro Woche, Dienstags 19 Uhr">
+        </div>
+        <div class="inline-field">
+          <label class="inline-label">Templates &amp; Checklisten:</label>
+          <input class="field-input" type="text" id="umsetzung-templates" placeholder="z.&thinsp;B. 12 Canva-Templates, Strategie-Checkliste">
+        </div>
+        <div class="inline-field">
+          <label class="inline-label">Feedback-Möglichkeiten:</label>
+          <input class="field-input" type="text" id="umsetzung-feedback" placeholder="z.&thinsp;B. WhatsApp-Gruppe, Gruppenfeedback">
+        </div>
+        <div class="inline-field" style="margin-bottom:0;">
+          <label class="inline-label">Sonstiges:</label>
+          <input class="field-input" type="text" id="umsetzung-sonstiges" placeholder="z.&thinsp;B. Community-Events, Quick-Checks">
+        </div>
+      </div>
+    </div>
+
+    <!-- PREISPUNKT -->
+    <div class="subsection">
+      <div class="subsection-title">Dein Preispunkt</div>
+
+      <div class="price-field">
+        <div class="price-label">Mein aktueller Preis</div>
+        <input class="price-input" type="text" id="preis" placeholder="0,00 €">
+      </div>
+
+      <div class="field-group">
+        <label class="field-label">Ist das Preis-Leistungs-Verhältnis glasklar kommuniziert?</label>
+        <div class="radio-group">
+          <label class="radio-option">
+            <input type="radio" name="preis-kommuniziert" id="preis-ja" value="ja">
+            <span>Ja</span>
+          </label>
+          <label class="radio-option">
+            <input type="radio" name="preis-kommuniziert" id="preis-nein" value="nein">
+            <span>Nein</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="field-group">
+        <label class="field-label" for="preis-warum">Warum?</label>
+        <textarea class="field-textarea" id="preis-warum" placeholder="Begründung ..."></textarea>
+      </div>
+
+      <div class="field-group">
+        <label class="field-label">Zieht der Preis eher Einsteiger oder Fortgeschrittene Kunden an?</label>
+        <div class="radio-group">
+          <label class="radio-option">
+            <input type="radio" name="preis-segment" id="preis-einsteiger" value="einsteiger">
+            <span>Einsteiger</span>
+          </label>
+          <label class="radio-option">
+            <input type="radio" name="preis-segment" id="preis-fortgeschrittene" value="fortgeschrittene">
+            <span>Fortgeschrittene</span>
+          </label>
+          <label class="radio-option">
+            <input type="radio" name="preis-segment" id="preis-unklar" value="unklar">
+            <span>Unklar</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- SIGNATURE-PRODUKT FORMULIERUNG -->
+    <div class="subsection" style="margin-bottom:0;">
+      <div class="subsection-title">Formuliere dein Signature-Produkt</div>
+      <div class="signature-box">
+        <div class="signature-box-label">Deine Signature-Formel</div>
+        <div class="signature-formula">„Ich helfe [Zielgruppe], in [Zeitraum] [Ergebnis] zu erreichen."</div>
+        <div class="sig-field-row">
+          <div class="sig-field-label">Zielgruppe</div>
+          <input class="sig-input" type="text" id="sig-zielgruppe" placeholder="Wen hilfst du?">
+        </div>
+        <div class="sig-field-row">
+          <div class="sig-field-label">Zeitraum</div>
+          <input class="sig-input" type="text" id="sig-zeitraum" placeholder="In welchem Zeitraum?">
+        </div>
+        <div class="sig-field-row">
+          <div class="sig-field-label">Greifbares Ergebnis</div>
+          <input class="sig-input" type="text" id="sig-ergebnis" placeholder="Welches Ergebnis erreichen sie?">
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<!-- SECTION 3: MASTERY OF MARKETING                          -->
+<!-- ══════════════════════════════════════════════════════════ -->
+<section id="marketing" class="section">
+  <div class="container">
+    <div class="section-label">03</div>
+    <h2>Mastery of <em>Marketing</em></h2>
+    <p class="section-intro">Dein Experten-Status und dein Auftreten entscheiden darüber, ob deine Zielgruppe dir vertraut – und kauft.</p>
+
+    <!-- EXPERTEN-STATUS -->
+    <div class="subsection">
+      <div class="subsection-title">Dein Experten-Status</div>
+
+      <div class="field-group">
+        <label class="field-label" for="expertise-weg">Wie bist du zu deiner Expertise gekommen?</label>
+        <textarea class="field-textarea tall" id="expertise-weg" placeholder="Deine Geschichte und der Weg zu deiner Expertise ..."></textarea>
+      </div>
+
+      <div class="field-group">
+        <label class="field-label" for="testimonials">Hast du Testimonials oder Kundenvideos, die du verwenden kannst? <span class="hint">Wenn nein: Welche Schritte sind notwendig, um sie zu bekommen?</span></label>
+        <textarea class="field-textarea tall" id="testimonials" placeholder="Vorhandene Testimonials oder Schritte, um sie zu sammeln ..."></textarea>
+      </div>
+
+      <div class="field-group">
+        <label class="field-label" for="pr-arbeit">Welche PR-Arbeit hast du bisher gemacht? <span class="hint">TV-Auftritte, Zertifikate, Vorträge, Medien, Interviews, Podcasts, YouTube etc.</span></label>
+        <textarea class="field-textarea tall" id="pr-arbeit" placeholder="Deine bisherige PR-Arbeit und Nachweise ..."></textarea>
+      </div>
+    </div>
+
+    <!-- AUFTRETEN & STIL -->
+    <div class="subsection">
+      <div class="subsection-title">Dein Auftreten + Stil <span style="font-weight:400; text-transform:none; letter-spacing:0; color:var(--mid-gray); font-size:11px;">(Ergebnisse Marketing DNA)</span></div>
+
+      <div class="field-group">
+        <label class="field-label" for="werte-lebensgefuehl">Welche Werte? Welches Lebensgefühl?</label>
+        <textarea class="field-textarea" id="werte-lebensgefuehl" placeholder="Deine Werte und das Lebensgefühl, das du verkörperst ..."></textarea>
+      </div>
+
+      <div class="card-row">
+        <div class="card">
+          <div class="card-title">Welcher Look?</div>
+          <textarea class="field-textarea" id="look" placeholder="z.&thinsp;B. bunt, dezent, moody, clean ..."></textarea>
+        </div>
+        <div class="card rose">
+          <div class="card-title">Welche Tonalität?</div>
+          <textarea class="field-textarea" id="tonalitaet" placeholder="z.&thinsp;B. sachlich, emotional, provokant, warmherzig ..."></textarea>
+        </div>
+      </div>
+
+      <div class="card-row">
+        <div class="card">
+          <div class="card-title">Welche „Status-Symbole"? Welche Assoziationen?</div>
+          <textarea class="field-textarea" id="status-symbole" placeholder="Was signalisiert dein Status? Was sollen Menschen mit dir assoziieren ..."></textarea>
+        </div>
+        <div class="card rose">
+          <div class="card-title">Welche Wörter verwendest du?</div>
+          <textarea class="field-textarea" id="woerter" placeholder="Typische Wörter und Phrasen, die du verwendest ..."></textarea>
+        </div>
+      </div>
+
+      <div class="field-group">
+        <label class="field-label" for="key-wordings">Key-Wordings</label>
+        <textarea class="field-textarea tall" id="key-wordings" placeholder="Deine wichtigsten Keywords und Schlüsselbegriffe ..."></textarea>
+      </div>
+
+      <div class="field-group">
+        <label class="field-label" for="no-gos">No-Gos</label>
+        <textarea class="field-textarea tall" id="no-gos" placeholder="Was passt nicht zu deiner Marke? Was vermeidest du unbedingt ..."></textarea>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer class="page-footer">
+  <div class="footer-brand">FEMINESS</div>
+  <div class="footer-note">Business-Sheet First Choice · feminess.de</div>
+</footer>
+
+<script>
+  const STORAGE_KEY = 'feminess_business_sheet_v1';
+
+  const FIELDS = [
+    'thema','qualifikationen','usps','nischensatz','zielgruppe-beschreibung',
+    'angst-1','angst-2','angst-3',
+    'situation-1','situation-2','situation-3',
+    'wunsch-1','wunsch-2','wunsch-3',
+    'einwand-1','einwand-2','einwand-3',
+    'emotion-1','emotion-2','emotion-3',
+    'konsequenz-1','konsequenz-2','konsequenz-3',
+    'annahme-1','annahme-2','annahme-3',
+    'versuch-1','versuch-2','versuch-3',
+    'wert-1','wert-2','wert-3',
+    'mitbewerber-1-name','mitbewerber-1-web',
+    'mitbewerber-2-name','mitbewerber-2-web',
+    'mitbewerber-3-name','mitbewerber-3-web',
+    'bewertung-positiv','bewertung-negativ',
+    'staerken-konkurrenz','marktluecken',
+    'ist-zustand','soll-zustand','transformation-satz',
+    'wissen-aufbau','wissen-module',
+    'umsetzung-allg','umsetzung-calls','umsetzung-templates',
+    'umsetzung-feedback','umsetzung-sonstiges',
+    'preis','preis-warum',
+    'sig-zielgruppe','sig-zeitraum','sig-ergebnis',
+    'expertise-weg','testimonials','pr-arbeit',
+    'werte-lebensgefuehl','look','tonalitaet',
+    'status-symbole','woerter','key-wordings','no-gos'
+  ];
+
+  const RADIO_GROUPS = ['preis-kommuniziert', 'preis-segment'];
+
+  function saveAll() {
+    const data = {};
+    FIELDS.forEach(id => {
+      const el = document.getElementById(id);
+      if (el) data[id] = el.value;
+    });
+    RADIO_GROUPS.forEach(name => {
+      const checked = document.querySelector(`input[name="${name}"]:checked`);
+      if (checked) data['radio_' + name] = checked.value;
+    });
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+      const toast = document.getElementById('saveToast');
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 2500);
+    } catch(e) {
+      alert('Speichern fehlgeschlagen. Bitte die Datei zuerst lokal herunterladen (Strg+S / Cmd+S).');
+    }
+  }
+
+  function loadAll() {
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      if (!raw) return;
+      const data = JSON.parse(raw);
+      FIELDS.forEach(id => {
+        const el = document.getElementById(id);
+        if (el && data[id] !== undefined) el.value = data[id];
+      });
+      RADIO_GROUPS.forEach(name => {
+        const val = data['radio_' + name];
+        if (val) {
+          const radio = document.querySelector(`input[name="${name}"][value="${val}"]`);
+          if (radio) radio.checked = true;
+        }
+      });
+    } catch(e) {}
+  }
+
+  // Auto-save on every input change
+  document.addEventListener('input', () => saveAll());
+  document.addEventListener('change', () => saveAll());
+
+  // Load on page start
+  document.addEventListener('DOMContentLoaded', loadAll);
+
+  // Keyboard shortcut Ctrl+S / Cmd+S
+  document.addEventListener('keydown', function(e) {
+    if ((e.ctrlKey || e.metaKey) && e.key === 's') {
+      e.preventDefault();
+      saveAll();
+    }
+  });
+</script>
+</body>
+</html>

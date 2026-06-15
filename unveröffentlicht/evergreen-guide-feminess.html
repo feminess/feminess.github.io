@@ -1,0 +1,1696 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Evergreen Video-Training & Evergreen-Workshop – Strategisch aufgebaut für dauerhaften Umsatz</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --teal:         #257c6c;
+    --teal-dark:    #1b5c50;
+    --teal-light:   #5ec6b3;
+    --teal-pale:    #b8ddd8;
+    --teal-deep:    #144a40;
+    --rose:         #cf5a73;
+    --rose-light:   #e8a0b0;
+    --sand:         #c2ab8d;
+    --sand-dark:    #8d6a48;
+    --sand-light:   #e4bc95;
+    --black:        #070808;
+    --dark:         #0d2420;
+    --off-white:    #f8f6f2;
+    --cream:        #f0f5f4;
+    --beige:        #ddecea;
+    --warm-gray:    #5a7a74;
+    --mid-gray:     #9ab8b4;
+    --light-gray:   #ccdeda;
+    --font-heading: 'Cormorant Garamond', Georgia, serif;
+    --font-body:    'Inter', system-ui, sans-serif;
+    --font-accent:  'Inter', sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: #FFFFFF;
+    color: var(--black);
+    font-family: var(--font-body);
+    font-size: 19px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── BLOG LAYOUT ── */
+  .blog-header {
+    background: #FFFFFF;
+    border-bottom: 1px solid var(--beige);
+    padding: 24px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .blog-header-brand {
+    font-family: var(--font-accent);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--teal-dark);
+  }
+
+  .blog-header-tag {
+    font-family: var(--font-accent);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--teal);
+    background: rgba(37,124,108,0.08);
+    padding: 6px 14px;
+    border-radius: 2px;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    background: #FFFFFF;
+    padding: 96px 32px 80px;
+    max-width: 860px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0; right: -100px;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(37,124,108,0.06) 0%, transparent 65%);
+    pointer-events: none;
+  }
+
+  .hero-kicker {
+    font-family: var(--font-accent);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 28px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .hero-kicker::before {
+    content: '';
+    width: 32px; height: 1px;
+    background: var(--teal);
+    opacity: 0.6;
+  }
+
+  .hero h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(44px, 7vw, 80px);
+    font-weight: 400;
+    line-height: 1.05;
+    color: var(--black);
+    letter-spacing: -1px;
+    margin-bottom: 28px;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--rose);
+  }
+
+  .hero-sub {
+    font-family: var(--font-body);
+    font-size: 21px;
+    font-weight: 300;
+    color: var(--warm-gray);
+    line-height: 1.8;
+    max-width: 620px;
+    margin-bottom: 48px;
+  }
+
+  .hero-toc {
+    border: 1px solid var(--beige);
+    border-top: 3px solid var(--teal);
+    background: var(--cream);
+    padding: 32px 36px;
+    border-radius: 2px;
+    margin-bottom: 48px;
+  }
+
+  .hero-toc-label {
+    font-family: var(--font-accent);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--warm-gray);
+    margin-bottom: 20px;
+  }
+
+  .hero-toc-items {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .hero-toc-item {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    text-decoration: none;
+  }
+
+  .hero-toc-num {
+    font-family: var(--font-accent);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--teal);
+    min-width: 48px;
+  }
+
+  .hero-toc-title {
+    font-family: var(--font-body);
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--teal-dark);
+  }
+
+  .hero-toc-desc {
+    font-family: var(--font-body);
+    font-size: 13px;
+    color: var(--mid-gray);
+    margin-left: auto;
+    font-style: italic;
+  }
+
+  .hero-meta {
+    display: flex;
+    gap: 40px;
+    border-top: 1px solid var(--beige);
+    padding-top: 28px;
+    flex-wrap: wrap;
+  }
+
+  .hero-meta-item span {
+    display: block;
+    font-family: var(--font-accent);
+    font-size: 9px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--mid-gray);
+    margin-bottom: 4px;
+  }
+
+  .hero-meta-item strong {
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--teal-dark);
+  }
+
+  /* ── INTRO STATEMENT ── */
+  .intro-block {
+    background: var(--beige);
+    border-left: 4px solid var(--teal);
+    padding: 40px 44px;
+    margin: 0 auto;
+    max-width: 860px;
+    margin-bottom: 0;
+  }
+
+  .intro-block p {
+    font-family: var(--font-heading);
+    font-size: clamp(22px, 2.5vw, 30px);
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.5;
+    color: var(--teal-dark);
+    margin: 0;
+  }
+
+  .intro-block p + p { margin-top: 20px; }
+
+  /* ── ARTICLE BODY ── */
+  .article {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  /* ── SECTION DIVIDER ── */
+  .section-block {
+    padding: 72px 0;
+    border-bottom: 1px solid var(--beige);
+  }
+
+  .section-block:last-child { border-bottom: none; }
+
+  .section-kicker {
+    font-family: var(--font-accent);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3.5px;
+    text-transform: uppercase;
+    color: var(--warm-gray);
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .section-kicker::after {
+    content: '';
+    width: 40px; height: 1px;
+    background: var(--teal);
+    opacity: 0.5;
+  }
+
+  /* ── HEADINGS ── */
+  h2.part-headline {
+    font-family: var(--font-heading);
+    font-size: clamp(36px, 5vw, 56px);
+    font-weight: 400;
+    color: var(--black);
+    line-height: 1.1;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+  }
+
+  h2.part-headline em {
+    font-style: italic;
+    color: var(--rose);
+  }
+
+  .part-sub {
+    font-family: var(--font-body);
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--warm-gray);
+    margin-bottom: 40px;
+    font-style: italic;
+  }
+
+  h3.content-h3 {
+    font-family: var(--font-accent);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 28px;
+    margin-top: 48px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  h3.content-h3::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--beige);
+  }
+
+  p.body-text {
+    font-family: var(--font-body);
+    font-size: 19px;
+    line-height: 1.8;
+    color: var(--warm-gray);
+    margin-bottom: 20px;
+    max-width: 680px;
+  }
+
+  p.body-text strong {
+    color: var(--black);
+    font-weight: 600;
+  }
+
+  /* ── NUMBERED ANATOMY ── */
+  .anatomy-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 8px;
+  }
+
+  .anatomy-item {
+    display: flex;
+    gap: 24px;
+    padding: 28px 0;
+    border-bottom: 1px solid var(--beige);
+    align-items: flex-start;
+  }
+
+  .anatomy-item:last-child { border-bottom: none; }
+
+  .anatomy-num {
+    font-family: var(--font-heading);
+    font-size: 48px;
+    font-weight: 300;
+    color: var(--teal-pale);
+    line-height: 1;
+    min-width: 48px;
+    margin-top: -4px;
+  }
+
+  .anatomy-title {
+    font-family: var(--font-body);
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 8px;
+  }
+
+  .anatomy-text {
+    font-family: var(--font-body);
+    font-size: 17px;
+    line-height: 1.75;
+    color: var(--warm-gray);
+    max-width: 600px;
+  }
+
+  /* ── PRINZIPIEN ── */
+  .prinzip-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 8px;
+  }
+
+  .prinzip-item {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    background: var(--cream);
+    border: 1px solid var(--beige);
+    border-left: 3px solid var(--teal);
+    padding: 24px 28px;
+    border-radius: 2px;
+  }
+
+  .prinzip-num {
+    font-family: var(--font-accent);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--teal);
+    min-width: 20px;
+    padding-top: 2px;
+  }
+
+  .prinzip-title {
+    font-family: var(--font-body);
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 6px;
+  }
+
+  .prinzip-text {
+    font-family: var(--font-body);
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--warm-gray);
+  }
+
+  /* ── TABLES ── */
+  .table-wrapper {
+    overflow-x: auto;
+    margin: 36px 0;
+    border-radius: 2px;
+    border: 1px solid var(--beige);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--font-body);
+    font-size: 16px;
+  }
+
+  thead th {
+    background: var(--dark);
+    color: #FFFFFF;
+    font-family: var(--font-accent);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    padding: 14px 20px;
+    text-align: left;
+  }
+
+  tbody tr:nth-child(even) { background: var(--cream); }
+  tbody tr:nth-child(odd)  { background: #FFFFFF; }
+  tbody tr:hover           { background: rgba(37,124,108,0.04); }
+
+  tbody td {
+    padding: 16px 20px;
+    color: var(--warm-gray);
+    border-bottom: 1px solid var(--beige);
+    line-height: 1.5;
+  }
+
+  tbody tr:last-child td { border-bottom: none; }
+
+  tbody td:first-child {
+    color: var(--teal-dark);
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  /* ── FEHLER LIST ── */
+  .fehler-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 8px;
+  }
+
+  .fehler-item {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 20px 24px;
+    background: #FFFFFF;
+    border: 1px solid var(--beige);
+    border-radius: 2px;
+  }
+
+  .fehler-num {
+    font-family: var(--font-accent);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--rose);
+    min-width: 28px;
+    padding-top: 1px;
+  }
+
+  .fehler-title {
+    font-family: var(--font-body);
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 5px;
+  }
+
+  .fehler-text {
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--warm-gray);
+  }
+
+  /* ── FUNNEL FLOW ── */
+  .funnel-flow {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin: 32px 0;
+  }
+
+  .funnel-step {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 0;
+    position: relative;
+  }
+
+  .funnel-step-label {
+    background: var(--dark);
+    color: #FFFFFF;
+    font-family: var(--font-accent);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 20px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .funnel-step:last-child .funnel-step-label { border-bottom: none; }
+
+  .funnel-step-content {
+    padding: 20px 24px;
+    border: 1px solid var(--beige);
+    border-left: none;
+    border-bottom: none;
+    background: #FFFFFF;
+  }
+
+  .funnel-step:last-child .funnel-step-content {
+    border-bottom: 1px solid var(--beige);
+  }
+
+  .funnel-step-title {
+    font-family: var(--font-body);
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 4px;
+  }
+
+  .funnel-step-desc {
+    font-family: var(--font-body);
+    font-size: 15px;
+    color: var(--warm-gray);
+    font-style: italic;
+  }
+
+  /* ── PROMPT BOX ── */
+  .prompt-box {
+    background: var(--dark);
+    border-radius: 2px;
+    padding: 36px 40px;
+    margin: 36px 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .prompt-box::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 3px;
+    background: linear-gradient(90deg, var(--teal), var(--teal-light));
+  }
+
+  .prompt-box-label {
+    font-family: var(--font-accent);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--teal-light);
+    margin-bottom: 20px;
+  }
+
+  .prompt-box-title {
+    font-family: var(--font-heading);
+    font-size: 22px;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--sand-light);
+    margin-bottom: 24px;
+  }
+
+  .prompt-box-text {
+    font-family: 'Courier New', 'Courier', monospace;
+    font-size: 13px;
+    line-height: 1.8;
+    color: var(--mid-gray);
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+
+  .prompt-box-text strong { color: var(--teal-pale); }
+
+  /* ── CHECKLISTE ── */
+  .checklist-section {
+    background: var(--cream);
+    border: 1px solid var(--beige);
+    border-top: 3px solid var(--teal);
+    border-radius: 2px;
+    padding: 36px 40px;
+    margin: 36px 0;
+  }
+
+  .checklist-title {
+    font-family: var(--font-accent);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--teal-dark);
+    margin-bottom: 20px;
+  }
+
+  .checklist-items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .checklist-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    font-family: var(--font-body);
+    font-size: 17px;
+    color: var(--warm-gray);
+    line-height: 1.5;
+  }
+
+  .checklist-box {
+    width: 18px;
+    height: 18px;
+    border: 1.5px solid var(--teal-light);
+    border-radius: 2px;
+    flex-shrink: 0;
+    margin-top: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* ── PSYCHO HIGHLIGHT BOX ── */
+  .psycho-box {
+    background: rgba(207,90,115,0.06);
+    border: 1px solid rgba(207,90,115,0.18);
+    border-left: 3px solid var(--rose);
+    border-radius: 2px;
+    padding: 24px 28px;
+    margin: 28px 0;
+  }
+
+  .psycho-box-label {
+    font-family: var(--font-accent);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--rose);
+    margin-bottom: 12px;
+  }
+
+  .psycho-box-text {
+    font-family: var(--font-body);
+    font-size: 17px;
+    line-height: 1.75;
+    color: var(--warm-gray);
+  }
+
+  .psycho-box-text strong {
+    color: var(--black);
+    font-weight: 600;
+  }
+
+  /* ── EVERGREEN BADGE ── */
+  .evergreen-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(37,124,108,0.1);
+    border: 1px solid var(--teal-pale);
+    border-radius: 2px;
+    padding: 8px 16px;
+    font-family: var(--font-accent);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--teal-dark);
+    margin-bottom: 32px;
+  }
+
+  .evergreen-badge::before {
+    content: '∞';
+    font-size: 14px;
+    color: var(--teal);
+  }
+
+  /* ── UNTERSCHIED BOX ── */
+  .unterschied-box {
+    background: var(--cream);
+    border: 1px solid var(--beige);
+    border-radius: 2px;
+    padding: 32px 36px;
+    margin: 32px 0;
+  }
+
+  .unterschied-box-label {
+    font-family: var(--font-accent);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--warm-gray);
+    margin-bottom: 20px;
+  }
+
+  .unterschied-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  .unterschied-col-label {
+    font-family: var(--font-accent);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid;
+  }
+
+  .unterschied-col-label.live { color: var(--rose); border-color: var(--rose); }
+  .unterschied-col-label.evergreen { color: var(--teal); border-color: var(--teal); }
+
+  .unterschied-col ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .unterschied-col ul li {
+    font-family: var(--font-body);
+    font-size: 15px;
+    color: var(--warm-gray);
+    padding-left: 16px;
+    position: relative;
+    line-height: 1.5;
+  }
+
+  .unterschied-col ul li::before {
+    content: '–';
+    position: absolute;
+    left: 0;
+    color: var(--mid-gray);
+  }
+
+  /* ── CLOSING ── */
+  .closing {
+    background: var(--dark);
+    padding: 96px 32px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .closing::before {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(37,124,108,0.22) 0%, transparent 65%);
+    pointer-events: none;
+  }
+
+  .closing-inner {
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  .closing h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(40px, 6vw, 64px);
+    font-weight: 400;
+    color: #FFFFFF;
+    line-height: 1.1;
+    letter-spacing: -0.5px;
+    margin-bottom: 24px;
+  }
+
+  .closing h2 em {
+    font-style: italic;
+    color: var(--rose);
+  }
+
+  .closing p {
+    font-family: var(--font-body);
+    font-size: 19px;
+    line-height: 1.8;
+    color: var(--mid-gray);
+    margin-bottom: 0;
+  }
+
+  .closing p strong {
+    color: var(--sand-light);
+    font-weight: 600;
+  }
+
+  .closing-signature {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 24px;
+    font-style: italic;
+    color: var(--teal-light);
+    margin-top: 36px;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--black);
+    padding: 28px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .footer-copy {
+    font-family: var(--font-accent);
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--mid-gray);
+  }
+
+  .footer-authors {
+    font-family: var(--font-body);
+    font-size: 12px;
+    color: var(--sand);
+    font-style: italic;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 680px) {
+    .blog-header { padding: 18px 20px; }
+    .hero { padding: 64px 20px 56px; }
+    .article { padding: 0 20px; }
+    .hero-toc { padding: 24px; }
+    .hero-toc-desc { display: none; }
+    .anatomy-num { font-size: 36px; min-width: 36px; }
+    .prompt-box { padding: 24px; }
+    .prompt-box-text { font-size: 12px; }
+    .checklist-section { padding: 24px; }
+    .funnel-step { grid-template-columns: 120px 1fr; }
+    .closing { padding: 64px 20px; }
+    .footer { flex-direction: column; }
+    .unterschied-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="blog-header">
+  <div class="blog-header-brand">FEMINESS</div>
+  <div class="blog-header-tag">AI Website Code</div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-kicker">Evergreen-Systeme</div>
+  <h1>Seiten, die <em>dauerhaft</em> verkaufen.</h1>
+  <p class="hero-sub">Der strategische Aufbau von Anmeldeseiten, Dankesseiten und Video-Seiten für Evergreen Video-Trainings und Evergreen-Workshops – mit verkaufspsychologischem Fundament für dauerhaften Umsatz.</p>
+
+  <div class="hero-toc">
+    <div class="hero-toc-label">Inhalt dieses Guides</div>
+    <div class="hero-toc-items">
+      <div class="hero-toc-item">
+        <span class="hero-toc-num">Teil 01</span>
+        <span class="hero-toc-title">Evergreen Video-Training</span>
+        <span class="hero-toc-desc">Anmeldeseite, Dankesseite & Video-Seite – alle drei Stufen</span>
+      </div>
+      <div class="hero-toc-item">
+        <span class="hero-toc-num">Teil 02</span>
+        <span class="hero-toc-title">Evergreen-Workshop</span>
+        <span class="hero-toc-desc">Salespage & Dankesseite für Workshops ohne festes Datum</span>
+      </div>
+      <div class="hero-toc-item">
+        <span class="hero-toc-num">Teil 03</span>
+        <span class="hero-toc-title">Checklisten</span>
+        <span class="hero-toc-desc">Vor dem Go-live: alles abgehakt</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-meta">
+    <div class="hero-meta-item">
+      <span>Ziel</span>
+      <strong>Dauerhafter, automatisierter Umsatz</strong>
+    </div>
+    <div class="hero-meta-item">
+      <span>Methode</span>
+      <strong>Verkaufspsychologie + Evergreen-Strategie</strong>
+    </div>
+    <div class="hero-meta-item">
+      <span>Format</span>
+      <strong>Anmeldeseite + Dankesseite + Video-Seite</strong>
+    </div>
+  </div>
+</section>
+
+<!-- INTRO STATEMENT -->
+<div class="intro-block">
+  <p>Ein Live-Webinar funktioniert einmal. Ein Evergreen-System funktioniert jeden Tag. Aber nur, wenn die Seiten dahinter genauso strategisch gebaut sind wie der Inhalt selbst. Der Unterschied: Bei Evergreen fehlt die Dringlichkeit des Moments – sie muss durch Struktur und Psychologie ersetzt werden.</p>
+  <p>Ein vollständiges Evergreen Video-Training-System besteht aus drei Seiten: Anmeldeseite, Dankesseite und Video-Seite. Jede hat eine eigene Funktion. Zusammen bilden sie einen Funnel, der ohne dein Zutun qualifiziert, überzeugt und zum nächsten Schritt führt.</p>
+</div>
+
+<!-- ARTICLE -->
+<main class="article">
+
+  <!-- SECTION: FUNDAMENT -->
+  <div class="section-block">
+    <div class="section-kicker">Das Fundament</div>
+    <h2 class="part-headline">Was Evergreen <em>anders</em> macht.</h2>
+
+    <p class="body-text">Live-Events haben einen natürlichen Spannungsbogen: Ein Termin, der kommt und vergeht. Evergreen-Formate haben diesen Spannungsbogen nicht. Die Besucherin weiß, dass sie das Video-Training jederzeit anschauen könnte – und genau das ist das Problem. "Jederzeit" bedeutet oft: nie.</p>
+
+    <p class="body-text">Evergreen-Seiten müssen deshalb psychologische Dringlichkeit aktiv erzeugen, wo das Format sie nicht automatisch mitbringt. Gleichzeitig bieten sie etwas, das Live-Events nicht können: Sie sind skalierbar, schlafend produktiv und immer bereit – wenn deine Seiten stimmen.</p>
+
+    <div class="unterschied-box">
+      <div class="unterschied-box-label">Live vs. Evergreen – Der strategische Unterschied</div>
+      <div class="unterschied-grid">
+        <div class="unterschied-col">
+          <div class="unterschied-col-label live">Live-Format</div>
+          <ul>
+            <li>Dringlichkeit entsteht durch den Termin</li>
+            <li>FOMO ist real und natürlich</li>
+            <li>Anmeldungen konzentrieren sich auf wenige Tage</li>
+            <li>Hohe Erscheinungsrate durch Commitment</li>
+            <li>Aufwand wiederholt sich bei jeder Runde</li>
+          </ul>
+        </div>
+        <div class="unterschied-col">
+          <div class="unterschied-col-label evergreen">Evergreen-Format</div>
+          <ul>
+            <li>Dringlichkeit muss aktiv erzeugt werden</li>
+            <li>Flexibilität ist Vorteil und Risiko zugleich</li>
+            <li>Kontinuierlicher Eingang – täglich, automatisch</li>
+            <li>Sofortige Handlung muss durch Struktur gefördert werden</li>
+            <li>System arbeitet dauerhaft ohne Wiederholung</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="content-h3">Die 4 Evergreen-Prinzipien</h3>
+
+    <div class="prinzip-list">
+      <div class="prinzip-item">
+        <div class="prinzip-num">1</div>
+        <div class="prinzip-content">
+          <div class="prinzip-title">Sofortige Relevanz statt Datum.</div>
+          <div class="prinzip-text">Ohne Live-Termin muss die Headline sofort klar machen, warum die Besucherin jetzt handeln soll – nicht irgendwann. Das "Warum heute?" muss in der Botschaft liegen: im Schmerz, der gerade akut ist, oder im Ergebnis, das sie sich schon zu lange wünscht.</div>
+        </div>
+      </div>
+      <div class="prinzip-item">
+        <div class="prinzip-num">2</div>
+        <div class="prinzip-content">
+          <div class="prinzip-title">Struktur ersetzt Dringlichkeit.</div>
+          <div class="prinzip-text">Was beim Live-Event der Countdown-Timer ist, übernimmt im Evergreen die klare Schrittfolge: "Trag dich ein – du bekommst den Link – schau das Training – buche dein Gespräch." Je klarer der Weg, desto weniger Gelegenheit zum Zögern.</div>
+        </div>
+      </div>
+      <div class="prinzip-item">
+        <div class="prinzip-num">3</div>
+        <div class="prinzip-content">
+          <div class="prinzip-title">Die Dankesseite ist der wichtigste Schritt.</div>
+          <div class="prinzip-text">Im Evergreen-Funnel ist die Dankesseite nicht das Ende – sie ist die Brücke. Sie bestätigt, erklärt die nächsten Schritte und leitet direkt zum Gespräch (Calendly). Wer die Dankesseite schwach lässt, verliert die Hälfte des Funnels.</div>
+        </div>
+      </div>
+      <div class="prinzip-item">
+        <div class="prinzip-num">4</div>
+        <div class="prinzip-content">
+          <div class="prinzip-title">Dauerhaftigkeit verlangt Zeitlosigkeit.</div>
+          <div class="prinzip-text">Kein Datum, keine Saison, keine aktuellen Ereignisse. Jede Aussage auf der Seite muss in 6 Monaten genauso wahr sein wie heute. Zeitlosigkeit in den Texten sichert die Wirkung des Systems – ohne Pflege, ohne Aktualisierung.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TEIL 01: EVERGREEN VIDEO-TRAINING -->
+  <div class="section-block" id="video-training">
+    <div class="section-kicker">Teil 01</div>
+    <div class="evergreen-badge">Evergreen-Format</div>
+    <h2 class="part-headline">Evergreen <em>Video-Training</em></h2>
+    <p class="part-sub">Aufgezeichnet einmal. Wirkend dauerhaft. Der Funnel, der auch um 3 Uhr nachts neue Leads qualifiziert.</p>
+
+    <p class="body-text">Ein Evergreen Video-Training funktioniert wie ein Webinar – mit einem entscheidenden Unterschied: Die Aufzeichnung existiert bereits, und der Zugang erfolgt per E-Mail. Das gibt dir Kontrolle über den Moment, in dem die Teilnehmerin das Training schaut – und damit auch über den Moment, in dem das Gespräch angeboten wird.</p>
+
+    <p class="body-text">Auf der Anmeldeseite wird das Training angekündigt. Auf der Dankesseite wird bestätigt, dass der Link per E-Mail kommt – und gleichzeitig die Einladung ausgesprochen, bereits ein Vorbereitungsgespräch zu buchen. So entsteht kein Warten, sondern sofortige Handlung.</p>
+
+    <h3 class="content-h3">Anatomie der Anmeldeseite – Evergreen Video-Training</h3>
+
+    <div class="anatomy-list">
+      <div class="anatomy-item">
+        <div class="anatomy-num">1</div>
+        <div class="anatomy-content">
+          <div class="anatomy-title">Headline: Die Transformation, die das Training liefert</div>
+          <div class="anatomy-text">Keine Nennung von "aufgezeichnet" oder "Video" in der Headline. Stattdessen: das Ergebnis. "Wie du in 60 Minuten verstehst, warum dein Business stagniert – und was du jetzt konkret veränderst." Das Training ist das Vehikel. Die Transformation ist das Versprechen. Verkaufe die Transformation.</div>
+        </div>
+      </div>
+      <div class="anatomy-item">
+        <div class="anatomy-num">2</div>
+        <div class="anatomy-content">
+          <div class="anatomy-title">Subheadline: Für wen – und warum jetzt</div>
+          <div class="anatomy-text">Benenne die Zielgruppe präzise und erzeuge Relevanz ohne Datum. "Für selbstständige Frauen, die seit Monaten hart arbeiten – und sich fragen, warum der Durchbruch ausbleibt." Das "Warum jetzt" liegt im Schmerz, nicht im Kalender. Je präziser das Abbild ihrer aktuellen Situation, desto stärker die Zugkraft.</div>
+        </div>
+      </div>
+      <div class="anatomy-item">
+        <div class="anatomy-num">3</div>
+        <div class="anatomy-content">
+          <div class="anatomy-title">Was du im Video-Training lernst: 5 konkrete Punkte</div>
+          <div class="anatomy-text">Fünf spezifische Learnings, klar und ergebnisorientiert. Nicht "du lernst Marketing", sondern "du erkennst, welches deiner Angebote das stärkste Wachstumspotenzial hat – und warum du es bisher nicht gesehen hast." Spezifität erzeugt Vorfreude. Vorfreude erzeugt Anmeldungen.</div>
+        </div>
+      </div>
+      <div class="anatomy-item">
+        <div class="anatomy-num">4</div>
+        <div class="anatomy-content">
+          <div class="anatomy-title">Format-Transparenz: Was sie erwartet</div>
+          <div class="anatomy-text">Benenne Länge, Format und Zugangsmodus klar: "Ein kompaktes Video-Training von [X Minuten], das du dir flexibel dann anschaust, wenn du ungestörte Zeit hast. Den Zugangslink erhältst du direkt nach der Anmeldung per E-Mail." Transparenz schafft Vertrauen – und reduziert Absprünge nach der Anmeldung.</div>
+        </div>
+      </div>
+      <div class="anatomy-item">
+        <div class="anatomy-num">5</div>
+        <div class="anatomy-content">
+          <div class="anatomy-title">Kurzvorstellung: Deine Autorität, nicht dein Lebenslauf</div>
+          <div class="anatomy-text">Nicht Titel und Stationen – sondern Relevanz und Ergebnis. "Ich bin Marina Henze, und ich habe in den letzten [X Jahren] mit über [Zahl] Frauen gearbeitet, die..." – was hat sie erreicht, die mit dir gearbeitet haben? Das ist die Autorität, die zählt. Kombiniert mit einem authentischen Foto.</div>
+        </div>
+      </div>
+      <div class="anatomy-item">
+        <div class="anatomy-num">6</div>
+        <div class="anatomy-content">
+          <div class="anatomy-title">Das Anmeldeformular: Minimal und handlungsstark</div>
+          <div class="anatomy-text">Vorname + E-Mail-Adresse – nicht mehr. Der Button-Text ist aktiv und wertorientiert: "Jetzt Zugang zum Video-Training sichern" oder "Ich will das Video-Training". Kein "Anmelden". Kein "Absenden". Und direkt darunter: der DSGVO-Vertrauenssatz. "Kein Spam. Nur relevante Inhalte. Abmeldung jederzeit."</div>
+        </div>
+      </div>
+      <div class="anatomy-item">
+        <div class="anatomy-num">7</div>
+        <div class="anatomy-content">
+          <div class="anatomy-title">Social Proof: Ein starkes Testimonial an der richtigen Stelle</div>
+          <div class="anatomy-text">Ein konkretes Ergebnis-Testimonial direkt unter dem Formular oder oberhalb der Kurzvorstellung. Keine allgemeinen Lobpreisungen, sondern spezifische Ausgangssituation + Ergebnis + Name. "Ich hatte nach dem Training meinen ersten Monat mit 5-stelligem Umsatz. Es hat etwas in mir verschoben, das ich mir nicht erklärt hätte. – [Name], [Beruf]"</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="psycho-box">
+      <div class="psycho-box-label">Verkaufspsychologie</div>
+      <div class="psycho-box-text"><strong>Das Prinzip der antizipierten Reue:</strong> Evergreen-Seiten können keine FOMO durch Knappheit erzwingen. Aber sie können antizipierte Reue ansprechen – das ungute Gefühl, das entsteht, wenn man sich vorstellt, weiter im selben Zustand zu verweilen. "Wie lange willst du noch warten?" ist keine Frage – es ist eine Spiegel-Frage. Kombiniert mit einem klaren, ergebnis-orientierten Versprechen entsteht Handlungsimpuls ohne künstlichen Druck.</div>
+    </div>
+
+    <h3 class="content-h3">Anatomie der Dankesseite – Evergreen Video-Training</h3>
+
+    <p class="body-text">Die Dankesseite eines Evergreen Video-Trainings hat zwei klare Aufgaben: Erstens bestätigt sie die Anmeldung und macht klar, dass der Link zum Video-Training per E-Mail kommt. Zweitens nutzt sie diesen Moment maximaler Offenheit, um sofort die Einladung zum Vorbereitungsgespräch zu platzieren – über eine eingebettete Calendly-Buchungsmaske.</p>
+
+    <div class="funnel-flow">
+      <div class="funnel-step">
+        <div class="funnel-step-label">Bestätigung</div>
+        <div class="funnel-step-content">
+          <div class="funnel-step-title">Emotionale Bestätigung – du hast gut entschieden</div>
+          <div class="funnel-step-desc">"Gut gemacht. Diese Entscheidung ist der erste Schritt zu dem, was sich bei dir schon lange anmeldet." – Aktiviere Stolz und Vorfreude, keine bloße Bürokratie.</div>
+        </div>
+      </div>
+      <div class="funnel-step">
+        <div class="funnel-step-label">Link-Info</div>
+        <div class="funnel-step-content">
+          <div class="funnel-step-title">Der Zugangslink kommt per E-Mail</div>
+          <div class="funnel-step-desc">"Den Link zu deinem Video-Training haben wir dir soeben an deine E-Mail-Adresse geschickt. Bitte prüfe auch deinen Spam-Ordner – manchmal landet die erste E-Mail dort." – Klar, technisch präzise, vertrauensbildend.</div>
+        </div>
+      </div>
+      <div class="funnel-step">
+        <div class="funnel-step-label">Bridge</div>
+        <div class="funnel-step-content">
+          <div class="funnel-step-title">Während du wartest: Das Vorbereitungsgespräch</div>
+          <div class="funnel-step-desc">"Viele Frauen, die dieses Video-Training schauen, buchen im Anschluss ein kurzes Gespräch mit mir – um das Gehörte direkt auf ihre Situation anzuwenden. Du musst nicht warten. Du kannst jetzt direkt einen Termin reservieren." – Keine Hürde, keine Versprechen, nur die Einladung.</div>
+        </div>
+      </div>
+      <div class="funnel-step">
+        <div class="funnel-step-label">Calendly</div>
+        <div class="funnel-step-content">
+          <div class="funnel-step-title">Eingebettete Calendly-Buchungsmaske</div>
+          <div class="funnel-step-desc">Hier wird der Calendly-Ereignistyp für das Vorbereitungsgespräch direkt eingebettet. Kein externer Link, kein Absprung. Die Buchung geschieht auf dieser Seite – im Moment der höchsten Bereitschaft. Calendly-Embed-Code: &lt;div class="calendly-inline-widget" data-url="https://calendly.com/DEIN-LINK" style="min-width:320px;height:700px;"&gt;&lt;/div&gt; + Calendly-Skript.</div>
+        </div>
+      </div>
+      <div class="funnel-step">
+        <div class="funnel-step-label">Verbindung</div>
+        <div class="funnel-step-content">
+          <div class="funnel-step-title">Einladung in deine Community / Social Media</div>
+          <div class="funnel-step-desc">"Noch nicht sicher, ob das Gespräch etwas für dich ist? Folge mir auf Instagram für tägliche Impulse – und lern mich erst besser kennen." – Alternativer nächster Schritt für alle, die noch nicht bereit für das Gespräch sind.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="psycho-box">
+      <div class="psycho-box-label">Verkaufspsychologie</div>
+      <div class="psycho-box-text"><strong>Das Prinzip der optimalen Handlungsbereitschaft:</strong> Direkt nach dem ersten "Ja" befindet sich die Besucherin in einem Zustand maximaler Offenheit. Die Entscheidung ist frisch, die Energie ist da, der innere Widerstand ist auf einem Tiefpunkt. <strong>Diesen Moment für die Calendly-Einbettung zu nutzen ist kein Verkaufsdruck – es ist Führung.</strong> Wer jetzt einen Termin bucht, hat sich nicht überreden lassen. Sie hat eine Entscheidung getroffen, während sie noch in Bewegung war. Das ist der Unterschied zwischen einem Funnel, der funktioniert, und einem, der nur informiert.</div>
+    </div>
+
+    <h3 class="content-h3">Anatomie der Video-Seite – Evergreen Video-Training</h3>
+
+    <p class="body-text">Die Video-Seite ist die dritte und verkaufsintensivste Seite im Funnel. Hierhin führt der Link aus der E-Mail. Das Video-Training ist eingebettet – und direkt darunter steht der CTA, der die Besucherin in die nächste Stufe führt: entweder ins Verkaufsgespräch oder direkt zum Angebot. Diese Seite arbeitet stellvertretend für dich, während das Video läuft.</p>
+
+    <p class="body-text">Der Aufbau richtet sich danach, was das Video-Training pitcht. Endet es mit einer Einladung zum Gespräch, führt der CTA zu Calendly. Endet es mit einem direkten Angebotslink, führt der Button zur Salespage oder direkt zum Checkout. Beides ist möglich – entscheidend ist, dass Pitch im Video und CTA auf der Seite exakt übereinstimmen.</p>
+
+    <div class="funnel-flow">
+      <div class="funnel-step">
+        <div class="funnel-step-label">Einstieg</div>
+        <div class="funnel-step-content">
+          <div class="funnel-step-title">Kurze Willkommens-Headline über dem Video</div>
+          <div class="funnel-step-desc">"Dein Video-Training wartet auf dich." oder "[NAME DES TRAININGS] – jetzt anschauen." – Kein langer Text. Die Besucherin soll sofort ins Video gehen, nicht lesen. Die Headline bestätigt nur: Sie ist am richtigen Ort.</div>
+        </div>
+      </div>
+      <div class="funnel-step">
+        <div class="funnel-step-label">Video</div>
+        <div class="funnel-step-content">
+          <div class="funnel-step-title">Eingebettetes Video-Training</div>
+          <div class="funnel-step-desc">Das Video ist prominent zentriert eingebettet – Vimeo, YouTube oder ein eigener Player. Kein Autoplay. Kein Ablenkungsmenü drumherum. Die Seite hat außer dem Video und dem CTA darunter nichts. Kein Navigation. Kein Footer-Link. Nur das Training und den nächsten Schritt.</div>
+        </div>
+      </div>
+      <div class="funnel-step">
+        <div class="funnel-step-label">CTA</div>
+        <div class="funnel-step-content">
+          <div class="funnel-step-title">Der Handlungs-CTA direkt unter dem Video</div>
+          <div class="funnel-step-desc">Ein einziger, klarer Button – je nach Pitch im Video: "Jetzt Gespräch buchen" (führt zu Calendly oder eingebetteter Buchungsmaske) oder "Ich will dabei sein – jetzt anmelden" (führt zur Salespage oder direkt zum Checkout). Der CTA-Text greift die Sprache des Videos auf. Was im Video versprochen wurde, löst der Button ein.</div>
+        </div>
+      </div>
+      <div class="funnel-step">
+        <div class="funnel-step-label">Vertrauen</div>
+        <div class="funnel-step-content">
+          <div class="funnel-step-title">Optional: Ein starkes Testimonial unter dem CTA</div>
+          <div class="funnel-step-desc">Ein konkretes Ergebnis-Testimonial direkt unterhalb des Buttons – für alle, die noch einen letzten Beweis brauchen, bevor sie klicken. Nicht mehr als eines. Zu viel Inhalt nach dem CTA lenkt ab statt zu überzeugen.</div>
+        </div>
+      </div>
+      <div class="funnel-step">
+        <div class="funnel-step-label">E-Mail-Link</div>
+        <div class="funnel-step-content">
+          <div class="funnel-step-title">Dieser Link steht auch in der E-Mail</div>
+          <div class="funnel-step-desc">Der Link zu dieser Video-Seite wird in der Zustellungs-E-Mail versendet – nicht ein direkter Video-Link. So bleibt das Video auf einer kontrollierten, CTA-optimierten Seite eingebettet. Die Besucherin landet immer auf der vollständigen Seite mit Button, nie auf dem nackten Video.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="psycho-box">
+      <div class="psycho-box-label">Verkaufspsychologie</div>
+      <div class="psycho-box-text"><strong>Das Prinzip der emotionalen Kontinuität:</strong> Wenn jemand ein 60-minütiges Video schaut und dabei emotional berührt wird, ist die Kaufbereitschaft direkt danach auf dem Höhepunkt. Der CTA unter dem Video muss deshalb nahtlos an die Energie des Videos anschließen – in Sprache, Versprechen und Ton. <strong>Jede Sekunde zwischen Videoende und Klick ist eine Sekunde, in der der innere Critic erwacht.</strong> Ein klarer, sofort sichtbarer Button nach dem Video lässt keine Lücke. Der Link in der E-Mail sichert außerdem, dass die Besucherin immer auf der optimierten Seite landet – auch wenn sie Tage später zurückkommt.</div>
+    </div>
+
+    <h3 class="content-h3">Die 5 häufigsten Fehler bei Evergreen Video-Training-Seiten</h3>
+
+    <div class="fehler-list">
+      <div class="fehler-item">
+        <div class="fehler-num">01</div>
+        <div class="fehler-content">
+          <div class="fehler-title">Das Training klingt wie ein Freebie.</div>
+          <div class="fehler-text">Wer sein Video-Training nicht klar vom kostenlosen Lead-Magnet unterscheidet, positioniert es als wertlos. Ein Video-Training ist ein vollständiges Lehrstück – es verdient eine eigene Positionierung mit Tiefe, konkreten Learnings und emotionaler Relevanz. Behandle es wie ein bezahltes Angebot, das du verschenkst – nicht wie einen E-Mail-Anhang.</div>
+        </div>
+      </div>
+      <div class="fehler-item">
+        <div class="fehler-num">02</div>
+        <div class="fehler-content">
+          <div class="fehler-title">Das Video wird direkt verlinkt – nicht über die Video-Seite.</div>
+          <div class="fehler-text">Wer in der E-Mail direkt auf das Vimeo- oder YouTube-Video verlinkt, verliert die gesamte Conversion-Infrastruktur: kein CTA, kein Button, kein Testimonial. Die Besucherin schaut das Video auf einer fremden Plattform – und klickt danach auf "Ähnliche Videos". Der Link in der E-Mail zeigt immer auf die Video-Seite, nie auf das rohe Video.</div>
+        </div>
+      </div>
+      <div class="fehler-item">
+        <div class="fehler-num">03</div>
+        <div class="fehler-content">
+          <div class="fehler-title">Pitch im Video und CTA auf der Seite stimmen nicht überein.</div>
+          <div class="fehler-text">Das Video endet mit "Buche ein Gespräch mit mir" – der Button darunter führt zur Salespage. Das bricht die Handlungslogik. Was das Video verspricht, löst die Seite ein. Einmal entscheiden, was der nächste Schritt ist – und beide Elemente auf diesen Schritt ausrichten.</div>
+        </div>
+      </div>
+      <div class="fehler-item">
+        <div class="fehler-num">04</div>
+        <div class="fehler-content">
+          <div class="fehler-title">Kein Gesprächsangebot auf der Dankesseite.</div>
+          <div class="fehler-text">Die Dankesseite als reine Lieferbestätigung zu nutzen ist die teuerste verschenkte Chance im Evergreen-Funnel. Wer hier kein Gespräch anbietet, wartet darauf, dass die Besucherin von selbst zurückkommt – was selten passiert. Calendly direkt auf der Dankesseite eingebettet ist kein Upsell. Es ist der logische nächste Schritt für alle, die noch im Momentum sind.</div>
+        </div>
+      </div>
+      <div class="fehler-item">
+        <div class="fehler-num">05</div>
+        <div class="fehler-content">
+          <div class="fehler-title">Die Video-Seite hat zu viel Inhalt.</div>
+          <div class="fehler-text">Langer Einleitungstext, mehrere CTA-Buttons, Menü, Social-Media-Links – all das lenkt ab statt zu führen. Die Video-Seite hat genau zwei Elemente: das eingebettete Video und den CTA darunter. Alles andere schwächt die Conversion. Weniger ist hier konsequent mehr.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="prompt-box">
+      <div class="prompt-box-label">Der Strategie-Prompt für dein Evergreen Video-Training</div>
+      <div class="prompt-box-title">Gib Claude diesen Prompt für alle drei Seiten:</div>
+      <div class="prompt-box-text">Ich möchte drei Seiten für mein Evergreen Video-Training erstellen.
+
+Titel des Video-Trainings: <strong>[TITEL DES VIDEO-TRAININGS]</strong>
+Länge: <strong>[z. B. 60 Minuten]</strong>
+Zielgruppe: <strong>[z. B. selbstständige Coaches und Therapeutinnen]</strong>
+Das größte Problem der Zielgruppe: <strong>[z. B. trotz voller Auftragslage kein finanzielles Wachstum]</strong>
+Was sie im Video-Training konkret lernen: <strong>[3–5 spezifische Punkte]</strong>
+Was das Video pitcht am Ende: <strong>[Gespräch buchen / direkt zum Angebot]</strong>
+Angebot nach dem Video-Training: <strong>[z. B. Erstgespräch / Programm XY / Salespage-Link]</strong>
+Stärkstes Testimonial: <strong>[Zitat + Name + Kontext]</strong>
+Calendly-Link für das Vorbereitungsgespräch: <strong>[DEIN CALENDLY-LINK]</strong>
+Video-Embed-Link: <strong>[VIMEO / YOUTUBE EMBED-URL]</strong>
+
+Erstelle mir:
+1. Eine Anmeldeseite mit: Headline (3 Varianten), Subheadline, 5 Learnings, Kurzvorstellung, Social Proof, CTA
+2. Eine Dankesseite mit: emotionaler Bestätigung, Hinweis auf E-Mail-Zugang, Bridge zum Vorbereitungsgespräch, eingebettetem Calendly-Widget und Einladung zur Community
+3. Eine Video-Seite mit: kurzer Willkommens-Headline, eingebettetem Video, einem einzigen CTA-Button (passend zum Pitch im Video), optionalem Testimonial darunter
+
+Beachte: Kein Video direkt auf der Dankesseite. Link in der E-Mail führt zur Video-Seite, nicht direkt zum Video. Pitch im Video und CTA-Button müssen übereinstimmen. Die Video-Seite hat außer Video und CTA kein weiteres Inhaltselement. Zeitlose Formulierungen ohne Datumsbezug.</div>
+    </div>
+  </div>
+
+  <!-- TEIL 02: EVERGREEN-WORKSHOP -->
+  <div class="section-block" id="evergreen-workshop">
+    <div class="section-kicker">Teil 02</div>
+    <div class="evergreen-badge">Evergreen-Format</div>
+    <h2 class="part-headline">Evergreen-<em>Workshop</em></h2>
+    <p class="part-sub">Das intensivste Format – ohne festes Datum. Hier verkauft die Seite das Commitment, das ein Live-Event automatisch erzeugt.</p>
+
+    <p class="body-text">Ein Evergreen-Workshop ist das anspruchsvollste Format. Die Besucherin soll ein echtes Investment tätigen – Geld, Zeit, emotionale Energie – für etwas, das kein festes Startdatum hat. Das erzeugt eine doppelte Hürde: das generelle Preis-Commitment eines hochpreisigen Angebots plus die fehlende externe Dringlichkeit eines Live-Termins.</p>
+
+    <p class="body-text">Die Salespage muss deshalb noch konsequenter arbeiten als beim Live-Workshop. Und die Dankesseite übernimmt eine zusätzliche strategische Aufgabe: Sie ersetzt durch das Vorbereitungsgespräch den sozialen Rahmen, den ein Live-Event automatisch bietet.</p>
+
+    <h3 class="content-h3">Anatomie der Salespage – Evergreen-Workshop</h3>
+
+    <div class="anatomy-list">
+      <div class="anatomy-item">
+        <div class="anatomy-num">1</div>
+        <div class="anatomy-content">
+          <div class="anatomy-title">Headline: Die Reise – ohne Zeitbindung</div>
+          <div class="anatomy-text">Die Headline eines Evergreen-Workshops benennt die Transformation, aber ohne Datumsbezug. "Von [Ausgangszustand] zu [Zielzustand] – in [Anzahl] intensiven Tagen." Statt "am 15. März" schreibst du "in deinem eigenen Tempo, mit vollem Begleitung". Die Transformation ist zeitlos. Das Format ist flexibel. Beides muss in der Headline spürbar werden.</div>
+        </div>
+      </div>
+      <div class="anatomy-item">
+        <div class="anatomy-num">2</div>
+        <div class="anatomy-content">
+          <div class="anatomy-title">Die Situation: Der Schmerz, der nicht wartet</div>
+          <div class="anatomy-text">Weil kein Termin Dringlichkeit erzeugt, muss die Beschreibung des Ausgangszustands so präzise sein, dass die Leserin das Gefühl hat: Das ist genau meine Situation – und ich bin es leid, noch länger so zu leben. Je konkreter du ihren aktuellen Schmerz formulierst, desto weniger braucht die Seite ein Datum als Hebel.</div>
+        </div>
+      </div>
+      <div class="anatomy-item">
+        <div class="anatomy-num">3</div>
+        <div class="anatomy-content">
+          <div class="anatomy-title">Was dieser Workshop verändert – in Ergebnissen</div>
+          <div class="anatomy-text">Nicht was ihr macht, sondern was sich danach verschoben hat. "Nach diesem Workshop weißt du nicht nur, wie du dein Angebot positionierst – du weißt, wer du als Unternehmerin bist. Und du handelst von dort." Ergebnis-orientierte Sprache ist bei Evergreen besonders wichtig, weil der Kaufimpuls allein aus dem inneren Bild der Zukunft entstehen muss.</div>
+        </div>
+      </div>
+      <div class="anatomy-item">
+        <div class="anatomy-num">4</div>
+        <div class="anatomy-content">
+          <div class="anatomy-title">Programm: Tag für Tag – zeitlos formuliert</div>
+          <div class="anatomy-text">Die Tagesstruktur bleibt bestehen, aber in zeitloser Formulierung: "Tag 1: Klarheit über deine Identität als Unternehmerin – du definierst, wer du bist, wenn niemand zuschaut." Kein "am ersten Tag des Live-Events". Jeder Tag ist eine eigenständige Werteinheit – formuliert so, dass sie in 12 Monaten genauso stimmt wie heute.</div>
+        </div>
+      </div>
+      <div class="anatomy-item">
+        <div class="anatomy-num">5</div>
+        <div class="anatomy-content">
+          <div class="anatomy-title">Social Proof: Ergebnisse, die überzeugen</div>
+          <div class="anatomy-text">Mindestens 2–3 spezifische Testimonials mit Ausgangssituation, Erfahrung und konkretem Ergebnis. Besonders bei Evergreen-Formaten gilt: Je spezifischer das Testimonial, desto weniger braucht die Seite Dringlichkeits-Elemente. "Nach dem Workshop hatte ich meinen ersten 10.000-Euro-Monat – und das ohne Social-Media-Marathon." wirkt stärker als jeder Countdown-Timer.</div>
+        </div>
+      </div>
+      <div class="anatomy-item">
+        <div class="anatomy-num">6</div>
+        <div class="anatomy-content">
+          <div class="anatomy-title">Über dich: Autorität und Geschichte</div>
+          <div class="anatomy-text">Warum hast du dieses Programm entwickelt? Was hast du selbst durchgemacht, und was macht deine Methode einzigartig? Bei Evergreen-Workshops fällt der Gemeinschaftseffekt des Live-Events weg – die Verbindung zur Facilitatorin muss stärker durch die Seite aufgebaut werden. Authentizität schlägt jeden Titel.</div>
+        </div>
+      </div>
+      <div class="anatomy-item">
+        <div class="anatomy-num">7</div>
+        <div class="anatomy-content">
+          <div class="anatomy-title">Für wen – und für wen nicht</div>
+          <div class="anatomy-text">Besonders bei Evergreen-Formaten qualifiziert diese Sektion entscheidend. "Dieser Workshop ist für dich, wenn du bereit bist, tiefgreifend an deiner Business-Identität zu arbeiten – nicht nur an deinen Strategien." Und: "Nicht für dich, wenn du nach einem schnellen Trick suchst." Ehrliche Qualifikation senkt Stornierungsquoten und erhöht die Qualität der Teilnehmerinnen.</div>
+        </div>
+      </div>
+      <div class="anatomy-item">
+        <div class="anatomy-num">8</div>
+        <div class="anatomy-content">
+          <div class="anatomy-title">Preis, Zahlungsoptionen & Evergreen-Scarcity</div>
+          <div class="anatomy-text">Preis immer nach vollständigem Wert-Stack. Ratenzahlung prominent und gleichwertig anbieten. Evergreen-Scarcity ersetzen durch echte Limitierung: begrenzte Platzzahl pro Zyklus, persönliche Betreuungskapazität oder Frühbucher-Bonus ohne künstliches Ablaufdatum. Jede Limitierung muss absolut ehrlich und nachvollziehbar sein – sonst schadet sie der Glaubwürdigkeit.</div>
+        </div>
+      </div>
+      <div class="anatomy-item">
+        <div class="anatomy-num">9</div>
+        <div class="anatomy-content">
+          <div class="anatomy-title">FAQ: Die spezifischen Evergreen-Einwände</div>
+          <div class="anatomy-text">"Wann beginnt der Workshop?" "Kann ich wählen, wann ich starte?" "Wie lange habe ich Zugang?" "Gibt es eine Gemeinschaft?" "Kann ich persönlich Fragen stellen?" Diese Fragen entstehen bei Evergreen-Formaten anders als bei Live-Events. Beantworte sie explizit, ehrlich und detailliert. Unklarheit über das Format ist einer der häufigsten Conversion-Killer.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="psycho-box">
+      <div class="psycho-box-label">Verkaufspsychologie</div>
+      <div class="psycho-box-text"><strong>Das Prinzip der inneren Dringlichkeit:</strong> Externe Dringlichkeit (Countdown, Datum) ist die einfachste Form. Interne Dringlichkeit ist die stärkste. Sie entsteht, wenn die Leserin versteht: Je länger sie wartet, desto länger lebt sie mit dem Schmerz, den du beschreibst. <strong>Formulierungen wie "Wie viele weitere Monate möchtest du in diesem Muster verbringen?" sind keine Manipulation – sie sind eine Einladung zur Ehrlichkeit.</strong> Und für Frauen, die bereit sind, ist das der Auslöser, der kein Datum braucht.</div>
+    </div>
+
+    <h3 class="content-h3">Anatomie der Dankesseite – Evergreen-Workshop</h3>
+
+    <p class="body-text">Nach dem Kauf eines hochpreisigen Evergreen-Workshops ist Buyer's Remorse real – und ohne den sozialen Rahmen eines Live-Events sogar verstärkt. Die Dankesseite muss Entscheidung bestätigen, Struktur geben und sofort Zugehörigkeit schaffen. Das Vorbereitungsgespräch via Calendly übernimmt dabei die Rolle, die beim Live-Workshop der erste Community-Kontakt spielt.</p>
+
+    <div class="funnel-flow">
+      <div class="funnel-step">
+        <div class="funnel-step-label">Feier</div>
+        <div class="funnel-step-content">
+          <div class="funnel-step-title">Emotionale Bestätigung: "Du hast Ja gesagt – zu dir."</div>
+          <div class="funnel-step-desc">"Diese Entscheidung hat Mut gebraucht. Und sie wird sich auszahlen. Herzlich willkommen." – Stolz, nicht nur Dankbarkeit. Die Käuferin soll sich bestätigt fühlen, nicht beschenkt.</div>
+        </div>
+      </div>
+      <div class="funnel-step">
+        <div class="funnel-step-label">Klarheit</div>
+        <div class="funnel-step-content">
+          <div class="funnel-step-title">Was passiert jetzt genau?</div>
+          <div class="funnel-step-desc">"Du bekommst in den nächsten 10 Minuten deine Buchungsbestätigung. Alle Details zum Workshop-Zugang, zur Community und zum Start erhältst du dort." – Unklarheit erzeugt Zweifel. Klarheit erzeugt Sicherheit. Jede offene Frage in diesem Moment kostet Commitment.</div>
+        </div>
+      </div>
+      <div class="funnel-step">
+        <div class="funnel-step-label">Gespräch</div>
+        <div class="funnel-step-content">
+          <div class="funnel-step-title">Buche jetzt dein Vorbereitungsgespräch</div>
+          <div class="funnel-step-desc">"Damit du das Maximum aus diesem Workshop herausholst, biete ich dir ein persönliches Vorbereitungsgespräch an. Wir klären gemeinsam, wo du gerade stehst – und wie du den Workshop gezielt dafür nutzt." – Das Gespräch ist kein Verkauf. Es ist der erste Schritt in die begleitete Transformation.</div>
+        </div>
+      </div>
+      <div class="funnel-step">
+        <div class="funnel-step-label">Calendly</div>
+        <div class="funnel-step-content">
+          <div class="funnel-step-title">Eingebettete Calendly-Buchungsmaske</div>
+          <div class="funnel-step-desc">Calendly-Ereignistyp für das Vorbereitungsgespräch direkt auf der Seite eingebettet – kein externer Link, kein Medienwechsel. Die Buchung geschieht im Moment der höchsten Motivation. Calendly-Embed-Code direkt platzieren mit: &lt;div class="calendly-inline-widget" data-url="https://calendly.com/DEIN-LINK"&gt;&lt;/div&gt; + Skript-Tag.</div>
+        </div>
+      </div>
+      <div class="funnel-step">
+        <div class="funnel-step-label">Vorbereitung</div>
+        <div class="funnel-step-content">
+          <div class="funnel-step-title">Vorbereitungs-Aufgabe oder Pre-Work</div>
+          <div class="funnel-step-desc">"Damit wir im Gespräch sofort in die Tiefe gehen können: Beantworte diese 3 Fragen für dich schon einmal vorab..." – Wer sich vorbereitet, ist committed. Commitment verhindert Stornierungen und schlechte Erscheinungsraten.</div>
+        </div>
+      </div>
+      <div class="funnel-step">
+        <div class="funnel-step-label">Gemeinschaft</div>
+        <div class="funnel-step-content">
+          <div class="funnel-step-title">Einladung in die Teilnehmerinnen-Community</div>
+          <div class="funnel-step-desc">"Tritt jetzt unserer privaten Community bei und lerne die anderen Teilnehmerinnen kennen." – Zugehörigkeit senkt Buyer's Remorse sofort. Bei Evergreen-Formaten ohne gemeinsamen Starttermin ist Community der stärkste Anker.</div>
+        </div>
+      </div>
+      <div class="funnel-step">
+        <div class="funnel-step-label">Upsell</div>
+        <div class="funnel-step-content">
+          <div class="funnel-step-title">Optional: VIP-Upgrade oder Ergänzungsangebot</div>
+          <div class="funnel-step-desc">"Möchtest du noch mehr persönliche Begleitung? Upgrade auf VIP mit einem zusätzlichen 1:1-Call." – Dieser Schritt ist optional, aber platziert direkt nach dem Calendly-Widget für alle, die das Gespräch nicht gebucht haben.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="psycho-box">
+      <div class="psycho-box-label">Verkaufspsychologie</div>
+      <div class="psycho-box-text"><strong>Buyer's Remorse bei Evergreen aktiv verhindern:</strong> Bei Live-Workshops entsteht Gemeinschaft durch den gemeinsamen Starttermin. Beim Evergreen-Format muss sie aktiv erzeugt werden – durch das Vorbereitungsgespräch, durch die Community-Einladung, durch Pre-Work. <strong>Das Calendly-Widget auf der Dankesseite ist kein Upsell – es ist die Antwort auf die innere Frage "War das die richtige Entscheidung?"</strong> Wer einen Gesprächstermin bucht, hat die Entscheidung bestätigt. Das ist der wirksamste Schutz vor Stornierungen – und der stärkste Einstieg in die Transformation.</div>
+    </div>
+
+    <h3 class="content-h3">Die 5 häufigsten Fehler bei Evergreen-Workshop-Seiten</h3>
+
+    <div class="fehler-list">
+      <div class="fehler-item">
+        <div class="fehler-num">01</div>
+        <div class="fehler-content">
+          <div class="fehler-title">Der fehlende Termin wird nicht kompensiert.</div>
+          <div class="fehler-text">Wer seine Salespage einfach vom Live-Workshop übernimmt und nur das Datum entfernt, hat kein Evergreen-System – er hat eine Salespage ohne Dringlichkeit. Jedes Element, das vorher durch das Datum Spannung erzeugt hat, muss durch Schmerz-Präzision, Social Proof-Dichte und Gesprächs-Einladung ersetzt werden.</div>
+        </div>
+      </div>
+      <div class="fehler-item">
+        <div class="fehler-num">02</div>
+        <div class="fehler-content">
+          <div class="fehler-title">Das Format ist unklar.</div>
+          <div class="fehler-text">"Wann beginnt der Workshop?" ist die häufigste Frage nach dem Lesen einer Evergreen-Workshop-Salespage. Wenn diese Frage noch existiert, hat die Seite versagt. Das Format – wann startet es, wie läuft es ab, was passiert nach der Buchung – muss so klar erklärt sein, dass keine offene Frage bleibt.</div>
+        </div>
+      </div>
+      <div class="fehler-item">
+        <div class="fehler-num">03</div>
+        <div class="fehler-content">
+          <div class="fehler-title">Kein Vorbereitungsgespräch auf der Dankesseite.</div>
+          <div class="fehler-text">Die Dankesseite eines Evergreen-Workshops ohne Gesprächsangebot ist eine verpasste Chance – und ein Buyer's-Remorse-Risiko. Wer gerade viel Geld ausgegeben hat und nun allein auf einer Bestätigungsseite landet, beginnt zu zweifeln. Das Calendly-Widget ist nicht optional. Es ist das wichtigste Element der Dankesseite.</div>
+        </div>
+      </div>
+      <div class="fehler-item">
+        <div class="fehler-num">04</div>
+        <div class="fehler-content">
+          <div class="fehler-title">Zu wenig Social Proof.</div>
+          <div class="fehler-text">Je höher der Preis, desto mehr Beweis braucht es – und bei Evergreen-Formaten mehr als bei Live-Events. Wer kein Datum als vertrauensbildendes Signal nutzen kann, muss umso stärker auf spezifische, ergebnis-orientierte Testimonials setzen. Vage Aussagen ("Super Workshop!") helfen nicht. Spezifische Ergebnisse mit echten Namen und Fotos überzeugen.</div>
+        </div>
+      </div>
+      <div class="fehler-item">
+        <div class="fehler-num">05</div>
+        <div class="fehler-content">
+          <div class="fehler-title">Zeitgebundene Formulierungen auf der Salespage.</div>
+          <div class="fehler-text">"Aktuell", "in diesem Jahr", "bis Ende des Monats" – diese Formulierungen machen eine Evergreen-Seite kaputt. Sie veralten, machen die Seite unwürdig und zerstören das Vertrauen. Jede Formulierung auf einer Evergreen-Seite muss in 24 Monaten genauso wahr sein wie heute. Zeitlosigkeit ist kein Stilmittel – sie ist eine technische Notwendigkeit.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="prompt-box">
+      <div class="prompt-box-label">Der Strategie-Prompt für deinen Evergreen-Workshop</div>
+      <div class="prompt-box-title">Gib Claude diesen Prompt für deine Evergreen-Workshop-Salespage und Dankesseite:</div>
+      <div class="prompt-box-text">Ich möchte eine Salespage und eine Dankesseite für meinen Evergreen-Workshop erstellen.
+
+Workshop-Name: <strong>[NAME DES WORKSHOPS]</strong>
+Dauer: <strong>[Anzahl Tage – z. B. 3 Tage]</strong>
+Format: <strong>[Online / Präsenz / Hybrid – zeitlich flexibel / nach individueller Absprache]</strong>
+Preis: <strong>[Gesamtpreis] und/oder [Ratenzahlung: z. B. 2x PREIS]</strong>
+Maximale Platzzahl: <strong>[Anzahl pro Zyklus oder gesamt]</strong>
+Zielgruppe: <strong>[z. B. selbstständige Frauen im Aufbau]</strong>
+Ausgangssituation der Zielgruppe: <strong>[Schmerz / Plateau beschreiben]</strong>
+Konkrete Ergebnisse nach dem Workshop: <strong>[3–5 Punkte]</strong>
+Tagesstruktur: <strong>[Was passiert an Tag 1, 2, 3?]</strong>
+Stärkstes Testimonial: <strong>[Zitat + Name]</strong>
+Calendly-Link für das Vorbereitungsgespräch: <strong>[DEIN CALENDLY-LINK]</strong>
+
+Erstelle mir:
+1. Eine Salespage mit vollständigem Conversion-Gerüst (Headline, Problem, Transformation, Programm, Social Proof, Über mich, Für wen, Preis, FAQ)
+2. Eine Dankesseite mit: emotionaler Bestätigung, klaren nächsten Schritten, eingebettetem Calendly-Widget für Vorbereitungsgespräch, Community-Einladung, Vorbereitungs-Aufgabe, optionalem VIP-Upsell
+
+Beachte: Keine datumsbezogenen Formulierungen. Zeitlose Sprache. Buyer's Remorse aktiv durch Calendly-Gespräch verhindern. Ratenzahlung prominent. Wert-Stack vor Preis.</div>
+    </div>
+  </div>
+
+  <!-- MASTER CHECKLISTE -->
+  <div class="section-block">
+    <div class="section-kicker">Die Master-Checkliste</div>
+    <h2 class="part-headline">Bevor deine Seite <em>live geht:</em></h2>
+    <p class="part-sub">Hake diese Punkte ab – du hast das verdient.</p>
+
+    <div class="checklist-section">
+      <div class="checklist-title">Evergreen Video-Training – Anmeldeseite</div>
+      <div class="checklist-items">
+        <div class="checklist-item">
+          <div class="checklist-box"></div>
+          Die Headline benennt die Transformation, nicht das Format
+        </div>
+        <div class="checklist-item">
+          <div class="checklist-box"></div>
+          Die Zielgruppe ist explizit und präzise in der Subheadline benannt
+        </div>
+        <div class="checklist-item">
+          <div class="checklist-box"></div>
+          5 spezifische Learnings sind formuliert (keine vagen Themen)
+        </div>
+        <div class="checklist-item">
+          <div class="checklist-box"></div>
+          Das Format ist klar beschrieben: Länge, Zugangsmodus, E-Mail-Lieferung
+        </div>
+        <div class="checklist-item">
+          <div class="checklist-box"></div>
+          Das Formular hat maximal 2 Felder: Vorname + E-Mail
+        </div>
+        <div class="checklist-item">
+          <div class="checklist-box"></div>
+          Der CTA-Button-Text ist handlungsorientiert ("Zugang sichern", nicht "Anmelden")
+        </div>
+        <div class="checklist-item">
+          <div class="checklist-box"></div>
+          Mindestens ein starkes, spezifisches Testimonial ist sichtbar
+        </div>
+        <div class="checklist-item">
+          <div class="checklist-box"></div>
+          Alle Formulierungen sind zeitlos (kein Datum, keine Saison)
+        </div>
+        <div class="checklist-item">
+          <div class="checklist-box"></div>
+          DSGVO-Hinweis und Vertrauenssatz sind vorhanden
+        </div>
+        <div class="checklist-item">
+          <div class="checklist-box"></div>
+          Die Seite ist vollständig für Mobile optimiert
+        </div>
+      </div>
+    </div>
+
+    <div class="checklist-section">
+      <div class="checklist-title">Evergreen Video-Training – Dankesseite</div>
+      <div class="checklist-items">
+        <div class="checklist-item">
+          <div class="checklist-box"></div>
+          Emotionale Bestätigung der Entscheidung ist sichtbar
+        </div>
+        <div class="checklist-item">
+          <div class="checklist-box"></div>
+          Klar kommuniziert: Der Link zum Video-Training kommt per E-Mail (nicht hier)
+        </div>
+        <div class="checklist-item">
+          <div class="checklist-box"></div>
+          Hinweis auf Spam-Ordner ist vorhanden
+        </div>
+        <div class="checklist-item">
+          <div class="checklist-box"></div>
+          Bridge zum Vorbereitungsgespräch ist klar und einladend formuliert
+        </div>
+        <div class="checklist-item">
+          <div class="checklist-box"></div>
+          Calendly-Widget ist direkt eingebettet (nicht als externer Link)
+        </div>
+        <div class="checklist-item">
+          <div class="checklist-box"></div>
+          Einladung zu Social Media oder Community ist vorhanden
+        </div>
+        <div class="checklist-item">
+          <div class="checklist-box"></div>
+          Kein Navigationsmenü – die Seite führt gezielt weiter
+        </div>
+      </div>
+    </div>
+
+    <div class="checklist-section">
+      <div class="checklist-title">Evergreen Video-Training – Video-Seite</div>
+      <div class="checklist-items">
+        <div class="checklist-item">
+          <div class="checklist-box"></div>
+          Eine kurze Willkommens-Headline über dem Video ist vorhanden
+        </div>
+        <div class="checklist-item">
+          <div class="checklist-box"></div>
+          Das Video-Training ist korrekt eingebettet (kein Autoplay, kein Plattform-Branding)
+        </div>
+        <div class="checklist-item">
+          <div class="checklist-box"></div>
+          Genau ein CTA-Button ist direkt unterhalb des Videos platziert
+        </div>
+        <div class="checklist-item">
+          <div class="checklist-box"></div>
+          Pitch im Video und CTA-Button stimmen überein (Gespräch oder Angebot – nicht beides)
+        </div>
+        <div class="checklist-item">
+          <div class="checklist-box"></div>
+          Optional: Ein starkes Testimonial unterhalb des Buttons ist vorhanden
+        </div>
+        <div class="checklist-item">
+          <div class="checklist-box"></div>
+          Die Seite hat kein Navigationsmenü und keine ablenkenden Links
+        </div>
+        <div class="checklist-item">
+          <div class="checklist-box"></div>
+          Der Link in der E-Mail führt auf diese Seite – nicht direkt auf das Video
+        </div>
+        <div class="checklist-item">
+          <div class="checklist-box"></div>
+          Die Seite ist vollständig für Mobile optimiert
+        </div>
+      </div>
+    </div>
+
+    <div class="checklist-section">
+      <div class="checklist-title">Evergreen-Workshop – Salespage</div>
+      <div class="checklist-items">
+        <div class="checklist-item">
+          <div class="checklist-box"></div>
+          Headline benennt Transformation ohne Datumsbezug
+        </div>
+        <div class="checklist-item">
+          <div class="checklist-box"></div>
+          Ausgangssituation ist aus Besucher-Perspektive beschrieben – präzise genug, dass sie sich erkannt fühlt
+        </div>
+        <div class="checklist-item">
+          <div class="checklist-box"></div>
+          Programm ist ergebnis- statt inhaltsorientiert formuliert
+        </div>
+        <div class="checklist-item">
+          <div class="checklist-box"></div>
+          Mindestens 2 spezifische Testimonials mit konkreten Ergebnissen
+        </div>
+        <div class="checklist-item">
+          <div class="checklist-box"></div>
+          "Für wen" und "Nicht für wen" sind klar formuliert
+        </div>
+        <div class="checklist-item">
+          <div class="checklist-box"></div>
+          Format-Erklärung (wann startet es, wie läuft es ab) ist vorhanden und klar
+        </div>
+        <div class="checklist-item">
+          <div class="checklist-box"></div>
+          Preis erscheint erst nach vollständigem Wert-Stack
+        </div>
+        <div class="checklist-item">
+          <div class="checklist-box"></div>
+          Ratenzahlung ist sichtbar und gleichwertig angeboten
+        </div>
+        <div class="checklist-item">
+          <div class="checklist-box"></div>
+          FAQ räumt die spezifischen Evergreen-Einwände aus (Format, Start, Zugang)
+        </div>
+        <div class="checklist-item">
+          <div class="checklist-box"></div>
+          Alle Formulierungen sind zeitlos – keine datumsbezogenen Aussagen
+        </div>
+      </div>
+    </div>
+
+    <div class="checklist-section">
+      <div class="checklist-title">Evergreen-Workshop – Dankesseite</div>
+      <div class="checklist-items">
+        <div class="checklist-item">
+          <div class="checklist-box"></div>
+          Emotionale Bestätigung der Kaufentscheidung (Buyer's Remorse verhindern)
+        </div>
+        <div class="checklist-item">
+          <div class="checklist-box"></div>
+          Klare nächste Schritte erklärt (was kommt wann per E-Mail)
+        </div>
+        <div class="checklist-item">
+          <div class="checklist-box"></div>
+          Bridge zum Vorbereitungsgespräch klar und einladend formuliert
+        </div>
+        <div class="checklist-item">
+          <div class="checklist-box"></div>
+          Calendly-Widget ist direkt eingebettet (nicht als externer Link)
+        </div>
+        <div class="checklist-item">
+          <div class="checklist-box"></div>
+          Einladung in die Community ist vorhanden
+        </div>
+        <div class="checklist-item">
+          <div class="checklist-box"></div>
+          Vorbereitungs-Aufgabe oder Pre-Work ist vorhanden
+        </div>
+        <div class="checklist-item">
+          <div class="checklist-box"></div>
+          VIP-Upsell (optional) ist nach dem Calendly-Widget platziert
+        </div>
+        <div class="checklist-item">
+          <div class="checklist-box"></div>
+          Kein Navigationsmenü – die Seite führt gezielt weiter
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<!-- CLOSING -->
+<section class="closing">
+  <div class="closing-inner">
+    <h2>Ein System, das läuft. <em>Auch wenn du schläfst.</em></h2>
+    <p>Evergreen bedeutet nicht "einmal gebaut, nie mehr angefasst". Es bedeutet: einmal richtig gebaut – und dann konsequent optimiert. Der Unterschied zwischen einem Funnel, der bringt, und einem, der nicht liefert, liegt nicht im Traffic. Er liegt in den Seiten. Du hast jetzt das Fundament. <strong>Baue es so, dass es hält.</strong></p>
+    <span class="closing-signature">Be free, deine Marina</span>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-copy">FEMINESS · AI Website Code · © 2026</div>
+  <div class="footer-authors">feminess.de</div>
+</footer>
+
+</body>
+</html>

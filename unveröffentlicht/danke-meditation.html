@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Danke! Deine Meditation ist unterwegs | Feminess</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet" />
+  <style>
+    @font-face {
+      font-family: 'East Liberty';
+      src: url('../CI/east_liberty_signature (1)/east liberty signature.ttf') format('truetype');
+      font-weight: 400; font-style: normal;
+    }
+    @font-face {
+      font-family: 'Avenir LT Pro';
+      src: url('../CI/AvenirLTPro-Book (1).otf') format('opentype');
+      font-weight: 400; font-style: normal;
+    }
+    @font-face {
+      font-family: 'Avenir LT Pro';
+      src: url('../CI/AvenirLTPro-Heavy (1).otf') format('opentype');
+      font-weight: 700; font-style: normal;
+    }
+
+    :root {
+      --teal:        #257c6c;
+      --teal-dark:   #1b5c50;
+      --teal-light:  #5ec6b3;
+      --teal-pale:   #b8ddd8;
+      --rose:        #cf5a73;
+      --rose-light:  #e8a0b0;
+      --sand:        #c2ab8d;
+      --sand-light:  #e4bc95;
+      --black:       #070808;
+      --dark:        #0d2420;
+      --dark-2:      #163028;
+      --off-white:   #f8f6f2;
+      --cream:       #f0f5f4;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--off-white);
+      color: var(--black);
+      font-family: 'Avenir LT Pro', 'Arial', sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    img { display: block; max-width: 100%; }
+    a { text-decoration: none; }
+
+    /* ── HEADER (minimal) ── */
+    .site-header {
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      padding: 28px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+    }
+    .logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-weight: 500;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--sand-light);
+    }
+
+    /* ── THANK YOU HERO ── */
+    .ty-hero {
+      background: var(--dark);
+      min-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 120px 24px 72px;
+      position: relative;
+      overflow: hidden;
+    }
+    .ty-hero::before {
+      content: '';
+      position: absolute; top: -100px; right: -100px;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(37,124,108,0.3) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .ty-hero::after {
+      content: '';
+      position: absolute; bottom: -80px; left: -60px;
+      width: 440px; height: 440px;
+      background: radial-gradient(circle, rgba(228,188,149,0.08) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    .ty-check {
+      width: 68px; height: 68px;
+      background: linear-gradient(135deg, var(--teal-light), var(--teal));
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 32px;
+      position: relative; z-index: 1;
+      box-shadow: 0 8px 32px rgba(37,124,108,0.35);
+    }
+    .ty-check svg { width: 30px; height: 30px; fill: white; }
+
+    .ty-eyebrow {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 3.5px;
+      text-transform: uppercase;
+      color: var(--teal-light);
+      margin-bottom: 18px;
+      position: relative; z-index: 1;
+    }
+
+    .ty-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.4rem, 7vw, 4.8rem);
+      font-weight: 400;
+      line-height: 1.12;
+      color: var(--off-white);
+      max-width: 740px;
+      margin: 0 auto 22px;
+      position: relative; z-index: 1;
+    }
+    .ty-title em { font-style: italic; color: var(--sand-light); }
+
+    .ty-sub {
+      font-size: clamp(1rem, 2.6vw, 1.18rem);
+      color: rgba(248,246,242,0.62);
+      max-width: 500px;
+      margin: 0 auto;
+      line-height: 1.75;
+      position: relative; z-index: 1;
+    }
+
+    /* ── STEPS (technische Führung) ── */
+    .steps-section {
+      background: var(--off-white);
+      padding: 88px 24px;
+    }
+    .steps-inner {
+      max-width: 660px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .section-eyebrow {
+      display: block;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 14px;
+    }
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.9rem, 5vw, 2.9rem);
+      font-weight: 400;
+      color: var(--dark);
+      line-height: 1.2;
+      margin-bottom: 52px;
+    }
+    .section-title em { font-style: italic; color: var(--teal); }
+
+    .steps-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      text-align: left;
+    }
+    .step-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      background: white;
+      border-radius: 14px;
+      padding: 24px 28px;
+      box-shadow: 0 2px 14px rgba(13,36,32,0.06);
+    }
+    .step-num {
+      flex-shrink: 0;
+      width: 38px; height: 38px;
+      background: var(--cream);
+      border: 2px solid var(--teal-pale);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: var(--teal);
+      margin-top: 1px;
+    }
+    .step-body { flex: 1; }
+    .step-title {
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 5px;
+      font-size: 0.98rem;
+    }
+    .step-desc {
+      font-size: 0.93rem;
+      color: #5a7a74;
+      line-height: 1.65;
+    }
+    .step-desc strong { color: var(--dark); }
+
+    /* ── WEBINAR BRIDGE ── */
+    .bridge-section {
+      background: linear-gradient(160deg, var(--dark) 0%, var(--dark-2) 100%);
+      padding: 96px 24px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .bridge-section::before {
+      content: '';
+      position: absolute; top: -80px; right: -80px;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(37,124,108,0.22) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .bridge-section::after {
+      content: '';
+      position: absolute; bottom: -60px; left: -40px;
+      width: 420px; height: 420px;
+      background: radial-gradient(circle, rgba(207,90,115,0.1) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    .bridge-inner {
+      max-width: 660px;
+      margin: 0 auto;
+      position: relative; z-index: 1;
+    }
+
+    .bridge-badge {
+      display: inline-block;
+      background: rgba(207,90,115,0.14);
+      border: 1px solid rgba(207,90,115,0.28);
+      color: var(--rose-light);
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      padding: 7px 18px;
+      border-radius: 50px;
+      margin-bottom: 32px;
+    }
+
+    .bridge-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.1rem, 6vw, 3.8rem);
+      font-weight: 400;
+      line-height: 1.15;
+      color: var(--off-white);
+      margin-bottom: 22px;
+    }
+    .bridge-title em { font-style: italic; color: var(--sand-light); }
+
+    .bridge-lead {
+      font-size: 1rem;
+      color: rgba(248,246,242,0.62);
+      line-height: 1.75;
+      margin-bottom: 32px;
+      max-width: 540px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .bridge-meta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(94,198,179,0.09);
+      border: 1px solid rgba(94,198,179,0.18);
+      border-radius: 10px;
+      padding: 14px 24px;
+      margin-bottom: 40px;
+      font-size: 0.88rem;
+      color: var(--teal-light);
+      line-height: 1.5;
+    }
+
+    .bridge-learns {
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-bottom: 48px;
+    }
+    .bridge-learn-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      font-size: 0.95rem;
+      color: rgba(248,246,242,0.78);
+      line-height: 1.65;
+    }
+    .bridge-learn-item::before {
+      content: '✦';
+      color: var(--teal-light);
+      flex-shrink: 0;
+      margin-top: 3px;
+      font-size: 0.75rem;
+    }
+    .bridge-learn-item strong {
+      color: var(--off-white);
+    }
+
+    .btn-bridge {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--rose) 0%, #a83d55 100%);
+      color: white;
+      font-family: 'Avenir LT Pro', 'Arial', sans-serif;
+      font-size: 0.97rem;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      padding: 18px 44px;
+      border-radius: 50px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 10px 32px rgba(207,90,115,0.42);
+    }
+    .btn-bridge:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 16px 44px rgba(207,90,115,0.58);
+    }
+    .bridge-note {
+      font-size: 0.78rem;
+      color: rgba(248,246,242,0.28);
+      margin-top: 16px;
+    }
+
+    /* ── DIVIDER ── */
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(94,198,179,0.2), transparent);
+      margin: 0;
+    }
+
+    /* ── COMMUNITY ── */
+    .community-section {
+      background: var(--cream);
+      padding: 88px 24px;
+      text-align: center;
+    }
+    .community-inner {
+      max-width: 560px;
+      margin: 0 auto;
+    }
+    .community-glyph {
+      font-family: 'East Liberty', cursive;
+      font-size: 3rem;
+      color: var(--teal);
+      margin-bottom: 20px;
+      display: block;
+    }
+    .community-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.9rem, 5vw, 2.8rem);
+      font-weight: 400;
+      color: var(--dark);
+      line-height: 1.2;
+      margin-bottom: 18px;
+    }
+    .community-title em { font-style: italic; color: var(--teal); }
+    .community-text {
+      font-size: 0.97rem;
+      color: #5a7a74;
+      line-height: 1.8;
+      margin-bottom: 36px;
+    }
+    .btn-community {
+      display: inline-block;
+      background: transparent;
+      color: var(--teal);
+      font-family: 'Avenir LT Pro', 'Arial', sans-serif;
+      font-size: 0.93rem;
+      font-weight: 700;
+      padding: 15px 38px;
+      border-radius: 50px;
+      border: 2px solid var(--teal);
+      transition: background 0.3s, color 0.3s;
+      letter-spacing: 0.3px;
+    }
+    .btn-community:hover {
+      background: var(--teal);
+      color: white;
+    }
+
+    /* ── SIGNATURE SIGN-OFF ── */
+    .signoff {
+      background: var(--dark);
+      padding: 56px 24px;
+      text-align: center;
+    }
+    .signoff-text {
+      font-size: 0.97rem;
+      color: rgba(248,246,242,0.52);
+      margin-bottom: 16px;
+      line-height: 1.7;
+    }
+    .signoff-name {
+      font-family: 'East Liberty', cursive;
+      font-size: 2.8rem;
+      color: var(--sand-light);
+    }
+    .signoff-sub {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--teal-light);
+      margin-top: 6px;
+    }
+
+    /* ── FOOTER ── */
+    .site-footer {
+      background: var(--black);
+      padding: 32px 24px;
+      text-align: center;
+    }
+    .site-footer p {
+      font-size: 0.78rem;
+      color: rgba(248,246,242,0.28);
+      line-height: 2;
+    }
+    .site-footer a {
+      color: rgba(248,246,242,0.38);
+      transition: color 0.25s;
+    }
+    .site-footer a:hover { color: var(--teal-light); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 640px) {
+      .ty-hero { padding: 100px 20px 64px; }
+      .steps-section,
+      .bridge-section,
+      .community-section { padding: 64px 20px; }
+      .signoff { padding: 48px 20px; }
+      .step-item { padding: 18px 20px; }
+      .btn-bridge { width: 100%; text-align: center; }
+      .bridge-meta { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- MINIMAL HEADER -->
+  <header class="site-header">
+    <span class="logo">Feminess</span>
+  </header>
+
+  <!-- ──────────────────────────────────────────
+       EMOTIONALE BESTÄTIGUNG
+  ────────────────────────────────────────── -->
+  <section class="ty-hero">
+    <div class="ty-check">
+      <svg viewBox="0 0 20 20"><path d="M8.4 14.4l-4-4 1.4-1.4 2.6 2.6 5.8-5.8 1.4 1.4z"/></svg>
+    </div>
+
+    <p class="ty-eyebrow">✦ Du hast es getan ✦</p>
+
+    <h1 class="ty-title">
+      Ja. Du hast gerade<br>
+      <em>JA zu dir gesagt.</em>
+    </h1>
+
+    <p class="ty-sub">
+      Deine Meditation ist auf dem Weg zu dir.
+      Check gleich dein Postfach – sie wartet dort in wenigen Minuten auf dich.
+    </p>
+  </section>
+
+  <!-- ──────────────────────────────────────────
+       TECHNISCHE FÜHRUNG
+  ────────────────────────────────────────── -->
+  <section class="steps-section">
+    <div class="steps-inner">
+      <span class="section-eyebrow">✦ Deine nächsten Schritte ✦</span>
+      <h2 class="section-title">So kommst du an<br><em>deine Meditation</em></h2>
+
+      <ol class="steps-list">
+
+        <li class="step-item">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <p class="step-title">Check dein E-Mail-Postfach</p>
+            <p class="step-desc">
+              In wenigen Minuten bekommst du eine Mail mit dem Betreff
+              <strong>„Deine Geldmagneten-Meditation ist da"</strong>.
+              Darin findest du den direkten Zugangslink zur Audio.
+            </p>
+          </div>
+        </li>
+
+        <li class="step-item">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <p class="step-title">Nicht gefunden? Schau in Spam oder Promotions</p>
+            <p class="step-desc">
+              Falls du die Mail nicht siehst, check kurz den Spam- oder Promotions-Tab.
+              Markiere meine E-Mail als <strong>„Kein Spam"</strong> –
+              so kommen meine Nachrichten künftig direkt zu dir.
+            </p>
+          </div>
+        </li>
+
+        <li class="step-item">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <p class="step-title">Schaffe dir deinen Raum</p>
+            <p class="step-desc">
+              Such dir einen ruhigen Moment. Kopfhörer rein, eine Hand auf den Bauch,
+              eine auf das Herz – und lass die Meditation ihre Arbeit tun.
+              <strong>Morgens direkt nach dem Aufwachen ist ideal.</strong>
+            </p>
+          </div>
+        </li>
+
+      </ol>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ──────────────────────────────────────────
+       SANFTE BRIDGE ZUM WEBINAR
+  ────────────────────────────────────────── -->
+  <section class="bridge-section" id="webinar">
+    <div class="bridge-inner">
+
+      <span class="bridge-badge">✦ Kostenfreies Live-Webinar ✦</span>
+
+      <h2 class="bridge-title">
+        Während die Meditation<br>
+        deine Geldenergie öffnet –<br>
+        <em>lass uns die Strategie dahinter enthüllen.</em>
+      </h2>
+
+      <p class="bridge-lead">
+        Die Meditation ist der erste Schritt. Aber viele Frauen mit Business
+        kämpfen trotz allem mit denselben Umsätzen – Monat für Monat.
+        Wenn das auch bei dir so ist, dann ist dieses kostenfreie Webinar dein nächster Schritt.
+      </p>
+
+      <div class="bridge-meta">
+        📅 &nbsp; <strong>23. April 2026 · 12:00 Uhr</strong>
+        &nbsp;&middot;&nbsp; Live · 90 Minuten · inkl. Aufzeichnung
+      </div>
+
+      <div class="bridge-learns">
+
+        <div class="bridge-learn-item">
+          <strong>Warum 99% der selbstständigen Frauen nicht aus der Leistung-gegen-Geld-Falle kommen</strong>
+          – und weshalb es sich so schwer anfühlt, mehr zu verdienen, egal wie viel du tust
+        </div>
+
+        <div class="bridge-learn-item">
+          <strong>Warum du seit Monaten auf derselben Umsatzstufe stehst oder massiv schwankst</strong>
+          – und warum keine Strategie dich bisher auf das nächste Level gebracht hat
+        </div>
+
+        <div class="bridge-learn-item">
+          <strong>Warum du noch zu niedrige Preise nimmst oder deinen Preis ungern nennst</strong>
+          – und wie du endlich aufhörst, dich unter Wert zu verkaufen
+        </div>
+
+      </div>
+
+      <!--
+        INTEGRATION: Ersetze href="#" mit deinem Webinar-Anmelde-Link
+        z.B. Elopage, Zoom, Webinarjam, etc.
+      -->
+      <a href="#" class="btn-bridge">
+        Ja, ich will beim Webinar dabei sein &rarr;
+      </a>
+      <p class="bridge-note">Kostenfreie Teilnahme &middot; Aufzeichnung vorhanden &middot; Für Frauen mit Business</p>
+
+    </div>
+  </section>
+
+  <!-- ──────────────────────────────────────────
+       COMMUNITY EINLADUNG
+  ────────────────────────────────────────── -->
+  <section class="community-section">
+    <div class="community-inner">
+      <span class="community-glyph">✦</span>
+      <h2 class="community-title">
+        Du bist nicht allein<br>
+        auf diesem Weg, <em>Gorgeous.</em>
+      </h2>
+      <p class="community-text">
+        In meiner Community warten Frauen wie du – Selbstständige, Träumerinnen, Macherinnen –
+        die alle an demselben arbeiten: Mehr Leichtigkeit. Mehr Geld. Mehr sie selbst.<br><br>
+        Komm dazu. Es freut mich, wenn du dabei bist.
+      </p>
+      <!--
+        INTEGRATION: Ersetze href="#" mit deinem Community-Link
+        z.B. Facebook-Gruppe, Circle, Telegram, etc.
+      -->
+      <a href="#" class="btn-community">Zur Feminess Community &rarr;</a>
+    </div>
+  </section>
+
+  <!-- SIGN-OFF -->
+  <div class="signoff">
+    <p class="signoff-text">
+      Ich freue mich, dass du hier bist.<br>
+      Vertrau dem Prozess – und vertrau dir.
+    </p>
+    <p class="signoff-name">Marina</p>
+    <p class="signoff-sub">Be free.</p>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>
+      &copy; 2026 Feminess &middot; Marina Henze<br>
+      <a href="Impressum.html">Impressum</a>
+      &nbsp;&middot;&nbsp;
+      <a href="#">Datenschutz</a>
+    </p>
+  </footer>
+
+</body>
+</html>

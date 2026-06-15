@@ -1,0 +1,1879 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feminess – Marina Henze | Coaching für persönliche &amp; finanzielle Freiheit</title>
+<meta name="description" content="Marina Henze begleitet Frauen zwischen 35 und 55 in ihre persönliche und finanzielle Freiheit. Entdecke die Feminess-Programme: Unlimited Fullness, First Choice und Highest Selling Launch.">
+<style>
+  @font-face {
+    font-family: 'East Liberty';
+    src: url('../CI/east_liberty_signature%20%281%29/east%20liberty%20signature.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Avenir LT Pro';
+    src: url('../CI/AvenirLTPro-Book%20%281%29.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Avenir LT Pro';
+    src: url('../CI/AvenirLTPro-Heavy%20%281%29.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  :root {
+    --teal:        #257c6c;
+    --teal-dark:   #1b5c50;
+    --teal-light:  #5ec6b3;
+    --teal-pale:   #b8ddd8;
+    --rose:        #cf5a73;
+    --rose-light:  #e8a0b0;
+    --sand:        #c2ab8d;
+    --sand-dark:   #8d6a48;
+    --sand-light:  #e4bc95;
+    --black:       #070808;
+    --dark:        #0d2420;
+    --off-white:   #f8f6f2;
+    --cream:       #f0f5f4;
+    --beige:       #ddecea;
+    --warm-gray:   #5a7a74;
+    --mid-gray:    #9ab8b4;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--off-white);
+    color: var(--black);
+    font-family: 'Avenir LT Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  /* ─────────────────────────────────────
+     NAVIGATION
+  ───────────────────────────────────── */
+  .nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    background: rgba(13, 36, 32, 0.97);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(94, 198, 179, 0.10);
+    padding: 0 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 76px;
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    flex-shrink: 0;
+  }
+
+  .nav-logo img {
+    height: 38px;
+    width: auto;
+    display: block;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-family: 'Avenir LT Pro', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--mid-gray);
+    text-decoration: none;
+    padding: 9px 18px;
+    border-radius: 2px;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--teal-light); }
+
+  .nav-cta {
+    background: var(--teal) !important;
+    color: #fff !important;
+    margin-left: 8px;
+    transition: background 0.2s !important;
+  }
+
+  .nav-cta:hover { background: var(--teal-dark) !important; }
+
+  .nav-hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 6px;
+    background: none;
+    border: none;
+  }
+
+  .nav-hamburger span {
+    display: block;
+    width: 22px; height: 2px;
+    background: var(--mid-gray);
+    border-radius: 2px;
+    transition: all 0.3s;
+  }
+
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    top: 76px; left: 0; right: 0;
+    background: rgba(13, 36, 32, 0.99);
+    padding: 24px 32px;
+    z-index: 999;
+    border-bottom: 1px solid rgba(94, 198, 179, 0.12);
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .mobile-menu.open { display: flex; }
+
+  .mobile-menu a {
+    font-family: 'Avenir LT Pro', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--mid-gray);
+    text-decoration: none;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(184, 221, 216, 0.08);
+    transition: color 0.2s;
+  }
+
+  .mobile-menu a:last-child { border-bottom: none; }
+  .mobile-menu a:hover,
+  .mobile-menu a.mobile-cta { color: var(--teal-light); }
+  .mobile-menu a.mobile-cta { margin-top: 8px; }
+
+  /* ─────────────────────────────────────
+     HERO
+  ───────────────────────────────────── */
+  .hero {
+    background: var(--dark);
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+    padding-top: 76px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -150px; right: -150px;
+    width: 700px; height: 700px;
+    background: radial-gradient(circle, rgba(37,124,108,0.18) 0%, transparent 65%);
+    pointer-events: none;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -80px; left: 60px;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(207,90,115,0.07) 0%, transparent 65%);
+    pointer-events: none;
+  }
+
+  .hero-content {
+    padding: 80px 64px 80px 80px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .hero-kicker {
+    font-family: 'Avenir LT Pro', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--teal-light);
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .hero-kicker::before {
+    content: '';
+    width: 28px; height: 1px;
+    background: var(--teal-light);
+    opacity: 0.7;
+  }
+
+  .hero h1 {
+    font-family: 'East Liberty', Georgia, serif;
+    font-size: clamp(40px, 4.8vw, 68px);
+    font-weight: 400;
+    line-height: 1.06;
+    color: #fff;
+    letter-spacing: -0.5px;
+    margin-bottom: 28px;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--rose);
+  }
+
+  .hero-sub {
+    font-family: 'Avenir LT Pro', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    color: var(--mid-gray);
+    line-height: 1.85;
+    max-width: 460px;
+    margin-bottom: 48px;
+  }
+
+  .hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 56px;
+  }
+
+  .btn-primary {
+    font-family: 'Avenir LT Pro', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    background: var(--teal);
+    color: #fff;
+    border: none;
+    padding: 16px 32px;
+    border-radius: 2px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.2s, transform 0.15s;
+  }
+
+  .btn-primary:hover {
+    background: var(--teal-dark);
+    transform: translateY(-1px);
+  }
+
+  .btn-ghost {
+    font-family: 'Avenir LT Pro', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    background: transparent;
+    color: var(--mid-gray);
+    border: 1px solid rgba(154, 184, 180, 0.28);
+    padding: 15px 32px;
+    border-radius: 2px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.2s;
+  }
+
+  .btn-ghost:hover {
+    border-color: var(--teal-light);
+    color: var(--teal-light);
+  }
+
+  .hero-proof {
+    display: flex;
+    gap: 40px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(184, 221, 216, 0.12);
+    flex-wrap: wrap;
+  }
+
+  .hero-proof-item span {
+    display: block;
+    font-family: 'Avenir LT Pro', sans-serif;
+    font-size: 9px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--warm-gray);
+    margin-bottom: 4px;
+  }
+
+  .hero-proof-item strong {
+    font-family: 'East Liberty', Georgia, serif;
+    font-size: 34px;
+    font-weight: 400;
+    color: var(--teal-light);
+    line-height: 1;
+  }
+
+  .hero-image {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+  }
+
+  .hero-image-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, var(--dark) 0%, rgba(13,36,32,0.20) 38%, transparent 60%),
+                linear-gradient(to top, var(--dark) 0%, transparent 28%);
+  }
+
+  /* ─────────────────────────────────────
+     SHARED
+  ───────────────────────────────────── */
+  .container {
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+
+  .section-kicker {
+    font-family: 'Avenir LT Pro', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .section-kicker::before {
+    content: '';
+    width: 24px; height: 1px;
+    background: var(--teal);
+    opacity: 0.6;
+  }
+
+  .section-headline {
+    font-family: 'East Liberty', Georgia, serif;
+    font-size: clamp(34px, 4.2vw, 58px);
+    font-weight: 400;
+    line-height: 1.08;
+    color: var(--black);
+    letter-spacing: -0.5px;
+    margin-bottom: 16px;
+  }
+
+  .section-headline em {
+    font-style: italic;
+    color: var(--rose);
+  }
+
+  .section-sub {
+    font-size: 17px;
+    font-weight: 400;
+    color: var(--warm-gray);
+    max-width: 560px;
+    line-height: 1.85;
+    margin-bottom: 56px;
+  }
+
+  /* ─────────────────────────────────────
+     PROBLEM SECTION
+  ───────────────────────────────────── */
+  .problem-section {
+    background: var(--off-white);
+    padding: 96px 80px;
+  }
+
+  .problem-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: start;
+  }
+
+  .problem-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .problem-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 22px 0;
+    border-bottom: 1px solid var(--beige);
+  }
+
+  .problem-item:last-child { border-bottom: none; }
+
+  .problem-dot {
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    background: var(--cream);
+    border: 1px solid var(--beige);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 3px;
+  }
+
+  .problem-dot-inner {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--rose);
+    opacity: 0.65;
+  }
+
+  .problem-text {
+    font-size: 16px;
+    color: var(--warm-gray);
+    line-height: 1.75;
+    font-style: italic;
+  }
+
+  .problem-text strong {
+    color: var(--black);
+    font-style: normal;
+    font-weight: 700;
+  }
+
+  .problem-card {
+    background: var(--dark);
+    border-radius: 4px;
+    padding: 44px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .problem-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--teal), var(--teal-light));
+  }
+
+  .problem-card::after {
+    content: '';
+    position: absolute;
+    bottom: -60px; right: -60px;
+    width: 280px; height: 280px;
+    background: radial-gradient(circle, rgba(37,124,108,0.13) 0%, transparent 65%);
+    pointer-events: none;
+  }
+
+  .problem-card-label {
+    font-family: 'Avenir LT Pro', sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--teal-light);
+    margin-bottom: 24px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .problem-card-quote {
+    font-family: 'East Liberty', Georgia, serif;
+    font-size: clamp(19px, 2.1vw, 26px);
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.5;
+    color: var(--sand-light);
+    margin-bottom: 28px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .problem-card-body {
+    font-size: 15px;
+    color: var(--mid-gray);
+    line-height: 1.85;
+    position: relative;
+    z-index: 1;
+  }
+
+  .problem-card-body p + p { margin-top: 14px; }
+
+  .problem-card-sig {
+    font-family: 'East Liberty', Georgia, serif;
+    font-size: 22px;
+    color: var(--teal-light);
+    margin-top: 28px;
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ─────────────────────────────────────
+     POSITIONING
+  ───────────────────────────────────── */
+  .positioning-section {
+    background: var(--cream);
+    padding: 96px 80px;
+    border-top: 1px solid var(--beige);
+    border-bottom: 1px solid var(--beige);
+  }
+
+  .positioning-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .positioning-card {
+    background: #fff;
+    border: 1px solid var(--beige);
+    border-top: 3px solid var(--teal);
+    border-radius: 2px;
+    padding: 36px 32px;
+  }
+
+  .positioning-card-num {
+    font-family: 'East Liberty', Georgia, serif;
+    font-size: 56px;
+    font-weight: 400;
+    color: var(--teal-pale);
+    line-height: 1;
+    margin-bottom: 20px;
+  }
+
+  .positioning-card-title {
+    font-family: 'Avenir LT Pro', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 12px;
+  }
+
+  .positioning-card-text {
+    font-size: 15px;
+    color: var(--warm-gray);
+    line-height: 1.8;
+  }
+
+  /* ─────────────────────────────────────
+     PROGRAMMES
+  ───────────────────────────────────── */
+  .programmes-section {
+    background: var(--off-white);
+    padding: 96px 80px;
+  }
+
+  .programmes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .prog-card {
+    background: #fff;
+    border: 1px solid var(--beige);
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.25s, box-shadow 0.25s;
+  }
+
+  .prog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 52px rgba(37,124,108,0.09);
+  }
+
+  .prog-card-header {
+    padding: 36px 32px 28px;
+    position: relative;
+  }
+
+  .prog-card-header::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+  }
+
+  .prog--fufp .prog-card-header::before { background: linear-gradient(90deg, var(--teal), var(--teal-light)); }
+  .prog--fc   .prog-card-header::before { background: linear-gradient(90deg, var(--rose), var(--rose-light)); }
+  .prog--hsl  .prog-card-header::before { background: linear-gradient(90deg, var(--sand-dark), var(--sand-light)); }
+
+  .prog-badge {
+    font-family: 'Avenir LT Pro', sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border-radius: 2px;
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+
+  .prog--fufp .prog-badge { background: rgba(37,124,108,0.08);  color: var(--teal-dark); }
+  .prog--fc   .prog-badge { background: rgba(207,90,115,0.08);  color: var(--rose); }
+  .prog--hsl  .prog-badge { background: rgba(141,106,72,0.10);  color: var(--sand-dark); }
+
+  .prog-title {
+    font-family: 'East Liberty', Georgia, serif;
+    font-size: clamp(22px, 2.2vw, 28px);
+    font-weight: 400;
+    color: var(--black);
+    line-height: 1.15;
+    margin-bottom: 12px;
+  }
+
+  .prog-tagline {
+    font-size: 14px;
+    color: var(--warm-gray);
+    line-height: 1.75;
+    font-style: italic;
+  }
+
+  .prog-card-body {
+    padding: 4px 32px 28px;
+    flex: 1;
+  }
+
+  .prog-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+  }
+
+  .prog-list li {
+    font-size: 14px;
+    color: var(--warm-gray);
+    line-height: 1.6;
+    padding-left: 18px;
+    position: relative;
+  }
+
+  .prog-list li::before { content: '–'; position: absolute; left: 0; }
+
+  .prog--fufp .prog-list li::before { color: var(--teal); }
+  .prog--fc   .prog-list li::before { color: var(--rose); }
+  .prog--hsl  .prog-list li::before { color: var(--sand); }
+
+  .prog-card-footer {
+    padding: 22px 32px;
+    border-top: 1px solid var(--beige);
+  }
+
+  .prog-link {
+    font-family: 'Avenir LT Pro', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: gap 0.2s;
+  }
+
+  .prog--fufp .prog-link { color: var(--teal); }
+  .prog--fc   .prog-link { color: var(--rose); }
+  .prog--hsl  .prog-link { color: var(--sand-dark); }
+
+  .prog-link:hover { gap: 16px; }
+  .prog-link::after { content: '→'; font-size: 15px; }
+
+  /* ─────────────────────────────────────
+     NUMBERS
+  ───────────────────────────────────── */
+  .numbers-section {
+    background: var(--dark);
+    padding: 80px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .numbers-section::before {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 900px; height: 900px;
+    background: radial-gradient(circle, rgba(37,124,108,0.13) 0%, transparent 65%);
+    pointer-events: none;
+  }
+
+  .numbers-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+  }
+
+  .number-value {
+    font-family: 'East Liberty', Georgia, serif;
+    font-size: clamp(52px, 6vw, 80px);
+    font-weight: 400;
+    color: var(--teal-light);
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+
+  .number-label {
+    font-family: 'Avenir LT Pro', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--warm-gray);
+    margin-bottom: 8px;
+  }
+
+  .number-desc {
+    font-size: 13px;
+    color: var(--mid-gray);
+    line-height: 1.65;
+    max-width: 160px;
+    margin: 0 auto;
+  }
+
+  /* ─────────────────────────────────────
+     TESTIMONIALS
+  ───────────────────────────────────── */
+  .testimonials-section {
+    background: var(--off-white);
+    padding: 96px 80px;
+  }
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .testimonial-card {
+    background: #fff;
+    border: 1px solid var(--beige);
+    border-left: 3px solid var(--teal);
+    border-radius: 2px;
+    padding: 36px 32px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .testimonial-card:nth-child(2) { border-left-color: var(--rose); }
+  .testimonial-card:nth-child(3) { border-left-color: var(--sand); }
+
+  .testimonial-open-quote {
+    font-family: 'East Liberty', Georgia, serif;
+    font-size: 36px;
+    color: var(--teal-pale);
+    line-height: 1;
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .testimonial-card:nth-child(2) .testimonial-open-quote { color: var(--rose-light); }
+  .testimonial-card:nth-child(3) .testimonial-open-quote { color: var(--sand); }
+
+  .testimonial-quote {
+    font-family: 'East Liberty', Georgia, serif;
+    font-size: 17px;
+    font-style: italic;
+    color: var(--dark);
+    line-height: 1.65;
+    flex: 1;
+    margin-bottom: 24px;
+  }
+
+  .testimonial-result {
+    background: var(--cream);
+    border-radius: 2px;
+    padding: 10px 16px;
+    font-size: 12px;
+    color: var(--teal-dark);
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    margin-bottom: 20px;
+  }
+
+  .testimonial-author {
+    font-family: 'Avenir LT Pro', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--teal-dark);
+  }
+
+  .testimonial-role {
+    font-size: 12px;
+    color: var(--mid-gray);
+    margin-top: 3px;
+  }
+
+  /* ─────────────────────────────────────
+     ABOUT
+  ───────────────────────────────────── */
+  .about-section {
+    background: var(--cream);
+    padding: 96px 80px;
+    border-top: 1px solid var(--beige);
+    border-bottom: 1px solid var(--beige);
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 88px;
+    align-items: center;
+  }
+
+  .about-image-wrap {
+    position: relative;
+  }
+
+  .about-image-wrap img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .about-image-accent {
+    position: absolute;
+    bottom: -20px; right: -20px;
+    width: 55%; height: 55%;
+    border: 2px solid var(--teal);
+    border-radius: 4px;
+    opacity: 0.22;
+    z-index: 0;
+  }
+
+  .about-image-badge {
+    position: absolute;
+    bottom: 28px; left: -28px;
+    background: var(--dark);
+    border-radius: 4px;
+    padding: 20px 24px;
+    z-index: 2;
+    min-width: 180px;
+  }
+
+  .about-image-badge::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--teal), var(--teal-light));
+    border-radius: 4px 4px 0 0;
+  }
+
+  .about-badge-value {
+    font-family: 'East Liberty', Georgia, serif;
+    font-size: 38px;
+    font-weight: 400;
+    color: var(--teal-light);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .about-badge-label {
+    font-family: 'Avenir LT Pro', sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--mid-gray);
+  }
+
+  .about-intro {
+    font-family: 'East Liberty', Georgia, serif;
+    font-size: clamp(18px, 1.9vw, 23px);
+    font-style: italic;
+    color: var(--teal-dark);
+    line-height: 1.55;
+    margin-bottom: 28px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--beige);
+  }
+
+  .about-text {
+    font-size: 16px;
+    color: var(--warm-gray);
+    line-height: 1.9;
+    margin-bottom: 16px;
+  }
+
+  .about-text strong { color: var(--black); font-weight: 700; }
+
+  .about-highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    margin: 28px 0 32px;
+  }
+
+  .about-highlight {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    font-size: 14px;
+    color: var(--warm-gray);
+    line-height: 1.6;
+  }
+
+  .about-highlight-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--teal);
+    flex-shrink: 0;
+    margin-top: 6px;
+  }
+
+  .about-sig {
+    font-family: 'East Liberty', Georgia, serif;
+    font-size: 26px;
+    color: var(--teal);
+    display: block;
+  }
+
+  /* ─────────────────────────────────────
+     OBJECTIONS / FAQ
+  ───────────────────────────────────── */
+  .objections-section {
+    background: var(--off-white);
+    padding: 96px 80px;
+  }
+
+  .objections-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .objection-card {
+    background: #fff;
+    border: 1px solid var(--beige);
+    border-radius: 2px;
+    padding: 32px;
+  }
+
+  .objection-q {
+    font-family: 'Avenir LT Pro', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--rose);
+    margin-bottom: 12px;
+    line-height: 1.5;
+  }
+
+  .objection-a {
+    font-size: 15px;
+    color: var(--warm-gray);
+    line-height: 1.8;
+  }
+
+  .objection-a strong { color: var(--teal-dark); font-weight: 700; }
+
+  /* ─────────────────────────────────────
+     CTA SECTION
+  ───────────────────────────────────── */
+  .cta-section {
+    background: var(--dark);
+    padding: 128px 80px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-section::before {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px; height: 800px;
+    background: radial-gradient(circle, rgba(37,124,108,0.20) 0%, transparent 65%);
+    pointer-events: none;
+  }
+
+  .cta-inner {
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cta-kicker {
+    font-family: 'Avenir LT Pro', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--teal-light);
+    margin-bottom: 28px;
+  }
+
+  .cta-headline {
+    font-family: 'East Liberty', Georgia, serif;
+    font-size: clamp(38px, 5.5vw, 68px);
+    font-weight: 400;
+    color: #fff;
+    line-height: 1.07;
+    letter-spacing: -0.5px;
+    margin-bottom: 24px;
+  }
+
+  .cta-headline em {
+    font-style: italic;
+    color: var(--rose);
+  }
+
+  .cta-text {
+    font-size: 17px;
+    color: var(--mid-gray);
+    line-height: 1.85;
+    margin-bottom: 48px;
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cta-text strong { color: var(--sand-light); font-weight: 600; }
+
+  .btn-primary-lg {
+    font-family: 'Avenir LT Pro', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    background: var(--teal);
+    color: #fff;
+    border: none;
+    padding: 20px 48px;
+    border-radius: 2px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.2s, transform 0.15s;
+  }
+
+  .btn-primary-lg:hover {
+    background: var(--teal-dark);
+    transform: translateY(-2px);
+  }
+
+  .cta-note {
+    font-size: 13px;
+    color: var(--warm-gray);
+    margin-top: 20px;
+    font-style: italic;
+    display: block;
+  }
+
+  /* ─────────────────────────────────────
+     FOOTER
+  ───────────────────────────────────── */
+  .footer {
+    background: var(--black);
+    padding: 64px 80px 40px;
+  }
+
+  .footer-inner {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1fr 1fr;
+    gap: 48px;
+    margin-bottom: 48px;
+  }
+
+  .footer-brand-logo img {
+    height: 36px;
+    width: auto;
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .footer-brand-text {
+    font-size: 13px;
+    color: var(--warm-gray);
+    line-height: 1.85;
+    max-width: 230px;
+  }
+
+  .footer-brand-sig {
+    font-family: 'East Liberty', Georgia, serif;
+    font-size: 20px;
+    color: var(--teal-light);
+    margin-top: 16px;
+    display: block;
+  }
+
+  .footer-col-label {
+    font-family: 'Avenir LT Pro', sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--mid-gray);
+    margin-bottom: 20px;
+  }
+
+  .footer-col ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-col ul a {
+    font-size: 13px;
+    color: var(--warm-gray);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .footer-col ul a:hover { color: var(--teal-light); }
+
+  .footer-bottom {
+    padding-top: 28px;
+    border-top: 1px solid rgba(154,184,180,0.10);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .footer-copy {
+    font-size: 11px;
+    color: var(--warm-gray);
+    letter-spacing: 0.5px;
+  }
+
+  .footer-legal { display: flex; gap: 24px; }
+
+  .footer-legal a {
+    font-size: 11px;
+    color: var(--warm-gray);
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    transition: color 0.2s;
+  }
+
+  .footer-legal a:hover { color: var(--teal-light); }
+
+  /* ─────────────────────────────────────
+     RESPONSIVE
+  ───────────────────────────────────── */
+  @media (max-width: 1100px) {
+    .nav { padding: 0 40px; }
+    .hero { grid-template-columns: 1fr; min-height: auto; }
+    .hero-image { display: none; }
+    .hero-content { padding: 80px 48px; }
+    .problem-section,
+    .positioning-section,
+    .programmes-section,
+    .numbers-section,
+    .testimonials-section,
+    .about-section,
+    .objections-section,
+    .cta-section { padding: 80px 48px; }
+    .footer { padding: 56px 48px 36px; }
+    .footer-inner { grid-template-columns: 1fr 1fr; gap: 40px; }
+    .numbers-grid { grid-template-columns: repeat(2, 1fr); gap: 40px; }
+    .about-image-badge { left: 0; }
+  }
+
+  @media (max-width: 768px) {
+    .nav { padding: 0 24px; height: 68px; }
+    .nav-links { display: none; }
+    .nav-hamburger { display: flex; }
+    .mobile-menu { top: 68px; }
+
+    .hero-content { padding: 56px 24px 64px; }
+    .hero-actions { flex-direction: column; align-items: flex-start; }
+    .hero-proof { gap: 24px; }
+
+    .problem-section,
+    .positioning-section,
+    .programmes-section,
+    .numbers-section,
+    .testimonials-section,
+    .about-section,
+    .objections-section,
+    .cta-section { padding: 64px 24px; }
+
+    .problem-grid { grid-template-columns: 1fr; gap: 48px; }
+    .positioning-grid { grid-template-columns: 1fr; }
+    .programmes-grid { grid-template-columns: 1fr; }
+    .numbers-grid { grid-template-columns: repeat(2, 1fr); gap: 28px; }
+    .testimonials-grid { grid-template-columns: 1fr; }
+    .about-grid { grid-template-columns: 1fr; gap: 40px; }
+    .about-image-badge { display: none; }
+    .objections-grid { grid-template-columns: 1fr; }
+
+    .footer { padding: 48px 24px 32px; }
+    .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+    .footer-bottom { flex-direction: column; align-items: flex-start; gap: 14px; }
+
+    .section-sub { margin-bottom: 40px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════
+     NAVIGATION
+══════════════════════════════════ -->
+<nav class="nav" id="nav">
+  <a href="#start" class="nav-logo" aria-label="Feminess – zur Startseite">
+    <img src="../CI/Logo-rosegoldverlauf-rgb.png" alt="Feminess">
+  </a>
+  <ul class="nav-links" role="list">
+    <li><a href="#start">Start</a></li>
+    <li><a href="#programme">Programme</a></li>
+    <li><a href="#marina">Über Marina</a></li>
+    <li><a href="#kontakt" class="nav-cta">Gespräch buchen</a></li>
+  </ul>
+  <button class="nav-hamburger" aria-label="Menü öffnen" aria-expanded="false" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</nav>
+
+<nav class="mobile-menu" id="mobileMenu" aria-label="Mobilnavigation">
+  <a href="#start">Start</a>
+  <a href="#programme">Programme</a>
+  <a href="#marina">Über Marina</a>
+  <a href="#kontakt" class="mobile-cta">Gespräch buchen →</a>
+</nav>
+
+
+<!-- ══════════════════════════════════
+     HERO
+══════════════════════════════════ -->
+<section class="hero" id="start">
+  <div class="hero-content">
+    <div class="hero-kicker">Für Frauen, die wissen, dass da noch mehr ist</div>
+
+    <h1>
+      Du hast alles gegeben.<br>
+      Es ist Zeit,<br>
+      <em>alles zu empfangen.</em>
+    </h1>
+
+    <p class="hero-sub">
+      Feminess begleitet dich in die persönliche und finanzielle Freiheit –
+      mit Transformation, die tiefer geht als jede Strategie allein.
+      Weil du weißt, dass du mehr kannst.
+      Und weil es Zeit ist, endlich danach zu leben.
+    </p>
+
+    <div class="hero-actions">
+      <a href="#programme" class="btn-primary">Entdecke dein Programm</a>
+      <a href="#marina" class="btn-ghost">Lerne Marina kennen</a>
+    </div>
+
+    <div class="hero-proof">
+      <div class="hero-proof-item">
+        <span>Jahre Erfahrung</span>
+        <strong>7+</strong>
+      </div>
+      <div class="hero-proof-item">
+        <span>Begleitete Frauen</span>
+        <strong>500+</strong>
+      </div>
+      <div class="hero-proof-item">
+        <span>Flagship-Programme</span>
+        <strong>3</strong>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-image" aria-hidden="true">
+    <img
+      src="../Bilder/Marina_MAI2314243 Kopie.jpg"
+      alt="Marina Henze – Coach für persönliche und finanzielle Freiheit"
+      loading="eager"
+    >
+    <div class="hero-image-overlay"></div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════
+     PROBLEM
+══════════════════════════════════ -->
+<section class="problem-section" id="problem">
+  <div class="container">
+    <div class="problem-grid">
+
+      <div>
+        <div class="section-kicker">Spürst du das auch?</div>
+        <h2 class="section-headline">Du weißt,<br>dass du <em>mehr</em> kannst.</h2>
+        <p class="section-sub" style="margin-bottom: 36px;">
+          Nicht weil du nicht hart genug arbeitest.
+          Sondern weil etwas Tieferes noch nicht angekommen ist.
+        </p>
+
+        <ul class="problem-list">
+          <li class="problem-item">
+            <div class="problem-dot"><div class="problem-dot-inner"></div></div>
+            <p class="problem-text">Du arbeitest, gibst, funktionierst – aber innerlich weißt du: <strong>Das kann nicht alles sein.</strong></p>
+          </li>
+          <li class="problem-item">
+            <div class="problem-dot"><div class="problem-dot-inner"></div></div>
+            <p class="problem-text">Du postest, planst, optimierst – und fragst dich trotzdem, <strong>warum der Durchbruch ausbleibt.</strong></p>
+          </li>
+          <li class="problem-item">
+            <div class="problem-dot"><div class="problem-dot-inner"></div></div>
+            <p class="problem-text">Du siehst andere wachsen und weißt: <strong>Du hast mindestens genauso viel drauf.</strong> Aber irgendwas blockiert dich noch.</p>
+          </li>
+          <li class="problem-item">
+            <div class="problem-dot"><div class="problem-dot-inner"></div></div>
+            <p class="problem-text">Dein Business frisst deine Zeit – aber <strong>die finanzielle Freiheit, die du dir vorgestellt hast,</strong> fühlt sich noch so weit weg an.</p>
+          </li>
+          <li class="problem-item">
+            <div class="problem-dot"><div class="problem-dot-inner"></div></div>
+            <p class="problem-text">Du hast schon Coachings gemacht. Aber <strong>wirklich verändert hat sich das Bild, das du von dir selbst hast, noch nicht.</strong></p>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="problem-card">
+          <div class="problem-card-label">Marina spricht direkt mit dir</div>
+          <p class="problem-card-quote">
+            „Ich weiß, du fühlst das. Dieses Wissen, dass in dir mehr steckt –
+            und diese stille Erschöpfung, weil es noch nicht draußen ist."
+          </p>
+          <div class="problem-card-body">
+            <p>Kein weiteres Strategie-Paket wird das lösen. Keine neue Methode, kein weiterer Workshop.</p>
+            <p>Was du brauchst, ist eine Transformation – von innen nach außen. Eine, die dein Mindset, deine Identität und dein Business gleichzeitig anhebt.</p>
+            <p>Dein Konto ist nur der Spiegel. Wir verändern das Bild dahinter. Genau dafür ist Feminess da.</p>
+          </div>
+          <span class="problem-card-sig">Be free, deine Marina</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════
+     POSITIONING
+══════════════════════════════════ -->
+<section class="positioning-section">
+  <div class="container">
+    <div class="section-kicker">Der Feminess-Weg</div>
+    <h2 class="section-headline">Nicht mehr arbeiten.<br><em>Die richtigen Hebel.</em></h2>
+    <p class="section-sub">
+      Was Feminess von allem anderen unterscheidet – und warum Frauen,
+      die mit mir arbeiten, nicht einfach mehr tun, sondern anders sein.
+    </p>
+
+    <div class="positioning-grid">
+      <div class="positioning-card">
+        <div class="positioning-card-num">01</div>
+        <div class="positioning-card-title">Identität vor Strategie</div>
+        <p class="positioning-card-text">
+          Dein Konto spiegelt, wer du innerlich bist. Solange du dich nicht als die Frau siehst,
+          die das verdient, was sie sich wünscht – wird keine Taktik das ändern.
+          Wir beginnen mit dir, nicht mit deinem Marketing.
+        </p>
+      </div>
+      <div class="positioning-card">
+        <div class="positioning-card-num">02</div>
+        <div class="positioning-card-title">Mindset trifft Money Mastery</div>
+        <p class="positioning-card-text">
+          Emotionale Transformation und finanzielle Intelligenz sind kein Widerspruch –
+          sie sind ein Dreiklang. Bei Feminess verbinden wir Mindset-Arbeit, Money Mastery
+          und Business-Strategie zu einem System, das wirklich hält.
+        </p>
+      </div>
+      <div class="positioning-card">
+        <div class="positioning-card-num">03</div>
+        <div class="positioning-card-title">Weiblichkeit als Erfolgskraft</div>
+        <p class="positioning-card-text">
+          Du musst keine männlichen Erfolgsstrategien kopieren, um zu wachsen.
+          Deine Intuition, deine Energie, deine Art zu führen – das ist dein größter
+          Wettbewerbsvorteil. Erlaube dir, damit zu bauen.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════
+     PROGRAMMES
+══════════════════════════════════ -->
+<section class="programmes-section" id="programme">
+  <div class="container">
+    <div class="section-kicker">Die Programme</div>
+    <h2 class="section-headline">Dein Weg zur <em>Freiheit</em><br>beginnt hier.</h2>
+    <p class="section-sub">
+      Drei Programme, eine Mission: Dich vollständig in die Freiheit zu begleiten –
+      persönlich, finanziell und unternehmerisch.
+    </p>
+
+    <div class="programmes-grid">
+
+      <!-- UNLIMITED FULLNESS -->
+      <article class="prog-card prog--fufp">
+        <div class="prog-card-header">
+          <span class="prog-badge">Flagship-Programm</span>
+          <h3 class="prog-title">Unlimited Fullness</h3>
+          <p class="prog-tagline">
+            Das tiefgreifendste Transformationsprogramm von Feminess –
+            für Frauen, die bereit sind, sich selbst radikal neu zu sehen
+            und ihr Business aus dieser neuen Identität heraus zu führen.
+          </p>
+        </div>
+        <div class="prog-card-body">
+          <ul class="prog-list">
+            <li>Tiefe Identitätsarbeit &amp; Money Mindset Reset</li>
+            <li>Finanzielle Intelligenz &amp; Business-Strategie im Dreiklang</li>
+            <li>Archetypisches Businessdesign mit deiner Energie</li>
+            <li>Individuelle Begleitung durch Marina persönlich</li>
+            <li>Community gleichgesinnter Unternehmerinnen</li>
+            <li>Emotionale Transformation, die wirklich sitzt</li>
+          </ul>
+        </div>
+        <div class="prog-card-footer">
+          <a href="#kontakt" class="prog-link">Mehr erfahren</a>
+        </div>
+      </article>
+
+      <!-- FIRST CHOICE -->
+      <article class="prog-card prog--fc">
+        <div class="prog-card-header">
+          <span class="prog-badge">Premium-Programm</span>
+          <h3 class="prog-title">First Choice</h3>
+          <p class="prog-tagline">
+            Werde zur unumstrittenen ersten Wahl für deine Traumkundinnen.
+            Magnetische Positionierung, die verkauft – ohne Aufdringlichkeit,
+            ohne Rabatte, ohne Kompromisse an deinem Wert.
+          </p>
+        </div>
+        <div class="prog-card-body">
+          <ul class="prog-list">
+            <li>Unverwechselbare Positionierung entwickeln</li>
+            <li>Angebot schärfen &amp; hochpreisig verkaufen</li>
+            <li>Klare Messaging-Strategie, die zieht statt jagt</li>
+            <li>Traumkundinnen, die von selbst zu dir kommen</li>
+            <li>Preise, die deinen wahren Wert spiegeln</li>
+            <li>No more excuses – du bist bereit</li>
+          </ul>
+        </div>
+        <div class="prog-card-footer">
+          <a href="#kontakt" class="prog-link">Mehr erfahren</a>
+        </div>
+      </article>
+
+      <!-- HIGHEST SELLING LAUNCH -->
+      <article class="prog-card prog--hsl">
+        <div class="prog-card-header">
+          <span class="prog-badge">Launch-Programm</span>
+          <h3 class="prog-title">Highest Selling Launch</h3>
+          <p class="prog-tagline">
+            Dein Launch, der wirklich verkauft. Die Strategie, die Energie,
+            das System – alles, was du brauchst, um deinen bisher
+            erfolgreichsten Launch zu kreieren.
+          </p>
+        </div>
+        <div class="prog-card-body">
+          <ul class="prog-list">
+            <li>Launch-Strategie von A bis Z durchgeplant</li>
+            <li>Sales-Copy &amp; Funnel-Aufbau, der konvertiert</li>
+            <li>Energetische Launch-Vorbereitung mit Marina</li>
+            <li>Live-Support direkt während deines Launches</li>
+            <li>Maximaler Umsatz – mit deutlich weniger Stress</li>
+            <li>Ein Launch-Ergebnis, das du nie vergisst</li>
+          </ul>
+        </div>
+        <div class="prog-card-footer">
+          <a href="#kontakt" class="prog-link">Mehr erfahren</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════
+     NUMBERS
+══════════════════════════════════ -->
+<section class="numbers-section">
+  <div class="container">
+    <div class="numbers-grid">
+      <div>
+        <div class="number-value">7+</div>
+        <div class="number-label">Jahre Erfahrung</div>
+        <p class="number-desc">im Coaching, Branding und Online-Business</p>
+      </div>
+      <div>
+        <div class="number-value">500+</div>
+        <div class="number-label">Frauen begleitet</div>
+        <p class="number-desc">in ihre persönliche &amp; finanzielle Freiheit</p>
+      </div>
+      <div>
+        <div class="number-value">3</div>
+        <div class="number-label">Starke Programme</div>
+        <p class="number-desc">für jeden Schritt auf deinem Weg zur Freiheit</p>
+      </div>
+      <div>
+        <div class="number-value">∞</div>
+        <div class="number-label">Möglichkeiten</div>
+        <p class="number-desc">wenn Identität, Mindset &amp; Strategie stimmen</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════
+     TESTIMONIALS
+══════════════════════════════════ -->
+<section class="testimonials-section" id="erfahrungen">
+  <div class="container">
+    <div class="section-kicker">Was Frauen sagen</div>
+    <h2 class="section-headline">Echte Frauen.<br><em>Echte Transformation.</em></h2>
+    <p class="section-sub">
+      Keine Versprechen. Keine Hochglanz-Geschichten.
+      Nur Frauen, die ihren nächsten Schritt gegangen sind.
+    </p>
+
+    <div class="testimonials-grid">
+
+      <div class="testimonial-card">
+        <span class="testimonial-open-quote" aria-hidden="true">"</span>
+        <p class="testimonial-quote">
+          Seit dem Unlimited Fullness Programm sehe ich mich und mein Business komplett anders.
+          Ich habe in wenigen Wochen mehr erreicht als in den zwei Jahren davor –
+          nicht weil ich mehr gearbeitet habe, sondern weil ich endlich wusste, wer ich wirklich bin.
+        </p>
+        <div class="testimonial-result">Verdreifachung des monatlichen Umsatzes</div>
+        <div class="testimonial-author">Sarah K.</div>
+        <div class="testimonial-role">Online-Coach &amp; Unternehmerin</div>
+      </div>
+
+      <div class="testimonial-card">
+        <span class="testimonial-open-quote" aria-hidden="true">"</span>
+        <p class="testimonial-quote">
+          Marina hat mir gezeigt, dass Geld und Weiblichkeit kein Widerspruch sind.
+          Ich verdiene heute das Dreifache von davor – und fühle mich dabei leichter
+          als je zuvor. Das hätte ich nie für möglich gehalten.
+        </p>
+        <div class="testimonial-result">Erstmals 5-stelliger Monatsumsatz erreicht</div>
+        <div class="testimonial-author">Daniela M.</div>
+        <div class="testimonial-role">Beraterin &amp; Business-Coach</div>
+      </div>
+
+      <div class="testimonial-card">
+        <span class="testimonial-open-quote" aria-hidden="true">"</span>
+        <p class="testimonial-quote">
+          First Choice hat meinen Blick auf mein Business revolutioniert.
+          Jahrelang war ich die Fleißige, die viel gibt und wenig nimmt.
+          Jetzt bin ich die erste Wahl in meiner Nische – mit Preisen,
+          die ich mir selbst kaum zu träumen gewagt hätte.
+        </p>
+        <div class="testimonial-result">Hochpreisige Kundinnen ohne Rabattgespräche</div>
+        <div class="testimonial-author">Petra L.</div>
+        <div class="testimonial-role">Therapeutin &amp; Mentorin</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════
+     ABOUT MARINA
+══════════════════════════════════ -->
+<section class="about-section" id="marina">
+  <div class="container">
+    <div class="about-grid">
+
+      <div class="about-image-wrap">
+        <img
+          src="../Bilder/Marina_MAI2314305 Kopie.jpg"
+          alt="Marina Henze – Gründerin von Feminess"
+          loading="lazy"
+        >
+        <div class="about-image-accent" aria-hidden="true"></div>
+        <div class="about-image-badge" aria-hidden="true">
+          <div class="about-badge-value">500+</div>
+          <div class="about-badge-label">Frauen begleitet</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="section-kicker">Über Marina</div>
+        <h2 class="section-headline">Ich war auch mal die Frau,<br>die <em>mehr wollte.</em></h2>
+
+        <p class="about-intro">
+          „Ich kenne das Gefühl, alles zu geben – und trotzdem das Gefühl zu haben,
+          dass es nicht reicht. Ich habe es selbst durchlebt.
+          Und ich habe den Weg heraus gefunden."
+        </p>
+
+        <p class="about-text">
+          Ich bin Marina Henze, Gründerin von Feminess und Coach für persönliche
+          und finanzielle Freiheit. <strong>Ich begleite Frauen zwischen 35 und 55,
+          die wissen, dass in ihnen mehr steckt</strong> – und die bereit sind,
+          endlich danach zu leben.
+        </p>
+
+        <p class="about-text">
+          Meine Arbeit verbindet, was lange getrennt wurde: emotionale Tiefe und
+          Business-Strategie, Mindset-Transformation und finanzielle Intelligenz,
+          weibliche Energie und unternehmerische Klarheit.
+          Das ist kein Zufall – das ist mein Lebenswerk.
+        </p>
+
+        <div class="about-highlights">
+          <div class="about-highlight">
+            <div class="about-highlight-dot" aria-hidden="true"></div>
+            <span>Über 7 Jahre Erfahrung im Coaching &amp; Business-Aufbau</span>
+          </div>
+          <div class="about-highlight">
+            <div class="about-highlight-dot" aria-hidden="true"></div>
+            <span>Mehr als 500 Frauen in die persönliche &amp; finanzielle Freiheit begleitet</span>
+          </div>
+          <div class="about-highlight">
+            <div class="about-highlight-dot" aria-hidden="true"></div>
+            <span>Spezialisiert auf Money Mindset, Identitätsarbeit &amp; Business-Strategie</span>
+          </div>
+          <div class="about-highlight">
+            <div class="about-highlight-dot" aria-hidden="true"></div>
+            <span>Gründerin von 3 hochkonvertierten Flagship-Programmen</span>
+          </div>
+          <div class="about-highlight">
+            <div class="about-highlight-dot" aria-hidden="true"></div>
+            <span>Verbindet Mindset, Emotion &amp; Strategie im einzigartigen Dreiklang</span>
+          </div>
+        </div>
+
+        <p class="about-text">
+          Dein Erfolg ist kein Glücksfall. Er ist das Ergebnis von Identität,
+          Klarheit und Strategie – in genau dieser Reihenfolge.
+          <strong>Ich zeige dir, wie.</strong>
+        </p>
+
+        <span class="about-sig">Be free, deine Marina</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════
+     EINWÄNDE / FAQ
+══════════════════════════════════ -->
+<section class="objections-section" id="faq">
+  <div class="container">
+    <div class="section-kicker">Deine Fragen</div>
+    <h2 class="section-headline">Ehrliche Antworten<br>auf <em>echte Einwände.</em></h2>
+    <p class="section-sub">
+      Spürst du das Ziehen – aber auch den Zweifel?
+      Hier sind die Fragen, die Frauen mir am häufigsten stellen. Und meine ehrlichen Antworten.
+    </p>
+
+    <div class="objections-grid">
+
+      <div class="objection-card">
+        <div class="objection-q">„Ich habe schon so viele Programme gebucht – warum sollte das anders sein?"</div>
+        <p class="objection-a">
+          Weil die meisten Programme dir Werkzeuge geben, aber nicht daran arbeiten,
+          wer du glaubst zu sein. <strong>Feminess beginnt mit deiner Identität.</strong>
+          Erst wenn du innerlich weißt, dass du die Frau bist, die das erreicht –
+          funktionieren auch alle Strategien. Das ist der Unterschied.
+        </p>
+      </div>
+
+      <div class="objection-card">
+        <div class="objection-q">„Ich habe gerade keine Zeit für noch ein Programm."</div>
+        <p class="objection-a">
+          Das kenne ich – und genau das ist das Problem, das wir lösen.
+          <strong>Wer kein System hat, hat keine Zeit.</strong>
+          Feminess zeigt dir, wie du in weniger Stunden mehr erreichst –
+          nicht durch Mehr, sondern durch das Richtige.
+        </p>
+      </div>
+
+      <div class="objection-card">
+        <div class="objection-q">„Ich bin nicht sicher, ob das in meiner Branche funktioniert."</div>
+        <p class="objection-a">
+          Die Prinzipien, mit denen wir arbeiten – Identität, Positioning, Mindset –
+          sind branchenunabhängig. <strong>Was sich ändert, bist du.</strong>
+          Eine Unternehmerin, die weiß, was sie wert ist,
+          findet immer ihren Weg. Egal wo.
+        </p>
+      </div>
+
+      <div class="objection-card">
+        <div class="objection-q">„Was, wenn ich die Investition nicht rechtfertigen kann?"</div>
+        <p class="objection-a">
+          Frag dich nicht, ob du dir das leisten kannst.
+          <strong>Frag dich, was es dich kostet, noch ein Jahr an derselben Stelle zu stehen.</strong>
+          Die Frauen, die mit mir arbeiten, holen ihre Investition schneller zurück,
+          als sie gedacht hätten.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════
+     CTA
+══════════════════════════════════ -->
+<section class="cta-section" id="kontakt">
+  <div class="cta-inner">
+    <div class="cta-kicker">Dein nächster Schritt</div>
+    <h2 class="cta-headline">
+      Du bist <em>bereit.</em><br>
+      Erlaube dir den Sprung.
+    </h2>
+    <p class="cta-text">
+      Du weißt es schon längst. Dieses Ziehen, dieser innere Wunsch nach mehr –
+      der ist kein Zufall. Er ist deine Einladung.<br><br>
+      <strong>Wenn du dich nach Leichtigkeit sehnst: Hier ist der Raum.</strong>
+    </p>
+    <a href="mailto:hallo@feminess.de" class="btn-primary-lg">Jetzt Gespräch buchen</a>
+    <span class="cta-note">
+      Kein Verkaufsdruck. Keine Verpflichtung.
+      Nur ein ehrliches Gespräch über deinen nächsten Schritt.
+    </span>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════
+     FOOTER
+══════════════════════════════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+
+      <div class="footer-brand-logo">
+        <img src="../CI/Logo-rosegoldverlauf-rgb.png" alt="Feminess">
+        <p class="footer-brand-text">
+          Feminess begleitet Frauen zwischen 35 und 55 in ihre persönliche
+          und finanzielle Freiheit – durch Transformation, die wirklich sitzt.
+        </p>
+        <span class="footer-brand-sig">Be free.</span>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-col-label">Programme</div>
+        <ul>
+          <li><a href="#programme">Unlimited Fullness</a></li>
+          <li><a href="#programme">First Choice</a></li>
+          <li><a href="#programme">Highest Selling Launch</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-col-label">Navigation</div>
+        <ul>
+          <li><a href="#start">Start</a></li>
+          <li><a href="#problem">Für wen?</a></li>
+          <li><a href="#marina">Über Marina</a></li>
+          <li><a href="#erfahrungen">Erfahrungen</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-col-label">Rechtliches</div>
+        <ul>
+          <li><a href="#">Impressum</a></li>
+          <li><a href="#">Datenschutz</a></li>
+          <li><a href="#">AGB</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 Feminess · Marina Henze · Alle Rechte vorbehalten</div>
+      <div class="footer-legal">
+        <a href="#">Impressum</a>
+        <a href="#">Datenschutz</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+  /* Mobile Menu */
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  hamburger.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  /* Nav scroll opacity */
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.style.borderBottomColor = window.scrollY > 40
+      ? 'rgba(94, 198, 179, 0.16)'
+      : 'rgba(94, 198, 179, 0.10)';
+  }, { passive: true });
+</script>
+
+</body>
+</html>
