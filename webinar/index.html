@@ -761,37 +761,33 @@
 
     /* ── FÜR DICH ── */
     .fuer-dich-section {
-      background: var(--dark);
+      background: #fff;
       padding: 100px 0;
       position: relative;
       overflow: hidden;
     }
-    .fuer-dich-section::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 3px;
-      background: linear-gradient(90deg, var(--teal), var(--teal-light));
-    }
+    .fuer-dich-section::before { display: none; }
     .fuer-dich-inner {
       max-width: 1000px;
       margin: 0 auto;
       padding: 0 40px;
     }
-    .fuer-dich-inner h2 { color: #fff; text-align: center; margin-bottom: 56px; }
+    .fuer-dich-inner h2 { color: var(--dark); text-align: center; margin-bottom: 56px; }
     .fuer-dich-inner h2 em { color: var(--rose); }
+    .fuer-dich-section .section-label { color: var(--teal); }
+    .fuer-dich-section .section-label::after { background: var(--teal); }
     .fuer-dich-stack { display: flex; flex-direction: column; gap: 20px; }
     .fuer-dich-box {
       border-radius: 12px;
       padding: 32px 36px;
     }
     .fuer-dich-box.ja {
-      background: rgba(94,198,179,0.08);
-      border: 1px solid rgba(94,198,179,0.25);
+      background: rgba(94,198,179,0.10);
+      border: 1px solid rgba(37,124,108,0.20);
     }
     .fuer-dich-box.nein {
       background: rgba(207,90,115,0.07);
-      border: 1px solid rgba(207,90,115,0.22);
+      border: 1px solid rgba(207,90,115,0.20);
     }
     .fuer-dich-box-header {
       display: flex;
@@ -809,7 +805,7 @@
       position: relative;
       padding-left: 18px;
       font-size: 15px;
-      color: rgba(255,255,255,0.78);
+      color: var(--warm-gray);
       line-height: 1.7;
     }
     .fuer-dich-list li::before {
@@ -823,7 +819,7 @@
     }
     .fuer-dich-box.ja .fuer-dich-list li::before { background: var(--teal-light); }
     .fuer-dich-box.nein .fuer-dich-list li::before { background: var(--rose); }
-    .fuer-dich-list li strong { color: #fff; }
+    .fuer-dich-list li strong { color: var(--dark); }
 
     /* ── BONUS ── */
     .bonus-section {
@@ -1454,7 +1450,7 @@ window._load_script = function(url, callback, isSubmit) {
 <!-- FÜR DICH -->
 <section class="fuer-dich-section">
   <div class="fuer-dich-inner">
-    <div class="section-label" style="color:var(--teal-light); justify-content:center;">Für wen ist das?</div>
+    <div class="section-label" style="justify-content:center;">Für wen ist das?</div>
     <h2>Dieses Webinar ist <em>genau für dich,</em> wenn …</h2>
     <div class="fuer-dich-stack">
       <div class="fuer-dich-box ja">
