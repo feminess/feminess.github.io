@@ -806,20 +806,20 @@
     .fuer-dich-box.nein .fuer-dich-box-header { color: var(--rose); }
     .fuer-dich-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
     .fuer-dich-list li {
-      display: flex;
-      gap: 12px;
-      align-items: flex-start;
+      position: relative;
+      padding-left: 18px;
       font-size: 15px;
       color: rgba(255,255,255,0.78);
       line-height: 1.7;
     }
     .fuer-dich-list li::before {
       content: '';
-      flex-shrink: 0;
+      position: absolute;
+      left: 0;
+      top: 9px;
       width: 6px;
       height: 6px;
       border-radius: 50%;
-      margin-top: 9px;
     }
     .fuer-dich-box.ja .fuer-dich-list li::before { background: var(--teal-light); }
     .fuer-dich-box.nein .fuer-dich-list li::before { background: var(--rose); }
