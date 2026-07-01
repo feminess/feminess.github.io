@@ -759,6 +759,74 @@
     .testimonial-text { font-size: 14.5px; color: var(--warm-gray); line-height: 1.8; margin-bottom: 20px; }
     .testimonial-author { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--rose); }
 
+    /* ── FÜR DICH ── */
+    .fuer-dich-section {
+      background: var(--dark);
+      padding: 100px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .fuer-dich-section::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 3px;
+      background: linear-gradient(90deg, var(--teal), var(--teal-light));
+    }
+    .fuer-dich-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+    .fuer-dich-inner h2 { color: #fff; text-align: center; margin-bottom: 56px; }
+    .fuer-dich-inner h2 em { color: var(--rose); }
+    .fuer-dich-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+    .fuer-dich-col h3 {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid;
+    }
+    .fuer-dich-col.ja h3 { color: var(--teal-light); border-color: var(--teal-light); }
+    .fuer-dich-col.nein h3 { color: var(--rose); border-color: var(--rose); }
+    .fuer-dich-list { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+    .fuer-dich-list li {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      font-size: 15px;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.7;
+    }
+    .fuer-dich-list li::before {
+      content: '';
+      flex-shrink: 0;
+      width: 18px;
+      height: 18px;
+      margin-top: 3px;
+      border-radius: 50%;
+      background-size: 10px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    .fuer-dich-col.ja .fuer-dich-list li::before {
+      background-color: rgba(94,198,179,0.15);
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 12 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 6l3 3 5-5' stroke='%235ec6b3' stroke-width='1.8' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    }
+    .fuer-dich-col.nein .fuer-dich-list li::before {
+      background-color: rgba(207,90,115,0.15);
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 12 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3 3l6 6M9 3l-6 6' stroke='%23cf5a73' stroke-width='1.8' stroke-linecap='round'/%3E%3C/svg%3E");
+    }
+    .fuer-dich-list li strong { color: #fff; }
+    @media (max-width: 768px) { .fuer-dich-grid { grid-template-columns: 1fr; } }
+
     /* ── BONUS ── */
     .bonus-section {
       background: var(--dark);
@@ -783,18 +851,46 @@
     .bonus-section .section-label::after { background: var(--teal-light); }
     .bonus-section h2 { color: #fff; }
     .bonus-section h2 em { color: var(--sand-light); }
-    .bonus-section .section-intro { color: var(--mid-gray); font-style: italic; margin-bottom: 36px; }
-    .bonus-cards { display: flex; flex-direction: column; gap: 16px; }
-    .bonus-card {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(94,198,179,0.15);
-      border-left: 3px solid var(--teal);
-      border-radius: 0 8px 8px 0;
-      padding: 24px 28px;
-      transition: background 0.25s ease, transform 0.25s ease, border-left-color 0.25s ease;
+    .bonus-section .section-intro { color: var(--mid-gray); font-style: italic; margin-bottom: 48px; }
+    .bonus-gift-box {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(94,198,179,0.2);
+      border-radius: 20px;
+      padding: 48px;
+      position: relative;
+      overflow: hidden;
     }
-    .bonus-card:hover { background: rgba(255,255,255,0.09); transform: translateX(5px); border-left-color: var(--rose); }
-    .bonus-card p { font-size: 15px; color: rgba(255,255,255,0.78); margin: 0; line-height: 1.75; }
+    .bonus-gift-box::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at top right, rgba(207,90,115,0.08) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .bonus-gift-icon {
+      flex-shrink: 0;
+      width: 100px;
+      height: 100px;
+      background: linear-gradient(135deg, var(--teal-dark), var(--teal));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 44px;
+      box-shadow: 0 0 40px rgba(37,124,108,0.35);
+    }
+    .bonus-gift-text h3 {
+      font-family: 'East Liberty', serif;
+      font-size: 28px;
+      font-weight: 400;
+      color: var(--sand-light);
+      margin-bottom: 12px;
+    }
+    .bonus-gift-text p { font-size: 16px; color: rgba(255,255,255,0.75); margin: 0; line-height: 1.8; }
+    @media (max-width: 600px) { .bonus-gift-box { flex-direction: column; text-align: center; } }
 
     /* ── SPEAKER ── */
     .speaker-section {
@@ -1277,6 +1373,12 @@ window._load_script = function(url, callback, isSubmit) {
           <p>Du entwickelst deine <strong>eigene Definition von Erfolg und Freiheit</strong>, die nicht mehr von Vergleich, Anpassung oder fremden Regeln bestimmt wird.</p>
         </div>
       </div>
+      <div class="benefit-card" style="grid-column: 1 / -1;">
+        <div class="benefit-num">7</div>
+        <div class="benefit-body">
+          <p>Am Ende des Online-Live-Events nehme ich mir noch Zeit dafür, <strong>all deine Fragen zu beantworten.</strong> Also halte deinen Kalender <strong>lange genug frei.</strong></p>
+        </div>
+      </div>
     </div>
     <div style="text-align:center;">
       <button class="btn-cta" onclick="openModal()">Jetzt nach deinen eigenen Regeln spielen</button>
@@ -1351,27 +1453,47 @@ window._load_script = function(url, callback, isSubmit) {
   </div>
 </section>
 
+<!-- FÜR DICH -->
+<section class="fuer-dich-section">
+  <div class="fuer-dich-inner">
+    <div class="section-label" style="color:var(--teal-light); justify-content:center;">Für wen ist das?</div>
+    <h2>Dieses Webinar ist <em>genau für dich,</em> wenn …</h2>
+    <div class="fuer-dich-grid">
+      <div class="fuer-dich-col ja">
+        <h3>Ja, das bin ich</h3>
+        <ul class="fuer-dich-list">
+          <li>… du spürst, dass du keine Lust mehr hast, immer erschöpft zu funktionieren, sondern wieder <strong>lebendig und energievoll</strong> sein willst.</li>
+          <li>… du müde bist, ständig neue Strategien auszuprobieren, ohne dass sich wirklich <strong>etwas verändert.</strong></li>
+          <li>… du bereit bist, <strong>an den Ursprung zu gehen</strong>, statt weiter an der Oberfläche zu kratzen.</li>
+          <li>… du dein Business als <strong>Ausdruck deiner Selbst</strong> leben willst, nicht als Marionette von außen fremdbestimmt.</li>
+          <li>… <strong>2026 dein Jahr</strong> werden soll, in dem du endlich den ewigen Kampf aufgibst und als du Selbst dein erfolgreiches Business führen willst.</li>
+        </ul>
+      </div>
+      <div class="fuer-dich-col nein">
+        <h3>Nicht für dich</h3>
+        <ul class="fuer-dich-list">
+          <li>du nach weiteren gratis <strong>Strategien, Taktiken</strong> oder dem nächsten Funnel suchst.</li>
+          <li>du die Einstellung hast, du weißt schon alles und es gibt <strong>niemanden, der dir noch helfen könnte.</strong></li>
+          <li>du von einem Webinar zum nächsten hüpfst, <strong>ohne wirklich bereit zu sein,</strong> etwas zu ändern.</li>
+          <li>du dich anmeldest, aber nicht bereit bist, diesen Termin <strong>wirklich einzuplanen</strong> und live dabei zu sein.</li>
+          <li>du nicht bereit bist, deine <strong>alten Geschichten loszulassen</strong> und stattdessen auf eine Fee wartest, die für dich alles löst.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- BONUS -->
 <section class="bonus-section">
   <div class="bonus-inner">
     <div class="section-label">Exklusiver Bonus</div>
     <h2>Dein exklusives <em>Geschenk!</em></h2>
     <p class="section-intro">Wenn du live dabei bist, erhältst du „The Energy Block Mirror" – eine tiefenpsychologische Analyse, die dir schonungslos zeigt, wo deine Energie gerade blockiert ist und dich von deinem nächsten Umsatz-Wachstum abhält.</p>
-    <div class="bonus-cards">
-      <div class="bonus-card">
-        <p>… du spürst, dass du <strong>keine Lust mehr hast</strong>, immer erschöpft zu funktionieren, sondern wieder <strong>lebendig und energievoll</strong> sein willst.</p>
-      </div>
-      <div class="bonus-card">
-        <p>… du müde bist, ständig <strong>neue Strategien auszuprobieren</strong>, ohne dass sich wirklich etwas verändert.</p>
-      </div>
-      <div class="bonus-card">
-        <p>… du bereit bist, <strong>an den Ursprung zu gehen</strong>, statt weiter an der Oberfläche zu kratzen.</p>
-      </div>
-      <div class="bonus-card">
-        <p>… du dein Business als <strong>Ausdruck deiner Selbst</strong> leben willst, nicht als Marionette von außen fremdbestimmt.</p>
-      </div>
-      <div class="bonus-card">
-        <p>… <strong>2026 dein Jahr</strong> werden soll, in dem du endlich den ewigen Kampf aufgibst und <strong>als du Selbst</strong> dein erfolgreiches Business führen willst.</p>
+    <div class="bonus-gift-box">
+      <div class="bonus-gift-icon">🎁</div>
+      <div class="bonus-gift-text">
+        <h3>The Energy Block Mirror</h3>
+        <p>Eine <strong>tiefenpsychologische Analyse</strong>, die dir schonungslos zeigt, wo deine Energie gerade blockiert ist – und was dich von deinem nächsten <strong>Umsatz-Wachstum</strong> abhält. Nur für Live-Teilnehmerinnen.</p>
       </div>
     </div>
   </div>
