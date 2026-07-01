@@ -503,27 +503,13 @@
 
     /* ── BENEFITS ── */
     .benefits-section {
-      background: var(--dark);
+      background: var(--cream);
       padding: 100px 0;
       position: relative;
       overflow: hidden;
     }
-    .benefits-section::before {
-      content: '';
-      position: absolute;
-      top: -120px; right: -120px;
-      width: 500px; height: 500px;
-      background: radial-gradient(circle, rgba(207,90,115,0.10) 0%, transparent 65%);
-      pointer-events: none;
-    }
-    .benefits-section::after {
-      content: '';
-      position: absolute;
-      bottom: -80px; left: -80px;
-      width: 400px; height: 400px;
-      background: radial-gradient(circle, rgba(37,124,108,0.14) 0%, transparent 65%);
-      pointer-events: none;
-    }
+    .benefits-section::before { display: none; }
+    .benefits-section::after { display: none; }
     .benefits-inner {
       max-width: 1100px;
       margin: 0 auto;
@@ -535,7 +521,9 @@
       text-align: center;
       margin-bottom: 64px;
     }
-    .benefits-header h2 { color: #fff; }
+    .benefits-header h2 { color: var(--dark); }
+    .benefits-section .section-label { color: var(--teal); }
+    .benefits-section .section-label::after { background: var(--teal); }
     .benefits-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -543,20 +531,20 @@
       margin-bottom: 52px;
     }
     .benefit-card {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.08);
+      background: #fff;
+      border: 1px solid var(--beige);
       border-radius: 16px;
       padding: 36px 32px;
       display: flex;
       gap: 24px;
       align-items: flex-start;
-      transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
-      backdrop-filter: blur(6px);
+      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 2px 12px rgba(13,36,32,0.06);
     }
     .benefit-card:hover {
       transform: translateY(-4px);
       border-color: rgba(207,90,115,0.35);
-      background: rgba(255,255,255,0.07);
+      box-shadow: 0 8px 32px rgba(13,36,32,0.10);
     }
     .benefit-num {
       flex: 0 0 44px;
@@ -572,8 +560,8 @@
       line-height: 1;
       flex-shrink: 0;
     }
-    .benefit-body p { font-size: 15px; color: rgba(255,255,255,0.72); margin: 0; line-height: 1.75; }
-    .benefit-body p strong { color: #fff; font-weight: 700; }
+    .benefit-body p { font-size: 15px; color: var(--warm-gray); margin: 0; line-height: 1.75; }
+    .benefit-body p strong { color: var(--dark); font-weight: 700; }
 
     /* ── PERFECT FOR YOU ── */
     .perfect-section {
@@ -1244,7 +1232,7 @@ window._load_script = function(url, callback, isSubmit) {
 <section class="benefits-section">
   <div class="benefits-inner">
     <div class="benefits-header">
-      <div class="section-label">Was dich erwartet</div>
+      <div class="section-label">Deine Transformation</div>
       <h2>Wie wir deine Energie für <em>Millionen</em> freisetzen</h2>
     </div>
     <div class="benefits-grid">
@@ -1295,7 +1283,7 @@ window._load_script = function(url, callback, isSubmit) {
 <!-- WAS ERWARTET DICH -->
 <section class="how-section">
   <div class="how-inner">
-    <div class="section-label">Was erwartet dich?</div>
+    <div class="section-label">Der Ablauf</div>
     <h2 style="text-align:center; color:#fff; margin-bottom:16px;">Nicht nur ein Event –<br>deine <em style="color:var(--sand-light);">Wiedergeburt</em></h2>
     <p class="how-intro">Es erwartet dich nicht nur ein Live-Event, sondern deine Wiedergeburt als ungezähmte Unternehmerin, die bedingungslos für ihr erfolgreiches, freies Business einsteht.</p>
     <div class="journey-cards">
