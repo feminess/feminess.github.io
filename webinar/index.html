@@ -83,35 +83,48 @@
       z-index: 1;
     }
 
-    /* Vollbild-Hintergrund */
-    .hero {
-      background-image: url('Bilder/Marina_MAI2314269 Kopie.jpg');
-      background-size: cover;
-      background-position: center 30%;
-      background-repeat: no-repeat;
-    }
-    .hero::after {
-      content: '';
-      position: absolute; inset: 0;
-      background: linear-gradient(to right, rgba(13,36,32,0.92) 0%, rgba(13,36,32,0.65) 55%, rgba(13,36,32,0.20) 100%);
-      z-index: 1;
-      pointer-events: none;
-    }
+    /* 2-column grid: text left, image right */
     .hero-inner {
+      display: grid;
+      grid-template-columns: 55fr 45fr;
+      min-height: auto;
       position: relative;
       z-index: 2;
-      min-height: 75vh;
-      display: flex;
-      align-items: center;
     }
     .hero-content {
-      padding: 80px 56px 80px 80px;
-      max-width: 700px;
+      padding: 24px 56px 24px 80px;
       display: flex;
       flex-direction: column;
       justify-content: center;
     }
-    .hero-image { display: none; }
+    .hero-image {
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-image img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center bottom;
+      display: block;
+    }
+    /* Gradient: dark bleeds from left into photo */
+    .hero-image::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(to right, var(--dark) 0%, rgba(13,36,32,0.12) 42%, transparent 72%);
+      z-index: 1;
+      pointer-events: none;
+    }
+    /* Gradient: dark at bottom */
+    .hero-image::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 30%;
+      background: linear-gradient(to top, var(--dark) 0%, transparent 100%);
+      z-index: 1;
+      pointer-events: none;
+    }
 
     .hero-tilt {
       position: absolute;
