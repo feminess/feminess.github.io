@@ -956,6 +956,7 @@
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-content">
+      <p id="utm-message" style="display:none; font-size:20px; font-weight:400; color:#fff; line-height:1.7; max-width:520px; margin-bottom:16px;">Super, du hast dir die Analyse gesichert und wir haben noch ein Geschenk für dich!</p>
       <h1>Energy <em>for</em> Million</h1>
       <p class="hero-subtitle">
         Sei die ungezähmte Unternehmerin, <strong>FREI von Druck, Zwang, Zweifel und Erschöpfung.</strong> Führe dein Business nach deinen eigenen Regeln, mit der <strong>ENERGIE die Geld und Erfolg anziehst.</strong>
@@ -1439,6 +1440,11 @@ window._load_script = function(url, callback, isSubmit) {
 </footer>
 
 <script>
+  /* ── UTM MESSAGE ── */
+  if (new URLSearchParams(window.location.search).get('utm_source') === 'tcc') {
+    document.getElementById('utm-message').style.display = 'block';
+  }
+
   /* ── COUNTDOWN ── */
   /* 15.07.2026 11:00 Uhr CEST = 09:00 UTC */
   const target = new Date('2026-07-15T09:00:00Z');
