@@ -1009,29 +1009,102 @@
       .footer-links { justify-content: center; }
     }
 
-    /* ── RESPONSIVE ── */
+    /* ── RESPONSIVE: TABLET ── */
     @media (max-width: 900px) {
+      /* Hero */
       .hero-inner { grid-template-columns: 1fr; min-height: auto; }
-      .hero-image { height: 40vh; order: -1; }
+      .hero-image { height: 45vh; order: -1; }
       .hero-image::before { background: linear-gradient(to bottom, transparent 40%, var(--dark) 100%); }
       .hero-image::after { display: none; }
-      .hero-content { padding: 32px 40px 80px; }
+      .hero-content { padding: 36px 40px 60px; }
       .countdown { justify-content: flex-start; }
-      .benefits-inner { flex-direction: column; gap: 40px; }
+      /* Benefits */
+      .benefits-grid { grid-template-columns: 1fr; }
+      /* Testimonials */
       .testimonials-grid { grid-template-columns: 1fr 1fr; }
+      /* Speaker */
       .speaker-inner { flex-direction: column; }
-      .speaker-portrait { flex: none; width: 100%; }
+      .speaker-portrait { flex: none; width: 100%; max-width: 280px; margin: 0 auto; }
+      /* Journey */
+      .journey-cards { grid-template-columns: 1fr; }
+      /* Für-dich */
+      .fuer-dich-grid { grid-template-columns: 1fr; }
+      /* Footer */
       .footer-inner { flex-direction: column; text-align: center; }
       .footer-links { justify-content: center; }
     }
+
+    /* ── RESPONSIVE: MOBILE ── */
     @media (max-width: 600px) {
-      .testimonials-grid { grid-template-columns: 1fr; }
+      /* Allgemein */
+      body { font-size: 15px; }
+      h1 { font-size: clamp(36px, 10vw, 52px) !important; }
+      h2 { font-size: clamp(26px, 7vw, 36px) !important; }
+
+      /* Padding aller Sektionen */
+      .hero-content { padding: 28px 20px 56px; }
       .text-inner, .benefits-inner, .perfect-inner, .how-inner,
-      .testimonials-inner, .bonus-inner, .speaker-inner, .final-cta-inner { padding-left: 24px; padding-right: 24px; }
-      .logos-section { padding: 40px 24px; }
-      .logos-grid { gap: 28px; }
-      .logos-grid img { height: 22px; }
-      .modal { padding: 36px 24px 28px; }
+      .testimonials-inner, .bonus-inner, .speaker-inner,
+      .final-cta-inner, .fuer-dich-inner { padding-left: 20px; padding-right: 20px; }
+      .text-section, .benefits-section { padding: 64px 0; }
+      .how-section, .bonus-section, .fuer-dich-section,
+      .testimonials-section, .speaker-section { padding: 64px 0; }
+      .final-cta { padding: 72px 0; }
+
+      /* Hero */
+      .hero-image { height: 56vw; }
+      .hero-subtitle { font-size: 17px; }
+      .hero-date { font-size: 11px; letter-spacing: 1.5px; }
+      .btn-hero { padding: 17px 32px; font-size: 13px; width: 100%; text-align: center; }
+      #utm-message { font-size: 17px; }
+
+      /* Countdown */
+      .countdown { gap: 18px; }
+      .countdown-digits { font-size: 38px !important; }
+
+      /* Benefits */
+      .benefits-grid { grid-template-columns: 1fr; gap: 16px; }
+      .benefit-card { padding: 24px 20px; gap: 16px; }
+      .benefit-num { width: 36px; height: 36px; font-size: 18px; flex: 0 0 36px; }
+
+      /* Logos */
+      .logos-section { padding: 36px 20px; }
+
+      /* Journey cards */
+      .journey-cards { grid-template-columns: 1fr; gap: 16px; margin-bottom: 40px; }
+      .journey-card { padding: 28px 24px; }
+
+      /* Testimonials */
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .testimonial-card { padding: 24px 20px; }
+
+      /* Für dich */
+      .fuer-dich-box { padding: 24px 20px; }
+
+      /* Bonus */
+      .bonus-gift-box { flex-direction: column; text-align: center; padding: 32px 24px; gap: 24px; }
+      .bonus-gift-icon { width: 80px; height: 80px; font-size: 36px; margin: 0 auto; }
+      .bonus-gift-text h3 { font-size: 22px; }
+
+      /* Speaker */
+      .speaker-portrait img { width: 160px; height: 160px; }
+      .speaker-bio { padding-top: 0; }
+
+      /* Buttons */
+      .btn-cta { padding: 17px 28px; font-size: 13px; width: 100%; text-align: center; }
+
+      /* Final CTA */
+      .countdown-final { gap: 16px; }
+      .countdown-final .countdown-digits { font-size: 38px; }
+
+      /* Modal */
+      .modal { padding: 32px 20px 24px; }
+      .modal-overlay { align-items: flex-end; }
+      .modal { border-radius: 16px 16px 0 0; }
+
+      /* Footer */
+      footer { padding: 36px 20px; }
+      .footer-links { gap: 20px; flex-wrap: wrap; }
     }
   </style>
 </head>
