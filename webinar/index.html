@@ -780,52 +780,50 @@
     }
     .fuer-dich-inner h2 { color: #fff; text-align: center; margin-bottom: 56px; }
     .fuer-dich-inner h2 em { color: var(--rose); }
-    .fuer-dich-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 32px;
+    .fuer-dich-stack { display: flex; flex-direction: column; gap: 20px; }
+    .fuer-dich-box {
+      border-radius: 12px;
+      padding: 32px 36px;
     }
-    .fuer-dich-col h3 {
-      font-size: 11px;
+    .fuer-dich-box.ja {
+      background: rgba(94,198,179,0.08);
+      border: 1px solid rgba(94,198,179,0.25);
+    }
+    .fuer-dich-box.nein {
+      background: rgba(207,90,115,0.07);
+      border: 1px solid rgba(207,90,115,0.22);
+    }
+    .fuer-dich-box-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
       font-weight: 700;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      margin-bottom: 24px;
-      padding-bottom: 12px;
-      border-bottom: 2px solid;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
     }
-    .fuer-dich-col.ja h3 { color: var(--teal-light); border-color: var(--teal-light); }
-    .fuer-dich-col.nein h3 { color: var(--rose); border-color: var(--rose); }
-    .fuer-dich-list { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+    .fuer-dich-box.ja .fuer-dich-box-header { color: var(--teal-light); }
+    .fuer-dich-box.nein .fuer-dich-box-header { color: var(--rose); }
+    .fuer-dich-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
     .fuer-dich-list li {
       display: flex;
       gap: 12px;
       align-items: flex-start;
       font-size: 15px;
-      color: rgba(255,255,255,0.75);
+      color: rgba(255,255,255,0.78);
       line-height: 1.7;
     }
     .fuer-dich-list li::before {
       content: '';
       flex-shrink: 0;
-      width: 18px;
-      height: 18px;
-      margin-top: 3px;
+      width: 6px;
+      height: 6px;
       border-radius: 50%;
-      background-size: 10px;
-      background-repeat: no-repeat;
-      background-position: center;
+      margin-top: 9px;
     }
-    .fuer-dich-col.ja .fuer-dich-list li::before {
-      background-color: rgba(94,198,179,0.15);
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 12 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 6l3 3 5-5' stroke='%235ec6b3' stroke-width='1.8' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-    }
-    .fuer-dich-col.nein .fuer-dich-list li::before {
-      background-color: rgba(207,90,115,0.15);
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 12 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3 3l6 6M9 3l-6 6' stroke='%23cf5a73' stroke-width='1.8' stroke-linecap='round'/%3E%3C/svg%3E");
-    }
+    .fuer-dich-box.ja .fuer-dich-list li::before { background: var(--teal-light); }
+    .fuer-dich-box.nein .fuer-dich-list li::before { background: var(--rose); }
     .fuer-dich-list li strong { color: #fff; }
-    @media (max-width: 768px) { .fuer-dich-grid { grid-template-columns: 1fr; } }
 
     /* ── BONUS ── */
     .bonus-section {
@@ -1458,9 +1456,9 @@ window._load_script = function(url, callback, isSubmit) {
   <div class="fuer-dich-inner">
     <div class="section-label" style="color:var(--teal-light); justify-content:center;">Für wen ist das?</div>
     <h2>Dieses Webinar ist <em>genau für dich,</em> wenn …</h2>
-    <div class="fuer-dich-grid">
-      <div class="fuer-dich-col ja">
-        <h3>Ja, das bin ich</h3>
+    <div class="fuer-dich-stack">
+      <div class="fuer-dich-box ja">
+        <div class="fuer-dich-box-header">✓ &nbsp;Dieses Webinar ist genau für dich, wenn:</div>
         <ul class="fuer-dich-list">
           <li>… du spürst, dass du keine Lust mehr hast, immer erschöpft zu funktionieren, sondern wieder <strong>lebendig und energievoll</strong> sein willst.</li>
           <li>… du müde bist, ständig neue Strategien auszuprobieren, ohne dass sich wirklich <strong>etwas verändert.</strong></li>
@@ -1469,8 +1467,8 @@ window._load_script = function(url, callback, isSubmit) {
           <li>… <strong>2026 dein Jahr</strong> werden soll, in dem du endlich den ewigen Kampf aufgibst und als du Selbst dein erfolgreiches Business führen willst.</li>
         </ul>
       </div>
-      <div class="fuer-dich-col nein">
-        <h3>Nicht für dich</h3>
+      <div class="fuer-dich-box nein">
+        <div class="fuer-dich-box-header">✕ &nbsp;Nicht für dich, wenn:</div>
         <ul class="fuer-dich-list">
           <li>du nach weiteren gratis <strong>Strategien, Taktiken</strong> oder dem nächsten Funnel suchst.</li>
           <li>du die Einstellung hast, du weißt schon alles und es gibt <strong>niemanden, der dir noch helfen könnte.</strong></li>
