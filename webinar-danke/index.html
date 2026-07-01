@@ -132,36 +132,14 @@
     padding: 64px 33px;
     text-align: center;
   }
-  .termin-kicker {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    font-weight: 700;
-    font-size: 11px;
-    letter-spacing: 2.5px;
-    text-transform: uppercase;
-    color: var(--maroon);
-    margin-bottom: 16px;
-  }
-  .termin-kicker::before {
-    content: '';
-    width: 24px;
-    height: 1px;
-    background: var(--maroon);
-    opacity: 0.5;
-  }
   .section-termin h3 {
     font-size: clamp(22px, 3vw, 30px);
     font-weight: 700;
     color: #222;
-    margin-bottom: 14px;
+    margin-bottom: 20px;
     max-width: 640px;
     margin-left: auto;
     margin-right: auto;
-  }
-  .section-termin h3 em {
-    font-style: normal;
-    color: var(--teal);
   }
   .section-termin > p {
     max-width: 560px;
@@ -169,6 +147,10 @@
     font-size: 16px;
     color: #444;
     line-height: 1.7;
+  }
+  .section-termin em {
+    font-style: normal;
+    color: var(--teal);
   }
   .cal-buttons {
     display: flex;
@@ -295,8 +277,8 @@
 
   <!-- ── WEBINAR-TERMIN ── -->
   <section class="section-termin">
-    <span class="termin-kicker">1. Dein Webinar-Termin</span>
-    <h3>Das Webinar <em>„Energy for Million"</em> findet am 15.07.26 von 11 Uhr bis 13 Uhr statt.</h3>
+    <h3>Dein Webinar-Termin</h3>
+    <p>Das Webinar <em>„Energy for Million"</em> findet am 15.07.26 von 11 Uhr bis 13 Uhr statt.</p>
     <p>Trage dir den Termin jetzt in deinen Kalender:</p>
 
     <div class="cal-buttons">
