@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Webinar - Danke - Feminess</title>
+<link rel="icon" href="https://feminess.de/wp-content/uploads/cropped-favicon@2x-1-32x32.png" sizes="32x32">
+<style>
+  @font-face {
+    font-family: 'Avenir LT Pro';
+    src: url('https://feminess.de/wp-content/uploads/AvenirLTPro-Book.woff2') format('woff2');
+    font-weight: 400; font-style: normal;
+  }
+  @font-face {
+    font-family: 'Avenir LT Pro';
+    src: url('https://feminess.de/wp-content/uploads/Avenir-LT-Pro-85-Heavy.woff2') format('woff2');
+    font-weight: 700; font-style: normal;
+  }
+
+  :root {
+    --maroon:      #861627;
+    --sand:        #C2AB8D;
+    --sand-text:   #8D6A48;
+    --teal:        #257C6C;
+    --dark-teal:   #041B17;
+    --footer-bg:   #282828;
+    --footer-text: #E6E6E6;
+    --copyright:   #A5A5A5;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Avenir LT Pro', sans-serif;
+    line-height: 1.6;
+    color: #222;
+    background: rgba(194,171,141,0.16);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── FRAME ── */
+  .page-frame {
+    border: 10px solid var(--maroon);
+    border-radius: 3px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ── PROGRESS BAR ── */
+  .progress-wrap {
+    padding: 33px;
+  }
+  .progress-labels {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-weight: 700;
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+  .progress-labels .left  { color: #333; }
+  .progress-labels .right { color: var(--sand-text); }
+  .progress-track {
+    height: 15px;
+    background: rgba(194,171,141,0.73);
+    width: 100%;
+  }
+  .progress-fill {
+    height: 100%;
+    width: 90%;
+    background: var(--maroon);
+  }
+
+  /* ── HERO / GRADIENT SECTION ── */
+  .hero {
+    flex: 1;
+    background: linear-gradient(232deg, var(--teal) 0%, var(--dark-teal) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 33px 60px;
+  }
+  .hero h2 {
+    font-family: 'Avenir LT Pro', sans-serif;
+    font-weight: 700;
+    color: #fff;
+    font-size: clamp(22px, 3.4vw, 34px);
+    line-height: 1.3;
+    margin-bottom: 34px;
+    max-width: 900px;
+  }
+  .hero .video-wrap {
+    width: 100%;
+    max-width: 680px;
+    margin: 0 auto 40px;
+  }
+  .video-frame {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+  .video-frame iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  .hero .lead {
+    color: #fff;
+    max-width: 620px;
+    margin: 0 auto 36px;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+  .hero .lead strong { font-weight: 700; }
+
+  .calendly-inline-widget {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    min-width: 320px;
+    height: 700px;
+  }
+
+  /* ── FOOTER ── */
+  .site-footer {
+    background: var(--footer-bg);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px 40px;
+  }
+  .footer-logo img {
+    max-width: 220px;
+    filter: brightness(66%);
+    display: block;
+  }
+  .footer-links {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+  }
+  .footer-links a {
+    color: var(--footer-text);
+    text-decoration: none;
+    font-size: 14px;
+  }
+  .footer-links a:hover { text-decoration: underline; }
+  .footer-copyright {
+    font-family: 'Aviano', sans-serif;
+    font-size: 12px;
+    font-weight: 200;
+    color: var(--copyright);
+    text-align: center;
+    flex: 1;
+    min-width: 200px;
+  }
+
+  @media (max-width: 767px) {
+    .page-frame { border-width: 6px; }
+    .progress-wrap { padding: 20px; }
+    .hero { padding: 33px 16px 48px; }
+    .hero h2 { font-size: 22px; }
+    .site-footer {
+      flex-direction: column;
+      text-align: center;
+      padding: 24px 20px;
+    }
+    .footer-links { justify-content: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page-frame">
+
+  <!-- ── PROGRESS BAR ── -->
+  <div class="progress-wrap">
+    <div class="progress-labels">
+      <span class="left">Nur noch ein Schritt</span>
+      <span class="right">100 %</span>
+    </div>
+    <div class="progress-track">
+      <div class="progress-fill"></div>
+    </div>
+  </div>
+
+  <!-- ── HERO ── -->
+  <section class="hero">
+    <h2>Achtung! Ein weiterer Schritt nötig. <br>Schau jetzt das Video bis zum Ende!</h2>
+
+    <div class="video-wrap">
+      <div class="video-frame">
+        <iframe allowfullscreen allow="clipboard-write" title="Vimeo Video Player" src="https://player.vimeo.com/video/1154649367?color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0#t="></iframe>
+      </div>
+    </div>
+
+    <h2>Buche dir jetzt dein Gespräch mit einer Feminess Business Mentorin:</h2>
+
+    <p class="lead">
+      <strong>20 Minuten, die den Unterschied in deinem Erfolg machen.</strong><br>
+      In diesem Gespräch erfährst du von deiner Feminess Mentorin glasklar, worauf du deinen Fokus legen solltest, um den größtmöglichen Shift zu erleben.<br>
+      Denn was Erfolg von Misserfolg trennt, ist nicht Talent, nicht Glück, nicht noch mehr Wissen. Es ist Klarheit.<br>
+      Klarheit bringt Ordnung in dein Denken, schärft deine Entscheidungen und lässt dich genau die Schritte gehen, die echte Transformation auslösen. Nicht irgendwann, sondern jetzt:
+    </p>
+
+    <!-- Calendly Inline-Widget Beginn -->
+    <div class="calendly-inline-widget" data-url="https://calendly.com/feminess-mentorinnen/rise-up-call-experience?utm_source=dsmmmm?primary_color=861627"></div>
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    <!-- Calendly Inline-Widget Ende -->
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="site-footer">
+    <div class="footer-logo">
+      <img src="Bilder/Logo_white@2x.png" alt="Feminess">
+    </div>
+    <ul class="footer-links">
+      <li><a href="https://feminess.github.io/Datenschutz/">Datenschutzerklärung</a></li>
+      <li><a href="https://feminess.github.io/Impressum/">Impressum</a></li>
+    </ul>
+    <div class="footer-copyright">© 2025 FEMINESS – MARINA HENZE</div>
+  </footer>
+
+</div>
+
+</body>
+</html>
