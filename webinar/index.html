@@ -784,10 +784,16 @@
 
     /* ── FINAL CTA ── */
     .final-cta {
-      background: #fff;
+      background: var(--teal-dark);
       padding: 88px 0;
-      border-bottom: 1px solid var(--beige);
+      border-bottom: none;
     }
+    .final-cta .section-label { color: var(--teal-light) !important; }
+    .final-cta .section-label::after { background: var(--teal-light) !important; }
+    .final-cta h2 { color: #fff !important; }
+    .final-cta .countdown-digits { color: #fff !important; }
+    .final-cta .countdown-label { color: rgba(255,255,255,0.6) !important; }
+    .final-cta .countdown-sep { color: var(--rose) !important; }
     .final-cta-inner {
       max-width: 600px;
       margin: 0 auto;
@@ -1350,7 +1356,7 @@ window._load_script = function(url, callback, isSubmit) {
 <section class="final-cta">
   <div class="final-cta-inner">
     <div class="section-label" style="justify-content:center;">Letzter Aufruf</div>
-    <h2>Melde dich jetzt für 0 € an &amp; sichere dir deine <em>Geld-Meditation</em></h2>
+    <h2>Genug gescrollt – hol dir jetzt deinen <em>kostenfreien Platz</em></h2>
     <div class="countdown-final">
       <div class="countdown-item">
         <span class="countdown-digits" id="f-days">00</span>
