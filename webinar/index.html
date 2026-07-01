@@ -25,12 +25,12 @@
     :root {
       --teal:       #257c6c;
       --teal-dark:  #1b5c50;
-      --teal-light: #f5ede8;
+      --teal-light: var(--off-white);
       --teal-pale:  #b8ddd8;
       --rose:       #cf5a73;
       --rose-light: #e8a0b0;
       --sand:       #c2ab8d;
-      --sand-light: #f5ede8;
+      --sand-light: var(--off-white);
       --black:      #070808;
       --dark:       #0d2420;
       --off-white:  #f8f6f2;
@@ -454,7 +454,8 @@
 
     /* ── MAIN TEXT ── */
     .text-section {
-      background: #f5ede8;
+      background: var(--off-white);
+      border-top: 2px solid var(--teal-pale);
       padding: 88px 0;
       border-bottom: 1px solid var(--beige);
     }
@@ -504,6 +505,7 @@
     /* ── BENEFITS ── */
     .benefits-section {
       background: var(--off-white);
+      border-top: 2px solid var(--teal-pale);
       padding: 100px 0;
       position: relative;
       overflow: hidden;
@@ -728,7 +730,8 @@
 
     /* ── TESTIMONIALS ── */
     .testimonials-section {
-      background: #f5ede8;
+      background: var(--off-white);
+      border-top: 2px solid var(--teal-pale);
       padding: 88px 0;
       border-bottom: 1px solid var(--beige);
     }
@@ -796,6 +799,7 @@
     /* ── SPEAKER ── */
     .speaker-section {
       background: var(--off-white);
+      border-top: 2px solid var(--teal-pale);
       padding: 88px 0;
       border-bottom: 1px solid var(--beige);
     }
