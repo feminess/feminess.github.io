@@ -191,15 +191,32 @@
 
   @media (max-width: 767px) {
     .page-frame { border-width: 6px; }
-    .progress-wrap { padding: 20px; }
-    .hero { padding: 33px 16px 48px; }
-    .hero h2 { font-size: 22px; }
+    .progress-wrap { padding: 18px; }
+    .progress-labels { font-size: 13px; }
+    .hero { padding: 28px 18px 40px; }
+    .hero h2 { font-size: 22px; margin-bottom: 24px; }
+    .hero .video-wrap { margin-bottom: 28px; }
+    .hero .lead { font-size: 15px; margin-bottom: 26px; }
+    .cal-buttons {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 12px;
+      margin-bottom: 26px;
+    }
+    .cal-btn { width: 100%; justify-content: center; padding: 15px 20px; }
     .site-footer {
       flex-direction: column;
       text-align: center;
       padding: 24px 20px;
     }
     .footer-links { justify-content: center; }
+    .footer-logo img { max-width: 160px; }
+  }
+
+  @media (max-width: 380px) {
+    .progress-labels { font-size: 12px; }
+    .hero h2 { font-size: 20px; }
+    .cal-btn { font-size: 13px; padding: 14px 16px; }
   }
 </style>
 </head>
