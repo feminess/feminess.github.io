@@ -36,6 +36,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     --footer-bg:   #041B17;
     --footer-text: #C2AB8D;
     --copyright:   rgba(255,255,255,0.45);
+    --rosegold-1:  #AF7F6B;
+    --rosegold-2:  #EAB7B3;
+    --rosegold-3:  #FFDAD4;
   }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -143,27 +146,28 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     text-decoration: none;
     border: 1.5px solid transparent;
     cursor: pointer;
-    transition: transform 0.25s cubic-bezier(.4,0,.2,1), box-shadow 0.25s cubic-bezier(.4,0,.2,1), background-color 0.25s ease;
+    background: linear-gradient(135deg, var(--rosegold-1) 0%, var(--rosegold-2) 55%, var(--rosegold-3) 100%);
+    color: var(--dark-teal);
+    animation: btnPulse 2.6s ease-out infinite;
+    transition: transform 0.25s cubic-bezier(.4,0,.2,1), box-shadow 0.25s cubic-bezier(.4,0,.2,1);
   }
-  .cal-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(0,0,0,0.22); }
+  .cal-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.28);
+    animation-play-state: paused;
+  }
   .cal-btn svg { width: 18px; height: 18px; flex-shrink: 0; }
   .cal-btn-emoji { font-size: 19px; line-height: 1; flex-shrink: 0; }
-  .cal-btn-google {
-    background: #fff;
-    color: var(--dark-teal);
+  .cal-buttons .cal-btn:nth-child(2) { animation-delay: 0.5s; }
+  .cal-buttons .cal-btn:nth-child(3) { animation-delay: 1s; }
+  .cal-buttons .cal-btn:nth-child(4) { animation-delay: 1.5s; }
+  .cal-buttons .cal-btn:nth-child(5) { animation-delay: 2s; }
+
+  @keyframes btnPulse {
+    0%   { box-shadow: 0 0 0 0 rgba(234,183,179,0.55); }
+    70%  { box-shadow: 0 0 0 16px rgba(234,183,179,0); }
+    100% { box-shadow: 0 0 0 0 rgba(234,183,179,0); }
   }
-  .cal-btn-ics {
-    background: transparent;
-    color: #fff;
-    border-color: rgba(255,255,255,0.5);
-  }
-  .cal-btn-ics:hover { background: rgba(255,255,255,0.08); }
-  .cal-btn-telegram {
-    background: transparent;
-    color: var(--sand);
-    border-color: rgba(194,171,141,0.55);
-  }
-  .cal-btn-telegram:hover { background: rgba(194,171,141,0.12); }
 
   .lead-divider {
     position: relative;
@@ -282,7 +286,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </p>
 
     <div class="cal-buttons">
-      <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Feminess%20Webinar%20%E2%80%93%20Energy%20for%20Million&dates=20260715T090000Z/20260715T110000Z&details=Dein%20Webinar-Termin%20mit%20Feminess.%20Den%20Zugangslink%20erh%C3%A4ltst%20du%20per%20E-Mail.&location=Online%20(Link%20per%20E-Mail)" target="_blank" rel="noopener" class="cal-btn cal-btn-google">
+      <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Feminess%20Webinar%20%E2%80%93%20Energy%20for%20Million&dates=20260715T090000Z/20260715T110000Z&details=Dein%20Webinar-Termin%20mit%20Feminess.%20Den%20Zugangslink%20erh%C3%A4ltst%20du%20per%20E-Mail.&location=Online%20(Link%20per%20E-Mail)" target="_blank" rel="noopener" class="cal-btn">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <rect x="3" y="4" width="18" height="18" rx="2"/>
           <line x1="16" y1="2" x2="16" y2="6"/>
@@ -291,7 +295,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </svg>
         Google Kalender
       </a>
-      <a href="webinar-termin.ics" download class="cal-btn cal-btn-ics">
+      <a href="webinar-termin.ics" download class="cal-btn">
         <span class="cal-btn-emoji" aria-hidden="true">📅</span>
         Sonstige Kalender
       </a>
@@ -302,7 +306,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </p>
 
     <div class="cal-buttons">
-      <a href="https://t.me/+jMPD3ni3hgo0YWU6" target="_blank" rel="noopener" class="cal-btn cal-btn-telegram">
+      <a href="https://t.me/+jMPD3ni3hgo0YWU6" target="_blank" rel="noopener" class="cal-btn">
         <svg viewBox="0 0 24 24" fill="currentColor">
           <path d="M21.05 3.16 2.7 10.3c-1.24.5-1.24 1.2-.23 1.5l4.7 1.47 1.8 5.5c.22.6.4.85.8.85.35 0 .5-.16.7-.35l1.9-1.85 4.75 3.5c.87.48 1.5.23 1.72-.8l3.12-14.7c.3-1.27-.48-1.85-1.31-1.55Zm-11.3 10.8-.4 4.2-1.6-4.9 9.4-8.5c.24-.2-.05-.32-.36-.13L8.1 12.3Z"/>
         </svg>
@@ -310,9 +314,44 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </a>
     </div>
 
-    <p class="lead">
+    <p class="lead lead-divider">
       Du willst noch mehr Impulse für dein Business und deine Energy for Million? Dann folge uns auch auf unseren Social-Media-Kanälen – dort teilen wir täglich Inspiration und die neuesten Updates.
     </p>
+
+    <div class="cal-buttons">
+      <a href="https://www.instagram.com/feminess.de/" target="_blank" rel="noopener" class="cal-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="3" width="18" height="18" rx="5"/>
+          <circle cx="12" cy="12" r="4"/>
+          <circle cx="17.5" cy="6.5" r="0.6" fill="currentColor" stroke="none"/>
+        </svg>
+        Instagram
+      </a>
+      <a href="https://www.linkedin.com/in/marina-henze/" target="_blank" rel="noopener" class="cal-btn">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M20.5 2h-17A1.5 1.5 0 0 0 2 3.5v17A1.5 1.5 0 0 0 3.5 22h17a1.5 1.5 0 0 0 1.5-1.5v-17A1.5 1.5 0 0 0 20.5 2zM8 19H5V9h3zM6.5 7.7A1.7 1.7 0 1 1 6.5 4.3a1.7 1.7 0 0 1 0 3.4zM19 19h-3v-4.6c0-1.1 0-2.6-1.6-2.6s-1.8 1.2-1.8 2.5V19h-3V9h2.9v1.3h.04c.4-.8 1.4-1.6 2.9-1.6 3.1 0 3.6 2 3.6 4.6z"/>
+        </svg>
+        LinkedIn
+      </a>
+      <a href="https://www.facebook.com/groups/feminess" target="_blank" rel="noopener" class="cal-btn">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M22 12a10 10 0 1 0-11.5 9.9v-7H7.9V12h2.6V9.8c0-2.6 1.5-4 3.9-4 1.1 0 2.3.2 2.3.2v2.5h-1.3c-1.3 0-1.7.8-1.7 1.6V12h2.9l-.5 2.9h-2.4v7A10 10 0 0 0 22 12Z"/>
+        </svg>
+        Facebook Gruppe
+      </a>
+      <a href="https://www.youtube.com/Feminess" target="_blank" rel="noopener" class="cal-btn">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M23 12s0-3.4-.4-5a3 3 0 0 0-2.1-2.1C18.9 4.5 12 4.5 12 4.5s-6.9 0-8.5.4A3 3 0 0 0 1.4 7 31 31 0 0 0 1 12a31 31 0 0 0 .4 5A3 3 0 0 0 3.5 19c1.6.4 8.5.4 8.5.4s6.9 0 8.5-.4A3 3 0 0 0 22.6 17c.4-1.6.4-5 .4-5zM9.8 15.4V8.6L15.8 12z"/>
+        </svg>
+        YouTube
+      </a>
+      <a href="https://open.spotify.com/show/1DVcVOVK1JvyvUG3aQp6Qv" target="_blank" rel="noopener" class="cal-btn">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.6 14.4a.6.6 0 0 1-.8.2c-2.3-1.4-5.2-1.7-8.6-.9a.6.6 0 1 1-.3-1.2c3.7-.9 6.9-.5 9.5 1.1.3.2.4.6.2.8zm1.2-2.7a.75.75 0 0 1-1 .3c-2.6-1.6-6.6-2.1-9.7-1.1a.75.75 0 1 1-.4-1.4c3.5-1.1 7.9-.5 10.9 1.3.4.2.5.7.2 1zm.1-2.8C15.2 9 8.9 8.8 5.7 9.8a.9.9 0 1 1-.5-1.7c3.7-1.1 10.5-.9 14.6 1.5a.9.9 0 0 1-.9 1.6z"/>
+        </svg>
+        Spotify
+      </a>
+    </div>
   </section>
 
   <!-- ── FOOTER ── -->
