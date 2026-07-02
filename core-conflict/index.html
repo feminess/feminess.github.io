@@ -60,30 +60,19 @@
   img { display: block; max-width: 100%; }
   a { text-decoration: none; }
 
-  /* ── HEADER ── */
-  .site-header {
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    padding: 28px 48px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 10;
+  /* ── TOP BANNER ── */
+  .top-banner {
+    background: var(--dark);
+    padding: 12px 40px;
+    text-align: center;
+    border-bottom: 1px solid rgba(94,198,179,0.2);
   }
-  .logo {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.35rem;
-    font-weight: 500;
-    letter-spacing: 0.35em;
-    text-transform: uppercase;
-    color: var(--sand-light);
-  }
-  .header-tag {
-    font-size: 10px;
+  .top-banner p {
+    font-size: 13px;
     font-weight: 700;
-    letter-spacing: 3px;
+    letter-spacing: 4px;
     text-transform: uppercase;
-    color: rgba(248,246,242,0.45);
+    color: var(--teal-light);
   }
 
   /* ── HERO ── */
@@ -111,7 +100,7 @@
     pointer-events: none;
   }
   .hero-text {
-    padding: 140px 56px 80px 72px;
+    padding: 64px 56px 80px 72px;
     position: relative; z-index: 2;
   }
   .hero-tag {
@@ -169,13 +158,6 @@
     transform: translateY(-3px);
     box-shadow: 0 16px 48px rgba(207,90,115,0.55);
   }
-  .hero-proof-line {
-    font-size: 0.8rem;
-    color: rgba(248,246,242,0.35);
-    letter-spacing: 0.2px;
-    max-width: 400px;
-    line-height: 1.6;
-  }
   .hero-image-wrap {
     position: relative;
     height: 100vh;
@@ -197,24 +179,6 @@
     display: block;
     transform: scale(1.3);
     transform-origin: center bottom;
-  }
-
-  /* ── TRUST BAR ── */
-  .trust-bar {
-    background: var(--dark-2);
-    padding: 20px 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 48px;
-    flex-wrap: wrap;
-  }
-  .trust-item {
-    font-size: 0.8rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: rgba(248,246,242,0.5);
   }
 
   /* ── SHARED SECTION HEADERS ── */
@@ -294,46 +258,134 @@
     box-shadow: 0 12px 40px rgba(37,124,108,0.5);
   }
 
-  /* ── BULLETS ── */
-  .bullets-section {
+  /* ── DAS ERWARTET DICH (Journey-Timeline) ── */
+  .journey-section {
     background: var(--cream);
-    padding: 100px 24px;
+    padding: 130px 24px;
+    position: relative;
+    overflow: hidden;
   }
-  .bullets-inner {
-    max-width: 780px;
-    margin: 0 auto;
-  }
-  .bullets-header { text-align: center; margin-bottom: 56px; }
-  .bullet-list {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
-  .bullet-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
-    background: white;
-    border-radius: 14px;
-    padding: 28px 30px;
-    box-shadow: 0 2px 16px rgba(13,36,32,0.055);
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
-  .bullet-item:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 28px rgba(13,36,32,0.1);
-  }
-  .bullet-icon {
-    flex-shrink: 0;
-    width: 32px; height: 32px;
-    background: linear-gradient(135deg, var(--teal-light), var(--teal));
+  .journey-blob {
+    position: absolute;
     border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    margin-top: 2px;
+    filter: blur(70px);
+    opacity: 0.4;
+    pointer-events: none;
+    animation: driftBlob 18s ease-in-out infinite;
   }
-  .bullet-icon svg { width: 15px; height: 15px; fill: white; }
-  .bullet-text { font-size: 0.98rem; line-height: 1.75; color: var(--black); }
-  .bullet-text strong { color: var(--teal-dark); font-weight: 700; display: block; margin-bottom: 4px; font-size: 1.02rem; }
+  .journey-blob.one {
+    top: -140px; left: -120px;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, var(--teal-light) 0%, transparent 70%);
+  }
+  .journey-blob.two {
+    bottom: -160px; right: -120px;
+    width: 440px; height: 440px;
+    background: radial-gradient(circle, var(--rose-light) 0%, transparent 70%);
+    animation-delay: -9s;
+    animation-duration: 22s;
+  }
+  @keyframes driftBlob {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50%      { transform: translate(36px, -28px) scale(1.08); }
+  }
+  .journey-inner { max-width: 860px; margin: 0 auto; position: relative; z-index: 1; }
+  .journey-header { text-align: center; margin-bottom: 76px; }
+
+  .timeline { position: relative; }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%; top: 6px; bottom: 6px;
+    width: 2px;
+    background: linear-gradient(180deg, var(--teal) 0%, var(--sand) 50%, var(--rose) 100%);
+    opacity: 0.35;
+    transform: translateX(-50%);
+  }
+  .timeline-item {
+    display: flex;
+    align-items: center;
+    gap: 44px;
+    position: relative;
+    margin-bottom: 56px;
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .timeline-item:last-child { margin-bottom: 0; }
+  .timeline-item.in-view { opacity: 1; transform: translateY(0); }
+  .timeline-item:nth-child(1) { transition-delay: 0s; }
+  .timeline-item:nth-child(2) { transition-delay: 0.08s; }
+  .timeline-item:nth-child(3) { transition-delay: 0.16s; }
+  .timeline-item:nth-child(4) { transition-delay: 0.24s; }
+  .timeline-item:nth-child(5) { transition-delay: 0.32s; }
+  .timeline-item:nth-child(even) { flex-direction: row-reverse; }
+
+  .timeline-marker {
+    flex-shrink: 0;
+    width: 60px; height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--teal) 0%, var(--teal-dark) 100%);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    position: relative;
+    z-index: 2;
+    color: var(--teal);
+    box-shadow: 0 0 0 6px var(--cream), 0 8px 24px rgba(37,124,108,0.35);
+  }
+  .timeline-item:nth-child(even) .timeline-marker {
+    background: linear-gradient(135deg, var(--rose) 0%, var(--rose-dark) 100%);
+    color: var(--rose);
+    box-shadow: 0 0 0 6px var(--cream), 0 8px 24px rgba(207,90,115,0.35);
+  }
+  .timeline-marker span { position: relative; z-index: 1; color: #fff; }
+  .timeline-marker::after {
+    content: '';
+    position: absolute;
+    inset: -6px;
+    border-radius: 50%;
+    border: 1px solid currentColor;
+    opacity: 0;
+    animation: ringPulse 2.8s ease-out infinite;
+  }
+  .timeline-item:nth-child(2) .timeline-marker::after { animation-delay: 0.5s; }
+  .timeline-item:nth-child(3) .timeline-marker::after { animation-delay: 1s; }
+  .timeline-item:nth-child(4) .timeline-marker::after { animation-delay: 1.5s; }
+  .timeline-item:nth-child(5) .timeline-marker::after { animation-delay: 2s; }
+  @keyframes ringPulse {
+    0%   { transform: scale(0.85); opacity: 0.55; }
+    100% { transform: scale(1.4); opacity: 0; }
+  }
+
+  .timeline-card {
+    flex: 1;
+    background: #fff;
+    border-radius: 18px;
+    padding: 32px 36px;
+    box-shadow: 0 4px 24px rgba(13,36,32,0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .timeline-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(13,36,32,0.12);
+  }
+  .timeline-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 1.35rem;
+    color: var(--teal-dark);
+    margin-bottom: 10px;
+    line-height: 1.3;
+  }
+  .timeline-item:nth-child(even) .timeline-card h3 { color: var(--rose); }
+  .timeline-card p {
+    font-size: 0.95rem;
+    color: var(--warm-gray);
+    line-height: 1.75;
+    margin: 0;
+  }
 
   /* ── TESTIMONIALS ── */
   .testimonials-section {
@@ -556,8 +608,6 @@
     margin-top: 10px; transition: color 0.15s; width: 100%;
   }
   .popup-dismiss:hover { color: var(--mid-gray); }
-  .popup-privacy { font-size: 11px !important; color: rgba(255,255,255,0.28) !important; margin: 12px 0 0 !important; text-align: center; }
-  .popup-privacy a { color: rgba(255,255,255,0.4); text-decoration: underline; }
 
   /* ── RESPONSIVE ── */
   @media (max-width: 900px) {
@@ -570,15 +620,16 @@
     .hero-text { padding: 48px 32px 72px; text-align: center; }
     .hero-cta { align-items: center; }
     .testimonials-grid { grid-template-columns: 1fr; }
+    .timeline::before { left: 29px; }
+    .timeline-item, .timeline-item:nth-child(even) { flex-direction: row; gap: 24px; }
+    .timeline-marker { width: 48px; height: 48px; font-size: 19px; }
+    .timeline-card { padding: 26px 24px; }
   }
   @media (max-width: 640px) {
-    .site-header { padding: 22px 20px; }
-    .header-tag { display: none; }
+    .top-banner p { font-size: 11px; letter-spacing: 2px; }
     .hero-text { padding: 40px 20px 64px; }
     .hero-image-wrap { height: 70vw; }
-    .trust-bar { padding: 16px 20px; gap: 18px; }
-    .trust-item { font-size: 0.7rem; }
-    .text-section, .bullets-section, .testimonials-section, .fuer-wen-section { padding: 64px 20px; }
+    .text-section, .journey-section, .testimonials-section, .fuer-wen-section { padding: 64px 20px; }
     .final-cta { padding: 72px 20px; }
     .callout-box { padding: 24px 22px; }
     .btn-primary, .btn-cta { width: 100%; text-align: center; }
@@ -588,11 +639,10 @@
 </head>
 <body>
 
-<!-- HEADER -->
-<header class="site-header">
-  <span class="logo">Feminess</span>
-  <span class="header-tag">0€ Analyse</span>
-</header>
+<!-- TOP BANNER -->
+<div class="top-banner">
+  <p>Präzise, ehrlich und transformierend – dein Startpunkt für echten Durchbruch.</p>
+</div>
 
 <!-- ══════════════════════════════
      HERO
@@ -610,21 +660,12 @@
     </p>
     <div class="hero-cta">
       <button class="btn-primary" onclick="openExitPopup()">Jetzt für 0€ sichern &rarr;</button>
-      <span class="hero-proof-line">Präzise, ehrlich und transformierend – dein Startpunkt für echten Durchbruch.</span>
     </div>
   </div>
   <div class="hero-image-wrap">
     <img class="hero-img" src="../Bilder/Marina_MAI2314232 Kopie.jpg" alt="Marina Henze – Feminess" />
   </div>
 </section>
-
-<!-- TRUST BAR -->
-<div class="trust-bar">
-  <div class="trust-item">0€</div>
-  <div class="trust-item">Sofort startklar</div>
-  <div class="trust-item">Für Unternehmerinnen</div>
-  <div class="trust-item">Direkt einsetzbar mit ChatGPT</div>
-</div>
 
 <!-- ══════════════════════════════
      AGITATION TEXT
@@ -647,35 +688,71 @@
 </section>
 
 <!-- ══════════════════════════════
-     BENEFITS
+     BENEFITS / JOURNEY-TIMELINE
 ═══════════════════════════════ -->
-<section class="bullets-section">
-  <div class="bullets-inner">
-    <div class="bullets-header">
+<section class="journey-section">
+  <div class="journey-blob one"></div>
+  <div class="journey-blob two"></div>
+  <div class="journey-inner">
+    <div class="journey-header">
       <span class="section-eyebrow">Das erwartet dich</span>
       <h2 class="section-title">Was die Core Conflict Analyse<br>für dich <em>sichtbar macht</em></h2>
     </div>
-    <ul class="bullet-list" style="list-style:none;">
-      <li class="bullet-item">
-        <div class="bullet-icon"><svg viewBox="0 0 20 20"><path d="M8.4 14.4l-4-4 1.4-1.4 2.6 2.6 5.8-5.8 1.4 1.4z"/></svg></div>
-        <p class="bullet-text"><strong>Raus aus der Selbstsabotage, rein in echte Klarheit</strong>Du erkennst, welcher unbewusste Konflikt dich bisher vom Wachstum abhält, und verstehst endlich, was du jetzt wirklich tun musst, um mehr Umsatz zu machen.</p>
-      </li>
-      <li class="bullet-item">
-        <div class="bullet-icon"><svg viewBox="0 0 20 20"><path d="M8.4 14.4l-4-4 1.4-1.4 2.6 2.6 5.8-5.8 1.4 1.4z"/></svg></div>
-        <p class="bullet-text"><strong>Weniger Selbstzweifel, mehr Selbstführung</strong>Statt dich zu fragen, was mit dir nicht stimmt, weißt du, welche inneren Konflikte dein Verhalten steuern und wie du diese Konflikte löst.</p>
-      </li>
-      <li class="bullet-item">
-        <div class="bullet-icon"><svg viewBox="0 0 20 20"><path d="M8.4 14.4l-4-4 1.4-1.4 2.6 2.6 5.8-5.8 1.4 1.4z"/></svg></div>
-        <p class="bullet-text"><strong>Keine finanzielle Achterbahn mehr</strong>Du beendest endlich das Auf und Ab deiner Einnahmen und bringst Stabilität und Verlässlichkeit in dein Business.</p>
-      </li>
-      <li class="bullet-item">
-        <div class="bullet-icon"><svg viewBox="0 0 20 20"><path d="M8.4 14.4l-4-4 1.4-1.4 2.6 2.6 5.8-5.8 1.4 1.4z"/></svg></div>
-        <p class="bullet-text"><strong>Familiäre Prägungen erkennen und bewusst lösen</strong>Du verstehst, welche übernommenen Rollen, Loyalitäten oder alten Dynamiken aus deiner Herkunftsfamilie heute noch deine Entscheidungen, deinen Erfolg und deine Umsätze beeinflussen, und beginnst, dich davon innerlich zu befreien.</p>
-      </li>
-      <li class="bullet-item">
-        <div class="bullet-icon"><svg viewBox="0 0 20 20"><path d="M8.4 14.4l-4-4 1.4-1.4 2.6 2.6 5.8-5.8 1.4 1.4z"/></svg></div>
-        <p class="bullet-text"><strong>Der Startpunkt für deinen echten Durchbruch</strong>Du bekommst ein klares Bild deiner aktuellen Business-Identität und weißt, wo deine größte Wachstumschance liegt, ohne weiter im Kreis zu drehen.</p>
-      </li>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-marker"><span>01</span></div>
+        <div class="timeline-card">
+          <h3>Raus aus der Selbstsabotage, rein in echte Klarheit</h3>
+          <p>Du erkennst, welcher unbewusste Konflikt dich bisher vom Wachstum abhält, und verstehst endlich, was du jetzt wirklich tun musst, um mehr Umsatz zu machen.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-marker"><span>02</span></div>
+        <div class="timeline-card">
+          <h3>Weniger Selbstzweifel, mehr Selbstführung</h3>
+          <p>Statt dich zu fragen, was mit dir nicht stimmt, weißt du, welche inneren Konflikte dein Verhalten steuern und wie du diese Konflikte löst.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-marker"><span>03</span></div>
+        <div class="timeline-card">
+          <h3>Keine finanzielle Achterbahn mehr</h3>
+          <p>Du beendest endlich das Auf und Ab deiner Einnahmen und bringst Stabilität und Verlässlichkeit in dein Business.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-marker"><span>04</span></div>
+        <div class="timeline-card">
+          <h3>Familiäre Prägungen erkennen und bewusst lösen</h3>
+          <p>Du verstehst, welche übernommenen Rollen, Loyalitäten oder alten Dynamiken aus deiner Herkunftsfamilie heute noch deine Entscheidungen, deinen Erfolg und deine Umsätze beeinflussen, und beginnst, dich davon innerlich zu befreien.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-marker"><span>05</span></div>
+        <div class="timeline-card">
+          <h3>Der Startpunkt für deinen echten Durchbruch</h3>
+          <p>Du bekommst ein klares Bild deiner aktuellen Business-Identität und weißt, wo deine größte Wachstumschance liegt, ohne weiter im Kreis zu drehen.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     FÜR WEN
+═══════════════════════════════ -->
+<section class="fuer-wen-section">
+  <div class="fuer-wen-inner">
+    <div class="fuer-wen-header">
+      <span class="section-eyebrow">Ist das dein Weg?</span>
+      <h2 class="section-title">Für wen ist diese<br><em>Analyse</em> gedacht?</h2>
+    </div>
+    <ul class="fuer-wen-list">
+      <li>Für Frauen, die spüren: „Ich will noch mehr!"</li>
+      <li>Für Frauen, die merken, dass sie ihren Erfolg oftmals sabotieren</li>
+      <li>Für Frauen, die sich ein lukratives, stabiles Business aufbauen wollen</li>
+      <li>Für Frauen, die bereit sind, alte Prägungen und innere Konflikte loszulassen</li>
+      <li>Für Frauen, die für sich losgehen und sich ein freies Leben erschaffen wollen</li>
     </ul>
   </div>
 </section>
@@ -703,25 +780,6 @@
         <p class="testimonial-author">— Inke</p>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- ══════════════════════════════
-     FÜR WEN
-═══════════════════════════════ -->
-<section class="fuer-wen-section">
-  <div class="fuer-wen-inner">
-    <div class="fuer-wen-header">
-      <span class="section-eyebrow">Ist das dein Weg?</span>
-      <h2 class="section-title">Für wen ist diese<br><em>Analyse</em> gedacht?</h2>
-    </div>
-    <ul class="fuer-wen-list">
-      <li>Für Frauen, die spüren: „Ich will noch mehr!"</li>
-      <li>Für Frauen, die merken, dass sie ihren Erfolg oftmals sabotieren</li>
-      <li>Für Frauen, die sich ein lukratives, stabiles Business aufbauen wollen</li>
-      <li>Für Frauen, die bereit sind, alte Prägungen und innere Konflikte loszulassen</li>
-      <li>Für Frauen, die für sich losgehen und sich ein freies Leben erschaffen wollen</li>
-    </ul>
   </div>
 </section>
 
@@ -856,7 +914,6 @@
         <a href="https://www.activecampaign.com/?utm_medium=referral&utm_campaign=acforms" class="_logo"><span class="form-sr-only">ActiveCampaign</span></a>
       </div>
     </form>
-    <p class="popup-privacy">Kostenfrei &middot; kein Spam. Mit dem Absenden stimmst du der <a href="../Datenschutz/index.html">Datenschutzerklärung</a> zu.</p>
 
     <script>
 window.cfields = {"220":"utm_content","219":"utm_campaign","218":"utm_medium","217":"utm_source","221":"utm_term"};
@@ -1009,6 +1066,21 @@ window._load_script = function(url, callback, isSubmit) {
   window.addEventListener('scroll', function () {
     cta.classList.toggle('is-visible', window.scrollY > 600);
   }, { passive: true });
+}());
+
+// ── TIMELINE REVEAL ──
+(function () {
+  var items = document.querySelectorAll('.timeline-item');
+  if (!items.length) return;
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.25 });
+  items.forEach(function (item) { observer.observe(item); });
 }());
 
 // ── EXIT POPUP ──
