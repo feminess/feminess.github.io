@@ -1061,7 +1061,7 @@
     @media (max-width: 600px) {
       /* Allgemein */
       body { font-size: 15px; }
-      h1 { font-size: clamp(36px, 10vw, 52px) !important; }
+      h1 { font-size: 9vw !important; white-space: nowrap; }
       h2 { font-size: clamp(26px, 7vw, 36px) !important; }
 
       /* Padding aller Sektionen */
@@ -1087,8 +1087,10 @@
       #utm-message { font-size: 17px; }
 
       /* Countdown */
-      .countdown { gap: 18px; }
-      .countdown-digits { font-size: 38px !important; }
+      .countdown { gap: 10px; flex-wrap: nowrap; }
+      .countdown-digits { font-size: 28px !important; }
+      .countdown-sep { font-size: 24px !important; margin-bottom: 8px !important; }
+      .countdown-label { font-size: 7px !important; }
 
       /* Benefits */
       .benefits-grid { grid-template-columns: 1fr; gap: 16px; }
