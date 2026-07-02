@@ -170,7 +170,7 @@
     .hero-subtitle strong { color: #fff; font-weight: 700; }
 
     .hero-date {
-      font-size: 22px;
+      font-size: 18px;
       font-weight: 400;
       letter-spacing: 0;
       text-transform: none;
@@ -317,6 +317,7 @@
       box-shadow: 0 0 18px rgba(212,160,144,0.55), 0 6px 24px rgba(160,104,90,0.45);
     }
     .btn-submit:hover { opacity: 0.88; transform: translateY(-1px); animation: none; }
+    #_form_565_submit { background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%) !important; border-radius: 8px !important; animation: pulse-btn 2.2s ease-in-out infinite; box-shadow: 0 0 18px rgba(212,160,144,0.55), 0 6px 24px rgba(160,104,90,0.45) !important; }
 
     .popup-dismiss {
       display: block; text-align: center;
@@ -1166,7 +1167,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- TOP BANNER -->
 <div class="top-banner">
-  <p>Kostenfreies Online-Live-Event</p>
+  <p>Exklusive Money-Masterclass nur für 100 Frauen</p>
 </div>
 
 <!-- HERO -->
@@ -1181,8 +1182,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p class="hero-subtitle">
         Sei die ungezähmte Unternehmerin, <strong>FREI von Druck, Zwang, Zweifel und Erschöpfung.</strong> Führe dein Business nach deinen eigenen Regeln, mit der <strong>ENERGIE die Geld und Erfolg anziehst.</strong>
       </p>
-      <button class="btn-hero" onclick="openModal()">Deinen Platz sichern →</button>
-      <p class="hero-date">15.07.2026, 11:00 – 13:00 Uhr · kostenfreies Live-Webinar mit Marina Henze</p>
+      <button class="btn-hero" onclick="openModal()">Yes, I´m in!</button>
+      <p class="hero-date">15.07.2026, 11:00 – 13:00 Uhr · kostenfreie Money-Masterclass mit Marina Henze</p>
       <div class="countdown">
         <div class="countdown-item">
           <span class="countdown-digits" id="h-days">00</span>
@@ -1220,7 +1221,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="modal-overlay" id="modal" onclick="handleOverlayClick(event)" role="dialog" aria-modal="true">
   <div class="modal">
     <button class="modal-close" onclick="closeModal()" aria-label="Schließen">&times;</button>
-    <div class="modal-kicker">Warte kurz</div>
     <h2>Hol dir jetzt deine<br><em>Energy for Million</em></h2>
     <p class="modal-sub">15. Juli 2026 &nbsp;·&nbsp; 11–13 Uhr &nbsp;·&nbsp; kostenfrei<br>Sichere dir jetzt deinen Platz – in unter 30 Sekunden.</p>
     <style>@import url(https://fonts.bunny.net/css?family=sans-serif:400|IBM+Plex+Sans:400);</style>
@@ -1409,7 +1409,6 @@ window._load_script = function(url, callback, isSubmit) {
     addEvent(form_to_submit, 'submit', form_submit);
 })();
     </script>
-    <button class="popup-dismiss" onclick="closeModal()">Nein danke, ich melde mich nicht an.</button>
   </div>
 </div>
 
@@ -1438,7 +1437,6 @@ window._load_script = function(url, callback, isSubmit) {
 <!-- MAIN TEXT -->
 <div class="text-section">
   <div class="text-inner">
-    <div class="section-label">Let's be real:</div>
     <p>Du <strong>funktionierst, leistest</strong> und hältst alles und jeden zusammen: deine Familie, dein Business, deine Kunden – und dann sind da noch die <strong>überdimensional großen Erwartungen</strong> an dich selbst.</p>
     <p>Und doch bist du nur wie eine <strong>Marionette</strong> und jeder zieht an deinen Seilen, während du alles gibst. Am Ende des Tages liegst du dann im Bett mit dem erdrückenden Gefühl: <strong>Egal was ich tue, es reicht immer noch nicht und ist nicht gut genug.</strong></p>
     <p>Du suchst <strong>verzweifelt weiter</strong>, weil du eine Kämpferin bist – „Aufgeben ist nicht!" Also probierst du alles: neue Strategien, andere Programme, die dich zu dieser <strong>Freiheit</strong> führen sollen, für die du mal losgegangen bist – um am Ende wieder frustriert festzustellen: <strong>Es hat wieder nicht gereicht.</strong></p>
@@ -1457,7 +1455,6 @@ window._load_script = function(url, callback, isSubmit) {
 <section class="benefits-section">
   <div class="benefits-inner">
     <div class="benefits-header">
-      <div class="section-label">Deine Transformation</div>
       <h2>Wie wir deine Energie für <em>Millionen</em> freisetzen</h2>
     </div>
     <div class="benefits-grid">
@@ -1514,7 +1511,6 @@ window._load_script = function(url, callback, isSubmit) {
 <!-- WAS ERWARTET DICH -->
 <section class="how-section">
   <div class="how-inner">
-    <div class="section-label">Der Ablauf</div>
     <h2 style="text-align:center; color:#fff; margin-bottom:16px;">Nicht nur ein Event –<br>deine <em style="color:var(--rose);">Wiedergeburt</em></h2>
     <p class="how-intro">Es erwartet dich nicht nur ein Live-Event, sondern deine Wiedergeburt als ungezähmte Unternehmerin, die bedingungslos für ihr erfolgreiches, freies Business einsteht.</p>
     <div class="journey-cards">
@@ -1553,7 +1549,6 @@ window._load_script = function(url, callback, isSubmit) {
 <!-- FÜR DICH -->
 <section class="fuer-dich-section">
   <div class="fuer-dich-inner">
-    <div class="section-label" style="justify-content:center;">Für wen ist das?</div>
     <h2>Dieses Webinar ist <em>genau für dich,</em> wenn …</h2>
     <div class="fuer-dich-stack">
       <div class="fuer-dich-box ja">
@@ -1583,9 +1578,7 @@ window._load_script = function(url, callback, isSubmit) {
 <!-- BONUS -->
 <section class="bonus-section">
   <div class="bonus-inner">
-    <div class="section-label">Exklusiver Bonus</div>
     <h2>Dein exklusives <em>Geschenk!</em></h2>
-    <p class="section-intro">Wenn du live dabei bist, erhältst du „The Energy Block Mirror" – eine tiefenpsychologische Analyse, die dir schonungslos zeigt, wo deine Energie gerade blockiert ist und dich von deinem nächsten Umsatz-Wachstum abhält.</p>
     <div class="bonus-gift-box">
       <div class="bonus-gift-icon">
         <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" width="52" height="52">
@@ -1608,7 +1601,6 @@ window._load_script = function(url, callback, isSubmit) {
 <section class="testimonials-section">
   <div class="testimonials-inner">
     <div class="section-header">
-      <div class="section-label">Stimmen der Community</div>
       <h2>Das sagen unsere<br>begeisterten <em>Teilnehmerinnen</em></h2>
     </div>
     <div class="testimonials-grid">
@@ -1640,7 +1632,6 @@ window._load_script = function(url, callback, isSubmit) {
       <p class="role">CEO &amp; Gründerin · FEMINESS</p>
     </div>
     <div class="speaker-bio">
-      <div class="section-label">Deine Mentorin</div>
       <h2 style="font-family:'Cormorant Garamond',serif; font-size:34px; font-weight:400; margin-bottom:24px;">Warum Marina die Richtige ist, um deine <em style="font-style:italic;color:var(--rose);">Energy for Million</em> freizusetzen</h2>
       <p>Marina Henze ist <strong>Mentorin für Unternehmerinnen</strong>, die spüren: So wie bisher will ich nicht weitermachen.</p>
       <p>Seit über <strong>20 Jahren</strong> begleitet sie Frauen aus Erschöpfung und Selbstaufopferung hinein in <strong>finanzielle Freiheit</strong> und selbstbestimmtes Wirken. Mehr als <strong>20.000 Frauen</strong> sind diesen Weg bereits mit ihr gegangen.</p>
@@ -1653,7 +1644,6 @@ window._load_script = function(url, callback, isSubmit) {
 <!-- FINAL CTA -->
 <section class="final-cta">
   <div class="final-cta-inner">
-    <div class="section-label" style="justify-content:center;">Letzter Aufruf</div>
     <h2>Genug gescrollt – hol dir jetzt deinen <em>kostenfreien Platz</em></h2>
     <div class="countdown-final">
       <div class="countdown-item">
@@ -1679,12 +1669,12 @@ window._load_script = function(url, callback, isSubmit) {
 </section>
 
 <!-- FLOATING CTA -->
-<button class="floating-cta" id="floatingCta" onclick="openModal()">Deinen Platz sichern →</button>
+<button class="floating-cta" id="floatingCta" onclick="openModal()">Yes, I´m in!</button>
 
 <!-- FOOTER -->
 <footer>
   <div class="footer-inner">
-    <div class="footer-brand">Feminess</div>
+    <div class="footer-brand"><img src="Bilder/Logo-rosegoldverlauf-rgb.png" alt="Feminess" style="height:36px; width:auto;"></div>
     <div class="footer-links">
       <a href="https://feminess.github.io/Datenschutz/">Datenschutzerklärung</a>
       <a href="https://feminess.github.io/Impressum/">Impressum</a>
