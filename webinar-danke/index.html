@@ -61,10 +61,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   /* ── PROGRESS BAR ── */
   .progress-wrap {
     width: 100%;
+    background: linear-gradient(to bottom, var(--off-white) 0%, var(--off-white) 65%, var(--teal) 100%);
+  }
+  .progress-inner {
     max-width: 1400px;
     margin: 0 auto;
     padding: 40px 33px 28px;
-    background: linear-gradient(to bottom, var(--off-white) 0%, var(--off-white) 65%, var(--teal) 100%);
   }
   .progress-labels {
     display: flex;
@@ -229,7 +231,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
 
   @media (max-width: 767px) {
-    .progress-wrap { padding: 24px 18px 20px; }
+    .progress-inner { padding: 24px 18px 20px; }
     .progress-labels { font-size: 10px; }
     .hero { padding: 48px 18px 56px; }
     .hero h2 { font-size: 24px; margin-bottom: 28px; }
@@ -267,12 +269,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <!-- ── PROGRESS BAR ── -->
   <div class="progress-wrap">
-    <div class="progress-labels">
-      <span class="left">Nur noch ein Schritt</span>
-      <span class="right">100 %</span>
-    </div>
-    <div class="progress-track">
-      <div class="progress-fill"></div>
+    <div class="progress-inner">
+      <div class="progress-labels">
+        <span class="left">Nur noch ein Schritt</span>
+        <span class="right">100 %</span>
+      </div>
+      <div class="progress-track">
+        <div class="progress-fill"></div>
+      </div>
     </div>
   </div>
 
