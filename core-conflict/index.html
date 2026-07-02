@@ -308,12 +308,12 @@
   .journey-track::-webkit-scrollbar { display: none; }
 
   .journey-card {
-    flex: 0 0 300px;
+    flex: 0 0 380px;
     scroll-snap-align: start;
     background: rgba(255,255,255,0.045);
     border: 1px solid rgba(255,255,255,0.09);
-    border-radius: 26px;
-    padding: 44px 32px 38px;
+    border-radius: 28px;
+    padding: 52px 40px 46px;
     position: relative;
     overflow: hidden;
     backdrop-filter: blur(6px);
@@ -348,10 +348,10 @@
   .journey-num {
     display: block;
     font-family: 'Cormorant Garamond', serif;
-    font-size: 3.2rem;
+    font-size: 3.8rem;
     font-weight: 400;
     line-height: 1;
-    margin-bottom: 22px;
+    margin-bottom: 24px;
     position: relative; z-index: 1;
     background: linear-gradient(135deg, var(--teal-light), var(--sand-light));
     -webkit-background-clip: text; background-clip: text;
@@ -373,16 +373,16 @@
   }
   .journey-card h3 {
     font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
+    font-style: normal;
     font-weight: 500;
-    font-size: 1.28rem;
+    font-size: 1.55rem;
     color: #fff;
-    margin-bottom: 12px;
-    line-height: 1.35;
+    margin-bottom: 14px;
+    line-height: 1.3;
     position: relative; z-index: 1;
   }
   .journey-card p {
-    font-size: 0.92rem;
+    font-size: 1rem;
     color: rgba(255,255,255,0.6);
     line-height: 1.75;
     margin: 0;
@@ -423,6 +423,53 @@
   }
   .journey-dot.is-active { background: var(--teal-light); transform: scale(1.35); }
 
+  /* ── BRIDGE CTA ── */
+  .bridge-section {
+    background: linear-gradient(180deg, var(--off-white) 0%, var(--cream) 100%);
+    padding: 120px 24px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .bridge-glow {
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 560px; height: 560px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(207,90,115,0.12) 0%, rgba(37,124,108,0.06) 45%, transparent 70%);
+    pointer-events: none;
+    animation: glowPulse 6s ease-in-out infinite;
+  }
+  @keyframes glowPulse {
+    0%, 100% { opacity: 0.7; transform: translate(-50%, -50%) scale(1); }
+    50%      { opacity: 1;   transform: translate(-50%, -50%) scale(1.1); }
+  }
+  .bridge-inner {
+    position: relative; z-index: 1;
+    max-width: 560px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .bridge-ornament {
+    display: block;
+    width: 52px; height: 1px;
+    background: linear-gradient(90deg, transparent, var(--rose), transparent);
+    margin-bottom: 22px;
+  }
+  .bridge-inner .section-eyebrow { margin-bottom: 0; }
+  .bridge-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.9rem, 4.2vw, 2.7rem);
+    font-weight: 400;
+    color: var(--dark);
+    line-height: 1.3;
+    margin: 16px 0 40px;
+  }
+  .bridge-title em { font-style: italic; color: var(--rose); }
+
   /* ── TESTIMONIALS ── */
   .testimonials-section {
     background: var(--off-white);
@@ -442,9 +489,13 @@
     border-top: 3px solid var(--rose);
     border-radius: 4px;
     padding: 32px 28px;
-    transition: box-shadow 0.25s ease, transform 0.25s ease;
+    transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
   }
-  .testimonial-card:hover { box-shadow: 0 8px 28px rgba(37,124,108,0.1); transform: translateY(-3px); }
+  .testimonial-card:hover {
+    box-shadow: 0 16px 40px rgba(37,124,108,0.16);
+    transform: translateY(-7px);
+    border-color: var(--teal-pale);
+  }
   .testimonial-text { font-size: 14.5px; color: var(--warm-gray); line-height: 1.8; margin-bottom: 20px; }
   .testimonial-author { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--rose); }
 
@@ -479,8 +530,15 @@
     font-size: 1rem;
     color: rgba(255,255,255,0.85);
     line-height: 1.6;
+    transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
   }
-  .fuer-wen-list li::before { content: '✓'; color: var(--teal-light); font-weight: 700; flex-shrink: 0; }
+  .fuer-wen-list li:hover {
+    background: rgba(255,255,255,0.09);
+    border-left-color: var(--rose-light);
+    transform: translateX(8px);
+  }
+  .fuer-wen-list li::before { content: '✓'; color: var(--teal-light); font-weight: 700; flex-shrink: 0; transition: color 0.25s ease; }
+  .fuer-wen-list li:hover::before { color: var(--rose-light); }
 
   /* ── FINAL CTA ── */
   .final-cta {
@@ -521,25 +579,6 @@
     margin: 32px 0 40px;
     line-height: 1.7;
   }
-  .signoff {
-    margin-top: 56px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4px;
-  }
-  .signoff-line {
-    font-size: 12px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: rgba(248,246,242,0.4);
-  }
-  .signoff-name {
-    font-family: 'East Liberty', 'Cormorant Garamond', cursive;
-    font-size: 2rem;
-    color: var(--sand-light);
-  }
-
   /* ── FOOTER ── */
   .site-footer {
     background: var(--black);
@@ -656,11 +695,13 @@
     .hero-text { padding: 48px 32px 72px; text-align: center; }
     .hero-cta { align-items: center; }
     .testimonials-grid { grid-template-columns: 1fr; }
-    .journey-card { flex-basis: 260px; padding: 34px 26px 30px; }
-    .journey-num { font-size: 2.6rem; margin-bottom: 16px; }
+    .journey-card { flex-basis: 300px; padding: 40px 30px 34px; }
+    .journey-num { font-size: 3rem; margin-bottom: 18px; }
+    .journey-card h3 { font-size: 1.35rem; }
   }
   @media (max-width: 640px) {
     .top-banner p { font-size: 11px; letter-spacing: 2px; }
+    .bridge-section { padding: 72px 20px; }
     .hero-text { padding: 40px 20px 64px; }
     .hero-image-wrap { height: 70vw; }
     .journey-section { padding: 88px 0; }
@@ -775,6 +816,19 @@
 </section>
 
 <!-- ══════════════════════════════
+     BRIDGE CTA
+═══════════════════════════════ -->
+<section class="bridge-section">
+  <div class="bridge-glow"></div>
+  <div class="bridge-inner">
+    <span class="bridge-ornament"></span>
+    <span class="section-eyebrow">Bereit für den nächsten Schritt?</span>
+    <h2 class="bridge-title">Dann hol dir jetzt deine<br><em>Core Conflict Analyse.</em></h2>
+    <button class="btn-primary" onclick="openExitPopup()">Jetzt für 0€ sichern &rarr;</button>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
      FÜR WEN
 ═══════════════════════════════ -->
 <section class="fuer-wen-section">
@@ -828,10 +882,6 @@
     <p>Erlaube dir, ehrlich hinzuschauen und Klarheit über das zu gewinnen, was dein Business-Wachstum bisher blockiert hat.</p>
     <p class="callout-final">„The Core Conflict ist dein Startpunkt. Präzise, ehrlich und transformierend."</p>
     <button class="btn-primary" onclick="openExitPopup()">Jetzt für 0€ sichern &rarr;</button>
-    <div class="signoff">
-      <span class="signoff-line">Break the Circle</span>
-      <span class="signoff-name">Deine Marina</span>
-    </div>
   </div>
 </section>
 
