@@ -687,12 +687,11 @@
   /* ── RESPONSIVE ── */
   @media (max-width: 900px) {
     .hero { grid-template-columns: 1fr; min-height: auto; }
-    .hero-image-wrap { height: 55vw; min-height: 320px; order: -1; }
+    .hero-image-wrap { height: 55vw; min-height: 220px; order: -1; }
     .hero-image-wrap::before {
-      background: linear-gradient(to bottom, transparent 40%, var(--dark) 100%),
-                  linear-gradient(to top, transparent 40%, var(--dark) 100%);
+      background: linear-gradient(to bottom, transparent 0%, transparent 78%, rgba(7,8,8,0.6) 100%);
     }
-    .hero-text { padding: 48px 32px 72px; text-align: center; }
+    .hero-text { padding: 36px 32px 48px; text-align: center; }
     .hero-cta { align-items: center; }
     .testimonials-grid { grid-template-columns: 1fr; }
     .journey-card { flex-basis: 300px; padding: 40px 30px 34px; }
@@ -700,10 +699,14 @@
     .journey-card h3 { font-size: 1.35rem; }
   }
   @media (max-width: 640px) {
-    .top-banner p { font-size: 11px; letter-spacing: 2px; }
+    .top-banner { padding: 10px 16px; }
+    .top-banner p { font-size: 10px; letter-spacing: 1.1px; line-height: 1.5; }
     .bridge-section { padding: 72px 20px; }
-    .hero-text { padding: 40px 20px 64px; }
-    .hero-image-wrap { height: 70vw; }
+    .hero-image-wrap { height: 42vw; min-height: 150px; }
+    .hero-text { padding: 22px 20px 28px; }
+    .hero-tag { margin-bottom: 12px; }
+    .hero-title { font-size: 1.9rem; line-height: 1.2; margin-bottom: 12px; }
+    .hero-sub { font-size: 0.92rem; line-height: 1.6; margin-bottom: 22px; }
     .journey-section { padding: 88px 0; }
     .text-section, .testimonials-section, .fuer-wen-section { padding: 64px 20px; }
     .final-cta { padding: 72px 20px; }
