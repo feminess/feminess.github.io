@@ -501,28 +501,19 @@
     .text-inner p strong { color: #1b5c50; font-weight: 700; }
     .quote-block {
       text-align: center;
-      padding: 24px 24px;
+      padding: 32px 40px;
       margin: 24px 0;
       position: relative;
+      background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%);
+      border-radius: 12px;
     }
     .quote-block::before,
-    .quote-block::after {
-      content: '';
-      display: block;
-      width: 80px;
-      height: 2px;
-      background: linear-gradient(90deg, #c47868, var(--sand-light));
-      margin: 0 auto 24px;
-      border-radius: 2px;
-    }
-    .quote-block::after {
-      margin: 24px auto 0;
-    }
+    .quote-block::after { display: none; }
     .quote-block p {
       font-family: 'Cormorant Garamond', serif;
       font-size: 56px;
       font-style: italic;
-      color: #1b5c50;
+      color: #fff;
       line-height: 1.25;
       margin: 0;
       letter-spacing: 0.01em;
@@ -581,11 +572,12 @@
       font-family: 'Cormorant Garamond', serif;
       font-size: 100px;
       font-weight: 400;
-      color: rgba(255,255,255,0.10);
+      color: rgba(255,255,255,0.32);
       line-height: 1;
       flex-shrink: 0;
       width: 80px;
-      text-align: center;
+      text-align: left;
+      align-self: flex-start;
       user-select: none;
     }
     .benefit-body p { font-size: 22px; color: rgba(255,255,255,0.82); margin: 0; line-height: 1.75; }
@@ -1459,25 +1451,25 @@ window._load_script = function(url, callback, isSubmit) {
 <section class="benefits-section">
   <div class="benefits-inner">
     <div class="benefits-header">
-      <h2>Wie wir deine Energie für <em>Millionen</em> freisetzen</h2>
+      <h2>Wie wir deine Energie für <em><strong>Millionen</strong></em> freisetzen</h2>
     </div>
     <div class="benefits-grid">
       <div class="benefit-card">
         <div class="benefit-num">1</div>
         <div class="benefit-body">
-          <p>Du erkennst die <strong>unsichtbaren Muster</strong>, die dich daran hindern, mehr <strong>Geld</strong> zu verdienen und warum alleine Anstrengung und Disziplin nicht ausreichen. Du löst auf, was dein <strong>Wachstum</strong> bisher gedeckelt hat.</p>
+          <p>Du erkennst die unsichtbaren Muster, die dich daran hindern, mehr <strong>Geld</strong> zu verdienen und warum alleine Anstrengung und Disziplin nicht ausreichen. Du löst auf, was dein <strong>Wachstum</strong> bisher gedeckelt hat.</p>
         </div>
       </div>
       <div class="benefit-card">
         <div class="benefit-num">2</div>
         <div class="benefit-body">
-          <p>Du verstehst, warum dein <strong>Nervensystem über deinen Erfolg entscheidet</strong>, nicht irgendeine Strategie – und wie du dadurch endlich aus dem <strong>Kampfmodus aussteigst.</strong></p>
+          <p>Du verstehst, warum dein <strong>Nervensystem über deinen Erfolg entscheidet</strong>, nicht irgendeine Strategie – und wie du dadurch endlich aus dem Kampfmodus aussteigst.</p>
         </div>
       </div>
       <div class="benefit-card">
         <div class="benefit-num">3</div>
         <div class="benefit-body">
-          <p>Du erkennst, warum du dich seit Jahren <strong>anpasst und vergleichst.</strong> Du willst „genau richtig" sein und übersiehst, dass genau das dir deine <strong>Energie &amp; Kraft</strong> raubt.</p>
+          <p>Du erkennst, warum du dich seit Jahren anpasst und vergleichst. Du willst „genau richtig" sein und übersiehst, dass genau das dir deine Energie &amp; Kraft raubt.</p>
         </div>
       </div>
       <div class="benefit-card">
@@ -1489,7 +1481,7 @@ window._load_script = function(url, callback, isSubmit) {
       <div class="benefit-card">
         <div class="benefit-num">5</div>
         <div class="benefit-body">
-          <p>Du wandelst den <strong>Zwang</strong>, ständig funktionieren zu müssen, in eine Energie, die dich <strong>anziehend</strong> für <strong>Kunden</strong> und <strong>Geld</strong> macht, statt dich selbst zu verraten und zu verbrennen.</p>
+          <p>Du wandelst den Zwang, ständig funktionieren zu müssen, in eine Energie, die dich <strong>anziehend</strong> für <strong>Kunden</strong> und <strong>Geld</strong> macht, statt dich selbst zu verraten und zu verbrennen.</p>
         </div>
       </div>
       <div class="benefit-card">
@@ -1501,12 +1493,12 @@ window._load_script = function(url, callback, isSubmit) {
       <div class="benefit-card" style="grid-column: 1 / -1;">
         <div class="benefit-num">7</div>
         <div class="benefit-body">
-          <p>Am Ende des Online-Live-Events nehme ich mir noch Zeit dafür, all deine <strong>Fragen</strong> zu beantworten. Also halte deinen Kalender lange genug <strong>frei.</strong></p>
+          <p>Am Ende des Online-Live-Events nehme ich mir noch Zeit dafür, all deine <strong>Fragen</strong> zu beantworten. Also halte deinen Kalender lange genug frei.</p>
         </div>
       </div>
     </div>
     <div style="text-align:center;">
-      <button class="btn-cta" onclick="openModal()">Jetzt nach deinen eigenen Regeln spielen</button>
+      <button class="btn-cta" onclick="openModal()">Hol dir deine ENERGY zurück</button>
     </div>
   </div>
 </section>
