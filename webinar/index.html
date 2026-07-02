@@ -555,38 +555,36 @@
       margin-bottom: 52px;
     }
     .benefit-card {
-      background: #c2ab8d;
-      border: 1px solid rgba(194,171,141,0.4);
+      background: #1b5c50;
+      border: none;
       border-radius: 16px;
-      padding: 36px 32px;
+      padding: 32px 36px 32px 32px;
       display: flex;
-      gap: 24px;
-      align-items: flex-start;
-      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-      box-shadow: 0 2px 12px rgba(13,36,32,0.06);
+      gap: 20px;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 20px rgba(13,36,32,0.18);
     }
     .benefit-card:hover {
       transform: translateY(-4px);
-      border-color: rgba(207,90,115,0.35);
-      box-shadow: 0 8px 32px rgba(13,36,32,0.10);
+      box-shadow: 0 12px 40px rgba(13,36,32,0.28);
     }
     .benefit-num {
-      display: none;
-      flex: 0 0 44px;
-      height: 44px;
-      border-radius: 6px;
-      background: #c2ab8d;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      display: block;
       font-family: 'Cormorant Garamond', serif;
-      font-size: 22px;
-      color: #fff;
+      font-size: 100px;
+      font-weight: 400;
+      color: rgba(255,255,255,0.10);
       line-height: 1;
       flex-shrink: 0;
+      width: 80px;
+      text-align: center;
+      user-select: none;
     }
-    .benefit-body p { font-size: 22px; color: var(--warm-gray); margin: 0; line-height: 1.75; }
-    .benefit-body p strong { color: #1b5c50; font-weight: 700; }
+    .benefit-body p { font-size: 22px; color: rgba(255,255,255,0.82); margin: 0; line-height: 1.75; }
+    .benefit-body p strong { color: #fff; font-weight: 700; }
 
     /* ── PERFECT FOR YOU ── */
     .perfect-section {
