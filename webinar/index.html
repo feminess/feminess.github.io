@@ -144,7 +144,7 @@
 
     .hero-content h1 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 34px;
+      font-size: 45px;
       font-weight: 400;
       color: #fff;
       line-height: 1.0;
@@ -160,7 +160,7 @@
     }
 
     .hero-subtitle {
-      font-size: 20px;
+      font-size: 22px;
       font-weight: 400;
       color: var(--mid-gray);
       margin-bottom: 28px;
@@ -170,12 +170,15 @@
     .hero-subtitle strong { color: #fff; font-weight: 700; }
 
     .hero-date {
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 2.5px;
-      text-transform: uppercase;
-      color: var(--teal-light);
-      margin-bottom: 32px;
+      font-size: 22px;
+      font-weight: 400;
+      letter-spacing: 0;
+      text-transform: none;
+      color: var(--mid-gray);
+      margin-top: 20px;
+      margin-bottom: 0;
+      max-width: 520px;
+      line-height: 1.7;
     }
 
     /* CTA Hero Button */
@@ -193,7 +196,7 @@
       text-transform: uppercase;
       cursor: pointer;
       transition: opacity 0.2s, transform 0.2s;
-      margin-bottom: 44px;
+      margin-bottom: 0;
       text-decoration: none;
       width: fit-content;
       animation: pulse-btn 2.2s ease-in-out infinite;
@@ -201,7 +204,7 @@
     .btn-hero:hover { opacity: 0.88; transform: translateY(-2px); animation: none; }
 
     /* Countdown – minimal, kein Box-Design */
-    .countdown { display: flex; gap: 28px; justify-content: flex-start; align-items: flex-end; }
+    .countdown { display: flex; gap: 28px; justify-content: flex-start; align-items: flex-end; margin-top: 32px; }
     .countdown-item { text-align: center; }
     .countdown-digits {
       display: block;
@@ -1095,8 +1098,8 @@
       .hero-image img { object-position: center 15%; }
       .hero-content { padding: 20px 20px 24px; }
       .hero-subtitle { font-size: 16px; margin-bottom: 16px; }
-      .hero-date { font-size: 11px; letter-spacing: 1.5px; margin-bottom: 20px; }
-      .btn-hero { padding: 16px 28px; font-size: 13px; width: 100%; text-align: center; margin-bottom: 24px; }
+      .hero-date { font-size: 14px; letter-spacing: 0; text-transform: none; margin-top: 12px; margin-bottom: 0; }
+      .btn-hero { padding: 16px 28px; font-size: 13px; width: 100%; text-align: center; margin-bottom: 0; }
       #utm-message { font-size: 17px; }
 
       /* Countdown */
@@ -1178,8 +1181,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p class="hero-subtitle">
         Sei die ungezähmte Unternehmerin, <strong>FREI von Druck, Zwang, Zweifel und Erschöpfung.</strong> Führe dein Business nach deinen eigenen Regeln, mit der <strong>ENERGIE die Geld und Erfolg anziehst.</strong>
       </p>
-      <p class="hero-date">am 15.07.2026 von 11:00 Uhr bis 13:00 Uhr · kostenfreies Live-Webinar mit Marina Henze</p>
       <button class="btn-hero" onclick="openModal()">Deinen Platz sichern →</button>
+      <p class="hero-date">15.07.2026, 11:00 – 13:00 Uhr · kostenfreies Live-Webinar mit Marina Henze</p>
       <div class="countdown">
         <div class="countdown-item">
           <span class="countdown-digits" id="h-days">00</span>
