@@ -111,27 +111,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     margin-bottom: 42px;
     max-width: 820px;
   }
-  .hero .video-wrap {
-    width: 100%;
-    max-width: 680px;
-    margin: 0 auto 48px;
-  }
-  .video-frame {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 40px 80px rgba(0,0,0,0.45);
-    border: 1px solid rgba(255,255,255,0.12);
-  }
-  .video-frame iframe {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
-  }
   .hero .lead {
     color: rgba(255,255,255,0.85);
     max-width: 620px;
@@ -152,19 +131,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .cal-btn {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
-    padding: 15px 30px;
+    width: 380px;
+    padding: 15px 24px;
     border-radius: 100px;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 19px;
     letter-spacing: 0.3px;
+    white-space: nowrap;
     text-decoration: none;
     border: 1.5px solid transparent;
     cursor: pointer;
     transition: transform 0.25s cubic-bezier(.4,0,.2,1), box-shadow 0.25s cubic-bezier(.4,0,.2,1), background-color 0.25s ease;
   }
   .cal-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(0,0,0,0.22); }
-  .cal-btn svg { width: 16px; height: 16px; flex-shrink: 0; }
+  .cal-btn svg { width: 18px; height: 18px; flex-shrink: 0; }
+  .cal-btn-emoji { font-size: 19px; line-height: 1; flex-shrink: 0; }
   .cal-btn-google {
     background: #fff;
     color: var(--dark-teal);
@@ -210,7 +193,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
   .footer-logo img {
     max-width: 200px;
-    opacity: 0.9;
     display: block;
   }
   .footer-links {
@@ -242,7 +224,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .progress-labels { font-size: 10px; }
     .hero { padding: 48px 18px 56px; }
     .hero h2 { font-size: 24px; margin-bottom: 28px; }
-    .hero .video-wrap { margin-bottom: 32px; }
     .hero .lead { font-size: 15px; margin-bottom: 30px; }
     .cal-buttons {
       flex-direction: column;
@@ -250,7 +231,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       gap: 12px;
       margin-bottom: 30px;
     }
-    .cal-btn { width: 100%; justify-content: center; padding: 15px 20px; }
+    .cal-btn { width: 100%; justify-content: center; padding: 15px 20px; white-space: normal; }
     .site-footer {
       flex-direction: column;
       text-align: center;
@@ -263,7 +244,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   @media (max-width: 380px) {
     .progress-labels { font-size: 9px; }
     .hero h2 { font-size: 21px; }
-    .cal-btn { font-size: 13px; padding: 14px 16px; }
+    .cal-btn { font-size: 18px; padding: 14px 16px; }
   }
 </style>
 </head>
@@ -288,18 +269,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <!-- ── HERO ── -->
   <section class="hero">
-    <h2>Achtung! Ein weiterer Schritt nötig. <br>Schau jetzt das Video bis zum Ende!</h2>
-
-    <div class="video-wrap">
-      <div class="video-frame">
-        <iframe allowfullscreen allow="clipboard-write" title="Vimeo Video Player" src="https://player.vimeo.com/video/1154649367?color&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0#t="></iframe>
-      </div>
-    </div>
+    <h2>Achtung!<br>Ein weiterer Schritt notwendig.</h2>
 
     <h2>Trage dir jetzt den Termin in deinen Kalender und tritt unserer exklusiven Telegram Community bei:</h2>
 
     <p class="lead">
-      Klicke hier, um dir den Termin in den Kalender einzutragen. Wenn du live dabei bist, kannst du deine Fragen direkt stellen und die volle Energie des Webinars miterleben – beides gibt es in der Aufzeichnung nicht. Das Webinar findet am 15.07 von 11 bis 13 Uhr statt.
+      Klicke hier, um dir den Termin in den Kalender einzutragen. Wenn du live dabei bist, kannst du deine Fragen direkt stellen und die volle Energie des Webinars miterleben – beides gibt es in der Aufzeichnung nicht.
+    </p>
+
+    <p class="lead">
+      Das Webinar findet am <strong>15.07</strong> von <strong>11 bis 13 Uhr</strong> statt.
     </p>
 
     <div class="cal-buttons">
@@ -313,11 +292,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         Google Kalender
       </a>
       <a href="webinar-termin.ics" download class="cal-btn cal-btn-ics">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <polyline points="8 17 12 21 16 17"/>
-          <line x1="12" y1="3" x2="12" y2="21"/>
-        </svg>
-        Apple / Outlook (.ics)
+        <span class="cal-btn-emoji" aria-hidden="true">📅</span>
+        Sonstige Kalender
       </a>
     </div>
 
@@ -333,12 +309,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         Telegram Community beitreten
       </a>
     </div>
+
+    <p class="lead">
+      Du willst noch mehr Impulse für dein Business und deine Energy for Million? Dann folge uns auch auf unseren Social-Media-Kanälen – dort teilen wir täglich Inspiration und die neuesten Updates.
+    </p>
   </section>
 
   <!-- ── FOOTER ── -->
   <footer class="site-footer">
     <div class="footer-logo">
-      <img src="Bilder/Logo_white@2x.png" alt="Feminess">
+      <img src="Bilder/Logo-rosegoldverlauf-rgb.png" alt="Feminess">
     </div>
     <ul class="footer-links">
       <li><a href="https://feminess.github.io/Datenschutz/">Datenschutzerklärung</a></li>
