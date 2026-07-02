@@ -404,6 +404,8 @@
       0%, 100% { transform: scale(1);     box-shadow: 0 6px 28px rgba(160,104,90,0.40); }
       50%       { transform: scale(1.04); box-shadow: 0 10px 36px rgba(160,104,90,0.58); }
     }
+    .floating-cta { animation-duration: 1.4s; }
+    .btn-hero, .btn-cta, .btn-submit { animation-duration: 1.4s; }
     .floating-cta {
       position: fixed;
       bottom: 32px; right: 32px;
@@ -518,6 +520,8 @@
       margin: 0;
       letter-spacing: 0.01em;
     }
+    .btn-mobile { display: none; }
+    .btn-desktop { display: inline; }
     .cta-row { text-align: center; margin-top: 52px; padding-top: 28px; border-top: 1px solid var(--beige); }
 
     /* ── BENEFITS ── */
@@ -702,7 +706,7 @@
       font-size: 56px;
       font-weight: 400;
       line-height: 1;
-      margin-bottom: 20px;
+      margin-bottom: 8px;
       background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.04) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -1066,6 +1070,10 @@
 
     /* ── RESPONSIVE: MOBILE ── */
     @media (max-width: 600px) {
+      /* Mobile-only text switcher */
+      .btn-mobile { display: inline; }
+      .btn-desktop { display: none; }
+
       /* Allgemein */
       body { font-size: 16px; }
       h1 { font-size: 9vw !important; white-space: normal; }
@@ -1123,7 +1131,7 @@
       .fuer-dich-box { padding: 24px 20px; }
       .fuer-dich-box-header { font-size: 12px; margin-bottom: 14px; }
       .fuer-dich-list { gap: 10px; }
-      .fuer-dich-list li { padding-left: 16px; font-size: 14px; }
+      .fuer-dich-list li { padding-left: 16px; font-size: 18px; }
 
       /* Bonus */
       .bonus-gift-box { flex-direction: column; text-align: center; padding: 32px 24px; gap: 24px; }
@@ -1442,7 +1450,7 @@ window._load_script = function(url, callback, isSubmit) {
     <p>Denn das Ziel von <strong>ENERGY FOR MILLION</strong> ist es, dass du dein Business nach deinen <strong>Regeln</strong> aufbaust. Ohne Kampf, ohne ständig funktionieren zu müssen, ohne den Druck es allen ständig recht zu machen und ohne dich mit allen anderen zu vergleichen.</p>
     <p>In diesem Online-Live-Event holst du dir endlich die <strong>Kraft &amp; Energie</strong> zurück, die dafür notwendig ist, um dein Business <strong>erfolgreich(er)</strong> zu führen, dein <strong>Vermögen aufzubauen</strong> und endlich das langersehnte <strong>freie Leben</strong> zu leben, für das du in deiner Selbstständigkeit angetreten bist.</p>
     <div class="cta-row">
-      <button class="btn-cta" onclick="openModal()">Hier klicken und deine Energy zurückholen</button>
+      <button class="btn-cta" onclick="openModal()"><span class="btn-desktop">Hier klicken und deine Energy zurückholen</span><span class="btn-mobile">Hier Energy zurückholen</span></button>
     </div>
   </div>
 </div>
@@ -1498,7 +1506,7 @@ window._load_script = function(url, callback, isSubmit) {
       </div>
     </div>
     <div style="text-align:center;">
-      <button class="btn-cta" onclick="openModal()">Hol dir deine ENERGY zurück</button>
+      <button class="btn-cta" onclick="openModal()"><span class="btn-desktop">Hol dir deine ENERGY zurück</span><span class="btn-mobile">Spiele nach deinen Regeln</span></button>
     </div>
   </div>
 </section>
@@ -1507,7 +1515,7 @@ window._load_script = function(url, callback, isSubmit) {
 <!-- WAS ERWARTET DICH -->
 <section class="how-section">
   <div class="how-inner">
-    <h2 style="text-align:center; color:#fff; margin-bottom:16px;">Deine <em style="color:var(--rose);">Wiedergeburt</em> als du selbst</h2>
+    <h2 style="text-align:center; color:#fff; margin-bottom:16px; white-space:nowrap;">Wiedergeburt als du <em style="color:var(--rose);">SELBST</em></h2>
     <p class="how-intro">Es erwartet dich nicht nur ein Live-Event, sondern deine <strong>Wiedergeburt</strong> als <strong>ungezähmte Unternehmerin</strong>, die bedingungslos für ihr erfolgreiches, freies Business einsteht.</p>
     <div class="journey-cards">
 
@@ -1557,7 +1565,7 @@ window._load_script = function(url, callback, isSubmit) {
           <li>… <strong>2026 dein Jahr</strong> werden soll, in dem du endlich den ewigen Kampf aufgibst und als du Selbst dein erfolgreiches Business führen willst.</li>
         </ul>
       </div>
-      <div class="fuer-dich-divider">Dieses Webinar ist <em>NICHT</em> für dich, wenn …</div>
+      <div class="fuer-dich-divider">Dieses Webinar ist <em>nicht</em> für dich, wenn …</div>
       <div class="fuer-dich-box nein">
         <ul class="fuer-dich-list">
           <li>du nach weiteren gratis <strong>Strategien, Taktiken</strong> oder dem nächsten Funnel suchst.</li>
