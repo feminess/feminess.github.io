@@ -255,7 +255,7 @@
     .modal-overlay.active { display: flex; }
 
     .modal {
-      background: var(--dark);
+      background: linear-gradient(135deg, var(--teal-dark) 0%, var(--dark) 100%);
       border: 1px solid rgba(255,255,255,0.08);
       border-top: 3px solid #c47868;
       border-radius: 3px;
@@ -522,6 +522,7 @@
     }
     .btn-mobile { display: none; }
     .btn-desktop { display: inline; }
+    .mobile-br { display: none; }
     .cta-row { text-align: center; margin-top: 52px; padding-top: 28px; border-top: 1px solid var(--beige); }
 
     /* ── BENEFITS ── */
@@ -912,7 +913,7 @@
     }
     .bonus-gift-text h3 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 25px;
+      font-size: 34px;
       font-weight: 400;
       color: var(--sand-light);
       margin-bottom: 12px;
@@ -1073,6 +1074,7 @@
       /* Mobile-only text switcher */
       .btn-mobile { display: inline; }
       .btn-desktop { display: none; }
+      .mobile-br { display: inline; }
 
       /* Allgemein */
       body { font-size: 16px; }
@@ -1605,7 +1607,7 @@ window._load_script = function(url, callback, isSubmit) {
 <section class="testimonials-section">
   <div class="testimonials-inner">
     <div class="section-header">
-      <h2>Das sagen unsere<br>begeisterten <em>Teilnehmerinnen</em></h2>
+      <h2>Das sagen unsere<br class="mobile-br"> begeisterten <em>Frauen</em></h2>
     </div>
     <div class="testimonials-grid">
       <div class="testimonial-card">
@@ -1636,7 +1638,7 @@ window._load_script = function(url, callback, isSubmit) {
       <p class="role">CEO &amp; Gründerin · FEMINESS</p>
     </div>
     <div class="speaker-bio">
-      <h2 style="font-family:'Cormorant Garamond',serif; font-size:34px; font-weight:400; margin-bottom:24px;">Warum Marina die Richtige ist, um deine <em style="font-style:italic;color:var(--rose);">Energy for Million</em> freizusetzen</h2>
+      <h2 style="font-family:'Cormorant Garamond',serif; font-size:34px; font-weight:400; margin-bottom:24px;">Die Frau, die deine <em style="font-style:italic; background:linear-gradient(90deg,#a0685a 0%,#d4a090 25%,#f0ccc0 50%,#d4a090 75%,#a0685a 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">ENERGY for MILLION</em> freisetzt!</h2>
       <p>Marina Henze ist <strong>Mentorin</strong> für <strong>Unternehmerinnen</strong>, die spüren: So wie bisher will ich nicht weitermachen.</p>
       <p>Seit über <strong>20 Jahren</strong> begleitet sie Frauen aus Erschöpfung und Selbstaufopferung hinein in <strong>finanzielle Freiheit</strong> und selbstbestimmtes Wirken. Mehr als <strong>20.000 Frauen</strong> sind diesen Weg bereits mit ihr gegangen.</p>
       <p>Als Unternehmerin mit <strong>Millionen-Umsätzen</strong> steht Marina für Business ohne <strong>Kampf.</strong> Klar, kraftvoll und frei.</p>
