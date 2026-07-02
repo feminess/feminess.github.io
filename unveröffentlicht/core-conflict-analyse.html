@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Kostenfreie Tiefenanalyse: Entdecke mit The Core Conflict Analyse den inneren Konflikt, der dein Business-Wachstum wirklich blockiert. 0€, sofort startklar." />
+<title>The Core Conflict Analyse – 0€ Tiefenanalyse | Feminess</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet" />
+<style>
+  @font-face {
+    font-family: 'East Liberty';
+    src: url('../CI/east_liberty_signature (1)/east liberty signature.ttf') format('truetype');
+    font-weight: 400; font-style: normal;
+  }
+  @font-face {
+    font-family: 'Avenir LT Pro';
+    src: url('../CI/AvenirLTPro-Book (1).otf') format('opentype');
+    font-weight: 400; font-style: normal;
+  }
+  @font-face {
+    font-family: 'Avenir LT Pro';
+    src: url('../CI/AvenirLTPro-Heavy (1).otf') format('opentype');
+    font-weight: 700; font-style: normal;
+  }
+
+  :root {
+    --teal:        #257c6c;
+    --teal-dark:   #1b5c50;
+    --teal-light:  #5ec6b3;
+    --teal-pale:   #b8ddd8;
+    --rose:        #cf5a73;
+    --rose-light:  #e8a0b0;
+    --rose-dark:   #b5405a;
+    --sand:        #c2ab8d;
+    --sand-dark:   #8d6a48;
+    --sand-light:  #e4bc95;
+    --black:       #070808;
+    --dark:        #0d2420;
+    --dark-2:      #163028;
+    --off-white:   #f8f6f2;
+    --cream:       #f0f5f4;
+    --beige:       #ddecea;
+    --warm-gray:   #5a7a74;
+    --mid-gray:    #9ab8b4;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--off-white);
+    color: var(--black);
+    font-family: 'Avenir LT Pro', 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  img { display: block; max-width: 100%; }
+  a { text-decoration: none; }
+
+  /* ── HEADER ── */
+  .site-header {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    padding: 28px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+  }
+  .logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.35rem;
+    font-weight: 500;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--sand-light);
+  }
+  .header-tag {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(248,246,242,0.45);
+  }
+
+  /* ── HERO ── */
+  .hero {
+    background: var(--dark);
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; top: -100px; left: -100px;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(37,124,108,0.2) 0%, transparent 65%);
+    pointer-events: none;
+  }
+  .hero::after {
+    content: '';
+    position: absolute; bottom: -80px; left: 30%;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(207,90,115,0.1) 0%, transparent 65%);
+    pointer-events: none;
+  }
+  .hero-text {
+    padding: 140px 56px 80px 72px;
+    position: relative; z-index: 2;
+  }
+  .hero-tag {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3.5px;
+    text-transform: uppercase;
+    color: var(--teal-light);
+    margin-bottom: 28px;
+  }
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.4rem, 4.5vw, 4.1rem);
+    font-weight: 400;
+    line-height: 1.15;
+    color: var(--off-white);
+    margin-bottom: 24px;
+  }
+  .hero-title em {
+    font-style: italic;
+    color: var(--sand-light);
+  }
+  .hero-sub {
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: rgba(248,246,242,0.62);
+    max-width: 460px;
+    margin-bottom: 44px;
+    line-height: 1.8;
+  }
+  .hero-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .btn-primary {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--rose) 0%, var(--rose-dark) 100%);
+    color: var(--off-white);
+    font-family: 'Avenir LT Pro', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    padding: 19px 42px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 36px rgba(207,90,115,0.4);
+  }
+  .btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 48px rgba(207,90,115,0.55);
+  }
+  .hero-proof-line {
+    font-size: 0.8rem;
+    color: rgba(248,246,242,0.35);
+    letter-spacing: 0.2px;
+    max-width: 400px;
+    line-height: 1.6;
+  }
+  .hero-image-wrap {
+    position: relative;
+    height: 100vh;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+  .hero-image-wrap::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(to right, var(--dark) 0%, transparent 30%),
+                linear-gradient(to top, var(--dark) 0%, transparent 25%);
+    z-index: 1;
+    pointer-events: none;
+  }
+  .hero-img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+  }
+
+  /* ── TRUST BAR ── */
+  .trust-bar {
+    background: var(--dark-2);
+    padding: 20px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+    flex-wrap: wrap;
+  }
+  .trust-item {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: rgba(248,246,242,0.5);
+  }
+
+  /* ── SHARED SECTION HEADERS ── */
+  .section-eyebrow {
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 14px;
+  }
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.9rem, 5vw, 2.9rem);
+    font-weight: 400;
+    color: var(--dark);
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+  .section-title em { font-style: italic; color: var(--rose); }
+
+  /* ── AGITATION TEXT SECTION ── */
+  .text-section {
+    background: var(--off-white);
+    padding: 100px 24px;
+  }
+  .text-inner {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .text-inner p {
+    font-size: 1.1rem;
+    color: var(--warm-gray);
+    line-height: 1.9;
+    margin-bottom: 24px;
+    text-align: left;
+  }
+  .callout-box {
+    background: white;
+    border-left: 3px solid var(--rose);
+    border-radius: 4px;
+    padding: 32px 36px;
+    margin: 44px 0 36px;
+    text-align: left;
+    box-shadow: 0 4px 24px rgba(13,36,32,0.06);
+  }
+  .callout-box p {
+    font-size: 1.05rem;
+    color: var(--black);
+    line-height: 1.8;
+    margin: 0;
+  }
+  .callout-box p strong { color: var(--teal-dark); }
+  .text-cta { text-align: center; margin-top: 8px; }
+
+  /* ── CTA BUTTON (shared, on light bg) ── */
+  .btn-cta {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--teal) 0%, var(--teal-dark) 100%);
+    color: white;
+    font-family: 'Avenir LT Pro', 'Arial', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 19px 40px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 8px 28px rgba(37,124,108,0.35);
+  }
+  .btn-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(37,124,108,0.5);
+  }
+
+  /* ── BULLETS ── */
+  .bullets-section {
+    background: var(--cream);
+    padding: 100px 24px;
+  }
+  .bullets-inner {
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  .bullets-header { text-align: center; margin-bottom: 56px; }
+  .bullet-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .bullet-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    background: white;
+    border-radius: 14px;
+    padding: 28px 30px;
+    box-shadow: 0 2px 16px rgba(13,36,32,0.055);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .bullet-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(13,36,32,0.1);
+  }
+  .bullet-icon {
+    flex-shrink: 0;
+    width: 32px; height: 32px;
+    background: linear-gradient(135deg, var(--teal-light), var(--teal));
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    margin-top: 2px;
+  }
+  .bullet-icon svg { width: 15px; height: 15px; fill: white; }
+  .bullet-text { font-size: 0.98rem; line-height: 1.75; color: var(--black); }
+  .bullet-text strong { color: var(--teal-dark); font-weight: 700; display: block; margin-bottom: 4px; font-size: 1.02rem; }
+
+  /* ── TESTIMONIALS ── */
+  .testimonials-section {
+    background: var(--off-white);
+    padding: 100px 24px;
+    border-top: 2px solid var(--teal-pale);
+  }
+  .testimonials-inner { max-width: 1100px; margin: 0 auto; }
+  .testimonials-header { text-align: center; margin-bottom: 56px; }
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .testimonial-card {
+    background: #fff;
+    border: 1px solid var(--beige);
+    border-top: 3px solid var(--rose);
+    border-radius: 4px;
+    padding: 32px 28px;
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+  }
+  .testimonial-card:hover { box-shadow: 0 8px 28px rgba(37,124,108,0.1); transform: translateY(-3px); }
+  .testimonial-text { font-size: 14.5px; color: var(--warm-gray); line-height: 1.8; margin-bottom: 20px; }
+  .testimonial-author { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--rose); }
+
+  /* ── FÜR WEN ── */
+  .fuer-wen-section {
+    background: var(--dark);
+    padding: 100px 24px;
+    position: relative;
+    overflow: hidden;
+  }
+  .fuer-wen-section::before {
+    content: '';
+    position: absolute; top: -100px; right: -80px;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(37,124,108,0.15) 0%, transparent 65%);
+    pointer-events: none;
+  }
+  .fuer-wen-inner { max-width: 700px; margin: 0 auto; position: relative; z-index: 1; }
+  .fuer-wen-header { text-align: center; margin-bottom: 48px; }
+  .fuer-wen-section .section-eyebrow { color: var(--teal-light); }
+  .fuer-wen-section .section-title { color: #fff; }
+  .fuer-wen-section .section-title em { color: var(--rose-light); }
+  .fuer-wen-list { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+  .fuer-wen-list li {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    padding: 18px 22px;
+    background: rgba(255,255,255,0.04);
+    border-left: 2px solid var(--teal-light);
+    border-radius: 0 4px 4px 0;
+    font-size: 1rem;
+    color: rgba(255,255,255,0.85);
+    line-height: 1.6;
+  }
+  .fuer-wen-list li::before { content: '✓'; color: var(--teal-light); font-weight: 700; flex-shrink: 0; }
+
+  /* ── FINAL CTA ── */
+  .final-cta {
+    background: linear-gradient(135deg, var(--teal-dark) 0%, var(--dark) 100%);
+    padding: 120px 24px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .final-cta::before {
+    content: '';
+    position: absolute; top: -150px; left: 50%;
+    transform: translateX(-50%);
+    width: 800px; height: 800px;
+    background: radial-gradient(circle, rgba(207,90,115,0.1) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .final-cta-inner { max-width: 640px; margin: 0 auto; position: relative; z-index: 1; }
+  .final-cta h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.9rem, 4.5vw, 2.9rem);
+    font-weight: 400;
+    color: #fff;
+    line-height: 1.3;
+    margin-bottom: 24px;
+  }
+  .final-cta h2 em { font-style: italic; color: var(--sand-light); }
+  .final-cta p {
+    font-size: 1.05rem;
+    color: rgba(248,246,242,0.65);
+    line-height: 1.85;
+    margin-bottom: 20px;
+  }
+  .final-cta .callout-final {
+    font-size: 1.1rem;
+    color: var(--sand-light);
+    font-style: italic;
+    margin: 32px 0 40px;
+    line-height: 1.7;
+  }
+  .signoff {
+    margin-top: 56px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+  .signoff-line {
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(248,246,242,0.4);
+  }
+  .signoff-name {
+    font-family: 'East Liberty', 'Cormorant Garamond', cursive;
+    font-size: 2rem;
+    color: var(--sand-light);
+  }
+
+  /* ── FOOTER ── */
+  .site-footer {
+    background: var(--black);
+    padding: 40px 24px;
+    text-align: center;
+  }
+  .site-footer p {
+    font-size: 0.78rem;
+    color: rgba(248,246,242,0.32);
+    line-height: 2.2;
+  }
+  .site-footer a { color: rgba(248,246,242,0.42); transition: color 0.25s; }
+  .site-footer a:hover { color: var(--teal-light); }
+
+  /* ── FLOATING CTA ── */
+  @keyframes pulse-cta {
+    0%, 100% { transform: scale(1);     box-shadow: 0 6px 28px rgba(207,90,115,0.5); }
+    50%      { transform: scale(1.05); box-shadow: 0 10px 36px rgba(207,90,115,0.65); }
+  }
+  .floating-cta {
+    position: fixed;
+    bottom: 28px; right: 28px;
+    z-index: 500;
+    background: linear-gradient(135deg, var(--rose) 0%, var(--rose-dark) 100%);
+    color: #fff;
+    font-family: 'Avenir LT Pro', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding: 16px 26px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 6px 28px rgba(207,90,115,0.5);
+    animation: pulse-cta 2.4s ease-in-out infinite;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease, transform 0.3s ease;
+    transform: translateY(12px);
+    white-space: nowrap;
+  }
+  .floating-cta.is-visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
+  .floating-cta:hover { animation: none; transform: translateY(-3px) scale(1.04); }
+  @media (max-width: 640px) {
+    .floating-cta { bottom: 18px; right: 16px; left: 16px; text-align: center; }
+  }
+
+  /* ── EXIT POPUP ── */
+  @keyframes popup-in {
+    from { opacity: 0; transform: translateY(24px) scale(0.97); }
+    to   { opacity: 1; transform: translateY(0)    scale(1);    }
+  }
+  .popup-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(7,8,8,0.72);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+  }
+  .popup-overlay.is-visible { display: flex; }
+  .popup-box {
+    background: var(--dark);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-top: 3px solid var(--rose);
+    border-radius: 3px;
+    max-width: 500px;
+    width: 100%;
+    padding: 48px 44px 40px;
+    position: relative;
+    animation: popup-in 0.3s ease forwards;
+  }
+  .popup-close {
+    position: absolute; top: 16px; right: 20px;
+    background: none; border: none; cursor: pointer;
+    color: var(--warm-gray); font-size: 22px; line-height: 1; padding: 4px;
+    transition: color 0.15s;
+  }
+  .popup-close:hover { color: #fff; }
+  .popup-kicker {
+    font-size: 10px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase;
+    color: var(--teal-light); margin-bottom: 16px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .popup-kicker::before { content: ''; display: block; width: 20px; height: 1px; background: var(--teal-light); }
+  .popup-box h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(24px, 4vw, 34px);
+    font-weight: 400; color: #fff; line-height: 1.25; margin-bottom: 12px;
+  }
+  .popup-box h2 em { font-style: italic; color: var(--sand-light); }
+  .popup-box p { font-size: 15px; color: var(--mid-gray); line-height: 1.65; margin-bottom: 28px; }
+  .popup-form { display: flex; flex-direction: column; gap: 8px; margin-bottom: 14px; }
+  .popup-input {
+    background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.13);
+    border-radius: 2px; padding: 13px 16px;
+    font-family: 'Avenir LT Pro', 'Arial', sans-serif;
+    font-size: 14px; color: #fff; outline: none; transition: border-color 0.2s;
+  }
+  .popup-input::placeholder { color: rgba(255,255,255,0.28); }
+  .popup-input:focus { border-color: var(--teal-light); }
+  .popup-btn {
+    display: block; width: 100%;
+    background: var(--rose);
+    color: #fff;
+    font-family: 'Avenir LT Pro', 'Arial', sans-serif;
+    font-size: 14px; font-weight: 700; letter-spacing: 0.6px;
+    text-transform: uppercase;
+    padding: 17px 24px;
+    border-radius: 2px; border: none; cursor: pointer;
+    box-shadow: 0 4px 20px rgba(207,90,115,0.4);
+    transition: background 0.2s, box-shadow 0.2s;
+  }
+  .popup-btn:hover { background: var(--rose-dark); box-shadow: 0 8px 28px rgba(207,90,115,0.5); }
+  .popup-dismiss {
+    display: block; text-align: center;
+    font-family: 'Avenir LT Pro', 'Arial', sans-serif;
+    font-size: 12px; color: var(--warm-gray); cursor: pointer;
+    background: none; border: none; text-decoration: underline; text-underline-offset: 3px;
+    margin-top: 10px; transition: color 0.15s; width: 100%;
+  }
+  .popup-dismiss:hover { color: var(--mid-gray); }
+  .popup-privacy { font-size: 11px !important; color: rgba(255,255,255,0.28) !important; margin: 12px 0 0 !important; text-align: center; }
+  .popup-privacy a { color: rgba(255,255,255,0.4); text-decoration: underline; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    .hero { grid-template-columns: 1fr; min-height: auto; }
+    .hero-image-wrap { height: 55vw; min-height: 320px; order: -1; }
+    .hero-image-wrap::before {
+      background: linear-gradient(to bottom, transparent 40%, var(--dark) 100%),
+                  linear-gradient(to top, transparent 40%, var(--dark) 100%);
+    }
+    .hero-text { padding: 48px 32px 72px; text-align: center; }
+    .hero-cta { align-items: center; }
+    .testimonials-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 640px) {
+    .site-header { padding: 22px 20px; }
+    .header-tag { display: none; }
+    .hero-text { padding: 40px 20px 64px; }
+    .hero-image-wrap { height: 70vw; }
+    .trust-bar { padding: 16px 20px; gap: 18px; }
+    .trust-item { font-size: 0.7rem; }
+    .text-section, .bullets-section, .testimonials-section, .fuer-wen-section { padding: 64px 20px; }
+    .final-cta { padding: 72px 20px; }
+    .callout-box { padding: 24px 22px; }
+    .btn-primary, .btn-cta { width: 100%; text-align: center; }
+    .popup-box { padding: 36px 24px 28px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <span class="logo">Feminess</span>
+  <span class="header-tag">0€ Analyse</span>
+</header>
+
+<!-- ══════════════════════════════
+     HERO
+═══════════════════════════════ -->
+<section class="hero" id="hero">
+  <div class="hero-text">
+    <span class="hero-tag">The Core Conflict Analyse · 0€</span>
+    <h1 class="hero-title">
+      Was blockiert dein<br>
+      <em>Business-Wachstum</em><br>
+      wirklich?
+    </h1>
+    <p class="hero-sub">
+      Mach die tiefenpsychologische <strong>The Core Conflict Analyse</strong> und entdecke deinen inneren Konflikt, der dich unbewusst bremst – und auf einem Umsatz-Level festhält.
+    </p>
+    <div class="hero-cta">
+      <button class="btn-primary" onclick="openExitPopup()">Jetzt für 0€ sichern &rarr;</button>
+      <span class="hero-proof-line">Präzise, ehrlich und transformierend – dein Startpunkt für echten Durchbruch.</span>
+    </div>
+  </div>
+  <div class="hero-image-wrap">
+    <img class="hero-img" src="../Bilder/Marina_MAI2314232 Kopie.jpg" alt="Marina Henze – Feminess" />
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-item">0€</div>
+  <div class="trust-item">Sofort startklar</div>
+  <div class="trust-item">Für Unternehmerinnen</div>
+  <div class="trust-item">Direkt einsetzbar mit ChatGPT</div>
+</div>
+
+<!-- ══════════════════════════════
+     AGITATION TEXT
+═══════════════════════════════ -->
+<section class="text-section">
+  <div class="text-inner">
+    <p>
+      Du arbeitest an dir, probierst neue Strategien und bist trotzdem nicht dort, wo du sein willst. Mal bist du voller Energie, dann geht wieder gar nichts mehr. Mal fließt das Geld, im nächsten Moment stockt es.
+    </p>
+    <p>
+      Dafür gibt es einen Grund. Und wenn du den nicht herausfindest, wird das finanzielle und emotionale Auf und Ab immer so weitergehen. Du wirst nie die Umsätze machen und das Leben leben, von dem du träumst.
+    </p>
+    <div class="callout-box">
+      <p>👉 Wenn du <strong>Stabilität und Expansion</strong> für dein Business willst, dann mache die „The Core Conflict" Analyse. Sie zeigt dir schonungslos ehrlich, wo du dich selbst sabotierst und wie du wieder in echten Wachstum kommst.</p>
+    </div>
+    <div class="text-cta">
+      <button class="btn-cta" onclick="openExitPopup()">Jetzt kostenlos Klarheit gewinnen &rarr;</button>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     BENEFITS
+═══════════════════════════════ -->
+<section class="bullets-section">
+  <div class="bullets-inner">
+    <div class="bullets-header">
+      <span class="section-eyebrow">Das erwartet dich</span>
+      <h2 class="section-title">Was die Core Conflict Analyse<br>für dich <em>sichtbar macht</em></h2>
+    </div>
+    <ul class="bullet-list" style="list-style:none;">
+      <li class="bullet-item">
+        <div class="bullet-icon"><svg viewBox="0 0 20 20"><path d="M8.4 14.4l-4-4 1.4-1.4 2.6 2.6 5.8-5.8 1.4 1.4z"/></svg></div>
+        <p class="bullet-text"><strong>Raus aus der Selbstsabotage, rein in echte Klarheit</strong>Du erkennst, welcher unbewusste Konflikt dich bisher vom Wachstum abhält, und verstehst endlich, was du jetzt wirklich tun musst, um mehr Umsatz zu machen.</p>
+      </li>
+      <li class="bullet-item">
+        <div class="bullet-icon"><svg viewBox="0 0 20 20"><path d="M8.4 14.4l-4-4 1.4-1.4 2.6 2.6 5.8-5.8 1.4 1.4z"/></svg></div>
+        <p class="bullet-text"><strong>Weniger Selbstzweifel, mehr Selbstführung</strong>Statt dich zu fragen, was mit dir nicht stimmt, weißt du, welche inneren Konflikte dein Verhalten steuern und wie du diese Konflikte löst.</p>
+      </li>
+      <li class="bullet-item">
+        <div class="bullet-icon"><svg viewBox="0 0 20 20"><path d="M8.4 14.4l-4-4 1.4-1.4 2.6 2.6 5.8-5.8 1.4 1.4z"/></svg></div>
+        <p class="bullet-text"><strong>Keine finanzielle Achterbahn mehr</strong>Du beendest endlich das Auf und Ab deiner Einnahmen und bringst Stabilität und Verlässlichkeit in dein Business.</p>
+      </li>
+      <li class="bullet-item">
+        <div class="bullet-icon"><svg viewBox="0 0 20 20"><path d="M8.4 14.4l-4-4 1.4-1.4 2.6 2.6 5.8-5.8 1.4 1.4z"/></svg></div>
+        <p class="bullet-text"><strong>Familiäre Prägungen erkennen und bewusst lösen</strong>Du verstehst, welche übernommenen Rollen, Loyalitäten oder alten Dynamiken aus deiner Herkunftsfamilie heute noch deine Entscheidungen, deinen Erfolg und deine Umsätze beeinflussen, und beginnst, dich davon innerlich zu befreien.</p>
+      </li>
+      <li class="bullet-item">
+        <div class="bullet-icon"><svg viewBox="0 0 20 20"><path d="M8.4 14.4l-4-4 1.4-1.4 2.6 2.6 5.8-5.8 1.4 1.4z"/></svg></div>
+        <p class="bullet-text"><strong>Der Startpunkt für deinen echten Durchbruch</strong>Du bekommst ein klares Bild deiner aktuellen Business-Identität und weißt, wo deine größte Wachstumschance liegt, ohne weiter im Kreis zu drehen.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     TESTIMONIALS
+═══════════════════════════════ -->
+<section class="testimonials-section">
+  <div class="testimonials-inner">
+    <div class="testimonials-header">
+      <span class="section-eyebrow">Stimmen aus der Community</span>
+      <h2 class="section-title">Das sagen <em>begeisterte</em> Nutzerinnen</h2>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <p class="testimonial-text">„Oh Himmel, das fängt ja schon gut an. Die ersten Tränen sind geflossen beim Aussprechen der Antworten und ChatGPT hat brutal ehrlich zusammengefasst. Danke Marina für diesen fulminanten Start."</p>
+        <p class="testimonial-author">— Eva</p>
+      </div>
+      <div class="testimonial-card">
+        <p class="testimonial-text">„Danke Marina! Ich dachte ehrlich gesagt, ich wäre schon weiter! Ich arbeite so viel an mir und meinen Schatten und hab da auch schon mit ChatGPT viel rausgefunden, aber das hat mir jetzt das Grundlegende gezeigt, wo es wirklich hängt. Dafür bin ich sehr dankbar!"</p>
+        <p class="testimonial-author">— Sandra</p>
+      </div>
+      <div class="testimonial-card">
+        <p class="testimonial-text">„Das ist echt krass – jetzt habe ich jahrelang versucht, meinem blinden Fleck auszuweichen und dann kommt dieser Prompt und zeigt ihn mir so krass auf. Das ist der Hammer. Liebe Marina, vielen vielen Dank dafür!"</p>
+        <p class="testimonial-author">— Inke</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     FÜR WEN
+═══════════════════════════════ -->
+<section class="fuer-wen-section">
+  <div class="fuer-wen-inner">
+    <div class="fuer-wen-header">
+      <span class="section-eyebrow">Ist das dein Weg?</span>
+      <h2 class="section-title">Für wen ist diese<br><em>Analyse</em> gedacht?</h2>
+    </div>
+    <ul class="fuer-wen-list">
+      <li>Für Frauen, die spüren: „Ich will noch mehr!"</li>
+      <li>Für Frauen, die merken, dass sie ihren Erfolg oftmals sabotieren</li>
+      <li>Für Frauen, die sich ein lukratives, stabiles Business aufbauen wollen</li>
+      <li>Für Frauen, die bereit sind, alte Prägungen und innere Konflikte loszulassen</li>
+      <li>Für Frauen, die für sich losgehen und sich ein freies Leben erschaffen wollen</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     FINAL CTA
+═══════════════════════════════ -->
+<section class="final-cta">
+  <div class="final-cta-inner">
+    <h2>Jetzt liegt es an dir.<br>Bleibt alles wie es ist, oder gehst du auf dein <em>nächstes Umsatz-Level?</em></h2>
+    <p>Erlaube dir, ehrlich hinzuschauen und Klarheit über das zu gewinnen, was dein Business-Wachstum bisher blockiert hat.</p>
+    <p class="callout-final">„The Core Conflict ist dein Startpunkt. Präzise, ehrlich und transformierend."</p>
+    <button class="btn-primary" onclick="openExitPopup()">Jetzt für 0€ sichern &rarr;</button>
+    <div class="signoff">
+      <span class="signoff-line">Break the Circle</span>
+      <span class="signoff-name">Deine Marina</span>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <p>
+    &copy; 2026 Feminess &middot; Marina Henze<br>
+    <a href="../Impressum/index.html">Impressum</a>
+    &nbsp;&middot;&nbsp;
+    <a href="../Datenschutz/index.html">Datenschutz</a>
+  </p>
+</footer>
+
+<!-- FLOATING CTA -->
+<button class="floating-cta" id="floatingCta" onclick="openExitPopup()">Jetzt für 0€ sichern &rarr;</button>
+
+<!-- ══════════════════════════════
+     EXIT POPUP
+═══════════════════════════════ -->
+<div class="popup-overlay" id="exitPopup" role="dialog" aria-modal="true" aria-label="The Core Conflict Analyse sichern">
+  <div class="popup-box">
+    <button class="popup-close" id="popupClose" aria-label="Schließen">&times;</button>
+    <div class="popup-kicker">Warte kurz</div>
+    <h2>Hol dir jetzt deine<br><em>Core Conflict Analyse</em></h2>
+    <p>0€ &nbsp;·&nbsp; sofort startklar<br>Trag dich ein und du bekommst sie direkt ins Postfach.</p>
+
+    <!-- HINWEIS: Hier den echten Formular-Code (z.B. ActiveCampaign) einfügen, sobald verfügbar -->
+    <form class="popup-form" action="#" method="post">
+      <input type="text"  class="popup-input" placeholder="Dein Vorname" autocomplete="given-name" required>
+      <input type="email" class="popup-input" placeholder="Deine E-Mail-Adresse" autocomplete="email" required>
+      <button type="submit" class="popup-btn">Jetzt für 0€ sichern &rarr;</button>
+    </form>
+    <p class="popup-privacy">Kostenfrei &middot; kein Spam. Mit dem Absenden stimmst du der <a href="../Datenschutz/index.html">Datenschutzerklärung</a> zu.</p>
+
+    <button class="popup-dismiss" id="popupDismiss">Nein danke, ich probiere lieber weiter auf eigene Faust.</button>
+  </div>
+</div>
+
+<script>
+// ── FLOATING CTA VISIBILITY ──
+(function () {
+  var cta = document.getElementById('floatingCta');
+  window.addEventListener('scroll', function () {
+    cta.classList.toggle('is-visible', window.scrollY > 600);
+  }, { passive: true });
+}());
+
+// ── EXIT POPUP ──
+var openExitPopup, closeExitPopup;
+(function () {
+  var popup      = document.getElementById('exitPopup');
+  var btnClose   = document.getElementById('popupClose');
+  var btnDismiss = document.getElementById('popupDismiss');
+  var shown      = false;
+
+  function show() {
+    popup.classList.add('is-visible');
+    shown = true;
+    clearTimeout(inactivityTimer);
+  }
+  function hide() {
+    popup.classList.remove('is-visible');
+  }
+
+  openExitPopup  = show;
+  closeExitPopup = hide;
+
+  btnClose.addEventListener('click', hide);
+  btnDismiss.addEventListener('click', hide);
+  popup.addEventListener('click', function (e) {
+    if (e.target === popup) hide();
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') hide();
+  });
+
+  // Trigger 1: Exit Intent – Maus verlässt das Fenster nach oben
+  document.addEventListener('mouseleave', function (e) {
+    if (e.clientY <= 0 && !shown) show();
+  });
+
+  // Trigger 2: 30 Sekunden Inaktivität
+  var inactivityTimer;
+  function resetTimer() {
+    if (shown) return;
+    clearTimeout(inactivityTimer);
+    inactivityTimer = setTimeout(show, 30000);
+  }
+  ['mousemove', 'scroll', 'keypress', 'click', 'touchstart'].forEach(function (evt) {
+    document.addEventListener(evt, resetTimer, { passive: true });
+  });
+  resetTimer();
+}());
+</script>
+
+</body>
+</html>
