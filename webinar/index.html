@@ -46,7 +46,8 @@
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; overflow-x: hidden; }
+    body { overflow-x: hidden; }
 
     body {
       font-family: 'Avenir LT Pro', sans-serif;
@@ -1072,7 +1073,7 @@
     @media (max-width: 600px) {
       /* Allgemein */
       body { font-size: 18px; }
-      h1 { font-size: 9vw !important; white-space: nowrap; }
+      h1 { font-size: 9vw !important; white-space: normal; }
       h2 { font-size: 28px !important; }
 
       /* Padding aller Sektionen */
