@@ -196,8 +196,9 @@
       margin-bottom: 44px;
       text-decoration: none;
       width: fit-content;
+      animation: pulse-btn 2.2s ease-in-out infinite;
     }
-    .btn-hero:hover { opacity: 0.88; transform: translateY(-2px); }
+    .btn-hero:hover { opacity: 0.88; transform: translateY(-2px); animation: none; }
 
     /* Countdown – minimal, kein Box-Design */
     .countdown { display: flex; gap: 28px; justify-content: flex-start; align-items: flex-end; }
@@ -377,15 +378,20 @@
       transition: opacity 0.2s, transform 0.15s;
       border: none;
       cursor: pointer;
+      animation: pulse-btn 2.2s ease-in-out infinite;
     }
-    .btn-cta:hover { opacity: 0.88; transform: translateY(-1px); }
+    .btn-cta:hover { opacity: 0.88; transform: translateY(-1px); animation: none; }
     .btn-cta.on-dark { background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%); color: #fff; }
     .btn-cta.on-dark:hover { opacity: 0.88; }
 
     /* ── FLOATING CTA ── */
     @keyframes pulse-cta {
-      0%, 100% { transform: scale(1);     box-shadow: 0 6px 28px rgba(207,90,115,0.50); }
-      50%       { transform: scale(1.05); box-shadow: 0 10px 36px rgba(207,90,115,0.65); }
+      0%, 100% { transform: scale(1);     box-shadow: 0 6px 28px rgba(160,104,90,0.50); }
+      50%       { transform: scale(1.05); box-shadow: 0 10px 36px rgba(160,104,90,0.65); }
+    }
+    @keyframes pulse-btn {
+      0%, 100% { transform: scale(1);     box-shadow: 0 6px 28px rgba(160,104,90,0.40); }
+      50%       { transform: scale(1.04); box-shadow: 0 10px 36px rgba(160,104,90,0.58); }
     }
     .floating-cta {
       position: fixed;
