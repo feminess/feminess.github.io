@@ -429,7 +429,7 @@
 
     /* ── BEKANNT AUS – TICKER ── */
     .logos-section {
-      padding: 56px 0;
+      padding: 36px 0;
       background: var(--off-white);
       text-align: center;
       overflow: hidden;
@@ -457,14 +457,14 @@
     .logos-track {
       display: flex;
       align-items: center;
-      gap: 80px;
+      gap: 56px;
       width: max-content;
       animation: logoScroll 24s linear infinite;
       padding: 8px 0;
     }
     .logos-track:hover { animation-play-state: paused; }
     .logos-track img {
-      height: 52px;
+      height: 40px;
       width: auto;
       object-fit: contain;
       filter: none;
@@ -664,7 +664,7 @@
     .how-section .section-label::after { background: var(--teal-light); }
     .how-section > .how-inner > h2 { color: #fff; text-align: center; }
     .how-section > .how-inner > h2 em { color: var(--sand-light); }
-    .how-section .how-intro { text-align: center; color: rgba(255,255,255,0.6); font-size: 22px; max-width: 800px; margin: 0 auto 72px; line-height: 1.8; }
+    .how-section .how-intro { text-align: center; color: #fff; font-size: 24px; max-width: 800px; margin: 0 auto 72px; line-height: 1.8; }
 
     /* 3-column card grid */
     .journey-cards {
@@ -796,22 +796,24 @@
     }
     .fuer-dich-inner h2 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 56px;
+      font-size: clamp(28px, 3.8vw, 56px);
       font-weight: 400;
       color: #1b5c50;
       text-align: center;
+      white-space: nowrap;
       margin-bottom: 56px;
     }
-    .fuer-dich-inner h2 em { font-style: italic; background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .fuer-dich-inner h2 em { font-style: italic; font-weight: 600; background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
     .fuer-dich-divider {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 56px;
+      font-size: clamp(28px, 3.8vw, 56px);
       font-weight: 400;
       color: #1b5c50;
       text-align: center;
+      white-space: nowrap;
       margin: 8px 0;
     }
-    .fuer-dich-divider em { font-style: italic; background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .fuer-dich-divider em { font-style: italic; font-weight: 600; background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
     .fuer-dich-section .section-label { color: var(--teal); }
     .fuer-dich-section .section-label::after { background: var(--teal); }
     .fuer-dich-stack { display: flex; flex-direction: column; gap: 20px; }
@@ -1116,7 +1118,8 @@
       .benefit-num { width: 36px; height: 36px; font-size: 18px; flex: 0 0 36px; }
 
       /* Logos */
-      .logos-section { padding: 36px 20px; }
+      .logos-section { padding: 28px 20px; }
+      .logos-track { animation-duration: 14s; }
 
       /* Journey cards */
       .journey-cards { grid-template-columns: 1fr; gap: 16px; margin-bottom: 40px; }
