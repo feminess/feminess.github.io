@@ -156,13 +156,16 @@
     }
     .hero-content h1 em {
       font-style: italic;
-      color: var(--sand-light);
+      background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
       letter-spacing: 0;
       text-transform: none;
     }
 
     .hero-subtitle {
-      font-size: 22px;
+      font-size: 24px;
       font-weight: 400;
       color: var(--mid-gray);
       margin-bottom: 28px;
@@ -193,7 +196,7 @@
       border-radius: 8px;
       font-family: 'Avenir LT Pro', sans-serif;
       font-size: 14px;
-      font-weight: 700;
+      font-weight: 900;
       letter-spacing: 2px;
       text-transform: uppercase;
       cursor: pointer;
@@ -1166,7 +1169,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- TOP BANNER -->
 <div class="top-banner">
-  <p>Exklusive Money-Masterclass nur für 100 Frauen</p>
+  <p style="white-space: nowrap;">Exklusive Money-Masterclass für 100 Frauen</p>
 </div>
 
 <!-- HERO -->
@@ -1178,10 +1181,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <h1>Energy <em>for</em> Million</h1>
       <p class="hero-subtitle">
-        Sei die ungezähmte Unternehmerin, <strong>FREI von Druck, Zweifeln und falschen Strategien, die dich nur erschöpfen.</strong> Führe dein Business nach deinen eigenen Regeln, mit der <strong>ENERGIE, die Geld und Erfolg anzieht.</strong>
+        Sei die ungezähmte Unternehmerin, <strong>FREI</strong> von <strong>Druck, Zweifeln</strong> und <strong>falschen Strategien,</strong> die dich nur <strong>erschöpfen.</strong> Führe dein Business nach deinen eigenen Regeln, mit der <strong>ENERGIE,</strong> die <strong>Geld</strong> und <strong>Erfolg anzieht.</strong>
       </p>
-      <button class="btn-hero" onclick="openModal()">Yes, I´m in!</button>
-      <p class="hero-date">15.07.2026, 11:00 – 13:00 Uhr · kostenfreie Money-Masterclass mit Marina Henze</p>
+      <button class="btn-hero" onclick="openModal()">Yes, I´m in</button>
+      <p class="hero-date">15.07.2026, 11:00 – 13:00 Uhr<br>kostenfreie Money-Masterclass mit Marina Henze</p>
       <div class="countdown">
         <div class="countdown-item">
           <span class="countdown-digits" id="h-days">00</span>
@@ -1670,7 +1673,7 @@ window._load_script = function(url, callback, isSubmit) {
 </section>
 
 <!-- FLOATING CTA -->
-<button class="floating-cta" id="floatingCta" onclick="openModal()">Yes, I´m in!</button>
+<button class="floating-cta" id="floatingCta" onclick="openModal()">Yes, I´m in</button>
 
 <!-- FOOTER -->
 <footer>
