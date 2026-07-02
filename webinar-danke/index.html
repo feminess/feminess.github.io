@@ -61,6 +61,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     max-width: 1400px;
     margin: 0 auto;
     padding: 40px 33px 28px;
+    background: linear-gradient(to bottom, var(--off-white) 0%, var(--off-white) 65%, var(--teal) 100%);
   }
   .progress-labels {
     display: flex;
@@ -91,7 +92,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   /* ── HERO / GRADIENT SECTION ── */
   .hero {
     flex: 1;
-    background: linear-gradient(232deg, var(--teal) 0%, var(--dark-teal) 100%);
+    background: radial-gradient(ellipse 720px 480px at 50% 10%, rgba(255,255,255,0.12), transparent 60%), linear-gradient(232deg, var(--teal) 0%, var(--dark-teal) 100%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -164,8 +165,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
   .cal-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(0,0,0,0.22); }
   .cal-btn svg { width: 16px; height: 16px; flex-shrink: 0; }
-  .cal-btn-google,
-  .cal-btn-telegram {
+  .cal-btn-google {
     background: #fff;
     color: var(--dark-teal);
   }
@@ -175,10 +175,32 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     border-color: rgba(255,255,255,0.5);
   }
   .cal-btn-ics:hover { background: rgba(255,255,255,0.08); }
+  .cal-btn-telegram {
+    background: transparent;
+    color: var(--sand);
+    border-color: rgba(194,171,141,0.55);
+  }
+  .cal-btn-telegram:hover { background: rgba(194,171,141,0.12); }
+
+  .lead-divider {
+    position: relative;
+    padding-top: 32px;
+  }
+  .lead-divider::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 48px;
+    height: 1px;
+    background: rgba(255,255,255,0.28);
+  }
 
   /* ── FOOTER ── */
   .site-footer {
     background: var(--footer-bg);
+    border-top: 1px solid rgba(194,171,141,0.18);
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -299,7 +321,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </a>
     </div>
 
-    <p class="lead">
+    <p class="lead lead-divider">
       In unserer Telegram Community bauen wir schon vor dem Webinar deine Energy for Million mit Impulsen, Inspirationen und tiefen Prozessen auf. Klicke hier, um ihr beizutreten:
     </p>
 
