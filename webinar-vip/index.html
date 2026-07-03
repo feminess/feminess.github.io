@@ -734,6 +734,109 @@ body {
 .includes-closing p:last-child { margin-bottom: 0; }
 .includes-closing strong { color: var(--rose); font-weight: 700; }
 
+/* ── VALUE SUMMARY ── */
+.value-summary {
+  margin-top: 40px;
+  background: var(--dark);
+  border-radius: 3px;
+  padding: 36px 40px;
+  position: relative;
+  overflow: hidden;
+}
+.value-summary::before {
+  content: '';
+  position: absolute;
+  top: -80px; right: -80px;
+  width: 280px; height: 280px;
+  background: radial-gradient(circle, rgba(94,198,179,0.10) 0%, transparent 65%);
+  pointer-events: none;
+}
+.value-summary-title {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--teal-light);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.value-summary-title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: rgba(94,198,179,0.20);
+}
+.value-summary-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+.value-summary-list li {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 22px;
+  color: var(--mid-gray);
+  line-height: 1.5;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.value-summary-list li:last-child { border-bottom: none; padding-bottom: 0; }
+.value-summary-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.10);
+}
+.value-summary-total-label {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--teal-pale);
+}
+.value-summary-total-amount {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: #fff;
+  white-space: nowrap;
+}
+.value-summary-you-pay {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-top: 12px;
+  padding: 16px 20px;
+  background: rgba(156,107,82,0.12);
+  border: 1px solid rgba(156,107,82,0.25);
+  border-radius: 2px;
+}
+.value-summary-you-pay-label {
+  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  background: var(--rosegold-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 0.5px;
+}
+.value-summary-you-pay-amount {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: #fff;
+  white-space: nowrap;
+}
+
 /* ── SECOND CTA ── */
 .section-cta-2 {
   padding: 64px 0 72px;
@@ -832,7 +935,7 @@ body {
 }
 .site-footer p {
   font-family: 'Avenir LT Pro', 'Inter', sans-serif;
-  font-size: 22px;
+  font-size: 11px;
   color: var(--mid-gray);
 }
 .site-footer a { color: var(--teal); text-decoration: none; }
@@ -853,6 +956,7 @@ body {
     gap: 0 14px;
   }
   .include-item-emoji { font-size: 22px; }
+  .value-summary { padding: 28px 24px; }
   .image-strip { height: 240px; }
 }
 </style>
@@ -939,34 +1043,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
 
-    <!-- Item 4: 1:1 Coaching Vera -->
-    <div class="include-item">
-      <div class="include-item-emoji">#4</div>
-      <div class="include-item-body">
-        <h3>🔥 1 Stunde 1:1 Coaching mit Business-Mentorin Vera</h3>
-        <p>Du bekommst eine <strong>exklusive 60-minütige 1:1 Coaching-Session</strong> mit Business-Mentorin Vera. Hier geht es um dich, dein Business und deine <strong>nächsten konkreten Schritte</strong>. Vera bringt ihren geschulten Blick auf deine Situation und gibt dir <strong>direkte, umsetzbare Impulse</strong> – damit du nach dem Call weißt, wo du anfängst und wie du <strong>wirklich ins Momentum kommst</strong>.</p>
+    <!-- Value Stack Summary (an letzter Stelle) -->
+    <div class="value-summary">
+      <div class="value-summary-title">Zusammenfassung</div>
+      <ul class="value-summary-list">
+        <li><span>#1 Vertiefendes Workbook zum Webinar</span></li>
+        <li><span>#2 Meditation Geldmagnet</span></li>
+        <li><span>#3 Live-Event mit Marina</span></li>
+      </ul>
+      <div class="value-summary-total">
+        <span class="value-summary-total-label">Gesamtwert</span>
+        <span class="value-summary-total-amount">unbezahlbar ;-)</span>
       </div>
-    </div>
-
-    <!-- Item 5: Magnetic Sales Mastery -->
-    <div class="include-item">
-      <div class="include-item-emoji">Bonus 1</div>
-      <div class="include-item-body">
-        <h3>🔥 Online-Kurs: Magnetic Sales Mastery</h3>
-        <p>Mit diesem Kurs lernst du, wie du in Verkaufsgesprächen <strong>nicht überreden, sondern magnetisch anziehen</strong> musst. Du bekommst ein <strong>Sales-System, das zu dir passt</strong>, dich authentisch fühlen lässt und trotzdem <strong>in 9 von 10 Gesprächen zu einem Abschluss führt</strong>. Verkaufen wird sich <strong>nie wieder komisch anfühlen</strong>, sondern wie echtes Helfen.</p>
+      <div class="value-summary-you-pay">
+        <span class="value-summary-you-pay-label">Du bezahlst heute nur</span>
+        <span class="value-summary-you-pay-amount">9,99 €</span>
       </div>
+      <a href="https://feminess.de/kasse/?add-to-cart=76403" class="cta-primary-btn" style="margin-top:24px;">Hier klicken und VIP-Paket sichern!</a>
     </div>
-
-    <!-- Item 6: Live 1:1 Coaching Marina -->
-    <div class="include-item">
-      <div class="include-item-emoji">Bonus 2</div>
-      <div class="include-item-body">
-        <h3>🔥 Chance auf ein Live 1:1 Coaching mit Marina</h3>
-        <p>Als VIP-Teilnehmer hast du die <strong>exklusive Chance, live ein persönliches 1:1 Coaching mit Marina</strong> zu gewinnen. Marina nimmt sich Zeit für dich, schaut direkt auf deine Situation und gibt dir <strong>den Impuls, der alles verändert</strong>. Diese Chance bekommst du <strong>nur als VIP-Mitglied</strong> – und sie ist schlicht <strong>unbezahlbar</strong>. 😉</p>
-      </div>
-    </div>
-
-    <a href="https://feminess.de/kasse/?add-to-cart=76403" class="cta-primary-btn" style="margin-top:24px;">Hier klicken und VIP-Paket sichern!</a>
 
   </div>
 </section>
@@ -976,7 +1070,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="image-strip">
   <img src="../Bilder/Marina_MAI2314376 Kopie.jpg" alt="Marina Henze – Feminess">
   <div class="image-strip-overlay">
-    <p class="image-strip-quote">Das TRUE SPIRIT VIP-Paket ist für die Frau, die <em>nicht nur dabei sein</em> – sondern <em>wirklich durchbrechen</em> will.</p>
+    <p class="image-strip-quote">Das ENERGY for VIP-Paket ist für die Frau, die <em>nicht nur dabei sein</em> – sondern <em>wirklich durchbrechen</em> will.</p>
   </div>
 </div>
 
@@ -999,7 +1093,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- ── FOOTER ── -->
 <footer class="site-footer">
   <p>&copy; 2026 Feminess &nbsp;·&nbsp; Marina Henze &nbsp;&nbsp;|&nbsp;&nbsp; <a href="https://feminess.github.io/Impressum/">Impressum</a> &nbsp;|&nbsp; <a href="https://feminess.github.io/Datenschutz/">Datenschutz</a></p>
-  <p style="margin-top:14px;font-size: 22px;color:#b8b8b8;max-width:640px;margin-left:auto;margin-right:auto;line-height:1.6;">This site is not a part of the Facebook website or Facebook Inc. Additionally, This site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc.</p>
+  <p style="margin-top:14px;font-size:11px;color:#b8b8b8;max-width:640px;margin-left:auto;margin-right:auto;line-height:1.6;">This site is not a part of the Facebook website or Facebook Inc. Additionally, This site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc.</p>
 </footer>
 
 </body>
