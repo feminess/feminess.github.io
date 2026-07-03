@@ -926,60 +926,60 @@
       padding: 80px 0 72px;
     }
     .screenshots-inner {
-      max-width: 1200px;
+      max-width: 1100px;
       margin: 0 auto;
-      padding: 0 40px;
+      padding: 0 60px;
     }
     .sl-wrap {
       position: relative;
     }
     .sl-viewport {
       overflow: hidden;
-      border-radius: 16px;
     }
     .sl-track {
       display: flex;
-      gap: 24px;
+      gap: 20px;
       transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
       will-change: transform;
     }
     .sl-slide {
-      flex: 0 0 auto;
-      border-radius: 12px;
+      flex: 0 0 78%;
+      border-radius: 14px;
       overflow: hidden;
-      box-shadow: 0 4px 32px rgba(160,104,90,0.13), 0 0 0 1.5px #e8d0c8;
+      background: #fff;
+      box-shadow: 0 6px 40px rgba(160,104,90,0.15), 0 0 0 1.5px #e8d0c8;
     }
     .sl-slide img {
       display: block;
       width: 100%;
       height: auto;
-      max-height: 520px;
+      max-height: 560px;
       object-fit: contain;
-      background: #fff;
+      object-position: top;
     }
     .sl-arrow {
       position: absolute;
-      top: 50%;
+      top: 42%;
       transform: translateY(-50%);
       z-index: 10;
       background: #fff;
       border: none;
-      box-shadow: 0 2px 12px rgba(160,104,90,0.22);
+      box-shadow: 0 2px 16px rgba(160,104,90,0.25);
       border-radius: 50%;
       width: 48px;
       height: 48px;
-      font-size: 28px;
-      line-height: 1;
+      font-size: 30px;
       color: #a0685a;
       cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
       transition: background 0.2s, color 0.2s;
+      line-height: 1;
     }
-    .sl-arrow:hover { background: linear-gradient(90deg,#a0685a,#d4a090); color: #fff; }
-    .sl-prev { left: -24px; }
-    .sl-next { right: -24px; }
+    .sl-arrow:hover { background: linear-gradient(135deg,#a0685a,#d4a090); color: #fff; }
+    .sl-prev { left: -60px; }
+    .sl-next { right: -60px; }
     .sl-dots {
       display: flex;
       justify-content: center;
@@ -998,13 +998,14 @@
     }
     .sl-dot.active {
       background: linear-gradient(90deg,#a0685a,#d4a090);
-      transform: scale(1.3);
+      transform: scale(1.35);
     }
-    @media (max-width: 600px) {
-      .screenshots-inner { padding: 0 16px; }
-      .sl-prev { left: -12px; }
-      .sl-next { right: -12px; }
-      .sl-arrow { width: 38px; height: 38px; font-size: 22px; }
+    @media (max-width: 760px) {
+      .screenshots-inner { padding: 0 44px; }
+      .sl-prev { left: -40px; }
+      .sl-next { right: -40px; }
+      .sl-arrow { width: 36px; height: 36px; font-size: 22px; }
+      .sl-slide { flex: 0 0 84%; }
     }
 
     /* ── SPEAKER ── */
@@ -1554,7 +1555,6 @@ window._load_script = function(url, callback, isSubmit) {
 <!-- SCREENSHOT SLIDER -->
 <section class="screenshots-section">
   <div class="screenshots-inner">
-    <p class="section-label" style="text-align:center; margin-bottom:12px;">Echte Stimmen</p>
     <h2 style="text-align:center; font-family:'Cormorant Garamond',serif; font-size:clamp(28px,3.5vw,48px); font-weight:400; color:var(--dark); margin-bottom:40px;">Was Frauen über Marina sagen</h2>
     <div class="sl-wrap">
       <button class="sl-arrow sl-prev" id="slPrev" aria-label="Zurück">&#8249;</button>
@@ -1884,7 +1884,7 @@ window._load_script = function(url, callback, isSubmit) {
 
 <script>
 /* ── SCREENSHOT SLIDER ── */
-(function() {
+window.addEventListener('load', function() {
   const viewport = document.getElementById('slViewport');
   const track    = document.getElementById('slTrack');
   const dotsEl   = document.getElementById('slDots');
@@ -1894,10 +1894,11 @@ window._load_script = function(url, callback, isSubmit) {
 
   const slides = Array.from(track.querySelectorAll('.sl-slide'));
   const total  = slides.length;
+  const GAP    = 20;
   let current  = 0;
   let autoTimer;
 
-  /* --- build dots --- */
+  /* build dots */
   slides.forEach(function(_, i) {
     const d = document.createElement('button');
     d.className = 'sl-dot' + (i === 0 ? ' active' : '');
@@ -1906,18 +1907,11 @@ window._load_script = function(url, callback, isSubmit) {
     dotsEl.appendChild(d);
   });
 
-  function setSlideWidths() {
-    const vw = viewport.offsetWidth;
-    const slideW = Math.round(vw * 0.78);
-    slides.forEach(function(s) { s.style.width = slideW + 'px'; });
-  }
-
   function getOffset(idx) {
-    const vw = viewport.offsetWidth;
+    const vw     = viewport.offsetWidth;
     const slideW = slides[0].offsetWidth;
-    const gap = 24;
-    /* center the active slide */
-    return -idx * (slideW + gap) + (vw - slideW) / 2;
+    /* center active slide: shift right by (vw-slideW)/2, then left by idx steps */
+    return (vw - slideW) / 2 - idx * (slideW + GAP);
   }
 
   function goTo(idx) {
@@ -1936,7 +1930,6 @@ window._load_script = function(url, callback, isSubmit) {
   prevBtn.addEventListener('click', function() { goTo(current - 1); resetAuto(); });
   nextBtn.addEventListener('click', function() { goTo(current + 1); resetAuto(); });
 
-  /* touch / swipe */
   let touchStartX = 0;
   viewport.addEventListener('touchstart', function(e) { touchStartX = e.touches[0].clientX; }, {passive:true});
   viewport.addEventListener('touchend', function(e) {
@@ -1944,12 +1937,11 @@ window._load_script = function(url, callback, isSubmit) {
     if (Math.abs(dx) > 40) { goTo(current + (dx < 0 ? 1 : -1)); resetAuto(); }
   }, {passive:true});
 
-  window.addEventListener('resize', function() { setSlideWidths(); goTo(current); });
+  window.addEventListener('resize', function() { goTo(current); });
 
-  setSlideWidths();
   goTo(0);
   resetAuto();
-})();
+});
 </script>
 </body>
 </html>
