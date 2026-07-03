@@ -922,7 +922,7 @@
 
     /* ── SCREENSHOT SLIDER ── */
     .screenshots-section {
-      background: var(--off-white);
+      background: var(--dark);
       padding: 80px 0 72px;
     }
     .screenshots-inner {
@@ -944,18 +944,18 @@
     }
     .sl-slide {
       flex: 0 0 78%;
-      border-radius: 14px;
       overflow: hidden;
-      background: #fff;
-      box-shadow: 0 6px 40px rgba(160,104,90,0.15), 0 0 0 1.5px #e8d0c8;
+      background: var(--dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     .sl-slide img {
       display: block;
       width: 100%;
       height: auto;
-      max-height: 560px;
       object-fit: contain;
-      object-position: top;
+      object-position: center;
     }
     .sl-arrow {
       position: absolute;
@@ -1555,7 +1555,7 @@ window._load_script = function(url, callback, isSubmit) {
 <!-- SCREENSHOT SLIDER -->
 <section class="screenshots-section">
   <div class="screenshots-inner">
-    <h2 style="text-align:center; font-family:'Cormorant Garamond',serif; font-size:clamp(28px,3.5vw,48px); font-weight:400; color:var(--dark); margin-bottom:40px;">Was Frauen über Marina sagen</h2>
+    <h2 style="text-align:center; font-family:'Cormorant Garamond',serif; font-size:clamp(28px,3.5vw,48px); font-weight:400; color:#fff; margin-bottom:40px;">Was Frauen über Marina sagen</h2>
     <div class="sl-wrap">
       <button class="sl-arrow sl-prev" id="slPrev" aria-label="Zurück">&#8249;</button>
       <button class="sl-arrow sl-next" id="slNext" aria-label="Weiter">&#8250;</button>
