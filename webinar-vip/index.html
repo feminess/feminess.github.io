@@ -193,7 +193,7 @@ body {
   font-family: 'Cormorant Garamond', Georgia, serif;
   font-size: 34px;
   font-weight: 400;
-  color: #fff;
+  color: var(--teal-dark);
   line-height: 1.1;
   margin-bottom: 8px;
   position: relative;
@@ -201,7 +201,10 @@ body {
 }
 .hero-confirm h1 em {
   font-style: italic;
-  color: var(--sand-light);
+  background: var(--rosegold-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 .hero-confirm .hero-script {
   font-family: 'East Liberty', serif;
