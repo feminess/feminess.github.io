@@ -56,6 +56,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   --rosegold-deep: #9c6b52;
   --rosegold-accent: #d9a688;
   --rosegold-gradient: linear-gradient(135deg, #9c6b52 0%, #d9a688 45%, #f0d0bd 70%, #b8765f 100%);
+  --rosegold-text: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%);
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -81,9 +82,17 @@ body {
   font-weight: 700;
   letter-spacing: 2.5px;
   text-transform: uppercase;
-  color: var(--rosegold-accent);
+  background: var(--rosegold-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
-.topbar strong { color: var(--rosegold-accent); }
+.topbar strong {
+  background: var(--rosegold-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
 
 /* ── HERO CONFIRM ── */
 .hero-confirm {
@@ -154,7 +163,10 @@ body {
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: var(--rosegold-accent);
+  background: var(--rosegold-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   margin-bottom: 18px;
   display: flex;
   align-items: center;
@@ -360,7 +372,7 @@ body {
   margin-bottom: 28px;
   flex-wrap: wrap;
 }
-.quick-scarcity strong { color: var(--rose); }
+.quick-scarcity strong { background: var(--rosegold-text); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
 .quick-price-block {
   margin-bottom: 28px;
 }
@@ -890,7 +902,10 @@ body {
   font-family: 'Avenir LT Pro', 'Inter', sans-serif;
   font-size: 22px;
   font-weight: 700;
-  color: var(--rose-light);
+  background: var(--rosegold-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   letter-spacing: 0.5px;
 }
 .value-summary-you-pay-amount {
@@ -926,7 +941,7 @@ body {
   color: var(--black);
   margin-bottom: 10px;
 }
-.section-cta-2 h2 em { font-style: italic; color: var(--rose); }
+.section-cta-2 h2 em { font-style: italic; background: var(--rosegold-text); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
 .section-cta-2 p {
   font-family: 'Avenir LT Pro', 'Inter', sans-serif;
   font-size: 22px;
@@ -944,7 +959,7 @@ body {
   gap: 8px;
   margin-bottom: 32px !important;
 }
-.cta-2-scarcity strong { color: var(--rose); }
+.cta-2-scarcity strong { background: var(--rosegold-text); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
 .cta-2-wrap {
   max-width: 480px;
   margin: 0 auto;
