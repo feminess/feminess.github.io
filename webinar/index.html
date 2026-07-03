@@ -920,6 +920,93 @@
     .bonus-gift-text p { font-size: 22px; color: rgba(255,255,255,0.75); margin: 0; line-height: 1.8; }
     @media (max-width: 600px) { .bonus-gift-box { flex-direction: column; text-align: center; } }
 
+    /* ── SCREENSHOT SLIDER ── */
+    .screenshots-section {
+      background: var(--off-white);
+      padding: 80px 0 72px;
+    }
+    .screenshots-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+    .sl-wrap {
+      position: relative;
+    }
+    .sl-viewport {
+      overflow: hidden;
+      border-radius: 16px;
+    }
+    .sl-track {
+      display: flex;
+      gap: 24px;
+      transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+      will-change: transform;
+    }
+    .sl-slide {
+      flex: 0 0 auto;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 32px rgba(160,104,90,0.13), 0 0 0 1.5px #e8d0c8;
+    }
+    .sl-slide img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 520px;
+      object-fit: contain;
+      background: #fff;
+    }
+    .sl-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10;
+      background: #fff;
+      border: none;
+      box-shadow: 0 2px 12px rgba(160,104,90,0.22);
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      font-size: 28px;
+      line-height: 1;
+      color: #a0685a;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s, color 0.2s;
+    }
+    .sl-arrow:hover { background: linear-gradient(90deg,#a0685a,#d4a090); color: #fff; }
+    .sl-prev { left: -24px; }
+    .sl-next { right: -24px; }
+    .sl-dots {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 24px;
+    }
+    .sl-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #d4bdb8;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      transition: background 0.3s, transform 0.3s;
+    }
+    .sl-dot.active {
+      background: linear-gradient(90deg,#a0685a,#d4a090);
+      transform: scale(1.3);
+    }
+    @media (max-width: 600px) {
+      .screenshots-inner { padding: 0 16px; }
+      .sl-prev { left: -12px; }
+      .sl-next { right: -12px; }
+      .sl-arrow { width: 38px; height: 38px; font-size: 22px; }
+    }
+
     /* ── SPEAKER ── */
     .speaker-section {
       background: var(--off-white);
@@ -1464,6 +1551,30 @@ window._load_script = function(url, callback, isSubmit) {
   </div>
 </div>
 
+<!-- SCREENSHOT SLIDER -->
+<section class="screenshots-section">
+  <div class="screenshots-inner">
+    <p class="section-label" style="text-align:center; margin-bottom:12px;">Echte Stimmen</p>
+    <h2 style="text-align:center; font-family:'Cormorant Garamond',serif; font-size:clamp(28px,3.5vw,48px); font-weight:400; color:var(--dark); margin-bottom:40px;">Was Frauen über Marina sagen</h2>
+    <div class="sl-wrap">
+      <button class="sl-arrow sl-prev" id="slPrev" aria-label="Zurück">&#8249;</button>
+      <button class="sl-arrow sl-next" id="slNext" aria-label="Weiter">&#8250;</button>
+      <div class="sl-viewport" id="slViewport">
+        <div class="sl-track" id="slTrack">
+          <div class="sl-slide"><img src="Testimonials/Denise.PNG" alt="Testimonial Denise"></div>
+          <div class="sl-slide"><img src="Testimonials/Elena.jpg" alt="Testimonial Elena"></div>
+          <div class="sl-slide"><img src="Testimonials/Leonie.PNG" alt="Testimonial Leonie"></div>
+          <div class="sl-slide"><img src="Testimonials/Marina.jpg" alt="Testimonial Marina"></div>
+          <div class="sl-slide"><img src="Testimonials/Ursula.png" alt="Testimonial Ursula"></div>
+          <div class="sl-slide"><img src="Testimonials/Yvonne 2.png" alt="Testimonial Yvonne"></div>
+          <div class="sl-slide"><img src="Testimonials/Yvonne.png" alt="Testimonial Yvonne"></div>
+        </div>
+      </div>
+      <div class="sl-dots" id="slDots"></div>
+    </div>
+  </div>
+</section>
+
 <!-- BENEFITS -->
 <section class="benefits-section">
   <div class="benefits-inner">
@@ -1769,6 +1880,76 @@ window._load_script = function(url, callback, isSubmit) {
       openModal();
     }
   });
+</script>
+
+<script>
+/* ── SCREENSHOT SLIDER ── */
+(function() {
+  const viewport = document.getElementById('slViewport');
+  const track    = document.getElementById('slTrack');
+  const dotsEl   = document.getElementById('slDots');
+  const prevBtn  = document.getElementById('slPrev');
+  const nextBtn  = document.getElementById('slNext');
+  if (!track) return;
+
+  const slides = Array.from(track.querySelectorAll('.sl-slide'));
+  const total  = slides.length;
+  let current  = 0;
+  let autoTimer;
+
+  /* --- build dots --- */
+  slides.forEach(function(_, i) {
+    const d = document.createElement('button');
+    d.className = 'sl-dot' + (i === 0 ? ' active' : '');
+    d.setAttribute('aria-label', 'Slide ' + (i + 1));
+    d.addEventListener('click', function() { goTo(i); resetAuto(); });
+    dotsEl.appendChild(d);
+  });
+
+  function setSlideWidths() {
+    const vw = viewport.offsetWidth;
+    const slideW = Math.round(vw * 0.78);
+    slides.forEach(function(s) { s.style.width = slideW + 'px'; });
+  }
+
+  function getOffset(idx) {
+    const vw = viewport.offsetWidth;
+    const slideW = slides[0].offsetWidth;
+    const gap = 24;
+    /* center the active slide */
+    return -idx * (slideW + gap) + (vw - slideW) / 2;
+  }
+
+  function goTo(idx) {
+    current = (idx + total) % total;
+    track.style.transform = 'translateX(' + getOffset(current) + 'px)';
+    dotsEl.querySelectorAll('.sl-dot').forEach(function(d, i) {
+      d.classList.toggle('active', i === current);
+    });
+  }
+
+  function resetAuto() {
+    clearInterval(autoTimer);
+    autoTimer = setInterval(function() { goTo(current + 1); }, 4500);
+  }
+
+  prevBtn.addEventListener('click', function() { goTo(current - 1); resetAuto(); });
+  nextBtn.addEventListener('click', function() { goTo(current + 1); resetAuto(); });
+
+  /* touch / swipe */
+  let touchStartX = 0;
+  viewport.addEventListener('touchstart', function(e) { touchStartX = e.touches[0].clientX; }, {passive:true});
+  viewport.addEventListener('touchend', function(e) {
+    const dx = e.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(dx) > 40) { goTo(current + (dx < 0 ? 1 : -1)); resetAuto(); }
+  }, {passive:true});
+
+  window.addEventListener('resize', function() { setSlideWidths(); goTo(current); });
+
+  setSlideWidths();
+  goTo(0);
+  resetAuto();
+})();
 </script>
 </body>
 </html>
