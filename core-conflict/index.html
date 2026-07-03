@@ -599,7 +599,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     line-height: 1.3;
     margin-bottom: 24px;
   }
-  .final-cta h2 em { font-style: italic; color: var(--sand-light); }
+  .final-cta h2 em { font-style: normal; color: var(--sand-light); }
   .final-cta p {
     font-size: 22px;
     color: rgba(248,246,242,0.65);
@@ -892,7 +892,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="testimonials-section">
   <div class="testimonials-inner">
     <div class="testimonials-header">
-      <span class="section-eyebrow">Stimmen aus der Community</span>
       <h2 class="section-title">Das sagen <em>begeisterte</em> Nutzerinnen</h2>
     </div>
     <div class="testimonials-grid">
@@ -917,7 +916,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 ═══════════════════════════════ -->
 <section class="final-cta">
   <div class="final-cta-inner">
-    <h2>Jetzt liegt es an dir.<br>Bleibt alles wie es ist, oder gehst du auf dein <em>nächstes Umsatz-Level?</em></h2>
+    <h2>Jetzt liegt es an dir.<br>Bleibt alles wie es ist, oder gehst du auf dein <em>nächstes UMSATZ-LEVEL?</em></h2>
     <p>Erlaube dir, ehrlich hinzuschauen und Klarheit über das zu gewinnen, was dein Business-Wachstum bisher blockiert hat.</p>
     <p class="callout-final">„The Core Conflict ist dein Startpunkt. Präzise, ehrlich und transformierend."</p>
     <button class="btn-primary" onclick="openExitPopup()">Jetzt für 0€ sichern</button>
@@ -1191,8 +1190,10 @@ window._load_script = function(url, callback, isSubmit) {
 // ── FLOATING CTA VISIBILITY ──
 (function () {
   var cta = document.getElementById('floatingCta');
+  var footer = document.querySelector('.site-footer');
   window.addEventListener('scroll', function () {
-    cta.classList.toggle('is-visible', window.scrollY > 600);
+    var footerVisible = footer.getBoundingClientRect().top < window.innerHeight;
+    cta.classList.toggle('is-visible', window.scrollY > 600 && !footerVisible);
   }, { passive: true });
 }());
 
