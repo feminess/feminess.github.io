@@ -443,27 +443,6 @@ body {
 }
 .scarcity-banner strong { color: var(--rose); font-weight: 700; }
 
-/* Upsell intro text */
-.upsell-eyebrow {
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
-  font-size: 22px;
-  font-weight: 700;
-  letter-spacing: 3.5px;
-  text-transform: uppercase;
-  color: var(--teal);
-  margin-bottom: 14px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-.upsell-eyebrow::after {
-  content: '';
-  flex: 1;
-  max-width: 36px;
-  height: 1px;
-  background: var(--teal);
-  opacity: 0.35;
-}
 .upsell-headline {
   font-family: 'Cormorant Garamond', Georgia, serif;
   font-size: 34px;
@@ -819,7 +798,7 @@ body {
 }
 .value-summary-you-pay {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   gap: 16px;
   margin-top: 12px;
@@ -852,17 +831,6 @@ body {
   background: var(--off-white);
   text-align: center;
 }
-.section-cta-2 .upsell-eyebrow {
-  justify-content: center;
-}
-.section-cta-2 .upsell-eyebrow::after { display: none; }
-.section-cta-2 .upsell-eyebrow::before {
-  content: '';
-  flex: 0 0 28px;
-  height: 1px;
-  background: var(--teal);
-  opacity: 0.35;
-}
 .section-cta-2 h2 {
   font-family: 'Cormorant Garamond', Georgia, serif;
   font-size: 34px;
@@ -871,12 +839,12 @@ body {
   color: var(--black);
   margin-bottom: 10px;
 }
-.section-cta-2 h2 em { font-style: italic; background: var(--rosegold-text); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.section-cta-2 h2 em { font-style: normal; background: var(--rosegold-text); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
 .section-cta-2 p {
   font-family: 'Avenir LT Pro', 'Inter', sans-serif;
   font-size: 22px;
   color: var(--warm-gray);
-  font-style: italic;
+  font-style: normal;
   margin-bottom: 16px;
   line-height: 1.65;
 }
@@ -937,10 +905,7 @@ body {
 .image-strip-quote em {
   font-style: normal;
   font-size: 32px;
-  background: var(--rosegold-text);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #fff;
 }
 
 /* ── FOOTER ── */
@@ -981,8 +946,7 @@ body {
   .confirm-kicker { font-size: 14px; }
   .topbar p { font-size: 11px; letter-spacing: 1px; }
   .progress-label { font-size: 11px; }
-  .value-summary-total,
-  .value-summary-you-pay {
+  .value-summary-total {
     flex-direction: column;
     align-items: flex-start;
     gap: 6px;
@@ -1085,8 +1049,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <span class="value-summary-total-amount">unbezahlbar</span>
       </div>
       <div class="value-summary-you-pay">
-        <span class="value-summary-you-pay-label">Du bezahlst heute nur</span>
-        <span class="value-summary-you-pay-amount">9,99 €</span>
+        <span class="value-summary-you-pay-label">Heute nur 9,99&nbsp;€</span>
       </div>
       <a href="https://feminess.de/produkt/energy-for-million-vip-paket/" class="cta-primary-btn" style="margin-top:24px;">Hier klicken und VIP-Paket sichern!</a>
     </div>
@@ -1099,7 +1062,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="image-strip">
   <img src="../Bilder/Marina_MAI2314376 Kopie.jpg" alt="Marina Henze – Feminess">
   <div class="image-strip-overlay">
-    <p class="image-strip-quote">Das <span class="rosegold-text">ENERGY for MILLION</span> VIP-Paket ist für die Frau, die <em>nicht nur dabei sein</em>, sondern <em>wirklich durchbrechen</em> will.</p>
+    <p class="image-strip-quote">Das <span style="font-weight:700;">ENERGY for MILLION</span> VIP-Paket ist für die Frau, die <em>nicht nur dabei sein</em>, sondern <em>wirklich durchbrechen</em> will.</p>
   </div>
 </div>
 
@@ -1107,12 +1070,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- ── ZWEITE CTA ── -->
 <section class="section-cta-2">
   <div class="container">
-    <div class="upsell-eyebrow">Letzte Chance</div>
     <h2>Jetzt VIP-Upgrade sichern –<br><em>bevor es zu spät ist.</em></h2>
     <p>Dieses Angebot gilt nur auf dieser Seite und nur einmal.<br>Sobald du weitergehst, ist es weg.</p>
     <p class="cta-2-scarcity"><strong>Nur 20 VIP-Pakete verfügbar.</strong></p>
     <div class="cta-2-wrap">
-      <a href="https://feminess.de/produkt/energy-for-million-vip-paket/" class="cta-primary-btn">Ja, ich will das VIP-Upgrade sichern &rarr;</a>
+      <a href="https://feminess.de/produkt/energy-for-million-vip-paket/" class="cta-primary-btn">Ja, ich will das VIP-Upgrade sichern</a>
       <a href="https://feminess.github.io/workshop-danke/" class="cta-decline" style="font-size:15px;">Nein danke. Ich verzichte auf das VIP-Upgrade und die enthaltenen Extras.</a>
     </div>
   </div>
