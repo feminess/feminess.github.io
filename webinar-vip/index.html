@@ -373,30 +373,6 @@ body {
   flex-wrap: wrap;
 }
 .quick-scarcity strong { background: var(--rosegold-text); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-.quick-price-block {
-  margin-bottom: 28px;
-}
-.quick-old-price {
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
-  font-size: 22px;
-  color: var(--warm-gray);
-  margin-bottom: 4px;
-}
-.quick-old-price span {
-  text-decoration: line-through;
-  text-decoration-color: var(--rose-light);
-}
-.quick-new-price {
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 22px;
-  font-weight: 400;
-  color: var(--black);
-  line-height: 1.1;
-}
-.quick-new-price strong {
-  color: var(--teal-dark);
-  font-weight: 500;
-}
 .quick-cta-btn {
   max-width: 440px;
   margin-left: auto;
@@ -697,7 +673,7 @@ body {
 
 .include-item {
   display: grid;
-  grid-template-columns: 72px 1fr auto;
+  grid-template-columns: 72px 1fr;
   gap: 0 20px;
   padding: 28px 0;
   border-bottom: 1px solid var(--beige);
@@ -730,35 +706,6 @@ body {
   color: var(--warm-gray);
   line-height: 1.65;
 }
-.include-item-value {
-  flex-shrink: 0;
-  text-align: right;
-}
-.include-item-value-label {
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
-  font-size: 22px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--mid-gray);
-  display: block;
-  margin-bottom: 3px;
-}
-.include-item-value-amount {
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 22px;
-  font-weight: 400;
-  color: var(--teal-dark);
-  display: block;
-  white-space: nowrap;
-}
-.include-item-value-priceless {
-  font-size: 22px;
-  color: var(--teal-light) !important;
-  white-space: normal !important;
-  text-align: right;
-  line-height: 1.3;
-}
 .includes-intro-text {
   font-family: 'Avenir LT Pro', 'Inter', sans-serif;
   font-size: 22px;
@@ -769,21 +716,6 @@ body {
   background: var(--cream);
   border-left: 3px solid var(--teal);
   border-radius: 2px;
-}
-.value-summary-strikethrough {
-  text-decoration: line-through;
-  text-decoration-color: var(--rose-light);
-  opacity: 0.55;
-  font-size: 22px;
-}
-@keyframes blink-price {
-  0%, 49% { opacity: 1; }
-  50%, 100% { opacity: 0.15; }
-}
-.price-blink {
-  animation: blink-price 1.1s ease-in-out infinite;
-  font-size: 22px;
-  color: #fff !important;
 }
 .includes-closing {
   margin-top: 36px;
@@ -801,120 +733,6 @@ body {
 }
 .includes-closing p:last-child { margin-bottom: 0; }
 .includes-closing strong { color: var(--rose); font-weight: 700; }
-
-/* ── VALUE SUMMARY ── */
-.value-summary {
-  margin-top: 40px;
-  background: var(--dark);
-  border-radius: 3px;
-  padding: 36px 40px;
-  position: relative;
-  overflow: hidden;
-}
-.value-summary::before {
-  content: '';
-  position: absolute;
-  top: -80px; right: -80px;
-  width: 280px; height: 280px;
-  background: radial-gradient(circle, rgba(94,198,179,0.10) 0%, transparent 65%);
-  pointer-events: none;
-}
-.value-summary-title {
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
-  font-size: 22px;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: var(--teal-light);
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-.value-summary-title::after {
-  content: '';
-  flex: 1;
-  height: 1px;
-  background: rgba(94,198,179,0.20);
-}
-.value-summary-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-bottom: 24px;
-}
-.value-summary-list li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 16px;
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
-  font-size: 22px;
-  color: var(--mid-gray);
-  line-height: 1.5;
-  padding-bottom: 10px;
-  border-bottom: 1px solid rgba(255,255,255,0.05);
-}
-.value-summary-list li:last-child { border-bottom: none; padding-bottom: 0; }
-.value-summary-list li span:last-child {
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 22px;
-  color: var(--teal-pale);
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-.value-summary-total {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 16px;
-  padding-top: 20px;
-  border-top: 1px solid rgba(255,255,255,0.10);
-}
-.value-summary-total-label {
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
-  font-size: 22px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--teal-pale);
-}
-.value-summary-total-amount {
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 22px;
-  font-weight: 400;
-  color: #fff;
-  white-space: nowrap;
-}
-.value-summary-you-pay {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 16px;
-  margin-top: 12px;
-  padding: 16px 20px;
-  background: rgba(156,107,82,0.12);
-  border: 1px solid rgba(156,107,82,0.25);
-  border-radius: 2px;
-}
-.value-summary-you-pay-label {
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
-  font-size: 22px;
-  font-weight: 700;
-  background: var(--rosegold-text);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  letter-spacing: 0.5px;
-}
-.value-summary-you-pay-amount {
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 22px;
-  font-weight: 400;
-  color: #fff;
-  white-space: nowrap;
-}
 
 /* ── SECOND CTA ── */
 .section-cta-2 {
@@ -1035,8 +853,6 @@ body {
     gap: 0 14px;
   }
   .include-item-emoji { font-size: 22px; }
-  .include-item-value { text-align: right; }
-  .value-summary { padding: 28px 24px; }
   .image-strip { height: 240px; }
 }
 </style>
@@ -1067,7 +883,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="confirm-kicker">Du siehst diese Seite hier nur ein einziges Mal und danach nie wieder. Schau dir also unbedingt das Video bis zum Ende an!</div>
   <h1>Ich habe noch<br><em>etwas für dich..</em></h1>
   <p style="margin-bottom:28px;">Herzlichen Glückwunsch! Du hast dich erfolgreich angemeldet!<br><br>
-  Schau dir jetzt dieses Video bis zum Ende an, um zu erfahren, wie du das Maximum aus <strong style="color:#fff;">TRUE SPIRIT Business Workshop</strong> herausholst!</p>
+  Schau dir jetzt dieses Video bis zum Ende an, um zu erfahren, wie du das Maximum aus <strong style="color:#fff;">ENERGY for MILLION</strong> herausholst!</p>
 
   <div style="max-width:640px;margin:0 auto;">
     <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1198048796?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:3px;" title="VIP Paket TSB"></iframe></div>
@@ -1080,12 +896,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="section-quick-upsell">
   <div class="container">
     <p class="quick-scarcity"><span class="scarcity-dot"></span><strong>Wichtig: Nur noch 20 VIP-Pakete sind verfügbar.</strong></p>
-    <div class="quick-price-block">
-      <p class="quick-old-price">statt <span>835,00&nbsp;€</span></p>
-      <p class="quick-new-price">für nur <strong>27,00&nbsp;€</strong></p>
-    </div>
     <a href="https://feminess.de/kasse/?add-to-cart=76403" class="cta-primary-btn quick-cta-btn">Hier klicken und VIP-Paket sichern!</a>
-    <a href="https://feminess.github.io/workshop-danke/" class="cta-decline quick-decline">Nein Danke. Ich möchte nicht das Maximum aus dem Event herausholen.</a>
+    <a href="https://feminess.github.io/webinar-danke/" class="cta-decline quick-decline" style="font-size:15px;">Nein Danke. Ich möchte nicht das Maximum aus dem Event herausholen.</a>
   </div>
 </section>
 
@@ -1097,19 +909,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="container">
 
     <div class="includes-intro">Das bekommst du</div>
-    <h2 class="includes-headline">Alles auf einen Blick –<br><em>dein TRUE SPIRIT VIP-Paket.</em></h2>
-    <p class="includes-intro-text">Warum du mit diesem VIP-Paket noch schneller &amp; nachhaltiger ein skalierbares Business aufbaust, das sich nach dir anfühlt?<br>Weil du mit diesem VIP-Paket Zugriff auf folgende Inhalte erhältst:</p>
+    <h2 class="includes-headline">Alles auf einen Blick –<br><em>dein ENERGY for VIP-Paket.</em></h2>
+    <p class="includes-intro-text">Warum du mit diesem VIP-Paket noch schneller &amp; nachhaltiger ein Business aufzubauen, das zu 100% zu dir und deiner eigenen Identität passt?<br>Weil du Zugriff auf folgende Inhalte erhältst:</p>
 
-    <!-- Item 1: Expansion Block Mirror Analyse -->
+    <!-- Item 1: Vertiefendes Workbook -->
     <div class="include-item">
       <div class="include-item-emoji">#1</div>
       <div class="include-item-body">
-        <h3>🔥 The Expansion Block Mirror Analyse</h3>
-        <p>Mit der exklusiven <strong>Expansion Block Mirror Analyse</strong> deckst du auf, <strong>welche unbewussten Blockaden dich wirklich aufhalten</strong>. Diese Analyse zeigt dir wie ein Spiegel, wo du dich selbst im Weg stehst – und gibt dir <strong>klare Handlungsschritte</strong>, um diese Muster aufzulösen und endlich in deine <strong>volle Business-Expansion</strong> zu kommen.</p>
-      </div>
-      <div class="include-item-value">
-        <span class="include-item-value-label">Wert</span>
-        <span class="include-item-value-amount">47 €</span>
+        <h3>🔥 Vertiefendes Workbook zum Webinar</h3>
+        <p>Mit dem exklusiven <strong>Workbook zum Webinar</strong> bleibt es nicht beim Zuhören. Mit gezielten <strong>Fragen und Übungen</strong> gehst du in einen echten <strong>Deep Dive</strong> und beziehst jeden Impuls direkt auf deine eigene Situation. So verwandelst du das Gehörte Schritt für Schritt in <strong>klare Erkenntnisse</strong> – und kommst wirklich in die <strong>Umsetzung</strong>, statt die Inhalte danach wieder zu vergessen.</p>
       </div>
     </div>
 
@@ -1120,10 +928,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <h3>🔥 VIP-Fragen beantworten durch Marina</h3>
         <p>Du hast die Möglichkeit, vorab deine <strong>brennendsten Business-Fragen einzureichen</strong>, die Marina während des Workshops <strong>LIVE beantwortet</strong>. Du bekommst <strong>keine allgemeinen Antworten</strong>, sondern <strong>individuelle Lösungen</strong>, die exakt auf deine Situation zugeschnitten sind. So gehst du nicht mit Theorie, sondern mit <strong>maßgeschneiderten Strategien</strong> aus dem Workshop.</p>
       </div>
-      <div class="include-item-value">
-        <span class="include-item-value-label">Wert</span>
-        <span class="include-item-value-amount">97 €</span>
-      </div>
     </div>
 
     <!-- Item 3: Aufzeichnungen -->
@@ -1132,10 +936,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="include-item-body">
         <h3>🔥 Alle Aufzeichnungen des Live-Events</h3>
         <p>Du erhältst <strong>Zugang zu allen Aufzeichnungen</strong> des TRUE SPIRIT Business Workshops. So kannst du die Inhalte in deinem eigenen Tempo nochmals durcharbeiten, <strong>wichtige Abschnitte gezielt wiederholen</strong> und sicherstellen, dass kein einziger Impuls verloren geht. Ideal, um das Gelernte <strong>dauerhaft zu verankern</strong> und immer wieder darauf zurückzugreifen.</p>
-      </div>
-      <div class="include-item-value">
-        <span class="include-item-value-label">Wert</span>
-        <span class="include-item-value-amount">197 €</span>
       </div>
     </div>
 
@@ -1146,10 +946,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <h3>🔥 1 Stunde 1:1 Coaching mit Business-Mentorin Vera</h3>
         <p>Du bekommst eine <strong>exklusive 60-minütige 1:1 Coaching-Session</strong> mit Business-Mentorin Vera. Hier geht es um dich, dein Business und deine <strong>nächsten konkreten Schritte</strong>. Vera bringt ihren geschulten Blick auf deine Situation und gibt dir <strong>direkte, umsetzbare Impulse</strong> – damit du nach dem Call weißt, wo du anfängst und wie du <strong>wirklich ins Momentum kommst</strong>.</p>
       </div>
-      <div class="include-item-value">
-        <span class="include-item-value-label">Wert</span>
-        <span class="include-item-value-amount">197 €</span>
-      </div>
     </div>
 
     <!-- Item 5: Magnetic Sales Mastery -->
@@ -1158,10 +954,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="include-item-body">
         <h3>🔥 Online-Kurs: Magnetic Sales Mastery</h3>
         <p>Mit diesem Kurs lernst du, wie du in Verkaufsgesprächen <strong>nicht überreden, sondern magnetisch anziehen</strong> musst. Du bekommst ein <strong>Sales-System, das zu dir passt</strong>, dich authentisch fühlen lässt und trotzdem <strong>in 9 von 10 Gesprächen zu einem Abschluss führt</strong>. Verkaufen wird sich <strong>nie wieder komisch anfühlen</strong>, sondern wie echtes Helfen.</p>
-      </div>
-      <div class="include-item-value">
-        <span class="include-item-value-label">Wert</span>
-        <span class="include-item-value-amount">297 €</span>
       </div>
     </div>
 
@@ -1172,51 +964,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <h3>🔥 Chance auf ein Live 1:1 Coaching mit Marina</h3>
         <p>Als VIP-Teilnehmer hast du die <strong>exklusive Chance, live ein persönliches 1:1 Coaching mit Marina</strong> zu gewinnen. Marina nimmt sich Zeit für dich, schaut direkt auf deine Situation und gibt dir <strong>den Impuls, der alles verändert</strong>. Diese Chance bekommst du <strong>nur als VIP-Mitglied</strong> – und sie ist schlicht <strong>unbezahlbar</strong>. 😉</p>
       </div>
-      <div class="include-item-value">
-        <span class="include-item-value-label">Wert</span>
-        <span class="include-item-value-amount include-item-value-priceless">unbezahlbar&nbsp;😉</span>
-      </div>
     </div>
 
-    <!-- Value Stack Summary (an letzter Stelle) -->
-    <div class="value-summary">
-      <div class="value-summary-title">Zusammenfassung</div>
-      <ul class="value-summary-list">
-        <li>
-          <span>#1 The Expansion Block Mirror Analyse</span>
-          <span>47 €</span>
-        </li>
-        <li>
-          <span>#2 VIP-Fragen beantworten durch Marina</span>
-          <span>97 €</span>
-        </li>
-        <li>
-          <span>#3 Alle Aufzeichnungen des Live-Events</span>
-          <span>197 €</span>
-        </li>
-        <li>
-          <span>#4 1:1 Coaching mit Business-Mentorin Vera</span>
-          <span>197 €</span>
-        </li>
-        <li>
-          <span>Bonus 1 – Online-Kurs: Magnetic Sales Mastery</span>
-          <span>297 €</span>
-        </li>
-        <li>
-          <span>Bonus 2 – Chance auf Live 1:1 Coaching mit Marina</span>
-          <span style="font-size: 22px;color:var(--teal-light);">unbezahlbar 😉</span>
-        </li>
-      </ul>
-      <div class="value-summary-total">
-        <span class="value-summary-total-label">Gesamtwert</span>
-        <span class="value-summary-total-amount value-summary-strikethrough">835 €</span>
-      </div>
-      <div class="value-summary-you-pay">
-        <span class="value-summary-you-pay-label">Du bezahlst heute nur</span>
-        <span class="value-summary-you-pay-amount price-blink">27 €</span>
-      </div>
-      <a href="https://feminess.de/kasse/?add-to-cart=76403" class="cta-primary-btn" style="margin-top:24px;">Hier klicken und VIP-Paket sichern!</a>
-    </div>
+    <a href="https://feminess.de/kasse/?add-to-cart=76403" class="cta-primary-btn" style="margin-top:24px;">Hier klicken und VIP-Paket sichern!</a>
 
   </div>
 </section>
