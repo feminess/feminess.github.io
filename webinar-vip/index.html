@@ -423,11 +423,11 @@ body {
 }
 @keyframes pulse-dot {
   0%, 100% { opacity: 1; transform: scale(1); }
-@keyframes btn-pulse {
-  0%, 100% { box-shadow: 0 6px 28px rgba(156,107,82,0.42); }
-  50% { box-shadow: 0 10px 40px rgba(156,107,82,0.70); }
-}
   50% { opacity: 0.5; transform: scale(0.7); }
+}
+@keyframes btn-pulse {
+  0%, 100% { transform: scale(1); box-shadow: 0 6px 28px rgba(156,107,82,0.42); }
+  50% { transform: scale(1.035); box-shadow: 0 10px 40px rgba(156,107,82,0.70); }
 }
 .scarcity-banner p {
   font-family: 'Avenir LT Pro', 'Inter', sans-serif;
