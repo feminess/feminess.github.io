@@ -62,20 +62,29 @@
     /* ── TOP BANNER ── */
     .top-banner {
       background: var(--dark);
-      padding: 12px 40px;
+      padding: 16px 40px;
       text-align: center;
       border-bottom: 1px solid rgba(94,198,179,0.2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
     }
-    .top-banner p {
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+    .top-banner p.banner-text {
+      font-family: 'Avenir LT Pro', sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      letter-spacing: 0;
+      text-transform: none;
+      color: var(--mid-gray);
+      background: none;
+      -webkit-background-clip: initial;
+      -webkit-text-fill-color: initial;
     }
+    .countdown-mini { margin-top: 0; justify-content: center; gap: 16px; }
+    .countdown-mini .countdown-digits { font-size: 24px; }
+    .countdown-mini .countdown-sep { font-size: 20px; margin-bottom: 6px; }
+    .countdown-mini .countdown-label { font-size: 7px; }
 
     /* ── HERO ── */
     .hero {
@@ -148,7 +157,6 @@
       font-weight: 400;
       line-height: 1.0;
       letter-spacing: 1px;
-      text-transform: uppercase;
       margin-bottom: 24px;
       background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%);
       -webkit-background-clip: text;
@@ -900,7 +908,9 @@
       .testimonials-section, .speaker-section, .faq-section { padding: 64px 0; }
       .final-cta { padding: 72px 0; }
 
-      .top-banner p { font-size: 9.5px; letter-spacing: 1px; }
+      .top-banner p.banner-text { font-size: 14px; }
+      .countdown-mini .countdown-digits { font-size: 20px; }
+      .countdown-mini { gap: 10px; }
 
       .hero-image { height: 48vw; }
       .hero-image img { object-position: center 15%; }
@@ -957,7 +967,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- TOP BANNER -->
 <div class="top-banner">
-  <p style="white-space: nowrap;">Nur bis 16.07., 14 Uhr: Boni im Wert von über 700 € sichern</p>
+  <p class="banner-text" style="white-space: nowrap;">Webinar-Deal läuft aus in</p>
+  <div class="countdown countdown-mini">
+    <div class="countdown-item">
+      <span class="countdown-digits" id="b-days">00</span>
+      <span class="countdown-label">Tage</span>
+    </div>
+    <span class="countdown-sep">·</span>
+    <div class="countdown-item">
+      <span class="countdown-digits" id="b-hours">00</span>
+      <span class="countdown-label">Std</span>
+    </div>
+    <span class="countdown-sep">·</span>
+    <div class="countdown-item">
+      <span class="countdown-digits" id="b-minutes">00</span>
+      <span class="countdown-label">Min</span>
+    </div>
+    <span class="countdown-sep">·</span>
+    <div class="countdown-item">
+      <span class="countdown-digits" id="b-seconds">00</span>
+      <span class="countdown-label">Sek</span>
+    </div>
+  </div>
 </div>
 
 <!-- HERO -->
@@ -969,7 +1000,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         Werde die Frau, die sich nicht mehr in <strong>Schubladen</strong> pressen lässt. 7 Wochen, die dich zurück zu deinem <strong>wahren Selbst</strong> führen – <strong>FREI</strong> von fremden Regeln, <strong>GANZ</strong> in deiner Kraft, <strong>VOLLKOMMEN</strong> du selbst.
       </p>
       <a href="https://feminess.de/produkt/die-ungezaehmte-unternehmerin/" class="btn-hero" target="_blank" rel="noopener">Jetzt Platz sichern</a>
-      <p class="hero-date">7 Wochen Live-Experience mit Marina Henze<br>Boni im Wert von über 700 € nur bis 16.07.</p>
       <div class="countdown">
         <div class="countdown-item">
           <span class="countdown-digits" id="h-days">00</span>
@@ -993,7 +1023,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
     <div class="hero-image">
-      <img src="../webinar/Bilder/Marina%20Pose.jpg" alt="Marina Henze">
+      <img src="../webinar/Bilder/2DSCF1036.png" alt="Marina Henze">
     </div>
   </div>
   <div class="hero-tilt">
@@ -1397,20 +1427,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   /* ── COUNTDOWN ── */
   /* 16.07.2026 14:00 Uhr CEST = 12:00 UTC */
   const target = new Date('2026-07-16T12:00:00Z');
+  /* 16.07.2026 12:00 Uhr CEST = 10:00 UTC */
+  const targetBanner = new Date('2026-07-16T10:00:00Z');
   const ids = [['h-days','h-hours','h-minutes','h-seconds'],['f-days','f-hours','f-minutes','f-seconds']];
+  const idsBanner = [['b-days','b-hours','b-minutes','b-seconds']];
   function pad(n) { return String(n).padStart(2,'0'); }
-  function tick() {
-    const diff = target - new Date();
+  function updateIds(tgt, idSets) {
+    const diff = tgt - new Date();
     const d = diff > 0 ? Math.floor(diff/86400000) : 0;
     const h = diff > 0 ? Math.floor((diff%86400000)/3600000) : 0;
     const m = diff > 0 ? Math.floor((diff%3600000)/60000) : 0;
     const s = diff > 0 ? Math.floor((diff%60000)/1000) : 0;
-    ids.forEach(([dEl,hEl,mEl,sEl]) => {
+    idSets.forEach(([dEl,hEl,mEl,sEl]) => {
       document.getElementById(dEl).textContent = pad(d);
       document.getElementById(hEl).textContent = pad(h);
       document.getElementById(mEl).textContent = pad(m);
       document.getElementById(sEl).textContent = pad(s);
     });
+  }
+  function tick() {
+    updateIds(target, ids);
+    updateIds(targetBanner, idsBanner);
   }
   tick(); setInterval(tick, 1000);
 
