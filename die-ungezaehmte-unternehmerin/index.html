@@ -62,29 +62,46 @@
     /* ── TOP BANNER ── */
     .top-banner {
       background: var(--dark);
-      padding: 16px 40px;
+      padding: 14px 40px;
       text-align: center;
       border-bottom: 1px solid rgba(94,198,179,0.2);
+    }
+    .banner-row {
       display: flex;
-      flex-direction: column;
-      align-items: center;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: center;
       gap: 10px;
     }
-    .top-banner p.banner-text {
+    .banner-text {
       font-family: 'Avenir LT Pro', sans-serif;
-      font-size: 18px;
+      font-size: 15px;
       font-weight: 400;
       letter-spacing: 0;
       text-transform: none;
       color: var(--mid-gray);
-      background: none;
-      -webkit-background-clip: initial;
-      -webkit-text-fill-color: initial;
+      white-space: nowrap;
     }
-    .countdown-mini { margin-top: 0; justify-content: center; gap: 16px; }
-    .countdown-mini .countdown-digits { font-size: 24px; }
-    .countdown-mini .countdown-sep { font-size: 20px; margin-bottom: 6px; }
-    .countdown-mini .countdown-label { font-size: 7px; }
+    .banner-countdown {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 19px;
+      font-weight: 600;
+      color: #fff;
+      white-space: nowrap;
+    }
+    .banner-countdown .cd-unit {
+      font-family: 'Avenir LT Pro', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: var(--teal-light);
+      margin-right: 3px;
+    }
+    .banner-countdown .cd-sep {
+      color: rgba(255,255,255,0.28);
+      margin: 0 6px;
+    }
 
     /* ── HERO ── */
     .hero {
@@ -908,9 +925,11 @@
       .testimonials-section, .speaker-section, .faq-section { padding: 64px 0; }
       .final-cta { padding: 72px 0; }
 
-      .top-banner p.banner-text { font-size: 14px; }
-      .countdown-mini .countdown-digits { font-size: 20px; }
-      .countdown-mini { gap: 10px; }
+      .top-banner { padding: 12px 20px; }
+      .banner-row { gap: 6px 8px; }
+      .banner-text { font-size: 13px; }
+      .banner-countdown { font-size: 16px; }
+      .banner-countdown .cd-sep { margin: 0 4px; }
 
       .hero-image { height: 48vw; }
       .hero-image img { object-position: center 15%; }
@@ -967,27 +986,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- TOP BANNER -->
 <div class="top-banner">
-  <p class="banner-text" style="white-space: nowrap;">Webinar-Deal läuft aus in</p>
-  <div class="countdown countdown-mini">
-    <div class="countdown-item">
-      <span class="countdown-digits" id="b-days">00</span>
-      <span class="countdown-label">Tage</span>
-    </div>
-    <span class="countdown-sep">·</span>
-    <div class="countdown-item">
-      <span class="countdown-digits" id="b-hours">00</span>
-      <span class="countdown-label">Std</span>
-    </div>
-    <span class="countdown-sep">·</span>
-    <div class="countdown-item">
-      <span class="countdown-digits" id="b-minutes">00</span>
-      <span class="countdown-label">Min</span>
-    </div>
-    <span class="countdown-sep">·</span>
-    <div class="countdown-item">
-      <span class="countdown-digits" id="b-seconds">00</span>
-      <span class="countdown-label">Sek</span>
-    </div>
+  <div class="banner-row">
+    <span class="banner-text">Webinar-Deal läuft aus in</span>
+    <span class="banner-countdown">
+      <span class="cd-unit">T</span><span id="b-days">00</span>
+      <span class="cd-sep">:</span>
+      <span class="cd-unit">Std</span><span id="b-hours">00</span>
+      <span class="cd-sep">:</span>
+      <span class="cd-unit">Min</span><span id="b-minutes">00</span>
+      <span class="cd-sep">:</span>
+      <span class="cd-unit">Sek</span><span id="b-seconds">00</span>
+    </span>
   </div>
 </div>
 
@@ -1289,7 +1298,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p>Seit über <strong>20 Jahren</strong> begleitet sie Frauen aus Erschöpfung und Selbstaufopferung hinein in <strong>finanzielle Freiheit</strong> und selbstbestimmtes Wirken. Mehr als <strong>20.000 Frauen</strong> sind diesen Weg bereits mit ihr gegangen.</p>
       <p>Mit 17 Jahren gründete Marina ihr erstes Unternehmen. Als Freigeist fand sie immer wieder Lösungen, wo andere aufgaben – und machte jede Schwierigkeit zur Wachstumschance.</p>
       <p>Ihre Vision: Ein neues Unternehmerinnen-Zeitalter, in dem Frauen wirken, verdienen und leben, aus innerer Stärke und klarer Identität heraus.</p>
-      <p class="speaker-quote">„Komm in die Experience – und ich zeige dir, wie du finanziell und persönlich frei wirst.“ – Marina</p>
     </div>
   </div>
 </section>
@@ -1297,7 +1305,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- FAQ -->
 <section class="faq-section">
   <div class="faq-inner">
-    <p class="section-label">Häufige Fragen</p>
     <h2 style="margin-bottom:40px;">Bevor du <em>startest</em></h2>
 
     <details class="faq-item">
@@ -1334,7 +1341,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- FINAL CTA -->
 <section class="final-cta">
   <div class="final-cta-inner">
-    <p class="section-label" style="justify-content:center; color:var(--teal-light);">Dein Moment ist jetzt</p>
     <h2>Genug gescrollt – sichere dir jetzt deinen <em>unschlagbaren Deal</em></h2>
     <p class="final-price">Special-Preis <strong>297 €</strong> – nur solange die Boni laufen</p>
     <div class="countdown-final">
