@@ -678,7 +678,7 @@
       background: linear-gradient(90deg, var(--teal), var(--teal-light));
     }
     .bonus-inner {
-      max-width: 760px;
+      max-width: 980px;
       margin: 0 auto;
       padding: 0 40px;
     }
@@ -729,8 +729,10 @@
     .bonus-gift-text p { font-size: 20px; color: rgba(255,255,255,0.75); margin: 0 0 18px; line-height: 1.8; }
     .bonus-gift-text p:last-child { margin-bottom: 0; }
     .offer-list { list-style: none; display: flex; flex-direction: column; gap: 10px; margin: 0 0 18px; }
-    .offer-list li { position: relative; padding-left: 22px; font-size: 20px; color: inherit; line-height: 1.7; }
+    .offer-list li { position: relative; padding-left: 28px; font-size: 20px; color: inherit; line-height: 1.7; }
     .offer-list li::before { content: ''; display: block; position: absolute; left: 0; top: 0.65em; width: 7px; height: 7px; border-radius: 50%; background: #c47868; }
+    .offer-list.check li::before { content: '✓'; display: block; position: absolute; left: 0; top: 0; width: auto; height: auto; border-radius: 0; background: none; font-size: 18px; font-weight: 700; color: #1b5c50; }
+    .offer-list.cross li::before { content: '✕'; display: block; position: absolute; left: 0; top: 0; width: auto; height: auto; border-radius: 0; background: none; font-size: 16px; font-weight: 700; color: #c47868; }
     @media (max-width: 600px) { .bonus-gift-box { flex-direction: column; text-align: center; } .offer-list li { text-align: left; } }
 
     /* ── BONUS PROGRAMME (ON WHITE) ── */
@@ -740,6 +742,10 @@
     .bonus-section.on-white .bonus-gift-text h3 { color: #1b5c50; }
     .bonus-section.on-white .bonus-gift-text p { color: var(--warm-gray); }
     .bonus-section.on-white .offer-list li { color: var(--warm-gray); }
+    .offer-content p { font-size: 20px; line-height: 1.8; margin: 0 0 18px; }
+    .offer-content p:last-child { margin-bottom: 0; }
+    .bonus-section.on-white .offer-content p { color: var(--warm-gray); }
+    .bonus-section.on-white .offer-content p strong { color: #1b5c50; }
 
     /* ── TESTIMONIALS ── */
     .testimonials-section {
@@ -1106,7 +1112,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- ERGEBNIS NACH 7 WOCHEN -->
 <section class="perfect-section">
   <div class="perfect-inner">
-    <h2>In diesen 7 Sessions gehen wir genau an den <em>Ursprung</em>, wo alles beginnt:</h2>
+    <h2>In diesen sieben Sessions gehen wir genau an den <em>Ursprung</em>, wo alles beginnt:</h2>
 
     <div class="perfect-item">
       <div class="heart-icon"><svg viewBox="0 0 24 24"><path d="M12 21s-6.7-4.35-9.3-8.1C1 10.4 1.6 7 4.4 5.6 6.6 4.5 9 5.2 12 8c3-2.8 5.4-3.5 7.6-2.4C22.4 7 23 10.4 21.3 12.9 18.7 16.65 12 21 12 21z"/></svg></div>
@@ -1146,34 +1152,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- BONUS PROGRAMME -->
 <section class="bonus-section on-white">
   <div class="bonus-inner">
-    <h2>Der unschlagbare Deal<br>für die Rückeroberung von dir <em>SELBST</em></h2>
-    <div class="bonus-gift-box">
-      <div class="bonus-gift-text">
-        <h3>7 Wochen „Die ungezähmte Unternehmerin“</h3>
-        <p><strong>Die ungezähmte Unternehmerin ist genau für dich, wenn du:</strong></p>
-        <ul class="offer-list">
-          <li>spürst, dass die nächste Strategie nicht das Problem löst</li>
-          <li>bereit bist, an den Ursprung zu gehen, statt an der Oberfläche zu kratzen</li>
-          <li>dein Business als Ausdruck von dir leben willst, nicht als Marionette</li>
-        </ul>
-        <p><strong>Es ist nichts für dich, wenn du:</strong></p>
-        <ul class="offer-list">
-          <li>noch eine weitere Strategie, Taktik oder den nächsten Funnel suchst</li>
-          <li>glaubst, du hättest schon so viel gemacht und es gibt nichts, was dir noch helfen könnte</li>
-          <li>eine oberflächliche Lösung für mehr Umsatz und Kunden suchst</li>
-        </ul>
-        <p>Und du bist damit nicht allein. Du wirst persönlich begleitet und weißt, was als Nächstes dran ist. In den Sessions ist Raum für deine persönlichen Fragen, für geführte Prozesse, die dich direkt in eine tiefe Transformation und wieder zurück zu dir selbst führen. Die geschlossene Telegram-Gruppe schafft einen magischen Raum und trägt dich zwischen den einzelnen Sessions.</p>
-        <p><strong>Was dich erwartet:</strong></p>
-        <ul class="offer-list">
-          <li>7 Live Sessions à 1,5 – 2 Stunden</li>
-          <li>Meditationen zur Veränderung &amp; Verankerung im Nervensystem</li>
-          <li>Workbook für die Integration zwischen den Sessions</li>
-          <li>Begleitung in der geschlossenen Telegram-Gruppe</li>
-        </ul>
-        <p>Dein Problem ist nicht Wissen, denn du weißt längst, was zu tun wäre. Dein Problem ist deine Kraft &amp; Energie. Die hast du nicht mehr, weil du sie jahrelang in Kämpfen gegen dich selbst verloren hast.</p>
-        <p>Solange dein Nervensystem auf Alarm steht, wird jede Strategie zu einem weiteren Kampf. Was dich erfolgreicher macht, ist nicht noch mehr tun. Es ist dein Nervensystem, das endlich aufhört zu kämpfen &amp; zu funktionieren.</p>
-        <p>Diese 7 Wochen sind <strong>NICHT</strong> einfach NUR ein Kurs oder ein weiteres Programm, es ist deine <strong>Rückeroberung von dir SELBST</strong>, zurück zu der ungezähmten Unternehmerin in dir, die weiß: <strong>Ich bin genug! Ich bin es wert!</strong></p>
-      </div>
+    <h2>Deine einmalige &amp; exklusive Begleitung für die Rückeroberung von dir <em>SELBST</em></h2>
+    <div class="offer-content">
+      <p><strong>Die ungezähmte Unternehmerin ist genau für dich, wenn du:</strong></p>
+      <ul class="offer-list check">
+        <li>spürst, dass die nächste Strategie nicht das Problem löst</li>
+        <li>bereit bist, an den Ursprung zu gehen, statt an der Oberfläche zu kratzen</li>
+        <li>dein Business als Ausdruck von dir leben willst, nicht als Marionette</li>
+      </ul>
+      <p><strong>Es ist nichts für dich, wenn du:</strong></p>
+      <ul class="offer-list cross">
+        <li>noch eine weitere Strategie, Taktik oder den nächsten Funnel suchst</li>
+        <li>glaubst, du hättest schon so viel gemacht und es gibt nichts, was dir noch helfen könnte</li>
+        <li>eine oberflächliche Lösung für mehr Umsatz und Kunden suchst</li>
+      </ul>
+      <p>Und du bist damit nicht allein. Du wirst persönlich begleitet und weißt, was als Nächstes dran ist. In den Sessions ist Raum für deine persönlichen Fragen, für geführte Prozesse, die dich direkt in eine tiefe Transformation und wieder zurück zu dir selbst führen. Die geschlossene Telegram-Gruppe schafft einen magischen Raum und trägt dich zwischen den einzelnen Sessions.</p>
+      <p><strong>Was dich erwartet:</strong></p>
+      <ul class="offer-list">
+        <li>7 Live Sessions à 1,5 – 2 Stunden</li>
+        <li>Meditationen zur Veränderung &amp; Verankerung im Nervensystem</li>
+        <li>Workbook für die Integration zwischen den Sessions</li>
+        <li>Begleitung in der geschlossenen Telegram-Gruppe</li>
+      </ul>
+      <p>Dein Problem ist nicht Wissen, denn du weißt längst, was zu tun wäre. Dein Problem ist deine Kraft &amp; Energie. Die hast du nicht mehr, weil du sie jahrelang in Kämpfen gegen dich selbst verloren hast.</p>
+      <p>Solange dein Nervensystem auf Alarm steht, wird jede Strategie zu einem weiteren Kampf. Was dich erfolgreicher macht, ist nicht noch mehr tun. Es ist dein Nervensystem, das endlich aufhört zu kämpfen &amp; zu funktionieren.</p>
+      <p>Diese 7 Wochen sind <strong>NICHT</strong> einfach NUR ein Kurs oder ein weiteres Programm, es ist deine <strong>Rückeroberung von dir SELBST</strong>, zurück zu der ungezähmten Unternehmerin in dir, die weiß: <strong>Ich bin genug! Ich bin es wert!</strong></p>
     </div>
   </div>
 </section>
