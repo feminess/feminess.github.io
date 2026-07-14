@@ -776,17 +776,35 @@
       padding: 88px 0;
       border-bottom: 1px solid var(--beige);
     }
-    .speaker-inner {
+    .speaker-section-inner {
       max-width: 1100px;
       margin: 0 auto;
       padding: 0 40px;
+    }
+    .speakers-heading {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 34px;
+      font-weight: 400;
+      text-align: center;
+      margin: 0 0 56px;
+    }
+    .speakers-heading em {
+      font-style: normal;
+      font-weight: 700;
+      background: linear-gradient(90deg,#a0685a 0%,#d4a090 25%,#f0ccc0 50%,#d4a090 75%,#a0685a 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .speakers-grid {
       display: flex;
-      gap: 72px;
+      gap: 64px;
       align-items: flex-start;
     }
-    .speaker-portrait { flex: 0 0 260px; text-align: center; }
+    .speaker-card { flex: 1; min-width: 0; }
+    .speaker-portrait { text-align: center; }
     .speaker-portrait img {
-      width: 240px; height: 240px;
+      width: 200px; height: 200px;
       object-fit: cover;
       object-position: center top;
       border-radius: 50%;
@@ -797,7 +815,7 @@
     }
     .speaker-portrait h3 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 28px;
+      font-size: 26px;
       font-weight: 400;
       color: #1b5c50;
       margin-bottom: 6px;
@@ -809,8 +827,8 @@
       text-transform: uppercase;
       color: var(--teal);
     }
-    .speaker-bio { flex: 1; padding-top: 8px; }
-    .speaker-bio p { font-size: 22px; color: var(--warm-gray); line-height: 1.8; margin-bottom: 18px; }
+    .speaker-bio { padding-top: 24px; }
+    .speaker-bio p { font-size: 18px; color: var(--warm-gray); line-height: 1.75; margin-bottom: 16px; }
     .speaker-quote { font-style: normal; color: #1b5c50 !important; }
 
     /* ── FAQ ── */
@@ -934,8 +952,7 @@
       .countdown { justify-content: flex-start; }
       .benefits-grid { grid-template-columns: 1fr; }
       .testimonials-grid { grid-template-columns: 1fr 1fr; }
-      .speaker-inner { flex-direction: column; }
-      .speaker-portrait { flex: none; width: 100%; max-width: 280px; margin: 0 auto; }
+      .speakers-grid { flex-direction: column; gap: 48px; }
       .footer-inner { flex-direction: column; text-align: center; }
       .footer-links { justify-content: center; }
     }
@@ -954,7 +971,7 @@
 
       .hero-content { padding: 28px 20px 56px; }
       .text-inner, .benefits-inner, .perfect-inner,
-      .testimonials-inner, .bonus-inner, .speaker-inner,
+      .testimonials-inner, .bonus-inner, .speaker-section-inner,
       .final-cta-inner, .fuer-dich-inner, .faq-inner { padding-left: 20px; padding-right: 20px; }
       .text-section, .benefits-section { padding: 64px 0; }
       .bonus-section, .fuer-dich-section,
@@ -998,8 +1015,9 @@
       .bonus-gift-icon { width: 80px; height: 80px; font-size: 36px; margin: 0 auto; }
       .bonus-gift-text h3 { font-size: 22px; }
 
+      .speakers-heading { font-size: 28px !important; margin-bottom: 40px; }
       .speaker-portrait img { width: 160px; height: 160px; }
-      .speaker-bio { padding-top: 0; }
+      .speaker-bio { padding-top: 16px; }
 
       .btn-cta { padding: 17px 28px; font-size: 13px; width: 100%; text-align: center; }
 
@@ -1262,20 +1280,37 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-<!-- SPEAKER: MARINA -->
+<!-- SPEAKER: MARINA & VERA -->
 <section class="speaker-section">
-  <div class="speaker-inner">
-    <div class="speaker-portrait">
-      <img src="../webinar/Bilder/EE8A8D0F-D6B0-4B8C-9769-40B0A0B03634.jpg" alt="Marina Henze">
-      <h3>Marina Henze</h3>
-      <p class="role">CEO &amp; Gründerin · FEMINESS</p>
-    </div>
-    <div class="speaker-bio">
-      <h2 style="font-family:'Cormorant Garamond',serif; font-size:34px; font-weight:400; margin-bottom:24px;">Die Frau, die dich zur <em style="font-style:normal; font-weight:700; background:linear-gradient(90deg,#a0685a 0%,#d4a090 25%,#f0ccc0 50%,#d4a090 75%,#a0685a 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">ungezähmten Unternehmerin</em> macht</h2>
-      <p>Marina Henze ist <strong>Mentorin</strong> für Unternehmerinnen, die spüren: So wie bisher will ich nicht weitermachen.</p>
-      <p>Seit über <strong>20 Jahren</strong> begleitet sie Frauen aus Erschöpfung und Selbstaufopferung hinein in <strong>finanzielle Freiheit</strong> und selbstbestimmtes Wirken. Mehr als <strong>20.000 Frauen</strong> sind diesen Weg bereits mit ihr gegangen.</p>
-      <p>Als Unternehmerin mit Millionen-Umsätzen steht Marina für Business ohne Kampf. Klar, kraftvoll und frei.</p>
-      <p>Ihre Vision: Ein neues Unternehmerinnen-Zeitalter, in dem Frauen ihre volle Energie leben, verdienen und wirken, ohne sich dabei selbst zu verlieren.</p>
+  <div class="speaker-section-inner">
+    <h2 class="speakers-heading">Die Frauen, die dich zur <em>ungezähmten Unternehmerin</em> machen</h2>
+    <div class="speakers-grid">
+      <div class="speaker-card">
+        <div class="speaker-portrait">
+          <img src="../webinar/Bilder/EE8A8D0F-D6B0-4B8C-9769-40B0A0B03634.jpg" alt="Marina Henze">
+          <h3>Marina Henze</h3>
+          <p class="role">CEO &amp; Gründerin · FEMINESS</p>
+        </div>
+        <div class="speaker-bio">
+          <p>Marina Henze ist <strong>Mentorin</strong> für Unternehmerinnen, die spüren: So wie bisher will ich nicht weitermachen.</p>
+          <p>Seit über <strong>20 Jahren</strong> begleitet sie Frauen aus Erschöpfung und Selbstaufopferung hinein in <strong>finanzielle Freiheit</strong> und selbstbestimmtes Wirken. Mehr als <strong>20.000 Frauen</strong> sind diesen Weg bereits mit ihr gegangen.</p>
+          <p>Als Unternehmerin mit Millionen-Umsätzen steht Marina für Business ohne Kampf. Klar, kraftvoll und frei.</p>
+          <p>Ihre Vision: Ein neues Unternehmerinnen-Zeitalter, in dem Frauen ihre volle Energie leben, verdienen und wirken, ohne sich dabei selbst zu verlieren.</p>
+        </div>
+      </div>
+      <div class="speaker-card">
+        <div class="speaker-portrait">
+          <img src="../webinar/Bilder/Vera Rotaermel.jpg" alt="Vera Rotärmel">
+          <h3>Vera Rotärmel</h3>
+          <p class="role">Expertin für Verkaufspsychologie</p>
+        </div>
+        <div class="speaker-bio">
+          <p>Vera Rotärmel ist <strong>Expertin für Verkaufspsychologie</strong> und Mentorin für Unternehmerinnen, die im Verkaufsgespräch an sich selbst zweifeln – und genau das kostet sie Umsatz.</p>
+          <p>Seit <strong>22 Jahren</strong> selbstständig, davon <strong>14 Jahre</strong> im Vertrieb, als NLP Sales Master ausgebildet, hat sie <strong>Millionen-Umsätze</strong> geschrieben und tausende Menschen auf ihrem Weg begleitet.</p>
+          <p>Vera steht für Verkauf ohne Maske: Wer sich selbst treu bleibt, verkauft aus Vertrauen, nicht aus Überzeugungskraft.</p>
+          <p>Ihre Vision: Jede Frau findet zu ihrem wahren Selbst und lebt selbstermächtigt ihre Berufung FREI von Masken, erfüllt und ganz sie SELBST.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
