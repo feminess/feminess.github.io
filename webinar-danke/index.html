@@ -58,40 +58,49 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     flex-direction: column;
   }
 
-  /* ── PROGRESS BAR ── */
-  .progress-wrap {
-    width: 100%;
-    background: linear-gradient(to bottom, var(--off-white) 0%, var(--off-white) 65%, var(--teal) 100%);
-  }
-  .progress-inner {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 40px 33px 28px;
-  }
-  .progress-labels {
+  /* ── TOP BANNER ── */
+  .top-banner {
+    position: sticky;
+    top: 0;
+    z-index: 200;
     display: flex;
-    justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 10px 16px;
+    background: linear-gradient(90deg, #6b0f1d 0%, var(--maroon) 30%, #a81f35 50%, var(--maroon) 70%, #6b0f1d 100%);
+    background-size: 200% 100%;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 0 4px 18px rgba(134,22,39,0.45);
+    animation: topBannerShimmer 3.5s linear infinite;
+  }
+  @keyframes topBannerShimmer {
+    0%   { background-position: 0% 50%; }
+    100% { background-position: 200% 50%; }
+  }
+  .top-banner-text {
+    font-size: 12.5px;
     font-weight: 700;
-    font-size: 11px;
-    letter-spacing: 1.5px;
+    letter-spacing: 0.6px;
     text-transform: uppercase;
-    margin-bottom: 12px;
   }
-  .progress-labels .left  { color: var(--dark-teal); }
-  .progress-labels .right { color: var(--maroon); }
-  .progress-track {
-    height: 5px;
-    border-radius: 100px;
-    background: rgba(37,124,108,0.14);
-    width: 100%;
-    overflow: hidden;
+  .top-banner-price {
+    background: rgba(255,255,255,0.18);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 900;
   }
-  .progress-fill {
-    height: 100%;
-    width: 100%;
-    border-radius: 100px;
-    background: linear-gradient(90deg, var(--teal), var(--dark-teal));
+  .top-banner-countdown {
+    font-variant-numeric: tabular-nums;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+  }
+  @media (max-width: 500px) {
+    .top-banner { font-size: 11px; padding: 8px 12px; }
+    .top-banner-text { font-size: 11px; }
   }
 
   /* ── HERO / GRADIENT SECTION ── */
@@ -156,7 +165,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     transition: transform 0.25s cubic-bezier(.4,0,.2,1);
   }
   .deal-teaser:hover { transform: translateY(-2px); animation-play-state: paused; }
-  .deal-teaser-emoji { font-size: 17px; }
   @keyframes dealTeaserPulse {
     0%, 100% { box-shadow: inset 0 1px 0 rgba(255,255,255,0.35), 0 12px 28px rgba(175,127,107,0.4), 0 0 0 0 rgba(234,183,179,0.5); }
     50%      { box-shadow: inset 0 1px 0 rgba(255,255,255,0.35), 0 12px 28px rgba(175,127,107,0.4), 0 0 0 12px rgba(234,183,179,0); }
@@ -201,6 +209,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     margin: 0 auto 36px;
   }
   .deal-lead strong { color: var(--dark-teal); }
+  .deal-lead .price-red { color: var(--maroon); font-weight: 900; }
   .deal-countdown-card {
     display: inline-block;
     background: radial-gradient(ellipse 720px 480px at 50% 10%, rgba(255,255,255,0.12), transparent 60%), linear-gradient(232deg, var(--teal) 0%, var(--dark-teal) 100%);
@@ -222,16 +231,29 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     align-items: center;
   }
   .blink-arrow {
-    width: 26px;
-    height: 26px;
-    margin: 0 auto 14px;
-    color: var(--rosegold-1);
-    animation: arrowBounce 1.4s ease-in-out infinite;
+    width: 34px;
+    height: 34px;
+    margin: 0 auto 16px;
+    color: var(--maroon);
+    animation: arrowBounce 1.1s ease-in-out infinite;
   }
   .blink-arrow svg { width: 100%; height: 100%; display: block; }
   @keyframes arrowBounce {
-    0%, 100% { transform: translateY(0); opacity: 0.5; }
-    50% { transform: translateY(10px); opacity: 1; }
+    0%, 100%  { transform: translateY(0);    opacity: 0.25; }
+    50%       { transform: translateY(12px); opacity: 1; }
+  }
+  .cal-btn.deal-btn {
+    width: 480px;
+    max-width: 100%;
+    padding: 22px 24px;
+    font-size: 21px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.35), 0 16px 40px rgba(175,127,107,0.55), 0 0 0 4px rgba(234,183,179,0.25);
+    animation: dealBtnPulse 1.8s ease-out infinite;
+  }
+  @keyframes dealBtnPulse {
+    0%   { box-shadow: inset 0 1px 0 rgba(255,255,255,0.35), 0 16px 40px rgba(175,127,107,0.55), 0 0 0 0 rgba(134,22,39,0.45); }
+    70%  { box-shadow: inset 0 1px 0 rgba(255,255,255,0.35), 0 16px 40px rgba(175,127,107,0.55), 0 0 0 20px rgba(134,22,39,0); }
+    100% { box-shadow: inset 0 1px 0 rgba(255,255,255,0.35), 0 16px 40px rgba(175,127,107,0.55), 0 0 0 0 rgba(134,22,39,0); }
   }
 
   /* ── TESTIMONIALS ── */
@@ -313,6 +335,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   @media (max-width: 640px) {
     .testimonials-grid { grid-template-columns: 1fr; }
     .testimonials-section { padding: 56px 18px; }
+    .testimonial-mobile-hide { display: none; }
   }
 
   /* ── COUNTDOWN ── */
@@ -506,8 +529,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
 
   @media (max-width: 767px) {
-    .progress-inner { padding: 24px 18px 20px; }
-    .progress-labels { font-size: 10px; }
     .hero { padding: 48px 18px 56px; }
     .hero h2 { font-size: 24px; margin-bottom: 28px; }
     .hero .lead { font-size: 19px; margin-bottom: 30px; }
@@ -529,7 +550,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
 
   @media (max-width: 380px) {
-    .progress-labels { font-size: 9px; }
     .hero h2 { font-size: 21px; }
     .cal-btn { font-size: 18px; padding: 14px 16px; }
   }
@@ -541,20 +561,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-<div class="page-frame">
+<a href="#special-deal" class="top-banner" id="top-banner">
+  <span class="top-banner-text">Special-Preis <span class="top-banner-price">NUR 297€</span> läuft ab in</span>
+  <span class="top-banner-countdown"><span id="top-hours">24</span>:<span id="top-minutes">00</span>:<span id="top-seconds">00</span></span>
+</a>
 
-  <!-- ── PROGRESS BAR ── -->
-  <div class="progress-wrap">
-    <div class="progress-inner">
-      <div class="progress-labels">
-        <span class="left">Anmeldung abgeschlossen</span>
-        <span class="right">100 %</span>
-      </div>
-      <div class="progress-track">
-        <div class="progress-fill"></div>
-      </div>
-    </div>
-  </div>
+<div class="page-frame">
 
   <!-- ── HERO / AUFZEICHNUNG ── -->
   <section class="hero">
@@ -569,7 +581,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
     <a href="#special-deal" class="deal-teaser">
-      <span class="deal-teaser-emoji" aria-hidden="true">🎁</span>
       Dein Special-Preis wartet – nur 24 Stunden gültig
     </a>
   </section>
@@ -581,7 +592,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <h2 class="deal-title">Sichere dir jetzt deinen Special-Preis für <em>Die ungezähmte Unternehmerin</em></h2>
 
       <p class="deal-lead">
-        Ab dem Moment, in dem du diese Seite aufgerufen hast, hast du <strong>24 Stunden</strong> Zeit, dir deinen Special-Preis von <strong>297 €</strong> zu sichern.
+        Ab dem Moment, in dem du diese Seite aufgerufen hast, hast du <strong>24 Stunden</strong> Zeit, dir deinen Special-Preis von <strong class="price-red">NUR 297€</strong> zu sichern.
       </p>
 
       <div class="deal-countdown-card" id="deal-countdown-wrap">
@@ -602,7 +613,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <path d="M12 4v16M6 14l6 6 6-6"/>
           </svg>
         </span>
-        <a href="https://feminess.github.io/die-ungezaehmte-unternehmerin/" target="_blank" rel="noopener" class="cal-btn">Jetzt Special Deal sichern</a>
+        <a href="https://feminess.github.io/die-ungezaehmte-unternehmerin/" target="_blank" rel="noopener" class="cal-btn deal-btn">Jetzt Special Deal sichern</a>
       </div>
     </div>
   </section>
@@ -627,11 +638,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <p class="testimonial-text">„Ich liebe die Zusammenarbeit mit Marina so sehr. Durch sie hat sich so viel in meinem Unternehmen erleichtert. Ich mache monatlich 6-stellige Umsätze."</p>
           <p class="testimonial-author">Sigrid Aviana Waedt</p>
         </div>
-        <div class="result-card">
+        <div class="result-card testimonial-mobile-hide">
           <span class="result-number">12.000 €</span>
           <span class="result-label">1:1 Coaching (5 Monate) + 2 weitere Calls verkauft</span>
         </div>
-        <div class="result-card">
+        <div class="result-card testimonial-mobile-hide">
           <span class="result-number">8.333 €</span>
           <span class="result-label">4-Monatsprogramm verkauft</span>
         </div>
@@ -639,7 +650,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <span class="result-number">39.025 €</span>
           <span class="result-label">Umsatz direkt während der Body Transformation Days</span>
         </div>
-        <div class="testimonial-card">
+        <div class="testimonial-card testimonial-mobile-hide">
           <p class="testimonial-text">„Mein durchschnittlicher Verdienst in den letzten 10 Jahren waren ca. 700 € im Monat. Ab Juli bis Dezember hatte ich Aufträge im Wert von 4.000 € im Monat."</p>
           <p class="testimonial-author">Johanna Grünhagen</p>
         </div>
@@ -647,7 +658,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <span class="result-number">20.588 €</span>
           <span class="result-label">Netto-Umsatz im April – Abschluss Nummer 5 in nur 6 Tagen</span>
         </div>
-        <div class="result-card">
+        <div class="result-card testimonial-mobile-hide">
           <span class="result-number">8.999 €</span>
           <span class="result-label">Gruppencoaching verkauft</span>
         </div>
@@ -760,6 +771,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   var wrap = document.getElementById('deal-countdown-wrap');
   var doneEl = document.getElementById('deal-countdown-done');
 
+  var topHours = document.getElementById('top-hours');
+  var topMinutes = document.getElementById('top-minutes');
+  var topSeconds = document.getElementById('top-seconds');
+  var topBanner = document.getElementById('top-banner');
+
   function pad(n) { return String(n).padStart(2, '0'); }
 
   function tick() {
@@ -768,12 +784,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       clearInterval(timer);
       if (wrap) wrap.style.display = 'none';
       if (doneEl) doneEl.style.display = 'block';
+      if (topBanner) topBanner.style.display = 'none';
       return;
     }
     var totalSeconds = Math.floor(diff / 1000);
-    elHours.textContent = pad(Math.floor(totalSeconds / 3600));
-    elMinutes.textContent = pad(Math.floor((totalSeconds % 3600) / 60));
-    elSeconds.textContent = pad(totalSeconds % 60);
+    var h = pad(Math.floor(totalSeconds / 3600));
+    var m = pad(Math.floor((totalSeconds % 3600) / 60));
+    var s = pad(totalSeconds % 60);
+    elHours.textContent = h;
+    elMinutes.textContent = m;
+    elSeconds.textContent = s;
+    if (topHours) topHours.textContent = h;
+    if (topMinutes) topMinutes.textContent = m;
+    if (topSeconds) topSeconds.textContent = s;
   }
 
   var timer = setInterval(tick, 1000);
