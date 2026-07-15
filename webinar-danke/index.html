@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Free Webinar - Danke - Feminess</title>
+<title>Videotraining - Danke - Feminess</title>
 <link rel="icon" href="https://feminess.de/wp-content/uploads/cropped-favicon@2x-1-32x32.png" sizes="32x32">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -89,7 +89,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
   .progress-fill {
     height: 100%;
-    width: 90%;
+    width: 100%;
     border-radius: 100px;
     background: linear-gradient(90deg, var(--teal), var(--dark-teal));
   }
@@ -133,6 +133,69 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     overflow: hidden;
     box-shadow: 0 40px 80px rgba(0,0,0,0.45);
     border: 1px solid rgba(255,255,255,0.12);
+  }
+
+  /* ── COUNTDOWN ── */
+  .countdown-wrap {
+    margin: 0 auto 48px;
+  }
+  .countdown-label {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--rosegold-2);
+    margin-bottom: 18px;
+  }
+  .countdown {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+  }
+  .countdown-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 84px;
+    padding: 14px 8px;
+    border-radius: 10px;
+    background: radial-gradient(ellipse 160px 70px at 50% -10%, rgba(255,255,255,0.12), transparent 65%), rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.16);
+  }
+  .countdown-num {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 600;
+    font-size: 34px;
+    color: #fff;
+    line-height: 1.1;
+  }
+  .countdown-unit {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+    margin-top: 4px;
+  }
+  .countdown-sep {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 30px;
+    color: rgba(255,255,255,0.4);
+  }
+  .countdown-done {
+    display: none;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 600;
+    font-size: 26px;
+    color: #fff;
+  }
+
+  @media (max-width: 767px) {
+    .countdown-block { width: 68px; padding: 12px 6px; }
+    .countdown-num { font-size: 26px; }
+    .countdown { gap: 10px; }
   }
 
   /* ── KALENDER- & TELEGRAM-BUTTONS ── */
@@ -315,42 +378,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h2>Achtung!<br>Nur noch ein Schritt, um deine Anmeldung abzuschließen.</h2>
 
     <p class="lead">
-      Schau dir kurz das Video an & folge den Schritten unten.
+      Dein Videotraining ist heute ab <strong>18:00 Uhr</strong> online. Folge in der Zwischenzeit den Schritten unten.
     </p>
 
-    <div class="video-wrap">
-      <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1206729935?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="EFM DankeSeite"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+    <div class="countdown-wrap" id="countdown-wrap">
+      <div class="countdown-label">Dein Videotraining ist online in</div>
+      <div class="countdown">
+        <div class="countdown-block"><span class="countdown-num" id="cd-hours">00</span><span class="countdown-unit">Std</span></div>
+        <div class="countdown-sep">:</div>
+        <div class="countdown-block"><span class="countdown-num" id="cd-minutes">00</span><span class="countdown-unit">Min</span></div>
+        <div class="countdown-sep">:</div>
+        <div class="countdown-block"><span class="countdown-num" id="cd-seconds">00</span><span class="countdown-unit">Sek</span></div>
+      </div>
     </div>
+    <p class="countdown-done" id="countdown-done">Dein Videotraining ist jetzt online!</p>
 
     <span class="step-kicker">Schritt 1</span>
-    <h2>Trage dir jetzt den Termin in deinen Kalender und tritt unserer exklusiven Telegram Community bei:</h2>
-
-    <p class="lead">
-      Klicke hier, um dir den Termin in den Kalender einzutragen. Wenn du live dabei bist, kannst du deine Fragen direkt stellen und die volle Energie des Webinars miterleben – beides gibt es in der Aufzeichnung nicht.
-    </p>
-
-    <p class="lead">
-      Das Webinar findet am <strong>15.07</strong> von <strong>11 bis 13 Uhr</strong> statt.
-    </p>
-
-    <div class="cal-buttons">
-      <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Feminess%20Webinar%20%E2%80%93%20Energy%20for%20Million&dates=20260715T090000Z/20260715T110000Z&details=Dein%20Webinar-Termin%20mit%20Feminess.%20Den%20Zugangslink%20erh%C3%A4ltst%20du%20per%20E-Mail.&location=Online%20(Link%20per%20E-Mail)" target="_blank" rel="noopener" class="cal-btn">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="3" y="4" width="18" height="18" rx="2"/>
-          <line x1="16" y1="2" x2="16" y2="6"/>
-          <line x1="8" y1="2" x2="8" y2="6"/>
-          <line x1="3" y1="10" x2="21" y2="10"/>
-        </svg>
-        Google Kalender
-      </a>
-      <a href="webinar-termin.ics" download class="cal-btn">
-        <span class="cal-btn-emoji" aria-hidden="true">📅</span>
-        Sonstige Kalender
-      </a>
-    </div>
-
-    <span class="step-kicker">Schritt 2</span>
-    <h2>Warte nicht auf das Webinar.<br>Fang jetzt an.</h2>
+    <h2>Warte nicht auf das Videotraining.<br>Fang jetzt an.</h2>
 
     <p class="lead">
       Du bekommst hier Impulse &amp; Dinge, die ich sonst nirgends teile. Nicht später. Nicht öffentlich. Jetzt. Hier.
@@ -379,22 +423,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <p class="microtext">Komm rein. Bevor du wieder nur zuschaust.</p>
 
-    <span class="step-kicker">Schritt 3</span>
-    <h2>Fülle jetzt die Umfrage aus, damit wir das Webinar gezielt auf deine Wünsche und Herausforderungen anpassen können:</h2>
-
-    <div class="cal-buttons">
-      <a href="https://forms.gle/U17t8dUqjvQ7KAhs9" target="_blank" rel="noopener" class="cal-btn">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M9 4h6a1 1 0 0 1 1 1v1H8V5a1 1 0 0 1 1-1Z"/>
-          <rect x="5" y="6" width="14" height="15" rx="2"/>
-          <line x1="9" y1="12" x2="15" y2="12"/>
-          <line x1="9" y1="16" x2="15" y2="16"/>
-        </svg>
-        Zur Umfrage
-      </a>
-    </div>
-
-    <span class="step-kicker">Schritt 4</span>
+    <span class="step-kicker">Schritt 2</span>
     <p class="lead">
       Du willst noch mehr Impulse für dein Business und deine Energy for Million? Dann folge uns auch auf unseren Social-Media-Kanälen – dort teilen wir täglich Inspiration und die neuesten Updates.
     </p>
@@ -448,6 +477,36 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </footer>
 
 </div>
+
+<script>
+(function () {
+  var target = new Date('2026-07-15T18:00:00+02:00').getTime();
+  var elHours = document.getElementById('cd-hours');
+  var elMinutes = document.getElementById('cd-minutes');
+  var elSeconds = document.getElementById('cd-seconds');
+  var wrap = document.getElementById('countdown-wrap');
+  var doneEl = document.getElementById('countdown-done');
+
+  function pad(n) { return String(n).padStart(2, '0'); }
+
+  function tick() {
+    var diff = target - Date.now();
+    if (diff <= 0) {
+      clearInterval(timer);
+      if (wrap) wrap.style.display = 'none';
+      if (doneEl) doneEl.style.display = 'block';
+      return;
+    }
+    var totalSeconds = Math.floor(diff / 1000);
+    elHours.textContent = pad(Math.floor(totalSeconds / 3600));
+    elMinutes.textContent = pad(Math.floor((totalSeconds % 3600) / 60));
+    elSeconds.textContent = pad(totalSeconds % 60);
+  }
+
+  var timer = setInterval(tick, 1000);
+  tick();
+})();
+</script>
 
 </body>
 </html>
