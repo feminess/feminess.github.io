@@ -135,6 +135,186 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     border: 1px solid rgba(255,255,255,0.12);
   }
 
+  .deal-teaser {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 8px;
+    padding: 14px 28px;
+    border-radius: 100px;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    text-decoration: none;
+    color: #fff;
+    background:
+      radial-gradient(ellipse 160px 60px at 50% -10%, rgba(255,255,255,0.4), transparent 65%),
+      linear-gradient(160deg, var(--rosegold-3) 0%, var(--rosegold-2) 45%, var(--rosegold-1) 100%);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.35), 0 12px 28px rgba(175,127,107,0.4);
+    text-shadow: 0 1px 2px rgba(0,0,0,0.25);
+    animation: dealTeaserPulse 2.4s ease-in-out infinite;
+    transition: transform 0.25s cubic-bezier(.4,0,.2,1);
+  }
+  .deal-teaser:hover { transform: translateY(-2px); animation-play-state: paused; }
+  .deal-teaser-emoji { font-size: 17px; }
+  @keyframes dealTeaserPulse {
+    0%, 100% { box-shadow: inset 0 1px 0 rgba(255,255,255,0.35), 0 12px 28px rgba(175,127,107,0.4), 0 0 0 0 rgba(234,183,179,0.5); }
+    50%      { box-shadow: inset 0 1px 0 rgba(255,255,255,0.35), 0 12px 28px rgba(175,127,107,0.4), 0 0 0 12px rgba(234,183,179,0); }
+  }
+
+  /* ── SPECIAL DEAL SECTION ── */
+  .deal-section {
+    background: var(--off-white);
+    padding: 90px 33px;
+    text-align: center;
+  }
+  .deal-inner { max-width: 640px; margin: 0 auto; }
+  .deal-kicker {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--maroon);
+    margin-bottom: 18px;
+  }
+  .deal-title {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 600;
+    font-size: clamp(26px, 3.6vw, 38px);
+    line-height: 1.28;
+    color: var(--dark-teal);
+    margin-bottom: 22px;
+  }
+  .deal-title em {
+    font-style: normal;
+    background: linear-gradient(90deg, var(--rosegold-1) 0%, var(--rosegold-2) 50%, var(--rosegold-1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .deal-lead {
+    font-size: 19px;
+    line-height: 1.6;
+    color: #444;
+    max-width: 520px;
+    margin: 0 auto 36px;
+  }
+  .deal-lead strong { color: var(--dark-teal); }
+  .deal-countdown-card {
+    display: inline-block;
+    background: radial-gradient(ellipse 720px 480px at 50% 10%, rgba(255,255,255,0.12), transparent 60%), linear-gradient(232deg, var(--teal) 0%, var(--dark-teal) 100%);
+    border-radius: 14px;
+    padding: 26px 34px;
+    margin: 0 auto 40px;
+    box-shadow: 0 20px 50px rgba(4,27,23,0.25);
+  }
+  .deal-countdown-done {
+    display: none;
+    font-size: 15px;
+    font-style: italic;
+    color: #666;
+    margin: 0 auto 32px;
+  }
+  .deal-cta-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .blink-arrow {
+    width: 26px;
+    height: 26px;
+    margin: 0 auto 14px;
+    color: var(--rosegold-1);
+    animation: arrowBounce 1.4s ease-in-out infinite;
+  }
+  .blink-arrow svg { width: 100%; height: 100%; display: block; }
+  @keyframes arrowBounce {
+    0%, 100% { transform: translateY(0); opacity: 0.5; }
+    50% { transform: translateY(10px); opacity: 1; }
+  }
+
+  /* ── TESTIMONIALS ── */
+  .testimonials-section {
+    background: var(--off-white);
+    padding: 90px 33px;
+    border-top: 1px solid rgba(175,127,107,0.18);
+  }
+  .testimonials-inner { max-width: 1160px; margin: 0 auto; }
+  .testimonials-header { text-align: center; margin-bottom: 52px; }
+  .testimonials-kicker {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--maroon);
+    margin-bottom: 18px;
+  }
+  .testimonials-title {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 600;
+    font-size: clamp(26px, 3.6vw, 36px);
+    color: var(--dark-teal);
+  }
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+  }
+  .testimonial-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 32px 28px;
+    box-shadow: 0 8px 28px rgba(4,27,23,0.06);
+  }
+  .testimonial-text { font-size: 16px; color: #444; line-height: 1.7; margin-bottom: 18px; }
+  .testimonial-author {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, var(--rosegold-1) 0%, var(--rosegold-2) 50%, var(--rosegold-1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .result-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 32px 28px;
+    box-shadow: 0 8px 28px rgba(4,27,23,0.06);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .result-number {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 1.1;
+    margin-bottom: 10px;
+    background: linear-gradient(90deg, var(--rosegold-1) 0%, var(--rosegold-2) 50%, var(--rosegold-1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .result-label {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.5;
+  }
+
+  @media (max-width: 1000px) {
+    .testimonials-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 640px) {
+    .testimonials-grid { grid-template-columns: 1fr; }
+    .testimonials-section { padding: 56px 18px; }
+  }
+
   /* ── COUNTDOWN ── */
   .countdown-wrap {
     margin: 0 auto 48px;
@@ -196,6 +376,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .countdown-block { width: 68px; padding: 12px 6px; }
     .countdown-num { font-size: 26px; }
     .countdown { gap: 10px; }
+    .deal-section { padding: 56px 18px; }
+    .deal-countdown-card { padding: 20px 18px; }
   }
 
   /* ── KALENDER- & TELEGRAM-BUTTONS ── */
@@ -336,6 +518,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       margin-bottom: 30px;
     }
     .cal-btn { width: 100%; justify-content: center; padding: 15px 20px; white-space: normal; }
+    .deal-teaser { font-size: 13px; padding: 12px 20px; text-align: center; white-space: normal; }
     .site-footer {
       flex-direction: column;
       text-align: center;
@@ -364,7 +547,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="progress-wrap">
     <div class="progress-inner">
       <div class="progress-labels">
-        <span class="left">Nur noch ein Schritt</span>
+        <span class="left">Anmeldung abgeschlossen</span>
         <span class="right">100 %</span>
       </div>
       <div class="progress-track">
@@ -373,28 +556,109 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 
-  <!-- ── HERO ── -->
+  <!-- ── HERO / AUFZEICHNUNG ── -->
   <section class="hero">
-    <h2>Achtung!<br>Nur noch ein Schritt, um deine Anmeldung abzuschließen.</h2>
+    <h2>Danke für deine Anmeldung!<br>Hier ist dein Videotraining.</h2>
 
     <p class="lead">
-      Dein Videotraining ist heute ab <strong>18:00 Uhr</strong> online. Folge in der Zwischenzeit den Schritten unten.
+      Schau dir jetzt in Ruhe deine Aufzeichnung an.
     </p>
 
-    <div class="countdown-wrap" id="countdown-wrap">
-      <div class="countdown-label">Dein Videotraining ist online in</div>
-      <div class="countdown">
-        <div class="countdown-block"><span class="countdown-num" id="cd-hours">00</span><span class="countdown-unit">Std</span></div>
-        <div class="countdown-sep">:</div>
-        <div class="countdown-block"><span class="countdown-num" id="cd-minutes">00</span><span class="countdown-unit">Min</span></div>
-        <div class="countdown-sep">:</div>
-        <div class="countdown-block"><span class="countdown-num" id="cd-seconds">00</span><span class="countdown-unit">Sek</span></div>
+    <div class="video-wrap">
+      <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1210169855?h=0f50de44dd&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="ENERGY for MILLION 2026-07-15 08:41:58"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+    </div>
+
+    <a href="#special-deal" class="deal-teaser">
+      <span class="deal-teaser-emoji" aria-hidden="true">🎁</span>
+      Dein Special-Preis wartet – nur 24 Stunden gültig
+    </a>
+  </section>
+
+  <!-- ── SPECIAL DEAL ── -->
+  <section class="deal-section" id="special-deal">
+    <div class="deal-inner">
+      <span class="deal-kicker">Nur 24 Stunden gültig</span>
+      <h2 class="deal-title">Sichere dir jetzt deinen Special-Preis für <em>Die ungezähmte Unternehmerin</em></h2>
+
+      <p class="deal-lead">
+        Ab dem Moment, in dem du diese Seite aufgerufen hast, hast du <strong>24 Stunden</strong> Zeit, dir deinen Special-Preis von <strong>297 €</strong> zu sichern.
+      </p>
+
+      <div class="deal-countdown-card" id="deal-countdown-wrap">
+        <div class="countdown-label">Dein Special-Preis läuft ab in</div>
+        <div class="countdown">
+          <div class="countdown-block"><span class="countdown-num" id="deal-hours">24</span><span class="countdown-unit">Std</span></div>
+          <div class="countdown-sep">:</div>
+          <div class="countdown-block"><span class="countdown-num" id="deal-minutes">00</span><span class="countdown-unit">Min</span></div>
+          <div class="countdown-sep">:</div>
+          <div class="countdown-block"><span class="countdown-num" id="deal-seconds">00</span><span class="countdown-unit">Sek</span></div>
+        </div>
+      </div>
+      <p class="deal-countdown-done" id="deal-countdown-done">Dein persönliches 24-Stunden-Fenster ist abgelaufen.</p>
+
+      <div class="deal-cta-wrap">
+        <span class="blink-arrow" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 4v16M6 14l6 6 6-6"/>
+          </svg>
+        </span>
+        <a href="https://feminess.github.io/die-ungezaehmte-unternehmerin/" target="_blank" rel="noopener" class="cal-btn">Jetzt Special Deal sichern</a>
       </div>
     </div>
-    <p class="countdown-done" id="countdown-done">Dein Videotraining ist jetzt online!</p>
+  </section>
 
-    <span class="step-kicker">Schritt 1</span>
-    <h2>Warte nicht auf das Videotraining.<br>Fang jetzt an.</h2>
+  <!-- ── KUNDENSTIMMEN ── -->
+  <section class="testimonials-section">
+    <div class="testimonials-inner">
+      <div class="testimonials-header">
+        <span class="testimonials-kicker">Das sagen unsere Kundinnen</span>
+        <h2 class="testimonials-title">Echte Ergebnisse. Echte Frauen.</h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <p class="testimonial-text">„Ich habe mit meiner Gründung damals ganz okay gestartet … Im zweiten Jahr bin ich dann hoch auf 260.000 €. Und jetzt, drittes Jahr, wird es über eine Million."</p>
+          <p class="testimonial-author">Melanie Preßler</p>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-text">„Bevor ich gestartet bin, war ich bei ca. 2.500 € im Monat und mittlerweile mache ich monatlich 10.000 € bis 15.000 €!"</p>
+          <p class="testimonial-author">Jana Meißner</p>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-text">„Ich liebe die Zusammenarbeit mit Marina so sehr. Durch sie hat sich so viel in meinem Unternehmen erleichtert. Ich mache monatlich 6-stellige Umsätze."</p>
+          <p class="testimonial-author">Sigrid Aviana Waedt</p>
+        </div>
+        <div class="result-card">
+          <span class="result-number">12.000 €</span>
+          <span class="result-label">1:1 Coaching (5 Monate) + 2 weitere Calls verkauft</span>
+        </div>
+        <div class="result-card">
+          <span class="result-number">8.333 €</span>
+          <span class="result-label">4-Monatsprogramm verkauft</span>
+        </div>
+        <div class="result-card">
+          <span class="result-number">39.025 €</span>
+          <span class="result-label">Umsatz direkt während der Body Transformation Days</span>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-text">„Mein durchschnittlicher Verdienst in den letzten 10 Jahren waren ca. 700 € im Monat. Ab Juli bis Dezember hatte ich Aufträge im Wert von 4.000 € im Monat."</p>
+          <p class="testimonial-author">Johanna Grünhagen</p>
+        </div>
+        <div class="result-card">
+          <span class="result-number">20.588 €</span>
+          <span class="result-label">Netto-Umsatz im April – Abschluss Nummer 5 in nur 6 Tagen</span>
+        </div>
+        <div class="result-card">
+          <span class="result-number">8.999 €</span>
+          <span class="result-label">Gruppencoaching verkauft</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TELEGRAM & LINKS ── -->
+  <section class="hero">
+    <span class="step-kicker" style="padding-top:0;">Bleib in Verbindung</span>
+    <h2>Tritt unserer exklusiven Telegram Community bei</h2>
 
     <p class="lead">
       Du bekommst hier Impulse &amp; Dinge, die ich sonst nirgends teile. Nicht später. Nicht öffentlich. Jetzt. Hier.
@@ -423,7 +687,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <p class="microtext">Komm rein. Bevor du wieder nur zuschaust.</p>
 
-    <span class="step-kicker">Schritt 2</span>
+    <span class="step-kicker">Folge uns</span>
     <p class="lead">
       Du willst noch mehr Impulse für dein Business und deine Energy for Million? Dann folge uns auch auf unseren Social-Media-Kanälen – dort teilen wir täglich Inspiration und die neuesten Updates.
     </p>
@@ -480,12 +744,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <script>
 (function () {
-  var target = new Date('2026-07-15T18:00:00+02:00').getTime();
-  var elHours = document.getElementById('cd-hours');
-  var elMinutes = document.getElementById('cd-minutes');
-  var elSeconds = document.getElementById('cd-seconds');
-  var wrap = document.getElementById('countdown-wrap');
-  var doneEl = document.getElementById('countdown-done');
+  var STORAGE_KEY = 'feminess_deal_start_webinar_danke';
+  var DURATION_MS = 24 * 60 * 60 * 1000;
+
+  var start = localStorage.getItem(STORAGE_KEY);
+  if (!start) {
+    start = Date.now().toString();
+    localStorage.setItem(STORAGE_KEY, start);
+  }
+  var target = parseInt(start, 10) + DURATION_MS;
+
+  var elHours = document.getElementById('deal-hours');
+  var elMinutes = document.getElementById('deal-minutes');
+  var elSeconds = document.getElementById('deal-seconds');
+  var wrap = document.getElementById('deal-countdown-wrap');
+  var doneEl = document.getElementById('deal-countdown-done');
 
   function pad(n) { return String(n).padStart(2, '0'); }
 
