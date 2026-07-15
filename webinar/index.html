@@ -856,71 +856,6 @@
     .fuer-dich-box.nein .fuer-dich-list li::before { background: #c47868; }
     .fuer-dich-list li strong { color: #1b5c50; }
 
-    /* ── BONUS ── */
-    .bonus-section {
-      background: linear-gradient(135deg, var(--teal-dark) 0%, var(--dark) 100%);
-      padding: 88px 0;
-      border-bottom: 1px solid rgba(94,198,179,0.1);
-      position: relative;
-      overflow: hidden;
-    }
-    .bonus-section::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 3px;
-      background: linear-gradient(90deg, var(--teal), var(--teal-light));
-    }
-    .bonus-inner {
-      max-width: 700px;
-      margin: 0 auto;
-      padding: 0 40px;
-    }
-    .bonus-section .section-label { color: var(--teal-light); }
-    .bonus-section .section-label::after { background: var(--teal-light); }
-    .bonus-section h2 { color: #fff; }
-    .bonus-section h2 em { color: var(--sand-light); }
-    .bonus-section .section-intro { color: var(--mid-gray); font-style: italic; margin-bottom: 48px; }
-    .bonus-gift-box {
-      display: flex;
-      gap: 40px;
-      align-items: center;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(94,198,179,0.2);
-      border-radius: 20px;
-      padding: 48px;
-      position: relative;
-      overflow: hidden;
-    }
-    .bonus-gift-box::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse at top right, rgba(207,90,115,0.08) 0%, transparent 60%);
-      pointer-events: none;
-    }
-    .bonus-gift-icon {
-      flex-shrink: 0;
-      width: 100px;
-      height: 100px;
-      background: linear-gradient(135deg, var(--teal-dark), var(--teal));
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 44px;
-      box-shadow: 0 0 40px rgba(37,124,108,0.35);
-    }
-    .bonus-gift-text h3 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 34px;
-      font-weight: 400;
-      color: var(--sand-light);
-      margin-bottom: 12px;
-    }
-    .bonus-gift-text p { font-size: 22px; color: rgba(255,255,255,0.75); margin: 0; line-height: 1.8; }
-    @media (max-width: 600px) { .bonus-gift-box { flex-direction: column; text-align: center; } }
-
     /* ── SCREENSHOT SLIDER ── */
     .screenshots-section {
       background: linear-gradient(135deg, var(--teal-dark) 0%, var(--dark) 100%);
@@ -1174,10 +1109,10 @@
       /* Padding aller Sektionen */
       .hero-content { padding: 28px 20px 56px; }
       .text-inner, .benefits-inner, .perfect-inner, .how-inner,
-      .testimonials-inner, .bonus-inner, .speaker-inner,
+      .testimonials-inner, .speaker-inner,
       .final-cta-inner, .fuer-dich-inner { padding-left: 20px; padding-right: 20px; }
       .text-section, .benefits-section { padding: 64px 0; }
-      .how-section, .bonus-section, .fuer-dich-section,
+      .how-section, .fuer-dich-section,
       .testimonials-section, .speaker-section { padding: 64px 0; }
       .final-cta { padding: 72px 0; }
 
@@ -1222,11 +1157,6 @@
       .fuer-dich-box-header { font-size: 12px; margin-bottom: 14px; }
       .fuer-dich-list { gap: 10px; }
       .fuer-dich-list li { padding-left: 16px; font-size: 18px; }
-
-      /* Bonus */
-      .bonus-gift-box { flex-direction: column; text-align: center; padding: 32px 24px; gap: 24px; }
-      .bonus-gift-icon { width: 80px; height: 80px; font-size: 36px; margin: 0 auto; }
-      .bonus-gift-text h3 { font-size: 22px; }
 
       /* Speaker */
       .speaker-portrait img { width: 160px; height: 160px; }
@@ -1274,7 +1204,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         Sei die <strong>ungezähmte Unternehmerin</strong>, <strong>FREI</strong> von Druck, Zweifeln und falschen Strategien, die dich nur erschöpfen. Führe dein Business nach deinen eigenen Regeln, mit der <strong>ENERGIE</strong>, die <strong>GELD</strong> und <strong>ERFOLG</strong> anzieht.
       </p>
       <button class="btn-hero" onclick="openModal()">Yes, ich bin dabei</button>
-      <p class="hero-date">15.07.2026, 11:00 – 13:00 Uhr<br>kostenfreie Money-Masterclass mit Marina Henze</p>
+      <p class="hero-date">Ab 15.07.2026, 18:00 Uhr<br>kostenfreies Video-Training – Money Masterclass mit Marina Henze</p>
       <div class="countdown">
         <div class="countdown-item">
           <span class="countdown-digits" id="h-days">00</span>
@@ -1313,7 +1243,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="modal">
     <button class="modal-close" onclick="closeModal()" aria-label="Schließen">&times;</button>
     <h2>Hol dir jetzt deine<br><em>ENERGY for MILLION</em></h2>
-    <p class="modal-sub">15. Juli 2026 &nbsp;·&nbsp; 11–13 Uhr &nbsp;·&nbsp; kostenfrei<br>Sichere dir jetzt deinen Platz – in unter 30 Sekunden.</p>
+    <p class="modal-sub">Ab 15. Juli 2026 &nbsp;·&nbsp; 18:00 Uhr &nbsp;·&nbsp; kostenfrei<br>Sichere dir jetzt deinen Zugang zum Video-Training – in unter 30 Sekunden.</p>
     <style>@import url(https://fonts.bunny.net/css?family=sans-serif:400|IBM+Plex+Sans:400);</style>
     <style>
 #_form_565_{font-size:14px;line-height:1.6;font-family:arial, helvetica, sans-serif;margin:0;box-shadow:none}._form_hide{display:none;visibility:hidden}._form_show{display:block;visibility:visible}#_form_565_._form-top{top:0}#_form_565_._form-bottom{bottom:0}#_form_565_._form-left{left:0}#_form_565_._form-right{right:0}#_form_565_ input[type="text"],#_form_565_ input[type="tel"],#_form_565_ input[type="date"],#_form_565_ textarea{padding:8px;height:auto;border:#979797 1px solid;border-radius:4px;color:#000 !important;font-size:14px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}#_form_565_ textarea{resize:none}#_form_565_ input::placeholder{color:#142341}#_form_565_ ._submit{cursor:pointer;font-family:arial, sans-serif;font-size:14px;text-align:center;background:#cf5a73 !important;border:0 !important;-moz-border-radius:4px !important;-webkit-border-radius:4px !important;border-radius:4px !important;color:#ffffff !important;padding:10px !important;width:100%}#_form_565_ ._submit:disabled{cursor:not-allowed;opacity:0.4}#_form_565_ ._submit.processing{position:relative}#_form_565_ ._submit.processing::before{content:"";width:1em;height:1em;position:absolute;z-index:1;top:50%;left:50%;border:double 3px transparent;border-radius:50%;background-image:linear-gradient(#cf5a73, #cf5a73), conic-gradient(#cf5a73, #ffffff);background-origin:border-box;background-clip:content-box, border-box;animation:1200ms ease 0s infinite normal none running _spin}#_form_565_ ._submit.processing::after{content:"";position:absolute;top:0;bottom:0;left:0;right:0}@keyframes _spin{0%{transform:translate(-50%, -50%) rotate(90deg)}100%{transform:translate(-50%, -50%) rotate(450deg)}}#_form_565_ ._form-body{font-family:sans-serif;font-size:14px;font-weight:400;color:white;margin-bottom:30px}#_form_565_ ._form-branding{color:rgba(255,255,255,0.3);font-size:10px;clear:both;text-align:left;margin-top:16px;font-weight:100}#_form_565_ ._form-branding ._logo{display:block;width:130px;height:14px;margin-top:6px;background-image:url("https://d226aj4ao1t61q.cloudfront.net/hh9ujqgv5_aclogo_li.png");background-size:130px auto;background-repeat:no-repeat}#_form_565_ .form-sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);border:0}#_form_565_ ._form-label,#_form_565_ ._form_element ._form-label{font-weight:bold;margin-bottom:5px;display:block;color:rgba(255,255,255,0.85)}#_form_565_ ._form_element{position:relative;margin-bottom:10px;max-width:100%}#_form_565_ ._form_element *{font-size:14px}#_form_565_ ._form_element._clear{clear:both;width:100%;float:none}#_form_565_ ._form_element :is(textarea, select, input[type="text"], input[type="date"], input[type="phone"], input[type="email"]),#_form_565_ ._form-element :is(textarea, select, input[type="text"], input[type="date"], input[type="phone"], input[type="email"]){background:rgba(255,255,255,0.07);color:#fff !important;border:1px solid rgba(255,255,255,0.15);border-radius:4px}#_form_565_ ._form_element input[type="text"],#_form_565_ ._form_element input[type="date"],#_form_565_ ._form_element select,#_form_565_ ._form_element textarea:not(.g-recaptcha-response){display:block;width:100%;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;font-family:inherit}#_form_565_ ._field-wrapper{position:relative}#_form_565_ ._full_width{width:100%}#_form_565_ ._form_full_field{display:block;width:100%;margin-bottom:10px}#_form_565_ input[type="text"]._has_error,#_form_565_ textarea._has_error{border:#F37C7B 1px solid}#_form_565_ ._error{display:block;position:absolute;font-size:14px;z-index:10000001}#_form_565_ ._error._above{padding-bottom:4px;bottom:39px;right:0}#_form_565_ ._error._below{padding-top:8px;top:100%;right:0}#_form_565_ ._error-inner{padding:8px 12px;background-color:#FFDDDD;font-size:13px;border-radius:4px;color:#000}#_form_565_ ._form-thank-you{position:relative;left:0;right:0;text-align:center;font-size:18px;color:#fff}#_form_565_{position:relative;text-align:left;margin:0;padding:0;box-sizing:border-box;background:transparent !important;border:none !important;max-width:100%;border-radius:0 !important;color:#fff}#_form_565_ .field-required{color:#cf5a73}#_form_565_ ._form-title,#_form_565_ ._html-code :is(h1,h2,h3,h4,h5,h6){font-family:sans-serif;font-size:20px;font-weight:400;color:white}#_form_565_ ._marketing-by{display:none}
@@ -1528,13 +1458,33 @@ window._load_script = function(url, callback, isSubmit) {
   </div>
 </div>
 
-<!-- VIDEO -->
-<div style="max-width:900px; margin:0 auto; padding:48px 40px;">
-  <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1206720731?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="EfM LP"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
-  <div style="text-align:center; margin-top:32px;">
-    <button class="btn-cta" onclick="openModal()">Yes, ich bin dabei</button>
+<!-- AUFZEICHNUNG COUNTDOWN -->
+<section style="background:linear-gradient(135deg, var(--teal-dark) 0%, var(--dark) 100%); padding:80px 0; position:relative; overflow:hidden;">
+  <div style="max-width:700px; margin:0 auto; padding:0 40px; text-align:center; position:relative; z-index:1;">
+    <p class="section-label" style="justify-content:center; color:var(--teal-light);">Video-Training</p>
+    <h2 style="color:#fff; margin-bottom:16px;">Deine Aufzeichnung geht gleich <em style="color:var(--rose-light);">online</em></h2>
+    <p style="font-size:22px; color:var(--mid-gray); font-style:italic; margin-bottom:40px; line-height:1.7;">Ab <strong style="color:#fff; font-style:normal;">15.07.2026, 18:00 Uhr</strong> kannst du dir die Money Masterclass in Ruhe ansehen.</p>
+    <div class="countdown-final" style="margin:0 0 40px;">
+      <div class="countdown-item" style="display:none;">
+        <span class="countdown-digits" id="v-days">00</span>
+        <span class="countdown-label">Tage</span>
+      </div>
+      <div class="countdown-item">
+        <span class="countdown-digits" id="v-hours">00</span>
+        <span class="countdown-label">Std</span>
+      </div>
+      <div class="countdown-item">
+        <span class="countdown-digits" id="v-minutes">00</span>
+        <span class="countdown-label">Min</span>
+      </div>
+      <div class="countdown-item">
+        <span class="countdown-digits" id="v-seconds">00</span>
+        <span class="countdown-label">Sek</span>
+      </div>
+    </div>
+    <button class="btn-cta on-dark" onclick="openModal()">Yes, ich bin dabei</button>
   </div>
-</div>
+</section>
 
 <!-- MAIN TEXT -->
 <div class="text-section">
@@ -1546,7 +1496,7 @@ window._load_script = function(url, callback, isSubmit) {
       <p>Damit ist jetzt SCHLUSS!</p>
     </div>
     <p>Denn das Ziel von <strong>ENERGY for MILLION</strong> ist es, dass du dein Business nach deinen <strong>Regeln</strong> aufbaust. Ohne Kampf, ohne ständig funktionieren zu müssen, ohne den Druck es allen ständig recht zu machen und ohne dich mit allen anderen zu vergleichen.</p>
-    <p>In diesem Online-Live-Event holst du dir endlich die <strong>Kraft &amp; Energie</strong> zurück, die dafür notwendig ist, um dein Business <strong>erfolgreich(er)</strong> zu führen, dein <strong>Vermögen aufzubauen</strong> und endlich das langersehnte <strong>freie Leben</strong> zu leben, für das du in deiner Selbstständigkeit angetreten bist.</p>
+    <p>In diesem Video-Training holst du dir endlich die <strong>Kraft &amp; Energie</strong> zurück, die dafür notwendig ist, um dein Business <strong>erfolgreich(er)</strong> zu führen, dein <strong>Vermögen aufzubauen</strong> und endlich das langersehnte <strong>freie Leben</strong> zu leben, für das du in deiner Selbstständigkeit angetreten bist.</p>
     <div class="cta-row">
       <button class="btn-cta" onclick="openModal()"><span class="btn-desktop">Hier klicken und deine Energy zurückholen</span><span class="btn-mobile">Hier Energy zurückholen</span></button>
     </div>
@@ -1622,7 +1572,7 @@ window._load_script = function(url, callback, isSubmit) {
       <div class="benefit-card" style="grid-column: 1 / -1;">
         <div class="benefit-num">7</div>
         <div class="benefit-body">
-          <p>Am Ende des Online-Live-Events nehme ich mir noch Zeit dafür, all deine <strong>Fragen</strong> zu beantworten. Also halte deinen Kalender lange genug frei.</p>
+          <p>Am Ende des Video-Trainings beantworte ich dir außerdem die <strong>wichtigsten Fragen</strong>, die dir auf deinem Weg zur ENERGY for MILLION begegnen werden. Nimm dir also am Stück genug Zeit dafür.</p>
         </div>
       </div>
     </div>
@@ -1637,7 +1587,7 @@ window._load_script = function(url, callback, isSubmit) {
 <section class="how-section">
   <div class="how-inner">
     <h2 style="text-align:center; color:#fff; margin-bottom:16px; white-space:nowrap;">Wiedergeburt als du <em style="color:var(--rose);">SELBST</em></h2>
-    <p class="how-intro">Es erwartet dich nicht nur ein Live-Event, sondern deine <strong>Wiedergeburt</strong> als <strong>ungezähmte Unternehmerin</strong>, die bedingungslos für ihr erfolgreiches, freies Business einsteht.</p>
+    <p class="how-intro">Es erwartet dich nicht nur ein Video-Training, sondern deine <strong>Wiedergeburt</strong> als <strong>ungezähmte Unternehmerin</strong>, die bedingungslos für ihr erfolgreiches, freies Business einsteht.</p>
     <div class="journey-cards">
 
       <div class="journey-card">
@@ -1651,8 +1601,8 @@ window._load_script = function(url, callback, isSubmit) {
       <div class="journey-card">
         <div class="journey-card-glow"></div>
         <span class="journey-step-number">02</span>
-        <h3 class="journey-card-title">Live-Webinar</h3>
-        <p class="journey-card-text">Am <strong style="color:#1b5c50;">15. Juli 2026 um 11:00 Uhr</strong> erlebst du live, was es wirklich braucht, um deine Energie und Kraft für die Millionen freizusetzen.</p>
+        <h3 class="journey-card-title">Video-Training</h3>
+        <p class="journey-card-text">Ab dem <strong style="color:#1b5c50;">15. Juli 2026, 18:00 Uhr</strong> erlebst du in der Money Masterclass, was es wirklich braucht, um deine Energie und Kraft für die Millionen freizusetzen.</p>
         <p class="journey-card-hint">2 Stunden, die alles verändern.</p>
       </div>
 
@@ -1674,10 +1624,10 @@ window._load_script = function(url, callback, isSubmit) {
 <!-- FÜR DICH -->
 <section class="fuer-dich-section">
   <div class="fuer-dich-inner">
-    <h2>Dieses Webinar ist <em>genau für dich,</em> wenn …</h2>
+    <h2>Diese Money Masterclass ist <em>genau für dich,</em> wenn …</h2>
     <div class="fuer-dich-stack">
       <div class="fuer-dich-box ja">
-        <div class="fuer-dich-box-header">✓ &nbsp;Dieses Webinar ist genau für dich, wenn:</div>
+        <div class="fuer-dich-box-header">✓ &nbsp;Diese Money Masterclass ist genau für dich, wenn:</div>
         <ul class="fuer-dich-list">
           <li>… du spürst, dass du keine Lust mehr hast, immer erschöpft zu funktionieren, sondern wieder <strong>lebendig</strong> und <strong>energievoll</strong> sein willst.</li>
           <li>… du müde bist, ständig neue Strategien auszuprobieren, ohne dass sich wirklich <strong>etwas verändert.</strong></li>
@@ -1686,46 +1636,15 @@ window._load_script = function(url, callback, isSubmit) {
           <li>… <strong>2026 dein Jahr</strong> werden soll, in dem du endlich den ewigen Kampf aufgibst und als du Selbst dein erfolgreiches Business führen willst.</li>
         </ul>
       </div>
-      <div class="fuer-dich-divider">Dieses Webinar ist <em>nicht</em> für dich, wenn …</div>
+      <div class="fuer-dich-divider">Diese Money Masterclass ist <em>nicht</em> für dich, wenn …</div>
       <div class="fuer-dich-box nein">
         <ul class="fuer-dich-list">
           <li>du nach weiteren gratis <strong>Strategien, Taktiken</strong> oder dem nächsten Funnel suchst.</li>
           <li>du die Einstellung hast, du weißt schon alles und es gibt <strong>niemanden</strong>, der dir noch helfen könnte.</li>
-          <li>du von einem Webinar zum nächsten hüpfst, ohne wirklich <strong>bereit</strong> zu sein, etwas zu ändern.</li>
-          <li>du dich anmeldest, aber nicht bereit bist, diesen Termin <strong>wirklich einzuplanen</strong> und live dabei zu sein.</li>
+          <li>du von einem Video zum nächsten klickst, ohne wirklich <strong>bereit</strong> zu sein, etwas zu ändern.</li>
+          <li>du dich anmeldest, aber nicht bereit bist, dir wirklich die <strong>Zeit dafür zu nehmen</strong> und dich voll darauf einzulassen.</li>
           <li>du nicht bereit bist, deine <strong>alten Geschichten loszulassen</strong> und stattdessen auf eine Fee wartest, die für dich alles löst.</li>
         </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- BONUS -->
-<section class="bonus-section">
-  <div class="bonus-inner">
-    <h2>Dein exklusives <em>Geschenk!</em></h2>
-    <div class="bonus-gift-box">
-      <div class="bonus-gift-icon">
-        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" width="52" height="52">
-          <defs>
-            <linearGradient id="rosegold-bow" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stop-color="#a0685a"/>
-              <stop offset="25%" stop-color="#d4a090"/>
-              <stop offset="50%" stop-color="#f0ccc0"/>
-              <stop offset="75%" stop-color="#d4a090"/>
-              <stop offset="100%" stop-color="#a0685a"/>
-            </linearGradient>
-          </defs>
-          <rect x="6" y="20" width="36" height="24" rx="2" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
-          <rect x="4" y="14" width="40" height="8" rx="2" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
-          <line x1="24" y1="14" x2="24" y2="44" stroke="rgba(255,255,255,0.7)" stroke-width="1.5"/>
-          <path d="M24 14 C24 14 18 10 16 6 C15 3 17 1 19 2 C21 3 24 8 24 14Z" fill="url(#rosegold-bow)" opacity="0.95"/>
-          <path d="M24 14 C24 14 30 10 32 6 C33 3 31 1 29 2 C27 3 24 8 24 14Z" fill="url(#rosegold-bow)" opacity="0.95"/>
-        </svg>
-      </div>
-      <div class="bonus-gift-text">
-        <h3>The Energy Block Mirror</h3>
-        <p>Eine <strong>tiefenpsychologische Analyse</strong>, die dir schonungslos zeigt, wo deine Energie gerade blockiert ist & was dich von deinem nächsten <strong>Umsatz-Wachstum</strong> abhält. Nur für Live-Teilnehmerinnen.</p>
       </div>
     </div>
   </div>
@@ -1778,7 +1697,7 @@ window._load_script = function(url, callback, isSubmit) {
 <!-- FINAL CTA -->
 <section class="final-cta">
   <div class="final-cta-inner">
-    <h2>Genug gescrollt – hol dir jetzt deinen <em>kostenfreien Platz</em></h2>
+    <h2>Genug gescrollt – hol dir jetzt deine <em>kostenfreie Aufzeichnung</em></h2>
     <div class="countdown-final">
       <div class="countdown-item">
         <span class="countdown-digits" id="f-days">00</span>
@@ -1824,9 +1743,9 @@ window._load_script = function(url, callback, isSubmit) {
   }
 
   /* ── COUNTDOWN ── */
-  /* 15.07.2026 11:00 Uhr CEST = 09:00 UTC */
-  const target = new Date('2026-07-15T09:00:00Z');
-  const ids = [['h-days','h-hours','h-minutes','h-seconds'],['f-days','f-hours','f-minutes','f-seconds']];
+  /* 15.07.2026 18:00 Uhr CEST = 16:00 UTC – dann geht die Aufzeichnung online */
+  const target = new Date('2026-07-15T16:00:00Z');
+  const ids = [['h-days','h-hours','h-minutes','h-seconds'],['f-days','f-hours','f-minutes','f-seconds'],['v-days','v-hours','v-minutes','v-seconds']];
   function pad(n) { return String(n).padStart(2,'0'); }
   function tick() {
     const diff = target - new Date();
