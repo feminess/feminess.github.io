@@ -139,18 +139,6 @@
     .hero-tilt { position: absolute; bottom: -1px; left: 0; width: 100%; overflow: hidden; line-height: 0; z-index: 3; }
     .hero-tilt svg { display: block; width: 100%; height: 56px; }
 
-    .hero-kicker {
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: var(--teal-light);
-      margin-bottom: 18px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-    .hero-kicker::before { content: '🎂'; font-size: 16px; }
     .hero-content h1 {
       font-family: 'Cormorant Garamond', serif;
       font-size: 68px;
@@ -171,17 +159,8 @@
     .hero-date { font-size: 17px; font-weight: 400; color: var(--mid-gray); margin-bottom: 32px; max-width: 520px; line-height: 1.7; }
     .hero-date strong { color: var(--teal-light); }
 
-    /* ── OPT-IN FORM WRAPPER ── */
-    .optin-card {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(94,198,179,0.22);
-      border-radius: 16px;
-      padding: 32px;
-      max-width: 460px;
-    }
-    .optin-title { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 400; color: #fff; margin-bottom: 4px; }
-    .optin-title em { font-style: normal; font-weight: 600; background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-    .optin-sub { font-size: 14px; color: var(--mid-gray); margin-bottom: 20px; }
+    /* ── HERO CTA ── */
+    .hero-cta-note { font-size: 14px; color: var(--mid-gray); margin-top: 16px; }
 
     /* CTA Button (shared) */
     .btn-cta {
@@ -254,7 +233,6 @@
 
     /* ── BEKANNT AUS – TICKER ── */
     .logos-section { padding: 36px 0; background: var(--off-white); text-align: center; overflow: hidden; }
-    .logos-kicker { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--teal-dark); text-align: center; margin-bottom: 36px; }
     .logos-track-wrap {
       overflow: hidden; position: relative; width: 100%;
       mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
@@ -394,6 +372,58 @@
     /* UTM-Tracking-Felder – unsichtbar für Besucherinnen */
     #_form_999_ ._x40740069, #_form_999_ ._x94257511, #_form_999_ ._x54506385, #_form_999_ ._x71144138, #_form_999_ ._x34666540 { display: none; }
 
+    /* ── VIP-LISTE POPUP ── */
+    @keyframes popup-in {
+      from { opacity: 0; transform: translateY(24px) scale(0.97); }
+      to   { opacity: 1; transform: translateY(0)    scale(1);    }
+    }
+    .popup-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(7,8,8,0.72);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+    .popup-overlay.is-visible { display: flex; }
+    .popup-box {
+      background: var(--dark);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-top: 3px solid var(--rose);
+      border-radius: 8px;
+      max-width: 480px;
+      width: 100%;
+      padding: 44px 40px 36px;
+      position: relative;
+      animation: popup-in 0.3s ease forwards;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+    .popup-close {
+      position: absolute; top: 16px; right: 20px;
+      background: none; border: none; cursor: pointer;
+      color: var(--warm-gray); font-size: 24px; line-height: 1; padding: 4px;
+      transition: color 0.15s;
+    }
+    .popup-close:hover { color: #fff; }
+    .popup-kicker {
+      font-size: 10px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase;
+      color: var(--teal-light); margin-bottom: 16px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .popup-kicker::before { content: ''; display: block; width: 20px; height: 1px; background: var(--teal-light); }
+    .popup-box h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(24px, 4vw, 32px);
+      font-weight: 400; color: #fff; line-height: 1.25; margin-bottom: 10px;
+    }
+    .popup-box h2 em { font-style: normal; font-weight: 600; background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .popup-box p.popup-sub { font-size: 14px; color: var(--mid-gray); line-height: 1.6; margin-bottom: 24px; }
+
     /* ── RESPONSIVE: TABLET ── */
     @media (max-width: 900px) {
       .hero-inner { grid-template-columns: 1fr; }
@@ -428,7 +458,7 @@
       .hero-content { padding: 28px 20px 40px; }
       .hero-subtitle { font-size: 17px; }
       .hero-date { font-size: 14px; }
-      .optin-card { padding: 22px; max-width: 100%; }
+      .popup-box { padding: 36px 24px 28px; }
 
       .quote-block p { font-size: 30px; }
 
@@ -475,50 +505,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-content">
-      <p class="hero-kicker">Marinas Geburtstags-VIP-Liste</p>
       <h1>Mein Geburtstags­geschenk an <em>DICH</em></h1>
       <p class="hero-subtitle">Wenn du das Gefühl hast, dass du wirklich <strong>alles</strong> gibst und es trotzdem nie reicht, dann lies weiter. Denn dieses Jahr drehe ich zu meinem Geburtstag den Spieß um: Nicht ich bekomme ein Geschenk. <strong>Du.</strong></p>
-      <p class="hero-date">Am <strong>03. August</strong> enthülle ich es – exklusiv für die Frauen auf meiner VIP-Liste. Nur eine Handvoll Plätze.</p>
+      <p class="hero-date">Am <strong>03. August</strong> packe ich mein Geschenk aus – aber nur für die Frauen, die vorher auf meiner VIP-Liste stehen. Sichere dir jetzt deinen Platz.</p>
 
-      <div class="optin-card" id="anmeldung">
-        <p class="optin-title">Trag dich auf die <em>VIP-Liste</em> ein</p>
-        <p class="optin-sub">Kostenlos & unverbindlich – bevor der Platz weg ist.</p>
-
-        <!-- TODO: Platzhalter-Formular-ID "999" durch die echte ActiveCampaign-Formular-ID ersetzen, sobald verfügbar (u/f-Werte, id-Attribute, JS-Referenzen) -->
-        <form method="POST" action="https://marina232.activehosted.com/proc.php" id="_form_999_" class="_form _form_999 _inline-form _dark" novalidate data-styles-version="5">
-          <input type="hidden" name="u" value="999" />
-          <input type="hidden" name="f" value="999" />
-          <input type="hidden" name="s" />
-          <input type="hidden" name="c" value="0" />
-          <input type="hidden" name="m" value="0" />
-          <input type="hidden" name="act" value="sub" />
-          <input type="hidden" name="v" value="2" />
-          <div class="_form-content">
-            <div class="_form_element _x85333295 _full_width">
-              <label for="firstname" class="_form-label">Vorname<span class="field-required"> *</span></label>
-              <div class="_field-wrapper">
-                <input type="text" id="firstname" name="firstname" placeholder="Dein Vorname" required/>
-              </div>
-            </div>
-            <div class="_form_element _field_email _full_width">
-              <label for="email" class="_form-label">E-Mail<span class="field-required"> *</span></label>
-              <div class="_field-wrapper">
-                <input type="text" id="email" name="email" placeholder="Deine E-Mail-Adresse" required/>
-              </div>
-            </div>
-            <div class="_form_element _x40740069 _full_width"><label for="field[220]" class="_form-label"></label><div class="_field-wrapper"><input type="hidden" id="field[220]" name="field[220]" value="" placeholder="" /></div></div>
-            <div class="_form_element _x94257511 _full_width"><label for="field[219]" class="_form-label"></label><div class="_field-wrapper"><input type="hidden" id="field[219]" name="field[219]" value="" placeholder="" /></div></div>
-            <div class="_form_element _x54506385 _full_width"><label for="field[218]" class="_form-label"></label><div class="_field-wrapper"><input type="hidden" id="field[218]" name="field[218]" value="" placeholder="" /></div></div>
-            <div class="_form_element _x71144138 _full_width"><label for="field[217]" class="_form-label"></label><div class="_field-wrapper"><input type="hidden" id="field[217]" name="field[217]" value="" placeholder="" /></div></div>
-            <div class="_form_element _x34666540 _full_width"><label for="field[221]" class="_form-label"></label><div class="_field-wrapper"><input type="hidden" id="field[221]" name="field[221]" value="" placeholder="" /></div></div>
-            <div class="_button-wrapper _full_width">
-              <button id="_form_999_submit" class="_submit" type="submit">Ja, ich will auf die VIP-Liste</button>
-            </div>
-            <div class="_clear-element"></div>
-          </div>
-          <div class="_form-thank-you" style="display:none;"></div>
-        </form>
-      </div>
+      <button type="button" class="btn-cta" data-open-popup>Ja, ich will auf die VIP-Liste</button>
+      <p class="hero-cta-note">Kostenlos & unverbindlich – bevor der Platz weg ist.</p>
     </div>
     <div class="hero-image">
       <img src="../webinar/Bilder/2DSCF1036.png" alt="Marina Henze">
@@ -533,7 +525,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- BEKANNT AUS -->
 <div class="logos-section">
-  <p class="logos-kicker">Marina Henze ist bekannt aus:</p>
   <div class="logos-track-wrap">
     <div class="logos-track">
       <img src="../webinar/Bilder/Stern-Logo.png" alt="Stern">
@@ -567,7 +558,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p>Das Problem war nie dein Einsatz. <span class="gold-strong">Das Problem ist, dass du im Überlebensmodus hängst</span> – und in dieser Energie kannst du nichts erschaffen.</p>
     <p>Deshalb mache ich zu meinem Geburtstag dieses Jahr etwas, das es bei Feminess so noch nie gab. Kein Rabatt-Code. Kein Standard-Deal. Ein Geschenk für die Frauen, die längst genug gekämpft haben. Ich öffne eine Geburtstags-VIP-Liste – nur für eine Handvoll Frauen aus meiner treuen Community, die bereit sind, endlich aufzuhören zu kämpfen und stattdessen ihr Business mit Freude, Liebe und Lebendigkeit zu führen.</p>
     <div class="cta-row">
-      <a href="#anmeldung" class="btn-cta">Auf die VIP-Liste</a>
+      <button type="button" class="btn-cta" data-open-popup>Auf die VIP-Liste</button>
     </div>
   </div>
 </div>
@@ -685,13 +676,58 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <span class="countdown-label">Sek</span>
       </div>
     </div>
-    <a href="#anmeldung" class="btn-cta">Jetzt auf die VIP-Liste</a>
+    <button type="button" class="btn-cta" data-open-popup>Jetzt auf die VIP-Liste</button>
     <p class="final-note">Kostenlos & unverbindlich. Du erfährst als Erste, was ich mir für dich ausgedacht habe.</p>
   </div>
 </section>
 
 <!-- FLOATING CTA -->
-<a href="#anmeldung" class="floating-cta" id="floatingCta">Auf die VIP-Liste</a>
+<button type="button" class="floating-cta" id="floatingCta" data-open-popup>Auf die VIP-Liste</button>
+
+<!-- VIP-LISTE POPUP -->
+<div class="popup-overlay" id="vipPopup" role="dialog" aria-modal="true" aria-label="VIP-Liste Anmeldung">
+  <div class="popup-box">
+    <button class="popup-close" id="popupClose" aria-label="Schließen">&times;</button>
+    <div class="popup-kicker">Geburtstags-VIP-Liste</div>
+    <h2>Trag dich auf die <em>VIP-Liste</em> ein</h2>
+    <p class="popup-sub">Kostenlos & unverbindlich – bevor der Platz weg ist.</p>
+
+    <!-- TODO: Platzhalter-Formular-ID "999" durch die echte ActiveCampaign-Formular-ID ersetzen, sobald verfügbar (u/f-Werte, id-Attribute, JS-Referenzen) -->
+    <form method="POST" action="https://marina232.activehosted.com/proc.php" id="_form_999_" class="_form _form_999 _inline-form _dark" novalidate data-styles-version="5">
+      <input type="hidden" name="u" value="999" />
+      <input type="hidden" name="f" value="999" />
+      <input type="hidden" name="s" />
+      <input type="hidden" name="c" value="0" />
+      <input type="hidden" name="m" value="0" />
+      <input type="hidden" name="act" value="sub" />
+      <input type="hidden" name="v" value="2" />
+      <div class="_form-content">
+        <div class="_form_element _x85333295 _full_width">
+          <label for="firstname" class="_form-label">Vorname<span class="field-required"> *</span></label>
+          <div class="_field-wrapper">
+            <input type="text" id="firstname" name="firstname" placeholder="Dein Vorname" required/>
+          </div>
+        </div>
+        <div class="_form_element _field_email _full_width">
+          <label for="email" class="_form-label">E-Mail<span class="field-required"> *</span></label>
+          <div class="_field-wrapper">
+            <input type="text" id="email" name="email" placeholder="Deine E-Mail-Adresse" required/>
+          </div>
+        </div>
+        <div class="_form_element _x40740069 _full_width"><label for="field[220]" class="_form-label"></label><div class="_field-wrapper"><input type="hidden" id="field[220]" name="field[220]" value="" placeholder="" /></div></div>
+        <div class="_form_element _x94257511 _full_width"><label for="field[219]" class="_form-label"></label><div class="_field-wrapper"><input type="hidden" id="field[219]" name="field[219]" value="" placeholder="" /></div></div>
+        <div class="_form_element _x54506385 _full_width"><label for="field[218]" class="_form-label"></label><div class="_field-wrapper"><input type="hidden" id="field[218]" name="field[218]" value="" placeholder="" /></div></div>
+        <div class="_form_element _x71144138 _full_width"><label for="field[217]" class="_form-label"></label><div class="_field-wrapper"><input type="hidden" id="field[217]" name="field[217]" value="" placeholder="" /></div></div>
+        <div class="_form_element _x34666540 _full_width"><label for="field[221]" class="_form-label"></label><div class="_field-wrapper"><input type="hidden" id="field[221]" name="field[221]" value="" placeholder="" /></div></div>
+        <div class="_button-wrapper _full_width">
+          <button id="_form_999_submit" class="_submit" type="submit">Ja, ich will auf die VIP-Liste</button>
+        </div>
+        <div class="_clear-element"></div>
+      </div>
+      <div class="_form-thank-you" style="display:none;"></div>
+    </form>
+  </div>
+</div>
 
 <!-- FOOTER -->
 <footer>
@@ -734,6 +770,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     const heroBottom = heroSection ? heroSection.getBoundingClientRect().bottom : 600;
     floatingCta.classList.toggle('is-visible', heroBottom < 0);
   }, { passive: true });
+
+  /* VIP-Liste Popup: alle CTAs mit data-open-popup öffnen das Formular-Popup */
+  (function() {
+    var popup = document.getElementById('vipPopup');
+    var btnClose = document.getElementById('popupClose');
+    function show() { popup.classList.add('is-visible'); }
+    function hide() { popup.classList.remove('is-visible'); }
+    btnClose.addEventListener('click', hide);
+    popup.addEventListener('click', function(e) { if (e.target === popup) hide(); });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape') hide(); });
+    document.querySelectorAll('[data-open-popup]').forEach(function(el) {
+      el.addEventListener('click', function(e) { e.preventDefault(); show(); });
+    });
+  })();
 </script>
 
 <!-- ── ActiveCampaign Formular-Logik (Platzhalter-ID 999, siehe TODO oben) ── -->
