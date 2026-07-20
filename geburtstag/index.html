@@ -231,21 +231,8 @@
     }
     h2 em { font-style: normal; font-weight: 600; background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
 
-    /* ── BEKANNT AUS – TICKER ── */
-    .logos-section { padding: 36px 0; background: var(--off-white); text-align: center; overflow: hidden; }
-    .logos-track-wrap {
-      overflow: hidden; position: relative; width: 100%;
-      mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
-      -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
-    }
-    @keyframes logoScroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-    .logos-track { display: flex; align-items: center; gap: 56px; width: max-content; animation: logoScroll 24s linear infinite; padding: 8px 0; }
-    .logos-track:hover { animation-play-state: paused; }
-    .logos-track img { height: 40px; width: auto; object-fit: contain; opacity: 0.85; flex-shrink: 0; transition: opacity 0.3s ease; }
-    .logos-track img:hover { opacity: 1; }
-
     /* ── MAIN TEXT ── */
-    .text-section { background: var(--off-white); border-top: 2px solid var(--teal-pale); padding: 88px 0; border-bottom: 1px solid var(--beige); }
+    .text-section { background: var(--off-white); padding: 88px 0; border-bottom: 1px solid var(--beige); }
     .text-inner { max-width: 740px; margin: 0 auto; padding: 0 40px; }
     .text-section .section-label { margin-bottom: 36px; }
     .text-inner p { font-size: 22px; line-height: 1.85; color: var(--warm-gray); margin-bottom: 20px; }
@@ -292,7 +279,6 @@
     .final-cta-inner { max-width: 600px; margin: 0 auto; padding: 0 40px; text-align: center; position: relative; z-index: 1; }
     .final-cta h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 3vw, 40px); font-weight: 400; color: #fff; line-height: 1.2; margin-bottom: 16px; }
     .final-cta h2 em { font-style: normal; background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-    .final-cta p.final-lead { font-size: 18px; color: var(--mid-gray); margin-bottom: 32px; }
     .countdown-final { display: flex; justify-content: center; gap: 28px; margin: 0 0 40px; align-items: flex-end; }
     .countdown-final .countdown-digits { font-family: 'Cormorant Garamond', serif; font-size: 52px; color: #fff; line-height: 1; letter-spacing: -1px; display: block; }
     .countdown-final .countdown-label { display: block; font-size: 8px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-top: 4px; }
@@ -481,32 +467,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-<!-- BEKANNT AUS -->
-<div class="logos-section">
-  <div class="logos-track-wrap">
-    <div class="logos-track">
-      <img src="../webinar/Bilder/Stern-Logo.png" alt="Stern">
-      <img src="../webinar/Bilder/handelsblatt-logo-1.png" alt="Handelsblatt">
-      <img src="../webinar/Bilder/Wirschafwoche.png" alt="WirtschaftsWoche">
-      <img src="../webinar/Bilder/Focus-Money-Logo-neue-masse.png" alt="Focus Money">
-      <img src="../webinar/Bilder/320px-Womenshealthlogo.svg.png" alt="Women's Health">
-      <img src="../webinar/Bilder/Logo_Bild-de.svg-1.png" alt="BILD">
-      <!-- Duplikat für nahtlosen Loop -->
-      <img src="../webinar/Bilder/Stern-Logo.png" alt="Stern">
-      <img src="../webinar/Bilder/handelsblatt-logo-1.png" alt="Handelsblatt">
-      <img src="../webinar/Bilder/Wirschafwoche.png" alt="WirtschaftsWoche">
-      <img src="../webinar/Bilder/Focus-Money-Logo-neue-masse.png" alt="Focus Money">
-      <img src="../webinar/Bilder/320px-Womenshealthlogo.svg.png" alt="Women's Health">
-      <img src="../webinar/Bilder/Logo_Bild-de.svg-1.png" alt="BILD">
-    </div>
-  </div>
-</div>
-
 <!-- MAIN TEXT -->
 <div class="text-section">
   <div class="text-inner">
-    <p class="section-label">An dich</p>
-    <p>Liebe Firstname, du hast in den letzten Monaten mehr investiert als die meisten in Jahren. Mehr Stunden, mehr Mut, mehr Disziplin. Du willst mit deinem Business weiterwachsen, größere Ziele erreichen, und hast alles dafür gegeben, was du hattest.</p>
+    <p class="section-label">Für dich</p>
+    <p>Du hast in den letzten Monaten mehr investiert als die meisten in Jahren. Mehr Stunden, mehr Mut, mehr Disziplin. Du willst mit deinem Business weiterwachsen, größere Ziele erreichen, und hast alles dafür gegeben, was du hattest.</p>
     <p>Und trotzdem gehst du abends ins Bett und denkst niedergeschlagen: <strong>Warum reicht es einfach nie?</strong></p>
     <p>Du kämpfst an allen Fronten. Beruflich lieferst du, obwohl du innerlich längst am Limit bist. Privat hältst du die Fassade, weil zu Hause niemand merken darf, wie erschöpft du wirklich bist. Du zerreißt dich zwischen dem, was dein Business von dir will, und dem, was dein Leben von dir will – und irgendwo dazwischen bleibst du selbst auf der Strecke.</p>
     <p>Du bist eine Kämpferin und gibst nicht auf. Du gibst noch mehr, mehr Willen, die Extra-Meile – und hoffst, endlich den Durchbruch zu schaffen. Dann hat sich alles gelohnt. Dann darfst du dich ausruhen.</p>
@@ -551,7 +516,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="final-cta-inner">
     <img class="final-cta-portrait" src="../webinar/Bilder/EE8A8D0F-D6B0-4B8C-9769-40B0A0B03634.jpg" alt="Marina Henze">
     <h2>Verpass nicht die Chance auf <em>dieses Geschenk</em></h2>
-    <p class="final-lead">Nur eine Handvoll Plätze – sobald die Liste schließt, ist der Zug abgefahren.</p>
     <div class="countdown-final">
       <div class="countdown-item">
         <span class="countdown-digits" id="f-days">00</span>
