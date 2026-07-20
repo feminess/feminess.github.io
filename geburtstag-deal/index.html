@@ -59,31 +59,40 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* ── TOP BANNER ── */
-    .top-banner { background: var(--dark); padding: 14px 40px; text-align: center; border-bottom: 1px solid rgba(94,198,179,0.2); }
+    /* ── TOP BANNER (Reveal: rosegold statt dunkel, damit sofort klar ist: andere Seite als /geburtstag/) ── */
+    .top-banner { background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%); padding: 14px 40px; text-align: center; border-bottom: 1px solid rgba(13,36,32,0.12); }
     .banner-row { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: center; gap: 10px; }
-    .banner-text { font-family: 'Avenir LT Pro', sans-serif; font-size: 15px; font-weight: 400; color: var(--mid-gray); white-space: nowrap; }
-    .banner-countdown { font-family: 'Cormorant Garamond', serif; font-size: 19px; font-weight: 600; color: #fff; white-space: nowrap; }
-    .banner-countdown .cd-unit { font-family: 'Avenir LT Pro', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: var(--teal-light); margin-left: 3px; }
-    .banner-countdown .cd-sep { color: rgba(255,255,255,0.28); margin: 0 6px; }
+    .banner-text { font-family: 'Avenir LT Pro', sans-serif; font-size: 15px; font-weight: 400; color: rgba(13,36,32,0.72); white-space: nowrap; }
+    .banner-countdown { font-family: 'Cormorant Garamond', serif; font-size: 19px; font-weight: 600; color: var(--dark); white-space: nowrap; }
+    .banner-countdown .cd-unit { font-family: 'Avenir LT Pro', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: rgba(13,36,32,0.6); margin-left: 3px; }
+    .banner-countdown .cd-sep { color: rgba(13,36,32,0.3); margin: 0 6px; }
 
     /* ── HERO ── */
     .hero { background: var(--dark); position: relative; overflow: hidden; }
     .hero::before {
-      content: ''; position: absolute; top: -80px; left: -80px; width: 600px; height: 600px;
-      background: radial-gradient(circle, rgba(37,124,108,0.20) 0%, transparent 60%); pointer-events: none; z-index: 1;
+      content: ''; position: absolute; top: -80px; right: -80px; left: auto; width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(207,90,115,0.18) 0%, transparent 60%); pointer-events: none; z-index: 1;
     }
-    .hero-inner { display: grid; grid-template-columns: 55fr 45fr; position: relative; z-index: 2; }
+    .hero-inner { display: grid; grid-template-columns: 48fr 52fr; position: relative; z-index: 2; }
     .hero-content { padding: 48px 56px 64px 80px; display: flex; flex-direction: column; justify-content: center; }
     .hero-image { position: relative; overflow: hidden; }
-    .hero-image img { width: 100%; height: 100%; object-fit: cover; object-position: center bottom; display: block; filter: brightness(0.92) saturate(0.9); }
+    .hero-image img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; filter: brightness(0.92) saturate(0.9); }
     .hero-image::before { content: ''; position: absolute; inset: 0; background: linear-gradient(to right, var(--dark) 0%, rgba(13,36,32,0.6) 18%, transparent 38%); z-index: 1; pointer-events: none; }
     .hero-image::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 40%; background: linear-gradient(to top, var(--dark) 0%, transparent 100%); z-index: 1; pointer-events: none; }
     .hero-tilt { position: absolute; bottom: -1px; left: 0; width: 100%; overflow: hidden; line-height: 0; z-index: 3; }
     .hero-tilt svg { display: block; width: 100%; height: 56px; }
 
-    .hero-kicker { font-size: 12px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--teal-light); margin-bottom: 18px; display: flex; align-items: center; gap: 12px; }
-    .hero-kicker::before { content: '🎂'; font-size: 16px; }
+    /* Status-Pill: markiert sichtbar den Schritt-Wechsel ggü. /geburtstag/ (dort noch Anmeldung, hier schon bestätigt) */
+    .hero-status-pill {
+      display: inline-flex; align-items: center; gap: 8px; width: fit-content;
+      background: rgba(37,124,108,0.18); border: 1px solid rgba(94,198,179,0.4);
+      color: var(--teal-light); font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+      padding: 8px 18px; border-radius: 999px; margin-bottom: 24px;
+    }
+    .hero-status-pill::before { content: '✓'; font-weight: 900; }
+
+    .hero-kicker { font-size: 12px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 18px; display: flex; align-items: center; gap: 12px; background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .hero-kicker::before { content: '🎁'; font-size: 16px; -webkit-text-fill-color: initial; }
     .hero-content h1 { font-family: 'Cormorant Garamond', serif; font-size: 62px; font-weight: 400; line-height: 1.08; letter-spacing: 0.5px; margin-bottom: 20px; color: #fff; }
     .hero-content h1 em { font-style: normal; font-weight: 600; background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
     .hero-subtitle { font-size: 22px; font-weight: 400; color: var(--mid-gray); margin-bottom: 20px; max-width: 540px; line-height: 1.7; }
@@ -249,13 +258,16 @@
 
     /* ── SPEAKER ── */
     .speaker-section { background: var(--off-white); padding: 96px 0; border-top: 2px solid var(--teal-pale); }
-    .speaker-section-inner { max-width: 820px; margin: 0 auto; padding: 0 40px; text-align: center; }
+    .speaker-section-inner { max-width: 1100px; margin: 0 auto; padding: 0 40px; text-align: center; }
     .speaker-section h2 { font-size: clamp(28px, 4vw, 44px); margin-bottom: 40px; }
+    .speakers-grid { display: flex; gap: 64px; align-items: flex-start; text-align: left; }
+    .speaker-card { flex: 1; min-width: 0; }
+    .speaker-portrait { text-align: center; }
     .speaker-portrait img { width: 200px; height: 200px; object-fit: cover; object-position: center top; border-radius: 50%; border: 4px solid var(--teal); display: block; margin: 0 auto 24px; box-shadow: 0 0 0 8px rgba(37,124,108,0.12), 0 16px 48px rgba(13,36,32,0.15); }
     .speaker-portrait h3 { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 400; color: #1b5c50; margin-bottom: 6px; }
     .speaker-portrait .role { font-size: 11px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--teal); }
     .speaker-bio { padding-top: 24px; text-align: left; }
-    .speaker-bio p { font-size: 19px; color: var(--warm-gray); line-height: 1.8; margin-bottom: 16px; }
+    .speaker-bio p { font-size: 18px; color: var(--warm-gray); line-height: 1.8; margin-bottom: 16px; }
     .speaker-bio p strong { color: #1b5c50; }
 
     /* ── FAQ ── */
@@ -300,6 +312,7 @@
       .hero-content { padding: 36px 40px 60px; }
       .benefits-grid { grid-template-columns: 1fr; }
       .testimonials-grid { grid-template-columns: 1fr 1fr; }
+      .speakers-grid { flex-direction: column; gap: 48px; }
       .footer-inner { flex-direction: column; text-align: center; }
       .footer-links { justify-content: center; }
     }
@@ -388,7 +401,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-content">
-      <p class="hero-kicker">Dein Geburtstagsgeschenk ist da</p>
+      <p class="hero-status-pill">Du bist auf der VIP-Liste</p>
+      <p class="hero-kicker">Dein Geschenk ist enthüllt</p>
       <h1>Die ungezähmte <em>Unternehmerin</em></h1>
       <p class="hero-subtitle">Yeahhh, du hast dich eingetragen. Hier ist es: <strong>7 Live-Sessions mit mir persönlich</strong>, in denen du aufhörst, dir Geld zu erkämpfen – und anfängst, es anzuziehen.</p>
 
@@ -408,7 +422,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
     <div class="hero-image">
-      <img src="../webinar/Bilder/2DSCF1036.png" alt="Marina Henze">
+      <img src="../webinar/Bilder/Marina_MAI2314477 Kopie.jpg" alt="Marina Henze">
     </div>
   </div>
   <div class="hero-tilt">
@@ -561,6 +575,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="benefits-header">
       <p class="section-label" style="justify-content:center;">Das ist alles enthalten</p>
       <h2>Dein komplettes <em>Geburtstagsgeschenk</em></h2>
+      <p style="font-size:19px; color:var(--warm-gray); max-width:640px; margin:16px auto 0;">Du bist damit nicht allein: Jede Session kommt mit einer Meditation zur Verankerung im Nervensystem, einem Workbook für die Integration – und Begleitung in der geschlossenen Telegram-Gruppe zwischen den Terminen.</p>
     </div>
     <div class="benefits-grid">
       <div class="benefit-card">
@@ -646,19 +661,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-<!-- SPEAKER: MARINA -->
+<!-- SPEAKER: MARINA & VERA -->
 <section class="speaker-section">
   <div class="speaker-section-inner">
-    <h2>Warum ich dir zu <em>meinem</em> Geburtstag dieses Geschenk mache</h2>
-    <div class="speaker-portrait">
-      <img src="../webinar/Bilder/EE8A8D0F-D6B0-4B8C-9769-40B0A0B03634.jpg" alt="Marina Henze">
-      <h3>Marina Henze</h3>
-      <p class="role">CEO & Gründerin · FEMINESS</p>
-    </div>
-    <div class="speaker-bio">
-      <p>Marina Henze ist <strong>Mentorin</strong> für Unternehmerinnen, die spüren: So wie bisher will ich nicht weitermachen.</p>
-      <p>Seit über 20 Jahren begleitet sie Frauen aus Erschöpfung und Selbstaufopferung hinein in <strong>finanzielle Freiheit</strong> und selbstbestimmtes Wirken. Mehr als <strong>20.000 Frauen</strong> sind diesen Weg bereits mit ihr gegangen.</p>
-      <p>Ich war jahrelang davon überzeugt, ich müsste nur noch härter arbeiten. Also habe ich mehr gegeben, mehr geleistet, mehr funktioniert – bis ich abends im Bad stand, komplett fertig, und mir dasselbe Mantra durch den Kopf ging: <strong>Wie viel muss ich eigentlich noch machen, bis es endlich reicht?</strong> Ich habe es geschafft, diesen Kreislauf zu durchbrechen. Und jetzt reiche ich dir meine Hand, um dir zu helfen, es auch zu schaffen.</p>
+    <h2>Die Frauen, die dich zur <em>ungezähmten Unternehmerin</em> machen</h2>
+    <div class="speakers-grid">
+      <div class="speaker-card">
+        <div class="speaker-portrait">
+          <img src="../webinar/Bilder/EE8A8D0F-D6B0-4B8C-9769-40B0A0B03634.jpg" alt="Marina Henze">
+          <h3>Marina Henze</h3>
+          <p class="role">CEO & Gründerin · FEMINESS</p>
+        </div>
+        <div class="speaker-bio">
+          <p>Marina Henze ist <strong>Mentorin</strong> für Unternehmerinnen, die spüren: So wie bisher will ich nicht weitermachen.</p>
+          <p>Seit über 20 Jahren begleitet sie Frauen aus Erschöpfung und Selbstaufopferung hinein in <strong>finanzielle Freiheit</strong> und selbstbestimmtes Wirken. Mehr als <strong>20.000 Frauen</strong> sind diesen Weg bereits mit ihr gegangen.</p>
+          <p>Ich war jahrelang davon überzeugt, ich müsste nur noch härter arbeiten. Also habe ich mehr gegeben, mehr geleistet, mehr funktioniert – bis ich abends im Bad stand, komplett fertig, und mir dasselbe Mantra durch den Kopf ging: <strong>Wie viel muss ich eigentlich noch machen, bis es endlich reicht?</strong> Ich habe es geschafft, diesen Kreislauf zu durchbrechen. Und jetzt reiche ich dir meine Hand, um dir zu helfen, es auch zu schaffen.</p>
+        </div>
+      </div>
+      <div class="speaker-card">
+        <div class="speaker-portrait">
+          <img src="../webinar/Bilder/Vera Rotaermel.jpg" alt="Vera Rotärmel">
+          <h3>Vera Rotärmel</h3>
+          <p class="role">Expertin für Verkaufspsychologie</p>
+        </div>
+        <div class="speaker-bio">
+          <p>Vera Rotärmel begleitet dein <strong>Online-Sales-Training</strong>. Sie ist Expertin für <strong>Verkaufspsychologie</strong> und Mentorin für Unternehmerinnen, die im Verkaufsgespräch an sich selbst zweifeln – und genau das kostet sie Umsatz.</p>
+          <p>Seit <strong>22 Jahren</strong> selbstständig, davon 14 Jahre im Vertrieb, als NLP Sales Master ausgebildet, hat sie <strong>Millionen-Umsätze</strong> geschrieben und tausende Menschen auf ihrem Weg begleitet.</p>
+          <p>Vera steht für <strong>Verkauf ohne Maske</strong>: Wer sich selbst treu bleibt, verkauft aus Vertrauen, nicht aus Überzeugungskraft.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -669,8 +700,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h2 style="margin-bottom:40px;">Bevor du <em>startest</em></h2>
 
     <details class="faq-item">
-      <summary>Für wen ist „Die ungezähmte Unternehmerin"?</summary>
-      <p class="faq-answer">Für Frauen, die spüren: Ich habe alles gegeben, jetzt darf es auch leichter gehen. Marina holt jede Frau genau da ab, wo sie gerade steht – egal ob du gerade mit Geld struggelst oder schon gute Umsätze machst.</p>
+      <summary>Für welches Umsatz-Niveau ist das Programm geeignet?</summary>
+      <p class="faq-answer">Marina holt jede Frau genau da ab, wo sie gerade steht. Egal, ob du gerade mit Geld struggelst oder schon gute Umsätze machst.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Ich habe Angst, wieder einen Kurs zu kaufen, und es funktioniert nicht.</summary>
+      <p class="faq-answer">Diese Sorge ist absolut nachvollziehbar. Genau deshalb ist es kein reiner Konsum-Kurs, sondern 7 Live-Sessions, in denen du in tiefen Prozessen mit Marina wahre Transformation erlebst – und die 21-Tage-Geld-zurück-Garantie nimmt dir das Risiko.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Wann sind die Live-Termine?</summary>
+      <p class="faq-answer">Die Live-Calls finden <strong>freitags von 09:00 bis 11:00 Uhr</strong> statt.</p>
     </details>
     <details class="faq-item">
       <summary>Was, wenn es bei mir nicht wirkt?</summary>
