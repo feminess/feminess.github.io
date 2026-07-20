@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Masterclass ENERGY for MILLION - Danke - Feminess</title>
+<title>Free Webinar - Danke - Feminess</title>
 <link rel="icon" href="https://feminess.de/wp-content/uploads/cropped-favicon@2x-1-32x32.png" sizes="32x32">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,7 +30,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   :root {
     --maroon:      #861627;
     --sand:        #C2AB8D;
-    --dark-beige:  #9C8768;
     --off-white:   #F8F6F2;
     --teal:        #257C6C;
     --dark-teal:   #041B17;
@@ -47,38 +46,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   body {
     font-family: 'Avenir LT Pro', sans-serif;
     line-height: 1.6;
-    color: var(--dark-teal);
+    color: #222;
     background: var(--off-white);
     -webkit-font-smoothing: antialiased;
-  }
-
-  .gold-text {
-    font-style: normal;
-    font-weight: 700;
-    background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-  .energy-million {
-    font-family: 'Cormorant Garamond', Georgia, serif;
-    font-weight: 400;
-    font-size: 1.5em;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    display: inline-block;
-    line-height: 1;
-  }
-  .energy-million em {
-    font-style: italic;
-    text-transform: none;
-    letter-spacing: 0;
-  }
-  .energy-million-hero {
-    font-size: clamp(34px, 6vw, 64px);
-    white-space: nowrap;
-    display: block;
-    margin-top: 12px;
   }
 
   /* ── FRAME ── */
@@ -88,49 +58,40 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     flex-direction: column;
   }
 
-  /* ── TOP BANNER ── */
-  .top-banner {
-    position: sticky;
-    top: 0;
-    z-index: 200;
+  /* ── PROGRESS BAR ── */
+  .progress-wrap {
+    width: 100%;
+    background: linear-gradient(to bottom, var(--off-white) 0%, var(--off-white) 65%, var(--teal) 100%);
+  }
+  .progress-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 33px 28px;
+  }
+  .progress-labels {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
-    padding: 10px 16px;
-    background: linear-gradient(90deg, #6b0f1d 0%, var(--maroon) 30%, #a81f35 50%, var(--maroon) 70%, #6b0f1d 100%);
-    background-size: 200% 100%;
-    color: #fff;
-    text-decoration: none;
-    text-align: center;
-    box-shadow: 0 4px 18px rgba(134,22,39,0.45);
-    animation: topBannerShimmer 3.5s linear infinite;
-  }
-  @keyframes topBannerShimmer {
-    0%   { background-position: 0% 50%; }
-    100% { background-position: 200% 50%; }
-  }
-  .top-banner-text {
-    font-size: 12.5px;
+    justify-content: space-between;
+    align-items: baseline;
     font-weight: 700;
-    letter-spacing: 0.6px;
+    font-size: 11px;
+    letter-spacing: 1.5px;
     text-transform: uppercase;
+    margin-bottom: 12px;
   }
-  .top-banner-price {
-    background: rgba(255,255,255,0.18);
-    padding: 2px 8px;
-    border-radius: 4px;
-    font-weight: 900;
+  .progress-labels .left  { color: var(--dark-teal); }
+  .progress-labels .right { color: var(--maroon); }
+  .progress-track {
+    height: 5px;
+    border-radius: 100px;
+    background: rgba(37,124,108,0.14);
+    width: 100%;
+    overflow: hidden;
   }
-  .top-banner-countdown {
-    font-variant-numeric: tabular-nums;
-    font-weight: 900;
-    letter-spacing: 0.5px;
-  }
-  @media (max-width: 500px) {
-    .top-banner { font-size: 11px; padding: 8px 12px; }
-    .top-banner-text { font-size: 11px; }
+  .progress-fill {
+    height: 100%;
+    width: 90%;
+    border-radius: 100px;
+    background: linear-gradient(90deg, var(--teal), var(--dark-teal));
   }
 
   /* ── HERO / GRADIENT SECTION ── */
@@ -174,270 +135,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     border: 1px solid rgba(255,255,255,0.12);
   }
 
-  .deal-teaser {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    width: 480px;
-    max-width: 100%;
-    margin-top: 8px;
-    padding: 26px 28px;
-    border-radius: 10px;
-    font-size: 24px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: #fff;
-    background:
-      radial-gradient(ellipse 220px 90px at 50% -10%, rgba(255,255,255,0.45), transparent 65%),
-      linear-gradient(160deg, var(--rosegold-3) 0%, var(--rosegold-2) 45%, var(--rosegold-1) 100%);
-    box-shadow: inset 0 1px 0 rgba(255,255,255,0.35), 0 16px 36px rgba(175,127,107,0.45);
-    text-shadow: 0 1px 2px rgba(0,0,0,0.25);
-    animation: dealTeaserPulse 2.4s ease-in-out infinite;
-    transition: transform 0.25s cubic-bezier(.4,0,.2,1);
-  }
-  .deal-teaser:hover { transform: translateY(-2px); animation-play-state: paused; }
-  @keyframes dealTeaserPulse {
-    0%, 100% { box-shadow: inset 0 1px 0 rgba(255,255,255,0.35), 0 16px 36px rgba(175,127,107,0.45), 0 0 0 0 rgba(234,183,179,0.5); }
-    50%      { box-shadow: inset 0 1px 0 rgba(255,255,255,0.35), 0 12px 28px rgba(175,127,107,0.4), 0 0 0 12px rgba(234,183,179,0); }
-  }
-
-  /* ── SPECIAL DEAL SECTION ── */
-  .deal-section {
-    background: var(--off-white);
-    padding: 90px 33px;
-    text-align: center;
-  }
-  .deal-inner { max-width: 640px; margin: 0 auto; }
-  .deal-title {
-    font-family: 'Cormorant Garamond', Georgia, serif;
-    font-weight: 600;
-    font-size: clamp(30px, 4.2vw, 44px);
-    line-height: 1.28;
-    color: var(--dark-teal);
-    margin-bottom: 26px;
-  }
-  .deal-title em {
-    font-style: normal;
-    font-weight: 800;
-    font-size: 1.14em;
-    background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-  .deal-lead {
-    font-size: 22px;
-    line-height: 1.6;
-    color: var(--dark-teal);
-    max-width: 540px;
-    margin: 0 auto 40px;
-  }
-  .deal-lead strong { color: var(--dark-teal); }
-  .deal-lead .price-red { color: var(--maroon); font-weight: 900; }
-  .deal-countdown-card {
-    display: inline-block;
-    background: radial-gradient(ellipse 720px 480px at 50% 10%, rgba(255,255,255,0.12), transparent 60%), linear-gradient(232deg, var(--teal) 0%, var(--dark-teal) 100%);
-    border-radius: 14px;
-    padding: 26px 34px;
-    margin: 0 auto 40px;
-    box-shadow: 0 20px 50px rgba(4,27,23,0.25);
-  }
-  .deal-countdown-done {
-    display: none;
-    font-size: 15px;
-    font-style: italic;
-    color: var(--dark-teal);
-    margin: 0 auto 32px;
-  }
-  .deal-cta-wrap {
+  /* ── KALENDER- & TELEGRAM-BUTTONS ── */
+  .cal-buttons {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .blink-arrow {
-    width: 40px;
-    height: 40px;
-    margin: 0 auto 16px;
-    color: var(--maroon);
-    animation: arrowBounce 1.1s ease-in-out infinite;
-  }
-  .blink-arrow svg { width: 100%; height: 100%; display: block; }
-  @keyframes arrowBounce {
-    0%, 100%  { transform: translateY(0);    opacity: 0.25; }
-    50%       { transform: translateY(12px); opacity: 1; }
-  }
-  .cal-btn.deal-btn {
-    width: 560px;
-    max-width: 100%;
-    padding: 28px 24px;
-    font-size: 25px;
-    letter-spacing: 2px;
-    border: 2px solid rgba(255,255,255,0.6);
-    box-shadow: inset 0 1px 0 rgba(255,255,255,0.4), 0 20px 50px rgba(175,127,107,0.65), 0 0 0 6px rgba(234,183,179,0.3);
-    animation: dealBtnPulse 1.6s ease-out infinite;
-  }
-  @keyframes dealBtnPulse {
-    0%   { box-shadow: inset 0 1px 0 rgba(255,255,255,0.4), 0 20px 50px rgba(175,127,107,0.65), 0 0 0 0 rgba(134,22,39,0.55); }
-    70%  { box-shadow: inset 0 1px 0 rgba(255,255,255,0.4), 0 20px 50px rgba(175,127,107,0.65), 0 0 0 26px rgba(134,22,39,0); }
-    100% { box-shadow: inset 0 1px 0 rgba(255,255,255,0.4), 0 20px 50px rgba(175,127,107,0.65), 0 0 0 0 rgba(134,22,39,0); }
-  }
-
-  /* ── TESTIMONIALS ── */
-  .testimonials-section {
-    background: var(--off-white);
-    padding: 90px 33px;
-    border-top: 1px solid rgba(175,127,107,0.18);
-  }
-  .testimonials-inner { max-width: 1160px; margin: 0 auto; }
-  .testimonials-header { text-align: center; margin-bottom: 52px; }
-  .testimonials-kicker {
-    display: inline-block;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: var(--maroon);
-    margin-bottom: 18px;
-  }
-  .testimonials-title {
-    font-family: 'Cormorant Garamond', Georgia, serif;
-    font-weight: 700;
-    font-size: clamp(34px, 5vw, 50px);
-  }
-  .testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
-  }
-  .testimonial-card {
-    background: var(--dark-beige);
-    border-radius: 12px;
-    padding: 32px 28px;
-    box-shadow: 0 8px 28px rgba(4,27,23,0.18);
-  }
-  .testimonial-text { font-size: 16px; color: var(--off-white); line-height: 1.7; margin-bottom: 18px; }
-  .testimonial-text .num {
-    font-family: 'Cormorant Garamond', Georgia, serif;
-    font-weight: 700;
-    font-size: 1.2em;
-    font-variant-numeric: lining-nums tabular-nums;
-  }
-  .testimonial-author {
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    color: var(--rosegold-3);
-  }
-  .result-card {
-    background: var(--dark-beige);
-    border-radius: 12px;
-    padding: 32px 28px;
-    box-shadow: 0 8px 28px rgba(4,27,23,0.18);
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin: 0 auto 44px;
   }
-  .result-number {
-    font-family: 'Cormorant Garamond', Georgia, serif;
-    font-size: 30px;
-    font-weight: 700;
-    line-height: 1.3;
-    margin-bottom: 10px;
-    color: var(--off-white);
-    font-variant-numeric: lining-nums tabular-nums;
+  .cal-buttons-social {
+    max-width: 1360px;
+    margin-left: auto;
+    margin-right: auto;
   }
-  .result-label {
-    font-size: 16px;
-    color: var(--off-white);
-    line-height: 1.7;
-  }
-
-  @media (max-width: 1000px) {
-    .testimonials-grid { grid-template-columns: 1fr 1fr; }
-  }
-  @media (max-width: 640px) {
-    .testimonials-grid { grid-template-columns: 1fr; }
-    .testimonials-section { padding: 56px 18px; }
-    .testimonial-mobile-hide { display: none; }
-    .mob-order-1 { order: 1; }
-    .mob-order-2 { order: 2; }
-    .mob-order-3 { order: 3; }
-    .mob-order-4 { order: 4; }
-    .mob-order-5 { order: 5; }
-  }
-
-  /* ── COUNTDOWN ── */
-  .countdown-wrap {
-    margin: 0 auto 48px;
-  }
-  .countdown-label {
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--rosegold-2);
-    margin-bottom: 18px;
-  }
-  .countdown {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 14px;
-  }
-  .countdown-block {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 84px;
-    padding: 14px 8px;
-    border-radius: 10px;
-    background: radial-gradient(ellipse 160px 70px at 50% -10%, rgba(255,255,255,0.12), transparent 65%), rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.16);
-  }
-  .countdown-num {
-    font-family: 'Cormorant Garamond', Georgia, serif;
-    font-weight: 600;
-    font-size: 34px;
-    color: #fff;
-    line-height: 1.1;
-  }
-  .countdown-unit {
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    color: rgba(255,255,255,0.6);
-    margin-top: 4px;
-  }
-  .countdown-sep {
-    font-family: 'Cormorant Garamond', Georgia, serif;
-    font-size: 30px;
-    color: rgba(255,255,255,0.4);
-  }
-  .countdown-done {
-    display: none;
-    font-family: 'Cormorant Garamond', Georgia, serif;
-    font-weight: 600;
-    font-size: 26px;
-    color: #fff;
-  }
-
-  @media (max-width: 767px) {
-    .countdown-block { width: 68px; padding: 12px 6px; }
-    .countdown-num { font-size: 26px; }
-    .countdown { gap: 10px; }
-    .deal-section { padding: 56px 18px; }
-    .deal-countdown-card { padding: 20px 18px; }
-  }
-
-  /* ── BUTTONS ── */
   .cal-btn {
     display: inline-flex;
     align-items: center;
@@ -470,11 +180,45 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
   .cal-btn svg { width: 18px; height: 18px; flex-shrink: 0; }
   .cal-btn-emoji { font-size: 19px; line-height: 1; flex-shrink: 0; }
+  .cal-buttons .cal-btn:nth-child(2) { animation-delay: 0.5s; }
+  .cal-buttons .cal-btn:nth-child(3) { animation-delay: 1s; }
+  .cal-buttons .cal-btn:nth-child(4) { animation-delay: 1.5s; }
+  .cal-buttons .cal-btn:nth-child(5) { animation-delay: 2s; }
 
   @keyframes btnPulse {
     0%   { box-shadow: inset 0 1px 0 rgba(255,255,255,0.35), 0 10px 24px rgba(175,127,107,0.35), 0 0 0 0 rgba(234,183,179,0.55); }
     70%  { box-shadow: inset 0 1px 0 rgba(255,255,255,0.35), 0 10px 24px rgba(175,127,107,0.35), 0 0 0 16px rgba(234,183,179,0); }
     100% { box-shadow: inset 0 1px 0 rgba(255,255,255,0.35), 0 10px 24px rgba(175,127,107,0.35), 0 0 0 0 rgba(234,183,179,0); }
+  }
+
+  .step-kicker {
+    display: inline-block;
+    position: relative;
+    padding-top: 28px;
+    margin-bottom: 16px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--rosegold-2);
+  }
+  .step-kicker::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 48px;
+    height: 1px;
+    background: rgba(255,255,255,0.28);
+  }
+
+  .microtext {
+    color: rgba(255,255,255,0.55);
+    font-size: 13px;
+    font-style: italic;
+    letter-spacing: 0.2px;
+    margin: 14px auto 44px;
   }
 
   /* ── FOOTER ── */
@@ -517,11 +261,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
 
   @media (max-width: 767px) {
+    .progress-inner { padding: 24px 18px 20px; }
+    .progress-labels { font-size: 10px; }
     .hero { padding: 48px 18px 56px; }
     .hero h2 { font-size: 24px; margin-bottom: 28px; }
     .hero .lead { font-size: 19px; margin-bottom: 30px; }
+    .cal-buttons {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 12px;
+      margin-bottom: 30px;
+    }
     .cal-btn { width: 100%; justify-content: center; padding: 15px 20px; white-space: normal; }
-    .deal-teaser { font-size: 19px; padding: 20px 20px; text-align: center; white-space: normal; }
     .site-footer {
       flex-direction: column;
       text-align: center;
@@ -532,6 +283,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
 
   @media (max-width: 380px) {
+    .progress-labels { font-size: 9px; }
     .hero h2 { font-size: 21px; }
     .cal-btn { font-size: 18px; padding: 14px 16px; }
   }
@@ -543,103 +295,143 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-<a href="#special-deal" class="top-banner" id="top-banner">
-  <span class="top-banner-text">SPECIAL DEAL <span class="top-banner-price">NUR 297 EURO</span> läuft ab in</span>
-  <span class="top-banner-countdown"><span id="top-hours">24</span>:<span id="top-minutes">00</span>:<span id="top-seconds">00</span></span>
-</a>
-
 <div class="page-frame">
 
-  <!-- ── HERO / AUFZEICHNUNG ── -->
+  <!-- ── PROGRESS BAR ── -->
+  <div class="progress-wrap">
+    <div class="progress-inner">
+      <div class="progress-labels">
+        <span class="left">Nur noch ein Schritt</span>
+        <span class="right">100 %</span>
+      </div>
+      <div class="progress-track">
+        <div class="progress-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── HERO ── -->
   <section class="hero">
-    <h2>Danke für deine Anmeldung!<br>Hier ist deine Masterclass <span class="gold-text energy-million energy-million-hero">Energy <em>for</em> Million.</span></h2>
+    <h2>Achtung!<br>Nur noch ein Schritt, um deine Anmeldung abzuschließen.</h2>
+
+    <p class="lead">
+      Schau dir kurz das Video an und folge den Schritten unten.
+    </p>
 
     <div class="video-wrap">
-      <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1210169855?h=0f50de44dd&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="ENERGY for MILLION 2026-07-15 08:41:58"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+      <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1206729935?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="EFM DankeSeite"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
     </div>
 
-    <a href="#special-deal" class="deal-teaser">
-      SPECIAL DEAL
-    </a>
-  </section>
+    <span class="step-kicker">Schritt 1</span>
+    <h2>Trage dir jetzt den Termin in deinen Kalender und tritt unserer exklusiven Telegram Community bei:</h2>
 
-  <!-- ── SPECIAL DEAL ── -->
-  <section class="deal-section" id="special-deal">
-    <div class="deal-inner">
-      <h2 class="deal-title">Sichere dir jetzt deinen SPECIAL DEAL für <em>Die ungezähmte Unternehmerin</em></h2>
+    <p class="lead">
+      Klicke hier, um dir den Termin in den Kalender einzutragen. Wenn du live dabei bist, kannst du deine Fragen direkt stellen und die volle Energie des Webinars miterleben – beides gibt es in der Aufzeichnung nicht.
+    </p>
 
-      <p class="deal-lead">
-        Du hast <strong>24 Stunden</strong> Zeit, um dir diesen <strong>SPECIAL DEAL</strong> von <strong class="price-red">NUR 297 EURO</strong> zu sichern.
-      </p>
+    <p class="lead">
+      Das Webinar findet am <strong>13.08</strong> von <strong>11 bis 13 Uhr</strong> statt.
+    </p>
 
-      <div class="deal-countdown-card" id="deal-countdown-wrap">
-        <div class="countdown-label">Dein SPECIAL DEAL läuft ab in</div>
-        <div class="countdown">
-          <div class="countdown-block"><span class="countdown-num" id="deal-hours">24</span><span class="countdown-unit">Std</span></div>
-          <div class="countdown-sep">:</div>
-          <div class="countdown-block"><span class="countdown-num" id="deal-minutes">00</span><span class="countdown-unit">Min</span></div>
-          <div class="countdown-sep">:</div>
-          <div class="countdown-block"><span class="countdown-num" id="deal-seconds">00</span><span class="countdown-unit">Sek</span></div>
-        </div>
-      </div>
-      <p class="deal-countdown-done" id="deal-countdown-done">Dein persönliches 24-Stunden-Fenster ist abgelaufen.</p>
-
-      <div class="deal-cta-wrap">
-        <span class="blink-arrow" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 4v16M6 14l6 6 6-6"/>
-          </svg>
-        </span>
-        <a href="https://feminess.github.io/die-ungezaehmte-unternehmerin/" target="_blank" rel="noopener" class="cal-btn deal-btn">Jetzt Special Deal sichern</a>
-      </div>
+    <div class="cal-buttons">
+      <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Feminess%20Webinar%20%E2%80%93%20Energy%20for%20Million&dates=20260813T090000Z/20260813T110000Z&details=Dein%20Webinar-Termin%20mit%20Feminess.%20Den%20Zugangslink%20erh%C3%A4ltst%20du%20per%20E-Mail.&location=Online%20(Link%20per%20E-Mail)" target="_blank" rel="noopener" class="cal-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="4" width="18" height="18" rx="2"/>
+          <line x1="16" y1="2" x2="16" y2="6"/>
+          <line x1="8" y1="2" x2="8" y2="6"/>
+          <line x1="3" y1="10" x2="21" y2="10"/>
+        </svg>
+        Google Kalender
+      </a>
+      <a href="webinar-termin.ics" download class="cal-btn">
+        <span class="cal-btn-emoji" aria-hidden="true">📅</span>
+        Sonstige Kalender
+      </a>
     </div>
-  </section>
 
-  <!-- ── KUNDENSTIMMEN ── -->
-  <section class="testimonials-section">
-    <div class="testimonials-inner">
-      <div class="testimonials-header">
-        <span class="testimonials-kicker">Das sagen unsere Frauen</span>
-        <h2 class="testimonials-title gold-text">Echte Ergebnisse. Echte Frauen.</h2>
-      </div>
-      <div class="testimonials-grid">
-        <div class="testimonial-card mob-order-1">
-          <p class="testimonial-text">„Ich habe mit meiner Gründung damals ganz okay gestartet … Im zweiten Jahr bin ich dann hoch auf <span class="num">260.000 EURO</span>. Und jetzt, drittes Jahr, wird es über <span class="num">eine Million</span>."</p>
-          <p class="testimonial-author">Melanie Preßler</p>
-        </div>
-        <div class="testimonial-card mob-order-3">
-          <p class="testimonial-text">„Bevor ich gestartet bin, war ich bei ca. <span class="num">2.500 EURO</span> im Monat und mittlerweile mache ich monatlich <span class="num">10.000 EURO</span> bis <span class="num">15.000 EURO</span>!"</p>
-          <p class="testimonial-author">Jana Meißner</p>
-        </div>
-        <div class="testimonial-card mob-order-4">
-          <p class="testimonial-text">„Ich liebe die Zusammenarbeit mit Marina so sehr. Durch sie hat sich so viel in meinem Unternehmen erleichtert. Ich mache monatlich <span class="num">6-stellige</span> Umsätze."</p>
-          <p class="testimonial-author">Sigrid Aviana Waedt</p>
-        </div>
-        <div class="result-card testimonial-mobile-hide">
-          <span class="result-number">12.000 EURO</span>
-          <span class="result-label">1:1 Coaching (5 Monate) + 2 weitere Calls verkauft</span>
-        </div>
-        <div class="result-card testimonial-mobile-hide">
-          <span class="result-number">8.333 EURO</span>
-          <span class="result-label">4-Monatsprogramm verkauft</span>
-        </div>
-        <div class="result-card mob-order-5">
-          <span class="result-number">39.025 EURO</span>
-          <span class="result-label">Umsatz direkt während der Body Transformation Days</span>
-        </div>
-        <div class="testimonial-card testimonial-mobile-hide">
-          <p class="testimonial-text">„Mein durchschnittlicher Verdienst in den letzten 10 Jahren waren ca. <span class="num">700 EURO</span> im Monat. Ab Juli bis Dezember hatte ich Aufträge im Wert von <span class="num">4.000 EURO</span> im Monat."</p>
-          <p class="testimonial-author">Johanna Grünhagen</p>
-        </div>
-        <div class="result-card mob-order-2">
-          <span class="result-number">20.588 EURO</span>
-          <span class="result-label">Netto-Umsatz im April – Abschluss Nummer 5 in nur 6 Tagen</span>
-        </div>
-        <div class="result-card testimonial-mobile-hide">
-          <span class="result-number">8.999 EURO</span>
-          <span class="result-label">Gruppencoaching verkauft</span>
-        </div>
-      </div>
+    <span class="step-kicker">Schritt 2</span>
+    <h2>Warte nicht auf das Webinar.<br>Fang jetzt an.</h2>
+
+    <p class="lead">
+      Du bekommst hier Impulse &amp; Dinge, die ich sonst nirgends teile. Nicht später. Nicht öffentlich. Jetzt. Hier.
+    </p>
+
+    <p class="lead">
+      Du wirst sehen, wie andere Frauen schon anfangen, ihre Muster zu durchschauen. Live. Während du vielleicht noch überlegst.
+    </p>
+
+    <p class="lead">
+      Und genau dieser eine Klick? Das ist schon der erste Schritt.
+    </p>
+
+    <p class="lead">
+      Raus aus dem Kopf, in dem du sonst allein bist. Rein in einen geschützten Raum, der dich hält – ohne dass du dich erklären musst.
+    </p>
+
+    <div class="cal-buttons">
+      <a href="https://t.me/+jMPD3ni3hgo0YWU6" target="_blank" rel="noopener" class="cal-btn">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M21.05 3.16 2.7 10.3c-1.24.5-1.24 1.2-.23 1.5l4.7 1.47 1.8 5.5c.22.6.4.85.8.85.35 0 .5-.16.7-.35l1.9-1.85 4.75 3.5c.87.48 1.5.23 1.72-.8l3.12-14.7c.3-1.27-.48-1.85-1.31-1.55Zm-11.3 10.8-.4 4.2-1.6-4.9 9.4-8.5c.24-.2-.05-.32-.36-.13L8.1 12.3Z"/>
+        </svg>
+        Telegram Community beitreten
+      </a>
+    </div>
+
+    <p class="microtext">Komm rein. Bevor du wieder nur zuschaust.</p>
+
+    <span class="step-kicker">Schritt 3</span>
+    <h2>Fülle jetzt die Umfrage aus, damit wir das Webinar gezielt auf deine Wünsche und Herausforderungen anpassen können:</h2>
+
+    <div class="cal-buttons">
+      <a href="https://forms.gle/U17t8dUqjvQ7KAhs9" target="_blank" rel="noopener" class="cal-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9 4h6a1 1 0 0 1 1 1v1H8V5a1 1 0 0 1 1-1Z"/>
+          <rect x="5" y="6" width="14" height="15" rx="2"/>
+          <line x1="9" y1="12" x2="15" y2="12"/>
+          <line x1="9" y1="16" x2="15" y2="16"/>
+        </svg>
+        Zur Umfrage
+      </a>
+    </div>
+
+    <span class="step-kicker">Schritt 4</span>
+    <p class="lead">
+      Du willst noch mehr Impulse für dein Business und deine Energy for Million? Dann folge uns auch auf unseren Social-Media-Kanälen – dort teilen wir täglich Inspiration und die neuesten Updates.
+    </p>
+
+    <div class="cal-buttons cal-buttons-social">
+      <a href="https://www.instagram.com/feminess.de/" target="_blank" rel="noopener" class="cal-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="3" width="18" height="18" rx="5"/>
+          <circle cx="12" cy="12" r="4"/>
+          <circle cx="17.5" cy="6.5" r="0.6" fill="currentColor" stroke="none"/>
+        </svg>
+        Instagram
+      </a>
+      <a href="https://www.linkedin.com/in/marina-henze/" target="_blank" rel="noopener" class="cal-btn">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M20.5 2h-17A1.5 1.5 0 0 0 2 3.5v17A1.5 1.5 0 0 0 3.5 22h17a1.5 1.5 0 0 0 1.5-1.5v-17A1.5 1.5 0 0 0 20.5 2zM8 19H5V9h3zM6.5 7.7A1.7 1.7 0 1 1 6.5 4.3a1.7 1.7 0 0 1 0 3.4zM19 19h-3v-4.6c0-1.1 0-2.6-1.6-2.6s-1.8 1.2-1.8 2.5V19h-3V9h2.9v1.3h.04c.4-.8 1.4-1.6 2.9-1.6 3.1 0 3.6 2 3.6 4.6z"/>
+        </svg>
+        LinkedIn
+      </a>
+      <a href="https://www.facebook.com/groups/feminess" target="_blank" rel="noopener" class="cal-btn">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M22 12a10 10 0 1 0-11.5 9.9v-7H7.9V12h2.6V9.8c0-2.6 1.5-4 3.9-4 1.1 0 2.3.2 2.3.2v2.5h-1.3c-1.3 0-1.7.8-1.7 1.6V12h2.9l-.5 2.9h-2.4v7A10 10 0 0 0 22 12Z"/>
+        </svg>
+        Facebook Gruppe
+      </a>
+      <a href="https://www.youtube.com/Feminess" target="_blank" rel="noopener" class="cal-btn">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M23 12s0-3.4-.4-5a3 3 0 0 0-2.1-2.1C18.9 4.5 12 4.5 12 4.5s-6.9 0-8.5.4A3 3 0 0 0 1.4 7 31 31 0 0 0 1 12a31 31 0 0 0 .4 5A3 3 0 0 0 3.5 19c1.6.4 8.5.4 8.5.4s6.9 0 8.5-.4A3 3 0 0 0 22.6 17c.4-1.6.4-5 .4-5zM9.8 15.4V8.6L15.8 12z"/>
+        </svg>
+        YouTube
+      </a>
+      <a href="https://open.spotify.com/show/1DVcVOVK1JvyvUG3aQp6Qv" target="_blank" rel="noopener" class="cal-btn">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.6 14.4a.6.6 0 0 1-.8.2c-2.3-1.4-5.2-1.7-8.6-.9a.6.6 0 1 1-.3-1.2c3.7-.9 6.9-.5 9.5 1.1.3.2.4.6.2.8zm1.2-2.7a.75.75 0 0 1-1 .3c-2.6-1.6-6.6-2.1-9.7-1.1a.75.75 0 1 1-.4-1.4c3.5-1.1 7.9-.5 10.9 1.3.4.2.5.7.2 1zm.1-2.8C15.2 9 8.9 8.8 5.7 9.8a.9.9 0 1 1-.5-1.7c3.7-1.1 10.5-.9 14.6 1.5a.9.9 0 0 1-.9 1.6z"/>
+        </svg>
+        Spotify
+      </a>
     </div>
   </section>
 
@@ -656,57 +448,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </footer>
 
 </div>
-
-<script>
-(function () {
-  var STORAGE_KEY = 'feminess_deal_start_webinar_danke';
-  var DURATION_MS = 24 * 60 * 60 * 1000;
-
-  var start = localStorage.getItem(STORAGE_KEY);
-  if (!start) {
-    start = Date.now().toString();
-    localStorage.setItem(STORAGE_KEY, start);
-  }
-  var target = parseInt(start, 10) + DURATION_MS;
-
-  var elHours = document.getElementById('deal-hours');
-  var elMinutes = document.getElementById('deal-minutes');
-  var elSeconds = document.getElementById('deal-seconds');
-  var wrap = document.getElementById('deal-countdown-wrap');
-  var doneEl = document.getElementById('deal-countdown-done');
-
-  var topHours = document.getElementById('top-hours');
-  var topMinutes = document.getElementById('top-minutes');
-  var topSeconds = document.getElementById('top-seconds');
-  var topBanner = document.getElementById('top-banner');
-
-  function pad(n) { return String(n).padStart(2, '0'); }
-
-  function tick() {
-    var diff = target - Date.now();
-    if (diff <= 0) {
-      clearInterval(timer);
-      if (wrap) wrap.style.display = 'none';
-      if (doneEl) doneEl.style.display = 'block';
-      if (topBanner) topBanner.style.display = 'none';
-      return;
-    }
-    var totalSeconds = Math.floor(diff / 1000);
-    var h = pad(Math.floor(totalSeconds / 3600));
-    var m = pad(Math.floor((totalSeconds % 3600) / 60));
-    var s = pad(totalSeconds % 60);
-    elHours.textContent = h;
-    elMinutes.textContent = m;
-    elSeconds.textContent = s;
-    if (topHours) topHours.textContent = h;
-    if (topMinutes) topMinutes.textContent = m;
-    if (topSeconds) topSeconds.textContent = s;
-  }
-
-  var timer = setInterval(tick, 1000);
-  tick();
-})();
-</script>
 
 </body>
 </html>

@@ -2,10 +2,10 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//Feminess//Energy for Million//DE
 BEGIN:VEVENT
-UID:energy-for-million-20260715@feminess.de
+UID:energy-for-million-20260813@feminess.de
 DTSTAMP:20260701T000000Z
-DTSTART:20260715T090000Z
-DTEND:20260715T110000Z
+DTSTART:20260813T090000Z
+DTEND:20260813T110000Z
 SUMMARY:Feminess Webinar – Energy for Million
 DESCRIPTION:Dein Webinar-Termin mit Feminess. Den Zugangslink erhältst du per E-Mail.
 LOCATION:Online (Link per E-Mail)
