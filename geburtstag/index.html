@@ -386,13 +386,13 @@
     /* ── RESPONSIVE: TABLET ── */
     @media (max-width: 900px) {
       .hero-inner { grid-template-columns: 1fr; }
-      .hero-image { height: 45vh; order: -1; }
+      .hero-image { height: 45vh; }
       .hero-image::before {
-        background: linear-gradient(to bottom, transparent 40%, #1b5c50 100%);
+        background: linear-gradient(to bottom, #1b5c50 0%, transparent 40%);
         -webkit-mask-image: none; mask-image: none;
       }
       .hero-image::after { display: none; }
-      .hero-content { padding: 36px 40px 60px; }
+      .hero-content { padding: 36px 40px 32px; }
       .footer-inner { flex-direction: column; text-align: center; }
       .footer-links { justify-content: center; }
     }
@@ -414,8 +414,8 @@
       .banner-countdown { font-size: 16px; }
       .banner-countdown .cd-sep { margin: 0 4px; }
 
-      .hero-image { height: 44vw; }
-      .hero-content { padding: 28px 20px 40px; }
+      .hero-image { height: 60vw; }
+      .hero-content { padding: 28px 20px 24px; }
       .hero-subtitle { font-size: 17px; }
       .hero-date { font-size: 14px; }
       .popup-box { padding: 36px 24px 28px; }
