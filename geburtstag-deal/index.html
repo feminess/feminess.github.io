@@ -315,6 +315,7 @@
     @media (max-width: 900px) {
       .hero-inner { grid-template-columns: 1fr; height: auto; }
       .hero-image { height: 45vh; order: -1; }
+      .hero-image img { object-position: center 30%; }
       .hero-image::before { background: linear-gradient(to bottom, transparent 40%, var(--dark) 100%); }
       .hero-image::after { display: none; }
       .hero-content { padding: 36px 40px 60px; }
@@ -378,7 +379,10 @@
       .countdown-final { gap: 16px; }
       .countdown-final .countdown-digits { font-size: 36px; }
 
+      .guarantee-seal { font-size: 11px; padding: 12px 18px; letter-spacing: 1px; }
+
       footer { padding: 36px 20px; }
+      .footer-brand img { height: 26px !important; }
       .footer-links { gap: 20px; flex-wrap: wrap; }
     }
   </style>
