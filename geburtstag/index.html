@@ -61,10 +61,10 @@
 
     /* ── TOP BANNER ── */
     .top-banner {
-      background: var(--dark);
+      background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%);
       padding: 14px 40px;
       text-align: center;
-      border-bottom: 1px solid rgba(94,198,179,0.2);
+      border-bottom: 1px solid rgba(255,255,255,0.25);
     }
     .banner-row {
       display: flex;
@@ -77,7 +77,8 @@
       font-family: 'Avenir LT Pro', sans-serif;
       font-size: 15px;
       font-weight: 400;
-      color: var(--mid-gray);
+      color: #fff;
+      text-shadow: 0 1px 3px rgba(90,45,35,0.3);
       white-space: nowrap;
     }
     .banner-countdown {
@@ -85,6 +86,7 @@
       font-size: 19px;
       font-weight: 600;
       color: #fff;
+      text-shadow: 0 1px 3px rgba(90,45,35,0.3);
       white-space: nowrap;
     }
     .banner-countdown .cd-unit {
@@ -93,10 +95,10 @@
       font-weight: 700;
       letter-spacing: 0.5px;
       text-transform: uppercase;
-      color: var(--teal-light);
+      color: #fff;
       margin-left: 3px;
     }
-    .banner-countdown .cd-sep { color: rgba(255,255,255,0.28); margin: 0 6px; }
+    .banner-countdown .cd-sep { color: rgba(255,255,255,0.55); margin: 0 6px; }
 
     /* ── HERO ── */
     .hero { background: linear-gradient(180deg, #1b5c50 0%, #77b8c7 100%); position: relative; overflow: hidden; }
