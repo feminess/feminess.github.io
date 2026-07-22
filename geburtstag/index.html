@@ -101,7 +101,7 @@
     .banner-countdown .cd-sep { color: rgba(255,255,255,0.55); margin: 0 6px; }
 
     /* ── HERO ── */
-    .hero { background: linear-gradient(180deg, #1b5c50 0%, #77b8c7 100%); position: relative; overflow: hidden; }
+    .hero { background: #1b5c50; position: relative; overflow: hidden; }
     .hero::before {
       content: '';
       position: absolute;
@@ -130,7 +130,7 @@
     .hero-image::before {
       content: '';
       position: absolute; inset: 0;
-      background: linear-gradient(180deg, #1b5c50 0%, #77b8c7 100%);
+      background: #1b5c50;
       -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6) 18%, rgba(0,0,0,0) 38%);
       mask-image: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6) 18%, rgba(0,0,0,0) 38%);
       z-index: 1; pointer-events: none;
@@ -138,9 +138,7 @@
     .hero-image::after {
       content: '';
       position: absolute; bottom: 0; left: 0; right: 0; height: 40%;
-      background: linear-gradient(180deg, #1b5c50 0%, #77b8c7 100%);
-      background-position: bottom;
-      background-size: 100% 250%;
+      background: #1b5c50;
       -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
       mask-image: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
       z-index: 1; pointer-events: none;
