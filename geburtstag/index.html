@@ -151,9 +151,9 @@
       background: var(--gradient-rosegold);
       -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;
     }
-    .hero-subtitle { font-size: 18px; font-weight: 400; color: var(--mid-gray); margin-bottom: 20px; max-width: 540px; line-height: 1.7; }
+    .hero-subtitle { font-size: 18px; font-weight: 400; color: #fff; margin-bottom: 20px; max-width: 540px; line-height: 1.7; }
     .hero-subtitle strong { color: #fff; font-weight: 700; }
-    .hero-date { font-size: 18px; font-weight: 400; color: var(--mid-gray); margin-bottom: 32px; max-width: 520px; line-height: 1.7; }
+    .hero-date { font-size: 18px; font-weight: 400; color: #fff; margin-bottom: 32px; max-width: 520px; line-height: 1.7; }
     .hero-date strong { color: var(--teal-light); }
 
     /* ── HERO CTA ── */
@@ -162,7 +162,7 @@
     /* CTA Button (shared) */
     .btn-cta {
       display: inline-block;
-      background: var(--gradient-rosegold);
+      background: #861627;
       color: #fff;
       text-decoration: none;
       padding: 20px 48px;
@@ -180,12 +180,12 @@
     .btn-cta:hover { opacity: 0.88; transform: translateY(-1px); animation: none; }
 
     @keyframes pulse-cta {
-      0%, 100% { transform: scale(1);     box-shadow: 0 6px 28px rgba(160,104,90,0.50); }
-      50%       { transform: scale(1.05); box-shadow: 0 10px 36px rgba(160,104,90,0.65); }
+      0%, 100% { transform: scale(1);     box-shadow: 0 0 16px rgba(134,21,39,0.55), 0 6px 28px rgba(134,21,39,0.50); }
+      50%       { transform: scale(1.05); box-shadow: 0 0 28px rgba(134,21,39,0.75), 0 10px 36px rgba(134,21,39,0.65); }
     }
     @keyframes pulse-btn {
-      0%, 100% { transform: scale(1);     box-shadow: 0 6px 28px rgba(160,104,90,0.40); }
-      50%       { transform: scale(1.04); box-shadow: 0 10px 36px rgba(160,104,90,0.58); }
+      0%, 100% { transform: scale(1);     box-shadow: 0 0 14px rgba(134,21,39,0.45), 0 6px 28px rgba(134,21,39,0.40); }
+      50%       { transform: scale(1.04); box-shadow: 0 0 24px rgba(134,21,39,0.65), 0 10px 36px rgba(134,21,39,0.58); }
     }
 
     /* ── FLOATING CTA ── */
@@ -193,7 +193,7 @@
       position: fixed;
       bottom: 32px; right: 32px;
       z-index: 500;
-      background: var(--gradient-rosegold);
+      background: #861627;
       color: #fff;
       font-family: 'Montserrat', sans-serif;
       font-size: 18px;
@@ -203,7 +203,7 @@
       border-radius: 8px;
       border: none;
       cursor: pointer;
-      box-shadow: 0 6px 28px rgba(207,90,115,0.50);
+      box-shadow: 0 0 16px rgba(134,21,39,0.55), 0 6px 28px rgba(134,21,39,0.50);
       animation: pulse-cta 2.2s ease-in-out infinite;
       opacity: 0;
       pointer-events: none;
@@ -231,7 +231,7 @@
     .text-inner p strong { color: var(--teal-dark); font-weight: 700; }
     .quote-block {
       text-align: center; padding: 32px 40px; margin: 32px 0; position: relative; border-radius: 12px;
-      background: var(--gradient-rosegold);
+      background: #1b5c50;
     }
     .quote-block p { font-family: 'Montserrat', sans-serif; font-size: 18px; font-style: normal; color: #fff; line-height: 1.25; margin: 0; letter-spacing: 0.01em; }
     .gold-strong { font-weight: 700; background: var(--gradient-rosegold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
@@ -299,8 +299,8 @@
       width: 100%; cursor: pointer; border: 0; padding: 17px 24px; font-family: 'Montserrat', sans-serif;
       font-size: 18px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #fff; text-align: center;
       border-radius: 8px;
-      background: var(--gradient-rosegold);
-      box-shadow: 0 0 18px rgba(212,160,144,0.45), 0 6px 24px rgba(160,104,90,0.4);
+      background: #861627;
+      box-shadow: 0 0 18px rgba(134,21,39,0.55), 0 6px 24px rgba(134,21,39,0.4);
       animation: pulse-btn 2.2s ease-in-out infinite;
     }
     #_form_571_ ._submit:hover { opacity: 0.9; animation: none; }
@@ -639,7 +639,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         }
       });
     }
-    document.querySelectorAll('.hero-content h1, h2').forEach(wrapLetters);
+    document.querySelectorAll('.hero-content h1 em, h2').forEach(wrapLetters);
   })();
 </script>
 
