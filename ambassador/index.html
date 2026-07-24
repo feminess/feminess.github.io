@@ -103,6 +103,22 @@
     }
     .btn-hero:hover { opacity: 0.88; transform: translateY(-2px); animation: none; }
 
+    /* ── LINK-GENERATOR (Hero) ── */
+    #link-generator label { display: block; font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--teal-light); margin-bottom: 6px; }
+    #link-generator input#nameInput { font-family: 'Avenir LT Pro', sans-serif; font-size: 16px; border: 1px solid rgba(255,255,255,0.3); border-radius: 8px; background: rgba(255,255,255,0.08); color: #fff; }
+    #link-generator input#nameInput::placeholder { color: rgba(255,255,255,0.55); }
+    #link-generator input#nameInput:focus { outline: none; border-color: var(--teal-light); }
+    #link-generator #generateBtn {
+      display: inline-block; background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%);
+      color: #fff; border: none; border-radius: 8px; font-family: 'Avenir LT Pro', sans-serif;
+      font-size: 14px; font-weight: 900; letter-spacing: 2px; text-transform: uppercase; cursor: pointer; transition: opacity 0.2s, transform 0.2s;
+    }
+    #link-generator #generateBtn:hover { opacity: 0.88; transform: translateY(-2px); }
+    #link-generator #result { font-size: 15px; color: var(--mid-gray); line-height: 1.7; }
+    #link-generator #result a { color: #fff; font-weight: 700; word-break: break-all; }
+    #link-generator #result button { margin-top: 12px; background: rgba(255,255,255,0.1); color: #fff; border: 1px solid rgba(255,255,255,0.35); border-radius: 8px; padding: 10px 18px; font-family: 'Avenir LT Pro', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 1px; cursor: pointer; transition: background 0.2s; }
+    #link-generator #result button:hover { background: rgba(255,255,255,0.2); }
+
     /* ── SHARED LAYOUT ── */
     .section-label { font-size: 10px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--teal); display: flex; align-items: center; gap: 14px; margin-bottom: 12px; }
     .section-label::after { content: ''; display: block; width: 80px; height: 1px; background: var(--teal); opacity: 0.5; }
@@ -307,7 +323,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p class="hero-status-pill">Nur für unsere Community</p>
       <h1>Empfehle weiter – und schenk dir <em>100 €</em></h1>
       <p class="hero-subtitle">Du liebst, was du bei uns erlebt hast? Dann teile es. Empfiehl einer Freundin unser <strong>Webinar</strong> oder direkt <strong>„Die ungezähmte Unternehmerin"</strong> – kauft sie über deinen Link das Programm, bekommst du <strong>100 €</strong>.</p>
-      <a href="#generator" class="btn-hero">Meinen Link jetzt erstellen</a>
+
+      <div id="link-generator" style="max-width: 400px;">
+        <label for="nameInput">Dein Name:</label><br>
+        <input type="text" id="nameInput" placeholder="z. B. Erika Musterfrau" style="width: 100%; padding: 8px; margin-top: 4px;"><br><br>
+        <button id="generateBtn" style="padding: 8px 16px;">Link generieren</button>
+
+        <div id="result" style="margin-top: 20px;"></div>
+      </div>
     </div>
     <div class="hero-image">
       <img src="../webinar/Bilder/Marina_MAI2314232 Kopie.jpg" alt="Marina Henze">
@@ -328,7 +351,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <h3>Für jede Freundin, die kauft, bekommst du <em>100 €</em></h3>
       <p class="price-new">100 €</p>
       <p class="price-sub">Sobald sie über deinen Link „Die ungezähmte Unternehmerin" kauft – keine Obergrenze, wie oft du empfiehlst</p>
-      <a href="#generator" class="btn-cta on-dark">Jetzt meinen Link holen</a>
+      <a href="#link-generator" class="btn-cta on-dark">Jetzt meinen Link holen</a>
     </div>
   </div>
 </section>
@@ -342,38 +365,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p>So einfach ist das.</p>
   </div>
 </div>
-
-<!-- GENERATOR -->
-<section class="generator-section" id="generator">
-  <div class="generator-inner">
-    <p class="section-label">Schritt 1</p>
-    <h2>Erstelle deinen <em>persönlichen Link</em></h2>
-    <div class="generator-card">
-      <label for="refName">Dein Vorname</label>
-      <div class="generator-input-row">
-        <input type="text" id="refName" placeholder="z. B. Sarah" maxlength="40">
-        <button type="button" class="btn-cta" id="generateBtn">Link erstellen</button>
-      </div>
-      <div class="generator-results" id="generatorResults" hidden>
-        <div class="result-row">
-          <span class="result-label">Link zum Webinar</span>
-          <div class="result-copy">
-            <input type="text" id="linkWebinar" readonly>
-            <button type="button" class="btn-copy" data-target="linkWebinar">Kopieren</button>
-          </div>
-        </div>
-        <div class="result-row">
-          <span class="result-label">Link zu „Die ungezähmte Unternehmerin"</span>
-          <div class="result-copy">
-            <input type="text" id="linkProgramm" readonly>
-            <button type="button" class="btn-copy" data-target="linkProgramm">Kopieren</button>
-          </div>
-        </div>
-        <p class="generator-note">Teile einen der beiden Links – oder beide. Sobald eine Freundin darüber <strong>„Die ungezähmte Unternehmerin"</strong> kauft, bekommst du deine <strong>100 €</strong>.</p>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- SO FUNKTIONIERT'S -->
 <section class="benefits-section">
@@ -466,7 +457,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="final-cta">
   <div class="final-cta-inner">
     <h2>Wer fällt dir gerade <em>ein?</em></h2>
-    <a href="#generator" class="btn-cta on-dark">Meinen Link jetzt erstellen</a>
+    <a href="#link-generator" class="btn-cta on-dark">Meinen Link jetzt erstellen</a>
     <p class="final-note">Läuft noch bis <strong>13.08.2026, 23:59 Uhr</strong> · 100 € pro erfolgreicher Empfehlung · keine Obergrenze</p>
   </div>
 </section>
@@ -504,40 +495,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   function tick() { updateIds(target, idsBanner); }
   tick(); setInterval(tick, 1000);
 
-  /* ── LINK-GENERATOR ── */
-  const generateBtn = document.getElementById('generateBtn');
-  const refNameInput = document.getElementById('refName');
-  const generatorResults = document.getElementById('generatorResults');
+</script>
 
-  function slugify(raw) {
-    return raw.toLowerCase()
-      .replace(/ä/g,'ae').replace(/ö/g,'oe').replace(/ü/g,'ue').replace(/ß/g,'ss')
-      .replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');
-  }
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const input = document.getElementById("nameInput");
+    const button = document.getElementById("generateBtn");
+    const resultDiv = document.getElementById("result");
 
-  generateBtn.addEventListener('click', function() {
-    const raw = refNameInput.value.trim();
-    if (!raw) { refNameInput.focus(); return; }
-    const ref = encodeURIComponent(slugify(raw) || 'freundin');
-    document.getElementById('linkWebinar').value = 'https://feminess.github.io/webinar/?ref=' + ref;
-    document.getElementById('linkProgramm').value = 'https://feminess.github.io/die-ungezaehmte-unternehmerin/?ref=' + ref;
-    generatorResults.hidden = false;
-  });
+    button.addEventListener("click", function () {
+      const name = input.value.trim();
 
-  refNameInput.addEventListener('keydown', function(e) {
-    if (e.key === 'Enter') { e.preventDefault(); generateBtn.click(); }
-  });
+      if (!name) {
+        resultDiv.innerHTML = "❗Bitte gib deinen Namen ein.";
+        return;
+      }
 
-  document.querySelectorAll('.btn-copy').forEach(function(btn) {
-    btn.addEventListener('click', function() {
-      const target = document.getElementById(this.dataset.target);
-      target.select();
-      target.setSelectionRange(0, 99999);
-      const original = this.textContent;
-      navigator.clipboard.writeText(target.value).then(function() {
-        btn.textContent = 'Kopiert ✓';
-        setTimeout(function() { btn.textContent = original; }, 1800);
-      });
+      // Leerzeichen mit + ersetzen
+      const encodedName = encodeURIComponent(name).replace(/%20/g, "+");
+      const link = `https://feminess.github.io/webinar/?utm_source=${encodedName}`;
+
+      resultDiv.innerHTML = `
+        <p><strong>Dein persönlicher Link:</strong><br>
+        <a href="${link}" target="_blank">${link}</a></p>
+        <button onclick="navigator.clipboard.writeText('${link}').then(() => alert('✅ Link wurde kopiert!'))">📋 Link kopieren</button>
+      `;
     });
   });
 </script>
