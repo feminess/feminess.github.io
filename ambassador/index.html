@@ -343,6 +343,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
+<!-- MAIN TEXT -->
+<div class="text-section">
+  <div class="text-inner">
+    <p class="section-label">An dich</p>
+    <p>Du kennst das Gefühl: Du hast bei uns etwas erlebt, das dich wirklich weitergebracht hat – im Business, im Kopf, im Business-Mut. Und ganz automatisch denkst du an die eine Freundin, die genau das jetzt auch brauchen könnte.</p>
+    <p><span class="gold-strong">Genau dafür gibt es diese Aktion.</span> Du musst nichts verkaufen, nichts erklären, keine Überzeugungsarbeit leisten. Du teilst einfach deinen persönlichen Link – zum Webinar oder direkt zu „Die ungezähmte Unternehmerin" – und wenn deine Freundin sich für das Programm entscheidet, bekommst du <strong>100 €</strong> als Dankeschön.</p>
+    <p>So einfach ist das.</p>
+  </div>
+</div>
+
 <!-- REWARD REVEAL -->
 <section class="price-section">
   <div class="price-inner">
@@ -355,16 +365,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 </section>
-
-<!-- MAIN TEXT -->
-<div class="text-section">
-  <div class="text-inner">
-    <p class="section-label">An dich</p>
-    <p>Du kennst das Gefühl: Du hast bei uns etwas erlebt, das dich wirklich weitergebracht hat – im Business, im Kopf, im Business-Mut. Und ganz automatisch denkst du an die eine Freundin, die genau das jetzt auch brauchen könnte.</p>
-    <p><span class="gold-strong">Genau dafür gibt es diese Aktion.</span> Du musst nichts verkaufen, nichts erklären, keine Überzeugungsarbeit leisten. Du teilst einfach deinen persönlichen Link – zum Webinar oder direkt zu „Die ungezähmte Unternehmerin" – und wenn deine Freundin sich für das Programm entscheidet, bekommst du <strong>100 €</strong> als Dankeschön.</p>
-    <p>So einfach ist das.</p>
-  </div>
-</div>
 
 <!-- SO FUNKTIONIERT'S -->
 <section class="benefits-section">
@@ -513,12 +513,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       // Leerzeichen mit + ersetzen
       const encodedName = encodeURIComponent(name).replace(/%20/g, "+");
-      const link = `https://feminess.github.io/webinar/?utm_source=${encodedName}`;
+      const webinarLink = `https://feminess.github.io/webinar/?utm_source=${encodedName}`;
+      const produktLink = `https://feminess.de/produkt/die-ungezaehmte-unternehmerin/?utm_source=${encodedName}`;
 
       resultDiv.innerHTML = `
-        <p><strong>Dein persönlicher Link:</strong><br>
-        <a href="${link}" target="_blank">${link}</a></p>
-        <button onclick="navigator.clipboard.writeText('${link}').then(() => alert('✅ Link wurde kopiert!'))">📋 Link kopieren</button>
+        <p><strong>Link 1 – zum Webinar:</strong><br>
+        <a href="${webinarLink}" target="_blank">${webinarLink}</a><br>
+        <button onclick="navigator.clipboard.writeText('${webinarLink}').then(() => alert('✅ Webinar-Link wurde kopiert!'))">📋 Link kopieren</button></p>
+
+        <p style="margin-top:20px;"><strong>Link 2 – zum Programm:</strong><br>
+        <a href="${produktLink}" target="_blank">${produktLink}</a><br>
+        <button onclick="navigator.clipboard.writeText('${produktLink}').then(() => alert('✅ Programm-Link wurde kopiert!'))">📋 Link kopieren</button></p>
       `;
     });
   });
