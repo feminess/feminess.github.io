@@ -17,8 +17,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --teal:       #0f6e4b;
-      --teal-dark:  #0f6e4b;
+      --teal:       #126D4C;
+      --teal-dark:  #126D4C;
       --teal-light: var(--off-white);
       --teal-pale:  #b8ddd8;
       --rose:       #cf5a73;
@@ -97,7 +97,7 @@
       position: absolute;
       top: -80px; left: -80px;
       width: 600px; height: 600px;
-      background: radial-gradient(circle, rgba(15,110,75,0.20) 0%, transparent 60%);
+      background: radial-gradient(circle, rgba(18,109,76,0.20) 0%, transparent 60%);
       pointer-events: none;
       z-index: 1;
     }
@@ -230,7 +230,9 @@
     .text-inner p { font-size: 18px; line-height: 1.85; color: var(--warm-gray); margin-bottom: 20px; }
     .text-inner p strong { color: var(--teal-dark); font-weight: 700; }
     .quote-block {
-      text-align: center; padding: 32px 40px; margin: 32px 0; position: relative; border-radius: 12px;
+      text-align: center; padding: 32px 40px; margin: 32px 0;
+      position: relative; left: 50%; right: 50%;
+      width: 100vw; margin-left: -50vw; margin-right: -50vw;
       background: #1b5c50;
     }
     .quote-block p { font-family: 'Montserrat', sans-serif; font-size: 18px; font-style: normal; color: #fff; line-height: 1.25; margin: 0; letter-spacing: 0.01em; }
@@ -243,7 +245,7 @@
     .fuer-dich-inner h2 { text-align: center; margin-bottom: 56px; }
     .fuer-dich-stack { display: flex; flex-direction: column; gap: 20px; }
     .fuer-dich-box { border-radius: 12px; padding: 32px 36px; }
-    .fuer-dich-box.ja { background: rgba(15,110,75,0.10); border: 1px solid rgba(15,110,75,0.20); }
+    .fuer-dich-box.ja { background: rgba(18,109,76,0.10); border: 1px solid rgba(18,109,76,0.20); }
     .fuer-dich-box.nein { background: rgba(207,90,115,0.07); border: 1px solid rgba(207,90,115,0.20); }
     .fuer-dich-box-header { display: flex; align-items: center; gap: 10px; font-size: 18px; font-weight: 700; letter-spacing: 1px; margin-bottom: 20px; }
     .fuer-dich-box.ja .fuer-dich-box-header { color: var(--teal-dark); }
@@ -274,7 +276,7 @@
     .final-note { font-size: 18px; color: var(--mid-gray); margin-top: 28px; line-height: 1.6; }
 
     /* ── FOOTER ── */
-    footer { background: var(--black); padding: 48px 40px; border-top: 1px solid rgba(15,110,75,0.1); }
+    footer { background: var(--black); padding: 48px 40px; border-top: 1px solid rgba(18,109,76,0.1); }
     .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 24px; }
     .footer-links { display: flex; gap: 40px; }
     .footer-links a { font-size: 18px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--mid-gray); text-decoration: none; transition: color 0.2s; }
