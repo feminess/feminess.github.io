@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NQMQT7QH');</script>
+  <!-- End Google Tag Manager -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Empfehlen lohnt sich – 100 € für dich | Feminess</title>
+  <link rel="icon" href="https://feminess.de/wp-content/uploads/cropped-favicon@2x-1-32x32.png" sizes="32x32">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+  <style>
+    @font-face {
+      font-family: 'Avenir LT Pro';
+      src: url('https://feminess.de/wp-content/uploads/AvenirLTPro-Book.woff2') format('woff2');
+      font-weight: 400; font-style: normal;
+    }
+    @font-face {
+      font-family: 'Avenir LT Pro';
+      src: url('https://feminess.de/wp-content/uploads/Avenir-LT-Pro-85-Heavy.woff2') format('woff2');
+      font-weight: 700; font-style: normal;
+    }
+
+    :root {
+      --teal:       #257c6c;
+      --teal-dark:  #1b5c50;
+      --teal-light: var(--off-white);
+      --teal-pale:  #b8ddd8;
+      --rose:       #cf5a73;
+      --rose-light: #e8a0b0;
+      --sand:       #c2ab8d;
+      --sand-light: var(--off-white);
+      --black:      #070808;
+      --dark:       #0d2420;
+      --off-white:  #f8f6f2;
+      --cream:      #f0f5f4;
+      --beige:      #ddecea;
+      --warm-gray:  #5a7a74;
+      --mid-gray:   #9ab8b4;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    em, i { font-style: normal; }
+    html { scroll-behavior: smooth; overflow-x: hidden; }
+    body { overflow-x: hidden; }
+
+    body {
+      font-family: 'Avenir LT Pro', sans-serif;
+      font-size: 22px;
+      line-height: 1.75;
+      background: var(--off-white);
+      color: #1b5c50;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── TOP BANNER ── */
+    .top-banner { background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%); padding: 14px 40px; text-align: center; border-bottom: 1px solid rgba(13,36,32,0.12); }
+    .banner-row { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: center; gap: 10px; }
+    .banner-text { font-family: 'Avenir LT Pro', sans-serif; font-size: 15px; font-weight: 400; color: rgba(13,36,32,0.72); white-space: nowrap; }
+    .banner-countdown { font-family: 'Cormorant Garamond', serif; font-size: 19px; font-weight: 600; color: var(--dark); white-space: nowrap; }
+    .banner-countdown .cd-unit { font-family: 'Avenir LT Pro', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: rgba(13,36,32,0.6); margin-left: 3px; }
+    .banner-countdown .cd-sep { color: rgba(13,36,32,0.3); margin: 0 6px; }
+
+    /* ── HERO ── */
+    .hero { background: #1b5c50; position: relative; overflow: hidden; }
+    .hero::before {
+      content: ''; position: absolute; top: -80px; right: -80px; left: auto; width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(207,90,115,0.18) 0%, transparent 60%); pointer-events: none; z-index: 1;
+    }
+    .hero-inner { display: grid; grid-template-columns: 48fr 52fr; min-height: 780px; position: relative; z-index: 2; }
+    .hero-content { padding: 40px 56px 48px 80px; display: flex; flex-direction: column; justify-content: center; }
+    .hero-image { position: relative; overflow: hidden; }
+    .hero-image img { width: 100%; height: 100%; object-fit: cover; object-position: center 70%; display: block; filter: brightness(0.92) saturate(0.9); }
+    .hero-image::before { content: ''; position: absolute; inset: 0; background: linear-gradient(to right, #1b5c50 0%, rgba(27,92,80,0.55) 18%, transparent 38%); z-index: 1; pointer-events: none; }
+    .hero-image::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 40%; background: linear-gradient(to top, var(--dark) 0%, transparent 100%); z-index: 1; pointer-events: none; }
+    .hero-tilt { position: absolute; bottom: -1px; left: 0; width: 100%; overflow: hidden; line-height: 0; z-index: 3; }
+    .hero-tilt svg { display: block; width: 100%; height: 56px; }
+
+    .hero-status-pill {
+      display: inline-flex; align-items: center; gap: 8px; width: fit-content;
+      background: rgba(37,124,108,0.18); border: 1px solid rgba(94,198,179,0.4);
+      color: var(--teal-light); font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+      padding: 8px 18px; border-radius: 999px; margin-bottom: 16px;
+    }
+    .hero-status-pill::before { content: '♥'; font-weight: 900; }
+
+    .hero-content h1 { font-family: 'Cormorant Garamond', serif; font-size: 58px; font-weight: 400; line-height: 1.08; letter-spacing: 0.5px; margin-bottom: 16px; color: #fff; }
+    .hero-content h1 em { font-style: normal; font-weight: 600; background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .hero-subtitle { font-size: 22px; font-weight: 400; color: var(--mid-gray); margin-bottom: 28px; max-width: 540px; line-height: 1.7; }
+    .hero-subtitle strong { color: #fff; font-weight: 700; }
+
+    .btn-hero {
+      display: inline-block; background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%);
+      color: #fff; border: none; padding: 20px 48px; border-radius: 8px; font-family: 'Avenir LT Pro', sans-serif;
+      font-size: 14px; font-weight: 900; letter-spacing: 2px; text-transform: uppercase; cursor: pointer;
+      transition: opacity 0.2s, transform 0.2s; text-decoration: none; width: fit-content; animation: pulse-btn 2.2s ease-in-out infinite;
+    }
+    .btn-hero:hover { opacity: 0.88; transform: translateY(-2px); animation: none; }
+
+    /* ── SHARED LAYOUT ── */
+    .section-label { font-size: 10px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--teal); display: flex; align-items: center; gap: 14px; margin-bottom: 12px; }
+    .section-label::after { content: ''; display: block; width: 80px; height: 1px; background: var(--teal); opacity: 0.5; }
+    h2 { font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 400; color: #1b5c50; line-height: 1.15; margin-bottom: 8px; letter-spacing: -0.5px; }
+    h2 em { font-style: normal; font-weight: 600; background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+
+    .btn-cta {
+      display: inline-block; background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%);
+      color: #fff; text-decoration: none; padding: 18px 40px; border-radius: 8px; font-family: 'Avenir LT Pro', sans-serif;
+      font-size: 14px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; transition: opacity 0.2s, transform 0.15s;
+      border: none; cursor: pointer;
+    }
+    .btn-cta:hover { opacity: 0.88; transform: translateY(-1px); }
+
+    /* ── GENERATOR ── */
+    .generator-section { background: var(--off-white); border-top: 2px solid var(--teal-pale); padding: 96px 0; border-bottom: 1px solid var(--beige); }
+    .generator-inner { max-width: 720px; margin: 0 auto; padding: 0 40px; text-align: center; }
+    .generator-inner .section-label { justify-content: center; }
+    .generator-inner h2 { margin-bottom: 40px; }
+    .generator-card { background: #fff; border: 1px solid var(--beige); border-radius: 20px; padding: 44px 40px; text-align: left; box-shadow: 0 8px 32px rgba(13,36,32,0.06); }
+    .generator-card label { display: block; font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--teal-dark); margin-bottom: 10px; }
+    .generator-input-row { display: flex; gap: 12px; flex-wrap: wrap; }
+    .generator-input-row input[type="text"] {
+      flex: 1 1 220px; font-family: 'Avenir LT Pro', sans-serif; font-size: 18px; padding: 16px 18px;
+      border: 1px solid var(--beige); border-radius: 8px; background: var(--off-white); color: #1b5c50;
+    }
+    .generator-input-row input[type="text"]:focus { outline: none; border-color: var(--teal); }
+    .generator-results { margin-top: 32px; padding-top: 28px; border-top: 1px solid var(--beige); }
+    .result-row { margin-bottom: 20px; }
+    .result-label { display: block; font-size: 13px; font-weight: 700; color: var(--warm-gray); margin-bottom: 8px; }
+    .result-copy { display: flex; gap: 10px; }
+    .result-copy input[type="text"] {
+      flex: 1; font-family: 'Avenir LT Pro', sans-serif; font-size: 15px; padding: 12px 14px;
+      border: 1px solid var(--beige); border-radius: 8px; background: var(--cream); color: var(--teal-dark);
+    }
+    .btn-copy {
+      flex-shrink: 0; background: var(--teal-dark); color: #fff; border: none; border-radius: 8px;
+      padding: 0 20px; font-family: 'Avenir LT Pro', sans-serif; font-size: 13px; font-weight: 700;
+      letter-spacing: 1px; text-transform: uppercase; cursor: pointer; transition: background 0.2s;
+    }
+    .btn-copy:hover { background: var(--teal); }
+    .generator-note { font-size: 17px; color: var(--warm-gray); line-height: 1.7; margin-top: 8px; }
+    .generator-note strong { color: #1b5c50; }
+
+    /* ── TEXT ── */
+    .text-section { background: #fff; padding: 88px 0; border-bottom: 1px solid var(--beige); }
+    .text-inner { max-width: 740px; margin: 0 auto; padding: 0 40px; }
+    .text-section .section-label { margin-bottom: 36px; }
+    .text-inner p { font-size: 22px; line-height: 1.85; color: var(--warm-gray); margin-bottom: 20px; }
+    .text-inner p strong { color: #1b5c50; font-weight: 700; }
+    .gold-strong { font-weight: 700; background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+
+    /* ── SO FUNKTIONIERTS (BENEFITS) ── */
+    .benefits-section { background: var(--off-white); border-top: 2px solid var(--teal-pale); padding: 100px 0; position: relative; overflow: hidden; }
+    .benefits-inner { max-width: 1100px; margin: 0 auto; padding: 0 40px; position: relative; z-index: 2; }
+    .benefits-header { text-align: center; margin-bottom: 64px; }
+    .benefits-header h2 { color: #1b5c50; }
+    .benefits-section .section-label { color: var(--teal); }
+    .benefits-section .section-label::after { background: var(--teal); }
+    .benefits-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 52px; }
+    .benefit-card { background: #1b5c50; border: none; border-radius: 16px; padding: 32px 32px 32px 28px; display: flex; gap: 18px; align-items: flex-start; position: relative; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; box-shadow: 0 4px 20px rgba(13,36,32,0.18); }
+    .benefit-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(13,36,32,0.28); }
+    .benefit-num { display: block; font-family: 'Cormorant Garamond', serif; font-size: 72px; font-weight: 400; color: rgba(255,255,255,0.32); line-height: 1; flex-shrink: 0; width: 60px; text-align: left; align-self: flex-start; user-select: none; }
+    .benefit-body h3 { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 400; color: #fff; margin-bottom: 10px; }
+    .benefit-body p { font-size: 18px; color: rgba(255,255,255,0.82); margin: 0; line-height: 1.7; }
+    .benefit-body p strong { color: #fff; font-weight: 700; }
+
+    /* ── BEDINGUNGEN ── */
+    .rules-section { background: #fff; padding: 96px 0; border-top: 2px solid var(--teal-pale); border-bottom: 1px solid var(--beige); }
+    .rules-inner { max-width: 760px; margin: 0 auto; padding: 0 40px; }
+    .rules-inner h2 { text-align: center; margin-bottom: 48px; }
+    .rules-box { background: rgba(94,198,179,0.10); border: 1px solid rgba(37,124,108,0.20); border-radius: 12px; padding: 36px 40px; }
+    .rules-list { list-style: none; display: flex; flex-direction: column; gap: 16px; }
+    .rules-list li { position: relative; padding-left: 30px; font-size: 20px; color: var(--warm-gray); line-height: 1.7; }
+    .rules-list li::before { content: '✓'; position: absolute; left: 0; top: 2px; font-size: 15px; font-weight: 700; color: var(--teal-dark); }
+    .rules-list li strong { color: #1b5c50; }
+
+    /* ── PRICE / REWARD REVEAL ── */
+    .price-section { background: linear-gradient(135deg, var(--teal-dark) 0%, var(--dark) 100%); padding: 96px 0; position: relative; overflow: hidden; text-align: center; }
+    .price-section::before { content: ''; position: absolute; top: -100px; left: 50%; transform: translateX(-50%); width: 700px; height: 700px; background: radial-gradient(circle, rgba(207,90,115,0.10) 0%, transparent 65%); }
+    .price-inner { max-width: 620px; margin: 0 auto; padding: 0 40px; position: relative; z-index: 1; }
+    .price-eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--teal-light); margin-bottom: 18px; }
+    .price-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(212,160,144,0.35); border-radius: 20px; padding: 48px 40px; }
+    .price-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 400; color: #fff; margin-bottom: 22px; }
+    .price-card h3 em { font-style: normal; font-weight: 600; background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .price-new { font-family: 'Cormorant Garamond', serif; font-size: 84px; font-weight: 600; color: #fff; line-height: 1; margin-bottom: 6px; background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .price-sub { font-size: 16px; color: var(--mid-gray); margin-bottom: 32px; }
+
+    /* ── FAQ ── */
+    .faq-section { background: var(--off-white); padding: 96px 0; border-top: 2px solid var(--teal-pale); }
+    .faq-inner { max-width: 800px; margin: 0 auto; padding: 0 40px; }
+    .faq-item { border-bottom: 1px solid var(--beige); }
+    .faq-item summary { cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 26px 0; font-family: 'Cormorant Garamond', serif; font-size: 24px; color: #1b5c50; }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after { content: '+'; flex-shrink: 0; font-size: 28px; color: var(--teal); transition: transform 0.2s ease; }
+    .faq-item[open] summary::after { content: '–'; }
+    .faq-answer { font-size: 19px; color: var(--warm-gray); line-height: 1.8; padding: 0 0 26px; max-width: 680px; }
+    .faq-answer strong { color: #1b5c50; }
+
+    /* ── FINAL CTA ── */
+    .final-cta { background: linear-gradient(135deg, var(--teal-dark) 0%, var(--dark) 100%); padding: 110px 0; position: relative; overflow: hidden; text-align: center; }
+    .final-cta::before { content: ''; position: absolute; top: -150px; left: 50%; transform: translateX(-50%); width: 800px; height: 800px; background: radial-gradient(circle, rgba(207,90,115,0.08) 0%, transparent 60%); pointer-events: none; }
+    .final-cta-inner { max-width: 600px; margin: 0 auto; padding: 0 40px; position: relative; z-index: 1; }
+    .final-cta h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 3vw, 40px); font-weight: 400; color: #fff; line-height: 1.2; margin-bottom: 16px; }
+    .final-cta h2 em { font-style: normal; background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .final-note { font-size: 16px; color: var(--mid-gray); margin-top: 28px; line-height: 1.6; max-width: 480px; margin-left: auto; margin-right: auto; }
+    .final-note strong { color: #fff; }
+
+    /* ── FOOTER ── */
+    footer { background: var(--black); padding: 48px 40px; border-top: 1px solid rgba(94,198,179,0.1); }
+    .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 24px; }
+    .footer-links { display: flex; gap: 40px; }
+    .footer-links a { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--mid-gray); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--teal-light); }
+    .footer-copy { font-size: 11px; color: var(--warm-gray); opacity: 0.7; }
+
+    /* ── RESPONSIVE: TABLET ── */
+    @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr; height: auto; }
+      .hero-image { height: 45vh; order: -1; }
+      .hero-image img { object-position: center 30%; }
+      .hero-image::before { background: linear-gradient(to bottom, transparent 40%, var(--dark) 100%); }
+      .hero-image::after { display: none; }
+      .hero-content { padding: 36px 40px 60px; }
+      .benefits-grid { grid-template-columns: 1fr; }
+      .footer-inner { flex-direction: column; text-align: center; }
+      .footer-links { justify-content: center; }
+    }
+
+    /* ── RESPONSIVE: MOBILE ── */
+    @media (max-width: 600px) {
+      body { font-size: 16px; }
+      h2 { font-size: 30px !important; }
+      .hero-content h1 { font-size: 38px !important; }
+
+      .text-inner, .benefits-inner, .rules-inner, .price-inner, .faq-inner, .generator-inner, .final-cta-inner { padding-left: 20px; padding-right: 20px; }
+      .text-section, .benefits-section, .rules-section, .faq-section, .generator-section { padding: 64px 0; }
+      .final-cta, .price-section { padding: 72px 0; }
+
+      .top-banner { padding: 12px 20px; }
+      .banner-row { gap: 6px 8px; }
+      .banner-text { font-size: 13px; }
+      .banner-countdown { font-size: 16px; }
+      .banner-countdown .cd-sep { margin: 0 4px; }
+
+      .hero-image { height: 44vw; }
+      .hero-content { padding: 28px 20px 40px; }
+      .hero-subtitle { font-size: 17px; }
+      .btn-hero { padding: 16px 28px; font-size: 13px; width: 100%; text-align: center; }
+
+      .generator-card { padding: 28px 22px; }
+      .generator-input-row { flex-direction: column; }
+      .generator-input-row .btn-cta { width: 100%; text-align: center; }
+      .result-copy { flex-direction: column; }
+      .btn-copy { padding: 12px 20px; width: 100%; }
+
+      .benefits-grid { gap: 16px; }
+      .benefit-card { padding: 24px 20px; gap: 14px; }
+      .benefit-num { width: 40px; font-size: 44px; }
+
+      .rules-box { padding: 24px 20px; }
+      .rules-list li { font-size: 18px; }
+
+      .price-new { font-size: 56px; }
+
+      .faq-item summary { font-size: 19px; padding: 20px 0; }
+      .faq-answer { font-size: 17px; padding-bottom: 20px; }
+
+      .btn-cta { padding: 17px 28px; font-size: 13px; width: 100%; text-align: center; }
+
+      footer { padding: 36px 20px; }
+      .footer-links { gap: 20px; flex-wrap: wrap; }
+    }
+  </style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NQMQT7QH"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- TOP BANNER -->
+<div class="top-banner">
+  <div class="banner-row">
+    <span class="banner-text">Die Empfehlungsaktion endet in</span>
+    <span class="banner-countdown">
+      <span id="b-days">00</span><span class="cd-unit">Tage</span>
+      <span class="cd-sep">:</span>
+      <span id="b-hours">00</span><span class="cd-unit">Std</span>
+      <span class="cd-sep">:</span>
+      <span id="b-minutes">00</span><span class="cd-unit">Min</span>
+      <span class="cd-sep">:</span>
+      <span id="b-seconds">00</span><span class="cd-unit">Sek</span>
+    </span>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <p class="hero-status-pill">Nur für unsere Community</p>
+      <h1>Empfehle weiter – und schenk dir <em>100 €</em></h1>
+      <p class="hero-subtitle">Du liebst, was du bei uns erlebt hast? Dann teile es. Empfiehl einer Freundin unser <strong>Webinar</strong> oder direkt <strong>„Die ungezähmte Unternehmerin"</strong> – kauft sie über deinen Link das Programm, bekommst du <strong>100 €</strong>.</p>
+      <a href="#generator" class="btn-hero">Meinen Link jetzt erstellen</a>
+    </div>
+    <div class="hero-image">
+      <img src="../webinar/Bilder/Marina_MAI2314232 Kopie.jpg" alt="Marina Henze">
+    </div>
+  </div>
+  <div class="hero-tilt">
+    <svg viewBox="0 0 1000 56" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,56 L1000,0 L1000,56 Z" fill="#f8f6f2"/>
+    </svg>
+  </div>
+</section>
+
+<!-- REWARD REVEAL -->
+<section class="price-section">
+  <div class="price-inner">
+    <p class="price-eyebrow">Deine Prämie pro erfolgreicher Empfehlung</p>
+    <div class="price-card">
+      <h3>Für jede Freundin, die kauft, bekommst du <em>100 €</em></h3>
+      <p class="price-new">100 €</p>
+      <p class="price-sub">Sobald sie über deinen Link „Die ungezähmte Unternehmerin" kauft – keine Obergrenze, wie oft du empfiehlst</p>
+      <a href="#generator" class="btn-cta on-dark">Jetzt meinen Link holen</a>
+    </div>
+  </div>
+</section>
+
+<!-- MAIN TEXT -->
+<div class="text-section">
+  <div class="text-inner">
+    <p class="section-label">An dich</p>
+    <p>Du kennst das Gefühl: Du hast bei uns etwas erlebt, das dich wirklich weitergebracht hat – im Business, im Kopf, im Business-Mut. Und ganz automatisch denkst du an die eine Freundin, die genau das jetzt auch brauchen könnte.</p>
+    <p><span class="gold-strong">Genau dafür gibt es diese Aktion.</span> Du musst nichts verkaufen, nichts erklären, keine Überzeugungsarbeit leisten. Du teilst einfach deinen persönlichen Link – zum Webinar oder direkt zu „Die ungezähmte Unternehmerin" – und wenn deine Freundin sich für das Programm entscheidet, bekommst du <strong>100 €</strong> als Dankeschön.</p>
+    <p>So einfach ist das.</p>
+  </div>
+</div>
+
+<!-- GENERATOR -->
+<section class="generator-section" id="generator">
+  <div class="generator-inner">
+    <p class="section-label">Schritt 1</p>
+    <h2>Erstelle deinen <em>persönlichen Link</em></h2>
+    <div class="generator-card">
+      <label for="refName">Dein Vorname</label>
+      <div class="generator-input-row">
+        <input type="text" id="refName" placeholder="z. B. Sarah" maxlength="40">
+        <button type="button" class="btn-cta" id="generateBtn">Link erstellen</button>
+      </div>
+      <div class="generator-results" id="generatorResults" hidden>
+        <div class="result-row">
+          <span class="result-label">Link zum Webinar</span>
+          <div class="result-copy">
+            <input type="text" id="linkWebinar" readonly>
+            <button type="button" class="btn-copy" data-target="linkWebinar">Kopieren</button>
+          </div>
+        </div>
+        <div class="result-row">
+          <span class="result-label">Link zu „Die ungezähmte Unternehmerin"</span>
+          <div class="result-copy">
+            <input type="text" id="linkProgramm" readonly>
+            <button type="button" class="btn-copy" data-target="linkProgramm">Kopieren</button>
+          </div>
+        </div>
+        <p class="generator-note">Teile einen der beiden Links – oder beide. Sobald eine Freundin darüber <strong>„Die ungezähmte Unternehmerin"</strong> kauft, bekommst du deine <strong>100 €</strong>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SO FUNKTIONIERT'S -->
+<section class="benefits-section">
+  <div class="benefits-inner">
+    <div class="benefits-header">
+      <p class="section-label" style="justify-content:center;">So einfach geht's</p>
+      <h2>In drei Schritten zu deinen <em>100 €</em></h2>
+    </div>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <div class="benefit-num">1</div>
+        <div class="benefit-body">
+          <h3>Link erstellen</h3>
+          <p>Trag oben deinen Namen ein und hol dir deinen persönlichen Empfehlungslink.</p>
+        </div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-num">2</div>
+        <div class="benefit-body">
+          <h3>Mit Freundinnen teilen</h3>
+          <p>Schick den Link an Frauen, die bereit für Veränderung in ihrem Business sind – per WhatsApp, Mail oder Story.</p>
+        </div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-num">3</div>
+        <div class="benefit-body">
+          <h3>100 € kassieren</h3>
+          <p>Kauft sie über deinen Link „Die ungezähmte Unternehmerin", bekommst du deine Prämie.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BEDINGUNGEN -->
+<section class="rules-section">
+  <div class="rules-inner">
+    <p class="section-label" style="justify-content:center;">Das musst du wissen</p>
+    <h2>Die Bedingungen im <em>Überblick</em></h2>
+    <div style="height:16px;"></div>
+    <div class="rules-box">
+      <ul class="rules-list">
+        <li>Deine <strong>100 €</strong> gibt es, sobald eine von dir geworbene Freundin über deinen persönlichen Link <strong>„Die ungezähmte Unternehmerin"</strong> kauft.</li>
+        <li>Ob deine Freundin vorher nur das Webinar besucht oder direkt das Programm bucht, spielt keine Rolle – zählt tut der Kauf.</li>
+        <li>Du kannst <strong>so oft empfehlen, wie du möchtest</strong> – für jede Freundin, die kauft, gibt es 100 € on top.</li>
+        <li>Die Aktion läuft bis zum <strong>13.08.2026, 23:59 Uhr</strong>.</li>
+        <li>Nach dem bestätigten Kauf melden wir uns persönlich bei dir, um die Auszahlung deiner Prämie mit dir abzustimmen.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="faq-inner">
+    <h2 style="margin-bottom:40px;">Häufige <em>Fragen</em></h2>
+
+    <details class="faq-item">
+      <summary>Wie erkennt ihr, dass meine Freundin von mir kommt?</summary>
+      <p class="faq-answer">Über deinen persönlichen Link, den du oben mit deinem Namen erstellst. Teile diesen Link statt der normalen Seiten-URL – so wissen wir, dass deine Freundin über dich zu uns gefunden hat.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Bekomme ich auch etwas, wenn meine Freundin nur das Webinar besucht?</summary>
+      <p class="faq-answer">Die 100 € gibt es erst bei einem tatsächlichen Kauf von „Die ungezähmte Unternehmerin". Ob deine Freundin vorher das Webinar gesehen hat oder direkt einsteigt, spielt dabei keine Rolle.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Wie und wann bekomme ich meine 100 €?</summary>
+      <p class="faq-answer">Sobald der Kauf deiner Freundin bei uns bestätigt ist, melden wir uns persönlich bei dir und klären mit dir gemeinsam, wie du deine Prämie erhältst.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Gibt es eine Grenze, wie oft ich empfehlen kann?</summary>
+      <p class="faq-answer">Nein. Du kannst so viele Freundinnen einladen, wie du möchtest – für jede einzelne, die über deinen Link kauft, bekommst du 100 €.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Bis wann kann ich empfehlen?</summary>
+      <p class="faq-answer">Die Aktion läuft bis <strong>13.08.2026, 23:59 Uhr</strong>. Danach zählen keine neuen Empfehlungen mehr für diese Aktion.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Meine Freundin hat gekauft, aber ohne meinen Link erwähnt, dass ich sie empfohlen habe – was jetzt?</summary>
+      <p class="faq-answer">Schreib uns in dem Fall kurz an <a href="mailto:marketing@feminess.de" style="color:var(--teal-dark); font-weight:700;">marketing@feminess.de</a> mit dem Namen deiner Freundin, wir prüfen das gerne manuell. Am einfachsten und sichersten ist es aber, immer deinen persönlichen Link zu teilen.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Muss ich selbst schon Kundin sein, um mitzumachen?</summary>
+      <p class="faq-answer">Nein – jede Frau aus unserer Community, ob Webinar-Teilnehmerin oder Kundin, kann mitmachen und empfehlen.</p>
+    </details>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="final-cta-inner">
+    <h2>Wer fällt dir gerade <em>ein?</em></h2>
+    <a href="#generator" class="btn-cta on-dark">Meinen Link jetzt erstellen</a>
+    <p class="final-note">Läuft noch bis <strong>13.08.2026, 23:59 Uhr</strong> · 100 € pro erfolgreicher Empfehlung · keine Obergrenze</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand"><img src="../webinar/Bilder/Logo-rosegoldverlauf-rgb.png" alt="Feminess" style="height:36px; width:auto;"></div>
+    <div class="footer-links">
+      <a href="https://feminess.github.io/Datenschutz/">Datenschutzerklärung</a>
+      <a href="https://feminess.github.io/Impressum/">Impressum</a>
+    </div>
+    <p class="footer-copy">© 2026 FEMINESS – MARINA HENZE</p>
+  </div>
+</footer>
+
+<script>
+  /* ── COUNTDOWN: 13.08.2026 23:59 Uhr CEST = 21:59 UTC ── */
+  const target = new Date('2026-08-13T21:59:00Z');
+  const idsBanner = [['b-days','b-hours','b-minutes','b-seconds']];
+  function pad(n) { return String(n).padStart(2,'0'); }
+  function updateIds(tgt, idSets) {
+    const diff = tgt - new Date();
+    const d = diff > 0 ? Math.floor(diff/86400000) : 0;
+    const h = diff > 0 ? Math.floor((diff%86400000)/3600000) : 0;
+    const m = diff > 0 ? Math.floor((diff%3600000)/60000) : 0;
+    const s = diff > 0 ? Math.floor((diff%60000)/1000) : 0;
+    idSets.forEach(([dEl,hEl,mEl,sEl]) => {
+      document.getElementById(dEl).textContent = pad(d);
+      document.getElementById(hEl).textContent = pad(h);
+      document.getElementById(mEl).textContent = pad(m);
+      document.getElementById(sEl).textContent = pad(s);
+    });
+  }
+  function tick() { updateIds(target, idsBanner); }
+  tick(); setInterval(tick, 1000);
+
+  /* ── LINK-GENERATOR ── */
+  const generateBtn = document.getElementById('generateBtn');
+  const refNameInput = document.getElementById('refName');
+  const generatorResults = document.getElementById('generatorResults');
+
+  function slugify(raw) {
+    return raw.toLowerCase()
+      .replace(/ä/g,'ae').replace(/ö/g,'oe').replace(/ü/g,'ue').replace(/ß/g,'ss')
+      .replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');
+  }
+
+  generateBtn.addEventListener('click', function() {
+    const raw = refNameInput.value.trim();
+    if (!raw) { refNameInput.focus(); return; }
+    const ref = encodeURIComponent(slugify(raw) || 'freundin');
+    document.getElementById('linkWebinar').value = 'https://feminess.github.io/webinar/?ref=' + ref;
+    document.getElementById('linkProgramm').value = 'https://feminess.github.io/die-ungezaehmte-unternehmerin/?ref=' + ref;
+    generatorResults.hidden = false;
+  });
+
+  refNameInput.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') { e.preventDefault(); generateBtn.click(); }
+  });
+
+  document.querySelectorAll('.btn-copy').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      const target = document.getElementById(this.dataset.target);
+      target.select();
+      target.setSelectionRange(0, 99999);
+      const original = this.textContent;
+      navigator.clipboard.writeText(target.value).then(function() {
+        btn.textContent = 'Kopiert ✓';
+        setTimeout(function() { btn.textContent = original; }, 1800);
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
