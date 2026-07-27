@@ -276,23 +276,23 @@
     .fuer-dich-list li strong { color: var(--teal-dark); }
 
     /* ── FINAL CTA ── */
-    .final-cta { background: var(--teal-dark); padding: 110px 0; position: relative; overflow: hidden; }
+    .final-cta { background: #fff; padding: 110px 0; position: relative; overflow: hidden; }
     .final-cta::before {
       content: ''; position: absolute; top: -150px; left: 50%; transform: translateX(-50%);
       width: 800px; height: 800px; background: radial-gradient(circle, rgba(207,90,115,0.08) 0%, transparent 60%); pointer-events: none;
     }
     .final-cta-portrait {
       width: 140px; height: 140px; object-fit: cover; object-position: center top; border-radius: 50%;
-      border: 3px solid rgba(255,255,255,0.25); display: block; margin: 0 auto 28px;
-      box-shadow: 0 0 0 8px rgba(207,90,115,0.12), 0 16px 48px rgba(0,0,0,0.3);
+      border: 3px solid var(--teal-dark); display: block; margin: 0 auto 28px;
+      box-shadow: 0 0 0 8px rgba(18,109,76,0.12), 0 16px 48px rgba(0,0,0,0.15);
       position: relative; z-index: 1;
     }
     .final-cta-inner { max-width: 600px; margin: 0 auto; padding: 0 40px; text-align: center; position: relative; z-index: 1; }
-    .final-cta h2 { line-height: 1.2; margin-bottom: 16px; color: #fff; }
+    .final-cta h2 { line-height: 1.2; margin-bottom: 16px; color: var(--teal-dark); }
     .countdown-final { display: flex; justify-content: center; gap: 28px; margin: 0 0 40px; align-items: flex-end; }
-    .countdown-final .countdown-digits { font-family: 'Montserrat', sans-serif; font-size: 18px; color: #fff; line-height: 1; letter-spacing: -1px; display: block; }
-    .countdown-final .countdown-label { display: block; font-size: 18px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-top: 4px; }
-    .final-note { font-size: 18px; color: rgba(255,255,255,0.6); margin-top: 28px; line-height: 1.6; }
+    .countdown-final .countdown-digits { font-family: 'Montserrat', sans-serif; font-size: 18px; color: var(--teal-dark); line-height: 1; letter-spacing: -1px; display: block; }
+    .countdown-final .countdown-label { display: block; font-size: 18px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--warm-gray); margin-top: 4px; }
+    .final-note { font-size: 18px; color: var(--warm-gray); margin-top: 28px; line-height: 1.6; }
 
     /* ── FOOTER ── */
     footer { background: var(--black); padding: 48px 40px; border-top: 1px solid rgba(18,109,76,0.1); }
