@@ -26,12 +26,12 @@
       --sand:       #c2ab8d;
       --sand-light: var(--off-white);
       --black:      #070808;
-      --dark:       #1b5c50;
+      --dark:       #126D4C;
       --off-white:  #f8f6f2;
       --cream:      #f0f5f4;
       --beige:      #ddecea;
-      --warm-gray:  #1b5c50;
-      --mid-gray:   #1b5c50;
+      --warm-gray:  #0d4b35;
+      --mid-gray:   #126D4C;
       --gradient-rosegold: linear-gradient(90deg, #f0ccc0 0%, #d4a090 50%, #a0685a 100%);
     }
 
@@ -51,7 +51,7 @@
 
     /* ── TOP BANNER ── */
     .top-banner {
-      background: #1b5c50;
+      background: #0d4b35;
       padding: 14px 40px;
       text-align: center;
       border-bottom: 1px solid rgba(255,255,255,0.25);
@@ -253,7 +253,7 @@
       text-align: center; padding: 32px 40px; margin: 32px 0;
       position: relative; left: 50%; right: 50%;
       width: 100vw; margin-left: -50vw; margin-right: -50vw;
-      background: #1b5c50;
+      background: #0d4b35;
     }
     .quote-block p { font-family: 'Montserrat', sans-serif; font-size: 18px; font-style: normal; color: #fff; line-height: 1.25; margin: 0; letter-spacing: 0.01em; }
     .cta-row { text-align: center; margin-top: 52px; padding-top: 28px; border-top: 1px solid var(--beige); }
@@ -292,7 +292,7 @@
     .countdown-final { display: flex; justify-content: center; gap: 28px; margin: 0 0 40px; align-items: flex-end; }
     .countdown-final .countdown-digits { font-family: 'Montserrat', sans-serif; font-size: 18px; color: #fff; line-height: 1; letter-spacing: -1px; display: block; }
     .countdown-final .countdown-label { display: block; font-size: 18px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-top: 4px; }
-    .final-note { font-size: 18px; color: var(--mid-gray); margin-top: 28px; line-height: 1.6; }
+    .final-note { font-size: 18px; color: rgba(255,255,255,0.6); margin-top: 28px; line-height: 1.6; }
 
     /* ── FOOTER ── */
     footer { background: var(--black); padding: 48px 40px; border-top: 1px solid rgba(18,109,76,0.1); }
@@ -382,13 +382,13 @@
     /* ── RESPONSIVE: TABLET ── */
     @media (max-width: 900px) {
       .hero-inner { grid-template-columns: 1fr; }
-      .hero-image { height: 45vh; }
+      .hero-image { height: 45vh; order: -1; }
       .hero-image::before {
-        background: linear-gradient(to bottom, var(--teal-dark) 0%, transparent 40%);
+        background: linear-gradient(to bottom, transparent 40%, var(--teal-dark) 100%);
         -webkit-mask-image: none; mask-image: none;
       }
       .hero-image::after { display: none; }
-      .hero-content { padding: 36px 40px 32px; }
+      .hero-content { padding: 36px 40px 60px; }
       .footer-inner { flex-direction: column; text-align: center; }
       .footer-links { justify-content: center; }
     }
@@ -404,7 +404,9 @@
       .banner-countdown .cd-sep { margin: 0 4px; }
 
       .hero-image { height: 60vw; }
-      .hero-content { padding: 28px 20px 24px; }
+      .hero-content { padding: 28px 20px 40px; }
+      .hero-content h1 { font-size: 28px; letter-spacing: 0; }
+      .hero-content h1 br { display: none; }
       .popup-box { padding: 36px 24px 28px; }
 
       .fuer-dich-box { padding: 24px 20px; }
@@ -413,8 +415,12 @@
 
       .countdown-final { gap: 16px; }
 
-      footer { padding: 36px 20px; }
-      .footer-links { gap: 20px; flex-wrap: wrap; }
+      footer { padding: 32px 20px; }
+      .footer-inner { flex-direction: column; gap: 18px; text-align: center; }
+      .footer-brand img { height: 28px; }
+      .footer-links { gap: 16px 24px; justify-content: center; flex-wrap: wrap; }
+      .footer-links a { font-size: 13px; letter-spacing: 1px; }
+      .footer-copy { font-size: 13px; }
     }
   </style>
 </head>
@@ -444,7 +450,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-content">
-      <h1>Mein Geburtstags­geschenk<br>an <em>DICH</em></h1>
+      <h1>Mein Geburtstags­geschenk <br>an <em>DICH</em></h1>
       <p class="hero-subtitle">Wenn du das Gefühl hast, dass du wirklich <strong>alles</strong> gibst und es trotzdem nie reicht, dann lies weiter. Denn dieses Jahr drehe ich zu meinem Geburtstag den Spieß um: Nicht ich bekomme ein Geschenk. <strong>Du.</strong></p>
       <p class="hero-date">Am <strong>03. August</strong> packe ich mein Geschenk aus – aber nur für die Frauen, die vorher auf meiner VIP-Liste stehen. Sichere dir jetzt deinen Platz.</p>
 
