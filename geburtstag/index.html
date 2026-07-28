@@ -176,23 +176,6 @@
     }
     .btn-cta:hover { opacity: 0.92; animation: none; }
 
-    /* Aufhellender Glanz-Effekt, der ueber alle Buttons laeuft */
-    .btn-cta::after, .floating-cta::after, #_form_571_ ._submit::after {
-      content: '';
-      position: absolute;
-      top: 0; left: -75%;
-      width: 50%; height: 100%;
-      background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.55) 50%, transparent 100%);
-      transform: skewX(-20deg);
-      animation: btn-shine 3s ease-in-out infinite;
-      pointer-events: none;
-    }
-    @keyframes btn-shine {
-      0%   { left: -75%; }
-      35%  { left: 130%; }
-      100% { left: 130%; }
-    }
-
     @keyframes pulse-cta {
       0%, 100% { transform: scale(1);     box-shadow: 0 14px 22px -6px rgba(90,10,20,0.55); }
       50%       { transform: scale(1.05); box-shadow: 0 20px 32px -6px rgba(90,10,20,0.7); }
@@ -584,7 +567,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- FOOTER -->
 <footer>
   <div class="footer-inner">
-    <div class="footer-brand"><img src="../webinar/Bilder/Logo-rosegoldverlauf-rgb.png" alt="Feminess" style="height:36px; width:auto;"></div>
+    <div class="footer-brand"><img src="../webinar/Bilder/Logo-rosegoldverlauf-rgb-transparent.png" alt="Feminess" style="height:36px; width:auto;"></div>
     <div class="footer-links">
       <a href="https://feminess.github.io/Datenschutz/">Datenschutzerklärung</a>
       <a href="https://feminess.github.io/Impressum/">Impressum</a>
