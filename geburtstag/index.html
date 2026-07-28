@@ -332,7 +332,7 @@
     .popup-box {
       background: var(--dark);
       border: 1px solid rgba(255,255,255,0.08);
-      border-top: 3px solid var(--rose);
+      border-top: 3px solid #861627;
       border-radius: 8px;
       max-width: 480px;
       width: 100%;
@@ -350,6 +350,11 @@
     }
     .popup-close:hover { color: #E3ECE9; }
     .popup-box h2 { line-height: 1.25; margin-bottom: 10px; color: #E3ECE9; }
+    .popup-box h2 em {
+      font-style: normal;
+      background: linear-gradient(180deg, #dd4a44 0%, #861627 100%);
+      -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;
+    }
     .popup-box p.popup-sub { font-size: 18px; color: rgba(255,255,255,0.65); line-height: 1.6; margin-bottom: 24px; }
 
     /* ── RESPONSIVE: TABLET ── */
@@ -646,7 +651,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         }
       });
     }
-    document.querySelectorAll('.hero-content h1 em, h2 em').forEach(wrapLetters);
+    document.querySelectorAll('.hero-content h1 em, h2:not(.popup-box h2) em').forEach(wrapLetters);
   })();
 </script>
 
