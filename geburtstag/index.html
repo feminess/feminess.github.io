@@ -51,10 +51,10 @@
 
     /* ── TOP BANNER ── */
     .top-banner {
-      background: #E3ECE9;
+      background: linear-gradient(180deg, #dd4a44 0%, #861627 100%);
       padding: 14px 40px;
       text-align: center;
-      border-bottom: 1px solid rgba(13,75,53,0.15);
+      border-bottom: 1px solid rgba(255,255,255,0.15);
     }
     .banner-row {
       display: flex;
@@ -67,14 +67,14 @@
       font-family: 'Montserrat', sans-serif;
       font-size: 18px;
       font-weight: 400;
-      color: #0d4b35;
+      color: #fff;
       white-space: nowrap;
     }
     .banner-countdown {
       font-family: 'Montserrat', sans-serif;
       font-size: 18px;
       font-weight: 600;
-      color: #0d4b35;
+      color: #fff;
       white-space: nowrap;
     }
     .banner-countdown .cd-unit {
@@ -83,10 +83,10 @@
       font-weight: 700;
       letter-spacing: 0.5px;
       text-transform: uppercase;
-      color: #0d4b35;
+      color: #fff;
       margin-left: 3px;
     }
-    .banner-countdown .cd-sep { color: rgba(13,75,53,0.55); margin: 0 6px; }
+    .banner-countdown .cd-sep { color: rgba(255,255,255,0.6); margin: 0 6px; }
 
     /* ── HERO ── */
     .hero { background: var(--teal-dark); position: relative; overflow: hidden; }
@@ -377,13 +377,12 @@
       .banner-text, .banner-countdown, .banner-countdown .cd-unit { font-size: 12px; }
       .banner-countdown .cd-sep { margin: 0 3px; }
 
-      .hero-image { height: 62vw; }
+      .hero-image { height: 62vw; order: 1; }
       .hero-image img { object-position: center 16%; }
-      .hero-content { padding: 14px 20px 24px; }
+      .hero-content { padding: 20px 20px 24px; order: 0; }
       .hero-content h1 { font-size: 23px; letter-spacing: 0; margin-bottom: 8px; }
       .hero-content h1 br { display: none; }
       .hero-subtitle, .hero-date { font-size: 14px; line-height: 1.45; margin-bottom: 8px; }
-      .hero-content .btn-cta { padding: 12px 28px; font-size: 13px; letter-spacing: 1px; }
       h2 { font-size: 28px; letter-spacing: 0; }
       .popup-box { padding: 36px 24px 28px; }
 
