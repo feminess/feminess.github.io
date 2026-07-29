@@ -79,7 +79,7 @@
     .hero-price-row { display: flex; align-items: baseline; gap: 14px; margin-bottom: 8px; flex-wrap: wrap; }
     .hero-price-old { font-size: 20px; color: var(--mid-gray); text-decoration: line-through; }
     .hero-price-new {
-      font-family: 'Cormorant Garamond', serif; font-size: 44px; font-weight: 600;
+      font-family: 'Montserrat', sans-serif; font-size: 44px; font-weight: 600;
       background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%);
       -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
     }
@@ -139,7 +139,7 @@
     .text-section .section-label { margin-bottom: 36px; }
     .text-inner p { font-size: 18px; line-height: 1.85; color: var(--warm-gray); margin-bottom: 20px; }
     .text-inner p strong { color: #1b5c50; font-weight: 700; }
-    .quote-block { text-align: center; padding: 32px 40px; margin: 32px 0; position: relative; border-radius: 12px; background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%); }
+    .quote-block { text-align: center; padding: 32px 40px; margin: 32px 0; position: relative; border-radius: 12px; background: #1b5c50; }
     .quote-block p { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 600; font-style: normal; color: #fff; line-height: 1.25; margin: 0; letter-spacing: 0.01em; }
     .gold-strong { font-weight: 700; background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
     .cta-row { text-align: center; margin-top: 52px; padding-top: 28px; border-top: 1px solid var(--beige); }
@@ -153,7 +153,7 @@
     .price-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 600; color: #fff; margin-bottom: 22px; }
     .price-card h3 em { font-style: normal; font-weight: 600; background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
     .price-old { font-size: 20px; color: var(--mid-gray); text-decoration: line-through; margin-bottom: 4px; }
-    .price-new { font-family: 'Cormorant Garamond', serif; font-size: 72px; font-weight: 600; color: #fff; line-height: 1; margin-bottom: 6px; }
+    .price-new { font-family: 'Montserrat', sans-serif; font-size: 72px; font-weight: 600; color: #fff; line-height: 1; margin-bottom: 6px; }
     .price-sub { font-size: 14px; color: var(--mid-gray); margin-bottom: 32px; }
     .price-facts { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 32px; text-align: left; max-width: 380px; margin-left: auto; margin-right: auto; }
     .price-facts li { position: relative; padding-left: 26px; font-size: 18px; color: rgba(255,255,255,0.82); }
@@ -166,6 +166,15 @@
     .perfect-section .section-label::after { background: var(--teal); }
     .perfect-item { display: flex; gap: 18px; align-items: flex-start; padding: 18px 20px; margin-bottom: 10px; background: var(--off-white); border-left: 2px solid var(--teal); border-radius: 0 2px 2px 0; }
     .perfect-item:hover { background: var(--cream); }
+    .perfect-item { opacity: 0; transform: translateX(-32px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .perfect-list.is-visible .perfect-item { opacity: 1; transform: translateX(0); }
+    .perfect-list.is-visible .perfect-item:nth-child(1) { transition-delay: 0.05s; }
+    .perfect-list.is-visible .perfect-item:nth-child(2) { transition-delay: 0.15s; }
+    .perfect-list.is-visible .perfect-item:nth-child(3) { transition-delay: 0.25s; }
+    .perfect-list.is-visible .perfect-item:nth-child(4) { transition-delay: 0.35s; }
+    .perfect-list.is-visible .perfect-item:nth-child(5) { transition-delay: 0.45s; }
+    .perfect-list.is-visible .perfect-item:nth-child(6) { transition-delay: 0.55s; }
+    .perfect-list.is-visible .perfect-item:nth-child(7) { transition-delay: 0.65s; }
     .heart-icon { flex: 0 0 18px; margin-top: 3px; }
     .heart-icon svg { width: 16px; height: 16px; fill: #c47868; }
     .perfect-item p { color: var(--warm-gray); font-size: 18px; margin: 0; line-height: 1.65; }
@@ -206,7 +215,6 @@
       background-image: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%);
       -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
     }
-    .guarantee-seal::before { content: '🛡️'; -webkit-text-fill-color: initial; font-size: 16px; }
 
     /* ── BENEFITS / BONI ── */
     .benefits-section { background: var(--off-white); border-top: 2px solid var(--teal-pale); padding: 100px 0; position: relative; overflow: hidden; }
@@ -408,7 +416,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- MAIN TEXT -->
 <div class="text-section">
   <div class="text-inner">
-    <p class="section-label">An dich</p>
     <p>Lass mich direkt sein. Ich bekomme regelmäßig Nachrichten von Frauen wie dieser hier: <em>„Marina, ich hab in den letzten zwei Jahren wirklich alles gegeben. Mehr gearbeitet als je zuvor, privat zurückgesteckt, jede Chance ergriffen. Und trotzdem mache ich einfach nicht mehr Umsatz. Ich zerreiße mich und komme keinen Meter weiter."</em></p>
     <p>Ich verstehe diese Frage. Ich höre sie fast täglich. Und ich gebe dir die ehrliche Antwort, die du verdienst: <strong>Nicht weil du zu wenig gekämpft hast. Nicht weil du zu wenig leistest.</strong></p>
     <p>Sondern weil dein Nervensystem dir genau kurz vor deinem nächsten Umsatz-Level einen Strich durch die Rechnung macht.</p>
@@ -427,7 +434,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- PRICE REVEAL -->
 <section class="price-section">
   <div class="price-inner">
-    <p class="price-eyebrow">Mein Geburtstagsgeschenk an dich</p>
     <div class="price-card">
       <h3>Mehr Freiheit. Mehr Geld. <em>Weniger Hustle.</em></h3>
       <p class="price-old">statt regulär über 3.000 €</p>
@@ -449,10 +455,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- ERGEBNIS NACH 7 SESSIONS -->
 <section class="perfect-section">
   <div class="perfect-inner">
-    <p class="section-label">Was sich verändert</p>
     <h2>In diesen sieben Sessions durchbrichst du deine <em>Umsatz-Mauer</em></h2>
     <div style="height:36px;"></div>
 
+    <div class="perfect-list">
     <div class="perfect-item">
       <div class="heart-icon"><svg viewBox="0 0 24 24"><path d="M12 21s-6.7-4.35-9.3-8.1C1 10.4 1.6 7 4.4 5.6 6.6 4.5 9 5.2 12 8c3-2.8 5.4-3.5 7.6-2.4C22.4 7 23 10.4 21.3 12.9 18.7 16.65 12 21 12 21z"/></svg></div>
       <p><strong>Die Umsatz-Mauer sichtbar machen:</strong> Du erkennst genau die Stelle, an der dein Nervensystem kurz vor dem nächsten Level bremst.</p>
@@ -480,6 +486,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="perfect-item">
       <div class="heart-icon"><svg viewBox="0 0 24 24"><path d="M12 21s-6.7-4.35-9.3-8.1C1 10.4 1.6 7 4.4 5.6 6.6 4.5 9 5.2 12 8c3-2.8 5.4-3.5 7.6-2.4C22.4 7 23 10.4 21.3 12.9 18.7 16.65 12 21 12 21z"/></svg></div>
       <p><strong>Integration &amp; Verankerung:</strong> Was du löst, wird im Nervensystem verankert – damit es bleibt, auch nach den 7 Wochen.</p>
+    </div>
     </div>
 
     <div class="perfect-cta" style="text-align:center;">
@@ -756,6 +763,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     const heroBottom = heroSection ? heroSection.getBoundingClientRect().bottom : 600;
     floatingCta.classList.toggle('is-visible', heroBottom < 0);
   }, { passive: true });
+
+  /* Bulletpoints in "In diesen sieben Sessions..." fliegen nacheinander ein, sobald sichtbar */
+  const perfectList = document.querySelector('.perfect-list');
+  if (perfectList) {
+    const perfectObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          perfectObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    perfectObserver.observe(perfectList);
+  }
 </script>
 
 </body>
