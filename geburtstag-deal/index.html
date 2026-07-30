@@ -132,7 +132,7 @@
     .text-section { background: var(--off-white); border-top: 2px solid var(--teal-pale); padding: 88px 0; border-bottom: 1px solid var(--beige); }
     .text-inner { max-width: 740px; margin: 0 auto; padding: 0 40px; }
     .text-section .section-label { margin-bottom: 36px; }
-    .text-inner p { font-size: 18px; line-height: 1.85; color: var(--warm-gray); margin-bottom: 20px; }
+    .text-inner p { font-size: 18px; line-height: 1.85; color: #0a3828; margin-bottom: 20px; text-align: justify; }
     .text-inner p strong { color: #0a3828; font-weight: 700; }
     .quote-block { text-align: center; padding: 32px 40px; margin: 32px 0; position: relative; border-radius: 12px; background: #1b5c50; }
     .quote-block p { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 600; font-style: normal; color: #fff; line-height: 1.25; margin: 0; letter-spacing: 0.01em; }
@@ -198,7 +198,7 @@
     .guarantee-section { background: #fff; padding: 96px 0; text-align: center; position: relative; overflow: hidden; }
     .guarantee-inner { max-width: 680px; margin: 0 auto; padding: 0 40px; position: relative; z-index: 1; }
     .guarantee-section h2 { color: #0a3828; margin-bottom: 22px; }
-    .guarantee-text { font-size: 18px; color: var(--warm-gray); line-height: 1.85; margin-bottom: 36px; }
+    .guarantee-text { font-size: 18px; color: var(--warm-gray); line-height: 1.85; margin-bottom: 20px; text-align: justify; }
     .guarantee-text strong { color: #0a3828; font-weight: 700; }
 
     /* ── BENEFITS / BONI ── */
@@ -261,6 +261,8 @@
     .final-price { font-size: 15px; letter-spacing: 1px; color: #fff; margin: 0 0 8px; }
     .final-price strong { font-size: 20px; color: #fff; }
     .final-note { font-size: 18px; color: #fff; margin-top: 28px; line-height: 1.6; }
+    .final-note + .final-note { margin-top: 6px; }
+    .final-price + .final-price { margin-top: -4px; }
 
     /* ── FOOTER ── */
     footer { background: var(--black); padding: 48px 40px; border-top: 1px solid rgba(94,198,179,0.1); }
@@ -268,7 +270,7 @@
     .footer-links { display: flex; gap: 40px; }
     .footer-links a { font-size: 18px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #fff; text-decoration: none; transition: color 0.2s; }
     .footer-links a:hover { color: var(--teal-light); }
-    .footer-copy { font-size: 18px; font-weight: 700; color: var(--warm-gray); opacity: 0.7; }
+    .footer-copy { font-size: 18px; font-weight: 700; color: #fff; opacity: 0.7; }
     @media (max-width: 640px) { .footer-inner { flex-direction: column; text-align: center; } .footer-links { justify-content: center; } }
 
     /* ── RESPONSIVE: TABLET ── */
@@ -288,8 +290,8 @@
 
     /* ── RESPONSIVE: MOBILE ── */
     @media (max-width: 600px) {
-      h2 { font-size: 28px !important; }
-      .hero-content h1 { font-size: 35px !important; }
+      h2 { font-size: 36px !important; }
+      .hero-content h1 { font-size: 43px !important; }
 
       .text-inner, .fuer-dich-inner, .testimonials-inner, .speaker-section-inner, .final-cta-inner, .benefits-inner, .perfect-inner, .price-inner, .faq-inner { padding-left: 20px; padding-right: 20px; }
       .text-section, .fuer-dich-section, .testimonials-section, .speaker-section, .benefits-section, .perfect-section, .faq-section { padding: 64px 0; }
@@ -303,6 +305,7 @@
       .banner-countdown .cd-sep { margin: 0 2px; }
 
       .hero-image { height: 60vw; }
+      .hero-image::before { display: none; }
       .hero-content { padding: 28px 20px 40px; }
       .hero-price-new { font-size: 34px; }
       .btn-hero { padding: 16px 28px; font-size: 15px; width: 100%; text-align: center; }
@@ -310,13 +313,13 @@
       .quote-block p { font-size: 24px; }
 
       .price-card { padding: 32px 24px; }
-      .price-card h3 { font-size: 28px; }
+      .price-card h3 { font-size: 36px; }
       .price-new { font-size: 54px; }
 
       .benefits-grid { gap: 16px; }
       .benefit-card { padding: 24px 20px; gap: 16px; }
       .benefit-num { width: 50px; font-size: 44px; flex: 0 0 50px; }
-      .benefit-body h3 { font-size: 28px; }
+      .benefit-body h3 { font-size: 36px; }
 
       .testimonials-grid { grid-template-columns: 1fr; }
       .testimonial-card { padding: 24px 20px; }
@@ -326,7 +329,7 @@
       .speaker-portrait img { width: 150px; height: 150px; }
       .speaker-bio { padding-top: 16px; }
 
-      .faq-item summary { font-size: 20px; padding: 20px 0; }
+      .faq-item summary { font-size: 25px; padding: 20px 0; }
       .faq-answer { padding-bottom: 20px; }
 
       .btn-cta { padding: 17px 28px; font-size: 15px; width: 100%; text-align: center; }
@@ -350,7 +353,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- TOP BANNER -->
 <div class="top-banner">
   <div class="banner-row">
-    <span class="banner-text">Das Geburtstags-Special endet in</span>
+    <span class="banner-text">Geburtstags-Special endet in</span>
     <span class="banner-countdown">
       <span id="b-days">00</span><span class="cd-unit">Tage</span>
       <span class="cd-sep">:</span>
@@ -371,7 +374,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <h1>Die ungezähmte <em>Unternehmerin</em></h1>
 
       <div class="hero-price-row">
-        <span class="hero-price-old">statt über 3.000 EUR</span>
+        <span class="hero-price-old">statt 3.000 EUR</span>
         <span class="hero-price-new">333 EUR</span>
       </div>
       <p class="hero-subtitle">Ich unterstütze dich in <strong>7 Live-Sessions persönlich</strong> dabei, auf dein nächstes Umsatzlevel zu kommen, indem du aufhörst, dir Kunden und Geld zu erkämpfen und anfängst, es anzuziehen.</p>
@@ -416,7 +419,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <li>1 Online-Sales-Training</li>
         <li>Ratenzahlung über PayPal möglich</li>
       </ul>
-      <a href="https://feminess.de/kasse/?add-to-cart=76595" class="btn-cta on-dark">HOL DIR DEINEN PLATZ</a>
+      <a href="https://feminess.de/kasse/?add-to-cart=76595" class="btn-cta on-dark">HIER PLATZ SICHERN</a>
       <p style="font-size:18px; color:#fff; margin-top:20px;">21 Tage Geld-zurück-Garantie</p>
     </div>
   </div>
@@ -483,7 +486,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <ul class="fuer-dich-list">
           <li>noch mehr Strategien, To-dos oder Taktiken suchst</li>
           <li>glaubst, mehr Umsatz bedeutet zwangsläufig mehr Kampf</li>
-          <li>diesen Deal auf nächstes Jahr verschieben willst, denn er kommt nicht wieder</li>
+          <li>dieses Special auf nächstes Jahr verschieben willst, denn er kommt nicht wieder</li>
         </ul>
       </div>
     </div>
@@ -495,7 +498,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="guarantee-section">
   <div class="guarantee-inner">
     <h2>Kein Risiko. <em>Geld-zurück-Garantie.</em></h2>
-    <p class="guarantee-text">Ich kenne den Gedanken: <em>„Was, wenn ich mich auch dafür wieder aufreibe, alles gebe - und stehe danach genauso da wie jetzt?"</em> Deshalb eliminiere ich dieses Risiko für dich. Wenn dir <strong>„Die ungezähmte Unternehmerin"</strong> nach 21 Tagen aktiver Teilnahme nicht dabei geholfen hat, anders zu denken, anders zu fühlen und andere Ergebnisse in deinem Leben und Business zu erzielen, schreib uns und du bekommst deine <strong>333 EUR zurück. Ohne Diskussion. Ohne Fragen.</strong></p>
+    <p class="guarantee-text">Ich kenne den Gedanken: <em>„Was, wenn ich mich auch dafür wieder aufreibe, alles gebe - und stehe danach genauso da wie jetzt?"</em></p>
+    <p class="guarantee-text">Deshalb eliminiere ich dieses Risiko für dich. Wenn dir <strong>„Die ungezähmte Unternehmerin"</strong> nach 21 Tagen aktiver Teilnahme nicht dabei geholfen hat, anders zu denken, anders zu fühlen und andere Ergebnisse in deinem Leben und Business zu erzielen, schreib uns und du bekommst deine <strong>333 EUR zurück. Ohne Diskussion. Ohne Fragen.</strong></p>
     <div>
       <a href="https://feminess.de/kasse/?add-to-cart=76595" class="btn-cta on-dark">Jetzt risikofrei starten</a>
       <p style="font-size:18px; color:var(--warm-gray); margin-top:20px;">21 Tage Geld-zurück-Garantie</p>
@@ -547,7 +551,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
     <div style="text-align:center;">
-      <a href="https://feminess.de/kasse/?add-to-cart=76595" class="btn-cta">ICH WILL DEN DEAL</a>
+      <a href="https://feminess.de/kasse/?add-to-cart=76595" class="btn-cta">ICH WILL DAS SPECIAL</a>
     </div>
   </div>
 </section>
@@ -649,7 +653,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p class="faq-answer">Nur <strong>10 Plätze</strong> - zu diesem Geburtstagspreis öffnet Marina die Türen nur für eine Handvoll Frauen aus ihrer Community.</p>
     </details>
     <details class="faq-item">
-      <summary>Wann endet der Geburtstags-Deal?</summary>
+      <summary>Wann endet das Geburtstags-Special?</summary>
       <p class="faq-answer">Am <strong>04.08.2026 um 23:59 Uhr</strong>. Danach gilt wieder der reguläre Preis - und ob und wann es ein nächstes Mal gibt, lässt sich nicht vorhersagen.</p>
     </details>
     <details class="faq-item">
@@ -657,7 +661,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p class="faq-answer">Ja. Bei passender Bonität kannst du direkt über PayPal-Ratenzahlung buchen. Klicke dafür einfach auf der Bezahlseite auf PayPal und folge dem Prozess.<br>Bei Fragen wende dich an support@feminess.de.</p>
     </details>
     <details class="faq-item">
-      <summary>Was ist im Preis von 333 EUR enthalten?</summary>
+      <summary>Was ist im Preis von <span style="font-family:'Montserrat', sans-serif;">333 EUR</span> enthalten?</summary>
       <p class="faq-answer">7 Live-Sessions à 2 Stunden mit Marina persönlich, 3 Bonus-Live-Sessions, 1 persönliches Coaching und 1 Online-Sales-Training - regulär über 3.000 EUR Wert.</p>
     </details>
   </div>
@@ -667,7 +671,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="final-cta">
   <div class="final-cta-inner">
     <h2>Genug gescrollt - sichere dir jetzt dein <em>Geburtstagsgeschenk</em></h2>
-    <p class="final-price">Geburtstagspreis <strong>333 EUR</strong> statt über 3.000 EUR - nur 10 Plätze</p>
+    <p class="final-price">Geburtstagspreis <strong>333 EUR</strong> statt über 3.000 EUR</p>
+    <p class="final-price">Nur 10 Plätze</p>
     <div class="countdown-final">
       <div class="countdown-item">
         <span class="countdown-digits" id="f-days">00</span>
@@ -687,7 +692,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
     <a href="https://feminess.de/kasse/?add-to-cart=76595" class="btn-cta">Ich bin dabei</a>
-    <p class="final-note">Ratenzahlung über PayPal möglich · <strong style="color:#fff;">21 Tage Geld-zurück-Garantie</strong></p>
+    <p class="final-note">Ratenzahlung über PayPal möglich</p>
+    <p class="final-note"><strong style="color:#fff;">21 Tage Geld-zurück-Garantie</strong></p>
   </div>
 </section>
 
