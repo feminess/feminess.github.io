@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feminess Landingpage – Design-Styleguide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --teal:       #257c6c;
+    --teal-dark:  #1b5c50;
+    --teal-light: #f8f6f2;
+    --teal-pale:  #b8ddd8;
+    --rose:       #cf5a73;
+    --sand:       #c2ab8d;
+    --black:      #070808;
+    --dark:       #0d2420;
+    --off-white:  #f8f6f2;
+    --cream:      #f0f5f4;
+    --beige:      #ddecea;
+    --warm-gray:  #5a7a74;
+    --mid-gray:   #9ab8b4;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  em,i{font-style:normal;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Montserrat',sans-serif;font-size:18px;line-height:1.75;background:var(--off-white);color:#1b5c50;-webkit-font-smoothing:antialiased;}
+
+  h1.doc-title{font-family:'Cormorant Garamond',serif;font-size:56px;font-weight:600;color:#fff;}
+  h2{font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:600;color:#1b5c50;margin-bottom:8px;letter-spacing:-0.5px;}
+  h2 em{font-style:normal;font-weight:600;background:linear-gradient(90deg,#a0685a 0%,#d4a090 25%,#f0ccc0 50%,#d4a090 75%,#a0685a 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+  h3.sub{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:600;color:#1b5c50;margin-bottom:16px;}
+
+  .intro{background:var(--teal-dark);padding:64px 40px;text-align:center;}
+  .intro p{color:var(--mid-gray);max-width:640px;margin:16px auto 0;font-size:18px;}
+
+  .wrap{max-width:1100px;margin:0 auto;padding:0 40px;}
+  section.block{padding:64px 0;border-bottom:1px solid var(--beige);}
+  section.block.dark{background:var(--teal-dark);border-bottom:none;}
+  section.block.dark h2,section.block.dark h3.sub{color:#fff;}
+  section.block.dark p{color:var(--mid-gray);}
+
+  .section-label{font-size:11px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--teal);display:flex;align-items:center;gap:14px;margin-bottom:24px;}
+  .section-label::after{content:'';display:block;width:80px;height:1px;background:var(--teal);opacity:0.5;}
+
+  /* ── COLOR SWATCHES ── */
+  .swatch-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:20px;margin-top:24px;}
+  .swatch{border-radius:12px;overflow:hidden;border:1px solid var(--beige);}
+  .swatch-color{height:80px;}
+  .swatch-info{padding:14px 16px;background:#fff;}
+  .swatch-name{font-weight:700;font-size:14px;color:#1b5c50;}
+  .swatch-hex{font-size:13px;color:var(--warm-gray);font-family:monospace;}
+  .swatch-use{font-size:13px;color:var(--warm-gray);margin-top:6px;}
+
+  .gradient-strip{height:70px;border-radius:12px;background:linear-gradient(90deg,#a0685a 0%,#d4a090 25%,#f0ccc0 50%,#d4a090 75%,#a0685a 100%);margin-top:24px;display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-weight:700;letter-spacing:2px;color:var(--dark);text-transform:uppercase;font-size:14px;}
+
+  /* ── SECTION BG ORDER TABLE ── */
+  table{width:100%;border-collapse:collapse;margin-top:20px;}
+  th,td{text-align:left;padding:12px 16px;font-size:15px;border-bottom:1px solid var(--beige);}
+  th{font-family:'Montserrat',sans-serif;font-weight:700;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--teal);}
+  .swatch-cell{display:inline-block;width:16px;height:16px;border-radius:4px;vertical-align:middle;margin-right:8px;border:1px solid rgba(0,0,0,0.1);}
+  .dark table th,.dark table td{border-bottom:1px solid rgba(255,255,255,0.15);color:#fff;}
+  .dark table th{color:var(--teal-light);}
+
+  /* ── FONT SPECIMENS ── */
+  .specimen{padding:20px 0;border-bottom:1px solid var(--beige);display:flex;align-items:baseline;justify-content:space-between;gap:24px;flex-wrap:wrap;}
+  .dark .specimen{border-bottom:1px solid rgba(255,255,255,0.15);}
+  .specimen-label{font-size:12px;color:var(--warm-gray);letter-spacing:1px;text-transform:uppercase;min-width:220px;}
+  .dark .specimen-label{color:var(--mid-gray);}
+  .specimen-sample{flex:1;}
+  .specimen-meta{font-size:12px;color:var(--warm-gray);font-family:monospace;}
+  .dark .specimen-meta{color:var(--mid-gray);}
+
+  .f-h1{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:48px;line-height:1.08;}
+  .f-h2{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:48px;}
+  .f-cardtitle{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:48px;}
+  .f-quote{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:28px;}
+  .f-boxheader{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:24px;letter-spacing:1px;text-transform:uppercase;}
+  .f-body{font-family:'Montserrat',sans-serif;font-weight:400;font-size:18px;}
+  .f-button{font-family:'Montserrat',sans-serif;font-weight:700;font-size:18px;letter-spacing:2px;text-transform:uppercase;}
+  .f-countdown{font-family:'Montserrat',sans-serif;font-weight:400;font-size:18px;}
+  .f-label{font-family:'Montserrat',sans-serif;font-weight:700;font-size:11px;letter-spacing:3px;text-transform:uppercase;}
+
+  /* ── HIGHLIGHT RULES ── */
+  .rule-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:24px;}
+  .rule-card{background:#fff;border-radius:12px;padding:28px;border:1px solid var(--beige);}
+  .dark .rule-card{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);}
+  .rule-card h4{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;margin-bottom:10px;color:#1b5c50;}
+  .dark .rule-card h4{color:#fff;}
+  .rule-card p{font-size:16px;color:var(--warm-gray);line-height:1.7;}
+  .dark .rule-card p{color:var(--mid-gray);}
+  .demo-line{margin-top:14px;padding-top:14px;border-top:1px dashed var(--beige);font-size:18px;color:var(--warm-gray);}
+  .dark .demo-line{border-top:1px dashed rgba(255,255,255,0.15);color:var(--mid-gray);}
+  .demo-line strong{color:#1b5c50;font-weight:700;}
+  .dark .demo-line strong{color:#fff;}
+  .gold-em{background:linear-gradient(90deg,#a0685a 0%,#d4a090 25%,#f0ccc0 50%,#d4a090 75%,#a0685a 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-weight:600;}
+
+  /* ── BUTTONS ── */
+  .btn-cta{
+    display:inline-block;background:linear-gradient(90deg,#a0685a 0%,#d4a090 25%,#f0ccc0 50%,#d4a090 75%,#a0685a 100%);
+    color:var(--dark);text-decoration:none;padding:20px 48px;border-radius:999px;font-family:'Montserrat',sans-serif;
+    font-size:18px;font-weight:700;letter-spacing:2px;text-transform:uppercase;border:none;cursor:pointer;
+    animation:pulse-btn 2.2s ease-in-out infinite;
+  }
+  .btn-cta:hover{opacity:0.88;}
+  @keyframes pulse-btn{0%,100%{transform:scale(1);box-shadow:0 6px 28px rgba(160,104,90,0.40);}50%{transform:scale(1.04);box-shadow:0 10px 36px rgba(160,104,90,0.58);}}
+  .btn-note{font-size:15px;color:var(--warm-gray);margin-top:16px;}
+  .dark .btn-note{color:var(--mid-gray);}
+
+  /* ── QUOTE BLOCK ── */
+  .quote-block{text-align:center;padding:32px 40px;border-radius:12px;background:#1b5c50;max-width:640px;margin:24px auto 0;}
+  .quote-block p{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:600;color:#fff;line-height:1.3;}
+
+  /* ── JA/NEIN BOX ── */
+  .compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:24px;}
+  .compare-box{border-radius:12px;padding:28px 32px;background:rgba(255,255,255,0.06);}
+  .compare-box.ja{border:1px solid rgba(94,198,179,0.35);}
+  .compare-box.nein{border:1px solid rgba(207,90,115,0.35);}
+  .compare-header{font-family:'Cormorant Garamond', serif;font-size:20px;font-weight:700;letter-spacing:1px;margin-bottom:14px;}
+  .compare-box.ja .compare-header{color:var(--teal-light);}
+  .compare-box.nein .compare-header{background:linear-gradient(90deg,#a0685a 0%,#d4a090 25%,#f0ccc0 50%,#d4a090 75%,#a0685a 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+  .compare-list{list-style:none;}
+  .compare-list li{position:relative;padding-left:24px;font-size:16px;color:var(--mid-gray);margin-bottom:8px;}
+  .compare-box.ja .compare-list li::before{content:'✓';position:absolute;left:0;color:var(--teal-light);font-weight:700;}
+  .compare-box.nein .compare-list li::before{content:'✕';position:absolute;left:0;color:#c47868;font-weight:700;}
+
+  /* ── TESTIMONIAL ── */
+  .testi-card{background:var(--off-white);border:1px solid var(--beige);border-top:3px solid #c47868;border-radius:4px;padding:28px;max-width:360px;margin-top:24px;}
+  .testi-stars{color:var(--sand);letter-spacing:3px;margin-bottom:14px;}
+  .testi-text{font-size:16px;color:var(--warm-gray);margin-bottom:14px;}
+  .testi-author{font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;background:linear-gradient(90deg,#a0685a 0%,#d4a090 25%,#f0ccc0 50%,#d4a090 75%,#a0685a 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+
+  /* ── FAQ ── */
+  .faq-item{border-bottom:1px solid var(--beige);max-width:640px;}
+  .faq-item summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:20px 0;font-family:'Cormorant Garamond',serif;font-size:22px;color:#1b5c50;}
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item summary::after{content:'+';font-size:24px;color:var(--teal);}
+  .faq-item[open] summary::after{content:'–';}
+  .faq-item p{font-size:16px;color:var(--warm-gray);padding-bottom:20px;}
+
+  /* ── CHECKLIST ── */
+  .checklist{margin-top:24px;}
+  .checklist li{list-style:none;position:relative;padding:12px 0 12px 36px;font-size:17px;color:var(--warm-gray);border-bottom:1px solid var(--beige);}
+  .checklist li::before{content:'0' counter(item);counter-increment:item;position:absolute;left:0;top:12px;font-family:'Cormorant Garamond',serif;font-weight:600;color:var(--teal);font-size:18px;}
+  .checklist{counter-reset:item;}
+
+  footer.doc-footer{background:var(--black);padding:32px 40px;text-align:center;color:var(--mid-gray);font-size:13px;}
+
+  @media (max-width:700px){
+    .wrap{padding:0 20px;}
+    .rule-grid,.compare-grid{grid-template-columns:1fr;}
+    h1.doc-title{font-size:38px;}
+    h2{font-size:30px;}
+    .f-h1,.f-h2,.f-cardtitle{font-size:32px;}
+    .specimen{flex-direction:column;align-items:flex-start;}
+  }
+</style>
+</head>
+<body>
+
+<div class="intro">
+  <p class="section-label" style="justify-content:center;color:var(--teal-light);">Feminess Landingpage</p>
+  <h1 class="doc-title">Design- &amp; Style-Guide</h1>
+  <p>Abgeleitet von der Geburtstags-Deal-Seite. Direkt übertragbar auf jede neue Landingpage – als Nachschlagewerk oder als Briefing für eine KI.</p>
+</div>
+
+<!-- 1. PHILOSOPHIE -->
+<section class="block">
+  <div class="wrap">
+    <p class="section-label">01 · Grundphilosophie</p>
+    <h2>Zwei Schriften. Zwei Hintergründe. <em>Ein</em> Akzent.</h2>
+    <div class="rule-grid" style="margin-top:32px;">
+      <div class="rule-card"><h4>Serif vs. Sans</h4><p>Cormorant Garamond trägt jede Emotion in den Überschriften. Montserrat trägt alles, was gelesen werden muss.</p></div>
+      <div class="rule-card"><h4>Hell/Dunkel im Wechsel</h4><p>Off-White/Weiß und Tannengrün lösen sich ab – das gibt der Seite beim Scrollen einen Rhythmus.</p></div>
+      <div class="rule-card"><h4>Ein Akzent für alles Wichtige</h4><p>Der Rosegold-Verlauf kommt <em class="gold-em">nur</em> bei Kaufentscheidungen vor: Buttons, Preise, Schlüsselwörter.</p></div>
+      <div class="rule-card"><h4>Hierarchie über Überschriften</h4><p>Fließtext bleibt fast überall bei 18px. Unterschiede entstehen über Cormorant-Überschriften, nicht über Body-Größen.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. FARBEN -->
+<section class="block">
+  <div class="wrap">
+    <p class="section-label">02 · Farbpalette</p>
+    <h2>Die <em>Basis</em>-Farben</h2>
+    <div class="swatch-grid">
+      <div class="swatch"><div class="swatch-color" style="background:#257c6c;"></div><div class="swatch-info"><div class="swatch-name">--teal</div><div class="swatch-hex">#257c6c</div><div class="swatch-use">Akzent, Icons, Linien</div></div></div>
+      <div class="swatch"><div class="swatch-color" style="background:#1b5c50;"></div><div class="swatch-info"><div class="swatch-name">--teal-dark</div><div class="swatch-hex">#1b5c50</div><div class="swatch-use">Haupt-Markenfarbe, dunkle Sektionen</div></div></div>
+      <div class="swatch"><div class="swatch-color" style="background:#f8f6f2;border-bottom:1px solid #eee;"></div><div class="swatch-info"><div class="swatch-name">--off-white</div><div class="swatch-hex">#f8f6f2</div><div class="swatch-use">Helle Sektionen, helle Schrift auf Teal</div></div></div>
+      <div class="swatch"><div class="swatch-color" style="background:#b8ddd8;"></div><div class="swatch-info"><div class="swatch-name">--teal-pale</div><div class="swatch-hex">#b8ddd8</div><div class="swatch-use">Dünne Trennlinien</div></div></div>
+      <div class="swatch"><div class="swatch-color" style="background:#cf5a73;"></div><div class="swatch-info"><div class="swatch-name">--rose</div><div class="swatch-hex">#cf5a73</div><div class="swatch-use">Glows, Kreuz-Icons (Nein)</div></div></div>
+      <div class="swatch"><div class="swatch-color" style="background:#c2ab8d;"></div><div class="swatch-info"><div class="swatch-name">--sand</div><div class="swatch-hex">#c2ab8d</div><div class="swatch-use">Sterne-Bewertungen</div></div></div>
+      <div class="swatch"><div class="swatch-color" style="background:#070808;"></div><div class="swatch-info"><div class="swatch-name">--black</div><div class="swatch-hex">#070808</div><div class="swatch-use">Footer</div></div></div>
+      <div class="swatch"><div class="swatch-color" style="background:#0d2420;"></div><div class="swatch-info"><div class="swatch-name">--dark</div><div class="swatch-hex">#0d2420</div><div class="swatch-use">Button-Text</div></div></div>
+      <div class="swatch"><div class="swatch-color" style="background:#5a7a74;"></div><div class="swatch-info"><div class="swatch-name">--warm-gray</div><div class="swatch-hex">#5a7a74</div><div class="swatch-use">Fließtext auf HELL</div></div></div>
+      <div class="swatch"><div class="swatch-color" style="background:#9ab8b4;"></div><div class="swatch-info"><div class="swatch-name">--mid-gray</div><div class="swatch-hex">#9ab8b4</div><div class="swatch-use">Fließtext auf DUNKEL</div></div></div>
+      <div class="swatch"><div class="swatch-color" style="background:#ddecea;"></div><div class="swatch-info"><div class="swatch-name">--beige</div><div class="swatch-hex">#ddecea</div><div class="swatch-use">Trennlinien (hell)</div></div></div>
+      <div class="swatch"><div class="swatch-color" style="background:#f0f5f4;border-bottom:1px solid #eee;"></div><div class="swatch-info"><div class="swatch-name">--cream</div><div class="swatch-hex">#f0f5f4</div><div class="swatch-use">Hover auf Off-White</div></div></div>
+    </div>
+
+    <h3 class="sub" style="margin-top:48px;">Der Rosegold-Verlauf</h3>
+    <div class="gradient-strip">linear-gradient(90deg, #a0685a, #d4a090, #f0ccc0, #d4a090, #a0685a)</div>
+    <p style="margin-top:12px; font-size:15px; color:var(--warm-gray);">Für: Button-Hintergründe, hervorgehobene Wörter in Überschriften, Preis-Anzeigen, Testimonial-Namen. Kommt sonst nirgendwo vor.</p>
+
+    <h3 class="sub" style="margin-top:48px;">Sektions-Hintergründe (Reihenfolge auf der Seite)</h3>
+    <table>
+      <tr><th>Sektion</th><th>Hintergrund</th></tr>
+      <tr><td>Top-Banner</td><td><span class="swatch-cell" style="background:linear-gradient(90deg,#a0685a,#d4a090);"></span>Rosegold-Verlauf</td></tr>
+      <tr><td>Hero</td><td><span class="swatch-cell" style="background:#1b5c50;"></span>--teal-dark</td></tr>
+      <tr><td>Haupt-Fließtext</td><td><span class="swatch-cell" style="background:#f8f6f2;"></span>--off-white</td></tr>
+      <tr><td>Preis-Reveal</td><td><span class="swatch-cell" style="background:#1b5c50;"></span>--teal-dark</td></tr>
+      <tr><td>Ergebnis-/Nutzenliste</td><td><span class="swatch-cell" style="background:#fff;"></span>#fff</td></tr>
+      <tr><td>Für-dich-Vergleich</td><td><span class="swatch-cell" style="background:#1b5c50;"></span>--teal-dark</td></tr>
+      <tr><td>Garantie</td><td><span class="swatch-cell" style="background:#fff;"></span>#fff</td></tr>
+      <tr><td>Boni/Leistungen</td><td><span class="swatch-cell" style="background:#1b5c50;"></span>--teal-dark</td></tr>
+      <tr><td>Testimonials</td><td><span class="swatch-cell" style="background:#fff;"></span>#fff</td></tr>
+      <tr><td>Speaker/Team</td><td><span class="swatch-cell" style="background:#1b5c50;"></span>--teal-dark</td></tr>
+      <tr><td>FAQ</td><td><span class="swatch-cell" style="background:#fff;"></span>#fff</td></tr>
+      <tr><td>Final-CTA</td><td><span class="swatch-cell" style="background:#1b5c50;"></span>--teal-dark</td></tr>
+      <tr><td>Footer</td><td><span class="swatch-cell" style="background:#070808;"></span>--black</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- 3. TYPOGRAFIE -->
+<section class="block">
+  <div class="wrap">
+    <p class="section-label">03 · Schriftsystem</p>
+    <h2>Größen &amp; <em>Gewichte</em></h2>
+
+    <div class="specimen"><div class="specimen-label">h1 · Hero-Überschrift</div><div class="specimen-sample f-h1">Die ungezähmte Unternehmerin</div><div class="specimen-meta">Cormorant · 48/35px · 600</div></div>
+    <div class="specimen"><div class="specimen-label">h2 · Sektions-Überschrift</div><div class="specimen-sample f-h2">In diesen sieben Sessions</div><div class="specimen-meta">Cormorant · 48/28px · 600</div></div>
+    <div class="specimen"><div class="specimen-label">Karten-Titel</div><div class="specimen-sample f-cardtitle" style="font-size:32px;">Money-Check Coaching</div><div class="specimen-meta">Cormorant · 48/28px · 600</div></div>
+    <div class="specimen"><div class="specimen-label">Zitat-Block</div><div class="specimen-sample f-quote">Nicht du hast versagt.</div><div class="specimen-meta">Cormorant · 28/24px · 600</div></div>
+    <div class="specimen"><div class="specimen-label">Für-dich-Box-Header</div><div class="specimen-sample f-boxheader">Das ist für dich, wenn du …</div><div class="specimen-meta">Cormorant · 24px · 700</div></div>
+    <div class="specimen"><div class="specimen-label">Body-Fließtext</div><div class="specimen-sample f-body">Ich verstehe diese Frage, und gebe dir die ehrliche Antwort.</div><div class="specimen-meta">Montserrat · 18px · 400</div></div>
+    <div class="specimen"><div class="specimen-label">Buttons</div><div class="specimen-sample f-button">Jetzt Special sichern</div><div class="specimen-meta">Montserrat · 18/15px · 700</div></div>
+    <div class="specimen"><div class="specimen-label">Countdown Ziffern/Label</div><div class="specimen-sample f-countdown">04 <span style="font-weight:700; letter-spacing:2px;">TAGE</span></div><div class="specimen-meta">Montserrat · 18px · 400 / 700</div></div>
+    <div class="specimen"><div class="specimen-label">Eyebrow/Kicker</div><div class="specimen-sample f-label" style="color:var(--teal);">An dich</div><div class="specimen-meta">Montserrat · 10–12px · 700, Uppercase</div></div>
+
+    <p style="margin-top:32px; font-size:16px; color:var(--warm-gray);">Google-Fonts-Import: <code style="font-family:monospace; background:var(--cream); padding:2px 6px; border-radius:4px;">Cormorant+Garamond:ital,wght@0,400;0,600 &amp; Montserrat:wght@400;600;700</code></p>
+  </div>
+</section>
+
+<!-- 4. HERVORHEBUNGEN -->
+<section class="block dark">
+  <div class="wrap">
+    <p class="section-label" style="color:var(--teal-light);">04 · Hervorhebungen &amp; Textfarben</p>
+    <h2 style="color:#fff;">Was wird <em>fett</em>, was wird <em>bunt</em>?</h2>
+    <div class="rule-grid">
+      <div class="rule-card">
+        <h4>Bold (&lt;strong&gt;)</h4>
+        <p>Der wichtigste Teilsatz in einem Absatz – nie ein ganzer Absatz.</p>
+        <div class="demo-line">Ich verstehe diese Frage. Und ich gebe dir die ehrliche Antwort: <strong>Du gibst nicht zu wenig, du leistest auch nicht zu wenig…</strong></div>
+      </div>
+      <div class="rule-card">
+        <h4>Rosegold-Verlaufstext (&lt;em&gt;)</h4>
+        <p>Ein Schlüsselwort in Überschriften, Preise, Autorennamen. "Kursiv" bedeutet hier <em>nie</em> echte Schrägstellung.</p>
+        <div class="demo-line">Durchbrichst du deine <em class="gold-em">Umsatz-Mauer</em></div>
+      </div>
+      <div class="rule-card">
+        <h4>Helle Sektion</h4>
+        <p>Überschrift #1b5c50 · Fließtext --warm-gray · Bold #1b5c50</p>
+      </div>
+      <div class="rule-card">
+        <h4>Dunkle Sektion</h4>
+        <p>Überschrift #fff · Fließtext --mid-gray · Bold #fff</p>
+      </div>
+    </div>
+
+    <h3 class="sub" style="margin-top:48px;">Zitat-Block</h3>
+    <div class="quote-block">
+      <p>Dein Nervensystem ist gerade nicht in der Lage, mehr Geld zu halten.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 5. BUTTONS -->
+<section class="block">
+  <div class="wrap">
+    <p class="section-label">05 · Buttons</p>
+    <h2>Ein Button-Typ. <em>Immer</em> eine Pille.</h2>
+    <p style="max-width:640px; color:var(--warm-gray); margin-bottom:8px;">Voll abgerundet (<code style="font-family:monospace;">border-radius:999px</code>), Rosegold-Verlauf, <strong>dunkler</strong> Text (nicht weiß), Uppercase, dezentes Pulsieren.</p>
+    <div style="margin-top:24px;">
+      <a href="#" class="btn-cta" onclick="return false;">Jetzt Special sichern</a>
+      <p class="btn-note">Zusatzinfos (Garantie, Ratenzahlung) stehen als Text <em>unter</em> dem Button – nie als Badge davor.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 6. BAUSTEINE -->
+<section class="block dark">
+  <div class="wrap">
+    <p class="section-label" style="color:var(--teal-light);">06 · Wiederkehrende Bausteine</p>
+    <h2 style="color:#fff;">Ja/Nein-<em>Vergleich</em></h2>
+    <div class="compare-grid">
+      <div class="compare-box ja">
+        <div class="compare-header">DAS IST FÜR DICH, WENN DU …</div>
+        <ul class="compare-list">
+          <li>bereit bist, an die Wurzel zu gehen</li>
+          <li>diese Chance nutzen willst</li>
+        </ul>
+      </div>
+      <div class="compare-box nein">
+        <div class="compare-header">DAS IST NICHTS FÜR DICH, WENN DU …</div>
+        <ul class="compare-list">
+          <li>noch eine weitere Strategie suchst</li>
+          <li>es aufschieben willst</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 class="sub" style="margin-top:48px;">Testimonial-Karte</h3>
+    <div class="testi-card">
+      <div class="testi-stars">★ ★ ★ ★ ★</div>
+      <p class="testi-text">Ich habe mit meiner Gründung damals ganz okay gestartet … jetzt wird es über eine Million.</p>
+      <p class="testi-author">Melanie Preßler</p>
+    </div>
+
+    <h3 class="sub" style="margin-top:48px;">FAQ-Akkordeon</h3>
+    <details class="faq-item" open>
+      <summary>Für welches Umsatz-Niveau ist das Programm geeignet?</summary>
+      <p>Marina und Vera holen jede Frau genau da ab, wo sie gerade steht.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Gibt es die Möglichkeit einer Ratenzahlung?</summary>
+      <p>Ja, über PayPal-Ratenzahlung.</p>
+    </details>
+  </div>
+</section>
+
+<!-- 7. CHECKLISTE -->
+<section class="block">
+  <div class="wrap">
+    <p class="section-label">07 · Checkliste für eine neue Landingpage</p>
+    <h2>In <em>sieben</em> Schritten übertragen</h2>
+    <ul class="checklist">
+      <li>Google-Fonts-Link (Cormorant Garamond + Montserrat) einbinden, <code style="font-family:monospace;">:root</code>-Variablen 1:1 übernehmen.</li>
+      <li>Body-Default: Montserrat 18px, Farbe #1b5c50 auf --off-white-Hintergrund.</li>
+      <li>Jede Überschrift: Cormorant Garamond, 48/28px mobil, Weight 600, ein Schlüsselwort als Rosegold-&lt;em&gt;.</li>
+      <li>Sektionen alternierend hell/dunkel durchtakten.</li>
+      <li>Bei dunklem Hintergrund: Textfarben-Set tauschen, Karten hell machen.</li>
+      <li>Ein einziger Button-Stil (Pille, Rosegold, dunkler Text) für alle CTAs.</li>
+      <li>Fließtext konsequent bei 18px belassen – Hierarchie kommt über Überschriften.</li>
+    </ul>
+  </div>
+</section>
+
+<footer class="doc-footer">
+  Feminess Design-Styleguide · abgeleitet von geburtstag-deal/index.html
+</footer>
+
+</body>
+</html>
