@@ -70,18 +70,16 @@
     .hero-image::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 40%; background: linear-gradient(to top, var(--dark) 0%, transparent 100%); z-index: 1; pointer-events: none; }
 
     .hero-content h1 { font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 600; line-height: 1.08; letter-spacing: 0.5px; margin-bottom: 16px; color: #fff; }
-    .hero-content h1 em { font-style: normal; font-weight: 600; background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-    .hero-subtitle { font-size: 18px; font-weight: 400; color: var(--mid-gray); margin-bottom: 16px; max-width: 540px; line-height: 1.7; }
+    .hero-content h1 em { font-style: normal; font-weight: 600; color: inherit; }
+    .hero-subtitle { font-size: 18px; font-weight: 400; color: #fff; margin-bottom: 16px; max-width: 540px; line-height: 1.7; }
     .hero-subtitle strong { color: #fff; font-weight: 700; }
 
     .hero-price-row { display: flex; align-items: baseline; gap: 14px; margin-bottom: 20px; flex-wrap: wrap; }
-    .hero-price-old { font-size: 20px; color: var(--mid-gray); text-decoration: line-through; }
+    .hero-price-old { font-size: 20px; color: #fff; text-decoration: line-through; }
     .hero-price-new {
-      font-family: 'Montserrat', sans-serif; font-size: 44px; font-weight: 600;
-      background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+      font-family: 'Montserrat', sans-serif; font-size: 44px; font-weight: 600; color: #fff;
     }
-    .hero-price-note { font-size: 18px; font-weight: 400; color: var(--mid-gray); margin-top: 20px; margin-bottom: 0; line-height: 1.7; }
+    .hero-price-note { font-size: 18px; font-weight: 400; color: #fff; margin-top: 20px; margin-bottom: 0; line-height: 1.7; }
 
     .btn-hero {
       display: inline-block; background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%);
@@ -102,7 +100,7 @@
     .section-label { font-size: 18px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--teal); display: flex; align-items: center; gap: 14px; margin-bottom: 12px; }
     .section-label::after { content: ''; display: block; width: 80px; height: 1px; background: var(--teal); opacity: 0.5; }
     h2 { font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 600; color: #0a3828; line-height: 1.15; margin-bottom: 8px; letter-spacing: -0.5px; }
-    h2 em { font-style: normal; font-weight: 600; background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    h2 em { font-style: normal; font-weight: 600; color: inherit; }
 
     /* CTA Button (shared) */
     .btn-cta {
@@ -147,10 +145,10 @@
     .price-eyebrow { font-size: 18px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--teal-light); margin-bottom: 18px; }
     .price-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(212,160,144,0.35); border-radius: 20px; padding: 48px 40px; }
     .price-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 600; color: #fff; margin-bottom: 22px; }
-    .price-card h3 em { font-style: normal; font-weight: 600; background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-    .price-old { font-size: 20px; color: var(--mid-gray); text-decoration: line-through; margin-bottom: 4px; }
+    .price-card h3 em { font-style: normal; font-weight: 600; color: inherit; }
+    .price-old { font-size: 20px; color: #fff; text-decoration: line-through; margin-bottom: 4px; }
     .price-new { font-family: 'Montserrat', sans-serif; font-size: 72px; font-weight: 600; color: #fff; line-height: 1; margin-bottom: 6px; }
-    .price-sub { font-size: 14px; color: var(--mid-gray); margin-bottom: 32px; }
+    .price-sub { font-size: 14px; color: #fff; margin-bottom: 32px; }
     .price-facts { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 32px; text-align: left; max-width: 380px; margin-left: auto; margin-right: auto; }
     .price-facts li { position: relative; padding-left: 26px; font-size: 18px; color: rgba(255,255,255,0.82); }
     .price-facts li::before { content: '✓'; position: absolute; left: 0; top: 0; font-size: 14px; font-weight: 700; color: var(--teal-light); }
@@ -191,7 +189,7 @@
     .fuer-dich-box.ja .fuer-dich-box-header { color: var(--teal-light); }
     .fuer-dich-box.nein .fuer-dich-box-header { color: var(--rose-light); }
     .fuer-dich-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
-    .fuer-dich-list li { position: relative; padding-left: 24px; font-size: 18px; color: var(--mid-gray); line-height: 1.7; }
+    .fuer-dich-list li { position: relative; padding-left: 24px; font-size: 18px; color: #fff; line-height: 1.7; }
     .fuer-dich-box.ja .fuer-dich-list li::before { content: '✓'; position: absolute; left: 0; top: 0; font-size: 16px; font-weight: 700; color: var(--teal-light); }
     .fuer-dich-box.nein .fuer-dich-list li::before { content: '✕'; position: absolute; left: 0; top: 0; font-size: 14px; font-weight: 700; color: var(--rose-light); }
     .fuer-dich-list li strong { color: #fff; }
@@ -200,7 +198,6 @@
     .guarantee-section { background: #fff; padding: 96px 0; text-align: center; position: relative; overflow: hidden; }
     .guarantee-inner { max-width: 680px; margin: 0 auto; padding: 0 40px; position: relative; z-index: 1; }
     .guarantee-section h2 { color: #0a3828; margin-bottom: 22px; }
-    .guarantee-section h2 em { font-style: normal; font-weight: 600; background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
     .guarantee-text { font-size: 18px; color: var(--warm-gray); line-height: 1.85; margin-bottom: 36px; }
     .guarantee-text strong { color: #0a3828; font-weight: 700; }
 
@@ -227,7 +224,7 @@
     .testimonial-card:hover { box-shadow: 0 8px 28px rgba(37,124,108,0.10); transform: translateY(-3px); }
     .stars { font-size: 14px; color: var(--sand); letter-spacing: 4px; margin-bottom: 20px; }
     .testimonial-text { font-size: 18px; color: var(--warm-gray); line-height: 1.8; margin-bottom: 20px; }
-    .testimonial-author { font-size: 18px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .testimonial-author { font-size: 18px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--warm-gray); }
 
     /* ── SPEAKER ── */
     .speaker-section { background: #1b5c50; padding: 96px 0; border-top: 2px solid var(--teal-pale); }
@@ -240,7 +237,7 @@
     .speaker-portrait h3 { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 400; color: #fff; margin-bottom: 6px; }
     .speaker-portrait .role { font-size: 18px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--teal-pale); }
     .speaker-bio { padding-top: 24px; text-align: left; }
-    .speaker-bio p { font-size: 18px; color: var(--mid-gray); line-height: 1.8; margin-bottom: 16px; }
+    .speaker-bio p { font-size: 18px; color: #fff; line-height: 1.8; margin-bottom: 16px; }
     .speaker-bio p strong { color: #fff; }
 
     /* ── FAQ ── */
@@ -259,18 +256,17 @@
     .final-cta::before { content: ''; position: absolute; top: -150px; left: 50%; transform: translateX(-50%); width: 800px; height: 800px; background: radial-gradient(circle, rgba(207,90,115,0.08) 0%, transparent 60%); pointer-events: none; }
     .final-cta-inner { max-width: 600px; margin: 0 auto; padding: 0 40px; text-align: center; position: relative; z-index: 1; }
     .final-cta h2 { color: #fff; line-height: 1.2; margin-bottom: 16px; }
-    .final-cta h2 em { font-style: normal; background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
     .countdown-final .countdown-digits { color: #fff; line-height: 1; letter-spacing: -1px; }
-    .countdown-final .countdown-label { display: block; font-size: 18px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-top: 4px; }
-    .final-price { font-size: 15px; letter-spacing: 1px; color: var(--mid-gray); margin: 0 0 8px; }
+    .countdown-final .countdown-label { display: block; font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-top: 4px; }
+    .final-price { font-size: 15px; letter-spacing: 1px; color: #fff; margin: 0 0 8px; }
     .final-price strong { font-size: 20px; color: #fff; }
-    .final-note { font-size: 18px; color: var(--mid-gray); margin-top: 28px; line-height: 1.6; }
+    .final-note { font-size: 18px; color: #fff; margin-top: 28px; line-height: 1.6; }
 
     /* ── FOOTER ── */
     footer { background: var(--black); padding: 48px 40px; border-top: 1px solid rgba(94,198,179,0.1); }
     .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 24px; }
     .footer-links { display: flex; gap: 40px; }
-    .footer-links a { font-size: 18px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--mid-gray); text-decoration: none; transition: color 0.2s; }
+    .footer-links a { font-size: 18px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #fff; text-decoration: none; transition: color 0.2s; }
     .footer-links a:hover { color: var(--teal-light); }
     .footer-copy { font-size: 18px; font-weight: 700; color: var(--warm-gray); opacity: 0.7; }
     @media (max-width: 640px) { .footer-inner { flex-direction: column; text-align: center; } .footer-links { justify-content: center; } }
@@ -299,13 +295,14 @@
       .text-section, .fuer-dich-section, .testimonials-section, .speaker-section, .benefits-section, .perfect-section, .faq-section { padding: 64px 0; }
       .final-cta, .price-section, .guarantee-section { padding: 72px 0; }
 
-      .top-banner { padding: 12px 20px; }
-      .banner-row { gap: 6px 8px; }
-      .banner-text { font-size: 12px; }
-      .banner-countdown { font-size: 12px; }
-      .banner-countdown .cd-sep { margin: 0 4px; }
+      .top-banner { padding: 10px 12px; }
+      .banner-row { gap: 4px 6px; flex-wrap: nowrap; }
+      .banner-text { font-size: 10px; }
+      .banner-countdown { font-size: 13px; }
+      .banner-countdown .cd-unit { font-size: 7px; margin-left: 2px; }
+      .banner-countdown .cd-sep { margin: 0 2px; }
 
-      .hero-image { height: 44vw; }
+      .hero-image { height: 60vw; }
       .hero-content { padding: 28px 20px 40px; }
       .hero-price-new { font-size: 34px; }
       .btn-hero { padding: 16px 28px; font-size: 15px; width: 100%; text-align: center; }
@@ -374,8 +371,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <h1>Die ungezähmte <em>Unternehmerin</em></h1>
 
       <div class="hero-price-row">
-        <span class="hero-price-old">statt über 3.000 €</span>
-        <span class="hero-price-new">333 €</span>
+        <span class="hero-price-old">statt über 3.000 EUR</span>
+        <span class="hero-price-new">333 EUR</span>
       </div>
       <a href="https://feminess.de/kasse/?add-to-cart=76595" class="btn-hero">JETZT SPECIAL SICHERN</a>
       <p class="hero-price-note">Nur 10 Plätze · Ratenzahlung möglich · 21 Tage Geld-zurück-Garantie</p>
@@ -408,8 +405,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="price-inner">
     <div class="price-card">
       <h3>Mehr Freiheit. Mehr Geld. <em>Weniger Hustle.</em></h3>
-      <p class="price-old">statt regulär über 3.000 €</p>
-      <p class="price-new">333 €</p>
+      <p class="price-old">statt regulär über 3.000 EUR</p>
+      <p class="price-new">333 EUR</p>
       <p class="price-sub">Noch bis 04.08.2026, 23:59 Uhr · nur 10 Plätze</p>
       <ul class="price-facts">
         <li>7 Live-Sessions à 2 Stunden mit Marina persönlich</li>
@@ -419,7 +416,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <li>Ratenzahlung über PayPal möglich</li>
       </ul>
       <a href="https://feminess.de/kasse/?add-to-cart=76595" class="btn-cta on-dark">Hol dir einen der 10 Plätze</a>
-      <p style="font-size:18px; color:var(--mid-gray); margin-top:20px;">21 Tage Geld-zurück-Garantie</p>
+      <p style="font-size:18px; color:#fff; margin-top:20px;">21 Tage Geld-zurück-Garantie</p>
     </div>
   </div>
 </section>
@@ -477,7 +474,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <ul class="fuer-dich-list">
           <li>spürst: <strong>Ich habe alles gegeben, jetzt darf es auch leichter gehen.</strong></li>
           <li>bereit bist, deine Umsatz-Mauer nicht mit noch mehr Kampf, sondern an der Wurzel zu lösen</li>
-          <li>deine 333-€-Geburtstagschance nutzen willst, bevor die 10 Plätze weg sind</li>
+          <li>deine 333-EUR-Geburtstagschance nutzen willst, bevor die 10 Plätze weg sind</li>
         </ul>
       </div>
       <div class="fuer-dich-box nein">
@@ -497,7 +494,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="guarantee-section">
   <div class="guarantee-inner">
     <h2>21 Tage. <em>Kein Risiko.</em></h2>
-    <p class="guarantee-text">Ich kenne den Gedanken: <em>„Was, wenn ich mich auch dafür wieder aufreibe, alles gebe - und stehe danach genauso da wie jetzt?"</em> Deshalb eliminiere ich dieses Risiko für dich. Wenn dir <strong>„Die ungezähmte Unternehmerin"</strong> nach 21 Tagen aktiver Teilnahme nicht dabei geholfen hat, anders zu denken, anders zu fühlen und andere Ergebnisse in deinem Leben und Business zu erzielen, schreib uns und du bekommst deine <strong>333 € zurück. Ohne Diskussion. Ohne Fragen.</strong></p>
+    <p class="guarantee-text">Ich kenne den Gedanken: <em>„Was, wenn ich mich auch dafür wieder aufreibe, alles gebe - und stehe danach genauso da wie jetzt?"</em> Deshalb eliminiere ich dieses Risiko für dich. Wenn dir <strong>„Die ungezähmte Unternehmerin"</strong> nach 21 Tagen aktiver Teilnahme nicht dabei geholfen hat, anders zu denken, anders zu fühlen und andere Ergebnisse in deinem Leben und Business zu erzielen, schreib uns und du bekommst deine <strong>333 EUR zurück. Ohne Diskussion. Ohne Fragen.</strong></p>
     <div>
       <a href="https://feminess.de/kasse/?add-to-cart=76595" class="btn-cta on-dark">Jetzt risikofrei starten</a>
       <p style="font-size:18px; color:var(--warm-gray); margin-top:20px;">21 Tage Geld-zurück-Garantie</p>
@@ -560,7 +557,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="testimonials-grid">
       <div class="testimonial-card">
         <div class="stars">★ ★ ★ ★ ★</div>
-        <p class="testimonial-text">Ich habe mit meiner Gründung damals ganz okay gestartet … Im zweiten Jahr bin ich dann hoch auf 260.000 €. Und jetzt, drittes Jahr, wird es über eine Million.</p>
+        <p class="testimonial-text">Ich habe mit meiner Gründung damals ganz okay gestartet … Im zweiten Jahr bin ich dann hoch auf 260.000 EUR. Und jetzt, drittes Jahr, wird es über eine Million.</p>
         <p class="testimonial-author">Melanie Preßler</p>
       </div>
       <div class="testimonial-card">
@@ -580,12 +577,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div class="testimonial-card">
         <div class="stars">★ ★ ★ ★ ★</div>
-        <p class="testimonial-text">Bevor ich gestartet bin, war ich bei ca. 2.500 € im Monat und mittlerweile mache ich monatlich 10.000 € bis 15.000 €!</p>
+        <p class="testimonial-text">Bevor ich gestartet bin, war ich bei ca. 2.500 EUR im Monat und mittlerweile mache ich monatlich 10.000 EUR bis 15.000 EUR!</p>
         <p class="testimonial-author">Jana Meißner</p>
       </div>
       <div class="testimonial-card">
         <div class="stars">★ ★ ★ ★ ★</div>
-        <p class="testimonial-text">Mein durchschnittlicher Verdienst in den letzten 10 Jahren waren ca. 700 € im Monat. Ab Juli bis Dezember hatte ich Aufträge im Wert von 4.000 € im Monat.</p>
+        <p class="testimonial-text">Mein durchschnittlicher Verdienst in den letzten 10 Jahren waren ca. 700 EUR im Monat. Ab Juli bis Dezember hatte ich Aufträge im Wert von 4.000 EUR im Monat.</p>
         <p class="testimonial-author">Johanna Grünhagen</p>
       </div>
     </div>
@@ -644,7 +641,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </details>
     <details class="faq-item">
       <summary>Was, wenn es bei mir nicht wirkt?</summary>
-      <p class="faq-answer">Dafür gibt es die <strong>21 Tage Geld-zurück-Garantie</strong>. Wenn dir das Programm nach 21 Tagen nicht dabei geholfen hat, anders zu denken, anders zu fühlen und andere Ergebnisse zu erzielen, schreib uns und du bekommst deine 333 € zurück. Ohne Diskussion. Ohne Fragen.</p>
+      <p class="faq-answer">Dafür gibt es die <strong>21 Tage Geld-zurück-Garantie</strong>. Wenn dir das Programm nach 21 Tagen nicht dabei geholfen hat, anders zu denken, anders zu fühlen und andere Ergebnisse zu erzielen, schreib uns und du bekommst deine 333 EUR zurück. Ohne Diskussion. Ohne Fragen.</p>
     </details>
     <details class="faq-item">
       <summary>Wie viele Plätze gibt es?</summary>
@@ -659,8 +656,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p class="faq-answer">Ja. Bei passender Bonität kannst du direkt über PayPal-Ratenzahlung buchen. Klicke dafür einfach auf der Bezahlseite auf PayPal und folge dem Prozess.<br>Bei Fragen wende dich an support@feminess.de.</p>
     </details>
     <details class="faq-item">
-      <summary>Was ist im Preis von 333 € enthalten?</summary>
-      <p class="faq-answer">7 Live-Sessions à 2 Stunden mit Marina persönlich, 3 Bonus-Live-Sessions, 1 persönliches Coaching und 1 Online-Sales-Training - regulär über 3.000 € Wert.</p>
+      <summary>Was ist im Preis von 333 EUR enthalten?</summary>
+      <p class="faq-answer">7 Live-Sessions à 2 Stunden mit Marina persönlich, 3 Bonus-Live-Sessions, 1 persönliches Coaching und 1 Online-Sales-Training - regulär über 3.000 EUR Wert.</p>
     </details>
   </div>
 </section>
@@ -669,7 +666,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="final-cta">
   <div class="final-cta-inner">
     <h2>Genug gescrollt - sichere dir jetzt dein <em>Geburtstagsgeschenk</em></h2>
-    <p class="final-price">Geburtstagspreis <strong>333 €</strong> statt über 3.000 € - nur 10 Plätze</p>
+    <p class="final-price">Geburtstagspreis <strong>333 EUR</strong> statt über 3.000 EUR - nur 10 Plätze</p>
     <div class="countdown-final">
       <div class="countdown-item">
         <span class="countdown-digits" id="f-days">00</span>
