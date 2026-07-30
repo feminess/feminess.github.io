@@ -730,12 +730,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   function tick() { updateIds(target, ids); updateIds(target, idsBanner); }
   tick(); setInterval(tick, 1000);
 
-  /* Floating CTA: show after scrolling past hero */
+  /* Floating CTA: sichtbar nach dem Hero, verschwindet wieder sobald der Footer erreicht ist */
   const floatingCta = document.getElementById('floatingCta');
   const heroSection = document.querySelector('.hero');
+  const footerSection = document.querySelector('footer');
   window.addEventListener('scroll', function() {
     const heroBottom = heroSection ? heroSection.getBoundingClientRect().bottom : 600;
-    floatingCta.classList.toggle('is-visible', heroBottom < 0);
+    const footerTop = footerSection ? footerSection.getBoundingClientRect().top : Infinity;
+    const pastHero = heroBottom < 0;
+    const beforeFooter = footerTop > window.innerHeight;
+    floatingCta.classList.toggle('is-visible', pastHero && beforeFooter);
   }, { passive: true });
 
   /* Bulletpoints in "In diesen sieben Sessions..." fliegen nacheinander ein, sobald sichtbar */
