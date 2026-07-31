@@ -69,7 +69,11 @@
     .hero-image::before { content: ''; position: absolute; inset: 0; background: linear-gradient(to right, #1b5c50 0%, rgba(27,92,80,0.55) 18%, transparent 38%); z-index: 1; pointer-events: none; }
     .hero-image::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 40%; background: linear-gradient(to top, var(--dark) 0%, transparent 100%); z-index: 1; pointer-events: none; }
 
-    .hero-content h1 { font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 600; line-height: 1.08; letter-spacing: 0.5px; margin-bottom: 16px; color: #fff; }
+    .hero-content h1 {
+      font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 600; line-height: 1.08; letter-spacing: 0.5px; margin-bottom: 16px;
+      background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%);
+      -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;
+    }
     .hero-content h1 em { font-style: normal; font-weight: 600; color: inherit; }
     .hero-subtitle { font-size: 18px; font-weight: 400; color: #fff; margin-bottom: 16px; max-width: 540px; line-height: 1.7; }
     .hero-subtitle strong { color: #fff; font-weight: 700; }
@@ -377,7 +381,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p class="hero-subtitle">Jetzt kommt das genialste Special aller Zeiten:</p>
       <h1>Die ungezähmte <em>Unternehmerin</em></h1>
 
-      <p class="hero-subtitle">Ich begleite dich in <strong>7 Live-Sessions persönlich dabei, auf dein nächstes Umsatzlevel zu kommen</strong>, indem du aufhörst, dir Kunden und Geld zu erkämpfen und stattdessen beginnst, es magnetisch anzuziehen.</p>
+      <p class="hero-subtitle">Ich begleite dich in <strong>7 Live-Sessions</strong> <strong>persönlich</strong> dabei, auf dein nächstes Umsatzlevel zu kommen, indem du aufhörst, dir <strong>Kunden</strong> und <strong>Geld</strong> zu erkämpfen und stattdessen beginnst, es <strong>magnetisch anzuziehen</strong>.</p>
       <div class="hero-price-row">
         <span class="hero-price-old">Gesamtwert: 3.000 EUR</span>
         <span class="hero-price-new">Für dich nur 333 EUR</span>
