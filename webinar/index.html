@@ -16,6 +16,17 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    @font-face {
+      font-family: 'Avenir LT Pro';
+      src: url('https://feminess.de/wp-content/uploads/AvenirLTPro-Book.woff2') format('woff2');
+      font-weight: 400; font-style: normal;
+    }
+    @font-face {
+      font-family: 'Avenir LT Pro';
+      src: url('https://feminess.de/wp-content/uploads/Avenir-LT-Pro-85-Heavy.woff2') format('woff2');
+      font-weight: 700; font-style: normal;
+    }
+
     :root {
       --teal:       #257c6c;
       --teal-dark:  #1b5c50;
@@ -122,13 +133,7 @@
       pointer-events: none;
     }
 
-    .hero-tilt {
-      position: absolute;
-      bottom: -1px; left: 0;
-      width: 100%; overflow: hidden;
-      line-height: 0; z-index: 3;
-    }
-    .hero-tilt svg { display: block; width: 100%; height: 56px; }
+    .hero-tilt { display: none; }
 
     .hero-content h1 {
       font-family: 'Cormorant Garamond', serif;
@@ -138,11 +143,13 @@
       letter-spacing: 1px;
       text-transform: uppercase;
       margin-bottom: 24px;
-      color: #fff;
+      background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
     .hero-content h1 em {
       font-style: normal;
-      color: inherit;
       letter-spacing: 0;
       text-transform: none;
     }
@@ -835,7 +842,7 @@
       flex-shrink: 0;
     }
     .fuer-dich-box.ja .fuer-dich-list li::before { content: '✓'; background: none; color: var(--teal-pale); width: auto; height: auto; border-radius: 0; top: 0; font-size: 16px; font-weight: 700; }
-    .fuer-dich-box.nein .fuer-dich-list li::before { content: '×'; background: none; color: #e8a0b0; width: auto; height: auto; border-radius: 0; top: 0; font-size: 18px; font-weight: 700; }
+    .fuer-dich-box.nein .fuer-dich-list li::before { content: '×'; background: none; color: #e8a0b0; width: auto; height: auto; border-radius: 0; top: 0; font-size: 26px; font-weight: 700; }
     .fuer-dich-list li strong { color: #0a3828; }
 
     /* ── BONUS ── */
@@ -1011,7 +1018,7 @@
     }
     .speaker-portrait h3 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 28px;
+      font-size: 33px;
       font-weight: 600;
       color: #fff;
       margin-bottom: 6px;
@@ -1169,7 +1176,7 @@
       /* Benefits */
       .benefits-grid { grid-template-columns: 1fr; gap: 16px; }
       .benefit-card { padding: 24px 20px; gap: 16px; }
-      .benefit-num { width: 36px; height: 36px; font-size: 18px; flex: 0 0 36px; }
+      .benefit-num { width: 36px; height: 36px; font-size: 28px; flex: 0 0 36px; }
 
       /* Logos */
       .logos-section { padding: 28px 20px; }
@@ -1211,8 +1218,13 @@
       .modal { border-radius: 16px 16px 0 0; }
 
       /* Footer */
-      footer { padding: 36px 20px; }
+      footer { padding: 36px 20px; overflow-x: hidden; }
       .footer-links { gap: 20px; flex-wrap: wrap; }
+
+      /* Wiedergeburt headline */
+      .how-inner h2 { white-space: normal !important; font-size: clamp(26px, 7vw, 56px) !important; }
+
+      /* Floating CTA full-width mobile already handled above */
     }
   </style>
 </head>
@@ -1800,7 +1812,7 @@ window._load_script = function(url, callback, isSubmit) {
       <p class="role">CEO &amp; Gründerin · FEMINESS</p>
     </div>
     <div class="speaker-bio">
-      <h2 style="font-family:'Cormorant Garamond',serif; font-size:34px; font-weight:600; color:#fff; margin-bottom:24px;">Die Frau, die deine <em style="font-style:normal; font-weight:700; color:inherit;">ENERGY for MILLION</em> freisetzt!</h2>
+      <h2 style="font-family:'Cormorant Garamond',serif; font-size:34px; font-weight:600; color:#fff; margin-bottom:24px;">Die Frau, die deine <em style="font-style:normal; font-weight:700; background:linear-gradient(90deg,#a0685a 0%,#d4a090 25%,#f0ccc0 50%,#d4a090 75%,#a0685a 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">ENERGY for MILLION</em> freisetzt!</h2>
       <p>Marina Henze ist <strong>Mentorin</strong> für <strong>Unternehmerinnen</strong>, die spüren: So wie bisher will ich nicht weitermachen.</p>
       <p>Seit über <strong>20 Jahren</strong> begleitet sie Frauen aus Erschöpfung und Selbstaufopferung hinein in <strong>finanzielle Freiheit</strong> und selbstbestimmtes Wirken. Mehr als <strong>20.000 Frauen</strong> sind diesen Weg bereits mit ihr gegangen.</p>
       <p>Als Unternehmerin mit <strong>Millionen-Umsätzen</strong> steht Marina für Business ohne <strong>Kampf.</strong> Klar, kraftvoll und frei.</p>
@@ -1899,9 +1911,11 @@ window._load_script = function(url, callback, isSubmit) {
   /* Floating CTA: show after scrolling past hero */
   const floatingCta = document.getElementById('floatingCta');
   const heroSection = document.querySelector('.hero');
+  const footerEl = document.querySelector('footer');
   window.addEventListener('scroll', function() {
     const heroBottom = heroSection ? heroSection.getBoundingClientRect().bottom : 600;
-    if (heroBottom < 0) {
+    const footerTop = footerEl ? footerEl.getBoundingClientRect().top : Infinity;
+    if (heroBottom < 0 && footerTop > window.innerHeight) {
       floatingCta.classList.add('is-visible');
     } else {
       floatingCta.classList.remove('is-visible');
