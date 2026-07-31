@@ -61,9 +61,9 @@
       content: ''; position: absolute; top: -80px; right: -80px; left: auto; width: 600px; height: 600px;
       background: radial-gradient(circle, rgba(207,90,115,0.18) 0%, transparent 60%); pointer-events: none; z-index: 1;
     }
-    .hero-inner { display: grid; grid-template-columns: 48fr 52fr; height: 780px; position: relative; z-index: 2; }
-    .hero-content { padding: 40px 56px 48px 80px; display: flex; flex-direction: column; justify-content: center; }
-    .hero-image { position: relative; overflow: hidden; }
+    .hero-inner { position: relative; min-height: 780px; z-index: 2; }
+    .hero-content { position: relative; z-index: 2; width: 48%; min-height: 780px; box-sizing: border-box; padding: 40px 56px 48px 80px; display: flex; flex-direction: column; justify-content: center; }
+    .hero-image { position: absolute; top: 0; right: 0; bottom: 0; width: 52%; overflow: hidden; }
     .hero-image img { width: 100%; height: 100%; object-fit: cover; object-position: center 35%; display: block; filter: brightness(0.92) saturate(0.9); }
     .hero-image::before { content: ''; position: absolute; inset: 0; background: linear-gradient(to right, var(--teal-dark) 0%, rgba(27,92,80,0.55) 18%, transparent 38%); z-index: 1; pointer-events: none; }
     .hero-image::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 40%; background: linear-gradient(to top, var(--dark) 0%, transparent 100%); z-index: 1; pointer-events: none; }
@@ -108,7 +108,7 @@
     .dark-section .btn-note strong { color: #fff; }
 
     /* ── LINK-GENERATOR (Hero) ── */
-    #link-generator label { display: block; font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--teal-light); margin-bottom: 8px; }
+    #link-generator label { display: block; font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: 400; color: #fff; margin-bottom: 8px; }
     #link-generator input#nameInput { font-family: 'Montserrat', sans-serif; font-size: 16px; border: 1px solid rgba(255,255,255,0.3); border-radius: 8px; background: rgba(255,255,255,0.08); color: #fff; }
     #link-generator input#nameInput::placeholder { color: rgba(255,255,255,0.55); }
     #link-generator input#nameInput:focus { outline: none; border-color: var(--teal-light); }
@@ -118,7 +118,7 @@
       font-size: 15px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; cursor: pointer; transition: opacity 0.2s, transform 0.2s;
     }
     #link-generator #generateBtn:hover { opacity: 0.88; transform: translateY(-1px); }
-    #link-generator #result { font-size: 15px; color: #fff; line-height: 1.7; font-family: 'Montserrat', sans-serif; }
+    #link-generator #result { font-size: 18px; font-weight: 400; color: #fff; line-height: 1.7; font-family: 'Montserrat', sans-serif; }
     #link-generator #result a { color: #fff; font-weight: 700; word-break: break-all; }
     #link-generator #result button { margin-top: 10px; background: rgba(255,255,255,0.1); color: #fff; border: 1px solid rgba(255,255,255,0.35); border-radius: 999px; padding: 9px 18px; font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 1px; cursor: pointer; transition: background 0.2s; }
     #link-generator #result button:hover { background: rgba(255,255,255,0.2); }
@@ -196,12 +196,12 @@
 
     /* ── RESPONSIVE: TABLET ── */
     @media (max-width: 900px) {
-      .hero-inner { grid-template-columns: 1fr; height: auto; }
-      .hero-image { height: 45vh; order: -1; }
+      .hero-inner { display: flex; flex-direction: column; min-height: auto; }
+      .hero-content { position: static; width: 100%; min-height: auto; padding: 36px 40px 60px; }
+      .hero-image { position: static; width: 100%; height: 45vh; order: -1; }
       .hero-image img { object-position: center 30%; }
       .hero-image::before { background: linear-gradient(to bottom, transparent 40%, var(--dark) 100%); }
       .hero-image::after { display: none; }
-      .hero-content { padding: 36px 40px 60px; }
       .benefits-grid { grid-template-columns: 1fr; }
       .footer-inner { flex-direction: column; text-align: center; }
       .footer-links { justify-content: center; }
@@ -390,12 +390,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p class="faq-answer">Die Aktion läuft bis <strong>13.08.2026, 11:00 Uhr</strong>. Danach zählen keine neuen Empfehlungen mehr für diese Aktion.</p>
     </details>
     <details class="faq-item">
-      <summary>Meine Freundin hat gekauft, aber ohne meinen Link erwähnt, dass ich sie empfohlen habe – was jetzt?</summary>
-      <p class="faq-answer">Schreib uns in dem Fall kurz an <a href="mailto:marketing@feminess.de" style="color:#0a3828; font-weight:700;">marketing@feminess.de</a> mit dem Namen deiner Freundin, wir prüfen das gerne manuell. Am einfachsten und sichersten ist es aber, immer deinen persönlichen Link zu teilen.</p>
-    </details>
-    <details class="faq-item">
       <summary>Muss ich selbst schon Kundin sein, um mitzumachen?</summary>
-      <p class="faq-answer">Nein – jede Frau aus unserer Community, ob Webinar-Teilnehmerin oder Kundin, kann mitmachen und empfehlen.</p>
+      <p class="faq-answer">Nein, jede Frau aus unserer Community, ob Webinar-Teilnehmerin oder Kundin, kann mitmachen und empfehlen.</p>
     </details>
   </div>
 </section>
@@ -463,11 +459,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       const produktLink = `https://feminess.de/produkt/die-ungezaehmte-unternehmerin/?utm_source=${encodedName}`;
 
       resultDiv.innerHTML = `
-        <p><strong>Link 1 – zum Webinar:</strong><br>
+        <p><strong>Link zum Webinar:</strong><br>
         <a href="${webinarLink}" target="_blank">${webinarLink}</a><br>
         <button onclick="navigator.clipboard.writeText('${webinarLink}').then(() => alert('✅ Webinar-Link wurde kopiert!'))">📋 Link kopieren</button></p>
 
-        <p style="margin-top:20px;"><strong>Link 2 – zum Programm:</strong><br>
+        <p style="margin-top:20px;"><strong>Link direkt zum Programm:</strong><br>
         <a href="${produktLink}" target="_blank">${produktLink}</a><br>
         <button onclick="navigator.clipboard.writeText('${produktLink}').then(() => alert('✅ Programm-Link wurde kopiert!'))">📋 Link kopieren</button></p>
       `;
