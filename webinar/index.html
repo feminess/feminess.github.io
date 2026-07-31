@@ -75,7 +75,7 @@
 
     /* ── HERO ── */
     .hero {
-      background: var(--dark);
+      background: var(--teal-dark);
       position: relative;
       overflow: hidden;
     }
@@ -118,7 +118,7 @@
     .hero-image::before {
       content: '';
       position: absolute; inset: 0;
-      background: linear-gradient(to right, var(--dark) 0%, rgba(13,36,32,0.6) 18%, transparent 38%);
+      background: linear-gradient(to right, var(--teal-dark) 0%, rgba(27,92,80,0.6) 18%, transparent 38%);
       z-index: 1;
       pointer-events: none;
     }
@@ -128,7 +128,7 @@
       position: absolute;
       bottom: 0; left: 0; right: 0;
       height: 40%;
-      background: linear-gradient(to top, var(--dark) 0%, transparent 100%);
+      background: linear-gradient(to top, var(--teal-dark) 0%, transparent 100%);
       z-index: 1;
       pointer-events: none;
     }
@@ -523,8 +523,8 @@
 
     /* ── BENEFITS ── */
     .benefits-section {
-      background: var(--off-white);
-      border-top: 2px solid var(--teal-pale);
+      background: #fff;
+      border-top: none;
       padding: 100px 0;
       position: relative;
       overflow: hidden;
@@ -629,7 +629,7 @@
 
     /* ── SO FUNKTIONIERT'S ── */
     .how-section {
-      background: linear-gradient(135deg, var(--teal-dark) 0%, var(--dark) 100%);
+      background: var(--teal-dark);
       padding: 110px 0;
       position: relative;
       overflow: hidden;
@@ -737,8 +737,8 @@
 
     /* ── TESTIMONIALS ── */
     .testimonials-section {
-      background: var(--off-white);
-      border-top: 2px solid var(--teal-pale);
+      background: #fff;
+      border-top: none;
       padding: 88px 0;
       border-bottom: 1px solid var(--beige);
     }
@@ -768,7 +768,7 @@
 
     /* ── FÜR DICH ── */
     .fuer-dich-section {
-      background: #fff;
+      background: var(--teal-dark);
       padding: 100px 0;
       position: relative;
       overflow: hidden;
@@ -783,7 +783,7 @@
       font-family: 'Cormorant Garamond', serif;
       font-size: clamp(28px, 3.8vw, 56px);
       font-weight: 600;
-      color: #0a3828;
+      color: #fff;
       text-align: center;
       white-space: nowrap;
       margin-bottom: 56px;
@@ -793,26 +793,26 @@
       font-family: 'Cormorant Garamond', serif;
       font-size: clamp(28px, 3.8vw, 56px);
       font-weight: 600;
-      color: #0a3828;
+      color: #fff;
       text-align: center;
       white-space: nowrap;
       margin: 8px 0;
     }
     .fuer-dich-divider em { font-style: normal; font-weight: 600; color: inherit; }
-    .fuer-dich-section .section-label { color: var(--teal); }
-    .fuer-dich-section .section-label::after { background: var(--teal); }
+    .fuer-dich-section .section-label { color: var(--off-white); }
+    .fuer-dich-section .section-label::after { background: var(--off-white); opacity: 0.5; }
     .fuer-dich-stack { display: flex; flex-direction: column; gap: 20px; }
     .fuer-dich-box {
       border-radius: 12px;
       padding: 32px 36px;
     }
     .fuer-dich-box.ja {
-      background: rgba(94,198,179,0.10);
-      border: 1px solid rgba(37,124,108,0.20);
+      background: rgba(37,124,108,0.28);
+      border: 1px solid rgba(94,198,179,0.35);
     }
     .fuer-dich-box.nein {
-      background: rgba(207,90,115,0.07);
-      border: 1px solid rgba(207,90,115,0.20);
+      background: rgba(207,90,115,0.22);
+      border: 1px solid rgba(207,90,115,0.35);
     }
     .fuer-dich-box-header {
       display: flex;
@@ -823,14 +823,14 @@
       letter-spacing: 1px;
       margin-bottom: 20px;
     }
-    .fuer-dich-box.ja .fuer-dich-box-header { color: var(--teal); }
+    .fuer-dich-box.ja .fuer-dich-box-header { color: var(--teal-pale); }
     .fuer-dich-box.nein .fuer-dich-box-header { color: var(--rose-light); }
     .fuer-dich-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
     .fuer-dich-list li {
       position: relative;
       padding-left: 24px;
       font-size: 18px;
-      color: var(--warm-gray);
+      color: rgba(255,255,255,0.85);
       line-height: 1.7;
     }
     .fuer-dich-list li::before {
@@ -844,13 +844,13 @@
       border-radius: 50%;
       flex-shrink: 0;
     }
-    .fuer-dich-box.ja .fuer-dich-list li::before { content: '✓'; background: none; color: var(--teal); width: auto; height: auto; border-radius: 0; top: 0; font-size: 16px; font-weight: 700; }
+    .fuer-dich-box.ja .fuer-dich-list li::before { content: '✓'; background: none; color: var(--teal-pale); width: auto; height: auto; border-radius: 0; top: 0; font-size: 16px; font-weight: 700; }
     .fuer-dich-box.nein .fuer-dich-list li::before { background: #c47868; }
-    .fuer-dich-list li strong { color: #0a3828; }
+    .fuer-dich-list li strong { color: #fff; }
 
     /* ── BONUS ── */
     .bonus-section {
-      background: linear-gradient(135deg, var(--teal-dark) 0%, var(--dark) 100%);
+      background: var(--teal-dark);
       padding: 88px 0;
       border-bottom: 1px solid rgba(94,198,179,0.1);
       position: relative;
@@ -915,7 +915,7 @@
 
     /* ── SCREENSHOT SLIDER ── */
     .screenshots-section {
-      background: linear-gradient(135deg, var(--teal-dark) 0%, var(--dark) 100%);
+      background: var(--teal-dark);
       padding: 80px 0 72px;
     }
     .screenshots-inner {
@@ -1003,10 +1003,8 @@
 
     /* ── SPEAKER ── */
     .speaker-section {
-      background: var(--off-white);
-      border-top: 2px solid var(--teal-pale);
+      background: var(--teal-dark);
       padding: 88px 0;
-      border-bottom: 1px solid var(--beige);
     }
     .speaker-inner {
       max-width: 1100px;
@@ -1031,7 +1029,7 @@
       font-family: 'Cormorant Garamond', serif;
       font-size: 28px;
       font-weight: 600;
-      color: #0a3828;
+      color: #fff;
       margin-bottom: 6px;
     }
     .speaker-portrait .role {
@@ -1039,14 +1037,15 @@
       font-weight: 700;
       letter-spacing: 2.5px;
       text-transform: uppercase;
-      color: var(--teal);
+      color: var(--teal-pale);
     }
     .speaker-bio { flex: 1; padding-top: 8px; }
-    .speaker-bio p { font-size: 18px; color: var(--warm-gray); line-height: 1.8; margin-bottom: 18px; }
+    .speaker-bio p { font-size: 18px; color: rgba(255,255,255,0.85); line-height: 1.8; margin-bottom: 18px; }
+    .speaker-bio p strong { color: #fff; }
 
     /* ── FINAL CTA ── */
     .final-cta {
-      background: linear-gradient(135deg, var(--teal-dark) 0%, var(--dark) 100%);
+      background: var(--teal-dark);
       padding: 110px 0;
       border-bottom: none;
       position: relative;
@@ -1129,7 +1128,7 @@
       /* Hero */
       .hero-inner { grid-template-columns: 1fr; min-height: auto; }
       .hero-image { height: 45vh; order: -1; }
-      .hero-image::before { background: linear-gradient(to bottom, transparent 40%, var(--dark) 100%); }
+      .hero-image::before { background: linear-gradient(to bottom, transparent 40%, var(--teal-dark) 100%); }
       .hero-image::after { display: none; }
       .hero-content { padding: 36px 40px 60px; }
       .countdown { justify-content: flex-start; }
@@ -1825,7 +1824,7 @@ window._load_script = function(url, callback, isSubmit) {
       <p class="role">CEO &amp; Gründerin · FEMINESS</p>
     </div>
     <div class="speaker-bio">
-      <h2 style="font-family:'Cormorant Garamond',serif; font-size:34px; font-weight:600; margin-bottom:24px;">Die Frau, die deine <em style="font-style:normal; font-weight:700; background:linear-gradient(90deg,#a0685a 0%,#d4a090 25%,#f0ccc0 50%,#d4a090 75%,#a0685a 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">ENERGY for MILLION</em> freisetzt!</h2>
+      <h2 style="font-family:'Cormorant Garamond',serif; font-size:34px; font-weight:600; color:#fff; margin-bottom:24px;">Die Frau, die deine <em style="font-style:normal; font-weight:700; background:linear-gradient(90deg,#a0685a 0%,#d4a090 25%,#f0ccc0 50%,#d4a090 75%,#a0685a 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">ENERGY for MILLION</em> freisetzt!</h2>
       <p>Marina Henze ist <strong>Mentorin</strong> für <strong>Unternehmerinnen</strong>, die spüren: So wie bisher will ich nicht weitermachen.</p>
       <p>Seit über <strong>20 Jahren</strong> begleitet sie Frauen aus Erschöpfung und Selbstaufopferung hinein in <strong>finanzielle Freiheit</strong> und selbstbestimmtes Wirken. Mehr als <strong>20.000 Frauen</strong> sind diesen Weg bereits mit ihr gegangen.</p>
       <p>Als Unternehmerin mit <strong>Millionen-Umsätzen</strong> steht Marina für Business ohne <strong>Kampf.</strong> Klar, kraftvoll und frei.</p>
