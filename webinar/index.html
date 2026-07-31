@@ -16,6 +16,17 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    @font-face {
+      font-family: 'Avenir LT Pro';
+      src: url('https://feminess.de/wp-content/uploads/AvenirLTPro-Book.woff2') format('woff2');
+      font-weight: 400; font-style: normal;
+    }
+    @font-face {
+      font-family: 'Avenir LT Pro';
+      src: url('https://feminess.de/wp-content/uploads/Avenir-LT-Pro-85-Heavy.woff2') format('woff2');
+      font-weight: 700; font-style: normal;
+    }
+
     :root {
       --teal:       #257c6c;
       --teal-dark:  #1b5c50;
@@ -138,11 +149,13 @@
       letter-spacing: 1px;
       text-transform: uppercase;
       margin-bottom: 24px;
-      color: #fff;
+      background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
     .hero-content h1 em {
       font-style: normal;
-      color: inherit;
       letter-spacing: 0;
       text-transform: none;
     }
@@ -755,7 +768,7 @@
 
     /* ── FÜR DICH ── */
     .fuer-dich-section {
-      background: var(--teal-dark);
+      background: #fff;
       padding: 100px 0;
       position: relative;
       overflow: hidden;
@@ -770,7 +783,7 @@
       font-family: 'Cormorant Garamond', serif;
       font-size: clamp(28px, 3.8vw, 56px);
       font-weight: 600;
-      color: #fff;
+      color: #0a3828;
       text-align: center;
       white-space: nowrap;
       margin-bottom: 56px;
@@ -780,26 +793,26 @@
       font-family: 'Cormorant Garamond', serif;
       font-size: clamp(28px, 3.8vw, 56px);
       font-weight: 600;
-      color: #fff;
+      color: #0a3828;
       text-align: center;
       white-space: nowrap;
       margin: 8px 0;
     }
     .fuer-dich-divider em { font-style: normal; font-weight: 600; color: inherit; }
-    .fuer-dich-section .section-label { color: var(--off-white); }
-    .fuer-dich-section .section-label::after { background: var(--off-white); opacity: 0.5; }
+    .fuer-dich-section .section-label { color: var(--teal); }
+    .fuer-dich-section .section-label::after { background: var(--teal); opacity: 1; }
     .fuer-dich-stack { display: flex; flex-direction: column; gap: 20px; }
     .fuer-dich-box {
       border-radius: 12px;
       padding: 32px 36px;
     }
     .fuer-dich-box.ja {
-      background: rgba(37,124,108,0.28);
-      border: 1px solid rgba(94,198,179,0.35);
+      background: rgba(37,124,108,0.08);
+      border: 1px solid rgba(37,124,108,0.25);
     }
     .fuer-dich-box.nein {
-      background: rgba(207,90,115,0.22);
-      border: 1px solid rgba(207,90,115,0.35);
+      background: rgba(207,90,115,0.08);
+      border: 1px solid rgba(207,90,115,0.25);
     }
     .fuer-dich-box-header {
       display: flex;
@@ -810,14 +823,14 @@
       letter-spacing: 1px;
       margin-bottom: 20px;
     }
-    .fuer-dich-box.ja .fuer-dich-box-header { color: var(--teal-pale); }
-    .fuer-dich-box.nein .fuer-dich-box-header { color: var(--rose-light); }
+    .fuer-dich-box.ja .fuer-dich-box-header { color: var(--teal); }
+    .fuer-dich-box.nein .fuer-dich-box-header { color: var(--rose); }
     .fuer-dich-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
     .fuer-dich-list li {
       position: relative;
       padding-left: 24px;
       font-size: 18px;
-      color: rgba(255,255,255,0.85);
+      color: #0a3828;
       line-height: 1.7;
     }
     .fuer-dich-list li::before {
@@ -831,9 +844,9 @@
       border-radius: 50%;
       flex-shrink: 0;
     }
-    .fuer-dich-box.ja .fuer-dich-list li::before { content: '✓'; background: none; color: var(--teal-pale); width: auto; height: auto; border-radius: 0; top: 0; font-size: 16px; font-weight: 700; }
+    .fuer-dich-box.ja .fuer-dich-list li::before { content: '✓'; background: none; color: var(--teal); width: auto; height: auto; border-radius: 0; top: 0; font-size: 16px; font-weight: 700; }
     .fuer-dich-box.nein .fuer-dich-list li::before { background: #c47868; }
-    .fuer-dich-list li strong { color: #fff; }
+    .fuer-dich-list li strong { color: #0a3828; }
 
     /* ── BONUS ── */
     .bonus-section {
@@ -1032,27 +1045,18 @@
 
     /* ── FINAL CTA ── */
     .final-cta {
-      background: var(--teal-dark);
+      background: #fff;
       padding: 110px 0;
       border-bottom: none;
       position: relative;
       overflow: hidden;
     }
-    .final-cta::before {
-      content: '';
-      position: absolute;
-      top: -150px; left: 50%;
-      transform: translateX(-50%);
-      width: 800px; height: 800px;
-      background: radial-gradient(circle, rgba(207,90,115,0.08) 0%, transparent 60%);
-      pointer-events: none;
-    }
-    .final-cta .section-label { color: var(--teal-light) !important; }
-    .final-cta .section-label::after { background: var(--teal-light) !important; }
-    .final-cta h2 { color: #fff !important; }
-    .final-cta .countdown-digits { color: #fff !important; }
-    .final-cta .countdown-label { color: rgba(255,255,255,0.6) !important; }
-    .final-cta .countdown-sep { color: rgba(255,255,255,0.25) !important; }
+    .final-cta .section-label { color: var(--teal) !important; }
+    .final-cta .section-label::after { background: var(--teal) !important; }
+    .final-cta h2 { color: #0a3828 !important; }
+    .final-cta .countdown-digits { color: #0a3828 !important; }
+    .final-cta .countdown-label { color: var(--warm-gray) !important; }
+    .final-cta .countdown-sep { color: rgba(0,0,0,0.15) !important; }
     .final-cta-inner {
       max-width: 600px;
       margin: 0 auto;
@@ -1572,6 +1576,7 @@ window._load_script = function(url, callback, isSubmit) {
 </div>
 
 <!-- VIDEO -->
+<div style="background: var(--teal-dark);">
 <div style="max-width:900px; margin:0 auto; padding:48px 40px;">
   <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden;">
     <iframe title="vimeo-player" src="https://player.vimeo.com/video/1206720731?h=4a44dcaaf1" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
@@ -1579,6 +1584,7 @@ window._load_script = function(url, callback, isSubmit) {
   <div style="text-align:center; margin-top:32px;">
     <button class="btn-cta" onclick="openModal()">Yes, ich bin dabei</button>
   </div>
+</div>
 </div>
 
 <!-- MAIN TEXT -->
@@ -1696,7 +1702,7 @@ window._load_script = function(url, callback, isSubmit) {
       <div class="journey-card">
         <div class="journey-card-glow"></div>
         <span class="journey-step-number">02</span>
-        <h3 class="journey-card-title">Live<span style="font-family:'Montserrat',sans-serif;">-</span>Masterclass</h3>
+        <h3 class="journey-card-title">Live-Masterclass</h3>
         <p class="journey-card-text">Am <strong style="color:#0a3828;">13. August 2026 um 11:00 Uhr</strong> erlebst du live, was es wirklich braucht, um deine Energie und Kraft für die Millionen freizusetzen.</p>
         <p class="journey-card-hint">2 Stunden, die alles verändern.</p>
       </div>
@@ -1811,7 +1817,7 @@ window._load_script = function(url, callback, isSubmit) {
       <p class="role">CEO &amp; Gründerin · FEMINESS</p>
     </div>
     <div class="speaker-bio">
-      <h2 style="font-family:'Cormorant Garamond',serif; font-size:34px; font-weight:600; color:#fff; margin-bottom:24px;">Die Frau, die deine <em style="font-style:normal; font-weight:700; color:inherit;">ENERGY for MILLION</em> freisetzt!</h2>
+      <h2 style="font-family:'Cormorant Garamond',serif; font-size:34px; font-weight:600; color:#fff; margin-bottom:24px;">Die Frau, die deine <em style="font-style:normal; font-weight:700; background:linear-gradient(90deg,#a0685a 0%,#d4a090 25%,#f0ccc0 50%,#d4a090 75%,#a0685a 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">ENERGY for MILLION</em> freisetzt!</h2>
       <p>Marina Henze ist <strong>Mentorin</strong> für <strong>Unternehmerinnen</strong>, die spüren: So wie bisher will ich nicht weitermachen.</p>
       <p>Seit über <strong>20 Jahren</strong> begleitet sie Frauen aus Erschöpfung und Selbstaufopferung hinein in <strong>finanzielle Freiheit</strong> und selbstbestimmtes Wirken. Mehr als <strong>20.000 Frauen</strong> sind diesen Weg bereits mit ihr gegangen.</p>
       <p>Als Unternehmerin mit <strong>Millionen-Umsätzen</strong> steht Marina für Business ohne <strong>Kampf.</strong> Klar, kraftvoll und frei.</p>
