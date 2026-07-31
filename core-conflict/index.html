@@ -674,7 +674,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     font-size: clamp(24px, 4vw, 34px);
     font-weight: 400; color: #fff; line-height: 1.25; margin-bottom: 12px;
   }
-  .popup-box h2 em { font-style: normal; color: var(--sand-light); }
+  .popup-box h2 em {
+    font-style: normal;
+    background: linear-gradient(90deg, #d4a090, #f0ccc0, #d4a090);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
   .popup-box p { font-size: 15px; color: var(--mid-gray); line-height: 1.65; margin-bottom: 28px; }
 
   /* ── RESPONSIVE ── */
@@ -682,7 +688,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .hero { grid-template-columns: 1fr; min-height: auto; }
     .hero-image-wrap { height: 90vw; min-height: 340px; }
     .hero-image-wrap::before { background: none; }
-    .hero-img { transform: none; object-position: center 12%; }
+    .hero-img { transform: none; object-position: center 0%; }
     .hero-text { padding: 36px 32px 48px; text-align: center; }
     .hero-cta { align-items: center; }
     .testimonials-grid { grid-template-columns: 1fr; }
