@@ -47,6 +47,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   .page-frame { display: flex; flex-direction: column; }
 
+  /* ── TOP BANNER ── */
+  .top-banner {
+    background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%);
+    padding: 12px 40px;
+    text-align: center;
+  }
+  .top-banner p {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--dark);
+  }
+
   /* ── PROGRESS BAR ── */
   .progress-wrap { width: 100%; background: var(--off-white); border-bottom: 1px solid var(--beige); }
   .progress-inner { max-width: 1400px; margin: 0 auto; padding: 32px 33px; }
@@ -201,6 +215,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
 
   @media (max-width: 767px) {
+    .top-banner p { font-size: 9.5px; letter-spacing: 1px; }
     .progress-inner { padding: 20px 18px; }
     .progress-labels { font-size: 10px; letter-spacing: 2px; }
     .block { padding: 48px 18px; }
@@ -218,6 +233,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NQMQT7QH"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+
+<!-- TOP BANNER -->
+<div class="top-banner">
+  <p style="white-space: nowrap;">Free Webinar &ndash; Energy for Million</p>
+</div>
 
 <div class="page-frame">
 
