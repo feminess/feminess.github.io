@@ -1149,7 +1149,7 @@
 
       /* Allgemein */
       body { font-size: 16px; }
-      h1 { font-size: 9vw !important; white-space: normal; }
+      h1 { font-size: 7.2vw !important; white-space: nowrap; }
       h2 { font-size: 34px !important; }
       .fuer-dich-inner h2 { font-size: 28px !important; white-space: normal !important; }
       .fuer-dich-divider { font-size: 26px !important; white-space: normal !important; }
@@ -1170,9 +1170,9 @@
       /* Hero */
       .hero-image { height: 48vw; }
       .hero-image img { object-position: center 15%; }
-      .hero-content { padding: 20px 20px 24px; }
-      .hero-subtitle { font-size: 18px; margin-bottom: 16px; }
-      .hero-date { font-size: 14px; letter-spacing: 0; text-transform: none; margin-top: 12px; margin-bottom: 0; }
+      .hero-content { padding: 20px 20px 24px; overflow: hidden; }
+      .hero-subtitle { font-size: 18px; margin-bottom: 16px; max-width: 100%; }
+      .hero-date { font-size: 14px; letter-spacing: 0; text-transform: none; margin-top: 12px; margin-bottom: 0; max-width: 100%; }
       .btn-hero { padding: 16px 28px; font-size: 13px; width: 100%; text-align: center; margin-bottom: 0; }
       #utm-message { padding: 12px 14px; }
       #utm-message p { font-size: 16px; }
@@ -1220,7 +1220,8 @@
 
       /* Final CTA */
       .countdown-final { gap: 16px; }
-      .countdown-final .countdown-digits { font-size: 38px; }
+      .countdown-final .countdown-digits { font-size: 46px; }
+      .countdown-final .countdown-sep { font-size: 32px !important; }
 
       /* Modal */
       .modal { padding: 32px 20px 24px; }
