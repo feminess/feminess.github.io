@@ -189,6 +189,7 @@
     /* ── FOOTER ── */
     footer { background: var(--black); padding: 48px 40px; border-top: 1px solid rgba(94,198,179,0.1); }
     .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 24px; }
+    .footer-logo { height: 36px; width: auto; max-width: 100%; }
     .footer-links { display: flex; gap: 40px; }
     .footer-links a { font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--mid-gray); text-decoration: none; transition: color 0.2s; }
     .footer-links a:hover { color: var(--teal-light); }
@@ -209,20 +210,23 @@
 
     /* ── RESPONSIVE: MOBILE ── */
     @media (max-width: 600px) {
-      h2 { font-size: 30px !important; }
-      .hero-content h1 { font-size: 38px !important; }
+      h2 { font-size: 35px !important; }
+      .hero-content h1 { font-size: 43px !important; }
+      .benefit-body h3 { font-size: 29px; }
+      .price-card h3 { font-size: 37px; }
 
       .text-inner, .benefits-inner, .rules-inner, .price-inner, .faq-inner, .final-cta-inner { padding-left: 20px; padding-right: 20px; }
       .text-section, .benefits-section, .rules-section, .faq-section { padding: 64px 0; }
       .final-cta, .price-section { padding: 72px 0; }
 
-      .top-banner { padding: 12px 20px; }
-      .banner-row { gap: 6px 8px; }
-      .banner-text { font-size: 13px; }
-      .banner-countdown { font-size: 15px; }
-      .banner-countdown .cd-sep { margin: 0 4px; }
+      .top-banner { padding: 10px 14px; }
+      .banner-row { flex-wrap: nowrap; gap: 4px; justify-content: center; }
+      .banner-text { font-size: 10px; white-space: nowrap; }
+      .banner-countdown { font-size: 11px; white-space: nowrap; }
+      .banner-countdown .cd-unit { font-size: 8px; margin-left: 1px; }
+      .banner-countdown .cd-sep { margin: 0 2px; }
 
-      .hero-image { height: 44vw; }
+      .hero-image { height: 44vw; order: 0; }
       .hero-content { padding: 28px 20px 40px; }
       .hero-subtitle { font-size: 17px; }
       .btn-hero { padding: 16px 28px; font-size: 14px; width: 100%; text-align: center; }
@@ -236,12 +240,13 @@
 
       .price-new { font-size: 48px; }
 
-      .faq-item summary { font-size: 21px; padding: 18px 0; }
+      .faq-item summary { font-size: 26px; padding: 18px 0; }
       .faq-answer { font-size: 16px; padding-bottom: 20px; }
 
       .btn-cta { padding: 17px 28px; font-size: 14px; width: 100%; text-align: center; }
 
       footer { padding: 36px 20px; }
+      .footer-logo { height: 26px; }
       .footer-links { gap: 20px; flex-wrap: wrap; }
     }
   </style>
@@ -255,7 +260,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- TOP BANNER -->
 <div class="top-banner">
   <div class="banner-row">
-    <span class="banner-text">Die Empfehlungsaktion endet in</span>
+    <span class="banner-text">Empfehlungsaktion endet in</span>
     <span class="banner-countdown">
       <span id="b-days">00</span><span class="cd-unit">Tage</span>
       <span class="cd-sep">:</span>
@@ -407,7 +412,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- FOOTER -->
 <footer>
   <div class="footer-inner">
-    <div class="footer-brand"><img src="../webinar/Bilder/Logo-rosegoldverlauf-rgb.png" alt="Feminess" style="height:36px; width:auto;"></div>
+    <div class="footer-brand"><img src="../webinar/Bilder/Logo-rosegoldverlauf-rgb.png" alt="Feminess" class="footer-logo"></div>
     <div class="footer-links">
       <a href="https://feminess.github.io/Datenschutz/">Datenschutzerklärung</a>
       <a href="https://feminess.github.io/Impressum/">Impressum</a>
