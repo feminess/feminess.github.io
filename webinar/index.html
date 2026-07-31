@@ -14,7 +14,7 @@
   <link rel="icon" href="https://feminess.de/wp-content/uploads/cropped-favicon@2x-1-32x32.png" sizes="32x32">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
     @font-face {
       font-family: 'Avenir LT Pro';
@@ -51,30 +51,26 @@
     body { overflow-x: hidden; }
 
     body {
-      font-family: 'Avenir LT Pro', sans-serif;
-      font-size: 22px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 18px;
       line-height: 1.75;
       background: var(--off-white);
-      color: #1b5c50;
+      color: #0a3828;
       -webkit-font-smoothing: antialiased;
     }
 
     /* ── TOP BANNER ── */
     .top-banner {
-      background: var(--dark);
+      background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%);
       padding: 12px 40px;
       text-align: center;
-      border-bottom: 1px solid rgba(94,198,179,0.2);
     }
     .top-banner p {
       font-size: 13px;
       font-weight: 700;
       letter-spacing: 4px;
       text-transform: uppercase;
-      background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      color: var(--dark);
     }
 
     /* ── HERO ── */
@@ -165,9 +161,9 @@
     }
 
     .hero-subtitle {
-      font-size: 24px;
+      font-size: 20px;
       font-weight: 400;
-      color: var(--mid-gray);
+      color: rgba(255,255,255,0.85);
       margin-bottom: 28px;
       max-width: 520px;
       line-height: 1.7;
@@ -179,7 +175,7 @@
       font-weight: 400;
       letter-spacing: 0;
       text-transform: none;
-      color: var(--mid-gray);
+      color: rgba(255,255,255,0.65);
       margin-top: 20px;
       margin-bottom: 0;
       max-width: 520px;
@@ -190,13 +186,13 @@
     .btn-hero {
       display: inline-block;
       background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%);
-      color: #fff;
+      color: var(--dark);
       border: none;
       padding: 20px 48px;
-      border-radius: 8px;
-      font-family: 'Avenir LT Pro', sans-serif;
+      border-radius: 999px;
+      font-family: 'Montserrat', sans-serif;
       font-size: 14px;
-      font-weight: 900;
+      font-weight: 700;
       letter-spacing: 2px;
       text-transform: uppercase;
       cursor: pointer;
@@ -284,19 +280,19 @@
     .modal h2 {
       font-family: 'Cormorant Garamond', serif;
       font-size: clamp(26px, 4.2vw, 38px);
-      font-weight: 400; color: #fff; line-height: 1.2; margin-bottom: 12px;
+      font-weight: 600; color: #fff; line-height: 1.2; margin-bottom: 12px;
     }
-    .modal h2 em { font-style: italic; color: var(--sand-light); }
+    .modal h2 em { font-style: normal; color: var(--sand-light); }
 
     .modal-sub {
-      font-size: 15px; color: var(--mid-gray); line-height: 1.65; margin-bottom: 28px;
+      font-size: 15px; color: rgba(255,255,255,0.70); line-height: 1.65; margin-bottom: 28px;
     }
 
     .popup-form { display: flex; flex-direction: column; gap: 8px; margin-bottom: 14px; }
     .popup-input {
       background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.13);
       border-radius: 2px; padding: 13px 16px;
-      font-family: 'Avenir LT Pro', sans-serif;
+      font-family: 'Montserrat', sans-serif;
       font-size: 14px; color: #fff; outline: none; transition: border-color 0.2s;
       width: 100%;
     }
@@ -306,11 +302,11 @@
     .btn-submit {
       width: 100%;
       background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%);
-      color: #fff;
+      color: var(--dark);
       border: none;
       padding: 17px;
-      border-radius: 8px;
-      font-family: 'Avenir LT Pro', sans-serif;
+      border-radius: 999px;
+      font-family: 'Montserrat', sans-serif;
       font-size: 12px;
       font-weight: 700;
       letter-spacing: 2px;
@@ -322,11 +318,11 @@
       box-shadow: 0 0 18px rgba(212,160,144,0.55), 0 6px 24px rgba(160,104,90,0.45);
     }
     .btn-submit:hover { opacity: 0.88; transform: translateY(-1px); animation: none; }
-    #_form_569_submit { background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%) !important; border-radius: 8px !important; animation: pulse-btn 2.2s ease-in-out infinite; box-shadow: 0 0 18px rgba(212,160,144,0.55), 0 6px 24px rgba(160,104,90,0.45) !important; }
+    #_form_569_submit { background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%) !important; border-radius: 999px !important; color: var(--dark) !important; animation: pulse-btn 2.2s ease-in-out infinite; box-shadow: 0 0 18px rgba(212,160,144,0.55), 0 6px 24px rgba(160,104,90,0.45) !important; }
 
     .popup-dismiss {
       display: block; text-align: center;
-      font-family: 'Avenir LT Pro', sans-serif;
+      font-family: 'Montserrat', sans-serif;
       font-size: 12px; color: var(--warm-gray); cursor: pointer;
       background: none; border: none; text-decoration: underline; text-underline-offset: 3px;
       margin-top: 10px; transition: color 0.15s; width: 100%;
@@ -355,19 +351,19 @@
     h2 {
       font-family: 'Cormorant Garamond', serif;
       font-size: 56px;
-      font-weight: 400;
-      color: #1b5c50;
+      font-weight: 600;
+      color: #0a3828;
       line-height: 1.1;
       margin-bottom: 8px;
       letter-spacing: -0.5px;
     }
-    h2 em { font-style: italic; background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    h2 em { font-style: normal; font-weight: 600; color: inherit; }
     .section h2 { font-family: 'Cormorant Garamond', serif; }
-    .section h2 em { font-style: italic; background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .section h2 em { font-style: normal; font-weight: 600; color: inherit; }
     .section-intro {
-      font-size: 22px;
+      font-size: 18px;
       font-weight: 400;
-      font-style: italic;
+      font-style: normal;
       color: var(--warm-gray);
       max-width: 600px;
       margin-bottom: 48px;
@@ -377,11 +373,11 @@
     .btn-cta {
       display: inline-block;
       background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%);
-      color: #fff;
+      color: var(--dark);
       text-decoration: none;
       padding: 20px 48px;
-      border-radius: 8px;
-      font-family: 'Avenir LT Pro', sans-serif;
+      border-radius: 999px;
+      font-family: 'Montserrat', sans-serif;
       font-size: 14px;
       font-weight: 700;
       letter-spacing: 2px;
@@ -392,7 +388,7 @@
       animation: pulse-btn 2.2s ease-in-out infinite;
     }
     .btn-cta:hover { opacity: 0.88; transform: translateY(-1px); animation: none; }
-    .btn-cta.on-dark { background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%); color: #fff; }
+    .btn-cta.on-dark { background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%); color: var(--dark); }
     .btn-cta.on-dark:hover { opacity: 0.88; }
 
     /* ── FLOATING CTA ── */
@@ -411,13 +407,13 @@
       bottom: 32px; right: 32px;
       z-index: 500;
       background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%);
-      color: #fff;
-      font-family: 'Avenir LT Pro', sans-serif;
+      color: var(--dark);
+      font-family: 'Montserrat', sans-serif;
       font-size: 13px;
       font-weight: 700;
       letter-spacing: 1px;
       padding: 16px 28px;
-      border-radius: 8px;
+      border-radius: 999px;
       border: none;
       cursor: pointer;
       box-shadow: 0 6px 28px rgba(207,90,115,0.50);
@@ -495,12 +491,12 @@
     }
     .text-section .section-label { margin-bottom: 36px; }
     .text-inner p {
-      font-size: 22px;
+      font-size: 18px;
       line-height: 1.85;
       color: var(--warm-gray);
       margin-bottom: 20px;
     }
-    .text-inner p strong { color: #1b5c50; font-weight: 700; }
+    .text-inner p strong { color: #0a3828; font-weight: 700; }
     .quote-block {
       text-align: center;
       padding: 32px 40px;
@@ -514,7 +510,7 @@
     .quote-block p {
       font-family: 'Cormorant Garamond', serif;
       font-size: 56px;
-      font-style: italic;
+      font-style: normal;
       color: #fff;
       line-height: 1.25;
       margin: 0;
@@ -546,7 +542,7 @@
       text-align: center;
       margin-bottom: 64px;
     }
-    .benefits-header h2 { color: #1b5c50; }
+    .benefits-header h2 { color: #0a3828; }
     .benefits-section .section-label { color: var(--teal); }
     .benefits-section .section-label::after { background: var(--teal); }
     .benefits-grid {
@@ -585,7 +581,7 @@
       align-self: flex-start;
       user-select: none;
     }
-    .benefit-body p { font-size: 22px; color: rgba(255,255,255,0.82); margin: 0; line-height: 1.75; }
+    .benefit-body p { font-size: 18px; color: rgba(255,255,255,0.85); margin: 0; line-height: 1.75; }
     .benefit-body p strong { color: #fff; font-weight: 700; }
 
     /* ── PERFECT FOR YOU ── */
@@ -614,7 +610,7 @@
     .perfect-section .section-label::after { background: var(--teal-light); }
     .perfect-section h2 { color: #fff; }
     .perfect-section h2 em { color: var(--rose-light); }
-    .perfect-section .section-intro { color: var(--mid-gray); }
+    .perfect-section .section-intro { color: rgba(255,255,255,0.85); }
     .perfect-item {
       display: flex;
       gap: 18px;
@@ -628,7 +624,7 @@
     .perfect-item:hover { background: rgba(37,124,108,0.08); }
     .heart-icon { flex: 0 0 18px; margin-top: 3px; }
     .heart-icon svg { width: 16px; height: 16px; fill: #c47868; }
-    .perfect-item p { color: rgba(255,255,255,0.85); font-size: 22px; margin: 0; line-height: 1.65; }
+    .perfect-item p { color: rgba(255,255,255,0.85); font-size: 18px; margin: 0; line-height: 1.65; }
     .perfect-cta { margin-top: 44px; }
 
     /* ── SO FUNKTIONIERT'S ── */
@@ -666,7 +662,7 @@
     .how-section .section-label::after { background: var(--teal-light); }
     .how-section > .how-inner > h2 { color: #fff; text-align: center; }
     .how-section > .how-inner > h2 em { color: var(--sand-light); }
-    .how-section .how-intro { text-align: center; color: #fff; font-size: 24px; max-width: 800px; margin: 0 auto 72px; line-height: 1.8; }
+    .how-section .how-intro { text-align: center; color: rgba(255,255,255,0.85); font-size: 18px; max-width: 800px; margin: 0 auto 72px; line-height: 1.8; }
 
     /* 3-column card grid */
     .journey-cards {
@@ -705,38 +701,34 @@
     .journey-step-number {
       font-family: 'Cormorant Garamond', serif;
       font-size: 56px;
-      font-weight: 400;
+      font-weight: 600;
       line-height: 1;
       margin-bottom: 8px;
-      background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      color: var(--teal);
       display: block;
     }
     .journey-card-title {
       font-family: 'Cormorant Garamond', serif;
       font-size: 27px;
       font-weight: 600;
-      font-weight: 400;
-      color: #1b5c50;
+      color: #0a3828;
       margin: 0 0 16px;
       line-height: 1.3;
     }
     .journey-card-text {
-      font-size: 22px;
-      color: #1b5c50;
+      font-size: 18px;
+      color: var(--warm-gray);
       line-height: 1.75;
       margin: 0 0 12px;
     }
     .journey-card-text:last-child { margin-bottom: 0; }
     .journey-card-hint {
       font-size: 13px;
-      color: #1b5c50;
-      font-style: italic;
+      color: var(--warm-gray);
+      font-style: normal;
       margin-top: 16px;
       padding-top: 16px;
-      border-top: 1px solid rgba(255,255,255,0.07);
+      border-top: 1px solid var(--beige);
       line-height: 1.6;
     }
     @media (max-width: 760px) {
@@ -771,8 +763,8 @@
     }
     .testimonial-card:hover { box-shadow: 0 8px 28px rgba(37,124,108,0.10); transform: translateY(-3px); }
     .stars { font-size: 14px; color: var(--sand); letter-spacing: 4px; margin-bottom: 20px; }
-    .testimonial-text { font-size: 22px; color: var(--warm-gray); line-height: 1.8; margin-bottom: 20px; }
-    .testimonial-author { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .testimonial-text { font-size: 16px; color: var(--warm-gray); line-height: 1.8; margin-bottom: 20px; }
+    .testimonial-author { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--warm-gray); }
 
     /* ── FÜR DICH ── */
     .fuer-dich-section {
@@ -790,23 +782,23 @@
     .fuer-dich-inner h2 {
       font-family: 'Cormorant Garamond', serif;
       font-size: clamp(28px, 3.8vw, 56px);
-      font-weight: 400;
-      color: #1b5c50;
+      font-weight: 600;
+      color: #0a3828;
       text-align: center;
       white-space: nowrap;
       margin-bottom: 56px;
     }
-    .fuer-dich-inner h2 em { font-style: italic; font-weight: 600; background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .fuer-dich-inner h2 em { font-style: normal; font-weight: 600; color: inherit; }
     .fuer-dich-divider {
       font-family: 'Cormorant Garamond', serif;
       font-size: clamp(28px, 3.8vw, 56px);
-      font-weight: 400;
-      color: #1b5c50;
+      font-weight: 600;
+      color: #0a3828;
       text-align: center;
       white-space: nowrap;
       margin: 8px 0;
     }
-    .fuer-dich-divider em { font-style: italic; font-weight: 600; background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .fuer-dich-divider em { font-style: normal; font-weight: 600; color: inherit; }
     .fuer-dich-section .section-label { color: var(--teal); }
     .fuer-dich-section .section-label::after { background: var(--teal); }
     .fuer-dich-stack { display: flex; flex-direction: column; gap: 20px; }
@@ -831,13 +823,13 @@
       letter-spacing: 1px;
       margin-bottom: 20px;
     }
-    .fuer-dich-box.ja .fuer-dich-box-header { color: var(--teal-light); }
-    .fuer-dich-box.nein .fuer-dich-box-header { background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .fuer-dich-box.ja .fuer-dich-box-header { color: var(--teal); }
+    .fuer-dich-box.nein .fuer-dich-box-header { color: var(--rose-light); }
     .fuer-dich-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
     .fuer-dich-list li {
       position: relative;
       padding-left: 24px;
-      font-size: 22px;
+      font-size: 18px;
       color: var(--warm-gray);
       line-height: 1.7;
     }
@@ -852,9 +844,9 @@
       border-radius: 50%;
       flex-shrink: 0;
     }
-    .fuer-dich-box.ja .fuer-dich-list li::before { content: '✓'; background: none; color: #1b5c50; width: auto; height: auto; border-radius: 0; top: 0; font-size: 16px; font-weight: 700; }
+    .fuer-dich-box.ja .fuer-dich-list li::before { content: '✓'; background: none; color: var(--teal); width: auto; height: auto; border-radius: 0; top: 0; font-size: 16px; font-weight: 700; }
     .fuer-dich-box.nein .fuer-dich-list li::before { background: #c47868; }
-    .fuer-dich-list li strong { color: #1b5c50; }
+    .fuer-dich-list li strong { color: #0a3828; }
 
     /* ── BONUS ── */
     .bonus-section {
@@ -880,7 +872,7 @@
     .bonus-section .section-label::after { background: var(--teal-light); }
     .bonus-section h2 { color: #fff; }
     .bonus-section h2 em { color: var(--sand-light); }
-    .bonus-section .section-intro { color: var(--mid-gray); font-style: italic; margin-bottom: 48px; }
+    .bonus-section .section-intro { color: rgba(255,255,255,0.85); font-style: normal; margin-bottom: 48px; }
     .bonus-gift-box {
       display: flex;
       gap: 40px;
@@ -918,7 +910,7 @@
       color: var(--sand-light);
       margin-bottom: 12px;
     }
-    .bonus-gift-text p { font-size: 22px; color: rgba(255,255,255,0.75); margin: 0; line-height: 1.8; }
+    .bonus-gift-text p { font-size: 18px; color: rgba(255,255,255,0.85); margin: 0; line-height: 1.8; }
     @media (max-width: 600px) { .bonus-gift-box { flex-direction: column; text-align: center; } }
 
     /* ── SCREENSHOT SLIDER ── */
@@ -1038,8 +1030,8 @@
     .speaker-portrait h3 {
       font-family: 'Cormorant Garamond', serif;
       font-size: 28px;
-      font-weight: 400;
-      color: #1b5c50;
+      font-weight: 600;
+      color: #0a3828;
       margin-bottom: 6px;
     }
     .speaker-portrait .role {
@@ -1050,7 +1042,7 @@
       color: var(--teal);
     }
     .speaker-bio { flex: 1; padding-top: 8px; }
-    .speaker-bio p { font-size: 22px; color: var(--warm-gray); line-height: 1.8; margin-bottom: 18px; }
+    .speaker-bio p { font-size: 18px; color: var(--warm-gray); line-height: 1.8; margin-bottom: 18px; }
 
     /* ── FINAL CTA ── */
     .final-cta {
@@ -1074,7 +1066,7 @@
     .final-cta h2 { color: #fff !important; }
     .final-cta .countdown-digits { color: #fff !important; }
     .final-cta .countdown-label { color: rgba(255,255,255,0.6) !important; }
-    .final-cta .countdown-sep { background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%) !important; -webkit-background-clip: text !important; -webkit-text-fill-color: transparent !important; background-clip: text !important; }
+    .final-cta .countdown-sep { color: rgba(255,255,255,0.25) !important; }
     .final-cta-inner {
       max-width: 600px;
       margin: 0 auto;
@@ -1089,12 +1081,12 @@
       line-height: 1.2;
       margin-bottom: 8px;
     }
-    .final-cta h2 em { font-style: italic; background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .final-cta h2 em { font-style: normal; font-weight: 600; color: inherit; }
     .countdown-final { display: flex; justify-content: center; gap: 28px; margin: 40px 0; align-items: flex-end; }
     .countdown-final .countdown-digits { color: #1b5c50; font-size: 52px; }
     .countdown-final .countdown-label { color: var(--teal); }
     .countdown-final .countdown-sep { color: rgba(7,8,8,0.15); font-size: 40px; margin-bottom: 14px; }
-    .facebook-disclaimer { font-size: 11px; color: var(--mid-gray); margin-top: 40px; line-height: 1.6; }
+    .facebook-disclaimer { font-size: 11px; color: rgba(255,255,255,0.45); margin-top: 40px; line-height: 1.6; }
 
     /* ── FOOTER ── */
     footer { background: var(--black); padding: 48px 40px; border-top: 1px solid rgba(94,198,179,0.1); }
@@ -1323,7 +1315,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       #_form_569_ ._form-label, #_form_569_ ._form_element ._form-label { color: rgba(255,255,255,0.85) !important; }
       #_form_569_ ._form_element :is(input[type="text"], input[type="tel"]) { background: rgba(255,255,255,0.07) !important; color: #fff !important; border: 1px solid rgba(255,255,255,0.2) !important; border-radius: 4px !important; }
       #_form_569_ input::placeholder { color: rgba(255,255,255,0.35) !important; }
-      #_form_569_ ._submit { background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%) !important; border-radius: 8px !important; width: 100%; animation: pulse-btn 2.2s ease-in-out infinite; box-shadow: 0 0 18px rgba(212,160,144,0.55), 0 6px 24px rgba(160,104,90,0.45) !important; }
+      #_form_569_ ._submit { background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%) !important; border-radius: 999px !important; color: #0d2420 !important; width: 100%; animation: pulse-btn 2.2s ease-in-out infinite; box-shadow: 0 0 18px rgba(212,160,144,0.55), 0 6px 24px rgba(160,104,90,0.45) !important; }
       #_form_569_ ._form-thank-you { color: #fff; }
       #_form_569_ ._form-branding { display: none; }
       #_form_569_ .field-required { color: var(--rose); }
@@ -1623,7 +1615,7 @@ window._load_script = function(url, callback, isSubmit) {
 <!-- SCREENSHOT SLIDER -->
 <section class="screenshots-section">
   <div class="screenshots-inner">
-    <h2 style="text-align:center; font-family:'Cormorant Garamond',serif; font-size:clamp(28px,3.5vw,48px); font-weight:400; color:#fff; margin-bottom:40px;">Was Frauen über Marina sagen</h2>
+    <h2 style="text-align:center; font-family:'Cormorant Garamond',serif; font-size:clamp(28px,3.5vw,48px); font-weight:600; color:#fff; margin-bottom:40px;">Was Frauen über Marina sagen</h2>
     <div class="sl-wrap">
       <button class="sl-arrow sl-prev" id="slPrev" aria-label="Zurück">&#8249;</button>
       <button class="sl-arrow sl-next" id="slNext" aria-label="Weiter">&#8250;</button>
@@ -1719,7 +1711,7 @@ window._load_script = function(url, callback, isSubmit) {
         <div class="journey-card-glow"></div>
         <span class="journey-step-number">02</span>
         <h3 class="journey-card-title">Live-Masterclass</h3>
-        <p class="journey-card-text">Am <strong style="color:#1b5c50;">13. August 2026 um 11:00 Uhr</strong> erlebst du live, was es wirklich braucht, um deine Energie und Kraft für die Millionen freizusetzen.</p>
+        <p class="journey-card-text">Am <strong style="color:#0a3828;">13. August 2026 um 11:00 Uhr</strong> erlebst du live, was es wirklich braucht, um deine Energie und Kraft für die Millionen freizusetzen.</p>
         <p class="journey-card-hint">2 Stunden, die alles verändern.</p>
       </div>
 
@@ -1833,7 +1825,7 @@ window._load_script = function(url, callback, isSubmit) {
       <p class="role">CEO &amp; Gründerin · FEMINESS</p>
     </div>
     <div class="speaker-bio">
-      <h2 style="font-family:'Cormorant Garamond',serif; font-size:34px; font-weight:400; margin-bottom:24px;">Die Frau, die deine <em style="font-style:italic; font-weight:700; background:linear-gradient(90deg,#a0685a 0%,#d4a090 25%,#f0ccc0 50%,#d4a090 75%,#a0685a 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">ENERGY for MILLION</em> freisetzt!</h2>
+      <h2 style="font-family:'Cormorant Garamond',serif; font-size:34px; font-weight:600; margin-bottom:24px;">Die Frau, die deine <em style="font-style:normal; font-weight:700; background:linear-gradient(90deg,#a0685a 0%,#d4a090 25%,#f0ccc0 50%,#d4a090 75%,#a0685a 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">ENERGY for MILLION</em> freisetzt!</h2>
       <p>Marina Henze ist <strong>Mentorin</strong> für <strong>Unternehmerinnen</strong>, die spüren: So wie bisher will ich nicht weitermachen.</p>
       <p>Seit über <strong>20 Jahren</strong> begleitet sie Frauen aus Erschöpfung und Selbstaufopferung hinein in <strong>finanzielle Freiheit</strong> und selbstbestimmtes Wirken. Mehr als <strong>20.000 Frauen</strong> sind diesen Weg bereits mit ihr gegangen.</p>
       <p>Als Unternehmerin mit <strong>Millionen-Umsätzen</strong> steht Marina für Business ohne <strong>Kampf.</strong> Klar, kraftvoll und frei.</p>
