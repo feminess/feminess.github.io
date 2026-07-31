@@ -14,6 +14,7 @@
     --teal-light: #f8f6f2;
     --teal-pale:  #b8ddd8;
     --rose:       #cf5a73;
+    --rose-light: #e8a0b0;
     --sand:       #c2ab8d;
     --black:      #070808;
     --dark:       #0d2420;
@@ -26,31 +27,37 @@
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
   em,i{font-style:normal;}
   html{scroll-behavior:smooth;}
-  body{font-family:'Montserrat',sans-serif;font-size:18px;line-height:1.75;background:var(--off-white);color:#1b5c50;-webkit-font-smoothing:antialiased;}
+  body{font-family:'Montserrat',sans-serif;font-size:18px;line-height:1.75;background:var(--off-white);color:#0a3828;-webkit-font-smoothing:antialiased;}
 
   h1.doc-title{font-family:'Cormorant Garamond',serif;font-size:56px;font-weight:600;color:#fff;}
-  h2{font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:600;color:#1b5c50;margin-bottom:8px;letter-spacing:-0.5px;}
-  h2 em{font-style:normal;font-weight:600;background:linear-gradient(90deg,#a0685a 0%,#d4a090 25%,#f0ccc0 50%,#d4a090 75%,#a0685a 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
-  h3.sub{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:600;color:#1b5c50;margin-bottom:16px;}
+  h2{font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:600;color:#0a3828;margin-bottom:8px;letter-spacing:-0.5px;}
+  h2 em{font-style:normal;font-weight:600;color:inherit;}
+  h3.sub{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:600;color:#0a3828;margin-bottom:16px;}
 
   .intro{background:var(--teal-dark);padding:64px 40px;text-align:center;}
-  .intro p{color:var(--mid-gray);max-width:640px;margin:16px auto 0;font-size:18px;}
+  .intro p{color:#fff;max-width:640px;margin:16px auto 0;font-size:18px;}
 
   .wrap{max-width:1100px;margin:0 auto;padding:0 40px;}
   section.block{padding:64px 0;border-bottom:1px solid var(--beige);}
   section.block.dark{background:var(--teal-dark);border-bottom:none;}
   section.block.dark h2,section.block.dark h3.sub{color:#fff;}
-  section.block.dark p{color:var(--mid-gray);}
+  section.block.dark p{color:#fff;}
 
   .section-label{font-size:11px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--teal);display:flex;align-items:center;gap:14px;margin-bottom:24px;}
   .section-label::after{content:'';display:block;width:80px;height:1px;background:var(--teal);opacity:0.5;}
+
+  /* ── NOTE / CALLOUT BOX ── */
+  .callout{background:rgba(207,90,115,0.08);border:1px solid rgba(207,90,115,0.3);border-radius:12px;padding:20px 24px;margin-top:24px;font-size:15px;color:#0a3828;line-height:1.7;}
+  .callout strong{color:#0a3828;}
+  .dark .callout{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.2);color:#fff;}
+  .dark .callout strong{color:#fff;}
 
   /* ── COLOR SWATCHES ── */
   .swatch-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:20px;margin-top:24px;}
   .swatch{border-radius:12px;overflow:hidden;border:1px solid var(--beige);}
   .swatch-color{height:80px;}
   .swatch-info{padding:14px 16px;background:#fff;}
-  .swatch-name{font-weight:700;font-size:14px;color:#1b5c50;}
+  .swatch-name{font-weight:700;font-size:14px;color:#0a3828;}
   .swatch-hex{font-size:13px;color:var(--warm-gray);font-family:monospace;}
   .swatch-use{font-size:13px;color:var(--warm-gray);margin-top:6px;}
 
@@ -68,34 +75,35 @@
   .specimen{padding:20px 0;border-bottom:1px solid var(--beige);display:flex;align-items:baseline;justify-content:space-between;gap:24px;flex-wrap:wrap;}
   .dark .specimen{border-bottom:1px solid rgba(255,255,255,0.15);}
   .specimen-label{font-size:12px;color:var(--warm-gray);letter-spacing:1px;text-transform:uppercase;min-width:220px;}
-  .dark .specimen-label{color:var(--mid-gray);}
+  .dark .specimen-label{color:#fff;}
   .specimen-sample{flex:1;}
   .specimen-meta{font-size:12px;color:var(--warm-gray);font-family:monospace;}
-  .dark .specimen-meta{color:var(--mid-gray);}
+  .dark .specimen-meta{color:#fff;}
 
   .f-h1{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:48px;line-height:1.08;}
   .f-h2{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:48px;}
-  .f-cardtitle{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:48px;}
+  .f-cardtitle{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:42px;}
   .f-quote{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:28px;}
   .f-boxheader{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:24px;letter-spacing:1px;text-transform:uppercase;}
   .f-body{font-family:'Montserrat',sans-serif;font-weight:400;font-size:18px;}
+  .f-price{font-family:'Montserrat',sans-serif;font-weight:600;font-size:44px;}
   .f-button{font-family:'Montserrat',sans-serif;font-weight:700;font-size:18px;letter-spacing:2px;text-transform:uppercase;}
   .f-countdown{font-family:'Montserrat',sans-serif;font-weight:400;font-size:18px;}
+  .f-countdown-label{font-family:'Montserrat',sans-serif;font-weight:700;font-size:11px;letter-spacing:2px;text-transform:uppercase;}
   .f-label{font-family:'Montserrat',sans-serif;font-weight:700;font-size:11px;letter-spacing:3px;text-transform:uppercase;}
 
   /* ── HIGHLIGHT RULES ── */
   .rule-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:24px;}
   .rule-card{background:#fff;border-radius:12px;padding:28px;border:1px solid var(--beige);}
   .dark .rule-card{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);}
-  .rule-card h4{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;margin-bottom:10px;color:#1b5c50;}
+  .rule-card h4{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;margin-bottom:10px;color:#0a3828;}
   .dark .rule-card h4{color:#fff;}
   .rule-card p{font-size:16px;color:var(--warm-gray);line-height:1.7;}
-  .dark .rule-card p{color:var(--mid-gray);}
+  .dark .rule-card p{color:#fff;}
   .demo-line{margin-top:14px;padding-top:14px;border-top:1px dashed var(--beige);font-size:18px;color:var(--warm-gray);}
-  .dark .demo-line{border-top:1px dashed rgba(255,255,255,0.15);color:var(--mid-gray);}
-  .demo-line strong{color:#1b5c50;font-weight:700;}
+  .dark .demo-line{border-top:1px dashed rgba(255,255,255,0.15);color:#fff;}
+  .demo-line strong{color:#0a3828;font-weight:700;}
   .dark .demo-line strong{color:#fff;}
-  .gold-em{background:linear-gradient(90deg,#a0685a 0%,#d4a090 25%,#f0ccc0 50%,#d4a090 75%,#a0685a 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-weight:600;}
 
   /* ── BUTTONS ── */
   .btn-cta{
@@ -107,7 +115,7 @@
   .btn-cta:hover{opacity:0.88;}
   @keyframes pulse-btn{0%,100%{transform:scale(1);box-shadow:0 6px 28px rgba(160,104,90,0.40);}50%{transform:scale(1.04);box-shadow:0 10px 36px rgba(160,104,90,0.58);}}
   .btn-note{font-size:15px;color:var(--warm-gray);margin-top:16px;}
-  .dark .btn-note{color:var(--mid-gray);}
+  .dark .btn-note{color:#fff;}
 
   /* ── QUOTE BLOCK ── */
   .quote-block{text-align:center;padding:32px 40px;border-radius:12px;background:#1b5c50;max-width:640px;margin:24px auto 0;}
@@ -115,26 +123,26 @@
 
   /* ── JA/NEIN BOX ── */
   .compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:24px;}
-  .compare-box{border-radius:12px;padding:28px 32px;background:rgba(255,255,255,0.06);}
-  .compare-box.ja{border:1px solid rgba(94,198,179,0.35);}
-  .compare-box.nein{border:1px solid rgba(207,90,115,0.35);}
+  .compare-box{border-radius:12px;padding:28px 32px;}
+  .compare-box.ja{background:rgba(37,124,108,0.28);border:1px solid rgba(94,198,179,0.35);}
+  .compare-box.nein{background:rgba(207,90,115,0.22);border:1px solid rgba(207,90,115,0.35);}
   .compare-header{font-family:'Cormorant Garamond', serif;font-size:20px;font-weight:700;letter-spacing:1px;margin-bottom:14px;}
   .compare-box.ja .compare-header{color:var(--teal-light);}
-  .compare-box.nein .compare-header{background:linear-gradient(90deg,#a0685a 0%,#d4a090 25%,#f0ccc0 50%,#d4a090 75%,#a0685a 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+  .compare-box.nein .compare-header{color:var(--rose-light);}
   .compare-list{list-style:none;}
-  .compare-list li{position:relative;padding-left:24px;font-size:16px;color:var(--mid-gray);margin-bottom:8px;}
+  .compare-list li{position:relative;padding-left:24px;font-size:16px;color:#fff;margin-bottom:8px;}
   .compare-box.ja .compare-list li::before{content:'✓';position:absolute;left:0;color:var(--teal-light);font-weight:700;}
-  .compare-box.nein .compare-list li::before{content:'✕';position:absolute;left:0;color:#c47868;font-weight:700;}
+  .compare-box.nein .compare-list li::before{content:'✕';position:absolute;left:0;color:var(--rose-light);font-weight:700;}
 
   /* ── TESTIMONIAL ── */
   .testi-card{background:var(--off-white);border:1px solid var(--beige);border-top:3px solid #c47868;border-radius:4px;padding:28px;max-width:360px;margin-top:24px;}
   .testi-stars{color:var(--sand);letter-spacing:3px;margin-bottom:14px;}
   .testi-text{font-size:16px;color:var(--warm-gray);margin-bottom:14px;}
-  .testi-author{font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;background:linear-gradient(90deg,#a0685a 0%,#d4a090 25%,#f0ccc0 50%,#d4a090 75%,#a0685a 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+  .testi-author{font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--warm-gray);}
 
   /* ── FAQ ── */
   .faq-item{border-bottom:1px solid var(--beige);max-width:640px;}
-  .faq-item summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:20px 0;font-family:'Cormorant Garamond',serif;font-size:22px;color:#1b5c50;}
+  .faq-item summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:20px 0;font-family:'Cormorant Garamond',serif;font-size:22px;color:#0a3828;}
   .faq-item summary::-webkit-details-marker{display:none;}
   .faq-item summary::after{content:'+';font-size:24px;color:var(--teal);}
   .faq-item[open] summary::after{content:'–';}
@@ -146,7 +154,10 @@
   .checklist li::before{content:'0' counter(item);counter-increment:item;position:absolute;left:0;top:12px;font-family:'Cormorant Garamond',serif;font-weight:600;color:var(--teal);font-size:18px;}
   .checklist{counter-reset:item;}
 
-  footer.doc-footer{background:var(--black);padding:32px 40px;text-align:center;color:var(--mid-gray);font-size:13px;}
+  code.inline{font-family:monospace;background:var(--cream);padding:2px 6px;border-radius:4px;}
+  .dark code.inline{background:rgba(255,255,255,0.12);color:#fff;}
+
+  footer.doc-footer{background:var(--black);padding:32px 40px;text-align:center;color:#fff;opacity:0.7;font-size:13px;}
 
   @media (max-width:700px){
     .wrap{padding:0 20px;}
@@ -174,9 +185,10 @@
     <div class="rule-grid" style="margin-top:32px;">
       <div class="rule-card"><h4>Serif vs. Sans</h4><p>Cormorant Garamond trägt jede Emotion in den Überschriften. Montserrat trägt alles, was gelesen werden muss.</p></div>
       <div class="rule-card"><h4>Hell/Dunkel im Wechsel</h4><p>Off-White/Weiß und Tannengrün lösen sich ab – das gibt der Seite beim Scrollen einen Rhythmus.</p></div>
-      <div class="rule-card"><h4>Ein Akzent für alles Wichtige</h4><p>Der Rosegold-Verlauf kommt <em class="gold-em">nur</em> bei Kaufentscheidungen vor: Buttons, Preise, Schlüsselwörter.</p></div>
+      <div class="rule-card"><h4>Rosegold nur für Buttons &amp; Flächen</h4><p>Der Rosegold-Verlauf steht heute <strong>ausschließlich</strong> für CTA-Buttons und den Top-Banner-Hintergrund – nicht mehr für Text.</p></div>
       <div class="rule-card"><h4>Hierarchie über Überschriften</h4><p>Fließtext bleibt fast überall bei 18px. Unterschiede entstehen über Cormorant-Überschriften, nicht über Body-Größen.</p></div>
     </div>
+    <div class="callout"><strong>Update:</strong> Rosegold-Verlaufstext (für hervorgehobene Wörter, Preise, Testimonial-Namen) wurde bewusst entfernt – schlechtere Lesbarkeit als reine Farbe/Bold. Details in Abschnitt 4.</div>
   </div>
 </section>
 
@@ -190,19 +202,21 @@
       <div class="swatch"><div class="swatch-color" style="background:#1b5c50;"></div><div class="swatch-info"><div class="swatch-name">--teal-dark</div><div class="swatch-hex">#1b5c50</div><div class="swatch-use">Haupt-Markenfarbe, dunkle Sektionen</div></div></div>
       <div class="swatch"><div class="swatch-color" style="background:#f8f6f2;border-bottom:1px solid #eee;"></div><div class="swatch-info"><div class="swatch-name">--off-white</div><div class="swatch-hex">#f8f6f2</div><div class="swatch-use">Helle Sektionen, helle Schrift auf Teal</div></div></div>
       <div class="swatch"><div class="swatch-color" style="background:#b8ddd8;"></div><div class="swatch-info"><div class="swatch-name">--teal-pale</div><div class="swatch-hex">#b8ddd8</div><div class="swatch-use">Dünne Trennlinien</div></div></div>
-      <div class="swatch"><div class="swatch-color" style="background:#cf5a73;"></div><div class="swatch-info"><div class="swatch-name">--rose</div><div class="swatch-hex">#cf5a73</div><div class="swatch-use">Glows, Kreuz-Icons (Nein)</div></div></div>
+      <div class="swatch"><div class="swatch-color" style="background:#cf5a73;"></div><div class="swatch-info"><div class="swatch-name">--rose</div><div class="swatch-hex">#cf5a73</div><div class="swatch-use">Glows</div></div></div>
+      <div class="swatch"><div class="swatch-color" style="background:#e8a0b0;"></div><div class="swatch-info"><div class="swatch-name">--rose-light</div><div class="swatch-hex">#e8a0b0</div><div class="swatch-use">Kreuz-Icon &amp; Label in "Nein"-Boxen</div></div></div>
       <div class="swatch"><div class="swatch-color" style="background:#c2ab8d;"></div><div class="swatch-info"><div class="swatch-name">--sand</div><div class="swatch-hex">#c2ab8d</div><div class="swatch-use">Sterne-Bewertungen</div></div></div>
       <div class="swatch"><div class="swatch-color" style="background:#070808;"></div><div class="swatch-info"><div class="swatch-name">--black</div><div class="swatch-hex">#070808</div><div class="swatch-use">Footer</div></div></div>
       <div class="swatch"><div class="swatch-color" style="background:#0d2420;"></div><div class="swatch-info"><div class="swatch-name">--dark</div><div class="swatch-hex">#0d2420</div><div class="swatch-use">Button-Text</div></div></div>
-      <div class="swatch"><div class="swatch-color" style="background:#5a7a74;"></div><div class="swatch-info"><div class="swatch-name">--warm-gray</div><div class="swatch-hex">#5a7a74</div><div class="swatch-use">Fließtext auf HELL</div></div></div>
-      <div class="swatch"><div class="swatch-color" style="background:#9ab8b4;"></div><div class="swatch-info"><div class="swatch-name">--mid-gray</div><div class="swatch-hex">#9ab8b4</div><div class="swatch-use">Fließtext auf DUNKEL</div></div></div>
+      <div class="swatch"><div class="swatch-color" style="background:#5a7a74;"></div><div class="swatch-info"><div class="swatch-name">--warm-gray</div><div class="swatch-hex">#5a7a74</div><div class="swatch-use">Fließtext auf HELL (Standard)</div></div></div>
+      <div class="swatch"><div class="swatch-color" style="background:#9ab8b4;"></div><div class="swatch-info"><div class="swatch-name">--mid-gray</div><div class="swatch-hex">#9ab8b4</div><div class="swatch-use">Historisch – wird nicht mehr für Text verwendet, siehe unten</div></div></div>
       <div class="swatch"><div class="swatch-color" style="background:#ddecea;"></div><div class="swatch-info"><div class="swatch-name">--beige</div><div class="swatch-hex">#ddecea</div><div class="swatch-use">Trennlinien (hell)</div></div></div>
       <div class="swatch"><div class="swatch-color" style="background:#f0f5f4;border-bottom:1px solid #eee;"></div><div class="swatch-info"><div class="swatch-name">--cream</div><div class="swatch-hex">#f0f5f4</div><div class="swatch-use">Hover auf Off-White</div></div></div>
     </div>
+    <div class="callout"><strong>Fließtext auf dunklem Grund ist heute Weiß (#fff)</strong>, nicht mehr <code class="inline">var(--mid-gray)</code> – die Variable existiert noch aus historischen Gründen, wird aber aktiv nicht mehr für Text eingesetzt, da Weiß auf Tannengrün besser lesbar ist.</div>
 
     <h3 class="sub" style="margin-top:48px;">Der Rosegold-Verlauf</h3>
     <div class="gradient-strip">linear-gradient(90deg, #a0685a, #d4a090, #f0ccc0, #d4a090, #a0685a)</div>
-    <p style="margin-top:12px; font-size:15px; color:var(--warm-gray);">Für: Button-Hintergründe, hervorgehobene Wörter in Überschriften, Preis-Anzeigen, Testimonial-Namen. Kommt sonst nirgendwo vor.</p>
+    <p style="margin-top:12px; font-size:15px; color:var(--warm-gray);">Nur noch für: Button-Hintergründe, Top-Banner-Hintergrund. <strong>Nicht mehr für Text</strong> (Überschriften-Wörter, Preise, Testimonial-Namen liefen früher im Verlauf – jetzt Farbe/Bold statt Gradient).</p>
 
     <h3 class="sub" style="margin-top:48px;">Sektions-Hintergründe (Reihenfolge auf der Seite)</h3>
     <table>
@@ -230,17 +244,30 @@
     <p class="section-label">03 · Schriftsystem</p>
     <h2>Größen &amp; <em>Gewichte</em></h2>
 
-    <div class="specimen"><div class="specimen-label">h1 · Hero-Überschrift</div><div class="specimen-sample f-h1">Die ungezähmte Unternehmerin</div><div class="specimen-meta">Cormorant · 48/35px · 600</div></div>
-    <div class="specimen"><div class="specimen-label">h2 · Sektions-Überschrift</div><div class="specimen-sample f-h2">In diesen sieben Sessions</div><div class="specimen-meta">Cormorant · 48/28px · 600</div></div>
-    <div class="specimen"><div class="specimen-label">Karten-Titel</div><div class="specimen-sample f-cardtitle" style="font-size:32px;">Money-Check Coaching</div><div class="specimen-meta">Cormorant · 48/28px · 600</div></div>
+    <div class="specimen"><div class="specimen-label">h1 · Hero-Überschrift</div><div class="specimen-sample f-h1">Die ungezähmte Unternehmerin</div><div class="specimen-meta">Cormorant · 48/43px · 600</div></div>
+    <div class="specimen"><div class="specimen-label">h2 · Sektions-Überschrift</div><div class="specimen-sample f-h2">Ist dieses Geschenk das Richtige?</div><div class="specimen-meta">Cormorant · 48/36px · 600</div></div>
+    <div class="specimen"><div class="specimen-label">h2 · textreiche Sektion</div><div class="specimen-sample f-h2" style="font-size:36px;">Was verändert sich bei dir?</div><div class="specimen-meta">Cormorant · 48px / individuell kleiner mobil (27–30px)</div></div>
+    <div class="specimen"><div class="specimen-label">Karten-Titel</div><div class="specimen-sample f-cardtitle">Money-Check Coaching</div><div class="specimen-meta">Cormorant · 42/30px · 600</div></div>
+    <div class="specimen"><div class="specimen-label">Speaker-Name</div><div class="specimen-sample f-cardtitle" style="font-size:48px;">Marina Henze</div><div class="specimen-meta">Cormorant · 48px · 400</div></div>
+    <div class="specimen"><div class="specimen-label">FAQ-Frage</div><div class="specimen-sample f-cardtitle" style="font-size:32px;">Wann endet das Special?</div><div class="specimen-meta">Cormorant · 32/33px · 400</div></div>
     <div class="specimen"><div class="specimen-label">Zitat-Block</div><div class="specimen-sample f-quote">Nicht du hast versagt.</div><div class="specimen-meta">Cormorant · 28/24px · 600</div></div>
     <div class="specimen"><div class="specimen-label">Für-dich-Box-Header</div><div class="specimen-sample f-boxheader">Das ist für dich, wenn du …</div><div class="specimen-meta">Cormorant · 24px · 700</div></div>
-    <div class="specimen"><div class="specimen-label">Body-Fließtext</div><div class="specimen-sample f-body">Ich verstehe diese Frage, und gebe dir die ehrliche Antwort.</div><div class="specimen-meta">Montserrat · 18px · 400</div></div>
+    <div class="specimen"><div class="specimen-label">Body-Fließtext</div><div class="specimen-sample f-body">Ich verstehe diese Frage, und gebe dir eine ehrliche Antwort dazu.</div><div class="specimen-meta">Montserrat · 18px · 400</div></div>
+    <div class="specimen"><div class="specimen-label">Preis-Zahl</div><div class="specimen-sample f-price">333 EUR</div><div class="specimen-meta">Montserrat · 44–72px je Kontext · 600, weiß statt Rosegold</div></div>
     <div class="specimen"><div class="specimen-label">Buttons</div><div class="specimen-sample f-button">Jetzt Special sichern</div><div class="specimen-meta">Montserrat · 18/15px · 700</div></div>
-    <div class="specimen"><div class="specimen-label">Countdown Ziffern/Label</div><div class="specimen-sample f-countdown">04 <span style="font-weight:700; letter-spacing:2px;">TAGE</span></div><div class="specimen-meta">Montserrat · 18px · 400 / 700</div></div>
-    <div class="specimen"><div class="specimen-label">Eyebrow/Kicker</div><div class="specimen-sample f-label" style="color:var(--teal);">An dich</div><div class="specimen-meta">Montserrat · 10–12px · 700, Uppercase</div></div>
+    <div class="specimen"><div class="specimen-label">Countdown Ziffer</div><div class="specimen-sample f-countdown">04</div><div class="specimen-meta">Montserrat · 18px · 400</div></div>
+    <div class="specimen"><div class="specimen-label">Countdown Label</div><div class="specimen-sample f-countdown-label">TAGE</div><div class="specimen-meta">Montserrat · 11px · 700 — bewusst KLEINER als die Ziffer</div></div>
+    <div class="specimen"><div class="specimen-label">Eyebrow/Kicker</div><div class="specimen-sample f-label" style="color:var(--teal);">Kicker-Label</div><div class="specimen-meta">Montserrat · 10–12px · 700, Uppercase</div></div>
 
-    <p style="margin-top:32px; font-size:16px; color:var(--warm-gray);">Google-Fonts-Import: <code style="font-family:monospace; background:var(--cream); padding:2px 6px; border-radius:4px;">Cormorant+Garamond:ital,wght@0,400;0,600 &amp; Montserrat:wght@400;600;700</code></p>
+    <p style="margin-top:32px; font-size:16px; color:var(--warm-gray);">Google-Fonts-Import: <code class="inline">Cormorant+Garamond:ital,wght@0,400;0,600 &amp; Montserrat:wght@400;600;700</code></p>
+
+    <h3 class="sub" style="margin-top:48px;">⚠️ Bindestriche in Cormorant-Überschriften</h3>
+    <p style="max-width:680px; color:var(--warm-gray); margin-bottom:16px;">Der Bindestrich-Glyph von Cormorant Garamond wirkt in Überschriften unpassend. Jeder Bindestrich in einer Überschrift wird deshalb einzeln in Montserrat gesetzt:</p>
+    <div class="demo-line" style="font-family:'Cormorant Garamond',serif; font-size:28px; font-weight:600;">Dein komplettes Geburtstags<span style="font-family:'Montserrat',sans-serif;">-</span>Special</div>
+    <div class="callout" style="margin-top:20px;"><strong>Flex-Falle bei FAQ-Fragen:</strong> <code class="inline">summary</code> ist <code class="inline">display:flex; justify-content:space-between;</code>. Wird nur ein Teil des Textes in ein <code class="inline">&lt;span&gt;</code> gepackt, entstehen mehrere Flex-Items und <code class="inline">space-between</code> reißt falsche Lücken zwischen den Textteilen auf. Fix: den <strong>gesamten</strong> Fragetext in einen äußeren Wrapper-Span packen, der Bindestrich-Span kommt darin.</div>
+
+    <h3 class="sub" style="margin-top:48px;">Kursivschrift – die eine Ausnahme</h3>
+    <p style="max-width:680px; color:var(--warm-gray);">Global gilt <code class="inline">em, i { font-style: normal; }</code>. Nur wörtliche Kundinnen-Zitate im Fließtext werden per Inline-Override wirklich kursiv gesetzt: <code class="inline">&lt;em style="font-style: italic;"&gt;</code>.</p>
   </div>
 </section>
 
@@ -248,27 +275,29 @@
 <section class="block dark">
   <div class="wrap">
     <p class="section-label" style="color:var(--teal-light);">04 · Hervorhebungen &amp; Textfarben</p>
-    <h2 style="color:#fff;">Was wird <em>fett</em>, was wird <em>bunt</em>?</h2>
+    <h2 style="color:#fff;">Was wird <em>fett</em>, was wird <em>hervorgehoben</em>?</h2>
     <div class="rule-grid">
       <div class="rule-card">
         <h4>Bold (&lt;strong&gt;)</h4>
-        <p>Der wichtigste Teilsatz in einem Absatz – nie ein ganzer Absatz.</p>
-        <div class="demo-line">Ich verstehe diese Frage. Und ich gebe dir die ehrliche Antwort: <strong>Du gibst nicht zu wenig, du leistest auch nicht zu wenig…</strong></div>
+        <p>Der wichtigste Teilsatz in einem Absatz – nie ein ganzer Absatz. Auch für Erfolgszahlen in Testimonials.</p>
+        <div class="demo-line">Und ich gebe dir eine ehrliche Antwort dazu: <strong>Du gibst nicht zu wenig, du leistest auch nicht zu wenig…</strong></div>
       </div>
       <div class="rule-card">
-        <h4>Rosegold-Verlaufstext (&lt;em&gt;)</h4>
-        <p>Ein Schlüsselwort in Überschriften, Preise, Autorennamen. "Kursiv" bedeutet hier <em>nie</em> echte Schrägstellung.</p>
-        <div class="demo-line">Durchbrichst du deine <em class="gold-em">Umsatz-Mauer</em></div>
+        <h4>&lt;em&gt; in Überschriften</h4>
+        <p>Ein Schlüsselwort in Überschriften übernimmt per <code class="inline">color:inherit</code> einfach die Farbe der Überschrift – <strong>kein</strong> Rosegold-Verlauf mehr.</p>
+        <div class="demo-line">Durchbrichst du deine <em>Umsatz-Mauer</em></div>
       </div>
       <div class="rule-card">
         <h4>Helle Sektion</h4>
-        <p>Überschrift #1b5c50 · Fließtext --warm-gray · Bold #1b5c50</p>
+        <p>Überschrift #0a3828 · Fließtext --warm-gray (Haupttext/Garantie: #0a3828, Blocksatz) · Bold #0a3828</p>
       </div>
       <div class="rule-card">
         <h4>Dunkle Sektion</h4>
-        <p>Überschrift #fff · Fließtext --mid-gray · Bold #fff</p>
+        <p>Überschrift #fff · Fließtext #fff (nicht mehr --mid-gray) · Bold #fff</p>
       </div>
     </div>
+
+    <div class="callout" style="margin-top:24px;"><strong>Rosegold-Verlaufstext ist obsolet.</strong> Frühere Versionen nutzten <code class="inline">background-clip:text</code> mit dem Rosegold-Verlauf für Überschriften-Wörter, Preise und Testimonial-Namen. Das wurde entfernt – Preise sind jetzt Weiß, Namen laufen in --warm-gray, &lt;em&gt; erbt die Überschriftenfarbe. Der Verlauf bleibt Buttons und dem Top-Banner vorbehalten.</div>
 
     <h3 class="sub" style="margin-top:48px;">Zitat-Block</h3>
     <div class="quote-block">
@@ -282,10 +311,10 @@
   <div class="wrap">
     <p class="section-label">05 · Buttons</p>
     <h2>Ein Button-Typ. <em>Immer</em> eine Pille.</h2>
-    <p style="max-width:640px; color:var(--warm-gray); margin-bottom:8px;">Voll abgerundet (<code style="font-family:monospace;">border-radius:999px</code>), Rosegold-Verlauf, <strong>dunkler</strong> Text (nicht weiß), Uppercase, dezentes Pulsieren.</p>
+    <p style="max-width:640px; color:var(--warm-gray); margin-bottom:8px;">Voll abgerundet (<code class="inline">border-radius:999px</code>), Rosegold-Verlauf, <strong>dunkler</strong> Text (nicht weiß), Uppercase, dezentes Pulsieren.</p>
     <div style="margin-top:24px;">
       <a href="#" class="btn-cta" onclick="return false;">Jetzt Special sichern</a>
-      <p class="btn-note">Zusatzinfos (Garantie, Ratenzahlung) stehen als Text <em>unter</em> dem Button – nie als Badge davor.</p>
+      <p class="btn-note">Zusatzinfos (Garantie, Ratenzahlung) stehen als Text <em>unter</em> dem Button – nie als Badge davor. Mehrere Teilaussagen werden als eigene Zeilen (nicht mit "·" oder "-" verkettet) untereinander gesetzt.</p>
     </div>
   </div>
 </section>
@@ -315,7 +344,7 @@
     <h3 class="sub" style="margin-top:48px;">Testimonial-Karte</h3>
     <div class="testi-card">
       <div class="testi-stars">★ ★ ★ ★ ★</div>
-      <p class="testi-text">Ich habe mit meiner Gründung damals ganz okay gestartet … jetzt wird es über eine Million.</p>
+      <p class="testi-text">Ich habe mit meiner Gründung damals ganz okay gestartet … jetzt wird es <strong>über eine Million.</strong></p>
       <p class="testi-author">Melanie Preßler</p>
     </div>
 
@@ -335,15 +364,16 @@
 <section class="block">
   <div class="wrap">
     <p class="section-label">07 · Checkliste für eine neue Landingpage</p>
-    <h2>In <em>sieben</em> Schritten übertragen</h2>
+    <h2>In <em>acht</em> Schritten übertragen</h2>
     <ul class="checklist">
-      <li>Google-Fonts-Link (Cormorant Garamond + Montserrat) einbinden, <code style="font-family:monospace;">:root</code>-Variablen 1:1 übernehmen.</li>
-      <li>Body-Default: Montserrat 18px, Farbe #1b5c50 auf --off-white-Hintergrund.</li>
-      <li>Jede Überschrift: Cormorant Garamond, 48/28px mobil, Weight 600, ein Schlüsselwort als Rosegold-&lt;em&gt;.</li>
+      <li>Google-Fonts-Link (Cormorant Garamond + Montserrat) einbinden, <code class="inline">:root</code>-Variablen 1:1 übernehmen.</li>
+      <li>Body-Default: Montserrat 18px, Farbe #0a3828 auf --off-white-Hintergrund.</li>
+      <li>Jede Überschrift: Cormorant Garamond, 48/36px mobil (bei Bedarf pro Sektion kleiner), Weight 600, ein Schlüsselwort als &lt;em&gt; mit color:inherit – kein Rosegold-Text.</li>
+      <li>Jeden Bindestrich in einer Cormorant-Überschrift einzeln in Montserrat setzen; bei &lt;summary&gt; den ganzen Text in einen Wrapper-Span packen.</li>
       <li>Sektionen alternierend hell/dunkel durchtakten.</li>
-      <li>Bei dunklem Hintergrund: Textfarben-Set tauschen, Karten hell machen.</li>
-      <li>Ein einziger Button-Stil (Pille, Rosegold, dunkler Text) für alle CTAs.</li>
-      <li>Fließtext konsequent bei 18px belassen – Hierarchie kommt über Überschriften.</li>
+      <li>Bei dunklem Hintergrund: Fließtext Weiß (nicht Mid-Gray), Karten hell machen.</li>
+      <li>Ein einziger Button-Stil (Pille, Rosegold, dunkler Text) für alle CTAs; Zusatzinfos als eigene Zeile(n) darunter.</li>
+      <li>Fließtext konsequent bei 18px belassen. Währungsbeträge als "EUR" ausschreiben, nicht "€".</li>
     </ul>
   </div>
 </section>
