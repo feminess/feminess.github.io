@@ -678,12 +678,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     transition: color 0.15s;
   }
   .popup-close:hover { color: #fff; }
-  .popup-kicker {
-    font-size: 10px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase;
-    color: var(--teal-light); margin-bottom: 16px;
-    display: flex; align-items: center; gap: 10px;
-  }
-  .popup-kicker::before { content: ''; display: block; width: 20px; height: 1px; background: var(--teal-light); }
   .popup-box h2 {
     font-family: 'Cormorant Garamond', serif;
     font-size: clamp(24px, 4vw, 34px);
@@ -691,14 +685,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
   .popup-box h2 em { font-style: normal; color: var(--sand-light); }
   .popup-box p { font-size: 15px; color: var(--mid-gray); line-height: 1.65; margin-bottom: 28px; }
-  .popup-dismiss {
-    display: block; text-align: center;
-    font-family: 'Montserrat', 'Arial', sans-serif;
-    font-size: 12px; color: var(--warm-gray); cursor: pointer;
-    background: none; border: none; text-decoration: underline; text-underline-offset: 3px;
-    margin-top: 10px; transition: color 0.15s; width: 100%;
-  }
-  .popup-dismiss:hover { color: var(--mid-gray); }
 
   /* ── RESPONSIVE ── */
   @media (max-width: 900px) {
@@ -929,9 +915,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="popup-overlay" id="exitPopup" role="dialog" aria-modal="true" aria-label="The Core Conflict Analyse sichern">
   <div class="popup-box">
     <button class="popup-close" id="popupClose" aria-label="Schließen">&times;</button>
-    <div class="popup-kicker">Warte kurz</div>
     <h2>Hol dir jetzt deine<br><em>Core Conflict Analyse</em></h2>
-    <p>0€ &nbsp;·&nbsp; sofort startklar<br>Trag dich ein und du bekommst sie direkt ins Postfach.</p>
+    <p>Trag dich ein und du bekommst sie direkt ins Postfach.</p>
 
     <style>@import url(https://fonts.bunny.net/css?family=sans-serif:400|IBM+Plex+Sans:400);</style>
     <style>
@@ -1024,10 +1009,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="_clear-element"></div>
       </div>
       <div class="_form-thank-you" style="display:none;"></div>
-      <div class="_form-branding">
-        <div class="_marketing-by">Marketing von</div>
-        <a href="https://www.activecampaign.com/?utm_medium=referral&utm_campaign=acforms" class="_logo"><span class="form-sr-only">ActiveCampaign</span></a>
-      </div>
     </form>
 
     <script>
@@ -1169,8 +1150,6 @@ window._load_script = function(url, callback, isSubmit) {
     addEvent(form_to_submit, 'submit', form_submit);
 })();
     </script>
-
-    <button class="popup-dismiss" id="popupDismiss">Nein danke, ich probiere lieber weiter auf eigene Faust.</button>
   </div>
 </div>
 
@@ -1253,7 +1232,6 @@ var openExitPopup, closeExitPopup;
 (function () {
   var popup      = document.getElementById('exitPopup');
   var btnClose   = document.getElementById('popupClose');
-  var btnDismiss = document.getElementById('popupDismiss');
   var shown      = false;
 
   function show() {
@@ -1269,7 +1247,6 @@ var openExitPopup, closeExitPopup;
   closeExitPopup = hide;
 
   btnClose.addEventListener('click', hide);
-  btnDismiss.addEventListener('click', hide);
   popup.addEventListener('click', function (e) {
     if (e.target === popup) hide();
   });
