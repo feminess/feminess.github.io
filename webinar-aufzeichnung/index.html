@@ -124,37 +124,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     50%       { transform: scale(1.04); box-shadow: 0 10px 36px rgba(160,104,90,0.58); }
   }
 
-  /* ── SPECIAL DEAL (dunkel) ── */
-  .deal-section { background: var(--teal-dark); padding: 88px 40px; text-align: center; position: relative; overflow: hidden; }
-  .deal-section::before {
-    content: '';
-    position: absolute;
-    top: -120px; right: -100px;
-    width: 500px; height: 500px;
-    background: radial-gradient(circle, rgba(207,90,115,0.15) 0%, transparent 65%);
-    pointer-events: none;
-  }
+  /* ── SPECIAL DEAL (hell) ── */
+  .deal-section { background: #fff; padding: 88px 40px; text-align: center; position: relative; overflow: hidden; }
+  .deal-section::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px; background: linear-gradient(90deg, var(--teal), var(--teal-light)); }
   .deal-inner { max-width: 640px; margin: 0 auto; position: relative; z-index: 1; }
-  .deal-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 600;
-    font-size: 48px;
-    line-height: 1.2;
-    color: #fff;
-    margin-bottom: 24px;
-  }
-  .deal-title em { font-style: normal; font-weight: 600; color: inherit; }
-  .deal-lead { font-size: 18px; line-height: 1.8; color: #fff; max-width: 540px; margin: 0 auto 40px; }
-  .deal-lead strong { color: #fff; font-weight: 700; }
+  .deal-lead { font-size: 18px; line-height: 1.8; color: #0a3828; max-width: 540px; margin: 0 auto 40px; }
+  .deal-lead strong { color: #0a3828; font-weight: 700; }
 
   .countdown-final { display: flex; justify-content: center; gap: 28px; margin: 0 0 40px; align-items: flex-end; }
   .countdown-item { text-align: center; }
-  .countdown-digits { display: block; font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: 400; color: #fff; line-height: 1.2; }
-  .countdown-label { display: block; font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.7); margin-top: 4px; }
-  .countdown-done { display: none; font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 24px; color: #fff; margin: 0 0 32px; }
+  .countdown-digits { display: block; font-family: 'Montserrat', sans-serif; font-size: 34px; font-weight: 600; color: #0a3828; line-height: 1.2; }
+  .countdown-label { display: block; font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--warm-gray); margin-top: 4px; }
 
-  /* ── TESTIMONIALS (hell) ── */
-  .testimonials-section { background: var(--off-white); border-top: 2px solid var(--teal-pale); padding: 88px 40px; border-bottom: 1px solid var(--beige); }
+  /* ── TESTIMONIALS (grün) ── */
+  .testimonials-section { background: var(--teal-dark); padding: 88px 40px; }
   .testimonials-inner { max-width: 1100px; margin: 0 auto; }
   .section-header { text-align: center; margin-bottom: 56px; }
   .section-label {
@@ -163,16 +146,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     font-weight: 700;
     letter-spacing: 3px;
     text-transform: uppercase;
-    color: var(--teal);
+    color: var(--teal-light);
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 14px;
     margin-bottom: 20px;
   }
-  .section-label::before, .section-label::after { content: ''; display: block; width: 40px; height: 1px; background: var(--teal); opacity: 0.5; }
+  .section-label::before, .section-label::after { content: ''; display: block; width: 40px; height: 1px; background: var(--teal-light); opacity: 0.5; }
   h2 { font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 600; color: #0a3828; line-height: 1.15; letter-spacing: -0.3px; }
   h2 em { font-style: normal; font-weight: 600; color: inherit; }
+  .testimonials-section h2 { color: #fff; }
 
   .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
   .testimonial-card {
@@ -185,23 +169,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
   .testimonial-card:hover { box-shadow: 0 8px 28px rgba(37,124,108,0.10); transform: translateY(-3px); }
   .testimonial-text { font-size: 17px; color: var(--warm-gray); line-height: 1.8; margin-bottom: 20px; }
-  .testimonial-text strong { color: #0a3828; font-weight: 700; }
+  .testimonial-text strong { font-family: 'Montserrat', sans-serif; color: #0a3828; font-weight: 700; }
   .testimonial-author { font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--warm-gray); }
-
-  .result-card {
-    background: #fff;
-    border: 1px solid var(--beige);
-    border-top: 3px solid var(--teal);
-    border-radius: 4px;
-    padding: 32px 28px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .result-number { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 600; line-height: 1.3; margin-bottom: 10px; color: #0a3828; }
-  .result-label { font-size: 16px; color: var(--warm-gray); line-height: 1.7; }
 
   @media (max-width: 1000px) {
     .testimonials-grid { grid-template-columns: 1fr 1fr; }
@@ -231,8 +200,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .hero-inner h1 { font-size: 34px !important; margin-bottom: 28px; }
     h2 { font-size: 32px !important; }
     .deal-section { padding: 56px 20px; }
-    .deal-title { font-size: 32px; }
     .countdown-final { gap: 16px; }
+    .countdown-digits { font-size: 26px; }
     .testimonials-section { padding: 56px 20px; }
     footer { flex-direction: column; text-align: center; padding: 24px 20px; }
     .footer-inner { flex-direction: column; }
@@ -254,11 +223,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="banner-row">
     <span class="banner-text">Special Deal <span class="banner-price">297 EUR</span> läuft ab in</span>
     <span class="banner-countdown">
-      <span id="top-hours">19</span><span class="cd-unit">Std</span>
+      <span id="top-days">00</span><span class="cd-unit">Tage</span>
       <span class="cd-sep">:</span>
-      <span id="top-minutes">50</span><span class="cd-unit">Min</span>
+      <span id="top-hours">00</span><span class="cd-unit">Std</span>
       <span class="cd-sep">:</span>
-      <span id="top-seconds">58</span><span class="cd-unit">Sek</span>
+      <span id="top-minutes">00</span><span class="cd-unit">Min</span>
+      <span class="cd-sep">:</span>
+      <span id="top-seconds">00</span><span class="cd-unit">Sek</span>
     </span>
   </div>
 </a>
@@ -279,27 +250,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- SPECIAL DEAL -->
 <section class="deal-section" id="special-deal">
   <div class="deal-inner">
-    <h2 class="deal-title">Sichere dir jetzt deinen SPECIAL DEAL für <em>Die ungezähmte Unternehmerin</em></h2>
-
     <p class="deal-lead">
-      Du hast <strong>24 Stunden</strong> Zeit, um dir diesen <strong>Special Deal</strong> von <strong>297 EUR</strong> zu sichern.
+      Dein <strong>Special Deal</strong> für <strong>Die ungezähmte Unternehmerin</strong> zum Preis von <strong>297 EUR</strong> läuft ab in:
     </p>
 
     <div class="countdown-final" id="deal-countdown-wrap">
       <div class="countdown-item">
-        <span class="countdown-digits" id="deal-hours">19</span>
+        <span class="countdown-digits" id="deal-days">00</span>
+        <span class="countdown-label">Tage</span>
+      </div>
+      <div class="countdown-item">
+        <span class="countdown-digits" id="deal-hours">00</span>
         <span class="countdown-label">Std</span>
       </div>
       <div class="countdown-item">
-        <span class="countdown-digits" id="deal-minutes">50</span>
+        <span class="countdown-digits" id="deal-minutes">00</span>
         <span class="countdown-label">Min</span>
       </div>
       <div class="countdown-item">
-        <span class="countdown-digits" id="deal-seconds">58</span>
+        <span class="countdown-digits" id="deal-seconds">00</span>
         <span class="countdown-label">Sek</span>
       </div>
     </div>
-    <p class="countdown-done" id="deal-countdown-done">Dein persönliches 24-Stunden-Fenster ist abgelaufen.</p>
 
     <a href="https://feminess.github.io/die-ungezaehmte-unternehmerin/" target="_blank" rel="noopener" class="btn-cta">Jetzt Special Deal sichern</a>
   </div>
@@ -325,29 +297,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p class="testimonial-text">„Ich liebe die Zusammenarbeit mit Marina so sehr. Durch sie hat sich so viel in meinem Unternehmen erleichtert. Ich mache monatlich <strong>6-stellige</strong> Umsätze."</p>
         <p class="testimonial-author">Sigrid Aviana Waedt</p>
       </div>
-      <div class="result-card testimonial-mobile-hide">
-        <span class="result-number">12.000 EUR</span>
-        <span class="result-label">1:1 Coaching (5 Monate) + 2 weitere Calls verkauft</span>
+      <div class="testimonial-card testimonial-mobile-hide">
+        <p class="testimonial-text"><strong>12.000 EUR</strong> — 1:1 Coaching (5 Monate) + 2 weitere Calls verkauft</p>
+        <p class="testimonial-author"><!-- Name folgt --></p>
       </div>
-      <div class="result-card testimonial-mobile-hide">
-        <span class="result-number">8.333 EUR</span>
-        <span class="result-label">4-Monatsprogramm verkauft</span>
+      <div class="testimonial-card testimonial-mobile-hide">
+        <p class="testimonial-text"><strong>8.333 EUR</strong> — 4-Monatsprogramm verkauft</p>
+        <p class="testimonial-author"><!-- Name folgt --></p>
       </div>
-      <div class="result-card mob-order-5">
-        <span class="result-number">39.025 EUR</span>
-        <span class="result-label">Umsatz direkt während der Body Transformation Days</span>
+      <div class="testimonial-card mob-order-5">
+        <p class="testimonial-text"><strong>39.025 EUR</strong> — Umsatz direkt während der Body Transformation Days</p>
+        <p class="testimonial-author"><!-- Name folgt --></p>
       </div>
       <div class="testimonial-card testimonial-mobile-hide">
         <p class="testimonial-text">„Mein durchschnittlicher Verdienst in den letzten 10 Jahren waren ca. <strong>700 EUR</strong> im Monat. Ab Juli bis Dezember hatte ich Aufträge im Wert von <strong>4.000 EUR</strong> im Monat."</p>
         <p class="testimonial-author">Johanna Grünhagen</p>
       </div>
-      <div class="result-card mob-order-2">
-        <span class="result-number">20.588 EUR</span>
-        <span class="result-label">Netto-Umsatz im April – Abschluss Nummer 5 in nur 6 Tagen</span>
+      <div class="testimonial-card mob-order-2">
+        <p class="testimonial-text"><strong>20.588 EUR</strong> — Netto-Umsatz im April – Abschluss Nummer 5 in nur 6 Tagen</p>
+        <p class="testimonial-author"><!-- Name folgt --></p>
       </div>
       <div class="testimonial-card testimonial-mobile-hide">
-        <span class="result-number">8.999 EUR</span>
-        <span class="result-label">Gruppencoaching verkauft</span>
+        <p class="testimonial-text"><strong>8.999 EUR</strong> — Gruppencoaching verkauft</p>
+        <p class="testimonial-author"><!-- Name folgt --></p>
       </div>
     </div>
   </div>
@@ -367,52 +339,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <script>
 (function () {
-  var STORAGE_KEY = 'feminess_deal_start_webinar_aufzeichnung';
-  var DURATION_MS = 24 * 60 * 60 * 1000;
-
-  var start = localStorage.getItem(STORAGE_KEY);
-  if (!start) {
-    start = Date.now().toString();
-    localStorage.setItem(STORAGE_KEY, start);
-  }
-  var target = parseInt(start, 10) + DURATION_MS;
-
-  var elHours = document.getElementById('deal-hours');
-  var elMinutes = document.getElementById('deal-minutes');
-  var elSeconds = document.getElementById('deal-seconds');
-  var wrap = document.getElementById('deal-countdown-wrap');
-  var doneEl = document.getElementById('deal-countdown-done');
-
-  var topHours = document.getElementById('top-hours');
-  var topMinutes = document.getElementById('top-minutes');
-  var topSeconds = document.getElementById('top-seconds');
-  var topBanner = document.getElementById('top-banner');
+  /* 14.08.2026 14:00 Uhr CEST = 12:00 UTC */
+  var target = new Date('2026-08-14T12:00:00Z');
+  var idSets = [
+    ['deal-days', 'deal-hours', 'deal-minutes', 'deal-seconds'],
+    ['top-days', 'top-hours', 'top-minutes', 'top-seconds']
+  ];
 
   function pad(n) { return String(n).padStart(2, '0'); }
 
   function tick() {
-    var diff = target - Date.now();
-    if (diff <= 0) {
-      clearInterval(timer);
-      if (wrap) wrap.style.display = 'none';
-      if (doneEl) doneEl.style.display = 'block';
-      if (topBanner) topBanner.style.display = 'none';
-      return;
-    }
-    var totalSeconds = Math.floor(diff / 1000);
-    var h = pad(Math.floor(totalSeconds / 3600));
-    var m = pad(Math.floor((totalSeconds % 3600) / 60));
-    var s = pad(totalSeconds % 60);
-    elHours.textContent = h;
-    elMinutes.textContent = m;
-    elSeconds.textContent = s;
-    if (topHours) topHours.textContent = h;
-    if (topMinutes) topMinutes.textContent = m;
-    if (topSeconds) topSeconds.textContent = s;
+    var diff = target - new Date();
+    var d = diff > 0 ? Math.floor(diff / 86400000) : 0;
+    var h = diff > 0 ? Math.floor((diff % 86400000) / 3600000) : 0;
+    var m = diff > 0 ? Math.floor((diff % 3600000) / 60000) : 0;
+    var s = diff > 0 ? Math.floor((diff % 60000) / 1000) : 0;
+    idSets.forEach(function (ids) {
+      var dEl = document.getElementById(ids[0]);
+      var hEl = document.getElementById(ids[1]);
+      var mEl = document.getElementById(ids[2]);
+      var sEl = document.getElementById(ids[3]);
+      if (dEl) dEl.textContent = pad(d);
+      if (hEl) hEl.textContent = pad(h);
+      if (mEl) mEl.textContent = pad(m);
+      if (sEl) sEl.textContent = pad(s);
+    });
   }
 
-  var timer = setInterval(tick, 1000);
   tick();
+  setInterval(tick, 1000);
 })();
 </script>
 
