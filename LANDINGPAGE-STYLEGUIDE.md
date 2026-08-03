@@ -3,6 +3,8 @@
 Abgeleitet von `geburtstag-deal/index.html`. Dieser Guide ist so geschrieben, dass er **1:1 auf eine neue Landingpage übertragen** werden kann – als Briefing für eine KI oder als Checkliste für einen Designer/Entwickler.
 
 > **Stand:** aktualisiert nach mehreren Überarbeitungsrunden der Geburtstags-Deal-Seite. Wichtigste Änderungen gegenüber der ursprünglichen Version: Rosegold-Verlaufstext wurde aus Überschriften/Preisen/Namen entfernt (siehe Abschnitt 5), Fließtext auf dunklem Hintergrund ist jetzt **Weiß** statt Mid-Gray, Währung wird als "EUR" ausgeschrieben statt "€", und es gibt eine neue Regel für Bindestriche in Cormorant-Garamond-Überschriften (Abschnitt 3).
+>
+> **Neueste Änderungen:** Die Hero-`<h1>` ist eine bewusste **Ausnahme** von der "kein Gradient-Text mehr"-Regel geworden – sie läuft wieder im Rosegold-Verlauf, allerdings in einer helleren, nur 3-stufigen Variante ohne die dunklen Endpunkte (siehe Abschnitt 5). Der Footer hat eine eigene, dunklere Grün-Farbe (`#07291d`) statt `--black`. Neu: eine `.mobile-break`-Utility-Klasse für Zeilenumbrüche, die nur auf Mobilgeräten greifen (Abschnitt 7).
 
 ---
 
@@ -60,7 +62,7 @@ Verwendung: **nur noch** CTA-Button-Hintergründe und der Top-Banner-Hintergrund
 | Speaker/Team | `--teal-dark` |
 | FAQ | `#fff` |
 | Final-CTA | `--teal-dark` |
-| Footer | `--black` |
+| Footer | `#07291d` (eigener dunkler Grünton, **nicht** `--black`/`#070808`) |
 
 **Regel:** Wenn eine Sektion dunkel ist (`--teal-dark`), **muss** der komplette Text-Farbsatz umgekehrt werden (siehe Abschnitt 4). Karten *innerhalb* einer dunklen Sektion (z. B. Boni-Karten) werden dann selbst **hell** (weiß), damit sie sich vom Sektionshintergrund abheben – nicht dieselbe dunkle Farbe wie die Sektion verwenden.
 
@@ -111,7 +113,7 @@ Global gilt `em, i { font-style: normal; }` – "kursiv" wird auf dieser Seite n
 | Top-Banner Text | Montserrat | 18px | 10px | 400 |
 | Top-Banner Countdown-Ziffern | Montserrat | 18px | 13px | 600 |
 | Top-Banner Countdown-Label | Montserrat | 10px | 7px | 700 |
-| h1 (Hero-Überschrift) | Cormorant Garamond | 48px | 43px | 600 |
+| h1 (Hero-Überschrift) | Cormorant Garamond | 48px | 48px | 600, Rosegold-Verlauf (Ausnahme, siehe Abschnitt 5) |
 | h2 (Standard-Sektions-Überschrift) | Cormorant Garamond | 48px | 36px | 600 |
 | h2 in besonders textreichen Sektionen (z. B. Ergebnis-Abschnitt, Final-CTA) | Cormorant Garamond | 48px | individuell kleiner (27–30px), damit die Headline nicht mehr als ~2–3 Zeilen umfasst | 600 |
 | Karten-Titel (Boni-Karten h3) | Cormorant Garamond | 42px | 30px | 600 |
@@ -165,7 +167,24 @@ Global gilt `em, i { font-style: normal; }` – "kursiv" wird auf dieser Seite n
 | Zitat-Block (eigene Box) | Ein zentraler, plakativer Ein-Satz-Gedanke mitten im Fließtext | Eigene `<div>` mit Sektionsfarbe (`--teal-dark`) als Hintergrund, Cormorant 28px/600, weißer Text, zentriert |
 | Uppercase + Letterspacing | Buttons, kleine Eyebrows/Kicker, Box-Header (Für-dich Ja/Nein) | `text-transform:uppercase; letter-spacing:1–4px;` |
 
-**Wichtig – Rosegold-Verlaufstext ist obsolet:** Frühere Versionen dieser Seite nutzten `background-clip:text` mit dem Rosegold-Verlauf für `<em>`-Wörter in Überschriften, für Preis-Zahlen und für Testimonial-Autorennamen. Das wurde vollständig entfernt: Preis-Zahlen sind jetzt **Weiß** auf dunklem Grund, Testimonial-Namen laufen in `var(--warm-gray)`, und `<em>` in Überschriften übernimmt per `color:inherit` einfach die Farbe der Überschrift. Der Rosegold-Verlauf bleibt ausschließlich Buttons und dem Top-Banner-Hintergrund vorbehalten.
+**Wichtig – Rosegold-Verlaufstext ist grundsätzlich obsolet, mit einer Ausnahme:** Frühere Versionen dieser Seite nutzten `background-clip:text` mit dem Rosegold-Verlauf für `<em>`-Wörter in Überschriften, für Preis-Zahlen und für Testimonial-Autorennamen. Das wurde für alle Sektionen entfernt: Preis-Zahlen sind **Weiß** auf dunklem Grund, Testimonial-Namen laufen in `var(--warm-gray)`, und `<em>` in normalen Überschriften übernimmt per `color:inherit` einfach die Farbe der Überschrift.
+
+**Die einzige bewusste Ausnahme ist die Hero-`<h1>`** ("Die ungezähmte Unternehmerin"): Sie läuft komplett (inklusive dem `<em>`-Wort) im Rosegold-Verlauf, weil eine reine Farbe an dieser prominentesten Stelle der Seite zu wenig Wirkung hatte. Um zu vermeiden, dass Anfang/Ende der Zeile zu dunkel wirken, wurde eine **hellere, nur 3-stufige Variante ohne die dunklen Endpunkte** verwendet – nicht der 5-stufige Standard-Verlauf der Buttons:
+
+```css
+.hero-content h1 {
+  background: linear-gradient(90deg, #d4a090 0%, #f0ccc0 50%, #d4a090 100%);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent; color: transparent;
+}
+/* Das <em>-Kind braucht -webkit-text-fill-color: inherit, sonst bekommt es
+   (je nach Browser) einen eigenen, bei der Wortbreite neu startenden
+   Verlauf statt am Verlauf der gesamten Zeile teilzuhaben – das erzeugt
+   einen sichtbaren Farbsprung, v.a. wenn die Headline mehrzeilig umbricht. */
+.hero-content h1 em { color: inherit; -webkit-text-fill-color: inherit; }
+```
+
+Diese Ausnahme **nicht** auf andere Überschriften übertragen – sie gilt bewusst nur für den einen Hero-Claim. Der 5-stufige Standard-Rosegold-Verlauf bleibt für alles andere (Buttons, Top-Banner-Hintergrund) reserviert.
 
 **Nie verwenden:** unterschiedliche Fließtextgrößen als Hervorhebung, Unterstreichung (außer `text-decoration:line-through` für durchgestrichene alte Preise), Rosegold-Verlauf auf Text, mehr als eine Akzentfarbe gleichzeitig.
 
@@ -218,6 +237,15 @@ Ein einziger Button-Typ für alle CTAs (Hero-Button, Inline-CTA, Floating-CTA) �
 **Fly-in-Animation für Listen** (z. B. Nutzen-Aufzählung): Items starten `opacity:0; transform:translateX(-32px)`, IntersectionObserver fügt beim Scrollen-ins-Bild eine `.is-visible`-Klasse hinzu, jedes Item bekommt eigenen `transition-delay` (gestaffelt in ~0.4s-Schritten, Transition-Dauer ~1.2s) – wichtig: Listenpunkte in einen eigenen Wrapper packen, damit `:nth-child` nicht durch Überschrift/Spacer-Divs verschoben wird.
 
 **Absätze statt Satzzeichen-Trenner:** Wo früher ein Satz mit `·` oder `-` zwei Teilaussagen verband ("Noch bis 04.08.2026, 23:59 Uhr · nur 10 Plätze"), werden diese heute als getrennte `<p>`-Elemente untereinander gesetzt – das wirkt ruhiger und lässt sich pro Zeile individuell stylen.
+
+**`.mobile-break`-Utility:** Für Fälle, in denen ein Zeilenumbruch *nur auf Mobilgeräten* gewünscht ist (Desktop bleibt einzeilig, weil dort genug Platz ist), gibt es eine leere `<span class="mobile-break"></span>` mitten im Satz:
+
+```css
+.mobile-break { display: none; }
+@media (max-width: 600px) { .mobile-break { display: block; } }
+```
+
+`display:block` mitten in Fließtext erzwingt einen Zeilenumbruch, ohne dass die Bedeutung/Semantik des Satzes durch ein hartes `<br>` im Markup fest vorgegeben wird – die Breakpoint-Logik bleibt vollständig in CSS.
 
 ---
 

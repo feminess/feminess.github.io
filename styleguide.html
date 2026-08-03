@@ -188,7 +188,7 @@
       <div class="rule-card"><h4>Rosegold nur für Buttons &amp; Flächen</h4><p>Der Rosegold-Verlauf steht heute <strong>ausschließlich</strong> für CTA-Buttons und den Top-Banner-Hintergrund – nicht mehr für Text.</p></div>
       <div class="rule-card"><h4>Hierarchie über Überschriften</h4><p>Fließtext bleibt fast überall bei 18px. Unterschiede entstehen über Cormorant-Überschriften, nicht über Body-Größen.</p></div>
     </div>
-    <div class="callout"><strong>Update:</strong> Rosegold-Verlaufstext (für hervorgehobene Wörter, Preise, Testimonial-Namen) wurde bewusst entfernt – schlechtere Lesbarkeit als reine Farbe/Bold. Details in Abschnitt 4.</div>
+    <div class="callout"><strong>Update:</strong> Rosegold-Verlaufstext (für hervorgehobene Wörter, Preise, Testimonial-Namen) wurde bewusst entfernt – schlechtere Lesbarkeit als reine Farbe/Bold. Ausnahme: die Hero-Headline nutzt weiterhin einen (helleren) Verlauf. Details in Abschnitt 4.</div>
   </div>
 </section>
 
@@ -233,7 +233,7 @@
       <tr><td>Speaker/Team</td><td><span class="swatch-cell" style="background:#1b5c50;"></span>--teal-dark</td></tr>
       <tr><td>FAQ</td><td><span class="swatch-cell" style="background:#fff;"></span>#fff</td></tr>
       <tr><td>Final-CTA</td><td><span class="swatch-cell" style="background:#1b5c50;"></span>--teal-dark</td></tr>
-      <tr><td>Footer</td><td><span class="swatch-cell" style="background:#070808;"></span>--black</td></tr>
+      <tr><td>Footer</td><td><span class="swatch-cell" style="background:#07291d;"></span>#07291d (eigener Ton, nicht --black)</td></tr>
     </table>
   </div>
 </section>
@@ -244,7 +244,7 @@
     <p class="section-label">03 · Schriftsystem</p>
     <h2>Größen &amp; <em>Gewichte</em></h2>
 
-    <div class="specimen"><div class="specimen-label">h1 · Hero-Überschrift</div><div class="specimen-sample f-h1">Die ungezähmte Unternehmerin</div><div class="specimen-meta">Cormorant · 48/43px · 600</div></div>
+    <div class="specimen"><div class="specimen-label">h1 · Hero-Überschrift</div><div class="specimen-sample f-h1" style="background:linear-gradient(90deg,#d4a090 0%,#f0ccc0 50%,#d4a090 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;">Die ungezähmte Unternehmerin</div><div class="specimen-meta">Cormorant · 48px · 600 · Rosegold-Verlauf (Ausnahme!)</div></div>
     <div class="specimen"><div class="specimen-label">h2 · Sektions-Überschrift</div><div class="specimen-sample f-h2">Ist dieses Geschenk das Richtige?</div><div class="specimen-meta">Cormorant · 48/36px · 600</div></div>
     <div class="specimen"><div class="specimen-label">h2 · textreiche Sektion</div><div class="specimen-sample f-h2" style="font-size:36px;">Was verändert sich bei dir?</div><div class="specimen-meta">Cormorant · 48px / individuell kleiner mobil (27–30px)</div></div>
     <div class="specimen"><div class="specimen-label">Karten-Titel</div><div class="specimen-sample f-cardtitle">Money-Check Coaching</div><div class="specimen-meta">Cormorant · 42/30px · 600</div></div>
@@ -297,7 +297,7 @@
       </div>
     </div>
 
-    <div class="callout" style="margin-top:24px;"><strong>Rosegold-Verlaufstext ist obsolet.</strong> Frühere Versionen nutzten <code class="inline">background-clip:text</code> mit dem Rosegold-Verlauf für Überschriften-Wörter, Preise und Testimonial-Namen. Das wurde entfernt – Preise sind jetzt Weiß, Namen laufen in --warm-gray, &lt;em&gt; erbt die Überschriftenfarbe. Der Verlauf bleibt Buttons und dem Top-Banner vorbehalten.</div>
+    <div class="callout" style="margin-top:24px;"><strong>Rosegold-Verlaufstext ist grundsätzlich obsolet – mit einer Ausnahme.</strong> Frühere Versionen nutzten <code class="inline">background-clip:text</code> mit dem Rosegold-Verlauf für Überschriften-Wörter, Preise und Testimonial-Namen. Das wurde entfernt – Preise sind jetzt Weiß, Namen laufen in --warm-gray, &lt;em&gt; erbt normalerweise die Überschriftenfarbe. <strong>Einzige Ausnahme: die Hero-&lt;h1&gt;</strong> läuft bewusst weiter im Verlauf (siehe Specimen oben), aber in einer helleren 3-stufigen Variante ohne die dunklen Endpunkte des Standard-Verlaufs – sonst wirkten Anfang/Ende der Zeile zu dunkel. Diese Ausnahme gilt nur für den einen Hero-Claim, nicht für andere Überschriften.</div>
 
     <h3 class="sub" style="margin-top:48px;">Zitat-Block</h3>
     <div class="quote-block">
@@ -357,6 +357,10 @@
       <summary>Gibt es die Möglichkeit einer Ratenzahlung?</summary>
       <p>Ja, über PayPal-Ratenzahlung.</p>
     </details>
+
+    <h3 class="sub" style="margin-top:48px;">.mobile-break-Utility</h3>
+    <p style="max-width:640px; color:#fff; margin-bottom:12px;">Für Zeilenumbrüche, die <em>nur auf Mobilgeräten</em> greifen sollen (Desktop bleibt einzeilig):</p>
+    <div class="callout"><code class="inline">.mobile-break { display: none; }</code><br><code class="inline">@media (max-width: 600px) { .mobile-break { display: block; } }</code><br><br>Eingesetzt als leeres <code class="inline">&lt;span class="mobile-break"&gt;&lt;/span&gt;</code> mitten im Satz – erzwingt auf Mobil einen Umbruch, ohne den Satz im Markup hart mit &lt;br&gt; aufzuteilen.</div>
   </div>
 </section>
 
