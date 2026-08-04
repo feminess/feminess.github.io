@@ -160,6 +160,7 @@
     .price-eyebrow { font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--teal-light); margin-bottom: 18px; }
     .price-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(212,160,144,0.35); border-radius: 20px; padding: 48px 40px; }
     .price-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 600; color: #fff; margin-bottom: 22px; }
+    .price-card h3 .mobile-break { display: none; }
     .price-card h3 em { font-style: normal; font-weight: 600; color: inherit; }
     .price-new { font-family: 'Montserrat', sans-serif; font-size: 64px; font-weight: 600; color: #fff; line-height: 1; margin-bottom: 6px; }
     .price-sub { font-size: 16px; color: #fff; margin-bottom: 32px; }
@@ -211,7 +212,8 @@
       h2 { font-size: 35px !important; }
       .hero-content h1 { font-size: 43px !important; }
       .benefit-body h3 { font-size: 29px; }
-      .price-card h3 { font-size: 30px; }
+      .price-card h3 { font-size: 24px; }
+      .price-card h3 .mobile-break { display: inline; }
 
       .text-inner, .benefits-inner, .rules-inner, .price-inner, .faq-inner, .final-cta-inner { padding-left: 20px; padding-right: 20px; }
       .text-section, .benefits-section, .rules-section, .faq-section { padding: 64px 0; }
@@ -307,7 +309,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="price-section">
   <div class="price-inner">
     <div class="price-card">
-      <h3>Für jede Empfehlung bekommst du</h3>
+      <h3>Für jede Empfehlung<br class="mobile-break"> bekommst du</h3>
       <p class="price-new">100 EUR</p>
       <p class="price-sub">sobald sie sich über deinen Link zu „Die ungezähmte Unternehmerin" anmeldet.</p>
       <a href="#link-generator" class="btn-cta">JETZT WEITEREMPFEHLEN</a>
