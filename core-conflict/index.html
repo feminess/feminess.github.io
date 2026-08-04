@@ -1148,6 +1148,17 @@ window._load_script = function(url, callback, isSubmit) {
 </div>
 
 <script>
+// ── POPUP-FORMULAR: "vorname" AUS URL VORBEFÜLLEN ──
+// (AC-eigenes Autofill greift nur bei exakt gleichem Parameter- und Feldnamen,
+// "email" passt bereits, "vorname" aber nicht auf das Feld "firstname")
+(function () {
+  var params = new URLSearchParams(window.location.search);
+  var vorname = params.get('vorname');
+  if (!vorname) return;
+  var el = document.getElementById('firstname');
+  if (el) el.value = vorname;
+}());
+
 // ── FLOATING CTA VISIBILITY ──
 (function () {
   var cta = document.getElementById('floatingCta');
