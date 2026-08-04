@@ -854,6 +854,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   }
   tick(); setInterval(tick, 1000);
 
+  /* ── UTM PASSTHROUGH: utm_source aus der URL an alle Kasse-Links weitergeben ── */
+  (function() {
+    const params = new URLSearchParams(window.location.search);
+    const utmSource = params.get('utm_source');
+    if (!utmSource) return;
+    document.querySelectorAll('a[href*="feminess.de/kasse"]').forEach(function(link) {
+      const url = new URL(link.href);
+      url.searchParams.set('utm_source', utmSource);
+      link.href = url.toString();
+    });
+  })();
+
   /* Floating CTA: show after scrolling past hero */
   const floatingCta = document.getElementById('floatingCta');
   const heroSection = document.querySelector('.hero');
