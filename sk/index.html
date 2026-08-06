@@ -1,0 +1,2025 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NQMQT7QH');</script>
+  <!-- End Google Tag Manager -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Energy for Million – Feminess</title>
+  <link rel="icon" href="https://feminess.de/wp-content/uploads/cropped-favicon@2x-1-32x32.png" sizes="32x32">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    @font-face {
+      font-family: 'Avenir LT Pro';
+      src: url('https://feminess.de/wp-content/uploads/AvenirLTPro-Book.woff2') format('woff2');
+      font-weight: 400; font-style: normal;
+    }
+    @font-face {
+      font-family: 'Avenir LT Pro';
+      src: url('https://feminess.de/wp-content/uploads/Avenir-LT-Pro-85-Heavy.woff2') format('woff2');
+      font-weight: 700; font-style: normal;
+    }
+
+    :root {
+      --teal:       #257c6c;
+      --teal-dark:  #1b5c50;
+      --teal-light: var(--off-white);
+      --teal-pale:  #b8ddd8;
+      --rose:       #cf5a73;
+      --rose-light: #e8a0b0;
+      --sand:       #c2ab8d;
+      --sand-light: var(--off-white);
+      --black:      #070808;
+      --dark:       #0d2420;
+      --off-white:  #f8f6f2;
+      --cream:      #f0f5f4;
+      --beige:      #ddecea;
+      --warm-gray:  #5a7a74;
+      --mid-gray:   #9ab8b4;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    em, i { font-style: normal; }
+    html { scroll-behavior: smooth; overflow-x: hidden; }
+    body { overflow-x: hidden; }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 18px;
+      line-height: 1.75;
+      background: var(--off-white);
+      color: #0a3828;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── TOP BANNER ── */
+    .top-banner {
+      background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%);
+      padding: 12px 40px;
+      text-align: center;
+    }
+    .top-banner p {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--dark);
+    }
+
+    /* ── HERO ── */
+    .hero {
+      background: var(--teal-dark);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -80px; left: -80px;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(37,124,108,0.20) 0%, transparent 60%);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* 2-column grid: text left, image right */
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 55fr 45fr;
+      min-height: auto;
+      position: relative;
+      z-index: 2;
+    }
+    .hero-content {
+      padding: 24px 56px 24px 80px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .hero-image {
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-image img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center bottom;
+      display: block;
+      filter: brightness(0.92) saturate(0.9);
+    }
+    /* Gradient: links in Hintergrundfarbe einblenden */
+    .hero-image::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(to right, var(--teal-dark) 0%, rgba(27,92,80,0.6) 18%, transparent 38%);
+      z-index: 1;
+      pointer-events: none;
+    }
+    /* Gradient: unten ausblenden */
+    .hero-image::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 40%;
+      background: linear-gradient(to top, var(--teal-dark) 0%, transparent 100%);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .hero-tilt { display: none; }
+
+    .hero-content h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 80px;
+      font-weight: 400;
+      line-height: 1.0;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+      background: linear-gradient(90deg, #d4a090 0%, #f0ccc0 50%, #d4a090 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-content h1 em {
+      font-style: normal;
+      letter-spacing: 0;
+      text-transform: none;
+    }
+
+    .hero-subtitle {
+      font-size: 20px;
+      font-weight: 400;
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 28px;
+      max-width: 520px;
+      line-height: 1.7;
+    }
+    .hero-subtitle strong { color: inherit; font-weight: 700; }
+
+    .hero-date {
+      font-size: 18px;
+      font-weight: 400;
+      letter-spacing: 0;
+      text-transform: none;
+      color: #fff;
+      margin-top: 20px;
+      margin-bottom: 0;
+      max-width: 520px;
+      line-height: 1.7;
+    }
+
+    /* CTA Hero Button */
+    .btn-hero {
+      display: inline-block;
+      background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%);
+      color: var(--dark);
+      border: none;
+      padding: 20px 48px;
+      border-radius: 999px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: opacity 0.2s, transform 0.2s;
+      margin-bottom: 0;
+      text-decoration: none;
+      width: fit-content;
+      animation: pulse-btn 2.2s ease-in-out infinite;
+    }
+    .btn-hero:hover { opacity: 0.88; transform: translateY(-2px); animation: none; }
+
+    /* Countdown – minimal, kein Box-Design */
+    .countdown { display: flex; gap: 28px; justify-content: flex-start; align-items: flex-end; margin-top: 32px; }
+    .countdown-item { text-align: center; }
+    .countdown-digits {
+      display: block;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 52px;
+      color: #fff;
+      line-height: 1;
+      letter-spacing: -1px;
+    }
+    .countdown-sep {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 40px;
+      color: rgba(255,255,255,0.15);
+      line-height: 1;
+      margin-bottom: 14px;
+    }
+    .countdown-label {
+      display: block;
+      font-size: 8px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--teal-light);
+      margin-top: 4px;
+    }
+
+    /* ── POPUP / MODAL ── */
+    @keyframes popup-in {
+      from { opacity: 0; transform: translateY(24px) scale(0.97); }
+      to   { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    .modal-overlay {
+      display: none;
+      position: fixed; inset: 0;
+      background: rgba(7,8,8,0.72);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+    .modal-overlay.active { display: flex; }
+
+    .modal {
+      background: var(--teal-dark);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      max-width: 520px;
+      width: 100%;
+      padding: 48px 44px 40px;
+      position: relative;
+      animation: popup-in 0.3s ease forwards;
+    }
+
+    .modal-close {
+      position: absolute; top: 16px; right: 20px;
+      background: none; border: none; cursor: pointer;
+      color: var(--warm-gray); font-size: 22px; line-height: 1; padding: 4px;
+      transition: color 0.15s;
+    }
+    .modal-close:hover { color: #fff; }
+
+    .modal-kicker {
+      font-size: 10px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase;
+      color: var(--teal-light); margin-bottom: 16px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .modal-kicker::before { content: ''; display: block; width: 20px; height: 1px; background: var(--teal-light); }
+
+    .modal h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(26px, 4.2vw, 38px);
+      font-weight: 600; color: #fff; line-height: 1.2; margin-bottom: 12px;
+    }
+    .modal h2 em { font-style: normal; background: linear-gradient(90deg, #d4a090 0%, #f0ccc0 50%, #d4a090 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+
+    .modal-sub {
+      font-size: 15px; color: #fff; line-height: 1.65; margin-bottom: 28px;
+    }
+
+    .popup-form { display: flex; flex-direction: column; gap: 8px; margin-bottom: 14px; }
+    .popup-input {
+      background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.13);
+      border-radius: 6px; padding: 13px 16px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px; color: #fff; outline: none; transition: border-color 0.2s;
+      width: 100%;
+    }
+    .popup-input::placeholder { color: rgba(255,255,255,0.28); }
+    .popup-input:focus { border-color: rgba(255,255,255,0.5); }
+
+    .btn-submit {
+      width: 100%;
+      background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%);
+      color: var(--dark);
+      border: none;
+      padding: 17px;
+      border-radius: 999px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      cursor: pointer;
+      margin-top: 4px;
+      transition: opacity 0.2s, transform 0.15s;
+      animation: pulse-btn 2.2s ease-in-out infinite;
+      box-shadow: 0 0 18px rgba(212,160,144,0.55), 0 6px 24px rgba(160,104,90,0.45);
+    }
+    .btn-submit:hover { opacity: 0.88; transform: translateY(-1px); animation: none; }
+    #_form_569_submit { background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%) !important; border-radius: 999px !important; color: var(--dark) !important; animation: pulse-btn 2.2s ease-in-out infinite; box-shadow: 0 0 18px rgba(212,160,144,0.55), 0 6px 24px rgba(160,104,90,0.45) !important; }
+
+    .popup-dismiss {
+      display: block; text-align: center;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 12px; color: var(--warm-gray); cursor: pointer;
+      background: none; border: none; text-decoration: underline; text-underline-offset: 3px;
+      margin-top: 10px; transition: color 0.15s; width: 100%;
+    }
+    .popup-dismiss:hover { color: var(--mid-gray); }
+
+    /* ── SHARED LAYOUT ── */
+    .section-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--teal);
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 12px;
+    }
+    .section-label::after {
+      content: '';
+      display: block;
+      width: 80px; height: 1px;
+      background: var(--teal);
+      opacity: 0.5;
+    }
+    h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 56px;
+      font-weight: 600;
+      color: #0a3828;
+      line-height: 1.1;
+      margin-bottom: 8px;
+      letter-spacing: -0.5px;
+    }
+    h2 em { font-style: normal; font-weight: 600; color: inherit; }
+    .section h2 { font-family: 'Cormorant Garamond', serif; }
+    .section h2 em { font-style: normal; font-weight: 600; color: inherit; }
+    .section-intro {
+      font-size: 18px;
+      font-weight: 400;
+      font-style: normal;
+      color: var(--warm-gray);
+      max-width: 600px;
+      margin-bottom: 48px;
+    }
+
+    /* CTA Button (shared) */
+    .btn-cta {
+      display: inline-block;
+      background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%);
+      color: var(--dark);
+      text-decoration: none;
+      padding: 20px 48px;
+      border-radius: 999px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      transition: opacity 0.2s, transform 0.15s;
+      border: none;
+      cursor: pointer;
+      animation: pulse-btn 2.2s ease-in-out infinite;
+    }
+    .btn-cta:hover { opacity: 0.88; transform: translateY(-1px); animation: none; }
+    .btn-cta.on-dark { background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%); color: var(--dark); }
+    .btn-cta.on-dark:hover { opacity: 0.88; }
+
+    /* ── FLOATING CTA ── */
+    @keyframes pulse-cta {
+      0%, 100% { transform: scale(1);     box-shadow: 0 6px 28px rgba(160,104,90,0.50); }
+      50%       { transform: scale(1.05); box-shadow: 0 10px 36px rgba(160,104,90,0.65); }
+    }
+    @keyframes pulse-btn {
+      0%, 100% { transform: scale(1);     box-shadow: 0 6px 28px rgba(160,104,90,0.40); }
+      50%       { transform: scale(1.04); box-shadow: 0 10px 36px rgba(160,104,90,0.58); }
+    }
+    .floating-cta { animation-duration: 1.4s; }
+    .btn-hero, .btn-cta, .btn-submit { animation-duration: 1.4s; }
+    .floating-cta {
+      position: fixed;
+      bottom: 32px; right: 32px;
+      z-index: 500;
+      background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%);
+      color: var(--dark);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      padding: 16px 28px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 6px 28px rgba(207,90,115,0.50);
+      animation: pulse-cta 2.2s ease-in-out infinite;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s ease, transform 0.3s ease;
+      transform: translateY(12px);
+      white-space: nowrap;
+    }
+    .floating-cta.is-visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
+    .floating-cta:hover { opacity: 0.88; animation: none; transform: translateY(-3px) scale(1.04); }
+    @media (max-width: 640px) {
+      .floating-cta { bottom: 20px; right: 16px; left: 16px; text-align: center; }
+    }
+
+    /* ── BEKANNT AUS – TICKER ── */
+    .logos-section {
+      padding: 36px 0;
+      background: var(--off-white);
+      text-align: center;
+      overflow: hidden;
+    }
+    .logos-kicker {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--teal-dark);
+      text-align: center;
+      margin-bottom: 36px;
+    }
+    .logos-track-wrap {
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+      mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+    }
+    @keyframes logoScroll {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+    .logos-track {
+      display: flex;
+      align-items: center;
+      gap: 56px;
+      width: max-content;
+      animation: logoScroll 24s linear infinite;
+      padding: 8px 0;
+    }
+    .logos-track:hover { animation-play-state: paused; }
+    .logos-track img {
+      height: 40px;
+      width: auto;
+      object-fit: contain;
+      filter: none;
+      opacity: 0.85;
+      flex-shrink: 0;
+      transition: opacity 0.3s ease;
+    }
+    .logos-track img:hover { opacity: 1; }
+
+    /* ── MAIN TEXT ── */
+    .text-section {
+      background: var(--off-white);
+      border-top: 2px solid var(--teal-pale);
+      padding: 88px 0;
+      border-bottom: 1px solid var(--beige);
+    }
+    .text-inner {
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+    .text-section .section-label { margin-bottom: 36px; }
+    .text-inner p {
+      font-size: 18px;
+      line-height: 1.85;
+      color: #0a3828;
+      margin-bottom: 20px;
+    }
+    .text-inner p strong { color: #0a3828; font-weight: 700; }
+    .quote-block {
+      text-align: center;
+      padding: 32px 40px;
+      margin: 24px 0;
+      position: relative;
+      background: var(--teal-dark);
+      border-radius: 12px;
+    }
+    .quote-block::before,
+    .quote-block::after { display: none; }
+    .quote-block p {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 56px;
+      font-style: normal;
+      color: #fff;
+      line-height: 1.25;
+      margin: 0;
+      letter-spacing: 0.01em;
+    }
+    .btn-mobile { display: none; }
+    .btn-desktop { display: inline; }
+    .mobile-br { display: none; }
+    .cta-row { text-align: center; margin-top: 52px; padding-top: 28px; border-top: 1px solid var(--beige); }
+
+    /* ── BENEFITS ── */
+    .benefits-section {
+      background: #fff;
+      border-top: none;
+      padding: 100px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .benefits-section::before { display: none; }
+    .benefits-section::after { display: none; }
+    .benefits-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 40px;
+      position: relative;
+      z-index: 2;
+    }
+    .benefits-header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+    .benefits-header h2 { color: #0a3828; }
+    .benefits-section .section-label { color: var(--teal); }
+    .benefits-section .section-label::after { background: var(--teal); }
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-bottom: 52px;
+    }
+    .benefit-card {
+      background: #1b5c50;
+      border: none;
+      border-radius: 16px;
+      padding: 32px 36px 32px 32px;
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 20px rgba(13,36,32,0.18);
+    }
+    .benefit-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(13,36,32,0.28);
+    }
+    .benefit-num {
+      display: block;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 100px;
+      font-weight: 400;
+      color: rgba(255,255,255,0.32);
+      line-height: 1;
+      flex-shrink: 0;
+      width: 80px;
+      text-align: left;
+      align-self: flex-start;
+      user-select: none;
+    }
+    .benefit-body p { font-size: 18px; color: #fff; margin: 0; line-height: 1.75; }
+    .benefit-body p strong { color: #fff; font-weight: 700; }
+
+    /* ── PERFECT FOR YOU ── */
+    .perfect-section {
+      background: linear-gradient(135deg, var(--teal-dark) 0%, var(--dark) 100%);
+      padding: 88px 0;
+      border-bottom: 1px solid rgba(94,198,179,0.1);
+      position: relative;
+      overflow: hidden;
+    }
+    .perfect-section::before {
+      content: '';
+      position: absolute;
+      top: -100px; right: -80px;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(37,124,108,0.15) 0%, transparent 65%);
+    }
+    .perfect-inner {
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 0 40px;
+      position: relative;
+      z-index: 1;
+    }
+    .perfect-section .section-label { color: var(--teal-light); }
+    .perfect-section .section-label::after { background: var(--teal-light); }
+    .perfect-section h2 { color: #fff; }
+    .perfect-section h2 em { color: var(--rose-light); }
+    .perfect-section .section-intro { color: rgba(255,255,255,0.85); }
+    .perfect-item {
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+      padding: 18px 20px;
+      margin-bottom: 10px;
+      background: rgba(255,255,255,0.03);
+      border-left: 2px solid var(--teal);
+      border-radius: 0 2px 2px 0;
+    }
+    .perfect-item:hover { background: rgba(37,124,108,0.08); }
+    .heart-icon { flex: 0 0 18px; margin-top: 3px; }
+    .heart-icon svg { width: 16px; height: 16px; fill: #c47868; }
+    .perfect-item p { color: rgba(255,255,255,0.85); font-size: 18px; margin: 0; line-height: 1.65; }
+    .perfect-cta { margin-top: 44px; }
+
+    /* ── SO FUNKTIONIERT'S ── */
+    .how-section {
+      background: var(--teal-dark);
+      padding: 110px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    /* Ambient glow effects */
+    .how-section::before {
+      content: '';
+      position: absolute;
+      top: -120px; left: -120px;
+      width: 700px; height: 700px;
+      background: radial-gradient(circle, rgba(37,124,108,0.18) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .how-section::after {
+      content: '';
+      position: absolute;
+      bottom: -100px; right: -100px;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(207,90,115,0.12) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .how-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 40px;
+      position: relative;
+      z-index: 1;
+    }
+    .how-section .section-label { color: var(--teal-light); }
+    .how-section .section-label::after { background: var(--teal-light); }
+    .how-section > .how-inner > h2 { color: #fff; text-align: center; }
+    .how-section > .how-inner > h2 em { color: var(--sand-light); }
+    .how-section .how-intro { text-align: center; color: #fff; font-size: 18px; max-width: 800px; margin: 0 auto 72px; line-height: 1.8; }
+
+    /* 3-column card grid */
+    .journey-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-bottom: 64px;
+    }
+    .journey-card {
+      background: #fff;
+      border: 1.5px solid transparent;
+      background-clip: padding-box;
+      border-radius: 16px;
+      padding: 40px 32px;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.25s ease;
+      box-shadow: 0 0 0 1.5px #c4907e, 0 4px 20px rgba(160,104,90,0.12);
+    }
+    .journey-card:hover {
+      transform: scale(1.025);
+    }
+    .journey-card::before { display: none; }
+    .journey-card-glow {
+      display: none;
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 180px; height: 180px;
+      border-radius: 50%;
+      opacity: 0.07;
+      pointer-events: none;
+    }
+    .journey-card:nth-child(1) .journey-card-glow { background: var(--teal); }
+    .journey-card:nth-child(2) .journey-card-glow { background: #c47868; }
+    .journey-card:nth-child(3) .journey-card-glow { background: var(--sand-light); }
+    .journey-step-number {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 56px;
+      font-weight: 600;
+      line-height: 1;
+      margin-bottom: 8px;
+      color: var(--teal);
+      display: block;
+    }
+    .journey-card-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 27px;
+      font-weight: 600;
+      color: #0a3828;
+      margin: 0 0 16px;
+      line-height: 1.3;
+    }
+    .journey-card-text {
+      font-size: 18px;
+      color: var(--warm-gray);
+      line-height: 1.75;
+      margin: 0 0 12px;
+    }
+    .journey-card-text:last-child { margin-bottom: 0; }
+    .journey-card-hint {
+      font-size: 13px;
+      color: var(--warm-gray);
+      font-style: normal;
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid var(--beige);
+      line-height: 1.6;
+    }
+    @media (max-width: 760px) {
+      .journey-cards { grid-template-columns: 1fr; }
+    }
+
+    /* ── TESTIMONIALS ── */
+    .testimonials-section {
+      background: #fff;
+      border-top: none;
+      padding: 88px 0;
+      border-bottom: 1px solid var(--beige);
+    }
+    .testimonials-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+    .section-header { margin-bottom: 56px; text-align: center; }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .testimonial-card {
+      background: #f8f6f2;
+      border: 1px solid var(--beige);
+      border-top: none;
+      border-radius: 4px;
+      padding: 32px 28px;
+      position: relative;
+      transition: box-shadow 0.25s ease, transform 0.25s ease;
+    }
+    .testimonial-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%);
+      border-radius: 4px 4px 0 0;
+    }
+    .testimonial-card:hover { box-shadow: 0 8px 28px rgba(37,124,108,0.10); transform: translateY(-3px); }
+    .stars { font-size: 14px; color: var(--sand); letter-spacing: 4px; margin-bottom: 20px; }
+    .testimonial-text { font-size: 16px; color: #0a3828; line-height: 1.8; margin-bottom: 20px; }
+    .testimonial-author { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #0a3828; }
+
+    /* ── FÜR DICH ── */
+    .fuer-dich-section {
+      background: #fff;
+      padding: 100px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .fuer-dich-section::before { display: none; }
+    .fuer-dich-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+    .fuer-dich-inner h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(28px, 3.8vw, 56px);
+      font-weight: 600;
+      color: #0a3828;
+      text-align: center;
+      white-space: nowrap;
+      margin-bottom: 56px;
+    }
+    .fuer-dich-inner h2 em { font-style: normal; font-weight: 600; color: inherit; }
+    .fuer-dich-divider {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(28px, 3.8vw, 56px);
+      font-weight: 600;
+      color: #e8a0b0;
+      text-align: center;
+      white-space: nowrap;
+      margin: 8px 0;
+    }
+    .fuer-dich-divider em { font-style: normal; font-weight: 600; color: inherit; }
+    .fuer-dich-section .section-label { color: var(--teal); }
+    .fuer-dich-section .section-label::after { background: var(--teal); opacity: 1; }
+    .fuer-dich-stack { display: flex; flex-direction: column; gap: 20px; }
+    .fuer-dich-box {
+      border-radius: 12px;
+      padding: 32px 36px;
+    }
+    .fuer-dich-box.ja {
+      background: var(--teal-dark);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .fuer-dich-box.nein {
+      background: rgba(232,160,176,0.18);
+      border: 1px solid rgba(232,160,176,0.35);
+    }
+    .fuer-dich-box-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+    }
+    .fuer-dich-box.ja .fuer-dich-box-header { color: var(--teal-pale); }
+    .fuer-dich-box.ja .fuer-dich-list li { color: rgba(255,255,255,0.85); }
+    .fuer-dich-box.ja .fuer-dich-list li strong { color: #fff; }
+    .fuer-dich-box.nein .fuer-dich-box-header { color: #e8a0b0; }
+    .fuer-dich-box.nein .fuer-dich-list li { color: #0a3828; display: flex; align-items: flex-start; padding-left: 0; gap: 8px; }
+    .fuer-dich-box.nein .fuer-dich-list li strong { color: #0a3828; }
+    .fuer-dich-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+    .fuer-dich-list li {
+      position: relative;
+      padding-left: 24px;
+      font-size: 18px;
+      color: #0a3828;
+      line-height: 1.7;
+    }
+    .fuer-dich-list li::before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0.55em;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .fuer-dich-box.ja .fuer-dich-list li::before { content: '✓'; background: none; color: var(--teal-pale); width: auto; height: auto; border-radius: 0; top: 0; font-size: 16px; font-weight: 700; }
+    .fuer-dich-box.nein .fuer-dich-list li::before { content: '×'; position: static; display: inline; background: none; color: #e8a0b0; width: auto; height: auto; border-radius: 0; font-size: 26px; font-weight: 700; flex-shrink: 0; line-height: 1.4; }
+    .fuer-dich-list li strong { color: #0a3828; }
+
+    /* ── BONUS ── */
+    .bonus-section {
+      background: var(--teal-dark);
+      padding: 88px 0;
+      border-bottom: 1px solid rgba(94,198,179,0.1);
+      position: relative;
+      overflow: hidden;
+    }
+    .bonus-section::before { display: none; }
+    .bonus-inner {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+    .bonus-section .section-label { color: var(--teal-light); }
+    .bonus-section .section-label::after { background: var(--teal-light); }
+    .bonus-section h2 { color: #fff; text-align: center; }
+    .bonus-section h2 em { color: var(--sand-light); }
+    .bonus-section .section-intro { color: rgba(255,255,255,0.85); font-style: normal; margin-bottom: 48px; }
+    .bonus-gift-box {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(94,198,179,0.2);
+      border-radius: 20px;
+      padding: 48px;
+      position: relative;
+      overflow: hidden;
+    }
+    .bonus-gift-box::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at top right, rgba(207,90,115,0.08) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .bonus-gift-icon {
+      flex-shrink: 0;
+      width: 100px;
+      height: 100px;
+      background: linear-gradient(135deg, var(--teal-dark), var(--teal));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 44px;
+      box-shadow: 0 0 40px rgba(37,124,108,0.35);
+    }
+    .bonus-gift-text h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 34px;
+      font-weight: 600;
+      color: var(--sand-light);
+      margin-bottom: 12px;
+    }
+    .bonus-gift-text p { font-size: 18px; color: rgba(255,255,255,0.85); margin: 0; line-height: 1.8; }
+    @media (max-width: 600px) { .bonus-gift-box { flex-direction: column; text-align: center; } }
+
+    /* ── SCREENSHOT SLIDER ── */
+    .screenshots-section {
+      background: var(--teal-dark);
+      padding: 80px 0 72px;
+    }
+    .screenshots-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 60px;
+    }
+    .sl-wrap {
+      position: relative;
+    }
+    .sl-viewport {
+      overflow: hidden;
+    }
+    .sl-track {
+      display: flex;
+      gap: 20px;
+      transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+      will-change: transform;
+    }
+    .sl-slide {
+      flex: 0 0 78%;
+      overflow: hidden;
+      background: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .sl-slide img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      object-position: center;
+    }
+    .sl-arrow {
+      position: absolute;
+      top: 42%;
+      transform: translateY(-50%);
+      z-index: 10;
+      background: #fff;
+      border: none;
+      box-shadow: 0 2px 16px rgba(160,104,90,0.25);
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      font-size: 30px;
+      color: #a0685a;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s, color 0.2s;
+      line-height: 1;
+    }
+    .sl-arrow:hover { background: linear-gradient(135deg,#a0685a,#d4a090); color: #fff; }
+    .sl-prev { left: -60px; }
+    .sl-next { right: -60px; }
+    .sl-dots {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 24px;
+    }
+    .sl-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #d4bdb8;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      transition: background 0.3s, transform 0.3s;
+    }
+    .sl-dot.active {
+      background: linear-gradient(90deg,#a0685a,#d4a090);
+      transform: scale(1.35);
+    }
+    @media (max-width: 760px) {
+      .screenshots-inner { padding: 0 44px; }
+      .sl-prev { left: -40px; }
+      .sl-next { right: -40px; }
+      .sl-arrow { width: 36px; height: 36px; font-size: 22px; }
+      .sl-slide { flex: 0 0 84%; }
+    }
+
+    /* ── SPEAKER ── */
+    .speaker-section {
+      background: var(--teal-dark);
+      padding: 88px 0;
+    }
+    .speaker-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 40px;
+      display: flex;
+      gap: 72px;
+      align-items: flex-start;
+    }
+    .speaker-portrait { flex: 0 0 260px; text-align: center; }
+    .speaker-portrait img {
+      width: 240px; height: 240px;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 50%;
+      border: 4px solid var(--teal);
+      display: block;
+      margin: 0 auto 24px;
+      box-shadow: 0 0 0 8px rgba(37,124,108,0.12), 0 16px 48px rgba(13,36,32,0.15);
+    }
+    .speaker-portrait h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 33px;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+    .speaker-portrait .role {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--teal-pale);
+    }
+    .speaker-bio { flex: 1; padding-top: 8px; }
+    .speaker-bio p { font-size: 18px; color: rgba(255,255,255,0.85); line-height: 1.8; margin-bottom: 18px; }
+    .speaker-bio p strong { color: #fff; }
+
+    /* ── FINAL CTA ── */
+    .final-cta {
+      background: #fff;
+      padding: 110px 0;
+      border-bottom: none;
+      position: relative;
+      overflow: hidden;
+    }
+    .final-cta .section-label { color: var(--teal) !important; }
+    .final-cta .section-label::after { background: var(--teal) !important; }
+    .final-cta h2 { color: #0a3828 !important; }
+    .final-cta .countdown-digits { color: #0a3828 !important; }
+    .final-cta .countdown-label { color: var(--warm-gray) !important; }
+    .final-cta .countdown-sep { color: rgba(0,0,0,0.15) !important; }
+    .final-cta-inner {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 0 40px;
+      text-align: center;
+    }
+    .final-cta h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(28px, 3vw, 40px);
+      font-weight: 600;
+      color: var(--black);
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+    .final-cta h2 em { font-style: normal; font-weight: 600; color: inherit; }
+    .countdown-final { display: flex; justify-content: center; gap: 28px; margin: 40px 0; align-items: flex-end; }
+    .countdown-final .countdown-digits { color: #1b5c50; font-size: 52px; }
+    .countdown-final .countdown-label { color: var(--teal); }
+    .countdown-final .countdown-sep { color: rgba(7,8,8,0.15); font-size: 40px; margin-bottom: 14px; }
+    .facebook-disclaimer { font-size: 11px; color: rgba(255,255,255,0.45); margin-top: 40px; line-height: 1.6; }
+
+    /* ── FOOTER ── */
+    footer { background: #07291d; padding: 48px 40px; border-top: 1px solid rgba(94,198,179,0.1); box-sizing: border-box; overflow-x: hidden; }
+    .footer-brand img { max-width: 100%; max-height: 36px; width: auto; height: auto; }
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+    .footer-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 400;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--sand-light);
+    }
+    .footer-links { display: flex; gap: 40px; }
+    .footer-links a {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: #fff; }
+    .footer-copy { font-size: 11px; color: rgba(255,255,255,0.45); }
+    @media (max-width: 640px) {
+      .footer-inner { flex-direction: column; text-align: center; }
+      .footer-links { justify-content: center; }
+    }
+
+    /* ── RESPONSIVE: TABLET ── */
+    @media (max-width: 900px) {
+      /* Hero */
+      .hero-inner { grid-template-columns: 1fr; min-height: auto; }
+      .hero-image { height: 45vh; order: -1; }
+      .hero-image::before { background: linear-gradient(to bottom, transparent 40%, var(--teal-dark) 100%); }
+      .hero-image::after { display: none; }
+      .hero-content { padding: 36px 40px 60px; }
+      .countdown { justify-content: flex-start; }
+      /* Benefits */
+      .benefits-grid { grid-template-columns: 1fr; }
+      /* Testimonials */
+      .testimonials-grid { grid-template-columns: 1fr 1fr; }
+      /* Speaker */
+      .speaker-inner { flex-direction: column; }
+      .speaker-portrait { flex: none; width: 100%; max-width: 280px; margin: 0 auto; }
+      /* Journey */
+      .journey-cards { grid-template-columns: 1fr; }
+      /* Für-dich */
+      .fuer-dich-grid { grid-template-columns: 1fr; }
+      /* Footer */
+      .footer-inner { flex-direction: column; text-align: center; }
+      .footer-links { justify-content: center; }
+    }
+
+    /* ── RESPONSIVE: MOBILE ── */
+    @media (max-width: 600px) {
+      /* Mobile-only text switcher */
+      .btn-mobile { display: inline; }
+      .btn-desktop { display: none; }
+      .mobile-br { display: inline; }
+
+      /* Allgemein */
+      body { font-size: 16px; }
+      h1 { font-size: 9vw !important; white-space: nowrap; }
+      h2 { font-size: 34px !important; }
+      .fuer-dich-inner h2 { font-size: 28px !important; white-space: normal !important; }
+      .fuer-dich-divider { font-size: 26px !important; white-space: normal !important; }
+
+      /* Padding aller Sektionen */
+      .hero-content { padding: 28px 20px 56px; }
+      .text-inner, .benefits-inner, .perfect-inner, .how-inner,
+      .testimonials-inner, .bonus-inner, .speaker-inner,
+      .final-cta-inner, .fuer-dich-inner { padding-left: 20px; padding-right: 20px; }
+      .text-section, .benefits-section { padding: 64px 0; }
+      .how-section, .bonus-section, .fuer-dich-section,
+      .testimonials-section, .speaker-section { padding: 64px 0; }
+      .final-cta { padding: 72px 0; }
+
+      /* Top Banner */
+      .top-banner { padding: 12px 16px; }
+      .top-banner p { font-size: 9px; letter-spacing: 0.5px; }
+
+      /* Hero */
+      .hero-image { height: 48vw; }
+      .hero-image img { object-position: center 15%; }
+      .hero-content { padding: 20px 20px 24px; overflow: hidden; }
+      .hero-subtitle { font-size: 18px; margin-bottom: 16px; max-width: 100%; }
+      .hero-date { font-size: 14px; letter-spacing: 0; text-transform: none; margin-top: 12px; margin-bottom: 0; max-width: 100%; }
+      .btn-hero { padding: 16px 28px; font-size: 13px; width: 100%; text-align: center; margin-bottom: 0; }
+      #utm-message { padding: 12px 14px; }
+      #utm-message p { font-size: 16px; }
+
+      /* Countdown */
+      .countdown { gap: 10px; flex-wrap: nowrap; }
+      .countdown-digits { font-size: 28px !important; }
+      .countdown-sep { font-size: 24px !important; margin-bottom: 8px !important; }
+      .countdown-label { font-size: 7px !important; }
+
+      /* Benefits */
+      .benefits-grid { grid-template-columns: 1fr; gap: 16px; }
+      .benefit-card { padding: 24px 20px; gap: 16px; }
+      .benefit-num { width: 72px; font-size: 80px; flex: 0 0 72px; height: auto; line-height: 1; }
+
+      /* Logos */
+      .logos-section { padding: 28px 20px; }
+      .logos-track { animation-duration: 14s; }
+
+      /* Journey cards */
+      .journey-cards { grid-template-columns: 1fr; gap: 16px; margin-bottom: 40px; }
+      .journey-card { padding: 28px 24px; }
+
+      /* Testimonials */
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .testimonial-card { padding: 24px 20px; }
+
+      /* Für dich */
+      .fuer-dich-box { padding: 24px 20px; }
+      .fuer-dich-box-header { font-size: 12px; margin-bottom: 14px; }
+      .fuer-dich-list { gap: 10px; }
+      .fuer-dich-list li { padding-left: 20px; font-size: 18px; }
+      .fuer-dich-box.nein .fuer-dich-list li::before { font-size: 40px; }
+
+      /* Bonus */
+      .bonus-gift-box { flex-direction: column; text-align: center; padding: 32px 24px; gap: 24px; }
+      .bonus-gift-icon { width: 80px; height: 80px; font-size: 36px; margin: 0 auto; }
+      .bonus-gift-text h3 { font-size: 22px; }
+
+      /* Speaker */
+      .speaker-portrait img { width: 160px; height: 160px; }
+      .speaker-bio { padding-top: 0; }
+
+      /* Buttons */
+      .btn-cta { padding: 17px 28px; font-size: 13px; width: 100%; text-align: center; }
+
+      /* Final CTA */
+      .countdown-final { gap: 16px; }
+      .countdown-final .countdown-digits { font-size: 46px; }
+      .countdown-final .countdown-sep { font-size: 32px !important; }
+
+      /* Modal */
+      .modal { padding: 32px 20px 24px; }
+      .modal-overlay { align-items: flex-end; }
+      .modal { border-radius: 16px 16px 0 0; }
+
+      /* Footer */
+      footer { padding: 36px 20px; overflow-x: hidden; }
+      .footer-links { gap: 20px; flex-wrap: wrap; }
+
+      /* Wiedergeburt headline */
+      .how-inner h2 { white-space: normal !important; font-size: clamp(32px, 8vw, 56px) !important; }
+
+      /* Floating CTA full-width mobile already handled above */
+    }
+  </style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NQMQT7QH"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+<!-- TOP BANNER -->
+<div class="top-banner">
+  <p style="white-space: nowrap;">Exklusive Money-Masterclass für nur 100 Frauen</p>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div id="utm-message" style="display:none; background:linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%); border-radius:10px; padding:16px 22px; margin-bottom:24px; max-width:520px; box-shadow:0 4px 24px rgba(160,104,90,0.4);">
+        <p style="margin:0; font-size:19px; font-weight:700; color:#fff; line-height:1.5;">Super, du hast dir die Analyse gesichert – und wir haben noch ein Geschenk für dich!</p>
+      </div>
+      <h1>Energy <em>for</em> Million</h1>
+      <p class="hero-subtitle">
+        Sei die <strong>ungezähmte Unternehmerin</strong>, <strong>FREI</strong> von Druck, Zweifeln und falschen Strategien, die dich nur erschöpfen. Führe dein Business nach deinen eigenen Regeln, mit der <strong>ENERGIE</strong>, die <strong>GELD</strong> und <strong>ERFOLG</strong> anzieht.
+      </p>
+      <button class="btn-hero" onclick="openModal()">Yes, ich bin dabei</button>
+      <p class="hero-date">13.08.2026, 11:00 – 13:00 Uhr<br>kostenfreie Money-Masterclass mit Marina Henze</p>
+      <div class="countdown">
+        <div class="countdown-item">
+          <span class="countdown-digits" id="h-days">00</span>
+          <span class="countdown-label">Tage</span>
+        </div>
+        <span class="countdown-sep">·</span>
+        <div class="countdown-item">
+          <span class="countdown-digits" id="h-hours">00</span>
+          <span class="countdown-label">Std</span>
+        </div>
+        <span class="countdown-sep">·</span>
+        <div class="countdown-item">
+          <span class="countdown-digits" id="h-minutes">00</span>
+          <span class="countdown-label">Min</span>
+        </div>
+        <span class="countdown-sep">·</span>
+        <div class="countdown-item">
+          <span class="countdown-digits" id="h-seconds">00</span>
+          <span class="countdown-label">Sek</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="Bilder/2DSCF1036.png" alt="Marina Henze">
+    </div>
+  </div>
+  <div class="hero-tilt">
+    <svg viewBox="0 0 1000 56" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,56 L1000,0 L1000,56 Z" fill="#f8f6f2"/>
+    </svg>
+  </div>
+</section>
+
+<!-- POPUP / MODAL -->
+<div class="modal-overlay" id="modal" onclick="handleOverlayClick(event)" role="dialog" aria-modal="true">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()" aria-label="Schließen">&times;</button>
+    <h2>Hol dir jetzt deine<br><em>ENERGY for MILLION</em></h2>
+    <p class="modal-sub">13. August 2026 &nbsp;·&nbsp; 11–13 Uhr &nbsp;·&nbsp; kostenfrei<br>Sichere dir jetzt deinen Platz – in unter 30 Sekunden.</p>
+    <style>@import url(https://fonts.bunny.net/css?family=sans-serif:400|IBM+Plex+Sans:400);</style>
+    <style>
+#_form_569_{font-size:14px;line-height:1.6;font-family:arial, helvetica, sans-serif;margin:0;box-shadow:none}._form_hide{display:none;visibility:hidden}._form_show{display:block;visibility:visible}#_form_569_._form-top{top:0}#_form_569_._form-bottom{bottom:0}#_form_569_._form-left{left:0}#_form_569_._form-right{right:0}#_form_569_ input[type="text"],#_form_569_ input[type="tel"],#_form_569_ input[type="date"],#_form_569_ textarea{padding:8px;height:auto;border:#979797 1px solid;border-radius:4px;color:#000 !important;font-size:14px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}#_form_569_ textarea{resize:none}#_form_569_ input::placeholder{color:#142341}#_form_569_ ._submit{cursor:pointer;font-family:arial, sans-serif;font-size:14px;text-align:center;background:#861627 !important;border:0 !important;-moz-border-radius:4px !important;-webkit-border-radius:4px !important;border-radius:4px !important;color:#ffffff !important;padding:10px !important}#_form_569_ ._submit:disabled{cursor:not-allowed;opacity:0.4}#_form_569_ ._submit.processing{position:relative}#_form_569_ ._submit.processing::before{content:"";width:1em;height:1em;position:absolute;z-index:1;top:50%;left:50%;border:double 3px transparent;border-radius:50%;background-image:linear-gradient(#861627, #861627), conic-gradient(#861627, #ffffff);background-origin:border-box;background-clip:content-box, border-box;animation:1200ms ease 0s infinite normal none running _spin}#_form_569_ ._submit.processing::after{content:"";position:absolute;top:0;bottom:0;left:0;right:0}@keyframes _spin{0%{transform:translate(-50%, -50%) rotate(90deg)}100%{transform:translate(-50%, -50%) rotate(450deg)}}#_form_569_ ._close-icon{cursor:pointer;background-image:url("https://d226aj4ao1t61q.cloudfront.net/esfkyjh1u_forms-close-dark.png");background-repeat:no-repeat;background-size:14.2px 14.2px;position:absolute;display:block;top:11px;right:9px;overflow:hidden;width:16.2px;height:16.2px}#_form_569_ ._close-icon:before{position:relative}#_form_569_ ._form-body{font-family:sans-serif;font-size:14px;font-weight:400;color:black;margin-bottom:30px}#_form_569_ ._form-image-left{width:150px;float:left}#_form_569_ ._form-content-right{margin-left:164px}#_form_569_ ._form-branding{color:#fff;font-size:10px;clear:both;text-align:left;margin-top:30px;font-weight:100}#_form_569_ ._form-branding ._logo{display:block;width:130px;height:14px;margin-top:6px;background-image:url("https://d226aj4ao1t61q.cloudfront.net/hh9ujqgv5_aclogo_li.png");background-size:130px auto;background-repeat:no-repeat}#_form_569_ .form-sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);border:0}#_form_569_ ._form-label,#_form_569_ ._form_element ._form-label{font-weight:bold;margin-bottom:5px;display:block}#_form_569_._dark ._form-branding{color:#333}#_form_569_._dark ._form-branding ._logo{background-image:url("https://d226aj4ao1t61q.cloudfront.net/jftq2c8s_aclogo_dk.png")}#_form_569_ ._form_element{position:relative;margin-bottom:10px;max-width:100%}#_form_569_ ._form_element *{font-size:14px}#_form_569_ ._form_element._clear{clear:both;width:100%;float:none}#_form_569_ ._form_element._clear:after{clear:left}#_form_569_ ._form_element :is(textarea, select, input[type="text"], input[type="date"], input[type="phone"], input[type="email"]),#_form_569_ ._form-element :is(textarea, select, input[type="text"], input[type="date"], input[type="phone"], input[type="email"]){background:white;color:#142341 !important;border-top:1px solid #cccccc;border-left:1px solid #cccccc;border-right:1px solid #cccccc;border-bottom:1px solid #cccccc;border-radius:0px}#_form_569_ ._form_element input[type="text"],#_form_569_ ._form_element input[type="date"],#_form_569_ ._form_element select,#_form_569_ ._form_element textarea:not(.g-recaptcha-response){display:block;width:100%;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;font-family:inherit}#_form_569_ ._field-wrapper{position:relative}#_form_569_ ._inline-style{float:left}#_form_569_ ._inline-style input[type="text"]{width:150px}#_form_569_ ._inline-style:not(._clear){margin-right:20px}#_form_569_ ._form_element img._form-image{max-width:100%}#_form_569_ ._form_element ._form-fieldset{border:0;padding:0.01em 0 0 0;margin:0;min-width:0}#_form_569_ ._clear-element{clear:left}#_form_569_ ._full_width{width:100%}#_form_569_ ._form_full_field{display:block;width:100%;margin-bottom:10px}#_form_569_ input[type="text"]._has_error,#_form_569_ textarea._has_error{border:#F37C7B 1px solid}#_form_569_ input[type="checkbox"]._has_error{outline:#F37C7B 1px solid}#_form_569_ ._show_be_error{float:left}#_form_569_ ._error{display:block;position:absolute;font-size:14px;z-index:10000001}#_form_569_ ._error._above{padding-bottom:4px;bottom:39px;right:0}#_form_569_ ._error._below{padding-top:8px;top:100%;right:0}#_form_569_ ._error._above ._error-arrow{bottom:-4px;right:15px;border-left:8px solid transparent;border-right:8px solid transparent;border-top:8px solid #FFDDDD}#_form_569_ ._error._below ._error-arrow{top:0;right:15px;border-left:8px solid transparent;border-right:8px solid transparent;border-bottom:8px solid #FFDDDD}#_form_569_ ._error-inner{padding:12px 12px 12px 36px;background-color:#FFDDDD;background-image:url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8ZM9 3V9H7V3H9ZM9 13V11H7V13H9Z' fill='%23CA0000'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:12px center;font-size:14px;font-family:arial, sans-serif;font-weight:600;line-height:16px;color:#000;text-align:center;text-decoration:none;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;box-shadow:0 1px 4px rgba(31, 33, 41, 0.298295)}#_form_569_ ._error-inner._form_error{margin-bottom:5px;text-align:left}#_form_569_ ._button-wrapper ._error-inner._form_error{position:static}#_form_569_ ._error-inner._no_arrow{margin-bottom:10px}#_form_569_ ._error-arrow{position:absolute;width:0;height:0}#_form_569_ ._error-html{margin-bottom:10px}#_form_569_ input[type="text"].datetime_date{width:69%;display:inline}#_form_569_ select.datetime_time{width:29%;display:inline;height:32px}#_form_569_ input[type="date"].datetime_date{width:69%;display:inline-flex}#_form_569_ input[type="time"].datetime_time{width:29%;display:inline-flex}#_form_569_ ._form-title,#_form_569_ ._html-code :is(h1, h2, h3, h4, h5, h6){font-family:sans-serif;font-size:24px;font-weight:400;color:black}#_form_569_{position:relative;text-align:left;margin:25px auto 0;padding-top:20px;padding-right:20px;padding-bottom:20px;padding-left:20px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;background:white !important;border-top:0px solid #b0b0b0 !important;border-right:0px solid #b0b0b0 !important;border-bottom:0px solid #b0b0b0 !important;border-left:0px solid #b0b0b0 !important;max-width:500px;-moz-border-radius:0px !important;-webkit-border-radius:0px !important;border-radius:0px !important;color:#000000}#_form_569_ .field-required{color:#FF0000}#_form_569_ ._marketing-by{display:none}
+    </style>
+    <style>
+      #_form_569_ { background: transparent !important; border: none !important; padding: 0 !important; margin: 0 !important; max-width: 100% !important; }
+      #_form_569_ ._form-label, #_form_569_ ._form_element ._form-label { color: rgba(255,255,255,0.85) !important; }
+      #_form_569_ ._form_element :is(input[type="text"], input[type="tel"]) { background: rgba(255,255,255,0.07) !important; color: #fff !important; border: 1px solid rgba(255,255,255,0.2) !important; border-radius: 4px !important; }
+      #_form_569_ input::placeholder { color: rgba(255,255,255,0.35) !important; }
+      #_form_569_ ._submit { background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%) !important; border-radius: 999px !important; color: #0d2420 !important; font-family: 'Montserrat', sans-serif !important; font-size: 12px !important; font-weight: 700 !important; letter-spacing: 2px !important; text-transform: uppercase !important; width: 100%; animation: pulse-btn 2.2s ease-in-out infinite; box-shadow: 0 0 18px rgba(212,160,144,0.55), 0 6px 24px rgba(160,104,90,0.45) !important; }
+      #_form_569_ ._form-thank-you { color: #fff; }
+      #_form_569_ ._form-branding { display: none; }
+      #_form_569_ .field-required { color: var(--rose); }
+    </style>
+    <form method="POST" action="https://marina232.activehosted.com/proc.php" id="_form_569_" class="_form _form_569 _inline-form  _dark" novalidate data-styles-version="5">
+      <input type="hidden" name="u" value="569" />
+      <input type="hidden" name="f" value="569" />
+      <input type="hidden" name="s" />
+      <input type="hidden" name="c" value="0" />
+      <input type="hidden" name="m" value="0" />
+      <input type="hidden" name="act" value="sub" />
+      <input type="hidden" name="v" value="2" />
+      <input type="hidden" name="or" value="5cf72fe5-05f4-42b9-9d19-5d3989fa8126" />
+      <div class="_form-content">
+        <div class="_form_element _x85333295 _full_width">
+          <label for="firstname" class="_form-label">Vorname<span class="field-required">*</span></label>
+          <div class="_field-wrapper">
+            <input type="text" id="firstname" name="firstname" placeholder="Tippen Sie Ihren Vornamen ein." required/>
+          </div>
+        </div>
+        <div class="_form_element _field_email _full_width">
+          <label for="email" class="_form-label">E-Mail<span class="field-required">*</span></label>
+          <div class="_field-wrapper">
+            <input type="text" id="email" name="email" placeholder="Tippen Sie Ihre E-Mail ein." required/>
+          </div>
+        </div>
+        <div class="_form_element _x51767879 _full_width">
+          <label for="phone" class="_form-label">Telefon<span class="field-required">*</span></label>
+          <div class="_field-wrapper">
+            <input type="text" id="phone" name="phone" placeholder="Tippen Sie Ihre Telefonnummer ein." required/>
+          </div>
+        </div>
+        <input type="hidden" id="field[220]" name="field[220]" value="" />
+        <input type="hidden" id="field[219]" name="field[219]" value="" />
+        <input type="hidden" id="field[218]" name="field[218]" value="" />
+        <input type="hidden" id="field[217]" name="field[217]" value="" />
+        <input type="hidden" id="field[221]" name="field[221]" value="" />
+        <div class="_button-wrapper _full_width">
+          <button id="_form_569_submit" class="_submit" type="submit">Für 0€ anmelden!</button>
+        </div>
+        <div class="_clear-element"></div>
+      </div>
+      <div class="_form-thank-you" style="display:none;"></div>
+    </form>
+    <script>
+window.cfields = {"220":"utm_content","219":"utm_campaign","218":"utm_medium","217":"utm_source","221":"utm_term"};
+window._show_thank_you = function(id, message, trackcmp_url, email) {
+    var form = document.getElementById('_form_' + id + '_'), thank_you = form.querySelector('._form-thank-you');
+    form.querySelector('._form-content').style.display = 'none';
+    thank_you.innerHTML = message;
+    thank_you.style.display = 'block';
+    const vgoAlias = typeof visitorGlobalObjectAlias === 'undefined' ? 'vgo' : visitorGlobalObjectAlias;
+    var visitorObject = window[vgoAlias];
+    if (email && typeof visitorObject !== 'undefined') { visitorObject('setEmail', email); visitorObject('update'); }
+    if (typeof window._form_callback !== 'undefined') window._form_callback(id);
+    thank_you.setAttribute('tabindex', '-1');
+    thank_you.focus();
+};
+window._show_error = function(id, message, html) {
+    var form = document.getElementById('_form_' + id + '_'),
+        err = document.createElement('div'),
+        button = form.querySelector('button[type="submit"]'),
+        old_error = form.querySelector('._form_error');
+    if (old_error) old_error.parentNode.removeChild(old_error);
+    err.innerHTML = message;
+    err.className = '_error-inner _form_error _no_arrow';
+    var wrapper = document.createElement('div');
+    wrapper.className = '_form-inner _show_be_error';
+    wrapper.appendChild(err);
+    button.parentNode.insertBefore(wrapper, button);
+    var submitButton = form.querySelector('[id^="_form"][id$="_submit"]');
+    submitButton.disabled = false;
+    submitButton.classList.remove('processing');
+    if (html) { var div = document.createElement('div'); div.className = '_error-html'; div.innerHTML = html; err.appendChild(div); }
+};
+window._load_script = function(url, callback, isSubmit) {
+    var head = document.querySelector('head'), script = document.createElement('script'), r = false;
+    var submitButton = document.querySelector('#_form_569_submit');
+    script.charset = 'utf-8';
+    script.src = url;
+    if (callback) {
+        script.onload = script.onreadystatechange = function() {
+            if (!r && (!this.readyState || this.readyState == 'complete')) { r = true; callback(); }
+        };
+    }
+    script.onerror = function() {
+        if (isSubmit) {
+            _show_error("569", "Ihre Übermittlung konnte nicht gesendet werden. Bitte versuchen Sie es erneut.");
+            submitButton.disabled = false;
+            submitButton.classList.remove('processing');
+        }
+    }
+    head.appendChild(script);
+};
+(function() {
+    var iti;
+    if (window.location.search.search("excludeform") !== -1) return false;
+    var getCookie = function(name) { var match = document.cookie.match(new RegExp('(^|; )' + name + '=([^;]+)')); return match ? match[2] : localStorage.getItem(name); }
+    var setCookie = function(name, value) { var now = new Date(); var time = now.getTime(); var expireTime = time + 1000 * 60 * 60 * 24 * 365; now.setTime(expireTime); document.cookie = name + '=' + value + '; expires=' + now + ';path=/; Secure; SameSite=Lax;'; localStorage.setItem(name, value); }
+    var addEvent = function(element, event, func) {
+        if (element.addEventListener) { element.addEventListener(event, func); }
+        else { var oldFunc = element['on' + event]; element['on' + event] = function() { oldFunc.apply(this, arguments); func.apply(this, arguments); }; }
+    }
+    var _removed = false;
+    var form_to_submit = document.getElementById('_form_569_');
+    var allInputs = form_to_submit.querySelectorAll('input, select, textarea'), tooltips = [], submitted = false;
+
+    var getUrlParam = function(name) {
+        if (name.toLowerCase() !== 'email') { var params = new URLSearchParams(window.location.search); return params.get(name) || false; }
+        var qString = window.location.search;
+        if (!qString) { return false; }
+        var parameters = qString.substr(1).split('&');
+        for (var i = 0; i < parameters.length; i++) { var parameter = parameters[i].split('='); if (parameter[0].toLowerCase() === 'email') { return parameter[1] === undefined ? true : decodeURIComponent(parameter[1]); } }
+        return false;
+    };
+
+    for (var i = 0; i < allInputs.length; i++) {
+        var regexStr = "field\\[(\\d+)\\]";
+        var results = new RegExp(regexStr).exec(allInputs[i].name);
+        if (results != undefined) { allInputs[i].dataset.name = window.cfields[results[1]]; }
+        else { allInputs[i].dataset.name = allInputs[i].name; }
+        var fieldVal = getUrlParam(allInputs[i].dataset.name);
+        if (fieldVal) {
+            if (allInputs[i].dataset.autofill === "false") { continue; }
+            if (allInputs[i].type == "radio" || allInputs[i].type == "checkbox") { if (allInputs[i].value == fieldVal) { allInputs[i].checked = true; } }
+            else { allInputs[i].value = fieldVal; }
+        }
+    }
+
+    var remove_tooltips = function() { for (var i = 0; i < tooltips.length; i++) { tooltips[i].tip.parentNode.removeChild(tooltips[i].tip); } tooltips = []; };
+    var remove_tooltip = function(elem) { for (var i = 0; i < tooltips.length; i++) { if (tooltips[i].elem === elem) { tooltips[i].tip.parentNode.removeChild(tooltips[i].tip); tooltips.splice(i, 1); return; } } };
+    var create_tooltip = function(elem, text) {
+        var tooltip = document.createElement('div'), arrow = document.createElement('div'), inner = document.createElement('div'), new_tooltip = {};
+        tooltip.id = elem.id + '-error';
+        tooltip.setAttribute('role', 'alert');
+        if (elem.type != 'radio' && (elem.type != 'checkbox' || elem.name === 'sms_consent')) {
+            tooltip.className = '_error'; arrow.className = '_error-arrow'; inner.className = '_error-inner'; inner.innerHTML = text;
+            tooltip.appendChild(arrow); tooltip.appendChild(inner); elem.parentNode.appendChild(tooltip);
+        } else { tooltip.className = '_error-inner _no_arrow'; tooltip.innerHTML = text; elem.parentNode.insertBefore(tooltip, elem); new_tooltip.no_arrow = true; }
+        new_tooltip.tip = tooltip; new_tooltip.elem = elem; tooltips.push(new_tooltip); return new_tooltip;
+    };
+    var resize_tooltip = function(tooltip) {
+        var rect = tooltip.elem.getBoundingClientRect();
+        var doc = document.documentElement, scrollPosition = rect.top - ((window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0));
+        if (scrollPosition < 40) { tooltip.tip.className = tooltip.tip.className.replace(/ ?(_above|_below) ?/g, '') + ' _below'; }
+        else { tooltip.tip.className = tooltip.tip.className.replace(/ ?(_above|_below) ?/g, '') + ' _above'; }
+    };
+    var resize_tooltips = function() { if (_removed) return; for (var i = 0; i < tooltips.length; i++) { if (!tooltips[i].no_arrow) resize_tooltip(tooltips[i]); } };
+    var validate_field = function(elem, remove) {
+        var tooltip = null, value = elem.value, no_error = true;
+        remove ? remove_tooltip(elem) : false;
+        elem.removeAttribute('aria-invalid'); elem.removeAttribute('aria-describedby');
+        if (elem.type != 'checkbox') elem.className = elem.className.replace(/ ?_has_error ?/g, '');
+        if (elem.getAttribute('required') !== null) {
+            if (value === undefined || value === null || value === '') {
+                elem.className = elem.className + ' _has_error'; no_error = false;
+                tooltip = create_tooltip(elem, "Bitte füllen Sie das markierte Pflichtfeld aus.");
+            }
+        }
+        if (no_error && elem.name == 'email') {
+            if (!value.match(/^[\+_a-z0-9-'&=]+(\.[\+_a-z0-9-']+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,})$/i)) {
+                elem.className = elem.className + ' _has_error'; no_error = false;
+                tooltip = create_tooltip(elem, "Geben Sie eine gültige E-Mail-Adresse ein.");
+            }
+        }
+        if (no_error && (elem.id == 'phone')) {
+            if (elem.value.trim() && typeof iti != 'undefined' && !iti.isValidNumber()) {
+                elem.className = elem.className + ' _has_error'; no_error = false;
+                tooltip = create_tooltip(elem, "Geben Sie eine gültige Telefonnummer ein.");
+            }
+        }
+        tooltip ? resize_tooltip(tooltip) : false;
+        if (!no_error && elem.hasAttribute('id')) { elem.setAttribute('aria-invalid', 'true'); elem.setAttribute('aria-describedby', elem.id + '-error'); }
+        return no_error;
+    };
+    var needs_validate = function(el) {
+        if (el.getAttribute('required') !== null) { return true; }
+        if ((el.name === 'email' || el.name === 'phone') && el.value !== "") { return true; }
+        return false;
+    };
+    var validate_form = function(e) {
+        var err = form_to_submit.querySelector('._form_error'), no_error = true;
+        if (!submitted) {
+            submitted = true;
+            for (var i = 0, len = allInputs.length; i < len; i++) {
+                var input = allInputs[i];
+                if (needs_validate(input)) {
+                    if (input.type == 'text' || input.type == 'tel') {
+                        addEvent(input, 'blur', function() { this.value = this.value.trim(); validate_field(this, true); });
+                        addEvent(input, 'input', function() { validate_field(this, true); });
+                    }
+                }
+            }
+        }
+        remove_tooltips();
+        for (var i = 0, len = allInputs.length; i < len; i++) {
+            var elem = allInputs[i];
+            if (needs_validate(elem)) { if (elem.tagName.toLowerCase() !== "select") { elem.value = elem.value.trim(); } validate_field(elem) ? true : no_error = false; }
+        }
+        if (!no_error && e) { e.preventDefault(); }
+        if (!no_error) { const firstFocusableError = form_to_submit.querySelector('._has_error:not([disabled])'); if (firstFocusableError && typeof firstFocusableError.focus === 'function') { firstFocusableError.focus(); } }
+        resize_tooltips();
+        return no_error;
+    };
+    addEvent(window, 'resize', resize_tooltips);
+    addEvent(window, 'scroll', resize_tooltips);
+    var initializePhoneInput = function(inputPhone) {
+        const stylesheetLink = document.createElement('link');
+        stylesheetLink.rel = 'stylesheet';
+        stylesheetLink.href = 'https://cdn.jsdelivr.net/npm/intl-tel-input@25.2.0/build/css/intlTelInput.css';
+        document.head.appendChild(stylesheetLink);
+        window._load_script('https://cdn.jsdelivr.net/npm/intl-tel-input@25.2.0/build/js/intlTelInput.min.js', function() {
+            inputPhone.setAttribute("name", "phone-iti");
+            iti = intlTelInput(inputPhone, {
+                loadUtils: () => import('https://cdn.jsdelivr.net/npm/intl-tel-input@25.2.0/build/js/utils.js'),
+                hiddenInput: (telInputName) => ({ phone: 'phone' }),
+                separateDialCode: true,
+                autoPlaceholder: 'aggressive',
+                initialCountry: "de",
+            });
+        }, false);
+    }
+    var inputPhone = form_to_submit.querySelector('input[name="phone"]');
+    if (inputPhone) { initializePhoneInput(inputPhone); }
+    var _form_serialize = function(form){if(!form||form.nodeName!=="FORM"){return}var i,j,q=[];for(i=0;i<form.elements.length;i++){if(form.elements[i].name===""){continue}switch(form.elements[i].nodeName){case"INPUT":switch(form.elements[i].type){case"tel":q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].previousSibling.querySelector('div.iti__selected-dial-code').innerText)+encodeURIComponent(" ")+encodeURIComponent(form.elements[i].value));break;case"text":case"hidden":q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value));break;case"checkbox":case"radio":if(form.elements[i].checked){q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value))}break}break;case"TEXTAREA":q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value));break;case"SELECT":switch(form.elements[i].type){case"select-one":q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value));break;case"select-multiple":for(j=0;j<form.elements[i].options.length;j++){if(form.elements[i].options[j].selected){q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].options[j].value))}}break}break}}}return q.join("&")};
+    var form_submit = function(e) {
+        e.preventDefault();
+        if (form_to_submit.querySelector('input[name="phone"]') && typeof iti != 'undefined') {
+            form_to_submit.querySelector('input[name="phone"]').value = iti.getNumber();
+        }
+        if (validate_form()) {
+            var submitButton = e.target.querySelector('#_form_569_submit');
+            submitButton.disabled = true;
+            submitButton.classList.add('processing');
+            var serialized = _form_serialize(document.getElementById('_form_569_')).replace(/%0A/g, '\\n');
+            var err = form_to_submit.querySelector('._form_error');
+            err ? err.parentNode.removeChild(err) : false;
+            _load_script('https://marina232.activehosted.com/proc.php?' + serialized + '&jsonp=true', null, true);
+        }
+        return false;
+    };
+    addEvent(form_to_submit, 'submit', form_submit);
+})();
+    </script>
+  <script>
+  (function() {
+    var p = new URLSearchParams(window.location.search);
+    var m = {'utm_source':'field[217]','utm_medium':'field[218]','utm_campaign':'field[219]','utm_content':'field[220]','utm_term':'field[221]'};
+    function fill() {
+      for (var k in m) {
+        var v = p.get(k);
+        var el = document.getElementById(m[k]);
+        if (v && el) el.value = v;
+      }
+    }
+    fill();
+    var form = document.getElementById('_form_569_');
+    if (form) form.addEventListener('submit', fill, true);
+  })();
+  </script>
+  </div>
+</div>
+
+<!-- BEKANNT AUS -->
+<div class="logos-section">
+  <p class="logos-kicker">Bekannt aus:</p>
+  <div class="logos-track-wrap">
+    <div class="logos-track">
+      <img src="Bilder/Stern-Logo.png" alt="Stern">
+      <img src="Bilder/handelsblatt-logo-1.png" alt="Handelsblatt">
+      <img src="Bilder/Wirschafwoche.png" alt="WirtschaftsWoche">
+      <img src="Bilder/Focus-Money-Logo-neue-masse.png" alt="Focus Money">
+      <img src="Bilder/320px-Womenshealthlogo.svg.png" alt="Women's Health">
+      <img src="Bilder/Logo_Bild-de.svg-1.png" alt="BILD">
+      <!-- Duplikat für nahtlosen Loop -->
+      <img src="Bilder/Stern-Logo.png" alt="Stern">
+      <img src="Bilder/handelsblatt-logo-1.png" alt="Handelsblatt">
+      <img src="Bilder/Wirschafwoche.png" alt="WirtschaftsWoche">
+      <img src="Bilder/Focus-Money-Logo-neue-masse.png" alt="Focus Money">
+      <img src="Bilder/320px-Womenshealthlogo.svg.png" alt="Women's Health">
+      <img src="Bilder/Logo_Bild-de.svg-1.png" alt="BILD">
+    </div>
+  </div>
+</div>
+
+<!-- VIDEO -->
+<div style="background: var(--teal-dark);">
+<div style="max-width:900px; margin:0 auto; padding:48px 40px;">
+  <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden;">
+    <iframe title="vimeo-player" src="https://player.vimeo.com/video/1206720731?h=4a44dcaaf1" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+  </div>
+  <div style="text-align:center; margin-top:32px;">
+    <button class="btn-cta" onclick="openModal()">Yes, ich bin dabei</button>
+  </div>
+</div>
+</div>
+
+<!-- MAIN TEXT -->
+<div class="text-section">
+  <div class="text-inner">
+    <p>Du funktionierst, leistest und hältst alles und jeden zusammen: deine Familie, dein Business, deine Kunden und dann sind da noch die überdimensional großen Erwartungen an dich selbst.</p>
+    <p>Und doch fühlst du dich nur wie eine Marionette, jeder zieht an deinen Seilen, während du alles gibst, um endlich dein <strong>nächstes Umsatz-Level</strong> zu <strong>erreichen</strong>. Am Ende des Tages liegst du dann im Bett mit dem erdrückenden Gefühl: <em style="font-style:italic;">Egal was ich tue, es reicht immer noch nicht und ist nicht gut genug.</em></p>
+    <p>Du suchst verzweifelt weiter, weil du eine Kämpferin bist – <strong>„Aufgeben ist nicht!"</strong> Also probierst du: neue Strategien, die dich zu dieser <strong>Freiheit</strong> führen sollen, für die du mal losgegangen bist, um am Ende wieder frustriert festzustellen: <em style="font-style:italic;">Es hat wieder nicht gereicht.</em></p>
+    <div class="quote-block">
+      <p>Damit ist jetzt SCHLUSS!</p>
+    </div>
+    <p>Denn das Ziel von <strong>ENERGY for MILLION</strong> ist es, dass du dein <strong>erfolgreiches Business</strong> nach deinen Regeln aufbaust. Ohne Kampf, ohne ständig funktionieren zu müssen und ohne den Druck es allen ständig recht zu machen, in der Energie, die dich <strong>magnetisch</strong> für Kunden und <strong>Geld</strong> macht.</p>
+    <p>In dieser Money-Masterclass holst du dir <strong>endlich</strong> die <strong>Kraft &amp; Energie</strong> zurück, die dafür notwendig ist, um dein Business <strong>erfolgreich</strong>(er) zu führen, dein <strong>Vermögen</strong> aufzubauen und <strong>endlich</strong> das langersehnte <strong>freie Leben</strong> zu leben, für das du in deiner Selbstständigkeit angetreten bist.</p>
+    <div class="cta-row">
+      <button class="btn-cta" onclick="openModal()"><span class="btn-desktop">Hier klicken und deine Energy zurückholen</span><span class="btn-mobile">Hier Energy zurückholen</span></button>
+    </div>
+  </div>
+</div>
+
+<!-- SCREENSHOT SLIDER -->
+<section class="screenshots-section">
+  <div class="screenshots-inner">
+    <h2 style="text-align:center; font-family:'Cormorant Garamond',serif; font-size:clamp(28px,3.5vw,48px); font-weight:600; color:#fff; margin-bottom:40px;">Was Frauen über Marina sagen</h2>
+    <div class="sl-wrap">
+      <button class="sl-arrow sl-prev" id="slPrev" aria-label="Zurück">&#8249;</button>
+      <button class="sl-arrow sl-next" id="slNext" aria-label="Weiter">&#8250;</button>
+      <div class="sl-viewport" id="slViewport">
+        <div class="sl-track" id="slTrack">
+          <div class="sl-slide"><img src="Testimonials/Denise.PNG" alt="Testimonial Denise"></div>
+          <div class="sl-slide"><img src="Testimonials/Elena.jpg" alt="Testimonial Elena"></div>
+          <div class="sl-slide"><img src="Testimonials/Leonie.PNG" alt="Testimonial Leonie"></div>
+          <div class="sl-slide"><img src="Testimonials/Marina.jpg" alt="Testimonial Marina"></div>
+          <div class="sl-slide"><img src="Testimonials/Ursula.png" alt="Testimonial Ursula"></div>
+          <div class="sl-slide"><img src="Testimonials/Yvonne 2.png" alt="Testimonial Yvonne"></div>
+          <div class="sl-slide"><img src="Testimonials/Yvonne.png" alt="Testimonial Yvonne"></div>
+        </div>
+      </div>
+      <div class="sl-dots" id="slDots"></div>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section class="benefits-section">
+  <div class="benefits-inner">
+    <div class="benefits-header">
+      <h2>Wie wir deine Energie für <em><strong>Millionen</strong></em> freisetzen</h2>
+    </div>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <div class="benefit-num">1</div>
+        <div class="benefit-body">
+          <p>Du erkennst die unsichtbaren Muster, die dich daran hindern, <strong>mehr Geld</strong> zu verdienen und warum alleine Anstrengung und Disziplin nicht ausreichen. Du löst auf, was dein <strong>Wachstum</strong> bisher gedeckelt hat.</p>
+        </div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-num">2</div>
+        <div class="benefit-body">
+          <p>Du verstehst, was wirklich über deinen <strong>Erfolg</strong> entscheidet, das dir so bisher noch niemand gesagt hat und wie du dadurch endlich aus dem Kampfmodus aussteigst.</p>
+        </div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-num">3</div>
+        <div class="benefit-body">
+          <p>Du erkennst, warum du dich seit Jahren unbewusst zurückhältst, anpasst und vergleichst. Schluss mit <strong>„genau richtig"</strong> für alle sein, denn genau das raubt dir deine <strong>Energie &amp; Kraft</strong>.</p>
+        </div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-num">4</div>
+        <div class="benefit-body">
+          <p>Du lebst endlich dein <strong>ungezähmtes, wahres Selbst</strong> – die, die du schon immer sein wolltest – um genau damit noch erfolgreicher zu werden als du es dir vorstellen kannst.</p>
+        </div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-num">5</div>
+        <div class="benefit-body">
+          <p>Du wandelst den Zwang, ständig funktionieren zu müssen, in eine <strong>Energie</strong>, die dich <strong>anziehend</strong> für <strong>Kunden</strong> und <strong>Geld</strong> macht, statt dich selbst zu verraten und auszubrennen.</p>
+        </div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-num">6</div>
+        <div class="benefit-body">
+          <p>Du entwickelst deine eigene Definition von <strong>Erfolg</strong> und <strong>Freiheit</strong>, die nicht mehr von Vergleich, Anpassung oder fremden Regeln bestimmt wird und entfachst dadurch die <strong>Energie</strong>, die <strong>Millionen kreiert</strong>.</p>
+        </div>
+      </div>
+      <div class="benefit-card" style="grid-column: 1 / -1;">
+        <div class="benefit-num">7</div>
+        <div class="benefit-body">
+          <p>Am Ende der Money-Masterclass nehme ich mir noch Zeit dafür, all deine Fragen zu beantworten. Also halte deinen Kalender lange genug frei.</p>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;">
+      <button class="btn-cta" onclick="openModal()"><span class="btn-desktop">HOL DIR DEINE ENERGY FOR MILLION</span><span class="btn-mobile">HOL DIR DEINE ENERGY FOR MILLION</span></button>
+    </div>
+  </div>
+</section>
+
+<!-- PERFECT FOR YOU -->
+<!-- WAS ERWARTET DICH -->
+<section class="how-section">
+  <div class="how-inner">
+    <h2 style="text-align:center; color:#fff; margin-bottom:16px; white-space:nowrap;">Wiedergeburt als du <em style="color:#fff;">SELBST</em></h2>
+    <p class="how-intro">Es erwartet dich nicht nur ein Live-Event, sondern deine <strong>Wiedergeburt</strong> als <strong>ungezähmte Unternehmerin</strong>, die bedingungslos für ihr erfolgreiches, freies Business einsteht.</p>
+    <div class="journey-cards">
+
+      <div class="journey-card">
+        <div class="journey-card-glow"></div>
+        <span class="journey-step-number">01</span>
+        <h3 class="journey-card-title">Telegram Community</h3>
+        <p class="journey-card-text">Erhalte Impulse von Marina, die es nirgendwo sonst gibt. Frauen, die live anfangen, ihre Muster zu durchbrechen. Und dein erster Schritt in einem geschützten Raum, raus aus dem „alles alleine tragen zu müssen".</p>
+        <p class="journey-card-hint">Sei dabei, bevor du etwas verpasst, das du nicht mal siehst.</p>
+      </div>
+
+      <div class="journey-card">
+        <div class="journey-card-glow"></div>
+        <span class="journey-step-number">02</span>
+        <h3 class="journey-card-title">Live-Masterclass</h3>
+        <p class="journey-card-text">Am <strong style="color:#0a3828;">13. August 2026 um 11:00 Uhr</strong> erlebst du live, was es wirklich braucht, um deine Energie und Kraft für die Millionen freizusetzen.</p>
+        <p class="journey-card-hint">2 Stunden, die alles verändern.</p>
+      </div>
+
+      <div class="journey-card">
+        <div class="journey-card-glow"></div>
+        <span class="journey-step-number">03</span>
+        <h3 class="journey-card-title">Breakthrough Coaching</h3>
+        <p class="journey-card-text">Im Anschluss bekommst du dein persönliches Breakthrough Coaching, damit du das Gelernte direkt umsetzen kannst.</p>
+        <p class="journey-card-hint">Endlich deinen ungezähmten Erfolg leben – als du selbst.</p>
+      </div>
+
+    </div>
+    <div style="text-align:center;">
+      <button class="btn-cta on-dark" onclick="openModal()">Ich bin für 0 € dabei</button>
+    </div>
+  </div>
+</section>
+
+<!-- FÜR DICH -->
+<section class="fuer-dich-section">
+  <div class="fuer-dich-inner">
+    <h2>Dieses Webinar ist <em>genau für dich,</em> wenn …</h2>
+    <div class="fuer-dich-stack">
+      <div class="fuer-dich-box ja">
+        <ul class="fuer-dich-list">
+          <li>… du spürst, dass du keine Lust mehr hast, immer erschöpft zu funktionieren, sondern wieder <strong>lebendig</strong> und <strong>energievoll</strong> sein willst.</li>
+          <li>… du müde bist, ständig neue Strategien auszuprobieren, ohne dass sich wirklich <strong>etwas verändert.</strong></li>
+          <li>… du bereit bist, an den <strong>Ursprung</strong> zu gehen, statt weiter an der Oberfläche zu kratzen.</li>
+          <li>… du dein Business als <strong>Ausdruck deiner Selbst</strong> leben willst, nicht als Marionette von außen fremdbestimmt.</li>
+          <li>… <strong>2026 dein Jahr</strong> werden soll, in dem du endlich den ewigen Kampf aufgibst und magnetisch für Kunden und Geld wirst.</li>
+        </ul>
+      </div>
+      <div class="fuer-dich-divider">Dieses Webinar ist <em>nicht</em> für dich, wenn …</div>
+      <div class="fuer-dich-box nein">
+        <ul class="fuer-dich-list">
+          <li>du nach weiteren gratis Strategien, Taktiken oder dem nächsten Funnel suchst.</li>
+          <li>du die Einstellung hast, du weißt schon alles und es gibt niemanden, der dir noch helfen könnte.</li>
+          <li>du von einem Webinar zum nächsten hüpfst, ohne wirklich bereit zu sein, etwas zu ändern.</li>
+          <li>du dich anmeldest, aber nicht bereit bist, diesen Termin wirklich einzuplanen und live dabei zu sein.</li>
+          <li>du nicht bereit bist, deine alten Geschichten loszulassen und stattdessen auf eine Fee wartest, die für dich alles löst.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BONUS -->
+<section class="bonus-section">
+  <div class="bonus-inner">
+    <h2>Dein exklusives <em>Geschenk!</em></h2>
+    <div class="bonus-gift-box">
+      <div class="bonus-gift-icon">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" width="52" height="52">
+          <defs>
+            <linearGradient id="rosegold-bow" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#a0685a"/>
+              <stop offset="25%" stop-color="#d4a090"/>
+              <stop offset="50%" stop-color="#f0ccc0"/>
+              <stop offset="75%" stop-color="#d4a090"/>
+              <stop offset="100%" stop-color="#a0685a"/>
+            </linearGradient>
+          </defs>
+          <rect x="6" y="20" width="36" height="24" rx="2" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
+          <rect x="4" y="14" width="40" height="8" rx="2" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
+          <line x1="24" y1="14" x2="24" y2="44" stroke="rgba(255,255,255,0.7)" stroke-width="1.5"/>
+          <path d="M24 14 C24 14 18 10 16 6 C15 3 17 1 19 2 C21 3 24 8 24 14Z" fill="url(#rosegold-bow)" opacity="0.95"/>
+          <path d="M24 14 C24 14 30 10 32 6 C33 3 31 1 29 2 C27 3 24 8 24 14Z" fill="url(#rosegold-bow)" opacity="0.95"/>
+        </svg>
+      </div>
+      <div class="bonus-gift-text">
+        <h3>The Energy Block Mirror</h3>
+        <p>Eine <strong>tiefenpsychologische Analyse</strong>, die dir schonungslos zeigt, wo deine Energie gerade blockiert ist & was dich von deinem nächsten <strong>Umsatz-Wachstum</strong> abhält. Nur für Live-Teilnehmerinnen.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials-section">
+  <div class="testimonials-inner">
+    <div class="section-header">
+      <h2>Das sagen unsere<br class="mobile-br"> begeisterten <em>Frauen</em></h2>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="stars">★ ★ ★ ★ ★</div>
+        <p class="testimonial-text">Das war ein mega Event! Es war intensiv, energiegeladen, motivierend und hat einfach Spaß gemacht. Marina hat einen tollen Überblick gegeben, auf was es ankommt, wenn man erfolgreich sein möchte. Verständlich, klar und nachvollziehbar. Inhaltlich war so unglaublich viel dabei: Mindset &amp; Strategie. Absolut überzeugend. Deswegen werde ich meinen Weg mit Feminess gehen.</p>
+        <p class="testimonial-author">Anja M.</p>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★ ★ ★ ★ ★</div>
+        <p class="testimonial-text">Ich liebe die Zusammenarbeit mit Marina so sehr. Durch sie hat sich so viel in meinem Unternehmen erleichtert. Ich arbeite viel weniger, hab viel mehr Umsatz, es fällt mir viel leichter. Ich mache monatlich 6-stellige Umsätze und bin Marina einfach unendlich dankbar.</p>
+        <p class="testimonial-author">Sigrid Aviana Waedt</p>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★ ★ ★ ★ ★</div>
+        <p class="testimonial-text">Es war unfassbar energetisch. Mit so vielen starken Powerfrauen. Ich habe viel über mich, meine tiefsten Wünsche und meine Blockaden gelernt. Ich habe so viele verschiedene Emotionen gespürt und es hat mich wach gerüttelt, etwas zu ändern. Nicht irgendwann, sondern jetzt. Ich bin so dankbar, dass ich dabei sein durfte.</p>
+        <p class="testimonial-author">Jana M.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPEAKER: MARINA -->
+<section class="speaker-section">
+  <div class="speaker-inner">
+    <div class="speaker-portrait">
+      <img src="Bilder/EE8A8D0F-D6B0-4B8C-9769-40B0A0B03634.jpg" alt="Marina Henze">
+      <h3>Marina Henze</h3>
+      <p class="role">CEO &amp; Gründerin · FEMINESS</p>
+    </div>
+    <div class="speaker-bio">
+      <h2 style="font-family:'Cormorant Garamond',serif; font-size:34px; font-weight:600; color:#fff; margin-bottom:24px;">Die Frau, die deine <em style="font-style:normal; font-weight:700; white-space:nowrap; background:linear-gradient(90deg,#d4a090 0%,#f0ccc0 50%,#d4a090 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">ENERGY for MILLION</em> freisetzt!</h2>
+      <p>Marina Henze ist <strong>Mentorin</strong> für <strong>Unternehmerinnen</strong>, die spüren: So wie bisher will ich nicht weitermachen.</p>
+      <p>Seit über <strong>20 Jahren</strong> begleitet sie Frauen aus Erschöpfung und Selbstaufopferung hinein in <strong>finanzielle Freiheit</strong> und selbstbestimmtes Wirken. Mehr als <strong>20.000 Frauen</strong> sind diesen Weg bereits mit ihr gegangen.</p>
+      <p>Als Unternehmerin mit <strong>Millionen-Umsätzen</strong> steht Marina für Business ohne <strong>Kampf.</strong> Klar, kraftvoll und frei.</p>
+      <p>Ihre Vision: Ein neues Unternehmerinnen-Zeitalter, in dem Frauen ihre <strong>volle Energie</strong> leben, verdienen und wirken, ohne sich dabei selbst zu verlieren.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="final-cta-inner">
+    <h2>Genug gescrollt – hol dir jetzt deinen <em>kostenfreien Platz</em></h2>
+    <div class="countdown-final">
+      <div class="countdown-item">
+        <span class="countdown-digits" id="f-days">00</span>
+        <span class="countdown-label">Tage</span>
+      </div>
+      <div class="countdown-item">
+        <span class="countdown-digits" id="f-hours">00</span>
+        <span class="countdown-label">Std</span>
+      </div>
+      <div class="countdown-item">
+        <span class="countdown-digits" id="f-minutes">00</span>
+        <span class="countdown-label">Min</span>
+      </div>
+      <div class="countdown-item">
+        <span class="countdown-digits" id="f-seconds">00</span>
+        <span class="countdown-label">Sek</span>
+      </div>
+    </div>
+    <button class="btn-cta" onclick="openModal()">Jetzt anmelden</button>
+    <p class="facebook-disclaimer">This site is not a part of the Facebook website or Facebook Inc. Additionally, This site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc.</p>
+  </div>
+</section>
+
+<!-- FLOATING CTA -->
+<button class="floating-cta" id="floatingCta" onclick="openModal()">Yes, ich bin dabei</button>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand"><img src="Bilder/Logo-rosegoldverlauf-rgb.png" alt="Feminess" style="height:36px; width:auto; mix-blend-mode:screen;"></div>
+    <div class="footer-links">
+      <a href="https://feminess.github.io/Datenschutz/">Datenschutzerklärung</a>
+      <a href="https://feminess.github.io/Impressum/">Impressum</a>
+    </div>
+    <p class="footer-copy">© 2026 FEMINESS – MARINA HENZE</p>
+  </div>
+</footer>
+
+<script>
+  /* ── UTM MESSAGE ── */
+  if (new URLSearchParams(window.location.search).get('utm_source') === 'tcc') {
+    document.getElementById('utm-message').style.display = 'block';
+  }
+
+  /* ── COUNTDOWN ── */
+  /* 13.08.2026 11:00 Uhr CEST = 09:00 UTC */
+  const target = new Date('2026-08-13T09:00:00Z');
+  const ids = [['h-days','h-hours','h-minutes','h-seconds'],['f-days','f-hours','f-minutes','f-seconds']];
+  function pad(n) { return String(n).padStart(2,'0'); }
+  function tick() {
+    const diff = target - new Date();
+    const d = diff > 0 ? Math.floor(diff/86400000) : 0;
+    const h = diff > 0 ? Math.floor((diff%86400000)/3600000) : 0;
+    const m = diff > 0 ? Math.floor((diff%3600000)/60000) : 0;
+    const s = diff > 0 ? Math.floor((diff%60000)/1000) : 0;
+    ids.forEach(([dEl,hEl,mEl,sEl]) => {
+      document.getElementById(dEl).textContent = pad(d);
+      document.getElementById(hEl).textContent = pad(h);
+      document.getElementById(mEl).textContent = pad(m);
+      document.getElementById(sEl).textContent = pad(s);
+    });
+  }
+  tick(); setInterval(tick, 1000);
+
+  /* ── MODAL ── */
+  const modal = document.getElementById('modal');
+  let exitShown = false;
+
+  function openModal() {
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal() {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+  function handleOverlayClick(e) {
+    if (e.target === modal) closeModal();
+  }
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeModal();
+  });
+
+  /* Floating CTA: show after scrolling past hero */
+  const floatingCta = document.getElementById('floatingCta');
+  const heroSection = document.querySelector('.hero');
+  const footerEl = document.querySelector('footer');
+  window.addEventListener('scroll', function() {
+    const heroBottom = heroSection ? heroSection.getBoundingClientRect().bottom : 600;
+    const footerTop = footerEl ? footerEl.getBoundingClientRect().top : Infinity;
+    if (heroBottom < 0 && footerTop > window.innerHeight) {
+      floatingCta.classList.add('is-visible');
+    } else {
+      floatingCta.classList.remove('is-visible');
+    }
+  }, { passive: true });
+
+  /* Exit Intent: fires when mouse leaves viewport at the top */
+  document.addEventListener('mouseleave', function(e) {
+    if (e.clientY < 10 && !exitShown && !modal.classList.contains('active')) {
+      exitShown = true;
+      openModal();
+    }
+  });
+</script>
+
+<script>
+/* ── SCREENSHOT SLIDER ── */
+window.addEventListener('load', function() {
+  const viewport = document.getElementById('slViewport');
+  const track    = document.getElementById('slTrack');
+  const dotsEl   = document.getElementById('slDots');
+  const prevBtn  = document.getElementById('slPrev');
+  const nextBtn  = document.getElementById('slNext');
+  if (!track) return;
+
+  const slides = Array.from(track.querySelectorAll('.sl-slide'));
+  const total  = slides.length;
+  const GAP    = 20;
+  let current  = 0;
+  let autoTimer;
+
+  /* build dots */
+  slides.forEach(function(_, i) {
+    const d = document.createElement('button');
+    d.className = 'sl-dot' + (i === 0 ? ' active' : '');
+    d.setAttribute('aria-label', 'Slide ' + (i + 1));
+    d.addEventListener('click', function() { goTo(i); resetAuto(); });
+    dotsEl.appendChild(d);
+  });
+
+  function getOffset(idx) {
+    const vw     = viewport.offsetWidth;
+    const slideW = slides[0].offsetWidth;
+    /* center active slide: shift right by (vw-slideW)/2, then left by idx steps */
+    return (vw - slideW) / 2 - idx * (slideW + GAP);
+  }
+
+  function goTo(idx) {
+    current = (idx + total) % total;
+    track.style.transform = 'translateX(' + getOffset(current) + 'px)';
+    dotsEl.querySelectorAll('.sl-dot').forEach(function(d, i) {
+      d.classList.toggle('active', i === current);
+    });
+  }
+
+  function resetAuto() {
+    clearInterval(autoTimer);
+    autoTimer = setInterval(function() { goTo(current + 1); }, 4500);
+  }
+
+  prevBtn.addEventListener('click', function() { goTo(current - 1); resetAuto(); });
+  nextBtn.addEventListener('click', function() { goTo(current + 1); resetAuto(); });
+
+  let touchStartX = 0;
+  viewport.addEventListener('touchstart', function(e) { touchStartX = e.touches[0].clientX; }, {passive:true});
+  viewport.addEventListener('touchend', function(e) {
+    const dx = e.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(dx) > 40) { goTo(current + (dx < 0 ? 1 : -1)); resetAuto(); }
+  }, {passive:true});
+
+  window.addEventListener('resize', function() { goTo(current); });
+
+  goTo(0);
+  resetAuto();
+});
+</script>
+</body>
+</html>
