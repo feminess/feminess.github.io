@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SK - Danke - Feminess</title>
+<link rel="icon" href="https://feminess.de/wp-content/uploads/cropped-favicon@2x-1-32x32.png" sizes="32x32">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NQMQT7QH');</script>
+<!-- End Google Tag Manager -->
+<style>
+  :root {
+    --teal:       #257c6c;
+    --teal-dark:  #1b5c50;
+    --teal-light: #f8f6f2;
+    --teal-pale:  #b8ddd8;
+    --rose:       #cf5a73;
+    --rose-light: #e8a0b0;
+    --sand:       #c2ab8d;
+    --black:      #070808;
+    --dark:       #0d2420;
+    --off-white:  #f8f6f2;
+    --cream:      #f0f5f4;
+    --beige:      #ddecea;
+    --warm-gray:  #5a7a74;
+    --ink:        #0a3828;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  em, i { font-style: normal; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    line-height: 1.75;
+    background: var(--off-white);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page-frame { display: flex; flex-direction: column; }
+
+  /* ── PROGRESS BAR (im Top-Banner-Stil des Guides) ── */
+  .progress-wrap {
+    width: 100%;
+    background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%);
+  }
+  .progress-inner { max-width: 1400px; margin: 0 auto; padding: 16px 33px; }
+  .progress-labels {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .progress-labels .left  { color: var(--dark); }
+  .progress-labels .right { color: var(--dark); }
+  .progress-track { height: 4px; border-radius: 999px; background: rgba(13,36,32,0.18); width: 100%; overflow: hidden; }
+  .progress-fill { height: 100%; width: 90%; border-radius: 999px; background: var(--dark); }
+
+  /* ── BLOCKS (alternating hell/dunkel) ── */
+  .block {
+    padding: 72px 33px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: var(--off-white);
+    border-bottom: 1px solid var(--beige);
+  }
+  .block.dark { background: var(--teal-dark); border-bottom: none; }
+
+  .block h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: clamp(28px, 4vw, 40px);
+    line-height: 1.25;
+    letter-spacing: -0.5px;
+    color: var(--ink);
+    margin-bottom: 24px;
+    max-width: 780px;
+  }
+  .block.dark h2 { color: #fff; }
+  .block h2 em { font-style: normal; font-weight: 600; color: inherit; }
+
+  .block .lead {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    line-height: 1.75;
+    color: var(--warm-gray);
+    max-width: 620px;
+    margin: 0 auto 32px;
+  }
+  .block.dark .lead { color: #fff; }
+  .block .lead strong { font-weight: 700; color: var(--ink); }
+  .block.dark .lead strong { color: #fff; }
+
+  .video-wrap {
+    width: 100%;
+    max-width: 680px;
+    margin: 0 auto 40px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.15);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+  }
+
+  /* ── SECTION LABEL (Schritt-Kicker) ── */
+  .step-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 20px;
+  }
+  .block.dark .step-kicker { color: var(--teal-light); }
+  .step-kicker::after { content: ''; display: block; width: 60px; height: 1px; background: currentColor; opacity: 0.5; }
+
+  .microtext {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    color: var(--warm-gray);
+    margin-top: 16px;
+  }
+  .block.dark .microtext { color: #fff; opacity: 0.85; }
+
+  /* ── BUTTONS: ein Typ, immer eine Pille ── */
+  .cal-buttons { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin: 8px auto 0; }
+  .cal-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%);
+    color: var(--dark);
+    text-decoration: none;
+    padding: 20px 40px;
+    border-radius: 999px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    animation: pulse-btn 2.2s ease-in-out infinite;
+    transition: opacity 0.2s ease;
+  }
+  .cal-btn:hover { opacity: 0.88; animation-play-state: paused; }
+  .cal-btn svg { width: 18px; height: 18px; flex-shrink: 0; }
+  .cal-btn-emoji { font-size: 16px; line-height: 1; flex-shrink: 0; }
+  @keyframes pulse-btn {
+    0%, 100% { transform: scale(1);     box-shadow: 0 6px 28px rgba(160,104,90,0.40); }
+    50%      { transform: scale(1.04);  box-shadow: 0 10px 36px rgba(160,104,90,0.58); }
+  }
+
+  /* ── FOOTER ── */
+  .site-footer {
+    background: #07291d;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 28px 40px;
+  }
+  .footer-logo img { max-width: 200px; display: block; mix-blend-mode: screen; }
+  .footer-links { display: flex; gap: 24px; list-style: none; }
+  .footer-links a {
+    color: #fff;
+    opacity: 0.7;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.2px;
+    transition: opacity 0.2s ease;
+  }
+  .footer-links a:hover { opacity: 1; text-decoration: underline; }
+  .footer-copyright {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    color: #fff;
+    opacity: 0.7;
+    text-align: center;
+    flex: 1;
+    min-width: 200px;
+  }
+
+  @media (max-width: 767px) {
+    .progress-inner { padding: 20px 18px; }
+    .progress-labels { font-size: 10px; letter-spacing: 2px; }
+    .block { padding: 48px 18px; }
+    .block .lead { font-size: 16px; margin-bottom: 26px; }
+    .cal-buttons { flex-direction: column; align-items: stretch; }
+    .cal-btn { width: 100%; padding: 16px 24px; font-size: 14px; letter-spacing: 1px; }
+    .site-footer { flex-direction: column; text-align: center; padding: 24px 20px; }
+    .footer-links { justify-content: center; }
+    .footer-logo img { max-width: 150px; }
+  }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NQMQT7QH"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="page-frame">
+
+  <!-- ── PROGRESS BAR ── -->
+  <div class="progress-wrap">
+    <div class="progress-inner">
+      <div class="progress-labels">
+        <span class="left">Nur noch ein Schritt</span>
+        <span class="right">100 %</span>
+      </div>
+      <div class="progress-track">
+        <div class="progress-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── INTRO / VIDEO (dunkel) ── -->
+  <section class="block dark">
+    <h2>Achtung!<br>Nur noch ein Schritt, um deine Anmeldung abzuschließen.</h2>
+
+    <p class="lead">
+      Schau dir kurz das Video an und folge den Schritten unten.
+    </p>
+
+    <div class="video-wrap">
+      <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1206729935?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="EFM DankeSeite"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+    </div>
+  </section>
+
+  <!-- ── SCHRITT 1: KALENDER (hell) ── -->
+  <section class="block">
+    <span class="step-kicker">Schritt 1</span>
+    <h2>Trage dir jetzt den Termin in deinen Kalender und tritt unserer exklusiven Telegram Community bei:</h2>
+
+    <p class="lead">
+      Klicke hier, um dir den Termin in den Kalender einzutragen. Wenn du LIVE dabei bist, erlebst du die volle Energie der Masterclass und kannst deine Fragen stellen - was in einer Aufzeichnung nicht möglich ist.
+    </p>
+
+    <p class="lead">
+      Die Masterclass findet am <strong>13. August</strong> von <strong>11 bis 13 Uhr</strong> statt.
+    </p>
+
+    <div class="cal-buttons">
+      <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Feminess%20Webinar%20%E2%80%93%20Energy%20for%20Million&dates=20260813T090000Z/20260813T110000Z&details=Dein%20Webinar-Termin%20mit%20Feminess.%20Den%20Zugangslink%20erh%C3%A4ltst%20du%20per%20E-Mail.&location=Online%20(Link%20per%20E-Mail)" target="_blank" rel="noopener" class="cal-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="4" width="18" height="18" rx="2"/>
+          <line x1="16" y1="2" x2="16" y2="6"/>
+          <line x1="8" y1="2" x2="8" y2="6"/>
+          <line x1="3" y1="10" x2="21" y2="10"/>
+        </svg>
+        Google Kalender
+      </a>
+      <a href="webinar-termin.ics" download class="cal-btn">
+        <span class="cal-btn-emoji" aria-hidden="true">📅</span>
+        Sonstige Kalender
+      </a>
+    </div>
+  </section>
+
+  <!-- ── SCHRITT 2: TELEGRAM (dunkel) ── -->
+  <section class="block dark">
+    <span class="step-kicker">Schritt 2</span>
+    <h2>Warte nicht auf das Webinar.<br>Fang jetzt an.</h2>
+
+    <p class="lead">
+      Du bekommst hier Impulse &amp; Dinge, die ich sonst nirgends teile. Nicht später. Nicht öffentlich. Jetzt. Hier.
+    </p>
+
+    <p class="lead">
+      Du wirst in diesem Raum bereits anfangen, deine Muster zu durchschauen und zu durchbrechen. Live. Während du vielleicht noch überlegst.
+    </p>
+
+    <p class="lead">
+      Und genau dieser eine Klick? Das ist schon der erste Schritt.
+    </p>
+
+    <p class="lead">
+      Raus aus dem Kopf, in dem du sonst allein bist. Rein in einen geschützten Raum, der dich trägt und in deine volle Energie bringt, ohne dass du dich erklären musst.
+    </p>
+
+    <div class="cal-buttons">
+      <a href="https://t.me/+jMPD3ni3hgo0YWU6" target="_blank" rel="noopener" class="cal-btn">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M21.05 3.16 2.7 10.3c-1.24.5-1.24 1.2-.23 1.5l4.7 1.47 1.8 5.5c.22.6.4.85.8.85.35 0 .5-.16.7-.35l1.9-1.85 4.75 3.5c.87.48 1.5.23 1.72-.8l3.12-14.7c.3-1.27-.48-1.85-1.31-1.55Zm-11.3 10.8-.4 4.2-1.6-4.9 9.4-8.5c.24-.2-.05-.32-.36-.13L8.1 12.3Z"/>
+        </svg>
+        Telegram Community beitreten
+      </a>
+    </div>
+
+    <p class="microtext">Komm rein. Bevor du wieder nur zuschaust.</p>
+  </section>
+
+  <!-- ── SCHRITT 3: UMFRAGE (hell) ── -->
+  <section class="block">
+    <span class="step-kicker">Schritt 3</span>
+    <h2>Fülle jetzt die Umfrage aus, damit wir das Webinar gezielt auf deine Wünsche und Herausforderungen anpassen können:</h2>
+
+    <div class="cal-buttons">
+      <a href="https://forms.gle/i2he8fLW3d3BBUAeA" target="_blank" rel="noopener" class="cal-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9 4h6a1 1 0 0 1 1 1v1H8V5a1 1 0 0 1 1-1Z"/>
+          <rect x="5" y="6" width="14" height="15" rx="2"/>
+          <line x1="9" y1="12" x2="15" y2="12"/>
+          <line x1="9" y1="16" x2="15" y2="16"/>
+        </svg>
+        Zur Umfrage
+      </a>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="site-footer">
+    <div class="footer-logo">
+      <img src="Bilder/Logo-rosegoldverlauf-rgb.png" alt="Feminess">
+    </div>
+    <ul class="footer-links">
+      <li><a href="https://feminess.github.io/Datenschutz/">Datenschutzerklärung</a></li>
+      <li><a href="https://feminess.github.io/Impressum/">Impressum</a></li>
+    </ul>
+    <div class="footer-copyright">© 2026 FEMINESS – MARINA HENZE</div>
+  </footer>
+
+</div>
+
+</body>
+</html>
