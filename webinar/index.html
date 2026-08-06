@@ -1529,10 +1529,8 @@ window._load_script = function(url, callback, isSubmit) {
         window._load_script('https://cdn.jsdelivr.net/npm/intl-tel-input@25.2.0/build/js/intlTelInput.min.js', function() {
             inputPhone.setAttribute("name", "phone-iti");
             iti = intlTelInput(inputPhone, {
-                loadUtils: () => import('https://cdn.jsdelivr.net/npm/intl-tel-input@25.2.0/build/js/utils.js'),
-                hiddenInput: (telInputName) => ({ phone: 'phone' }),
+                hiddenInput: function(telInputName) { return { phone: 'phone' }; },
                 separateDialCode: true,
-                autoPlaceholder: 'aggressive',
                 initialCountry: "de",
             });
         }, false);
