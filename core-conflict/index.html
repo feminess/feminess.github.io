@@ -1059,10 +1059,12 @@ window._load_script = function(url, callback, isSubmit) {
         return false;
     };
     for (var i = 0; i < allInputs.length; i++) {
-        var regexStr = "field\\[(\\d+)\\]"; var results = new RegExp(regexStr).exec(allInputs[i].name);
-        if (results != undefined) { allInputs[i].dataset.name = window.cfields[results[1]]; } else { allInputs[i].dataset.name = allInputs[i].name; }
-        var fieldVal = getUrlParam(allInputs[i].dataset.name);
-        if (fieldVal) { if (allInputs[i].type == "radio" || allInputs[i].type == "checkbox") { if (allInputs[i].value == fieldVal) { allInputs[i].checked = true; } } else { allInputs[i].value = fieldVal; } }
+        try {
+            var regexStr = "field\\[(\\d+)\\]"; var results = new RegExp(regexStr).exec(allInputs[i].name);
+            if (results != undefined) { allInputs[i].dataset.name = window.cfields[results[1]]; } else { allInputs[i].dataset.name = allInputs[i].name; }
+            var fieldVal = getUrlParam(allInputs[i].dataset.name);
+            if (fieldVal) { if (allInputs[i].type == "radio" || allInputs[i].type == "checkbox") { if (allInputs[i].value == fieldVal) { allInputs[i].checked = true; } } else { allInputs[i].value = fieldVal; } }
+        } catch (err) { /* ein einzelner ungültig codierter URL-Parameter darf die Vorbefüllung der übrigen Felder nicht abbrechen */ }
     }
     var remove_tooltips = function() { for (var i = 0; i < tooltips.length; i++) { tooltips[i].tip.parentNode.removeChild(tooltips[i].tip); } tooltips = []; };
     var remove_tooltip = function(elem) { for (var i = 0; i < tooltips.length; i++) { if (tooltips[i].elem === elem) { tooltips[i].tip.parentNode.removeChild(tooltips[i].tip); tooltips.splice(i, 1); return; } } };
