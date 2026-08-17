@@ -730,11 +730,13 @@
 
     /* ── TESTIMONIALS ── */
     .testimonials-section {
-      background: #fff;
+      background: var(--teal-dark);
       border-top: none;
       padding: 88px 0;
-      border-bottom: 1px solid var(--beige);
+      border-bottom: none;
     }
+    .testimonials-section .section-header h2 { color: #fff; }
+    .testimonials-section .section-header h2 em { color: var(--sand-light); }
     .testimonials-inner {
       max-width: 1100px;
       margin: 0 auto;
@@ -1003,9 +1005,14 @@
 
     /* ── SPEAKER ── */
     .speaker-section {
-      background: var(--teal-dark);
+      background: #fff;
       padding: 88px 0;
+      border-bottom: 1px solid var(--beige);
     }
+    .speaker-section .speaker-portrait h3 { color: #0a3828; }
+    .speaker-section .speaker-portrait .role { color: var(--teal); }
+    .speaker-section .speaker-bio p { color: rgba(10,56,40,0.85); }
+    .speaker-section .speaker-bio p strong { color: #0a3828; }
     .speaker-inner {
       max-width: 1100px;
       margin: 0 auto;
@@ -1045,18 +1052,18 @@
 
     /* ── FINAL CTA ── */
     .final-cta {
-      background: #fff;
+      background: var(--teal-dark);
       padding: 110px 0;
       border-bottom: none;
       position: relative;
       overflow: hidden;
     }
-    .final-cta .section-label { color: var(--teal) !important; }
-    .final-cta .section-label::after { background: var(--teal) !important; }
-    .final-cta h2 { color: #0a3828 !important; }
-    .final-cta .countdown-digits { color: #0a3828 !important; }
-    .final-cta .countdown-label { color: var(--warm-gray) !important; }
-    .final-cta .countdown-sep { color: rgba(0,0,0,0.15) !important; }
+    .final-cta .section-label { color: var(--teal-pale) !important; }
+    .final-cta .section-label::after { background: var(--teal-pale) !important; }
+    .final-cta h2 { color: #fff !important; }
+    .final-cta .countdown-digits { color: #fff !important; }
+    .final-cta .countdown-label { color: var(--teal-pale) !important; }
+    .final-cta .countdown-sep { color: rgba(255,255,255,0.25) !important; }
     .final-cta-inner {
       max-width: 600px;
       margin: 0 auto;
@@ -1758,18 +1765,6 @@ window._load_script = function(url, callback, isSubmit) {
   </div>
 </div>
 
-<!-- VIDEO -->
-<div style="background: var(--teal-dark);">
-<div style="max-width:900px; margin:0 auto; padding:48px 40px;">
-  <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden;">
-    <iframe title="vimeo-player" src="https://player.vimeo.com/video/1206720731?h=4a44dcaaf1" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
-  </div>
-  <div style="text-align:center; margin-top:32px;">
-    <button class="btn-cta" onclick="openModal()">Yes, ich bin dabei</button>
-  </div>
-</div>
-</div>
-
 <!-- MAIN TEXT -->
 <div class="text-section">
   <div class="text-inner">
@@ -1919,37 +1914,6 @@ window._load_script = function(url, callback, isSubmit) {
   </div>
 </section>
 
-<!-- BONUS -->
-<section class="bonus-section">
-  <div class="bonus-inner">
-    <h2>Dein exklusives <em>Geschenk!</em></h2>
-    <div class="bonus-gift-box">
-      <div class="bonus-gift-icon">
-        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" width="52" height="52">
-          <defs>
-            <linearGradient id="rosegold-bow" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stop-color="#a0685a"/>
-              <stop offset="25%" stop-color="#d4a090"/>
-              <stop offset="50%" stop-color="#f0ccc0"/>
-              <stop offset="75%" stop-color="#d4a090"/>
-              <stop offset="100%" stop-color="#a0685a"/>
-            </linearGradient>
-          </defs>
-          <rect x="6" y="20" width="36" height="24" rx="2" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
-          <rect x="4" y="14" width="40" height="8" rx="2" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
-          <line x1="24" y1="14" x2="24" y2="44" stroke="rgba(255,255,255,0.7)" stroke-width="1.5"/>
-          <path d="M24 14 C24 14 18 10 16 6 C15 3 17 1 19 2 C21 3 24 8 24 14Z" fill="url(#rosegold-bow)" opacity="0.95"/>
-          <path d="M24 14 C24 14 30 10 32 6 C33 3 31 1 29 2 C27 3 24 8 24 14Z" fill="url(#rosegold-bow)" opacity="0.95"/>
-        </svg>
-      </div>
-      <div class="bonus-gift-text">
-        <h3>The Energy Block Mirror</h3>
-        <p>Eine <strong>tiefenpsychologische Analyse</strong>, die dir schonungslos zeigt, wo deine Energie gerade blockiert ist & was dich von deinem nächsten <strong>Umsatz-Wachstum</strong> abhält. Nur für Live-Teilnehmerinnen.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- TESTIMONIALS -->
 <section class="testimonials-section">
   <div class="testimonials-inner">
@@ -1985,7 +1949,7 @@ window._load_script = function(url, callback, isSubmit) {
       <p class="role">CEO &amp; Gründerin · FEMINESS</p>
     </div>
     <div class="speaker-bio">
-      <h2 style="font-family:'Cormorant Garamond',serif; font-size:34px; font-weight:600; color:#fff; margin-bottom:24px;">Die Frau hinter <em style="font-style:normal; font-weight:700; white-space:nowrap; background:linear-gradient(90deg,#d4a090 0%,#f0ccc0 50%,#d4a090 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">The SMART MONEY System</em>!</h2>
+      <h2 style="font-family:'Cormorant Garamond',serif; font-size:34px; font-weight:600; color:#0a3828; margin-bottom:24px;">Die Frau hinter <em style="font-style:normal; font-weight:700; white-space:nowrap; background:linear-gradient(90deg,#a0685a 0%,#cf5a73 50%,#a0685a 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">The SMART MONEY System</em>!</h2>
       <p>Marina Henze ist <strong>Mentorin</strong> für <strong>Unternehmerinnen</strong>, die spüren: So wie bisher will ich nicht weitermachen.</p>
       <p>Seit über <strong>20 Jahren</strong> begleitet sie Frauen aus Erschöpfung und Selbstaufopferung hinein in <strong>finanzielle Freiheit</strong> und selbstbestimmtes Wirken. Mehr als <strong>20.000 Frauen</strong> sind diesen Weg bereits mit ihr gegangen.</p>
       <p>Als Unternehmerin mit <strong>Millionen-Umsätzen</strong> steht Marina für Business ohne Kampf. Klar, kraftvoll und frei.</p>
