@@ -1,19 +1,19 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Feminess//Energy for Million//DE
+PRODID:-//Feminess//The SMART MONEY System//DE
 BEGIN:VEVENT
-UID:energy-for-million-20260825@feminess.de
+UID:the-smart-money-system-20260825@feminess.de
 DTSTAMP:20260701T000000Z
 DTSTART:20260825T090000Z
 DTEND:20260825T110000Z
-SUMMARY:Feminess Webinar – Energy for Million mit Sebastian Kieser
+SUMMARY:Feminess Webinar – The SMART MONEY System mit Sebastian Kieser
 DESCRIPTION:Dein Webinar-Termin mit Feminess & Sebastian Kieser. Den Zugangslink erhältst du per E-Mail.
 LOCATION:Online (Link per E-Mail)
 STATUS:CONFIRMED
 BEGIN:VALARM
 TRIGGER:-PT30M
 ACTION:DISPLAY
-DESCRIPTION:Energy for Million startet in 30 Minuten
+DESCRIPTION:The SMART MONEY System startet in 30 Minuten
 END:VALARM
 END:VEVENT
 END:VCALENDAR
