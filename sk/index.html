@@ -516,7 +516,7 @@
 
     /* ── BENEFITS ── */
     .benefits-section {
-      background: #fff;
+      background: var(--teal-dark);
       border-top: none;
       padding: 100px 0;
       position: relative;
@@ -535,9 +535,9 @@
       text-align: center;
       margin-bottom: 64px;
     }
-    .benefits-header h2 { color: #0a3828; }
-    .benefits-section .section-label { color: var(--teal); }
-    .benefits-section .section-label::after { background: var(--teal); }
+    .benefits-header h2 { color: #fff; }
+    .benefits-section .section-label { color: var(--teal-pale); }
+    .benefits-section .section-label::after { background: var(--teal-pale); }
     .benefits-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -545,7 +545,7 @@
       margin-bottom: 52px;
     }
     .benefit-card {
-      background: #1b5c50;
+      background: #fff;
       border: none;
       border-radius: 16px;
       padding: 32px 36px 32px 32px;
@@ -566,7 +566,7 @@
       font-family: 'Cormorant Garamond', serif;
       font-size: 100px;
       font-weight: 400;
-      color: rgba(255,255,255,0.32);
+      color: rgba(10,56,40,0.15);
       line-height: 1;
       flex-shrink: 0;
       width: 80px;
@@ -574,8 +574,8 @@
       align-self: flex-start;
       user-select: none;
     }
-    .benefit-body p { font-size: 18px; color: #fff; margin: 0; line-height: 1.75; }
-    .benefit-body p strong { color: #fff; font-weight: 700; }
+    .benefit-body p { font-size: 18px; color: #0a3828; margin: 0; line-height: 1.75; }
+    .benefit-body p strong { color: #0a3828; font-weight: 700; }
 
     /* ── PERFECT FOR YOU ── */
     .perfect-section {
@@ -622,10 +622,11 @@
 
     /* ── SO FUNKTIONIERT'S ── */
     .how-section {
-      background: var(--teal-dark);
+      background: #fff;
       padding: 110px 0;
       position: relative;
       overflow: hidden;
+      border-bottom: 1px solid var(--beige);
     }
     /* Ambient glow effects */
     .how-section::before {
@@ -651,11 +652,11 @@
       position: relative;
       z-index: 1;
     }
-    .how-section .section-label { color: var(--teal-light); }
-    .how-section .section-label::after { background: var(--teal-light); }
-    .how-section > .how-inner > h2 { color: #fff; text-align: center; }
-    .how-section > .how-inner > h2 em { color: var(--sand-light); }
-    .how-section .how-intro { text-align: center; color: #fff; font-size: 18px; max-width: 800px; margin: 0 auto 72px; line-height: 1.8; }
+    .how-section .section-label { color: var(--teal); }
+    .how-section .section-label::after { background: var(--teal); }
+    .how-section > .how-inner > h2 { color: #0a3828; text-align: center; }
+    .how-section > .how-inner > h2 em { color: var(--rose); }
+    .how-section .how-intro { text-align: center; color: #0a3828; font-size: 18px; max-width: 800px; margin: 0 auto 72px; line-height: 1.8; }
 
     /* 3-column card grid */
     .journey-cards {
@@ -730,13 +731,13 @@
 
     /* ── TESTIMONIALS ── */
     .testimonials-section {
-      background: var(--teal-dark);
+      background: #fff;
       border-top: none;
       padding: 88px 0;
-      border-bottom: none;
+      border-bottom: 1px solid var(--beige);
     }
-    .testimonials-section .section-header h2 { color: #fff; }
-    .testimonials-section .section-header h2 em { color: var(--sand-light); }
+    .testimonials-section .section-header h2 { color: #0a3828; }
+    .testimonials-section .section-header h2 em { color: var(--rose); }
     .testimonials-inner {
       max-width: 1100px;
       margin: 0 auto;
@@ -772,7 +773,7 @@
 
     /* ── FÜR DICH ── */
     .fuer-dich-section {
-      background: #fff;
+      background: var(--teal-dark);
       padding: 100px 0;
       position: relative;
       overflow: hidden;
@@ -787,7 +788,7 @@
       font-family: 'Cormorant Garamond', serif;
       font-size: clamp(28px, 3.8vw, 56px);
       font-weight: 600;
-      color: #0a3828;
+      color: #fff;
       text-align: center;
       white-space: nowrap;
       margin-bottom: 56px;
@@ -803,16 +804,16 @@
       margin: 8px 0;
     }
     .fuer-dich-divider em { font-style: normal; font-weight: 600; color: inherit; }
-    .fuer-dich-section .section-label { color: var(--teal); }
-    .fuer-dich-section .section-label::after { background: var(--teal); opacity: 1; }
+    .fuer-dich-section .section-label { color: var(--teal-pale); }
+    .fuer-dich-section .section-label::after { background: var(--teal-pale); opacity: 1; }
     .fuer-dich-stack { display: flex; flex-direction: column; gap: 20px; }
     .fuer-dich-box {
       border-radius: 12px;
       padding: 32px 36px;
     }
     .fuer-dich-box.ja {
-      background: var(--teal-dark);
-      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.15);
     }
     .fuer-dich-box.nein {
       background: rgba(232,160,176,0.18);
@@ -1005,14 +1006,13 @@
 
     /* ── SPEAKER ── */
     .speaker-section {
-      background: #fff;
+      background: var(--teal-dark);
       padding: 88px 0;
-      border-bottom: 1px solid var(--beige);
     }
-    .speaker-section .speaker-portrait h3 { color: #0a3828; }
-    .speaker-section .speaker-portrait .role { color: var(--teal); }
-    .speaker-section .speaker-bio p { color: rgba(10,56,40,0.85); }
-    .speaker-section .speaker-bio p strong { color: #0a3828; }
+    .speaker-section .speaker-portrait h3 { color: #fff; }
+    .speaker-section .speaker-portrait .role { color: var(--teal-pale); }
+    .speaker-section .speaker-bio p { color: rgba(255,255,255,0.85); }
+    .speaker-section .speaker-bio p strong { color: #fff; }
     .speaker-inner {
       max-width: 1100px;
       margin: 0 auto;
@@ -1052,18 +1052,19 @@
 
     /* ── FINAL CTA ── */
     .final-cta {
-      background: var(--teal-dark);
+      background: #fff;
       padding: 110px 0;
       border-bottom: none;
       position: relative;
       overflow: hidden;
     }
-    .final-cta .section-label { color: var(--teal-pale) !important; }
-    .final-cta .section-label::after { background: var(--teal-pale) !important; }
-    .final-cta h2 { color: #fff !important; }
-    .final-cta .countdown-digits { color: #fff !important; }
-    .final-cta .countdown-label { color: var(--teal-pale) !important; }
-    .final-cta .countdown-sep { color: rgba(255,255,255,0.25) !important; }
+    .final-cta .section-label { color: var(--teal) !important; }
+    .final-cta .section-label::after { background: var(--teal) !important; }
+    .final-cta h2 { color: #0a3828 !important; }
+    .final-cta .countdown-digits { color: #0a3828 !important; }
+    .final-cta .countdown-label { color: var(--warm-gray) !important; }
+    .final-cta .countdown-sep { color: rgba(0,0,0,0.15) !important; }
+    .final-cta .facebook-disclaimer { color: rgba(10,56,40,0.45) !important; }
     .final-cta-inner {
       max-width: 600px;
       margin: 0 auto;
@@ -1784,29 +1785,6 @@ window._load_script = function(url, callback, isSubmit) {
   </div>
 </div>
 
-<!-- SCREENSHOT SLIDER -->
-<section class="screenshots-section">
-  <div class="screenshots-inner">
-    <h2 style="text-align:center; font-family:'Cormorant Garamond',serif; font-size:clamp(28px,3.5vw,48px); font-weight:600; color:#fff; margin-bottom:40px;">Was Frauen über Marina sagen</h2>
-    <div class="sl-wrap">
-      <button class="sl-arrow sl-prev" id="slPrev" aria-label="Zurück">&#8249;</button>
-      <button class="sl-arrow sl-next" id="slNext" aria-label="Weiter">&#8250;</button>
-      <div class="sl-viewport" id="slViewport">
-        <div class="sl-track" id="slTrack">
-          <div class="sl-slide"><img src="Testimonials/Denise.PNG" alt="Testimonial Denise"></div>
-          <div class="sl-slide"><img src="Testimonials/Elena.jpg" alt="Testimonial Elena"></div>
-          <div class="sl-slide"><img src="Testimonials/Leonie.PNG" alt="Testimonial Leonie"></div>
-          <div class="sl-slide"><img src="Testimonials/Marina.jpg" alt="Testimonial Marina"></div>
-          <div class="sl-slide"><img src="Testimonials/Ursula.png" alt="Testimonial Ursula"></div>
-          <div class="sl-slide"><img src="Testimonials/Yvonne 2.png" alt="Testimonial Yvonne"></div>
-          <div class="sl-slide"><img src="Testimonials/Yvonne.png" alt="Testimonial Yvonne"></div>
-        </div>
-      </div>
-      <div class="sl-dots" id="slDots"></div>
-    </div>
-  </div>
-</section>
-
 <!-- BENEFITS -->
 <section class="benefits-section">
   <div class="benefits-inner">
@@ -1855,7 +1833,7 @@ window._load_script = function(url, callback, isSubmit) {
 <!-- WAS ERWARTET DICH -->
 <section class="how-section">
   <div class="how-inner">
-    <h2 style="text-align:center; color:#fff; margin-bottom:16px; white-space:nowrap;">Dein Weg zur <em style="color:#fff;">finanziellen Selbstbestimmung</em></h2>
+    <h2 style="text-align:center; color:#0a3828; margin-bottom:16px; white-space:nowrap;">Dein Weg zur <em style="color:var(--rose);">finanziellen Selbstbestimmung</em></h2>
     <p class="how-intro">Es erwartet dich nicht nur ein Live-Event, sondern dein <strong>Einstieg</strong> in ein völlig neues Verhältnis zu <strong>Geld und Börse</strong> – verständlich, konkret und ohne Vorwissen.</p>
     <div class="journey-cards">
 
@@ -1964,7 +1942,7 @@ window._load_script = function(url, callback, isSubmit) {
       <p class="role">Investor &amp; Gründer SAPHIR Club</p>
     </div>
     <div class="speaker-bio">
-      <h2 style="font-family:'Cormorant Garamond',serif; font-size:clamp(24px, 5vw, 34px); font-weight:600; color:#0a3828; margin-bottom:24px;">Der Mann hinter <em style="font-style:normal; font-weight:700; background:linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">The SMART MONEY System</em>!</h2>
+      <h2 style="font-family:'Cormorant Garamond',serif; font-size:clamp(24px, 5vw, 34px); font-weight:600; color:#fff; margin-bottom:24px;">Der Mann hinter <em style="font-style:normal; font-weight:700; background:linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">The SMART MONEY System</em>!</h2>
       <p>Seit über <strong>20 Jahren</strong> widmet er sich intensiv der Welt der Börse und hat es sich zur Mission gemacht, komplexe Finanzthemen einfach und verständlich zu vermitteln.</p>
       <p>Mit seinen praxiserprobten Strategien zeigt er, wie jeder – unabhängig vom Vorwissen – <strong>finanzielle Freiheit</strong> erreichen kann. Dabei setzt er auf klare, leicht umsetzbare Methoden, die nachhaltig Ergebnisse liefern.</p>
     </div>
