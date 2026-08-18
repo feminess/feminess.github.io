@@ -2,10 +2,10 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//Feminess//The SMART MONEY System//DE
 BEGIN:VEVENT
-UID:the-smart-money-system-20260825@feminess.de
+UID:the-smart-money-system-20260826@feminess.de
 DTSTAMP:20260701T000000Z
-DTSTART:20260825T090000Z
-DTEND:20260825T110000Z
+DTSTART:20260826T100000Z
+DTEND:20260826T120000Z
 SUMMARY:Feminess Webinar – The SMART MONEY System mit Sebastian Kieser
 DESCRIPTION:Dein Webinar-Termin mit Feminess & Sebastian Kieser. Den Zugangslink erhältst du per E-Mail.
 LOCATION:Online (Link per E-Mail)
