@@ -1005,14 +1005,13 @@
 
     /* ── SPEAKER ── */
     .speaker-section {
-      background: #fff;
+      background: var(--teal-dark);
       padding: 88px 0;
-      border-bottom: 1px solid var(--beige);
     }
-    .speaker-section .speaker-portrait h3 { color: #0a3828; }
-    .speaker-section .speaker-portrait .role { color: var(--teal); }
-    .speaker-section .speaker-bio p { color: rgba(10,56,40,0.85); }
-    .speaker-section .speaker-bio p strong { color: #0a3828; }
+    .speaker-section .speaker-portrait h3 { color: #fff; }
+    .speaker-section .speaker-portrait .role { color: var(--teal-pale); }
+    .speaker-section .speaker-bio p { color: rgba(255,255,255,0.85); }
+    .speaker-section .speaker-bio p strong { color: #fff; }
     .speaker-inner {
       max-width: 1100px;
       margin: 0 auto;
@@ -1052,18 +1051,18 @@
 
     /* ── FINAL CTA ── */
     .final-cta {
-      background: var(--teal-dark);
+      background: #fff;
       padding: 110px 0;
       border-bottom: none;
       position: relative;
       overflow: hidden;
     }
-    .final-cta .section-label { color: var(--teal-pale) !important; }
-    .final-cta .section-label::after { background: var(--teal-pale) !important; }
-    .final-cta h2 { color: #fff !important; }
-    .final-cta .countdown-digits { color: #fff !important; }
-    .final-cta .countdown-label { color: var(--teal-pale) !important; }
-    .final-cta .countdown-sep { color: rgba(255,255,255,0.25) !important; }
+    .final-cta .section-label { color: var(--teal) !important; }
+    .final-cta .section-label::after { background: var(--teal) !important; }
+    .final-cta h2 { color: #0a3828 !important; }
+    .final-cta .countdown-digits { color: #0a3828 !important; }
+    .final-cta .countdown-label { color: var(--warm-gray) !important; }
+    .final-cta .countdown-sep { color: rgba(0,0,0,0.15) !important; }
     .final-cta-inner {
       max-width: 600px;
       margin: 0 auto;
@@ -1084,6 +1083,7 @@
     .countdown-final .countdown-label { color: var(--teal); }
     .countdown-final .countdown-sep { color: rgba(7,8,8,0.15); font-size: 40px; margin-bottom: 14px; }
     .facebook-disclaimer { font-size: 11px; color: rgba(255,255,255,0.45); margin-top: 40px; line-height: 1.6; }
+    .final-cta .facebook-disclaimer { color: rgba(10,56,40,0.45) !important; }
 
     /* ── FOOTER ── */
     footer { background: #07291d; padding: 48px 40px; border-top: 1px solid rgba(94,198,179,0.1); box-sizing: border-box; overflow-x: hidden; }
@@ -1914,31 +1914,6 @@ window._load_script = function(url, callback, isSubmit) {
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
-<section class="testimonials-section">
-  <div class="testimonials-inner">
-    <div class="section-header">
-      <h2>Das sagen unsere<br class="mobile-br"> begeisterten <em>Frauen</em></h2>
-    </div>
-    <div class="testimonials-grid">
-      <div class="testimonial-card">
-        <div class="stars">★ ★ ★ ★ ★</div>
-        <p class="testimonial-text">Das war ein mega Event! Es war intensiv, energiegeladen, motivierend und hat einfach Spaß gemacht. Marina hat einen tollen Überblick gegeben, auf was es ankommt, wenn man erfolgreich sein möchte. Verständlich, klar und nachvollziehbar. Inhaltlich war so unglaublich viel dabei: Mindset &amp; Strategie. Absolut überzeugend. Deswegen werde ich meinen Weg mit Feminess gehen.</p>
-        <p class="testimonial-author">Anja M.</p>
-      </div>
-      <div class="testimonial-card">
-        <div class="stars">★ ★ ★ ★ ★</div>
-        <p class="testimonial-text">Ich liebe die Zusammenarbeit mit Marina so sehr. Durch sie hat sich so viel in meinem Unternehmen erleichtert. Ich arbeite viel weniger, hab viel mehr Umsatz, es fällt mir viel leichter. Ich mache monatlich 6-stellige Umsätze und bin Marina einfach unendlich dankbar.</p>
-        <p class="testimonial-author">Sigrid Aviana Waedt</p>
-      </div>
-      <div class="testimonial-card">
-        <div class="stars">★ ★ ★ ★ ★</div>
-        <p class="testimonial-text">Es war unfassbar energetisch. Mit so vielen starken Powerfrauen. Ich habe viel über mich, meine tiefsten Wünsche und meine Blockaden gelernt. Ich habe so viele verschiedene Emotionen gespürt und es hat mich wach gerüttelt, etwas zu ändern. Nicht irgendwann, sondern jetzt. Ich bin so dankbar, dass ich dabei sein durfte.</p>
-        <p class="testimonial-author">Jana M.</p>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- SPEAKER: MARINA -->
 <section class="speaker-section">
@@ -1949,7 +1924,7 @@ window._load_script = function(url, callback, isSubmit) {
       <p class="role">CEO &amp; Gründerin · FEMINESS</p>
     </div>
     <div class="speaker-bio">
-      <h2 style="font-family:'Cormorant Garamond',serif; font-size:34px; font-weight:600; color:#0a3828; margin-bottom:24px;">Die Frau hinter <em style="font-style:normal; font-weight:700; white-space:nowrap; background:linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">The SMART MONEY System</em>!</h2>
+      <h2 style="font-family:'Cormorant Garamond',serif; font-size:34px; font-weight:600; color:#fff; margin-bottom:24px;">Die Frau hinter <em style="font-style:normal; font-weight:700; white-space:nowrap; background:linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">The SMART MONEY System</em>!</h2>
       <p>Marina Henze ist <strong>Mentorin</strong> für <strong>Unternehmerinnen</strong>, die spüren: So wie bisher will ich nicht weitermachen.</p>
       <p>Seit über <strong>20 Jahren</strong> begleitet sie Frauen aus Erschöpfung und Selbstaufopferung hinein in <strong>finanzielle Freiheit</strong> und selbstbestimmtes Wirken. Mehr als <strong>20.000 Frauen</strong> sind diesen Weg bereits mit ihr gegangen.</p>
       <p>Als Unternehmerin mit <strong>Millionen-Umsätzen</strong> steht Marina für Business ohne Kampf. Klar, kraftvoll und frei.</p>
