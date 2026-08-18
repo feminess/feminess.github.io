@@ -1325,7 +1325,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       #_form_575_ ._submit { background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%) !important; border-radius: 999px !important; color: #0d2420 !important; font-family: 'Montserrat', sans-serif !important; font-size: 12px !important; font-weight: 700 !important; letter-spacing: 2px !important; text-transform: uppercase !important; width: 100%; animation: pulse-btn 2.2s ease-in-out infinite; box-shadow: 0 0 18px rgba(212,160,144,0.55), 0 6px 24px rgba(160,104,90,0.45) !important; }
       #_form_575_ ._form-thank-you { color: #fff; }
       #_form_575_ ._form-branding { display: none; }
-      #_form_575_ .field-required { color: var(--rose); }
+      #_form_575_ ._row label, #_form_575_ ._row span { color: rgba(255,255,255,0.85) !important; }
+      #_form_575_ .field-required { color: var(--rose) !important; }
     </style>
     <form method="POST" action="https://marina232.activehosted.com/proc.php" id="_form_575_" class="_form _form_575 _inline-form  _dark" novalidate data-styles-version="5">
       <input type="hidden" name="u" value="575" />
@@ -1335,7 +1336,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <input type="hidden" name="m" value="0" />
       <input type="hidden" name="act" value="sub" />
       <input type="hidden" name="v" value="2" />
-      <input type="hidden" name="or" value="b38407f8-d456-4c38-9351-fddf1830e525" />
+      <input type="hidden" name="or" value="8bd7039f-47d4-43b7-b784-04e2458bbb8a" />
       <div class="_form-content">
         <div class="_form_element _x85333295 _full_width">
           <label for="firstname" class="_form-label">Vorname<span class="field-required">*</span></label>
@@ -1353,6 +1354,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <label for="phone" class="_form-label">Telefon<span class="field-required">*</span></label>
           <div class="_field-wrapper">
             <input type="text" id="phone" name="phone" placeholder="Tippen Sie Ihre Telefonnummer ein." required/>
+          </div>
+        </div>
+        <div class="_form_element _x93217355 _full_width">
+          <input type="hidden" name="ls" id="ls" value="1" />
+          <legend class="_form-label">An welchem Termin möchtest du teilnehmen?<span class="field-required">*</span></legend>
+          <div class="_row">
+            <input id="nlbox_436" type="checkbox" value="436" name="nlbox[]" class="any" required>
+            <span><label for="nlbox_436">Am 25.08.26</label></span>
+          </div>
+          <div class="_row">
+            <input id="nlbox_437" type="checkbox" value="437" name="nlbox[]">
+            <span><label for="nlbox_437">Am 26.08.26</label></span>
           </div>
         </div>
         <input type="hidden" id="field[220]" name="field[220]" value="" />
