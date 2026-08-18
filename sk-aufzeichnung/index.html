@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NQMQT7QH');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Masterclass ENERGY for MILLION - Aufzeichnung - Feminess</title>
+<link rel="icon" href="https://feminess.de/wp-content/uploads/cropped-favicon@2x-1-32x32.png" sizes="32x32">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --teal:       #257c6c;
+    --teal-dark:  #1b5c50;
+    --teal-light: #f8f6f2;
+    --teal-pale:  #b8ddd8;
+    --rose:       #cf5a73;
+    --rose-light: #e8a0b0;
+    --sand:       #c2ab8d;
+    --black:      #070808;
+    --dark:       #0d2420;
+    --off-white:  #f8f6f2;
+    --cream:      #f0f5f4;
+    --beige:      #ddecea;
+    --warm-gray:  #5a7a74;
+    --mid-gray:   #9ab8b4;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  em, i { font-style: normal; }
+  html { scroll-behavior: smooth; overflow-x: hidden; }
+  body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    line-height: 1.75;
+    background: var(--off-white);
+    color: #0a3828;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  /* ── TOP BANNER ── */
+  .top-banner {
+    display: block;
+    background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%);
+    padding: 14px 40px;
+    text-align: center;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(13,36,32,0.12);
+  }
+  .banner-row { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: center; gap: 10px; }
+  .banner-text { font-family: 'Montserrat', sans-serif; font-size: 15px; font-weight: 400; color: rgba(13,36,32,0.72); white-space: nowrap; }
+  .banner-price { font-weight: 700; color: var(--dark); }
+  .banner-countdown { font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: 600; color: var(--dark); white-space: nowrap; }
+  .banner-countdown .cd-unit { font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: rgba(13,36,32,0.6); margin-left: 3px; }
+  .banner-countdown .cd-sep { color: rgba(13,36,32,0.3); margin: 0 6px; }
+
+  /* ── HERO ── */
+  .hero { background: var(--teal-dark); position: relative; overflow: hidden; padding: 72px 40px 100px; text-align: center; }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -100px; left: 50%;
+    transform: translateX(-50%);
+    width: 800px; height: 600px;
+    background: radial-gradient(circle, rgba(207,90,115,0.15) 0%, transparent 65%);
+    pointer-events: none;
+    z-index: 1;
+  }
+  .hero-inner { position: relative; z-index: 2; max-width: 760px; margin: 0 auto; }
+  .hero-inner h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 1.18;
+    letter-spacing: 0.2px;
+    margin-bottom: 40px;
+    background: linear-gradient(90deg, #d4a090 0%, #f0ccc0 50%, #d4a090 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+  .hero-inner h1 em { font-style: normal; font-weight: 600; color: inherit; -webkit-text-fill-color: inherit; }
+
+  .video-wrap {
+    width: 100%;
+    max-width: 680px;
+    margin: 0 auto 40px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 40px 80px rgba(0,0,0,0.45);
+    border: 1px solid rgba(255,255,255,0.12);
+  }
+
+  /* ── BUTTONS (ein einziger Stil: Pille, Rosegold, dunkler Text) ── */
+  .btn-cta {
+    display: inline-block;
+    background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%);
+    color: var(--dark);
+    text-decoration: none;
+    padding: 20px 48px;
+    border-radius: 999px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: opacity 0.2s, transform 0.15s;
+    border: none;
+    cursor: pointer;
+    animation: pulse-btn 2.2s ease-in-out infinite;
+  }
+  .btn-cta:hover { opacity: 0.88; transform: translateY(-1px); animation: none; }
+  @keyframes pulse-btn {
+    0%, 100% { transform: scale(1);     box-shadow: 0 6px 28px rgba(160,104,90,0.40); }
+    50%       { transform: scale(1.04); box-shadow: 0 10px 36px rgba(160,104,90,0.58); }
+  }
+
+  /* ── SPECIAL DEAL (hell) ── */
+  .deal-section { background: #fff; padding: 88px 40px; text-align: center; position: relative; overflow: hidden; }
+  .deal-section::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px; background: linear-gradient(90deg, var(--teal), var(--teal-light)); }
+  .deal-inner { max-width: 640px; margin: 0 auto; position: relative; z-index: 1; }
+  .deal-lead { font-size: 18px; line-height: 1.8; color: #0a3828; max-width: 540px; margin: 0 auto 40px; }
+  .deal-lead strong { color: #0a3828; font-weight: 700; }
+
+  .countdown-final { display: flex; justify-content: center; gap: 28px; margin: 0 0 40px; align-items: flex-end; }
+  .countdown-item { text-align: center; }
+  .countdown-digits { display: block; font-family: 'Montserrat', sans-serif; font-size: 34px; font-weight: 600; color: #0a3828; line-height: 1.2; }
+  .countdown-label { display: block; font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--warm-gray); margin-top: 4px; }
+
+  /* ── TESTIMONIALS (grün) ── */
+  .testimonials-section { background: var(--teal-dark); padding: 88px 40px; }
+  .testimonials-inner { max-width: 1100px; margin: 0 auto; }
+  .section-header { text-align: center; margin-bottom: 56px; }
+  .section-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--teal-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin-bottom: 20px;
+  }
+  .section-label::before, .section-label::after { content: ''; display: block; width: 40px; height: 1px; background: var(--teal-light); opacity: 0.5; }
+  h2 { font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 600; color: #0a3828; line-height: 1.15; letter-spacing: -0.3px; }
+  h2 em { font-style: normal; font-weight: 600; color: inherit; }
+  .testimonials-section h2 { color: #fff; }
+
+  .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .testimonial-card {
+    background: #fff;
+    border: 1px solid var(--beige);
+    border-top: 3px solid #c47868;
+    border-radius: 4px;
+    padding: 32px 28px;
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+  }
+  .testimonial-card:hover { box-shadow: 0 8px 28px rgba(37,124,108,0.10); transform: translateY(-3px); }
+  .testimonial-text { font-size: 17px; color: var(--warm-gray); line-height: 1.8; margin-bottom: 20px; }
+  .testimonial-text strong { font-family: 'Montserrat', sans-serif; color: #0a3828; font-weight: 700; }
+  .testimonial-author { font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--warm-gray); }
+
+  @media (max-width: 1000px) {
+    .testimonials-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 640px) {
+    .testimonials-grid { grid-template-columns: 1fr; }
+    .mob-order-1 { order: 1; }
+    .mob-order-2 { order: 2; }
+    .mob-order-3 { order: 3; }
+    .mob-order-4 { order: 4; }
+    .mob-order-5 { order: 5; }
+    .testimonial-mobile-hide { display: none; }
+  }
+
+  /* ── FOOTER ── */
+  footer { background: #07291d; padding: 32px 40px; border-top: 1px solid rgba(94,198,179,0.1); }
+  .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; row-gap: 16px; column-gap: 32px; }
+  .footer-brand { flex-shrink: 0; }
+  .footer-brand img { height: 26px; width: auto; max-width: 100%; display: block; mix-blend-mode: screen; }
+  .footer-links { display: flex; gap: 24px; list-style: none; flex-shrink: 0; }
+  .footer-links a { font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--mid-gray); text-decoration: none; transition: color 0.2s; white-space: nowrap; }
+  .footer-links a:hover { color: var(--teal-light); }
+  .footer-copy { font-family: 'Montserrat', sans-serif; font-size: 12px; color: var(--warm-gray); opacity: 0.85; text-align: center; flex: 0 1 auto; white-space: nowrap; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 767px) {
+    .hero { padding: 48px 20px 64px; }
+    .hero-inner h1 { font-size: 34px !important; margin-bottom: 28px; }
+    h2 { font-size: 32px !important; }
+    .deal-section { padding: 56px 20px; }
+    .countdown-final { gap: 16px; }
+    .countdown-digits { font-size: 26px; }
+    .testimonials-section { padding: 56px 20px; }
+    footer { flex-direction: column; text-align: center; padding: 24px 20px; }
+    .footer-inner { flex-direction: column; }
+    .footer-links { flex-direction: column; align-items: center; justify-content: center; gap: 12px; }
+    .footer-links a { white-space: normal; }
+    .footer-copy { white-space: normal; }
+  }
+
+  @media (max-width: 380px) {
+    .hero-inner h1 { font-size: 28px !important; }
+  }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NQMQT7QH"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<a href="https://feminess.github.io/webinar-aufzeichnung/#special-deal" class="top-banner" id="top-banner">
+  <div class="banner-row">
+    <span class="banner-text">Special Deal <span class="banner-price">369 EUR</span> läuft ab in</span>
+    <span class="banner-countdown">
+      <span id="top-days">00</span><span class="cd-unit">Tage</span>
+      <span class="cd-sep">:</span>
+      <span id="top-hours">00</span><span class="cd-unit">Std</span>
+      <span class="cd-sep">:</span>
+      <span id="top-minutes">00</span><span class="cd-unit">Min</span>
+      <span class="cd-sep">:</span>
+      <span id="top-seconds">00</span><span class="cd-unit">Sek</span>
+    </span>
+  </div>
+</a>
+
+<!-- HERO / AUFZEICHNUNG -->
+<section class="hero">
+  <div class="hero-inner">
+    <h1>ENERGY <em>for</em> MILLION</h1>
+
+    <div class="video-wrap">
+      <div style="padding:75% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1218001177?h=7327ee5500&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="EfM 08.26"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+    </div>
+
+    <a href="https://feminess.github.io/die-ungezaehmte-unternehmerin/" class="btn-cta">ZUM SPECIAL DEAL</a>
+  </div>
+</section>
+
+<!-- SPECIAL DEAL -->
+<section class="deal-section" id="special-deal">
+  <div class="deal-inner">
+    <p class="deal-lead">
+      Dein <strong>Special Deal</strong> für <strong>Die ungezähmte Unternehmerin</strong> zum Preis von <strong>369 EUR</strong> läuft ab in:
+    </p>
+
+    <div class="countdown-final" id="deal-countdown-wrap">
+      <div class="countdown-item">
+        <span class="countdown-digits" id="deal-days">00</span>
+        <span class="countdown-label">Tage</span>
+      </div>
+      <div class="countdown-item">
+        <span class="countdown-digits" id="deal-hours">00</span>
+        <span class="countdown-label">Std</span>
+      </div>
+      <div class="countdown-item">
+        <span class="countdown-digits" id="deal-minutes">00</span>
+        <span class="countdown-label">Min</span>
+      </div>
+      <div class="countdown-item">
+        <span class="countdown-digits" id="deal-seconds">00</span>
+        <span class="countdown-label">Sek</span>
+      </div>
+    </div>
+
+    <a href="https://feminess.github.io/die-ungezaehmte-unternehmerin/" target="_blank" rel="noopener" class="btn-cta">Jetzt Special Deal sichern</a>
+  </div>
+</section>
+
+<!-- KUNDENSTIMMEN -->
+<section class="testimonials-section">
+  <div class="testimonials-inner">
+    <div class="section-header">
+      <p class="section-label">Das sagen unsere Frauen</p>
+      <h2>Echte Ergebnisse. <em>Echte Frauen.</em></h2>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card mob-order-1">
+        <p class="testimonial-text">„Ich habe mit meiner Gründung damals ganz okay gestartet … Im zweiten Jahr bin ich dann hoch auf <strong>260.000 EUR</strong>. Und jetzt, drittes Jahr, wird es über <strong>eine Million</strong>."</p>
+        <p class="testimonial-author">Melanie P.</p>
+      </div>
+      <div class="testimonial-card mob-order-3">
+        <p class="testimonial-text">„Bevor ich gestartet bin, war ich bei ca. <strong>2.500 EUR</strong> im Monat und mittlerweile mache ich monatlich <strong>10.000 EUR</strong> bis <strong>15.000 EUR</strong>!"</p>
+        <p class="testimonial-author">Jana M.</p>
+      </div>
+      <div class="testimonial-card mob-order-4">
+        <p class="testimonial-text">„Ich liebe die Zusammenarbeit mit Marina so sehr. Durch sie hat sich so viel in meinem Unternehmen erleichtert. Ich mache monatlich <strong>6-stellige</strong> Umsätze."</p>
+        <p class="testimonial-author">Sigrid Aviana W.</p>
+      </div>
+      <div class="testimonial-card testimonial-mobile-hide">
+        <p class="testimonial-text">„Ich feiere meinen ersten <strong>5-stelligen Monat</strong> (genauer gesagt meine erste 5-stellige Woche)."</p>
+        <p class="testimonial-author">Yvonne B.</p>
+      </div>
+      <div class="testimonial-card testimonial-mobile-hide">
+        <p class="testimonial-text">„<strong>8.333 EUR</strong> — 4-Monatsprogramm verkauft"</p>
+        <p class="testimonial-author">Sybille H.</p>
+      </div>
+      <div class="testimonial-card mob-order-5">
+        <p class="testimonial-text">„<strong>39.025 EUR</strong> — Umsatz direkt während der Body Transformation Days"</p>
+        <p class="testimonial-author">Caro K.</p>
+      </div>
+      <div class="testimonial-card testimonial-mobile-hide">
+        <p class="testimonial-text">„Mein durchschnittlicher Verdienst in den letzten 10 Jahren waren ca. <strong>700 EUR</strong> im Monat. Ab Juli bis Dezember hatte ich Aufträge im Wert von <strong>4.000 EUR</strong> im Monat."</p>
+        <p class="testimonial-author">Johanna G.</p>
+      </div>
+      <div class="testimonial-card mob-order-2">
+        <p class="testimonial-text">„<strong>20.588 EUR</strong> — Netto-Umsatz im April – Abschluss Nummer 5 in nur 6 Tagen"</p>
+        <p class="testimonial-author">Ursula K.</p>
+      </div>
+      <div class="testimonial-card testimonial-mobile-hide">
+        <p class="testimonial-text">„<strong>8.999 EUR</strong> — Gruppencoaching verkauft"</p>
+        <p class="testimonial-author">Alina B.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand"><img src="Bilder/Logo-rosegoldverlauf-rgb.png" alt="Feminess"></div>
+    <ul class="footer-links">
+      <li><a href="https://feminess.github.io/Datenschutz/">Datenschutzerklärung</a></li>
+      <li><a href="https://feminess.github.io/Impressum/">Impressum</a></li>
+    </ul>
+    <p class="footer-copy">© 2026 FEMINESS – MARINA HENZE</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  /* 14.08.2026 14:00 Uhr CEST = 12:00 UTC */
+  var target = new Date('2026-08-14T12:00:00Z');
+  var idSets = [
+    ['deal-days', 'deal-hours', 'deal-minutes', 'deal-seconds'],
+    ['top-days', 'top-hours', 'top-minutes', 'top-seconds']
+  ];
+
+  function pad(n) { return String(n).padStart(2, '0'); }
+
+  function tick() {
+    var diff = target - new Date();
+    var d = diff > 0 ? Math.floor(diff / 86400000) : 0;
+    var h = diff > 0 ? Math.floor((diff % 86400000) / 3600000) : 0;
+    var m = diff > 0 ? Math.floor((diff % 3600000) / 60000) : 0;
+    var s = diff > 0 ? Math.floor((diff % 60000) / 1000) : 0;
+    idSets.forEach(function (ids) {
+      var dEl = document.getElementById(ids[0]);
+      var hEl = document.getElementById(ids[1]);
+      var mEl = document.getElementById(ids[2]);
+      var sEl = document.getElementById(ids[3]);
+      if (dEl) dEl.textContent = pad(d);
+      if (hEl) hEl.textContent = pad(h);
+      if (mEl) mEl.textContent = pad(m);
+      if (sEl) sEl.textContent = pad(s);
+    });
+  }
+
+  tick();
+  setInterval(tick, 1000);
+})();
+</script>
+
+<script type="text/javascript">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","1296465604382053");fbq("set","agent","tmgoogletagmanager","1296465604382053");fbq("track","PageView");</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1296465604382053&amp;ev=PageView&amp;noscript=1"></noscript>
+</body>
+</html>
