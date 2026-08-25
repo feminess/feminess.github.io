@@ -329,8 +329,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <script>
 (function () {
-  /* 27.08.2026 12:00 Uhr CEST = 10:00 UTC */
-  var target = new Date('2026-08-27T10:00:00Z');
+  /* 26.08.2026 12:00 Uhr CEST = 10:00 UTC, danach 27.08.2026 12:00 Uhr CEST = 10:00 UTC */
+  var target1 = new Date('2026-08-26T10:00:00Z');
+  var target2 = new Date('2026-08-27T10:00:00Z');
+  var target = (new Date() < target1) ? target1 : target2;
   var idSets = [
     ['deal-days', 'deal-hours', 'deal-minutes', 'deal-seconds'],
     ['top-days', 'top-hours', 'top-minutes', 'top-seconds']
