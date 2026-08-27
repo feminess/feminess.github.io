@@ -1763,9 +1763,9 @@ body {
 /* ── MID COUNTDOWN ── */
 .mid-countdown-wrap {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
-  gap: 6px;
+  gap: 20px;
   margin-bottom: 28px;
   flex-wrap: wrap;
 }
@@ -1785,19 +1785,15 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2px;
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.10);
-  border-radius: 12px;
-  padding: 10px 14px;
-  min-width: 56px;
+  text-align: center;
 }
 .mid-cd-num {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 30px;
-  font-weight: 300;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 44px;
+  font-weight: 600;
   color: #fff;
   line-height: 1;
+  letter-spacing: -1px;
 }
 .mid-cd-lbl {
   font-family: 'Montserrat', sans-serif;
@@ -1806,11 +1802,14 @@ body {
   letter-spacing: 1.5px;
   text-transform: uppercase;
   color: var(--teal-light);
+  margin-top: 4px;
 }
 .mid-cd-sep {
-  font-size: 20px;
-  color: var(--teal);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 34px;
+  color: rgba(255,255,255,0.15);
   font-weight: 300;
+  margin-bottom: 6px;
   line-height: 1;
   margin-bottom: 14px;
 }
@@ -1854,9 +1853,9 @@ body {
   .final-cta-inner { padding: 0 24px; }
   .popup-box { padding: 36px 24px 28px; }
   .topbar p { font-size: 9.5px; letter-spacing: 1.5px; }
-  .mid-countdown-wrap { gap: 4px; }
-  .mid-cd-unit { min-width: 46px; padding: 8px 10px; }
-  .mid-cd-num { font-size: 24px; }
+  .mid-countdown-wrap { gap: 12px; }
+  .mid-cd-num { font-size: 30px; }
+  .mid-cd-sep { font-size: 24px; margin-bottom: 4px; }
   /* Hero kompakter auf Mobile → Button direkt sichtbar */
   .hero-exclusive-label { font-size: 8.5px; letter-spacing: 1.5px; margin-bottom: 14px; padding: 5px 12px; }
   .hero-h1-line { font-size: 26px; }
