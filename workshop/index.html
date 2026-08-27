@@ -926,20 +926,21 @@ body {
   margin-bottom: 20px;
 }
 .fuer-wen-ja {
-  background: rgba(37,124,108,0.08);
-  border: 1px solid rgba(37,124,108,0.3);
+  background: #d6eeea;
+  border: 1px solid #9ccfc8;
 }
 .fuer-wen-nein {
   background: rgba(207,90,115,0.08);
   border: 1px solid rgba(207,90,115,0.3);
 }
 .fuer-wen-title {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  color: #0a3828;
-  margin-bottom: 18px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(24px, 3vw, 30px);
+  font-weight: 600;
+  margin-bottom: 16px;
 }
+.fuer-wen-title-ja { color: var(--teal); }
+.fuer-wen-title-nein { color: var(--rose); }
 .fuer-wen-list {
   list-style: none;
   display: flex;
@@ -2639,10 +2640,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- ── FÜR WEN IST DIESER WORKSHOP ── -->
 <section class="section-benefits">
   <div class="container">
-    <div class="section-kicker">Für wen ist dieser Workshop?</div>
 
+    <div class="fuer-wen-title fuer-wen-title-ja">Dieser Workshop ist für dich, wenn:</div>
     <div class="fuer-wen-box fuer-wen-ja">
-      <div class="fuer-wen-title">✓ Dieser Workshop ist für dich, wenn:</div>
       <ul class="fuer-wen-list">
         <li>du schon selbständig unterwegs bist, aber der <strong>Umsatz nicht das widerspiegelt</strong>, was du an Zeit und Energie reinsteckst.</li>
         <li>du postest, präsent bist, arbeitest – aber das Gefühl da ist: <strong>Da muss doch mehr gehen.</strong></li>
@@ -2650,8 +2650,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </ul>
     </div>
 
+    <div class="fuer-wen-title fuer-wen-title-nein">Dieser Workshop ist nicht für dich, wenn:</div>
     <div class="fuer-wen-box fuer-wen-nein">
-      <div class="fuer-wen-title">✕ Dieser Workshop ist nicht für dich, wenn:</div>
       <ul class="fuer-wen-list">
         <li>du eine <strong>schnelle Abkürzung</strong> suchst, ohne selbst in die Umsetzung zu gehen.</li>
         <li>du einfach nur mal wieder ein paar <strong>kostenfreie Tipps abgreifen</strong> willst, die du dann eh nicht umsetzt.</li>
