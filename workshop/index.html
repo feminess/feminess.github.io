@@ -1378,6 +1378,61 @@ body {
   .ws-journey-cards { grid-template-columns: 1fr; }
   .ws-how-inner h2 { white-space: normal; }
 }
+
+/* ── WS TESTIMONIALS (begeisterte Frauen) ── */
+.ws-testi-section {
+  background: #fff;
+  padding: 88px 0;
+  border-bottom: 1px solid var(--beige);
+}
+.ws-testi-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+.ws-testi-header { margin-bottom: 56px; text-align: center; }
+.mobile-br { display: none; }
+@media (max-width: 600px) { .mobile-br { display: inline; } }
+.ws-testi-header h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(30px, 4.2vw, 46px);
+  font-weight: 600;
+  color: #0a3828;
+  line-height: 1.15;
+}
+.ws-testi-header h2 em { font-style: normal; font-weight: 600; color: inherit; }
+.ws-testi-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.ws-testi-card {
+  background: var(--off-white);
+  border: 1px solid var(--beige);
+  border-radius: 4px;
+  padding: 32px 28px;
+  position: relative;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+.ws-testi-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%);
+  border-radius: 4px 4px 0 0;
+}
+.ws-testi-card:hover { box-shadow: 0 8px 28px rgba(37,124,108,0.10); transform: translateY(-3px); }
+.ws-testi-stars { font-family: 'Montserrat', sans-serif; font-size: 14px; color: var(--sand); letter-spacing: 4px; margin-bottom: 20px; }
+.ws-testi-text { font-family: 'Montserrat', sans-serif; font-size: 16px; color: #0a3828; line-height: 1.8; margin-bottom: 20px; }
+.ws-testi-author { font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #0a3828; }
+@media (max-width: 900px) {
+  .ws-testi-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 680px) {
+  .ws-testi-grid { grid-template-columns: 1fr; }
+  .ws-testi-card { padding: 24px 20px; }
+}
 .about-inner {
   display: grid;
   grid-template-columns: 5fr 7fr;
@@ -2617,6 +2672,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 </div>
+
+<!-- ── WS TESTIMONIALS (begeisterte Frauen) ── -->
+<section class="ws-testi-section">
+  <div class="ws-testi-inner">
+    <div class="ws-testi-header">
+      <h2>Das sagen unsere<br class="mobile-br"> begeisterten <em>Frauen</em></h2>
+    </div>
+    <div class="ws-testi-grid">
+      <div class="ws-testi-card">
+        <div class="ws-testi-stars">★ ★ ★ ★ ★</div>
+        <p class="ws-testi-text">Das war ein mega Event! Es war intensiv, energiegeladen, motivierend und hat einfach Spaß gemacht. Marina hat einen tollen Überblick gegeben, auf was es ankommt, wenn man erfolgreich sein möchte. Verständlich, klar und nachvollziehbar. Inhaltlich war so unglaublich viel dabei: Mindset &amp; Strategie. Absolut überzeugend. Deswegen werde ich meinen Weg mit Feminess gehen.</p>
+        <p class="ws-testi-author">Anja M.</p>
+      </div>
+      <div class="ws-testi-card">
+        <div class="ws-testi-stars">★ ★ ★ ★ ★</div>
+        <p class="ws-testi-text">Ich liebe die Zusammenarbeit mit Marina so sehr. Durch sie hat sich so viel in meinem Unternehmen erleichtert. Ich arbeite viel weniger, hab viel mehr Umsatz, es fällt mir viel leichter. Ich mache monatlich 6-stellige Umsätze und bin Marina einfach unendlich dankbar.</p>
+        <p class="ws-testi-author">Sigrid Aviana Waedt</p>
+      </div>
+      <div class="ws-testi-card">
+        <div class="ws-testi-stars">★ ★ ★ ★ ★</div>
+        <p class="ws-testi-text">Es war unfassbar energetisch. Mit so vielen starken Powerfrauen. Ich habe viel über mich, meine tiefsten Wünsche und meine Blockaden gelernt. Ich habe so viele verschiedene Emotionen gespürt und es hat mich wach gerüttelt, etwas zu ändern. Nicht irgendwann, sondern jetzt. Ich bin so dankbar, dass ich dabei sein durfte.</p>
+        <p class="ws-testi-author">Jana M.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 <!-- ── TESTIMONIALS ── -->
