@@ -1747,7 +1747,7 @@ body {
 .mid-countdown-wrap {
   display: flex;
   align-items: flex-end;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 28px;
   margin-bottom: 28px;
   flex-wrap: wrap;
@@ -1771,16 +1771,12 @@ body {
   text-align: center;
 }
 .mid-cd-num {
-  display: inline-block;
   font-family: 'Montserrat', sans-serif;
-  font-size: 44px;
-  font-weight: 700;
+  font-size: 52px;
+  font-weight: 600;
   color: #fff;
   line-height: 1;
-  letter-spacing: 0;
-  border: 1.5px solid rgba(255,255,255,0.55);
-  border-radius: 14px;
-  padding: 10px 18px;
+  letter-spacing: -1px;
 }
 .mid-cd-lbl {
   font-family: 'Montserrat', sans-serif;
@@ -1793,11 +1789,11 @@ body {
 }
 .mid-cd-sep {
   font-family: 'Montserrat', sans-serif;
-  font-size: 20px;
-  color: rgba(255,255,255,0.4);
-  font-weight: 700;
+  font-size: 40px;
+  color: rgba(255,255,255,0.15);
+  font-weight: 300;
   line-height: 1;
-  margin-bottom: 22px;
+  margin-bottom: 14px;
 }
 
 /* ── RESPONSIVE ── */
@@ -1839,9 +1835,10 @@ body {
   .final-cta-inner { padding: 0 24px; }
   .popup-box { padding: 36px 24px 28px; }
   .topbar p { font-size: 9.5px; letter-spacing: 1.5px; }
-  .mid-countdown-wrap { gap: 6px; flex-wrap: nowrap; }
-  .mid-cd-num { font-size: 24px; padding: 7px 12px; }
-  .mid-cd-sep { font-size: 14px; margin-bottom: 14px; }
+  .mid-countdown-wrap { gap: 10px; flex-wrap: nowrap; }
+  .mid-cd-num { font-size: 28px; }
+  .mid-cd-sep { font-size: 24px; margin-bottom: 8px; }
+  .mid-cd-lbl { font-size: 7px; }
   .mid-cd-lbl { font-size: 7px; }
   /* Hero kompakter auf Mobile → Button direkt sichtbar */
   .hero-exclusive-label { font-size: 8.5px; letter-spacing: 1.5px; margin-bottom: 14px; padding: 5px 12px; }
