@@ -833,34 +833,28 @@ body {
 }
 
 .wie-pain-title {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 2.5px;
-  color: #0a3828;
-  margin-bottom: 16px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(28px, 3.6vw, 40px);
+  font-weight: 600;
+  color: var(--rose);
+  margin-bottom: 20px;
 }
 .wie-pain-list {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  margin-bottom: 28px;
+  gap: 22px;
 }
 .wie-pain-list li {
   display: flex;
   align-items: flex-start;
-  gap: 12px;
+  gap: 14px;
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   color: #0a3828;
   line-height: 1.6;
-  padding: 14px 16px;
-  background: var(--off-white);
-  border-left: 2px solid var(--rose-light);
-  border-radius: 12px;
 }
-.wie-pain-list li::before { content: '✗'; color: var(--rose-light); font-weight: 700; flex-shrink: 0; }
+.wie-pain-list li::before { content: '✗'; color: var(--rose); font-weight: 700; flex-shrink: 0; }
 .wie-gain-title {
   font-family: 'Montserrat', sans-serif;
   font-size: 10px;
@@ -904,9 +898,9 @@ body {
 .wie-fliesstext p:last-child { margin-bottom: 0; }
 .wie-vermeiden-box {
   max-width: 700px;
-  background: var(--off-white);
-  border: 1px solid var(--beige);
-  border-radius: 4px;
+  background: rgba(207,90,115,0.08);
+  border: 1px solid rgba(207,90,115,0.3);
+  border-radius: 20px;
   padding: 32px 36px;
   margin-bottom: 20px;
 }
@@ -2237,8 +2231,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
     <!-- Vermeiden-Box -->
+    <div class="wie-pain-title">Was unsere Kundinnen nicht mehr tun</div>
     <div class="wie-vermeiden-box">
-      <div class="wie-pain-title">Was unsere Kundinnen nicht mehr tun</div>
       <ul class="wie-pain-list">
         <li><span>täglich posten, nur damit der <strong>Algorithmus</strong> zufrieden ist</span></li>
         <li><span>fremde <strong>Formeln kopieren</strong>, die sich nicht richtig anfühlen</span></li>
