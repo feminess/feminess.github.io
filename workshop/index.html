@@ -1277,6 +1277,107 @@ body {
   .ws-speaker-inner { flex-direction: column; gap: 32px; }
   .ws-speaker-portrait { flex: none; width: 100%; }
 }
+
+/* ── WS WIEDERGEBURT (Journey Cards) ── */
+.ws-how-section {
+  background: var(--teal-dark);
+  padding: 110px 0;
+  position: relative;
+  overflow: hidden;
+}
+.ws-how-section::before {
+  content: '';
+  position: absolute;
+  top: -120px; left: -120px;
+  width: 700px; height: 700px;
+  background: radial-gradient(circle, rgba(37,124,108,0.18) 0%, transparent 60%);
+  pointer-events: none;
+}
+.ws-how-section::after {
+  content: '';
+  position: absolute;
+  bottom: -100px; right: -100px;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(207,90,115,0.12) 0%, transparent 60%);
+  pointer-events: none;
+}
+.ws-how-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 40px;
+  position: relative;
+  z-index: 1;
+}
+.ws-how-inner h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(30px, 4.2vw, 46px);
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 16px;
+  white-space: nowrap;
+}
+.ws-how-inner h2 em { font-style: normal; color: var(--sand); }
+.ws-how-intro {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  max-width: 800px;
+  margin: 0 auto 72px;
+  line-height: 1.8;
+}
+.ws-journey-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 64px;
+}
+.ws-journey-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 40px 32px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 0 1.5px #c4907e, 0 4px 20px rgba(160,104,90,0.12);
+}
+.ws-journey-step-number {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 56px;
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: 8px;
+  color: var(--teal);
+  display: block;
+}
+.ws-journey-card-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 27px;
+  font-weight: 600;
+  color: #0a3828;
+  margin: 0 0 16px;
+  line-height: 1.3;
+}
+.ws-journey-card-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  color: var(--warm-gray);
+  line-height: 1.75;
+  margin: 0 0 12px;
+}
+.ws-journey-card-hint {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  color: var(--warm-gray);
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--beige);
+  line-height: 1.6;
+}
+@media (max-width: 760px) {
+  .ws-journey-cards { grid-template-columns: 1fr; }
+  .ws-how-inner h2 { white-space: normal; }
+}
 .about-inner {
   display: grid;
   grid-template-columns: 5fr 7fr;
@@ -2319,6 +2420,41 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p>Ich helfe Coaches, Beraterinnen und Therapeutinnen dabei, ein Business aufzubauen, das <strong>wahrhaftig zu ihnen passt</strong>. Nicht zu einem Algorithmus. Nicht zu einer Marketing-Schablone. Sondern zu ihnen – was sie <strong>erfüllt und sich leicht anfühlt</strong>.</p>
       <p>Meine geprüfte Methode „<strong>NeuroScaling</strong>" verbindet Business-Strategie mit Nervensystemarbeit. Weil stabiler und steigender Umsatz nur dann entsteht, wenn beides stimmt und vereint ist: die <strong>Strategie</strong> und die <strong>innere Ausrichtung</strong>.</p>
       <p>20+ Jahre Unternehmerin &middot; 20.000+ Frauen begleitet &middot; Gründerin von Feminess</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── WIEDERGEBURT ALS DU SELBST ── -->
+<section class="ws-how-section">
+  <div class="ws-how-inner">
+    <h2>Wiedergeburt als du <em>SELBST</em></h2>
+    <p class="ws-how-intro">Es erwartet dich nicht nur ein Live-Event, sondern deine <strong>Wiedergeburt</strong> als <strong>ungezähmte Unternehmerin</strong>, die bedingungslos für ihr erfolgreiches, freies Business einsteht.</p>
+    <div class="ws-journey-cards">
+
+      <div class="ws-journey-card">
+        <span class="ws-journey-step-number">01</span>
+        <h3 class="ws-journey-card-title">Telegram Community</h3>
+        <p class="ws-journey-card-text">Erhalte Impulse von Marina, die es nirgendwo sonst gibt. Frauen, die live anfangen, ihre Muster zu durchbrechen. Und dein erster Schritt in einem geschützten Raum, raus aus dem „alles alleine tragen zu müssen".</p>
+        <p class="ws-journey-card-hint">Sei dabei, bevor du etwas verpasst, das du nicht mal siehst.</p>
+      </div>
+
+      <div class="ws-journey-card">
+        <span class="ws-journey-step-number">02</span>
+        <h3 class="ws-journey-card-title">Live-Masterclass</h3>
+        <p class="ws-journey-card-text">Am <strong style="color:#0a3828;">22.–24. Juni 2026, jeweils 11–13 Uhr</strong> erlebst du live, was es wirklich braucht, um dein Business so aufzubauen, dass es wirklich zu dir passt.</p>
+        <p class="ws-journey-card-hint">Drei Sessions, die alles verändern.</p>
+      </div>
+
+      <div class="ws-journey-card">
+        <span class="ws-journey-step-number">03</span>
+        <h3 class="ws-journey-card-title">Breakthrough Coaching</h3>
+        <p class="ws-journey-card-text">Im Anschluss bekommst du dein persönliches Breakthrough Coaching, damit du das Gelernte direkt umsetzen kannst.</p>
+        <p class="ws-journey-card-hint">Endlich deinen ungezähmten Erfolg leben – als du selbst.</p>
+      </div>
+
+    </div>
+    <div style="text-align:center;">
+      <a href="#" onclick="document.getElementById('exitPopup').classList.add('is-visible'); return false;" class="cta-btn cta-btn-inline">Yes, ich bin dabei</a>
     </div>
   </div>
 </section>
