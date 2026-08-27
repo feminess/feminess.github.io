@@ -229,7 +229,7 @@ body {
    HERO
 ════════════════════════════════════ */
 .hero {
-  background: var(--dark);
+  background: var(--teal-dark);
   position: relative;
   overflow: hidden;
 }
@@ -312,11 +312,7 @@ body {
   font-weight: 600;
   line-height: 0.95;
   margin: 4px 0 12px;
-  background: linear-gradient(90deg, #d4a090 0%, #f0ccc0 50%, #d4a090 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
+  color: #fff;
 }
 
 .hero-scarcity-pill {
@@ -437,7 +433,7 @@ body {
 .hero-image::before {
   content: '';
   position: absolute; inset: 0;
-  background: linear-gradient(to right, var(--dark) 0%, rgba(13,36,32,0.20) 35%, transparent 60%);
+  background: linear-gradient(to right, var(--teal-dark) 0%, rgba(27,92,80,0.20) 35%, transparent 60%);
   z-index: 1;
   pointer-events: none;
 }
@@ -446,7 +442,7 @@ body {
   position: absolute;
   bottom: 0; left: 0; right: 0;
   height: 30%;
-  background: linear-gradient(to top, var(--dark) 0%, transparent 100%);
+  background: linear-gradient(to top, var(--teal-dark) 0%, transparent 100%);
   z-index: 1;
   pointer-events: none;
 }
@@ -502,7 +498,7 @@ body {
 /* ── SOCIAL PROOF BAR ── */
 .section-proof-bar {
   padding: 40px 0;
-  background: var(--dark);
+  background: var(--teal-dark);
   border-bottom: 1px solid rgba(255,255,255,0.06);
 }
 .proof-bar-inner {
@@ -529,7 +525,7 @@ body {
   font-weight: 700;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  color: var(--mid-gray);
+  color: #fff;
 }
 .proof-bar-divider {
   width: 1px;
@@ -560,7 +556,7 @@ body {
 .proof-bar-title {
   font-family: 'Montserrat', sans-serif;
   font-size: 11px;
-  color: var(--mid-gray);
+  color: #fff;
   font-weight: 400;
   letter-spacing: 0.5px;
 }
@@ -674,7 +670,7 @@ body {
 /* ── KOSTENLOS-BLOCK ── */
 .section-kostenlos {
   padding: 72px 0;
-  background: linear-gradient(135deg, var(--teal-dark) 0%, var(--dark) 100%);
+  background: var(--teal-dark);
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -714,7 +710,7 @@ body {
 .kostenlos-sub {
   font-family: 'Montserrat', sans-serif;
   font-size: 15px;
-  color: var(--mid-gray);
+  color: #fff;
   margin-bottom: 32px;
   line-height: 1.65;
 }
@@ -1118,7 +1114,7 @@ body {
 .agenda-tag-date {
   font-family: 'Montserrat', sans-serif;
   font-size: 10px;
-  color: var(--mid-gray);
+  color: #fff;
   margin-top: 4px;
   letter-spacing: 0.5px;
 }
@@ -1294,7 +1290,7 @@ body {
   margin-bottom: 14px;
 }
 .about-text p:last-of-type { margin-bottom: 0; }
-.about-text p strong { color: var(--dark); font-weight: 700; }
+.about-text p strong { color: #0a3828; font-weight: 700; }
 .about-cred-row {
   display: flex;
   flex-wrap: wrap;
@@ -1431,7 +1427,7 @@ body {
 /* ── MID CTA MIT COUNTDOWN ── */
 .section-mid-cta {
   padding: 72px 0;
-  background: var(--dark);
+  background: var(--teal-dark);
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -1477,7 +1473,7 @@ body {
 .mid-cta-sub {
   font-family: 'Montserrat', sans-serif;
   font-size: 15px;
-  color: var(--mid-gray);
+  color: #fff;
   margin-bottom: 32px;
   line-height: 1.65;
 }
@@ -1525,7 +1521,7 @@ body {
   font-weight: 400;
   color: #0a3828;
 }
-@media (max-width: 600px) { .faq-item h3 { font-size: 22px; } }
+@media (max-width: 600px) { .faq-item h3 { font-size: 33px; } }
 .faq-toggle {
   font-size: 20px;
   color: var(--teal);
@@ -1537,7 +1533,7 @@ body {
 .faq-item.open .faq-toggle { transform: rotate(45deg); }
 .faq-item p {
   font-family: 'Montserrat', sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   color: var(--warm-gray);
   line-height: 1.7;
   max-width: 680px;
@@ -1549,7 +1545,7 @@ body {
 /* ── FINAL CTA SECTION ── */
 .section-final-cta {
   padding: 100px 0;
-  background: var(--dark);
+  background: var(--teal-dark);
   position: relative;
   overflow: hidden;
   text-align: center;
@@ -1603,7 +1599,7 @@ body {
   font-size: clamp(20px, 2.7vw, 26px);
   font-weight: 300;
   font-style: italic;
-  color: var(--mid-gray);
+  color: #fff;
   margin-bottom: 32px;
 }
 .final-cta-bullets {
@@ -1675,7 +1671,7 @@ body {
 }
 .popup-overlay.is-visible { display: flex; }
 .popup-box {
-  background: var(--dark);
+  background: var(--teal-dark);
   border: 1px solid rgba(255,255,255,0.08);
   border-top: 3px solid var(--rose);
   border-radius: 3px;
@@ -1707,7 +1703,7 @@ body {
 .popup-box h2 em { font-style: normal; font-weight: 600; color: inherit; }
 .popup-box p {
   font-family: 'Montserrat', sans-serif;
-  font-size: 15px; color: var(--mid-gray); line-height: 1.65; margin-bottom: 28px;
+  font-size: 15px; color: #fff; line-height: 1.65; margin-bottom: 28px;
 }
 .popup-form { display: flex; flex-direction: column; gap: 8px; margin-bottom: 14px; }
 .popup-input {
@@ -1728,7 +1724,7 @@ body {
 .site-footer p {
   font-family: 'Montserrat', sans-serif;
   font-size: 12px;
-  color: var(--mid-gray);
+  color: var(--warm-gray);
 }
 .site-footer a { color: var(--teal); text-decoration: none; }
 .site-footer a:hover { text-decoration: underline; }
@@ -1737,11 +1733,11 @@ body {
 .section-anchor-cta {
   padding: 48px 0;
   text-align: center;
-  background: linear-gradient(135deg, var(--teal-dark) 0%, var(--dark) 100%);
+  background: var(--teal-dark);
 }
 .anchor-cta-note {
   font-family: 'Montserrat', sans-serif;
-  font-size: 12px; color: var(--mid-gray);
+  font-size: 12px; color: #fff;
   margin-top: 10px; font-style: italic;
 }
 
@@ -1816,7 +1812,7 @@ body {
   .hero-inner { grid-template-columns: 1fr; min-height: auto; }
   .hero-image { height: 25vh; order: -1; }
   .hero-image img { object-position: center 25%; }
-  .hero-image::before { background: linear-gradient(to bottom, transparent 50%, var(--dark) 100%); }
+  .hero-image::before { background: linear-gradient(to bottom, transparent 50%, var(--teal-dark) 100%); }
   .hero-image::after { display: none; }
   .hero-content { padding: 16px 32px 64px 40px; }
   .about-inner { grid-template-columns: 1fr; gap: 0; }
@@ -2503,7 +2499,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <li>Ein skalierbares Business-Modell ohne ständige Präsenz</li>
     </ul>
     <a href="#" onclick="document.getElementById('exitPopup').classList.add('is-visible'); return false;" class="cta-btn cta-btn-inline">JETZT FÜR 0 EUR ANMELDEN &rarr;</a>
-    <p style="font-family:'Montserrat',sans-serif;font-size:12px;color:var(--mid-gray);margin-top:12px;font-style:italic;">kostenfrei · Begrenzte Plätze · Bestätigung sofort per E-Mail</p>
+    <p style="font-family:'Montserrat',sans-serif;font-size:12px;color:#fff;margin-top:12px;font-style:italic;">kostenfrei · Begrenzte Plätze · Bestätigung sofort per E-Mail</p>
   </div>
 </section>
 
@@ -2665,7 +2661,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
   <div class="_button-wrapper _full_width">
   <button id="_form_581_submit" class="_submit" type="submit">
-    Für 0€ anmelden!
+    Für 0 EUR anmelden!
   </button>
   </div>
   <div class="_clear-element">
@@ -2707,7 +2703,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- ── FOOTER ── -->
 <footer class="site-footer">
   <p>&copy; 2026 Feminess &nbsp;·&nbsp; Marina Henze &nbsp;&nbsp;|&nbsp;&nbsp; <a href="https://feminess.github.io/Impressum/">Impressum</a> &nbsp;|&nbsp; <a href="https://feminess.github.io/Datenschutz/">Datenschutz</a></p>
-  <p style="margin-top:14px;font-size:11px;color:var(--mid-gray);max-width:640px;margin-left:auto;margin-right:auto;line-height:1.6;">This site is not a part of the Facebook website or Facebook Inc. Additionally, This site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc.</p>
+  <p style="margin-top:14px;font-size:11px;color:var(--warm-gray);max-width:640px;margin-left:auto;margin-right:auto;line-height:1.6;">This site is not a part of the Facebook website or Facebook Inc. Additionally, This site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc.</p>
 </footer>
 
 
