@@ -14,38 +14,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-@font-face {
-  font-family: 'East Liberty';
-  src: url('./CI/east_liberty_signature (1)/east liberty signature.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Avenir LT Pro';
-  src: url('./CI/AvenirLTPro-Book (1).otf') format('opentype');
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Avenir LT Pro';
-  src: url('./CI/AvenirLTPro-Heavy (1).otf') format('opentype');
-  font-weight: 700;
-  font-style: normal;
-}
 
 :root {
   --teal:        #257c6c;
   --teal-dark:   #1b5c50;
-  --teal-light:  #5ec6b3;
+  --teal-light:  #f8f6f2;
   --teal-pale:   #b8ddd8;
-  --teal-deep:   #144a40;
   --rose:        #cf5a73;
   --rose-light:  #e8a0b0;
   --sand:        #c2ab8d;
-  --sand-dark:   #8d6a48;
-  --sand-light:  #e4bc95;
   --black:       #070808;
   --dark:        #0d2420;
   --off-white:   #f8f6f2;
@@ -56,32 +35,33 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+em, i { font-style: normal; }
 html { scroll-behavior: smooth; }
 body {
-  background: #fff;
-  color: var(--black);
-  font-family: 'Avenir LT Pro', 'Inter', system-ui, sans-serif;
-  font-size: 21px;
-  line-height: 1.78;
+  background: var(--off-white);
+  color: #0a3828;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  line-height: 1.75;
   -webkit-font-smoothing: antialiased;
 }
 
 /* ── TOPBAR ── */
 .topbar {
-  background: var(--rose);
+  background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%);
   padding: 11px 24px;
   text-align: center;
 }
 .topbar p {
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 2.5px;
   text-transform: uppercase;
-  color: #fff;
+  color: var(--dark);
 }
-.topbar strong { color: #fff; }
-.topbar a { color: #fff; text-decoration: underline; }
+.topbar strong { color: var(--dark); }
+.topbar a { color: var(--dark); text-decoration: underline; }
 
 /* ── STICKY COUNTDOWN ── */
 .topbar-countdown {
@@ -99,7 +79,7 @@ body {
   flex-wrap: wrap;
 }
 .topbar-countdown-label {
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 2.5px;
@@ -110,9 +90,9 @@ body {
 .topbar-countdown-units { display: flex; align-items: center; gap: 4px; }
 .topbar-cd-unit { display: flex; align-items: baseline; gap: 4px; }
 .topbar-cd-num {
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 22px;
-  font-weight: 400;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
   color: #fff;
   min-width: 30px;
   text-align: center;
@@ -120,36 +100,32 @@ body {
   line-height: 1;
 }
 .topbar-cd-lbl {
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 9px;
   font-weight: 700;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  color: var(--teal-light);
+  color: var(--teal-pale);
 }
 .topbar-cd-sep { font-size: 18px; color: var(--teal); font-weight: 300; margin: 0 3px; line-height: 1; }
 
 /* ── FLOATING CTA ── */
-@keyframes pulse-cta {
-  0%, 100% { transform: scale(1);    box-shadow: 0 6px 28px rgba(207,90,115,0.50); }
-  50%       { transform: scale(1.07); box-shadow: 0 10px 36px rgba(207,90,115,0.65); }
-}
 .floating-cta {
   position: fixed;
   bottom: 32px;
   right: 32px;
   z-index: 200;
-  background: var(--rose);
-  color: #fff;
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%);
+  color: var(--dark);
+  font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   font-weight: 700;
-  letter-spacing: 0.6px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
   padding: 16px 28px;
-  border-radius: 2px;
+  border-radius: 999px;
   text-decoration: none;
-  box-shadow: 0 6px 28px rgba(207,90,115,0.50);
-  animation: pulse-cta 2s ease-in-out infinite;
+  animation: pulse-btn 2.2s ease-in-out infinite;
   white-space: nowrap;
   opacity: 0;
   pointer-events: none;
@@ -161,7 +137,7 @@ body {
   pointer-events: auto;
   transform: translateY(0);
 }
-.floating-cta:hover { background: #b5405a; animation: none; transform: translateY(-3px) scale(1.05); }
+.floating-cta:hover { opacity: 0.88; animation: none; transform: translateY(-3px); }
 @media (max-width: 640px) {
   .floating-cta { bottom: 20px; right: 16px; left: 16px; text-align: center; }
 }
@@ -172,7 +148,7 @@ body {
 
 /* ── SECTION KICKER ── */
 .section-kicker {
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 3.5px;
@@ -196,7 +172,7 @@ body {
    WS INFO BAR (nach Header)
 ════════════════════════════════════ */
 .ws-info-bar {
-  background: var(--teal-deep);
+  background: var(--teal-dark);
   border-bottom: 1px solid rgba(94,198,179,0.12);
   padding: 40px 24px;
 }
@@ -223,7 +199,7 @@ body {
   line-height: 1;
 }
 .ws-info-box-title {
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 2px;
@@ -232,14 +208,14 @@ body {
   margin-bottom: 4px;
 }
 .ws-info-box-value {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 20px;
   font-weight: 400;
   color: #fff;
   line-height: 1.35;
 }
 .ws-info-box-sub {
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 13px;
   color: var(--teal-pale);
   line-height: 1.5;
@@ -289,7 +265,7 @@ body {
   border: 1px solid rgba(94,198,179,0.25);
   padding: 7px 16px;
   border-radius: 100px;
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 2px;
@@ -304,7 +280,7 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 3px;
@@ -322,21 +298,25 @@ body {
 
 .hero-h1-line {
   display: block;
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: clamp(30px, 3.8vw, 50px);
-  font-weight: 400;
+  font-weight: 600;
   line-height: 1.1;
   color: #fff;
   letter-spacing: -0.3px;
 }
 .hero-h1-accent {
   display: block;
-  font-family: 'East Liberty', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: clamp(58px, 8.5vw, 108px);
-  font-weight: 400;
+  font-weight: 600;
   line-height: 0.95;
-  color: var(--sand-light);
   margin: 4px 0 12px;
+  background: linear-gradient(90deg, #d4a090 0%, #f0ccc0 50%, #d4a090 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 .hero-scarcity-pill {
@@ -347,7 +327,7 @@ body {
   border: 1px solid rgba(207,90,115,0.30);
   padding: 7px 16px;
   border-radius: 100px;
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 1.5px;
@@ -360,7 +340,7 @@ body {
 @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
 
 .hero-sub {
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: clamp(19px, 2.3vw, 27px);
   font-weight: 400;
   font-style: normal;
@@ -384,7 +364,7 @@ body {
   border: 1px solid rgba(255,255,255,0.10);
   padding: 7px 14px;
   border-radius: 100px;
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 11.5px;
   font-weight: 500;
   color: var(--teal-pale);
@@ -398,9 +378,9 @@ body {
 .hero-input {
   background: rgba(255,255,255,0.07);
   border: 1px solid rgba(255,255,255,0.13);
-  border-radius: 2px;
+  border-radius: 8px;
   padding: 14px 16px;
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   color: #fff;
   outline: none;
@@ -412,26 +392,31 @@ body {
 .cta-btn {
   display: block;
   width: 100%;
-  background: var(--rose);
-  color: #fff;
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%);
+  color: var(--dark);
+  font-family: 'Montserrat', sans-serif;
   font-size: 15px;
   font-weight: 700;
-  letter-spacing: 0.8px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
   padding: 20px 32px;
-  border-radius: 2px;
+  border-radius: 999px;
   cursor: pointer;
   border: none;
   text-align: center;
   text-decoration: none;
-  transition: background 0.2s, box-shadow 0.2s;
-  box-shadow: 0 4px 22px rgba(207,90,115,0.40);
+  animation: pulse-btn 2.2s ease-in-out infinite;
 }
-.cta-btn:hover { background: #b5405a; box-shadow: 0 8px 30px rgba(207,90,115,0.55); }
+@media (min-width: 641px) { .cta-btn { font-size: 18px; } }
+.cta-btn:hover { opacity: 0.88; transform: translateY(-1px); animation: none; }
+@keyframes pulse-btn {
+  0%, 100% { transform: scale(1);    box-shadow: 0 6px 28px rgba(160,104,90,0.40); }
+  50%      { transform: scale(1.04); box-shadow: 0 10px 36px rgba(160,104,90,0.58); }
+}
 .cta-btn-inline { display: inline-block; width: auto; padding: 18px 44px; }
 
 .hero-cta-note {
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 11.5px;
   color: var(--warm-gray);
   margin-top: 10px;
@@ -477,7 +462,7 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 3px;
@@ -493,19 +478,19 @@ body {
   flex-shrink: 0;
 }
 .intro-band-headline {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: clamp(28px, 4vw, 46px);
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.2;
-  color: var(--black);
+  color: #0a3828;
   margin-bottom: 18px;
   max-width: 720px;
   margin-left: auto;
   margin-right: auto;
 }
-.intro-band-headline em { font-style: italic; color: var(--rose); }
+.intro-band-headline em { font-style: normal; font-weight: 600; color: inherit; }
 .intro-band-sub {
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   color: var(--warm-gray);
   font-style: italic;
@@ -535,11 +520,11 @@ body {
 .stars-row {
   display: flex;
   gap: 3px;
-  color: var(--sand-light);
+  color: var(--sand);
   font-size: 18px;
 }
 .stars-label {
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 1.5px;
@@ -566,14 +551,14 @@ body {
 }
 .proof-bar-avatar img { width: 100%; height: 100%; object-fit: cover; }
 .proof-bar-name {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 20px;
   font-weight: 400;
   color: #fff;
   line-height: 1.1;
 }
 .proof-bar-title {
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 11px;
   color: var(--mid-gray);
   font-weight: 400;
@@ -588,7 +573,7 @@ body {
   display: flex;
   align-items: center;
   gap: 6px;
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 11px;
   font-weight: 700;
   color: var(--teal-pale);
@@ -613,10 +598,10 @@ body {
   background: var(--off-white);
   border: 1px solid var(--beige);
   border-top: 3px solid var(--teal);
-  border-radius: 2px;
+  border-radius: 12px;
 }
 .benefit-faq-q {
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 2.5px;
@@ -625,7 +610,7 @@ body {
   margin-bottom: 12px;
 }
 .benefit-faq-a {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 19px;
   font-weight: 500;
   color: var(--dark);
@@ -633,7 +618,7 @@ body {
   margin-bottom: 12px;
 }
 .benefit-faq-detail {
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   color: var(--warm-gray);
   line-height: 1.65;
@@ -647,7 +632,7 @@ body {
   overflow: hidden;
 }
 .bekannt-label {
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 2.5px;
@@ -689,7 +674,7 @@ body {
 /* ── KOSTENLOS-BLOCK ── */
 .section-kostenlos {
   padding: 72px 0;
-  background: linear-gradient(135deg, var(--teal-deep) 0%, var(--dark) 100%);
+  background: linear-gradient(135deg, var(--teal-dark) 0%, var(--dark) 100%);
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -711,23 +696,23 @@ body {
   border: 1px solid rgba(228,188,149,0.30);
   padding: 8px 20px;
   border-radius: 100px;
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 28px;
-  font-weight: 400;
-  color: var(--sand-light);
+  font-weight: 600;
+  color: #fff;
   margin-bottom: 20px;
 }
 .kostenlos-headline {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: clamp(30px, 4.2vw, 52px);
-  font-weight: 400;
+  font-weight: 600;
   color: #fff;
   line-height: 1.15;
   margin-bottom: 12px;
 }
-.kostenlos-headline em { font-style: italic; color: var(--sand-light); white-space: nowrap; }
+.kostenlos-headline em { font-style: normal; font-weight: 600; color: inherit; white-space: nowrap; }
 .kostenlos-sub {
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 15px;
   color: var(--mid-gray);
   margin-bottom: 32px;
@@ -745,7 +730,7 @@ body {
   text-align: center;
 }
 .kostenlos-meta-label {
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 9px;
   font-weight: 700;
   letter-spacing: 2px;
@@ -754,7 +739,7 @@ body {
   margin-bottom: 4px;
 }
 .kostenlos-meta-value {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 22px;
   font-weight: 400;
   color: #fff;
@@ -764,7 +749,7 @@ body {
 /* ── DETAILS KARTEN ── */
 .section-details {
   padding: 72px 0;
-  background: var(--teal-deep);
+  background: var(--teal-dark);
   border-bottom: 1px solid var(--beige);
 }
 .details-grid {
@@ -776,7 +761,7 @@ body {
 .details-card {
   background: #fff;
   border: 1px solid var(--beige);
-  border-radius: 2px;
+  border-radius: 12px;
   padding: 32px 28px;
   text-align: center;
 }
@@ -786,7 +771,7 @@ body {
   display: block;
 }
 .details-card-label {
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 9px;
   font-weight: 700;
   letter-spacing: 2.5px;
@@ -795,7 +780,7 @@ body {
   margin-bottom: 8px;
 }
 .details-card-value {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 22px;
   font-weight: 500;
   color: var(--dark);
@@ -803,7 +788,7 @@ body {
   margin-bottom: 8px;
 }
 .details-card-note {
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 13px;
   color: var(--warm-gray);
   line-height: 1.55;
@@ -830,7 +815,7 @@ body {
 }
 .wie-block:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
 .wie-block-label {
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 9px;
   font-weight: 700;
   letter-spacing: 2.5px;
@@ -839,7 +824,7 @@ body {
   margin-bottom: 6px;
 }
 .wie-block-text {
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 15px;
   color: var(--dark);
   line-height: 1.7;
@@ -873,7 +858,7 @@ body {
 }
 
 .wie-pain-title {
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 2.5px;
@@ -892,18 +877,18 @@ body {
   display: flex;
   align-items: flex-start;
   gap: 12px;
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   color: var(--dark);
   line-height: 1.6;
   padding: 14px 16px;
   background: var(--off-white);
   border-left: 2px solid var(--rose-light);
-  border-radius: 2px;
+  border-radius: 12px;
 }
 .wie-pain-list li::before { content: '✗'; color: var(--rose-light); font-weight: 700; flex-shrink: 0; }
 .wie-gain-title {
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 2.5px;
@@ -921,14 +906,14 @@ body {
   display: flex;
   align-items: flex-start;
   gap: 12px;
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   color: var(--dark);
   line-height: 1.6;
   padding: 14px 16px;
   background: var(--cream);
   border-left: 2px solid var(--teal);
-  border-radius: 2px;
+  border-radius: 12px;
 }
 .wie-gain-list li::before { content: '✓'; color: var(--teal); font-weight: 700; flex-shrink: 0; }
 
@@ -937,7 +922,7 @@ body {
   margin-bottom: 40px;
 }
 .wie-fliesstext p {
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 17px;
   color: var(--dark);
   line-height: 1.85;
@@ -958,11 +943,11 @@ body {
   border: 1px solid #9ccfc8;
   border-radius: 4px;
   padding: 28px 36px;
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: clamp(20px, 2.4vw, 26px);
   font-weight: 500;
   font-style: italic;
-  color: var(--teal-deep);
+  color: var(--teal-dark);
   line-height: 1.5;
 }
 
@@ -982,7 +967,7 @@ body {
   border: 1px solid var(--rose-light);
 }
 .fuer-wen-title {
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   font-weight: 700;
   color: var(--dark);
@@ -995,7 +980,7 @@ body {
   gap: 12px;
 }
 .fuer-wen-list li {
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   color: var(--dark);
   line-height: 1.75;
@@ -1024,16 +1009,16 @@ body {
   border-bottom: 1px solid var(--beige);
 }
 .benefits-section-h2 {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: clamp(30px, 4.2vw, 46px);
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.15;
-  color: var(--black);
+  color: #0a3828;
   margin-bottom: 14px;
 }
-.benefits-section-h2 em { font-style: italic; color: var(--rose); }
+.benefits-section-h2 em { font-style: normal; font-weight: 600; color: inherit; }
 .benefits-intro {
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   color: var(--warm-gray);
   font-style: italic;
@@ -1049,11 +1034,11 @@ body {
 .benefit-card {
   background: #fff;
   border: 1px solid var(--beige);
-  border-radius: 2px;
+  border-radius: 12px;
   padding: 32px 28px;
 }
 .benefit-card-num {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 52px;
   font-weight: 300;
   color: var(--teal-pale);
@@ -1061,7 +1046,7 @@ body {
   margin-bottom: 16px;
 }
 .benefit-card h3 {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 20px;
   font-weight: 500;
   color: var(--teal-dark);
@@ -1069,7 +1054,7 @@ body {
   line-height: 1.25;
 }
 .benefit-card p {
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   color: var(--warm-gray);
   line-height: 1.7;
@@ -1081,16 +1066,16 @@ body {
   border-bottom: 1px solid var(--beige);
 }
 .agenda-section-h2 {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: clamp(30px, 4.2vw, 46px);
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.15;
-  color: var(--black);
+  color: #0a3828;
   margin-bottom: 14px;
 }
-.agenda-section-h2 em { font-style: italic; color: var(--rose); }
+.agenda-section-h2 em { font-style: normal; font-weight: 600; color: inherit; }
 .agenda-intro {
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   color: var(--warm-gray);
   font-style: italic;
@@ -1116,14 +1101,14 @@ body {
   padding-top: 4px;
 }
 .agenda-tag-num {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 46px;
   font-weight: 300;
   color: var(--teal-pale);
   line-height: 1;
 }
 .agenda-tag-word {
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 9px;
   font-weight: 700;
   letter-spacing: 2px;
@@ -1131,14 +1116,14 @@ body {
   color: var(--teal);
 }
 .agenda-tag-date {
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 10px;
   color: var(--mid-gray);
   margin-top: 4px;
   letter-spacing: 0.5px;
 }
 .agenda-tag-content .agenda-subtitle {
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 2px;
@@ -1147,15 +1132,15 @@ body {
   margin-bottom: 8px;
 }
 .agenda-tag-content h3 {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 23px;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--teal-dark);
   margin-bottom: 10px;
   line-height: 1.2;
 }
 .agenda-tag-content p {
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 15px;
   color: var(--warm-gray);
   line-height: 1.7;
@@ -1167,7 +1152,7 @@ body {
   gap: 8px;
 }
 .agenda-thema {
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   color: var(--dark);
   line-height: 1.6;
@@ -1190,10 +1175,10 @@ body {
   padding: 12px 16px;
   background: var(--cream);
   border-left: 2px solid var(--teal-light);
-  border-radius: 2px;
+  border-radius: 12px;
 }
 .agenda-ergebnis-label {
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 9px;
   font-weight: 700;
   letter-spacing: 2px;
@@ -1203,7 +1188,7 @@ body {
   padding-top: 2px;
 }
 .agenda-ergebnis p {
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   color: var(--dark);
   line-height: 1.6;
@@ -1217,12 +1202,12 @@ body {
   border: 1px solid rgba(228,188,149,0.30);
   padding: 4px 12px;
   border-radius: 100px;
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 9px;
   font-weight: 700;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  color: var(--sand-dark);
+  color: var(--teal);
   margin-bottom: 8px;
   width: fit-content;
 }
@@ -1253,7 +1238,7 @@ body {
   max-width: 680px;
 }
 .section-image-break-quote p {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: clamp(24px, 3.7vw, 40px);
   font-weight: 300;
   font-style: italic;
@@ -1261,7 +1246,7 @@ body {
   line-height: 1.45;
   text-shadow: 0 2px 20px rgba(0,0,0,0.4);
 }
-.section-image-break-quote p em { font-style: normal; color: var(--sand-light); }
+.section-image-break-quote p em { font-style: normal; font-weight: 600; color: inherit; }
 
 /* ── ÜBER MARINA ── */
 .section-about {
@@ -1278,7 +1263,7 @@ body {
 .about-image-wrap img {
   width: 100%; height: auto;
   display: block;
-  border-radius: 2px;
+  border-radius: 12px;
   aspect-ratio: 3/4;
   object-fit: cover;
   object-position: center top;
@@ -1289,20 +1274,20 @@ body {
   top: 16px; left: 16px;
   right: -16px; bottom: -16px;
   border: 1px solid var(--beige);
-  border-radius: 2px;
+  border-radius: 12px;
   z-index: -1;
   pointer-events: none;
 }
 .about-text h2 {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: clamp(30px, 3.7vw, 42px);
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.1;
-  color: var(--black);
+  color: #0a3828;
   margin-bottom: 20px;
 }
 .about-text p {
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 17px;
   color: var(--warm-gray);
   line-height: 1.75;
@@ -1324,7 +1309,7 @@ body {
   border: 1px solid var(--beige);
   padding: 6px 14px;
   border-radius: 100px;
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 11px;
   font-weight: 700;
   color: var(--teal-dark);
@@ -1338,16 +1323,16 @@ body {
   border-bottom: 1px solid var(--beige);
 }
 .section-h2 {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: clamp(30px, 4.2vw, 46px);
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.15;
-  color: var(--black);
+  color: #0a3828;
   margin-bottom: 18px;
 }
-.section-h2 em { font-style: italic; color: var(--rose); }
+.section-h2 em { font-style: normal; font-weight: 600; color: inherit; }
 .section-intro-text {
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   color: var(--warm-gray);
   font-style: italic;
@@ -1363,14 +1348,14 @@ body {
 .testimonial-card {
   background: #fff;
   padding: 28px;
-  border-radius: 2px;
+  border-radius: 12px;
   border: 1px solid var(--beige);
   display: flex;
   flex-direction: column;
   position: relative;
 }
 .testimonial-quote-mark {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 64px;
   font-weight: 300;
   color: var(--teal-pale);
@@ -1379,7 +1364,7 @@ body {
   display: block;
 }
 .testimonial-card blockquote {
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 15px;
   color: var(--dark);
   line-height: 1.7;
@@ -1403,18 +1388,18 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 16px;
   color: var(--teal-dark);
 }
 .testimonial-name {
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 13px;
   font-weight: 700;
   color: var(--dark);
 }
 .testimonial-role {
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 12px;
   color: var(--warm-gray);
 }
@@ -1429,7 +1414,7 @@ body {
   letter-spacing: 1px;
 }
 .testimonial-result-badge {
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 1.5px;
@@ -1462,7 +1447,7 @@ body {
 }
 .mid-cta-inner { position: relative; z-index: 1; }
 .mid-cta-kicker {
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 3px;
@@ -1481,16 +1466,16 @@ body {
   opacity: 0.5;
 }
 .mid-cta-h2 {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: clamp(30px, 4.2vw, 48px);
-  font-weight: 400;
+  font-weight: 600;
   color: #fff;
   line-height: 1.15;
   margin-bottom: 12px;
 }
-.mid-cta-h2 em { font-style: italic; color: var(--sand-light); }
+.mid-cta-h2 em { font-style: normal; font-weight: 600; color: inherit; }
 .mid-cta-sub {
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 15px;
   color: var(--mid-gray);
   margin-bottom: 32px;
@@ -1509,7 +1494,7 @@ body {
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   color: var(--teal-pale);
   line-height: 1.6;
@@ -1535,22 +1520,23 @@ body {
   gap: 16px;
 }
 .faq-item h3 {
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  color: var(--dark);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px;
+  font-weight: 400;
+  color: #0a3828;
 }
+@media (max-width: 600px) { .faq-item h3 { font-size: 22px; } }
 .faq-toggle {
   font-size: 20px;
   color: var(--teal);
   flex-shrink: 0;
   transition: transform 0.25s;
   line-height: 1;
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 .faq-item.open .faq-toggle { transform: rotate(45deg); }
 .faq-item p {
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 15px;
   color: var(--warm-gray);
   line-height: 1.7;
@@ -1585,7 +1571,7 @@ body {
   padding: 0 40px;
 }
 .final-cta-kicker {
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 3px;
@@ -1604,16 +1590,16 @@ body {
   opacity: 0.5;
 }
 .final-cta-h2 {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: clamp(30px, 4.2vw, 52px);
-  font-weight: 400;
+  font-weight: 600;
   color: #fff;
   line-height: 1.15;
   margin-bottom: 14px;
 }
-.final-cta-h2 em { font-style: italic; color: var(--sand-light); }
+.final-cta-h2 em { font-style: normal; font-weight: 600; color: inherit; }
 .final-cta-worauf {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: clamp(20px, 2.7vw, 26px);
   font-weight: 300;
   font-style: italic;
@@ -1633,7 +1619,7 @@ body {
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   color: var(--teal-pale);
   line-height: 1.6;
@@ -1644,9 +1630,9 @@ body {
 .cta-input {
   background: rgba(255,255,255,0.07);
   border: 1px solid rgba(255,255,255,0.13);
-  border-radius: 2px;
+  border-radius: 8px;
   padding: 15px 18px;
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 15px;
   color: #fff;
   outline: none;
@@ -1655,7 +1641,7 @@ body {
 .cta-input::placeholder { color: rgba(255,255,255,0.28); }
 .cta-input:focus { border-color: var(--teal-light); }
 .cta-privacy {
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 12px;
   color: var(--warm-gray);
   font-style: italic;
@@ -1664,11 +1650,11 @@ body {
 .cta-privacy a { color: var(--teal-light); text-decoration: none; }
 .final-cta-kostenlos-note {
   margin-top: 20px;
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 18px;
-  font-weight: 300;
-  font-style: italic;
-  color: var(--sand-light);
+  font-weight: 600;
+  font-style: normal;
+  color: #fff;
 }
 
 /* ── EXIT POPUP ── */
@@ -1707,34 +1693,34 @@ body {
 }
 .popup-close:hover { color: #fff; }
 .popup-kicker {
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 10px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase;
   color: var(--teal-light); margin-bottom: 16px;
   display: flex; align-items: center; gap: 10px;
 }
 .popup-kicker::before { content: ''; display: block; width: 20px; height: 1px; background: var(--teal-light); }
 .popup-box h2 {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: clamp(26px, 4.2vw, 38px);
-  font-weight: 400; color: #fff; line-height: 1.2; margin-bottom: 12px;
+  font-weight: 600; color: #fff; line-height: 1.2; margin-bottom: 12px;
 }
-.popup-box h2 em { font-style: italic; color: var(--sand-light); }
+.popup-box h2 em { font-style: normal; font-weight: 600; color: inherit; }
 .popup-box p {
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 15px; color: var(--mid-gray); line-height: 1.65; margin-bottom: 28px;
 }
 .popup-form { display: flex; flex-direction: column; gap: 8px; margin-bottom: 14px; }
 .popup-input {
   background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.13);
-  border-radius: 2px; padding: 13px 16px;
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  border-radius: 8px; padding: 13px 16px;
+  font-family: 'Montserrat', sans-serif;
   font-size: 14px; color: #fff; outline: none; transition: border-color 0.2s;
 }
 .popup-input::placeholder { color: rgba(255,255,255,0.28); }
 .popup-input:focus { border-color: var(--teal-light); }
 .popup-dismiss {
   display: block; text-align: center;
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 12px; color: var(--warm-gray); cursor: pointer;
   background: none; border: none; text-decoration: underline; text-underline-offset: 3px;
   margin-top: 10px; transition: color 0.15s;
@@ -1749,7 +1735,7 @@ body {
   text-align: center;
 }
 .site-footer p {
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 12px;
   color: var(--mid-gray);
 }
@@ -1760,10 +1746,10 @@ body {
 .section-anchor-cta {
   padding: 48px 0;
   text-align: center;
-  background: linear-gradient(135deg, var(--teal-deep) 0%, var(--dark) 100%);
+  background: linear-gradient(135deg, var(--teal-dark) 0%, var(--dark) 100%);
 }
 .anchor-cta-note {
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 12px; color: var(--mid-gray);
   margin-top: 10px; font-style: italic;
 }
@@ -1784,7 +1770,7 @@ body {
   flex-wrap: wrap;
 }
 .mid-cd-label {
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 2px;
@@ -1802,19 +1788,19 @@ body {
   gap: 2px;
   background: rgba(255,255,255,0.06);
   border: 1px solid rgba(255,255,255,0.10);
-  border-radius: 2px;
+  border-radius: 12px;
   padding: 10px 14px;
   min-width: 56px;
 }
 .mid-cd-num {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 30px;
   font-weight: 300;
   color: #fff;
   line-height: 1;
 }
 .mid-cd-lbl {
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 8px;
   font-weight: 700;
   letter-spacing: 1.5px;
@@ -1931,9 +1917,9 @@ body { font-size: 23px; }
   border-left:   1px solid rgba(255,255,255,0.13) !important;
   border-right:  1px solid rgba(255,255,255,0.13) !important;
   border-bottom: 1px solid rgba(255,255,255,0.13) !important;
-  border-radius: 2px !important;
+  border-radius: 8px !important;
   color: #fff !important;
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif !important;
+  font-family: 'Montserrat', sans-serif !important;
   font-size: 15px !important;
   padding: 14px 16px !important;
 }
@@ -1950,35 +1936,34 @@ body { font-size: 23px; }
   margin: 5px 0 0 0 !important;
   font-size: 11.5px !important;
   color: rgba(255,255,255,0.45) !important;
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif !important;
+  font-family: 'Montserrat', sans-serif !important;
   line-height: 1.4 !important;
 }
 #_form_563_ ._submit {
-  background: #cf5a73 !important;
+  background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%) !important;
   border: none !important;
-  border-radius: 2px !important;
-  color: #fff !important;
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif !important;
-  font-size: 11.5px !important;
+  border-radius: 999px !important;
+  color: var(--dark) !important;
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 15px !important;
   font-weight: 700 !important;
-  letter-spacing: 2.5px !important;
+  letter-spacing: 2px !important;
   text-transform: uppercase !important;
   padding: 18px 24px !important;
   width: 100% !important;
   cursor: pointer !important;
-  transition: background 0.2s, box-shadow 0.2s !important;
+  animation: pulse-btn 2.2s ease-in-out infinite !important;
   margin-top: 6px !important;
-  box-shadow: 0 4px 20px rgba(207,90,115,0.35) !important;
 }
 #_form_563_ ._submit:hover:not(:disabled) {
-  background: #b5405a !important;
-  box-shadow: 0 8px 30px rgba(207,90,115,0.55) !important;
+  opacity: 0.88 !important;
+  animation: none !important;
 }
 #_form_563_ ._form-branding,
 #_form_563_ ._form-branding * { display: none !important; }
 #_form_563_ ._form-thank-you {
-  color: var(--teal-light) !important;
-  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  color: #fff !important;
+  font-family: 'Cormorant Garamond', serif !important;
   font-size: 22px !important;
   text-align: center !important;
   padding: 24px 0 !important;
@@ -1987,7 +1972,7 @@ body { font-size: 23px; }
 #_form_563_ ._error-inner {
   background-color: rgba(207,90,115,0.18) !important;
   color: #fff !important;
-  border-radius: 2px !important;
+  border-radius: 8px !important;
 }
 
 
@@ -2003,9 +1988,9 @@ body { font-size: 23px; }
 .ac-form-alt input[type="email"] {
   background: rgba(255,255,255,0.07);
   border: 1px solid rgba(255,255,255,0.13);
-  border-radius: 2px;
+  border-radius: 8px;
   color: #fff;
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 15px;
   padding: 14px 16px;
   width: 100%;
@@ -2018,26 +2003,25 @@ body { font-size: 23px; }
 }
 .ac-form-alt input::placeholder { color: rgba(255,255,255,0.38); }
 .ac-form-alt .ac-submit {
-  background: #cf5a73;
+  background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%);
   border: none;
-  border-radius: 2px;
-  color: #fff;
-  font-family: 'Avenir LT Pro', 'Inter', sans-serif;
-  font-size: 11.5px;
+  border-radius: 999px;
+  color: var(--dark);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
   font-weight: 700;
-  letter-spacing: 2.5px;
+  letter-spacing: 2px;
   text-transform: uppercase;
   padding: 18px 24px;
   width: 100%;
   cursor: pointer;
-  transition: background 0.2s, box-shadow 0.2s;
+  animation: pulse-btn 2.2s ease-in-out infinite;
   margin-top: 6px;
-  box-shadow: 0 4px 20px rgba(207,90,115,0.35);
 }
-.ac-form-alt .ac-submit:hover { background: #b5405a; box-shadow: 0 8px 30px rgba(207,90,115,0.55); }
+.ac-form-alt .ac-submit:hover { opacity: 0.88; animation: none; }
 .ac-form-alt-success {
-  color: #5ec6b3;
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  color: #fff;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 22px;
   text-align: center;
   padding: 24px 0;
@@ -2100,8 +2084,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </span>
       </div>
 
-      <a href="#" onclick="document.getElementById('exitPopup').classList.add('is-visible'); return false;" class="cta-btn cta-btn-inline" style="margin-top:0;">JETZT FÜR 0€ ANMELDEN →</a>
-      <p style="font-family:'Avenir LT Pro','Inter',sans-serif;font-size:13px;color:rgba(255,255,255,0.5);margin-top:10px;line-height:1.5;">Die Teilnahme zu True Spirit Business vom 22. bis 24.06 ist 100% kostenlos.</p>
+      <a href="#" onclick="document.getElementById('exitPopup').classList.add('is-visible'); return false;" class="cta-btn cta-btn-inline" style="margin-top:0;">JETZT FÜR 0 EUR ANMELDEN →</a>
+      <p style="font-family:'Montserrat',sans-serif;font-size:13px;color:rgba(255,255,255,0.5);margin-top:10px;line-height:1.5;">Die Teilnahme zu True Spirit Business vom 22. bis 24.06 ist 100% kostenlos.</p>
 
       <div class="mid-countdown-wrap" style="margin-top:22px;">
         <span class="mid-cd-label">Workshop startet in</span>
@@ -2201,8 +2185,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="section-benefit-faq">
   <div class="container">
     <div class="section-kicker">Was dich erwartet</div>
-    <h2 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(28px,4vw,44px);font-weight:500;color:var(--black);line-height:1.15;margin-bottom:14px;">Was du im TRUE SPIRIT BUSINESS lernst:</h2>
-    <p style="font-family:'Avenir LT Pro','Inter',sans-serif;font-size:16px;color:var(--warm-gray);margin-bottom:0;line-height:1.75;"><strong>Kein „noch mehr posten".</strong> Kein „noch härter arbeiten". Kein Business-Modell, das nur dann funktioniert, wenn du <strong>jeden Tag etwas tust</strong>.<br><br>In diesen <strong>3 Sessions</strong> zeige ich dir, wie du dein Business so aufbaust, dass es <strong>wirklich zu dir passt</strong>. Eines, das auch dann funktioniert, wenn du mal nicht funktionieren willst. Und das <strong>stabilen Umsatz</strong> bringt, auch wenn du gerade auf Bali Kokosnüsse schlürfst.</p>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(28px,4vw,44px);font-weight:600;color:#0a3828;line-height:1.15;margin-bottom:14px;">Was du im TRUE SPIRIT BUSINESS lernst:</h2>
+    <p style="font-family:'Montserrat',sans-serif;font-size:16px;color:var(--warm-gray);margin-bottom:0;line-height:1.75;"><strong>Kein „noch mehr posten".</strong> Kein „noch härter arbeiten". Kein Business-Modell, das nur dann funktioniert, wenn du <strong>jeden Tag etwas tust</strong>.<br><br>In diesen <strong>3 Sessions</strong> zeige ich dir, wie du dein Business so aufbaust, dass es <strong>wirklich zu dir passt</strong>. Eines, das auch dann funktioniert, wenn du mal nicht funktionieren willst. Und das <strong>stabilen Umsatz</strong> bringt, auch wenn du gerade auf Bali Kokosnüsse schlürfst.</p>
     <div class="benefit-faq-grid" style="margin-top:40px;">
 
       <div class="benefit-faq-card">
@@ -2232,8 +2216,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="section-kostenlos" id="info">
   <div class="container mid-cta-inner">
     <div class="kostenlos-badge">100% kostenfrei</div>
-    <h2 class="kostenlos-headline">Dein Platz bei <em>TRUE SPIRIT BUSINESS</em><br>– vollständig kostenfrei.</h2>
-    <a href="#" onclick="document.getElementById('exitPopup').classList.add('is-visible'); return false;" class="cta-btn cta-btn-inline">JETZT FÜR 0€ ANMELDEN &rarr;</a>
+    <h2 class="kostenlos-headline">Dein Platz bei <em>TRUE SPIRIT BUSINESS</em><br><span style="font-family:'Montserrat',sans-serif;">-</span> vollständig kostenfrei.</h2>
+    <a href="#" onclick="document.getElementById('exitPopup').classList.add('is-visible'); return false;" class="cta-btn cta-btn-inline">JETZT FÜR 0 EUR ANMELDEN &rarr;</a>
     <div class="mid-countdown-wrap" style="margin-top:28px;">
       <span class="mid-cd-label">Workshop startet in</span>
       <div class="mid-cd-unit">
@@ -2263,7 +2247,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="section-wie">
   <div class="container">
     <div class="section-kicker">Wie TRUE SPIRIT BUSINESS dir hilft</div>
-    <h2 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(28px,4vw,44px);font-weight:500;color:var(--black);line-height:1.15;margin-bottom:32px;">Was verändert sich bei dir <span style="font-style:italic;color:var(--rose);">wirklich?</span></h2>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(28px,4vw,44px);font-weight:600;color:#0a3828;line-height:1.15;margin-bottom:32px;">Was verändert sich bei dir <em>wirklich?</em></h2>
 
     <img src="./Bilder/Marina_wie_section.jpg" alt="Marina Henze – Feminess" style="width:100%;max-height:520px;object-fit:cover;object-position:center top;border-radius:4px;display:block;margin-bottom:40px;">
 
@@ -2301,8 +2285,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="section-kostenlos">
   <div class="container mid-cta-inner">
     <div class="kostenlos-badge">100% kostenfrei</div>
-    <h2 class="kostenlos-headline">Dein Platz bei <em>TRUE SPIRIT BUSINESS</em><br>– vollständig kostenfrei.</h2>
-    <a href="#" onclick="document.getElementById('exitPopup').classList.add('is-visible'); return false;" class="cta-btn cta-btn-inline">JETZT FÜR 0€ ANMELDEN &rarr;</a>
+    <h2 class="kostenlos-headline">Dein Platz bei <em>TRUE SPIRIT BUSINESS</em><br><span style="font-family:'Montserrat',sans-serif;">-</span> vollständig kostenfrei.</h2>
+    <a href="#" onclick="document.getElementById('exitPopup').classList.add('is-visible'); return false;" class="cta-btn cta-btn-inline">JETZT FÜR 0 EUR ANMELDEN &rarr;</a>
     <div class="mid-countdown-wrap" style="margin-top:28px;">
       <span class="mid-cd-label">Workshop startet in</span>
       <div class="mid-cd-unit">
@@ -2371,7 +2355,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <div class="agenda-tag-content">
           <div class="agenda-subtitle">NeuroScaling · Identity Blueprint · Power of Positioning</div>
-          <h3>Deine Wachstums-Bremse lösen &amp; deine unverwechselbare Positionierung finden</h3>
+          <h3>Deine Wachstums<span style="font-family:'Montserrat',sans-serif;">-</span>Bremse lösen &amp; deine unverwechselbare Positionierung finden</h3>
           <div class="agenda-themen">
             <div class="agenda-thema">
               <p><strong>NeuroScaling</strong></p>
@@ -2449,8 +2433,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="section-kostenlos">
   <div class="container mid-cta-inner">
     <div class="kostenlos-badge">100% kostenfrei</div>
-    <h2 class="kostenlos-headline">Dein Platz bei <em>TRUE SPIRIT BUSINESS</em><br>– vollständig kostenfrei.</h2>
-    <a href="#" onclick="document.getElementById('exitPopup').classList.add('is-visible'); return false;" class="cta-btn cta-btn-inline">JETZT FÜR 0€ ANMELDEN &rarr;</a>
+    <h2 class="kostenlos-headline">Dein Platz bei <em>TRUE SPIRIT BUSINESS</em><br><span style="font-family:'Montserrat',sans-serif;">-</span> vollständig kostenfrei.</h2>
+    <a href="#" onclick="document.getElementById('exitPopup').classList.add('is-visible'); return false;" class="cta-btn cta-btn-inline">JETZT FÜR 0 EUR ANMELDEN &rarr;</a>
     <div class="mid-countdown-wrap" style="margin-top:28px;">
       <span class="mid-cd-label">Workshop startet in</span>
       <div class="mid-cd-unit">
@@ -2600,8 +2584,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <li>Identity Blueprint: deine Nische, dein Angebot, dein Marketing</li>
       <li>Ein skalierbares Business-Modell ohne ständige Präsenz</li>
     </ul>
-    <a href="#" onclick="document.getElementById('exitPopup').classList.add('is-visible'); return false;" class="cta-btn cta-btn-inline">JETZT FÜR 0€ ANMELDEN &rarr;</a>
-    <p style="font-family:'Avenir LT Pro','Inter',sans-serif;font-size:12px;color:var(--mid-gray);margin-top:12px;font-style:italic;">kostenfrei · Begrenzte Plätze · Bestätigung sofort per E-Mail</p>
+    <a href="#" onclick="document.getElementById('exitPopup').classList.add('is-visible'); return false;" class="cta-btn cta-btn-inline">JETZT FÜR 0 EUR ANMELDEN &rarr;</a>
+    <p style="font-family:'Montserrat',sans-serif;font-size:12px;color:var(--mid-gray);margin-top:12px;font-style:italic;">kostenfrei · Begrenzte Plätze · Bestätigung sofort per E-Mail</p>
   </div>
 </section>
 
@@ -2674,7 +2658,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h2 class="final-cta-h2">Melde dich jetzt kostenlos zum<br><em>TRUE SPIRIT BUSINESS</em> Workshop an</h2>
     <p class="final-cta-worauf">bevor alle Plätze vergeben sind!</p>
 
-    <a href="#" onclick="document.getElementById('exitPopup').classList.add('is-visible'); return false;" class="cta-btn cta-btn-inline">JETZT FÜR 0€ ANMELDEN &rarr;</a>
+    <a href="#" onclick="document.getElementById('exitPopup').classList.add('is-visible'); return false;" class="cta-btn cta-btn-inline">JETZT FÜR 0 EUR ANMELDEN &rarr;</a>
   </div>
 </section>
 
@@ -2740,7 +2724,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
         </div>
         <div class="_button-wrapper _full_width">
-          <button id="_form_563_submit" class="_submit" type="submit">Für 0€ anmelden!</button>
+          <button id="_form_563_submit" class="_submit" type="submit">Für 0 EUR anmelden!</button>
         </div>
         <div class="_clear-element"></div>
       </div>
@@ -2755,7 +2739,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 
 <!-- ── FLOATING CTA ── -->
-<a href="#" class="floating-cta" onclick="document.getElementById('exitPopup').classList.add('is-visible'); return false;">Jetzt für 0€ anmelden</a>
+<a href="#" class="floating-cta" onclick="document.getElementById('exitPopup').classList.add('is-visible'); return false;">Jetzt für 0 EUR anmelden</a>
 <script>
 (function() {
   var btn = document.querySelector('.floating-cta');
