@@ -296,23 +296,19 @@ body {
   flex-shrink: 0;
 }
 
-.hero-h1-line {
-  display: block;
+.hero-headline h1 {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(30px, 3.8vw, 50px);
-  font-weight: 600;
-  line-height: 1.1;
-  color: #fff;
-  letter-spacing: -0.3px;
-}
-.hero-h1-accent {
-  display: block;
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(58px, 8.5vw, 108px);
-  font-weight: 600;
-  line-height: 0.95;
-  margin: 4px 0 12px;
-  color: #fff;
+  font-size: 80px;
+  font-weight: 400;
+  line-height: 1.0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  margin-bottom: 24px;
+  background: linear-gradient(90deg, #d4a090 0%, #f0ccc0 50%, #d4a090 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .hero-scarcity-pill {
@@ -1845,8 +1841,7 @@ body {
   .mid-cd-sep { font-size: 24px; margin-bottom: 4px; }
   /* Hero kompakter auf Mobile → Button direkt sichtbar */
   .hero-exclusive-label { font-size: 8.5px; letter-spacing: 1.5px; margin-bottom: 14px; padding: 5px 12px; }
-  .hero-h1-line { font-size: 26px; }
-  .hero-h1-accent { font-size: 50px; margin: 2px 0 6px; }
+  .hero-headline h1 { font-size: 9vw; white-space: nowrap; margin-bottom: 16px; }
   .hero-sub { font-size: 16px !important; margin-bottom: 18px; }
   .hero-scarcity-pill { margin-bottom: 14px; }
 }
@@ -1981,8 +1976,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </script>
 
       <div class="hero-headline">
-        <span class="hero-h1-line">TRUE SPIRIT</span>
-        <span class="hero-h1-accent">Business</span>
+        <h1>TRUE SPIRIT Business</h1>
       </div>
 
       <p class="hero-sub">Unangepasst erfolgreich! Baue dir ein Business auf, das zu dir passt, nicht zum Trend und dir planbare Einnahmen bringt. Ohne dich in irgendein Marketing-Korsett zu pressen, täglichen Content-Stress und dem Gefühl, dass dein Business dich auffrisst.</p>
