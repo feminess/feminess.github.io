@@ -1257,9 +1257,10 @@ body {
 .ws-speaker-bio { flex: 1; padding-top: 8px; }
 .ws-speaker-bio h2 {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 35px;
+  font-size: clamp(26px, 5vw, 35px);
   font-weight: 600;
   color: #fff;
+  line-height: 1.2;
   margin-bottom: 24px;
 }
 .ws-speaker-bio h2 em {
@@ -1274,7 +1275,7 @@ body {
 .ws-speaker-bio p { font-family: 'Montserrat', sans-serif; font-size: 18px; color: rgba(255,255,255,0.85); line-height: 1.8; margin-bottom: 18px; }
 .ws-speaker-bio p strong { color: #fff; }
 @media (max-width: 900px) {
-  .ws-speaker-inner { flex-direction: column; gap: 32px; }
+  .ws-speaker-inner { flex-direction: column; gap: 32px; padding: 0 24px; }
   .ws-speaker-portrait { flex: none; width: 100%; }
 }
 
