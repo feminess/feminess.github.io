@@ -36,7 +36,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 em, i { font-style: normal; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; max-width: 100%; }
 body {
   background: var(--off-white);
   color: #0a3828;
@@ -44,6 +44,8 @@ body {
   font-size: 18px;
   line-height: 1.75;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 /* ── TOPBAR ── */
@@ -2029,10 +2031,11 @@ body {
   .popup-box { padding: 36px 24px 28px; }
   .topbar p { font-size: 8px; letter-spacing: 1px; white-space: nowrap; }
   .topbar { padding: 9px 12px; }
-  .mid-countdown-wrap { gap: 10px; flex-wrap: nowrap; }
-  .mid-cd-num { font-size: 28px; }
-  .mid-cd-sep { font-size: 24px; margin-bottom: 8px; }
+  .mid-countdown-wrap { gap: 8px; flex-wrap: nowrap; max-width: 100%; }
+  .mid-cd-num { font-size: 24px; }
+  .mid-cd-sep { font-size: 20px; margin-bottom: 6px; }
   .mid-cd-lbl { font-size: 7px; }
+  .mid-cd-unit { min-width: 0; }
   .mid-cd-lbl { font-size: 7px; }
   /* Hero kompakter auf Mobile → Button direkt sichtbar */
   .hero-exclusive-label { font-size: 8.5px; letter-spacing: 1.5px; margin-bottom: 14px; padding: 5px 12px; }
