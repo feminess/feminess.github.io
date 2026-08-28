@@ -1857,13 +1857,21 @@ body {
 .popup-box {
   background: var(--teal-dark);
   border: 1px solid rgba(255,255,255,0.08);
-  border-top: 3px solid var(--rose);
+  border-top: none;
   border-radius: 3px;
   max-width: 520px;
   width: 100%;
   padding: 48px 44px 40px;
   position: relative;
   animation: popup-in 0.3s ease forwards;
+}
+.popup-box::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%);
+  border-radius: 3px 3px 0 0;
 }
 .popup-close {
   position: absolute; top: 16px; right: 20px;
