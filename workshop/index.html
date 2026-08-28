@@ -2200,11 +2200,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="hero-exclusive-label" id="hero-label">
         ✦ für Frauen, die einen stabilen GeldFlow wünschen und dabei ganz sie SELBST sein wollen.
       </div>
+      <div id="utm-message" style="display:none; background:linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%); border-radius:10px; padding:16px 22px; margin-bottom:28px; max-width:520px; box-shadow:0 4px 24px rgba(160,104,90,0.4);">
+        <p style="margin:0; font-family:'Montserrat',sans-serif; font-size:17px; font-weight:700; color:#fff; line-height:1.5;">Super, du hast dir die Analyse gesichert &ndash; und wir haben noch ein Geschenk für dich!</p>
+      </div>
       <script>
         (function() {
           var f = new URLSearchParams(window.location.search).get('utm_source');
           if (f === 'umc' || f === 'cbc') {
-            document.getElementById('hero-label').textContent = '✦ Du hast dir die Analyse gesichert und wir haben noch ein Geschenk für dich!';
+            document.getElementById('hero-label').style.display = 'none';
+            document.getElementById('utm-message').style.display = 'block';
             document.getElementById('topbar-text').innerHTML = '<strong>WICHTIG: Wir haben noch ein Geschenk für dich!!</strong>';
           }
         })();
