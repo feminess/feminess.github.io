@@ -175,18 +175,22 @@
     .method-title { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 600; color: #fff; margin-bottom: 10px; }
     .method-txt { font-size: 15px; color: rgba(255,255,255,0.65); line-height: 1.75; }
 
-    /* ── TESTIMONIALS ── */
+    /* ── TESTIMONIALS (begeisterte Frauen) ── */
     .testi-section { background: #fff; padding: 100px 0; border-top: 2px solid var(--teal-pale); border-bottom: 1px solid var(--beige); }
     .testi-inner { max-width: 1100px; margin: 0 auto; padding: 0 40px; }
     .testi-hdr { text-align: center; max-width: 600px; margin: 0 auto 56px; }
-    .testi-hdr .section-label { justify-content: center; }
-    .testi-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
-    .testi-card { background: var(--off-white); border: 1px solid var(--beige); border-top: 3px solid #c47868; border-radius: 4px; padding: 32px 28px; transition: box-shadow 0.25s, transform 0.25s; }
-    .testi-card:hover { box-shadow: 0 8px 28px rgba(37,124,108,0.1); transform: translateY(-3px); }
-    .testi-stars { font-size: 13px; color: var(--sand); letter-spacing: 4px; margin-bottom: 18px; }
-    .testi-text { font-size: 16px; color: var(--warm-gray); line-height: 1.8; margin-bottom: 18px; }
+    .mobile-br { display: none; }
+    @media (max-width: 600px) { .mobile-br { display: inline; } }
+    .testi-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .testi-card-wide { grid-column: 1 / -1; }
+    .testi-card { background: var(--off-white); border: 1px solid var(--beige); border-radius: 4px; padding: 32px 28px; position: relative; transition: box-shadow 0.25s ease, transform 0.25s ease; }
+    .testi-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%); border-radius: 4px 4px 0 0; }
+    .testi-card:hover { box-shadow: 0 8px 28px rgba(37,124,108,0.10); transform: translateY(-3px); }
+    .testi-stars { font-size: 14px; color: var(--sand); letter-spacing: 4px; margin-bottom: 20px; }
+    .testi-text { font-size: 16px; color: #0a3828; line-height: 1.8; margin-bottom: 20px; }
     .testi-text strong { color: #0a3828; }
-    .testi-author { font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--warm-gray); }
+    .testi-author { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #0a3828; }
+    @media (max-width: 680px) { .testi-grid { grid-template-columns: 1fr; } .testi-card { padding: 24px 20px; } }
 
     /* ── PODCAST / YOUTUBE (shared) ── */
     .media-section { padding: 100px 0; }
@@ -504,24 +508,23 @@
 <section class="testi-section">
   <div class="testi-inner">
     <div class="testi-hdr">
-      <div class="section-label">Stimmen der Community</div>
-      <h2>Was unsere Frauen <em>erleben</em></h2>
+      <h2>Das sagen unsere<br class="mobile-br"> begeisterten <em>Frauen</em></h2>
     </div>
     <div class="testi-grid">
       <div class="testi-card">
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-text">"In drei Monaten hat sich mein Business komplett verändert. Ich verdiene jetzt <strong>mehr als je zuvor</strong> – und fühle mich dabei vollständig frei."</p>
-        <div class="testi-author">Sarah M. · Business Coach, Berlin</div>
+        <div class="testi-stars">★ ★ ★ ★ ★</div>
+        <p class="testi-text">Ich liebe die Zusammenarbeit mit Marina so sehr. Durch sie hat sich so viel in meinem Unternehmen <strong>erleichtert</strong>. Ich arbeite viel weniger, hab <strong>viel mehr Umsatz</strong>, es fällt mir viel leichter. Ich mache monatlich <strong>6-stellige Umsätze</strong> und bin Marina einfach unendlich dankbar.</p>
+        <p class="testi-author">Sigrid Aviana Waedt</p>
       </div>
       <div class="testi-card">
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-text">"Marina hat mir gezeigt, dass Erfolg nicht durch mehr Anstrengung entsteht, sondern durch Ausrichtung. Lifechanging."</p>
-        <div class="testi-author">Laura K. · Online Unternehmerin, München</div>
+        <div class="testi-stars">★ ★ ★ ★ ★</div>
+        <p class="testi-text">Also erstmal WOOOW! Ich <strong>liebe</strong> das Programm so sehr! Was für ein geiler Scheiß! Hatte Gänsehaut, <strong>Tränen in den Augen</strong> und immer wieder „HELL YES" Momente.</p>
+        <p class="testi-author">Leonie Rössle</p>
       </div>
-      <div class="testi-card">
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-text">"Dank Marina ist mein Business von <strong>40.000 EUR auf 180.000 EUR</strong> Jahresumsatz gewachsen – in weniger als einem Jahr. Unfassbar."</p>
-        <div class="testi-author">Julia R. · Life Coach, Wien</div>
+      <div class="testi-card testi-card-wide">
+        <div class="testi-stars">★ ★ ★ ★ ★</div>
+        <p class="testi-text">Ich habe mit meiner Gründung damals ganz okay gestartet. Die Umsätze, die sind relativ gut losgestartet, also ich hatte damals einen Umsatz von um die 5.000 EUR im Monat. Ich habe im ersten Jahr, aber das war ein halbes Jahr, da habe ich <strong>33.000 EUR</strong> Umsatz gemacht. Aber das Geld wollte nie bei mir bleiben. Durch Zufall bin ich auf euch gekommen. Also ich glaube, das Universum hat mich zu euch geführt. Dann im zweiten Jahr, auch mit durch das Unlimited Fullness Programm geschuldet, bin ich dann hoch auf <strong>260.000 EUR</strong>. Und jetzt, drittes Jahr, wird es <strong>über eine Millionen Euro</strong>. Plus zweites Unternehmen, was ich noch gründe. Also ich bin schon wieder in der nächsten Idee, weil ich eben jetzt weiß, <strong>was alles möglich ist</strong> und mir das eben auch vorstellen kann. Ich kenne diese Grenzen nicht mehr und ich habe keine Angst mehr vor dem Geld.</p>
+        <p class="testi-author">Melanie Preßler</p>
       </div>
     </div>
   </div>
