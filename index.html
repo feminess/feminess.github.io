@@ -78,11 +78,10 @@
       border-bottom:1px solid rgba(94,198,179,.12);
     }
     .nav-logo {
-      font-family:'Cormorant Garamond',serif;
-      font-size:1.55rem; font-weight:600;
-      letter-spacing:.3em; text-transform:uppercase;
-      color:var(--sand-light);
+      display:flex; align-items:center;
+      height:38px;
     }
+    .nav-logo img { height:100%; width:auto; display:block; }
     .nav-links { display:flex; gap:44px; }
     .nav-links a {
       font-size:.72rem; letter-spacing:.22em; text-transform:uppercase;
@@ -631,7 +630,7 @@
      NAV
 ═══════════════════════════════════ -->
 <nav id="nav">
-  <a href="#" class="nav-logo">Feminess</a>
+  <a href="#" class="nav-logo"><img src="CI/Logo-rosegoldverlauf-transparent.png" alt="Feminess" /></a>
   <ul class="nav-links">
     <li><a href="#ueber-uns">Über uns</a></li>
     <li><a href="#programme">Programme</a></li>
