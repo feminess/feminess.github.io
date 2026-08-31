@@ -282,7 +282,13 @@
     .manifesto-body {
       font-size:.93rem; line-height:1.9; color:rgba(255,255,255,.55); margin-bottom:44px;
     }
-    .manifesto-media { padding-top:44px; border-top:1px solid rgba(94,198,179,.15); }
+    .manifesto-stat {
+      font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:400;
+      font-size:1.05rem; line-height:1.6; color:var(--sand-light);
+      margin-bottom:40px; padding-bottom:40px; border-bottom:1px solid rgba(94,198,179,.15);
+    }
+    .manifesto-stat strong { color:var(--teal-light); font-style:normal; font-weight:500; }
+    .manifesto-media { padding-top:0; }
     .manifesto-media-lbl { font-size:.62rem; letter-spacing:.28em; text-transform:uppercase; color:rgba(255,255,255,.28); margin-bottom:18px; }
     .manifesto-media-logos { display:flex; flex-wrap:wrap; gap:24px 32px; }
     .manifesto-media-logos span {
@@ -368,12 +374,18 @@
     .prog-card.accent .prog-tag { color:var(--sand-light); background:rgba(228,188,149,.1); border-color:rgba(228,188,149,.2); }
     .prog-title {
       font-family:'Cormorant Garamond',serif; font-size:1.75rem; font-weight:400;
-      line-height:1.2; color:var(--off-white); margin-bottom:18px;
+      line-height:1.2; color:var(--off-white); margin-bottom:8px;
       transition:color .3s;
     }
     .prog-card:hover .prog-title { color:var(--teal-light); }
     .prog-card.accent .prog-title { color:var(--sand-light); }
     .prog-card.accent:hover .prog-title { color:var(--white); }
+    .prog-price {
+      font-family:'Inter',sans-serif; font-size:.72rem; font-weight:500;
+      letter-spacing:.15em; text-transform:uppercase;
+      color:rgba(248,246,242,.4); margin-bottom:22px;
+    }
+    .prog-card.accent .prog-price { color:rgba(228,188,149,.6); }
     .prog-text { font-size:.86rem; color:rgba(248,246,242,.42); line-height:1.8; margin-bottom:auto; padding-bottom:44px; }
     .prog-card.accent .prog-text { color:rgba(228,188,149,.55); }
     .prog-link {
@@ -487,6 +499,7 @@
     /* ─── PODCAST ─── */
     .podcast { padding:150px 0; background:#0a1210; }
     .podcast-grid { display:grid; grid-template-columns:1fr 1.15fr; gap:100px; align-items:center; }
+    .podcast-grid.rev { grid-template-columns:1.15fr 1fr; }
     .podcast-img-wrap {
       position:relative; aspect-ratio:4/5; overflow:hidden;
       border:1px solid rgba(94,198,179,.15);
@@ -595,7 +608,7 @@
       .method-grid { grid-template-columns:1fr 1fr; }
       .impact-grid { grid-template-columns:1fr 1fr; }
       .footer-top { grid-template-columns:1fr 1fr; }
-      .podcast-grid { grid-template-columns:1fr; }
+      .podcast-grid, .podcast-grid.rev { grid-template-columns:1fr; }
     }
     @media (max-width:768px) {
       nav { padding:0 24px; }
@@ -691,22 +704,22 @@
 ═══════════════════════════════════ -->
 <div class="ticker" aria-hidden="true">
   <div class="ticker-track">
+    <span class="ticker-item">Root to Rise<span class="ticker-dot"></span></span>
+    <span class="ticker-item">Magnetic Sales Mastery<span class="ticker-dot"></span></span>
     <span class="ticker-item">First Choice<span class="ticker-dot"></span></span>
-    <span class="ticker-item">Unlimited Fullness<span class="ticker-dot"></span></span>
-    <span class="ticker-item">Highest Selling Launch<span class="ticker-dot"></span></span>
     <span class="ticker-item">Female Leadership<span class="ticker-dot"></span></span>
     <span class="ticker-item">Business Freedom<span class="ticker-dot"></span></span>
     <span class="ticker-item">Authentic Presence<span class="ticker-dot"></span></span>
-    <span class="ticker-item">Inner Transformation<span class="ticker-dot"></span></span>
+    <span class="ticker-item">Unangepasst Erfolgreich<span class="ticker-dot"></span></span>
     <span class="ticker-item">Marina Henze · Feminess<span class="ticker-dot"></span></span>
     <!-- dupe für Loop -->
+    <span class="ticker-item">Root to Rise<span class="ticker-dot"></span></span>
+    <span class="ticker-item">Magnetic Sales Mastery<span class="ticker-dot"></span></span>
     <span class="ticker-item">First Choice<span class="ticker-dot"></span></span>
-    <span class="ticker-item">Unlimited Fullness<span class="ticker-dot"></span></span>
-    <span class="ticker-item">Highest Selling Launch<span class="ticker-dot"></span></span>
     <span class="ticker-item">Female Leadership<span class="ticker-dot"></span></span>
     <span class="ticker-item">Business Freedom<span class="ticker-dot"></span></span>
     <span class="ticker-item">Authentic Presence<span class="ticker-dot"></span></span>
-    <span class="ticker-item">Inner Transformation<span class="ticker-dot"></span></span>
+    <span class="ticker-item">Unangepasst Erfolgreich<span class="ticker-dot"></span></span>
     <span class="ticker-item">Marina Henze · Feminess<span class="ticker-dot"></span></span>
   </div>
 </div>
@@ -722,16 +735,28 @@
       <div class="rv">
         <div class="s-label manifesto-lbl">
           <div class="s-label-line"></div>
-          <span class="s-label-txt">Das Fundament</span>
+          <span class="s-label-txt">Was erwartet dich hier?</span>
         </div>
         <blockquote class="manifesto-quote">
-          "Hör auf dich zu verbiegen –<br>und beginne zu leuchten."
+          "Wir zeigen dir den Weg zurück zu dir selbst."
         </blockquote>
         <p class="manifesto-body">
-          Feminess ist mehr als ein Coaching-Unternehmen. Es ist eine Bewegung für Frauen, die aufgehört haben zu performen und begonnen haben, wirklich sie selbst zu sein. Marina Henze hat über 10 Kongresse mit mehr als 10.000 Frauen aus ganz Europa transformiert.
+          Du kennst das: Du willst dir ein Business aufbauen, das dich wirklich trägt – finanziell und emotional frei. Du willst deine Zeit selbst bestimmen und nur noch das tun, was dich wirklich erfüllt.
         </p>
-        <p class="manifesto-body" style="margin-top:-12px">
-          Unsere Mission: Authentischer Erfolg. Echte Freiheit. Ein Business, das zu dir passt – nicht umgekehrt.
+        <p class="manifesto-body">
+          Aber irgendwo zwischen den tausend Tipps, Strategien und „So musst du es machen" hast du dich selbst verloren. Du weißt nicht mehr, was für dich eigentlich stimmt, also presst du dich in ein Korsett, das dir viel zu eng ist. Dein Business wächst nicht, weil dir Wissen oder Strategie fehlt – es wächst nicht, weil du versuchst, es aus fremden Regeln zusammenzubauen, statt aus einem, das wirklich zu dir passt.
+        </p>
+        <p class="manifesto-body">
+          Genau hier setzt Feminess<sup style="font-size:.55em;">®</sup> an. Wir zeigen dir nicht noch mehr Taktiken. Wir zeigen dir den Weg zurück zu dir selbst – und von da aus in ein Business, das sich nicht wie Kampf anfühlt, sondern wie dein Zuhause.
+        </p>
+        <div class="rv" style="margin:36px 0 8px;">
+          <a href="#programme" class="btn-rose">
+            Zu den Feminess Produkten
+            <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+        <p class="manifesto-stat rv">
+          Mit mehr als <strong>10 Kongressen</strong> und über <strong>20.000 Frauen</strong> ist Feminess<sup style="font-size:.55em;">®</sup> einer der größten Weiterbildungsanbieter für Frauen in Europa.
         </p>
         <div class="manifesto-media">
           <div class="manifesto-media-lbl">Bekannt aus</div>
@@ -770,7 +795,7 @@
   <div class="s-inner">
     <div class="impact-grid">
       <div class="impact-cell rv">
-        <div class="impact-num"><span class="ctr" data-t="10000">0</span><span class="impact-sup">+</span></div>
+        <div class="impact-num"><span class="ctr" data-t="20000">0</span><span class="impact-sup">+</span></div>
         <div class="impact-lbl">Frauen transformiert</div>
       </div>
       <div class="impact-cell rv d1">
@@ -799,26 +824,27 @@
       <div>
         <div class="s-label rv" style="margin-bottom:20px;">
           <div class="s-label-line"></div>
-          <span class="s-label-txt">Signature Programme</span>
+          <span class="s-label-txt">Einfach . Unangepasst . Erfolgreich</span>
         </div>
         <h2 class="s-title rv d1">
-          Dein Weg zur<br><em>vollständigen</em> Freiheit
+          Wähle deinen <em>Raum</em>
         </h2>
       </div>
       <p class="programmes-desc rv d2">
-        Drei fokussierte Programme – entwickelt, um eine tiefgreifende und nachhaltige Transformation in deinem Business und deinem Leben auszulösen.
+        Egal ob du gerade gründest, dich selbstständig gemacht hast oder schon länger unternehmerisch unterwegs bist – hier findest du den Raum, der dich dort abholt, wo du wirklich stehst. Keine Copy-Paste-Strategien, kein Marketing-Korsett. Nur Räume, die zu dir passen statt zu irgendeinem Trend.
       </p>
     </div>
 
     <div class="prog-grid">
 
-      <!-- FIRST CHOICE -->
+      <!-- ROOT TO RISE -->
       <div class="prog-card rv">
         <div class="prog-num">01</div>
-        <h3 class="prog-title">First Choice</h3>
-        <span class="prog-tag">Intensiv-Programme</span>
+        <h3 class="prog-title">Root to Rise</h3>
+        <div class="prog-price">333 €</div>
+        <span class="prog-tag">Fundament-Programm</span>
         <p class="prog-text">
-          Werde zur unangefochtenen ersten Wahl für deine idealen Kunden. Positioniere dich mit magnetischer Klarheit – und lass Kunden von selbst auf dich zukommen, ohne Content-Overload oder Druck.
+          Der Raum für deinen Anfang. Finde zurück zu deinen Wurzeln, bevor du wächst – zu dem, was dich wirklich trägt. Klarheit über deine Identität, dein Angebot und deine Richtung, statt fremder Formeln.
         </p>
         <a href="#" class="prog-link">
           Mehr erfahren
@@ -826,13 +852,14 @@
         </a>
       </div>
 
-      <!-- UNLIMITED FULLNESS – accent card -->
+      <!-- MAGNETIC SALES MASTERY – accent card -->
       <div class="prog-card accent rv d1">
         <div class="prog-num">02</div>
-        <h3 class="prog-title">Unlimited Fullness</h3>
-        <span class="prog-tag">Abundance-Programm</span>
+        <h3 class="prog-title">Magnetic Sales Mastery</h3>
+        <div class="prog-price">900 €</div>
+        <span class="prog-tag">Sales-Programm</span>
         <p class="prog-text">
-          Erschaffe unbegrenzte Fülle – finanziell, persönlich und in deinem Business. Löse die inneren Deckelungen auf und lebe den Lifestyle, den du wirklich verdienst. Ohne Kompromisse.
+          Verkaufen, das sich nicht wie Verkaufen anfühlt. Aktiviere deine natürliche magnetische Ausstrahlung und lerne, Umsätze aus Präsenz statt aus Druck zu erschaffen – ehrlich, mühelos, unwiderstehlich.
         </p>
         <a href="#" class="prog-link">
           Jetzt bewerben
@@ -840,16 +867,17 @@
         </a>
       </div>
 
-      <!-- HIGHEST SELLING LAUNCH -->
+      <!-- FIRST CHOICE -->
       <div class="prog-card rv d2">
         <div class="prog-num">03</div>
-        <h3 class="prog-title">Highest Selling Launch</h3>
-        <span class="prog-tag">Launch-Mastery</span>
+        <h3 class="prog-title">First Choice</h3>
+        <div class="prog-price">Auf Anfrage</div>
+        <span class="prog-tag">Signature-Programm</span>
         <p class="prog-text">
-          Kreiere deinen erfolgreichsten Launch aller Zeiten. Lerne, wie du Angebote so präsentierst, dass sie sich von selbst verkaufen – mit Strategie, Energie und unwiderstehlicher Präsenz.
+          Werde zur unangefochtenen ersten Wahl für deine idealen Kunden. Positioniere dich mit magnetischer Klarheit – und lass Kunden von selbst auf dich zukommen, ohne Content-Overload oder Druck.
         </p>
         <a href="#" class="prog-link">
-          Kostenlos starten
+          Mehr erfahren
           <div class="prog-arr"></div>
         </a>
       </div>
@@ -988,7 +1016,7 @@
               <div class="pw-bar" style="height:55%"></div><div class="pw-bar" style="height:85%"></div>
               <div class="pw-bar" style="height:30%"></div><div class="pw-bar" style="height:60%"></div>
             </div>
-            <div class="podcast-overlay-title">Coaching Scene Secrets</div>
+            <div class="podcast-overlay-title">Unangepasst Erfolgreich</div>
             <div class="podcast-overlay-sub">Der Podcast · Marina Henze</div>
           </div>
         </div>
@@ -996,9 +1024,9 @@
 
       <!-- content -->
       <div class="rv d2">
-        <div class="s-label podcast-lbl"><div class="s-label-line"></div><span class="s-label-txt">Der Podcast</span></div>
-        <h2 class="podcast-title">Coaching Scene<br><em>Secrets</em></h2>
-        <p class="podcast-desc">Insider-Wissen von führenden Coaches. Finanzielle Freiheit, persönliche Erfüllung und Business-Geheimnisse, die sonst niemand teilt.</p>
+        <div class="s-label podcast-lbl"><div class="s-label-line"></div><span class="s-label-txt">Unangepasst Erfolgreich</span></div>
+        <h2 class="podcast-title">Der Feminess<br><em>Podcast</em></h2>
+        <p class="podcast-desc">Du willst dich nicht mehr mit dem Status quo zufriedengeben? Du willst mehr Freiheit, mehr Umsatz, mehr Leben nach deinen eigenen Regeln? Dann ist der Feminess Podcast für dich. Hier spricht Marina Klartext über Business, Geld und die Muster, die dich unbewusst bremsen. Manchmal sanft, manchmal unbequem, immer unangepasst.</p>
 
         <div class="ep">
           <div class="ep-play"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
@@ -1022,13 +1050,68 @@
 </section>
 
 <!-- ═══════════════════════════════════
+     YOUTUBE
+═══════════════════════════════════ -->
+<section class="podcast" id="youtube">
+  <div class="s-inner">
+    <div class="podcast-grid rev">
+
+      <!-- content -->
+      <div class="rv">
+        <div class="s-label podcast-lbl"><div class="s-label-line"></div><span class="s-label-txt">Unangepasst Erfolgreich</span></div>
+        <h2 class="podcast-title">Der Feminess<br><em>YouTube Kanal</em></h2>
+        <p class="podcast-desc">Schau rein und erlebe, wie einfach echter Erfolg sein kann, wenn er aus dir kommt statt aus fremden Formeln. Hier bekommst du die Impulse, die dich wirklich weiterbringen – für ein Business, das sich nicht wie Kampf anfühlt, sondern wie du.</p>
+
+        <div class="ep">
+          <div class="ep-play"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
+          <div><div class="ep-title">Warum „unangepasst" der neue Erfolgsfaktor ist</div><div class="ep-meta">YouTube · Marina Henze</div></div>
+        </div>
+        <div class="ep">
+          <div class="ep-play"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
+          <div><div class="ep-title">Root to Rise – dein Weg zur eigenen Identität</div><div class="ep-meta">YouTube · Marina Henze</div></div>
+        </div>
+        <div class="ep">
+          <div class="ep-play"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
+          <div><div class="ep-title">Magnetische statt gepushte Sales-Gespräche</div><div class="ep-meta">YouTube · Marina Henze</div></div>
+        </div>
+
+        <div style="margin-top:28px;">
+          <a href="#" class="btn-outline-teal">Zum YouTube-Kanal →</a>
+        </div>
+      </div>
+
+      <!-- artwork -->
+      <div class="rv d2">
+        <div class="podcast-img-wrap">
+          <img src="Bilder/Marina_MAI2314254 Kopie.jpg" alt="Marina Henze YouTube" loading="lazy" />
+          <div class="podcast-overlay">
+            <div class="podcast-wave">
+              <div class="pw-bar" style="height:30%"></div><div class="pw-bar" style="height:65%"></div>
+              <div class="pw-bar" style="height:45%"></div><div class="pw-bar" style="height:80%"></div>
+              <div class="pw-bar" style="height:35%"></div><div class="pw-bar" style="height:70%"></div>
+              <div class="pw-bar" style="height:90%"></div><div class="pw-bar" style="height:50%"></div>
+              <div class="pw-bar" style="height:40%"></div><div class="pw-bar" style="height:75%"></div>
+              <div class="pw-bar" style="height:55%"></div><div class="pw-bar" style="height:85%"></div>
+              <div class="pw-bar" style="height:30%"></div><div class="pw-bar" style="height:60%"></div>
+            </div>
+            <div class="podcast-overlay-title">Unangepasst Erfolgreich</div>
+            <div class="podcast-overlay-sub">YouTube · Marina Henze</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
      FOOTER
 ═══════════════════════════════════ -->
 <footer>
   <div class="s-inner">
     <div class="footer-top">
       <div>
-        <div class="footer-logo">Feminess</div>
+        <div class="footer-logo"><img src="CI/Logo-rosegoldverlauf-transparent.png" alt="Feminess" style="height:30px;width:auto;" /></div>
         <p class="footer-tagline">Authentische Erfolgsstrategien für Frauen, die mehr wollen. Mehr Freiheit, mehr Wirkung, mehr Erfüllung.</p>
         <div class="footer-socials">
           <a href="#" class="f-soc" aria-label="Instagram">
@@ -1048,19 +1131,19 @@
       <div>
         <div class="f-col-title">Programme</div>
         <ul class="f-links">
-          <li><a href="#">First Choice</a></li>
-          <li><a href="#">Unlimited Fullness</a></li>
-          <li><a href="#">Highest Selling Launch</a></li>
-          <li><a href="#">Free Training</a></li>
+          <li><a href="#programme">Root to Rise</a></li>
+          <li><a href="#programme">Magnetic Sales Mastery</a></li>
+          <li><a href="#programme">First Choice</a></li>
+          <li><a href="#training">Free Training</a></li>
         </ul>
       </div>
       <div>
         <div class="f-col-title">Unternehmen</div>
         <ul class="f-links">
-          <li><a href="#">Über Marina</a></li>
-          <li><a href="#">Events</a></li>
-          <li><a href="#">Podcast</a></li>
-          <li><a href="#">Blog</a></li>
+          <li><a href="#ueber-uns">Über Marina</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#podcast">Podcast</a></li>
+          <li><a href="#youtube">YouTube</a></li>
           <li><a href="#">Presse & Medien</a></li>
           <li><a href="#">Affiliate</a></li>
         </ul>
