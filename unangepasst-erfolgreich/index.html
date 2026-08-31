@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NQMQT7QH');</script>
+  <!-- End Google Tag Manager -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Der Feminess Podcast – unangepasst erfolgreich</title>
+  <meta name="description" content="Der Feminess Podcast mit Marina Henze: unangepasst erfolgreich. Über Business, Geld, Selbstwert und finanzielle Freiheit – auf Spotify, Apple Podcasts, Amazon Music und YouTube.">
+  <link rel="icon" href="https://feminess.de/wp-content/uploads/cropped-favicon@2x-1-32x32.png" sizes="32x32">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --teal:       #257c6c;
+      --teal-dark:  #1b5c50;
+      --teal-light: #f8f6f2;
+      --teal-pale:  #b8ddd8;
+      --rose:       #cf5a73;
+      --rose-light: #e8a0b0;
+      --sand:       #c2ab8d;
+      --black:      #070808;
+      --dark:       #0d2420;
+      --off-white:  #f8f6f2;
+      --cream:      #f0f5f4;
+      --beige:      #ddecea;
+      --warm-gray:  #5a7a74;
+      --mid-gray:   #9ab8b4;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    em, i { font-style: normal; }
+    html { scroll-behavior: smooth; overflow-x: hidden; }
+    body { overflow-x: hidden; }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 18px;
+      line-height: 1.75;
+      background: var(--off-white);
+      color: #0a3828;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── TOP BANNER ── */
+    .top-banner { background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%); padding: 14px 40px; text-align: center; border-bottom: 1px solid rgba(13,36,32,0.12); }
+    .banner-text { font-family: 'Montserrat', sans-serif; font-size: 15px; font-weight: 400; color: rgba(13,36,32,0.72); }
+
+    /* ── HERO ── */
+    .hero { background: var(--teal-dark); position: relative; overflow: hidden; }
+    .hero::before {
+      content: ''; position: absolute; top: -80px; right: -80px; left: auto; width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(207,90,115,0.18) 0%, transparent 60%); pointer-events: none; z-index: 1;
+    }
+    .hero-inner { position: relative; min-height: 720px; z-index: 2; display: flex; align-items: center; max-width: 1200px; margin: 0 auto; }
+    .hero-content { position: relative; z-index: 2; width: 52%; box-sizing: border-box; padding: 60px 40px 60px 80px; display: flex; flex-direction: column; justify-content: center; }
+    .hero-image { position: relative; width: 48%; display: flex; align-items: center; justify-content: center; padding: 40px; }
+    .hero-image img { width: 100%; max-width: 420px; height: auto; display: block; border-radius: 16px; box-shadow: 0 24px 70px rgba(7,8,8,0.45); }
+
+    .hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; width: fit-content; background: rgba(37,124,108,0.18); border: 1px solid rgba(94,198,179,0.4); color: var(--teal-light); font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 8px 18px; border-radius: 999px; margin-bottom: 20px; }
+    .hero-eyebrow::before { content: '♥'; font-weight: 900; }
+
+    .hero-content h1 { font-family: 'Cormorant Garamond', serif; font-size: 52px; font-weight: 600; line-height: 1.1; letter-spacing: 0.2px; margin-bottom: 18px; color: #fff; }
+    .hero-content h1 em { font-style: normal; font-weight: 600; color: inherit; }
+    .hero-subtitle { font-size: 19px; font-weight: 400; color: #fff; margin-bottom: 32px; max-width: 480px; line-height: 1.7; }
+    .hero-subtitle strong { color: #fff; font-weight: 700; }
+
+    /* ── SHARED LAYOUT ── */
+    .section-label { font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--teal); display: flex; align-items: center; gap: 14px; margin-bottom: 24px; }
+    .section-label::after { content: ''; display: block; width: 80px; height: 1px; background: var(--teal); opacity: 0.5; }
+    .on-dark.section-label { color: var(--teal-light); }
+    .on-dark.section-label::after { background: var(--teal-light); }
+
+    h2 { font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 600; color: #0a3828; line-height: 1.15; margin-bottom: 8px; letter-spacing: -0.3px; }
+    h2 em { font-style: normal; font-weight: 600; color: inherit; }
+    .dark-section h2 { color: #fff; }
+
+    /* ── BUTTONS ── */
+    .btn-cta {
+      display: inline-block; background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%);
+      color: var(--dark); text-decoration: none; padding: 20px 44px; border-radius: 999px; font-family: 'Montserrat', sans-serif;
+      font-size: 18px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; transition: opacity 0.2s, transform 0.15s;
+      border: none; cursor: pointer; width: fit-content; animation: pulse-btn 2.2s ease-in-out infinite;
+    }
+    .btn-cta:hover { opacity: 0.88; transform: translateY(-1px); animation: none; }
+    @keyframes pulse-btn { 0%, 100% { transform: scale(1); box-shadow: 0 6px 28px rgba(160,104,90,0.40); } 50% { transform: scale(1.04); box-shadow: 0 10px 36px rgba(160,104,90,0.58); } }
+    .btn-note { font-size: 15px; color: var(--warm-gray); margin-top: 16px; line-height: 1.7; }
+    .dark-section .btn-note { color: #fff; }
+
+    /* ── TEXT ── */
+    .text-section { background: var(--off-white); padding: 88px 0; border-bottom: 1px solid var(--beige); }
+    .text-inner { max-width: 740px; margin: 0 auto; padding: 0 40px; }
+    .text-section .section-label { margin-bottom: 36px; }
+    .text-inner p { font-size: 18px; line-height: 1.85; color: #0a3828; margin-bottom: 20px; text-align: justify; }
+    .text-inner p strong { color: #0a3828; font-weight: 700; }
+
+    /* ── FORMATE (BENEFITS) ── */
+    .benefits-section { background: #fff; border-top: 2px solid var(--teal-pale); padding: 100px 0; position: relative; overflow: hidden; }
+    .benefits-inner { max-width: 1100px; margin: 0 auto; padding: 0 40px; position: relative; z-index: 2; }
+    .benefits-header { text-align: center; margin-bottom: 64px; }
+    .benefits-header h2 { color: #0a3828; }
+    .benefits-section .section-label { color: var(--teal); justify-content: center; }
+    .benefits-section .section-label::after { display: none; }
+    .benefits-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .benefit-card { background: var(--teal-dark); border: none; border-radius: 16px; padding: 32px 32px 32px 28px; display: flex; gap: 18px; align-items: flex-start; position: relative; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; box-shadow: 0 4px 20px rgba(13,36,32,0.18); }
+    .benefit-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(13,36,32,0.28); }
+    .benefit-num { display: block; font-family: 'Cormorant Garamond', serif; font-size: 60px; font-weight: 600; color: rgba(255,255,255,0.32); line-height: 1; flex-shrink: 0; width: 52px; text-align: left; align-self: flex-start; user-select: none; }
+    .benefit-body h3 { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 600; color: #fff; margin-bottom: 10px; }
+    .benefit-body p { font-size: 17px; color: #fff; margin: 0; line-height: 1.7; }
+    .benefit-body p strong { color: #fff; font-weight: 700; }
+
+    /* ── THEMEN (dark) ── */
+    .rules-section { background: var(--teal-dark); padding: 96px 0; }
+    .rules-inner { max-width: 760px; margin: 0 auto; padding: 0 40px; }
+    .rules-inner h2 { text-align: center; margin-bottom: 48px; color: #fff; }
+    .rules-inner .section-label { justify-content: center; }
+    .rules-box { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.15); border-radius: 12px; padding: 36px 40px; }
+    .rules-list { list-style: none; display: flex; flex-direction: column; gap: 16px; }
+    .rules-list li { position: relative; padding-left: 30px; font-size: 18px; color: #fff; line-height: 1.7; }
+    .rules-list li::before { content: '✓'; position: absolute; left: 0; top: 2px; font-size: 15px; font-weight: 700; color: var(--teal-light); }
+    .rules-list li strong { color: #fff; }
+
+    /* ── PLATTFORMEN ── */
+    .platforms-section { background: var(--off-white); padding: 96px 0; border-top: 2px solid var(--teal-pale); }
+    .platforms-inner { max-width: 900px; margin: 0 auto; padding: 0 40px; text-align: center; }
+    .platforms-inner h2 { margin-bottom: 16px; }
+    .platforms-sub { font-size: 18px; color: var(--warm-gray); margin-bottom: 48px; }
+    .platforms-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    .platform-card { display: flex; flex-direction: column; align-items: center; gap: 14px; background: #fff; border: 1px solid var(--beige); border-radius: 16px; padding: 32px 20px; text-decoration: none; transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease; }
+    .platform-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(13,36,32,0.12); border-color: var(--teal-pale); }
+    .platform-icon { width: 44px; height: 44px; }
+    .platform-name { font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 700; letter-spacing: 0.5px; color: #0a3828; }
+
+    /* ── FINAL CTA ── */
+    .final-cta { background: var(--teal-dark); padding: 110px 0; position: relative; overflow: hidden; text-align: center; }
+    .final-cta::before { content: ''; position: absolute; top: -150px; left: 50%; transform: translateX(-50%); width: 800px; height: 800px; background: radial-gradient(circle, rgba(207,90,115,0.08) 0%, transparent 60%); pointer-events: none; }
+    .final-cta-inner { max-width: 640px; margin: 0 auto; padding: 0 40px; position: relative; z-index: 1; }
+    .final-cta-tag { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 26px; font-weight: 600; color: var(--teal-light); margin-bottom: 20px; }
+    .final-cta h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 3vw, 40px); font-weight: 600; color: #fff; line-height: 1.2; margin-bottom: 12px; }
+    .final-cta h2 em { font-style: normal; color: inherit; }
+    .final-cta-sign { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 22px; color: #fff; margin-bottom: 36px; }
+    .final-note { font-size: 15px; color: #fff; margin-top: 28px; line-height: 1.8; }
+
+    /* ── FOOTER ── */
+    footer { background: #07291d; padding: 48px 40px; border-top: 1px solid rgba(94,198,179,0.1); }
+    .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 24px; }
+    .footer-logo { height: 36px; width: auto; max-width: 100%; }
+    .footer-links { display: flex; gap: 40px; }
+    .footer-links a { font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--mid-gray); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--teal-light); }
+    .footer-copy { font-family: 'Montserrat', sans-serif; font-size: 11px; color: var(--mid-gray); }
+
+    /* ── RESPONSIVE: TABLET ── */
+    @media (max-width: 900px) {
+      .hero-inner { flex-direction: column; min-height: auto; padding: 0; }
+      .hero-content { width: 100%; padding: 48px 40px 20px; text-align: center; align-items: center; }
+      .hero-eyebrow { margin-left: auto; margin-right: auto; }
+      .hero-subtitle { max-width: 100%; }
+      .hero-image { width: 100%; padding: 20px 40px 56px; }
+      .benefits-grid { grid-template-columns: 1fr; }
+      .platforms-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-inner { flex-direction: column; text-align: center; }
+      .footer-links { justify-content: center; }
+    }
+
+    /* ── RESPONSIVE: MOBILE ── */
+    @media (max-width: 600px) {
+      h2 { font-size: 35px !important; }
+      .hero-content h1 { font-size: 42px !important; }
+      .benefit-body h3 { font-size: 24px; }
+
+      .text-inner, .benefits-inner, .rules-inner, .platforms-inner, .final-cta-inner { padding-left: 20px; padding-right: 20px; }
+      .text-section, .benefits-section, .rules-section, .platforms-section { padding: 64px 0; }
+      .final-cta { padding: 72px 0; }
+
+      .top-banner { padding: 10px 14px; }
+      .banner-text { font-size: 12px; }
+
+      .hero-content { padding: 40px 20px 16px; }
+      .hero-image { padding: 16px 20px 44px; }
+      .hero-subtitle { font-size: 17px; }
+      .text-inner p { text-align: left; }
+
+      .benefits-grid { gap: 16px; }
+      .benefit-card { padding: 24px 20px; gap: 14px; }
+      .benefit-num { width: 70px; font-size: 72px; }
+
+      .rules-box { padding: 24px 20px; }
+      .rules-list li { font-size: 17px; }
+
+      .platforms-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
+      .platform-card { padding: 24px 14px; }
+
+      .btn-cta { padding: 17px 28px; font-size: 14px; width: 100%; text-align: center; }
+
+      footer { padding: 36px 20px; }
+      .footer-logo { height: 26px; }
+      .footer-links { gap: 20px; flex-wrap: wrap; }
+    }
+  </style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NQMQT7QH"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- TOP BANNER -->
+<div class="top-banner">
+  <span class="banner-text">Der Feminess Podcast – neue Folgen jede Woche auf Spotify, Apple Podcasts, Amazon Music &amp; YouTube</span>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <span class="hero-eyebrow">Der Feminess Podcast</span>
+      <h1>Weil dein Business &amp; Leben mehr verdient als <em>Anpassung</em></h1>
+      <p class="hero-subtitle">Der Podcast für Frauen, die mehr vom Leben wollen: <strong>mehr Freiheit, mehr Umsatz, mehr Leben nach ihren eigenen Regeln.</strong></p>
+      <a href="#plattformen" class="btn-cta">Jetzt reinhören</a>
+    </div>
+    <div class="hero-image">
+      <img src="Bilder/podcast-cover.png" alt="Marina Henze – Der Feminess Podcast: unangepasst erfolgreich">
+    </div>
+  </div>
+</section>
+
+<!-- MAIN TEXT -->
+<div class="text-section">
+  <div class="text-inner">
+    <p>Der Feminess Podcast ist für Frauen, die mehr vom Leben wollen. Mehr Freiheit. Mehr Umsatz. Mehr Leben nach ihren eigenen Regeln.</p>
+    <p>Wir sprechen über das, was in klassischen Business-Podcasts oft zu kurz kommt: über ein <strong>Business, das zu dir passt</strong>, statt zum Trend. Über Geld, Selbstwert, Freiheit und die neusten Möglichkeiten, finanziell unabhängig zu werden. Über smarte Investments und echtes Geldbewusstsein.</p>
+    <p>Wir schauen dahin, wo es unbequem wird – dorthin, wo alte Muster und unbewusste Dynamiken dein Business bremsen, ohne dass du es merkst. Gleichzeitig bekommst du <strong>konkrete Impulse für deinen Alltag</strong>: Strategien und Perspektiven, die du direkt in deinem Business und im Umgang mit Geld anwenden kannst.</p>
+  </div>
+</div>
+
+<!-- FORMATE -->
+<section class="benefits-section">
+  <div class="benefits-inner">
+    <div class="benefits-header">
+      <span class="section-label">Zwei Formate</span>
+      <h2>Solofolgen &amp; <em>Interviews</em></h2>
+    </div>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <div class="benefit-num">1</div>
+        <div class="benefit-body">
+          <h3>Solofolgen</h3>
+          <p>Marina Henze teilt ihre Gedanken zu Identität, Business und Geld – als Frau, die seit 20 Jahren Unternehmerin ist und eine Multi-Millionen-Brand aufgebaut hat.</p>
+        </div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-num">2</div>
+        <div class="benefit-body">
+          <h3>Interviewfolgen</h3>
+          <p>Marina spricht mit Gästen Klartext: Unternehmer*innen, Investor*innen und Expert*innen, die zeigen, wie finanzielle Freiheit wirklich funktioniert.</p>
+        </div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-num">3</div>
+        <div class="benefit-body">
+          <h3>Ehrliche Gespräche</h3>
+          <p>Keine perfekten Antworten, sondern ehrliche Gespräche, echte Erfahrungen und Momente, die zum Nachdenken anregen.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THEMEN -->
+<section class="rules-section">
+  <div class="rules-inner">
+    <span class="section-label on-dark">Worum es geht</span>
+    <h2>Die <em>Themen</em> im Podcast</h2>
+    <div style="height:16px;"></div>
+    <div class="rules-box">
+      <ul class="rules-list">
+        <li>Ein <strong>Business, das zu dir passt</strong> – statt zum Trend.</li>
+        <li><strong>Geld, Selbstwert und Freiheit</strong> – und die neusten Möglichkeiten, finanziell unabhängig zu werden.</li>
+        <li><strong>Smarte Investments</strong> und echtes Geldbewusstsein.</li>
+        <li>Alte Muster und unbewusste Dynamiken, die dein Business bremsen, ohne dass du es merkst.</li>
+        <li>Konkrete Impulse, Strategien und Perspektiven für deinen Alltag.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- PLATTFORMEN -->
+<section class="platforms-section" id="plattformen">
+  <div class="platforms-inner">
+    <h2>Wo du <em>reinhören</em> kannst</h2>
+    <p class="platforms-sub">Manchmal sanft. Manchmal unbequem. Immer unangepasst.</p>
+    <div class="platforms-grid">
+      <a class="platform-card" href="https://open.spotify.com/show/1DVcVOVK1JvyvUG3aQp6Qv?si=0c09015e72db415b" target="_blank" rel="noopener">
+        <svg class="platform-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="11" fill="#1DB954"/><path d="M6.5 9.5c3.2-.9 7.3-.5 9.9 1.1M6.9 12.6c2.7-.7 6.1-.5 8.4.9M7.4 15.4c2.2-.5 4.9-.3 6.7.9" stroke="#fff" stroke-width="1.3" stroke-linecap="round"/></svg>
+        <span class="platform-name">Spotify</span>
+      </a>
+      <a class="platform-card" href="https://podcasts.apple.com/de/podcast/der-feminess-podcast-unangepasst-erfolgreich/id1370832939" target="_blank" rel="noopener">
+        <svg class="platform-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="1" width="22" height="22" rx="6" fill="url(#appleGrad)"/><defs><linearGradient id="appleGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F452FF"/><stop offset="1" stop-color="#832BC1"/></linearGradient></defs><path d="M12 6.5c1.3 0 2.4 1 2.4 2.3 0 .3-.6.4-.8.1-.4-.6-1-1-1.6-1s-1.2.4-1.6 1c-.2.3-.8.2-.8-.1 0-1.3 1.1-2.3 2.4-2.3z" fill="#fff"/><path d="M9 12.5c.3-2 1.6-3 3-3s2.7 1 3 3c.2 1.6-.3 4.3-1.3 5.7-.5.7-1 1.2-1.7 1.2s-1.2-.5-1.7-1.2c-1-1.4-1.5-4.1-1.3-5.7z" fill="#fff"/></svg>
+        <span class="platform-name">Apple Podcasts</span>
+      </a>
+      <a class="platform-card" href="https://music.amazon.de/podcasts/434b9cd2-45a9-4c4c-96b2-4d9b0ff4496b/der-feminess-podcast-unangepasst-erfolgreich" target="_blank" rel="noopener">
+        <svg class="platform-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="11" fill="#25D1DA"/><path d="M12 6a6 6 0 100 12 6 6 0 000-12zm0 2a4 4 0 110 8 4 4 0 010-8z" fill="#0d2420"/><path d="M6 17.5c3-1.5 9-1.5 12 0" stroke="#0d2420" stroke-width="1" stroke-linecap="round" fill="none"/></svg>
+        <span class="platform-name">Amazon Music</span>
+      </a>
+      <a class="platform-card" href="https://www.youtube.com/Feminess" target="_blank" rel="noopener">
+        <svg class="platform-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="4.5" width="22" height="15" rx="4" fill="#FF0000"/><path d="M10 8.5l6 3.5-6 3.5v-7z" fill="#fff"/></svg>
+        <span class="platform-name">YouTube</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="final-cta-inner">
+    <p class="final-cta-tag">Break the Circle.</p>
+    <h2>Willkommen beim <em>Feminess Podcast</em></h2>
+    <p class="final-cta-sign">Deine Marina</p>
+    <a href="#plattformen" class="btn-cta">Jetzt reinhören</a>
+    <p class="final-note">Neue Folgen jede Woche – auf Spotify, Apple Podcasts, Amazon Music und YouTube.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand"><img src="../webinar/Bilder/Logo-rosegoldverlauf-rgb-transparent.png" alt="Feminess" class="footer-logo"></div>
+    <div class="footer-links">
+      <a href="https://feminess.github.io/Datenschutz/">Datenschutzerklärung</a>
+      <a href="https://feminess.github.io/Impressum/">Impressum</a>
+    </div>
+    <p class="footer-copy">© 2026 FEMINESS – MARINA HENZE</p>
+  </div>
+</footer>
+
+</body>
+</html>
