@@ -125,6 +125,16 @@
     .manifesto-badge-n { font-family: 'Cormorant Garamond', serif; font-size: 40px; font-weight: 600; color: var(--teal-dark); line-height: 1; }
     .manifesto-badge-t { font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--warm-gray); margin-top: 4px; }
 
+    /* ── BEKANNT AUS SLIDESHOW ── */
+    .section-bekannt { padding: 56px 0; background: var(--off-white); text-align: center; overflow: hidden; }
+    .bekannt-label { font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 2.5px; color: #0a3828; margin-bottom: 36px; text-transform: uppercase; }
+    .bekannt-track-wrap { overflow: hidden; position: relative; width: 100%; mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%); -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%); }
+    .bekannt-track { display: flex; align-items: center; gap: 80px; width: max-content; animation: logoScroll 24s linear infinite; padding: 8px 0; }
+    .bekannt-track:hover { animation-play-state: paused; }
+    .bekannt-track img { height: 52px; width: auto; object-fit: contain; opacity: 0.85; transition: opacity 0.3s ease; flex-shrink: 0; }
+    .bekannt-track img:hover { opacity: 1; }
+    @keyframes logoScroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
     /* ── IMPACT STATS ── */
     .impact-section { background: var(--teal-dark); padding: 72px 0; }
     .impact-grid { max-width: 1100px; margin: 0 auto; padding: 0 40px; display: grid; grid-template-columns: repeat(4,1fr); gap: 32px; text-align: center; }
@@ -363,6 +373,29 @@
         <div class="manifesto-badge-n">10+</div>
         <div class="manifesto-badge-t">Kongresse in Europa</div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     BEKANNT AUS
+═══════════════════════════════════ -->
+<section class="section-bekannt">
+  <div class="bekannt-label">Bekannt aus:</div>
+  <div class="bekannt-track-wrap">
+    <div class="bekannt-track">
+      <img src="Logos/Cosmopolitan-Logo-neue-Masse.png" alt="Cosmopolitan">
+      <img src="Logos/Focus-Money-Logo-neue-masse.png" alt="Focus Money">
+      <img src="Logos/Huffpost-Logo-neue-Masse.png" alt="HuffPost">
+      <img src="Logos/Stern-Logo.png" alt="Stern">
+      <img src="Logos/Wirschafwoche.png" alt="Wirtschaftswoche">
+      <img src="Logos/handelsblatt-logo-1.png" alt="Handelsblatt">
+      <img src="Logos/Cosmopolitan-Logo-neue-Masse.png" alt="Cosmopolitan">
+      <img src="Logos/Focus-Money-Logo-neue-masse.png" alt="Focus Money">
+      <img src="Logos/Huffpost-Logo-neue-Masse.png" alt="HuffPost">
+      <img src="Logos/Stern-Logo.png" alt="Stern">
+      <img src="Logos/Wirschafwoche.png" alt="Wirtschaftswoche">
+      <img src="Logos/handelsblatt-logo-1.png" alt="Handelsblatt">
     </div>
   </div>
 </section>
