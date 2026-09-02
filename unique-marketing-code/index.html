@@ -303,9 +303,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     margin: 0 auto;
     padding: 0 24px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(6, 1fr);
     gap: 28px;
   }
+  .journey-card:nth-child(1) { grid-column: 1 / 3; }
+  .journey-card:nth-child(2) { grid-column: 3 / 5; }
+  .journey-card:nth-child(3) { grid-column: 5 / 7; }
+  .journey-card:nth-child(4) { grid-column: 2 / 4; }
+  .journey-card:nth-child(5) { grid-column: 4 / 6; }
 
   .journey-card {
     background: #fff;
@@ -640,6 +645,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .testimonials-grid { grid-template-columns: 1fr; }
     .journey-card { padding: 40px 30px 34px; }
     .journey-grid { grid-template-columns: 1fr; gap: 20px; }
+    .journey-card:nth-child(1), .journey-card:nth-child(2), .journey-card:nth-child(3), .journey-card:nth-child(4), .journey-card:nth-child(5) { grid-column: 1 / 2; }
     .journey-num { font-size: 3rem; margin-bottom: 18px; }
     .journey-card h3 { font-size: 23.6px; }
   }
