@@ -296,22 +296,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
   .journey-header { text-align: center; margin-bottom: 64px; padding: 0 24px; position: relative; z-index: 1; }
 
-  .journey-scroller-wrap { position: relative; z-index: 1; }
-  .journey-track {
-    display: flex;
+  .journey-grid {
+    position: relative;
+    z-index: 1;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 28px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    padding: 12px max(64px, calc((100% - 860px) / 2 + 40px)) 16px;
-    scroll-padding-inline: max(64px, calc((100% - 860px) / 2 + 40px));
-    scrollbar-width: none;
-    -ms-overflow-style: none;
   }
-  .journey-track::-webkit-scrollbar { display: none; }
 
   .journey-card {
-    flex: 0 0 380px;
-    scroll-snap-align: start;
     background: #fff;
     border: 2px solid var(--rose);
     border-radius: 28px;
@@ -375,62 +371,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     margin: 0;
     position: relative; z-index: 1;
   }
-
-  .journey-arrow {
-    position: absolute; top: 50%;
-    transform: translateY(-50%);
-    width: 48px; height: 48px;
-    border-radius: 50%;
-    background: rgba(13,36,32,0.75);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    border: 1px solid rgba(255,255,255,0.18);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.35);
-    color: #fff;
-    font-size: 18px;
-    display: flex; align-items: center; justify-content: center;
-    cursor: pointer;
-    z-index: 5;
-    transition: background 0.25s, border-color 0.25s;
-  }
-  .journey-arrow:hover { background: rgba(37,124,108,0.55); border-color: var(--teal-light); }
-  .journey-arrow.prev { left: 12px; }
-  .journey-arrow.next { right: 12px; }
-  @media (max-width: 720px) { .journey-arrow { display: none; } }
-
-  .journey-swipe-hint {
-    display: none;
-    position: absolute;
-    top: 50%; right: 14px;
-    transform: translateY(-50%);
-    z-index: 6;
-    width: 40px; height: 40px;
-    border-radius: 50%;
-    align-items: center; justify-content: center;
-    background: linear-gradient(135deg, var(--rose) 0%, var(--rose-dark) 100%);
-    color: #fff;
-    font-size: 18px;
-    box-shadow: 0 6px 20px rgba(201,145,124,0.5);
-    pointer-events: none;
-    animation: swipeNudge 1.6s ease-in-out infinite;
-  }
-  @keyframes swipeNudge {
-    0%, 100% { transform: translateY(-50%) translateX(0); opacity: 0.85; }
-    50%      { transform: translateY(-50%) translateX(8px); opacity: 1; }
-  }
-  @media (max-width: 720px) { .journey-swipe-hint { display: flex; } }
-
-  .journey-dots { display: flex; justify-content: center; gap: 10px; margin-top: 36px; position: relative; z-index: 1; }
-  .journey-dot {
-    width: 8px; height: 8px;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.2);
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    transition: background 0.3s, transform 0.3s;
-  }
-  .journey-dot.is-active { background: var(--teal-light); transform: scale(1.35); }
 
   /* ── BRIDGE CTA ── */
   .bridge-section {
@@ -698,7 +638,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .hero-text { padding: 36px 32px 48px; text-align: center; }
     .hero-cta { align-items: center; }
     .testimonials-grid { grid-template-columns: 1fr; }
-    .journey-card { flex-basis: 300px; padding: 40px 30px 34px; }
+    .journey-card { padding: 40px 30px 34px; }
+    .journey-grid { grid-template-columns: 1fr; gap: 20px; }
     .journey-num { font-size: 3rem; margin-bottom: 18px; }
     .journey-card h3 { font-size: 23.6px; }
   }
@@ -800,40 +741,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h2 class="section-title">Was sich durch deinen<br>„<em>Unique Marketing Code</em>" sofort verändert:</h2>
   </div>
 
-  <div class="journey-scroller-wrap">
-    <button class="journey-arrow prev" aria-label="Zurück" onclick="journeyScroll(-1)">&larr;</button>
-    <div class="journey-track" id="journeyTrack">
-      <div class="journey-card">
-        <span class="journey-num">01</span>
-        <p>Du weißt exakt, welches Marketing wirklich zu dir passt. Und plötzlich ziehst du die <strong>richtigen Menschen</strong> an, für die du sofort <strong>ihre 1. Wahl</strong> bist.</p>
-      </div>
-      <div class="journey-card">
-        <span class="journey-num">02</span>
-        <p><strong>Marketing</strong> fühlt sich wieder <strong>leicht</strong> und <strong>authentisch</strong> an. Nicht nach etwas, das du machen musst, sondern <strong>das, was du machen willst</strong>.</p>
-      </div>
-      <div class="journey-card">
-        <span class="journey-num">03</span>
-        <p>Menschen erkennen dich und <strong>deine Expertise auf den ersten Blick</strong>. Du bist nicht mehr eine von vielen, sondern eine Frau, an der niemand vorbeikommt.</p>
-      </div>
-      <div class="journey-card">
-        <span class="journey-num">04</span>
-        <p>In Gesprächen mit deinen Soulclients <strong>strahlst</strong> du eine <strong>Selbstsicherheit</strong> aus, die keine Rabatte mehr braucht. Du kennst deinen Wert und sie spüren diesen sofort.</p>
-      </div>
-      <div class="journey-card">
-        <span class="journey-num">05</span>
-        <p>Dein Content entwickelt das Gefühl von „will ich unbedingt haben". Du musst nicht mehr ständig online sein, um gesehen zu werden. <strong>Du wirst gesehen, weil du echt bist.</strong></p>
-      </div>
+  <div class="journey-grid" id="journeyTrack">
+    <div class="journey-card">
+      <span class="journey-num">01</span>
+      <p>Du weißt exakt, welches Marketing wirklich zu dir passt. Und plötzlich ziehst du die <strong>richtigen Menschen</strong> an, für die du sofort <strong>ihre 1. Wahl</strong> bist.</p>
     </div>
-    <button class="journey-arrow next" aria-label="Weiter" onclick="journeyScroll(1)">&rarr;</button>
-    <span class="journey-swipe-hint" aria-hidden="true">&rsaquo;</span>
-  </div>
-
-  <div class="journey-dots" id="journeyDots">
-    <button class="journey-dot is-active" aria-label="Zu Punkt 1 springen"></button>
-    <button class="journey-dot" aria-label="Zu Punkt 2 springen"></button>
-    <button class="journey-dot" aria-label="Zu Punkt 3 springen"></button>
-    <button class="journey-dot" aria-label="Zu Punkt 4 springen"></button>
-    <button class="journey-dot" aria-label="Zu Punkt 5 springen"></button>
+    <div class="journey-card">
+      <span class="journey-num">02</span>
+      <p><strong>Marketing</strong> fühlt sich wieder <strong>leicht</strong> und <strong>authentisch</strong> an. Nicht nach etwas, das du machen musst, sondern <strong>das, was du machen willst</strong>.</p>
+    </div>
+    <div class="journey-card">
+      <span class="journey-num">03</span>
+      <p>Menschen erkennen dich und <strong>deine Expertise auf den ersten Blick</strong>. Du bist nicht mehr eine von vielen, sondern eine Frau, an der niemand vorbeikommt.</p>
+    </div>
+    <div class="journey-card">
+      <span class="journey-num">04</span>
+      <p>In Gesprächen mit deinen Soulclients <strong>strahlst</strong> du eine <strong>Selbstsicherheit</strong> aus, die keine Rabatte mehr braucht. Du kennst deinen Wert und sie spüren diesen sofort.</p>
+    </div>
+    <div class="journey-card">
+      <span class="journey-num">05</span>
+      <p>Dein Content entwickelt das Gefühl von „will ich unbedingt haben". Du musst nicht mehr ständig online sein, um gesehen zu werden. <strong>Du wirst gesehen, weil du echt bist.</strong></p>
+    </div>
   </div>
 </section>
 
@@ -1311,12 +1239,10 @@ window._load_script = function(url, callback, isSubmit) {
   }, { passive: true });
 }());
 
-// ── JOURNEY DECK ──
-var journeyScroll;
+// ── JOURNEY-KÄRTCHEN: FADE-IN BEIM SCROLLEN ──
 (function () {
-  var track = document.getElementById('journeyTrack');
   var cards = document.querySelectorAll('.journey-card');
-  if (!track || !cards.length) return;
+  if (!cards.length) return;
 
   var revealObserver = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
@@ -1327,51 +1253,6 @@ var journeyScroll;
     });
   }, { threshold: 0.2 });
   cards.forEach(function (card) { revealObserver.observe(card); });
-
-  var step = function () { return cards[0].getBoundingClientRect().width + 28; };
-
-  journeyScroll = function (dir) {
-    track.scrollBy({ left: dir * step(), behavior: 'smooth' });
-  };
-
-  var dots = document.querySelectorAll('.journey-dot');
-  dots.forEach(function (dot, i) {
-    dot.addEventListener('click', function () {
-      track.scrollTo({ left: i * step(), behavior: 'smooth' });
-    });
-  });
-  var syncDots = function () {
-    var index = Math.max(0, Math.min(cards.length - 1, Math.round(track.scrollLeft / step())));
-    dots.forEach(function (dot, i) { dot.classList.toggle('is-active', i === index); });
-  };
-  track.addEventListener('scroll', function () {
-    window.requestAnimationFrame(syncDots);
-  }, { passive: true });
-  syncDots();
-
-  // Swipe-Hinweis: einmalig antippen, sobald echt gescrollt wurde, ausblenden
-  var swipeHint = document.querySelector('.journey-swipe-hint');
-  var hidesSwipeHint = function () {
-    if (swipeHint) { swipeHint.style.opacity = '0'; swipeHint.style.transition = 'opacity 0.4s ease'; }
-    track.removeEventListener('scroll', hidesSwipeHint);
-  };
-  track.addEventListener('scroll', hidesSwipeHint, { passive: true });
-
-  // Einmaliger "Peek"-Nudge, sobald das Deck sichtbar wird – zeigt, dass mehr Karten folgen
-  var peeked = false;
-  var peekObserver = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (entry.isIntersecting && !peeked) {
-        peeked = true;
-        setTimeout(function () {
-          track.scrollTo({ left: 46, behavior: 'smooth' });
-          setTimeout(function () { track.scrollTo({ left: 0, behavior: 'smooth' }); }, 650);
-        }, 600);
-        peekObserver.disconnect();
-      }
-    });
-  }, { threshold: 0.4 });
-  peekObserver.observe(track);
 }());
 
 // ── EXIT POPUP ──
