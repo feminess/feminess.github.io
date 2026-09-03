@@ -570,8 +570,8 @@ body {
 /* ── BENEFIT FAQ BULLETS ── */
 .section-benefit-faq {
   padding: 80px 0;
-  background: #fff;
-  border-bottom: 1px solid var(--beige);
+  background: var(--teal-dark);
+  border-bottom: none;
 }
 .benefit-faq-grid {
   display: grid;
@@ -581,8 +581,8 @@ body {
 }
 .benefit-faq-card {
   padding: 28px 32px;
-  background: var(--teal-dark);
-  border: none;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.15);
   border-radius: 16px;
 }
 .benefit-faq-q {
@@ -776,9 +776,20 @@ body {
 
 /* ── WIE HILFT DIR SECTION ── */
 .section-wie {
-  background: var(--teal-dark);
+  position: relative;
+  background: url('../Bilder/Marina_wie_section.jpg') center 20%/cover no-repeat;
   padding: 80px 0;
   border-bottom: none;
+}
+.section-wie::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(13,36,32,0.82) 0%, rgba(13,36,32,0.90) 30%, rgba(13,36,32,0.94) 100%);
+}
+.section-wie > .container {
+  position: relative;
+  z-index: 1;
 }
 .wie-inner {
   display: grid;
@@ -2299,8 +2310,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- ── FAQ-STYLE BENEFITS ── -->
 <section class="section-benefit-faq">
   <div class="container">
-    <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(28px,4vw,44px);font-weight:600;color:#0a3828;line-height:1.15;margin-bottom:14px;">Was du in der <span style="background:linear-gradient(90deg,#a0685a 0%,#d4a090 25%,#f0ccc0 50%,#d4a090 75%,#a0685a 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">TRUE SPIRIT Business Experience</span> erlebst:</h2>
-    <p style="font-family:'Montserrat',sans-serif;font-size:16px;color:#0a3828;margin-bottom:0;line-height:1.75;">Kein Webinar-Skript, das du auswendig lernst. Kein „das musst du jetzt genauso wie ich machen, damit es funktioniert". Kein Business, das nur läuft, wenn du ständig online bist und eine Social-Media-Show abziehst.<br><br><strong>In diesen drei Tagen zeige ich dir, wie es sich anfühlt, dein Business aus deiner Einzigartigkeit und Wahrhaftigkeit aufzubauen.</strong></p>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(28px,4vw,44px);font-weight:600;color:#fff;line-height:1.15;margin-bottom:14px;">Was du in der <span style="background:linear-gradient(90deg,#a0685a 0%,#d4a090 25%,#f0ccc0 50%,#d4a090 75%,#a0685a 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">TRUE SPIRIT Business Experience</span> erlebst:</h2>
+    <p style="font-family:'Montserrat',sans-serif;font-size:16px;color:#fff;margin-bottom:0;line-height:1.75;">Kein Webinar-Skript, das du auswendig lernst. Kein „das musst du jetzt genauso wie ich machen, damit es funktioniert". Kein Business, das nur läuft, wenn du ständig online bist und eine Social-Media-Show abziehst.<br><br><strong>In diesen drei Tagen zeige ich dir, wie es sich anfühlt, dein Business aus deiner Einzigartigkeit und Wahrhaftigkeit aufzubauen.</strong></p>
     <div class="benefit-faq-grid" style="margin-top:40px;grid-template-columns:1fr;">
 
       <div class="benefit-faq-card">
@@ -2334,8 +2345,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="section-wie">
   <div class="container">
     <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(30px,4.2vw,46px);font-weight:600;color:#fff;line-height:1.15;margin-bottom:32px;">Was verändert sich bei dir <em>wirklich?</em></h2>
-
-    <img src="../Bilder/Marina_wie_section.jpg" alt="Marina Henze – Feminess" style="width:100%;max-height:520px;object-fit:cover;object-position:center top;border-radius:4px;display:block;margin-bottom:40px;">
 
     <!-- Fließtext -->
     <div class="wie-fliesstext">
