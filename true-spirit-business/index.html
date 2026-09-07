@@ -62,17 +62,21 @@
     .on-dark h2 { color: #fff; }
     .on-dark h2 em { color: var(--sand); }
 
+    /* ── TOP BAR (repeats like the reference phone-screen header) ── */
+    .topbar { background: var(--teal-deep); padding: 16px 0; position: sticky; top: 0; z-index: 50; }
+    .topbar-inner { max-width: 560px; margin: 0 auto; padding: 0 28px; display: flex; align-items: center; justify-content: space-between; }
+    .topbar-logo { font-family: 'Montserrat', sans-serif; font-weight: 700; letter-spacing: 3px; font-size: 13px; color: #fff; }
+    .topbar-menu { display: flex; flex-direction: column; gap: 4px; width: 20px; }
+    .topbar-menu span { display: block; height: 2px; background: #fff; border-radius: 2px; }
+
     /* ── BUTTON ── */
     .btn {
       display: block; width: 100%; text-align: center; box-sizing: border-box;
-      background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%);
-      color: var(--dark); text-decoration: none; padding: 19px 32px; border-radius: 999px;
-      font-family: 'Montserrat', sans-serif; font-size: 15px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+      background: var(--teal); color: #fff; text-decoration: none; padding: 18px 32px; border-radius: 999px;
+      font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
       border: none; cursor: pointer; transition: opacity 0.2s, transform 0.15s;
-      animation: pulse-btn 2.4s ease-in-out infinite;
     }
-    .btn:hover { opacity: 0.88; transform: translateY(-1px); animation: none; }
-    @keyframes pulse-btn { 0%, 100% { box-shadow: 0 6px 24px rgba(160,104,90,0.35); } 50% { box-shadow: 0 10px 32px rgba(160,104,90,0.55); } }
+    .btn:hover { opacity: 0.9; transform: translateY(-1px); }
     .btn-note { font-size: 13px; color: var(--warm-gray); margin-top: 14px; text-align: center; line-height: 1.6; }
     .on-dark .btn-note { color: var(--teal-pale); }
 
@@ -97,9 +101,11 @@
 
     /* ── SECTION 02: PROOF STRIP ── */
     .s-proof { background: var(--ecru); padding: 48px 0; border-bottom: 1px solid var(--ecru-line); }
-    .proof-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 32px; text-align: center; }
-    .proof-num { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 32px; color: var(--teal-dark); line-height: 1; margin-bottom: 6px; }
-    .proof-lbl { font-size: 10.5px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; color: var(--warm-gray); line-height: 1.4; }
+    .proof-list { display: flex; flex-direction: column; gap: 18px; margin-bottom: 32px; }
+    .proof-row { display: flex; align-items: baseline; gap: 16px; padding-bottom: 18px; border-bottom: 1px solid var(--ecru-line); }
+    .proof-row:last-child { border-bottom: none; padding-bottom: 0; }
+    .proof-num { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 34px; color: var(--teal-dark); line-height: 1; white-space: nowrap; }
+    .proof-lbl { font-size: 12px; font-weight: 700; letter-spacing: 0.6px; text-transform: uppercase; color: var(--warm-gray); line-height: 1.4; }
     .proof-quote { background: #fff; border: 1px solid var(--ecru-line); border-left: 3px solid var(--rose); border-radius: 4px; padding: 22px 24px; margin-bottom: 20px; }
     .proof-quote p { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 19px; color: #0a3828; line-height: 1.5; margin-bottom: 12px; }
     .proof-quote-who { display: flex; align-items: center; gap: 10px; }
@@ -110,18 +116,12 @@
     .avatar-row img:first-child { margin-left: 0; }
 
     /* ── SECTION 03: WAKE-UP CALL ── */
-    .s-wake {
-      position: relative; padding: 64px 0; border-bottom: 1px solid var(--ecru-line);
-      background: linear-gradient(180deg, rgba(13,36,32,0.72) 0%, rgba(13,36,32,0.88) 55%, rgba(13,36,32,0.96) 100%),
-                  url('img/wake-up-sunset.jpg') center 30%/cover no-repeat;
-    }
-    .s-wake .section-label { color: var(--teal-pale); }
-    .s-wake .section-label::after { background: var(--teal-pale); }
-    .s-wake h2 { color: #fff; }
-    .s-wake > .wrap > p { color: var(--teal-pale) !important; }
-    .wake-list { display: flex; flex-direction: column; gap: 18px; margin-top: 28px; }
-    .wake-list p { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 21px; color: rgba(255,255,255,0.82); line-height: 1.5; padding-left: 20px; border-left: 2px solid rgba(255,255,255,0.25); }
-    .wake-list p strong { font-style: normal; font-weight: 600; color: #fff; }
+    .s-wake { background: var(--ecru); padding: 64px 0; border-bottom: 1px solid var(--ecru-line); }
+    .wake-list { display: flex; flex-direction: column; gap: 16px; margin: 28px 0 32px; }
+    .wake-list p { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 21px; color: var(--warm-gray); line-height: 1.5; padding-left: 20px; border-left: 2px solid var(--ecru-line); }
+    .wake-list p strong { font-style: normal; font-weight: 600; color: #0a3828; }
+    .wake-image { border-radius: 16px; overflow: hidden; aspect-ratio: 4/3; }
+    .wake-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
     /* ── SECTION 04: ALT VS NEU ── */
     .s-avn { padding: 0; }
@@ -150,13 +150,14 @@
 
     /* ── SECTION 06: 3 DAYS 3 SHIFTS ── */
     .s-days { background: var(--ecru); padding: 64px 0; border-bottom: 1px solid var(--ecru-line); }
-    .day-card { background: #fff; border: 1px solid var(--ecru-line); border-radius: 14px; overflow: hidden; margin-bottom: 20px; }
+    .day-card { background: #fff; border: 1px solid var(--ecru-line); border-radius: 14px; overflow: hidden; margin-bottom: 20px; padding: 22px 22px 24px; }
     .day-card:last-child { margin-bottom: 0; }
-    .day-img { aspect-ratio: 16/9; overflow: hidden; }
+    .day-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px; }
+    .day-num { font-size: 10.5px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--teal); }
+    .day-arrow { width: 26px; height: 26px; border-radius: 50%; border: 1px solid var(--ecru-line); color: var(--teal); font-size: 13px; display: flex; align-items: center; justify-content: center; }
+    .day-title { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 24px; color: #0a3828; margin-bottom: 18px; }
+    .day-img { aspect-ratio: 16/9; overflow: hidden; border-radius: 8px; margin-bottom: 18px; }
     .day-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .day-body { padding: 22px 22px 24px; }
-    .day-num { font-size: 10.5px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--teal); margin-bottom: 6px; }
-    .day-title { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 24px; color: #0a3828; margin-bottom: 16px; }
     .day-shift { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
     .day-shift-col span.lbl { display: block; font-size: 9.5px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 6px; }
     .day-shift-col.before span.lbl { color: var(--rose); }
@@ -179,7 +180,7 @@
 
     /* ── SECTION 08: REAL WOMEN ── */
     .s-real { background: var(--ecru); padding: 64px 0; border-bottom: 1px solid var(--ecru-line); }
-    .real-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 28px 0 32px; text-align: center; }
+    .real-stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin: 28px 0 32px; text-align: center; }
     .real-stat-box { background: #fff; border: 1px solid var(--ecru-line); border-radius: 10px; padding: 18px 10px; }
     .real-stat-num { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 22px; color: var(--teal-dark); margin-bottom: 4px; }
     .real-stat-lbl { font-size: 9px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: var(--warm-gray); line-height: 1.3; }
@@ -196,7 +197,7 @@
     .fw-box { border-radius: 14px; padding: 26px 24px; margin-bottom: 18px; }
     .fw-yes { background: #f0faf7; border: 1px solid #9ccfc8; }
     .fw-no { background: #fdf4f5; border: 1px solid var(--rose-light); }
-    .fw-title { font-size: 13px; font-weight: 700; letter-spacing: 0.5px; color: #0a3828; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+    .fw-title { font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #0a3828; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
     .fw-list { list-style: none; display: flex; flex-direction: column; gap: 11px; }
     .fw-list li { font-size: 15.5px; color: #0a3828; line-height: 1.6; padding-left: 22px; position: relative; }
     .fw-yes .fw-list li::before { content: '✓'; position: absolute; left: 0; color: var(--teal); font-weight: 700; }
@@ -235,10 +236,16 @@
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
+<div class="topbar">
+  <div class="topbar-inner">
+    <span class="topbar-logo">FEMINESS.</span>
+    <span class="topbar-menu"><span></span><span></span><span></span></span>
+  </div>
+</div>
+
 <!-- 01 HERO -->
 <section class="s-hero">
   <div class="wrap">
-    <div class="hero-logo"><span>FEMINESS.</span></div>
     <div class="hero-badge">Free Live Experience · 22.–24. September 2026</div>
     <div class="hero-h1">TRUE SPIRIT<br>BUSINESS</div>
     <div class="hero-sub">Gewählt statt überzeugt.</div>
@@ -249,7 +256,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <a href="#formular" class="btn">Ich bin dabei →</a>
     <div class="hero-pills" style="margin-top:22px;">
-      <span class="hero-pill">📍 Live &amp; kostenlos</span>
+      <span class="hero-pill">📷 Live &amp; kostenlos</span>
       <span class="hero-pill">💻 Online</span>
       <span class="hero-pill">⏳ Limitierte Plätze</span>
     </div>
@@ -262,19 +269,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="section-label">Proof Strip</div>
     <h2>Echte Frauen. <em>Echte Ergebnisse.</em></h2>
     <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:19px;color:var(--warm-gray);margin-bottom:28px;">Mehr Freiheit. Mehr Impact.</p>
-    <div class="proof-grid">
-      <div>
-        <div class="proof-num">1.200+</div>
-        <div class="proof-lbl">Frauen dabei</div>
-      </div>
-      <div>
-        <div class="proof-num">98%</div>
-        <div class="proof-lbl">Weiterempfehlung</div>
-      </div>
-      <div>
-        <div class="proof-num">4,9★</div>
-        <div class="proof-lbl">Bewertung</div>
-      </div>
+    <div class="proof-list">
+      <div class="proof-row"><div class="proof-num">1.200+</div><div class="proof-lbl">Frauen dabei</div></div>
+      <div class="proof-row"><div class="proof-num">98%</div><div class="proof-lbl">würden es weiterempfehlen</div></div>
+      <div class="proof-row"><div class="proof-num">4,9★</div><div class="proof-lbl">Bewertung</div></div>
+      <div class="proof-row"><div class="proof-num">6-stellige</div><div class="proof-lbl">Ergebnisse / Umsätze*</div></div>
     </div>
     <div class="proof-quote">
       <p>„Ich arbeite weniger, habe mehr Umsatz und fühle mich endlich wieder wie ich.“</p>
@@ -304,6 +303,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p>Vielleicht musst du nicht noch <strong>von anderen lernen.</strong></p>
       <p>Vielleicht brauchst du endlich einen neuen <strong>Blick auf DICH.</strong></p>
     </div>
+    <div class="wake-image"><img src="img/wake-up-sunset.jpg" alt=""></div>
   </div>
 </section>
 
@@ -362,40 +362,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h2>Eine neue <em>Realität.</em></h2>
     <div style="margin-top:32px;">
       <div class="day-card">
+        <div class="day-head"><div class="day-num">Day 01</div><div class="day-arrow">→</div></div>
+        <div class="day-title">Root to Rise</div>
         <div class="day-img"><img src="../Bilder/Marina_MAI2314190 Kopie.jpg" alt="Day 01"></div>
-        <div class="day-body">
-          <div class="day-num">Day 01</div>
-          <div class="day-title">Root to Rise</div>
-          <div class="day-shift">
-            <div class="day-shift-col before"><span class="lbl">Vorher</span><p>Ich arbeite so viel – warum komme ich trotzdem nicht weiter?</p></div>
-            <div class="day-shift-col after"><span class="lbl">Nachher</span><p>Ich erkenne, was mich wirklich zurückhält – und löse es an der Wurzel.</p></div>
-          </div>
-          <div class="day-tags"><span>Identity</span><span>Mindset</span><span>Positioning</span></div>
+        <div class="day-shift">
+          <div class="day-shift-col before"><span class="lbl">Vorher</span><p>Ich arbeite so viel – warum komme ich trotzdem nicht weiter?</p></div>
+          <div class="day-shift-col after"><span class="lbl">Nachher</span><p>Ich erkenne, was mich wirklich zurückhält – und löse es an der Wurzel.</p></div>
         </div>
+        <div class="day-tags"><span>Identity</span><span>Mindset</span><span>Positioning</span></div>
       </div>
       <div class="day-card">
+        <div class="day-head"><div class="day-num">Day 02</div><div class="day-arrow">→</div></div>
+        <div class="day-title">Art of Offer</div>
         <div class="day-img"><img src="../Bilder/Marina_MAI2314249 Kopie.jpg" alt="Day 02"></div>
-        <div class="day-body">
-          <div class="day-num">Day 02</div>
-          <div class="day-title">Art of Offer</div>
-          <div class="day-shift">
-            <div class="day-shift-col before"><span class="lbl">Vorher</span><p>Ich habe zwar Ideen – aber mein Angebot fühlt sich nicht rund an.</p></div>
-            <div class="day-shift-col after"><span class="lbl">Nachher</span><p>Ich kreiere ein Angebot aus meiner Essenz, das begeistert und nach mir riecht.</p></div>
-          </div>
-          <div class="day-tags"><span>Offer</span><span>Value</span><span>Alignment</span></div>
+        <div class="day-shift">
+          <div class="day-shift-col before"><span class="lbl">Vorher</span><p>Ich habe zwar Ideen – aber mein Angebot fühlt sich nicht rund an.</p></div>
+          <div class="day-shift-col after"><span class="lbl">Nachher</span><p>Ich kreiere ein Angebot aus meiner Essenz, das begeistert und nach mir riecht.</p></div>
         </div>
+        <div class="day-tags"><span>Offer</span><span>Value</span><span>Alignment</span></div>
       </div>
       <div class="day-card">
+        <div class="day-head"><div class="day-num">Day 03</div><div class="day-arrow">→</div></div>
+        <div class="day-title">Mastery of Marketing</div>
         <div class="day-img"><img src="../Bilder/Marina_MAI2314300 Kopie.jpg" alt="Day 03"></div>
-        <div class="day-body">
-          <div class="day-num">Day 03</div>
-          <div class="day-title">Mastery of Marketing</div>
-          <div class="day-shift">
-            <div class="day-shift-col before"><span class="lbl">Vorher</span><p>Ich bin sichtbar – aber es kommen nicht die richtigen Menschen.</p></div>
-            <div class="day-shift-col after"><span class="lbl">Nachher</span><p>Ich werde gewählt, statt zu überzeugen.</p></div>
-          </div>
-          <div class="day-tags"><span>Visibility</span><span>Energy</span><span>Sales</span></div>
+        <div class="day-shift">
+          <div class="day-shift-col before"><span class="lbl">Vorher</span><p>Ich bin sichtbar – aber es kommen nicht die richtigen Menschen.</p></div>
+          <div class="day-shift-col after"><span class="lbl">Nachher</span><p>Ich werde gewählt, statt zu überzeugen.</p></div>
         </div>
+        <div class="day-tags"><span>Visibility</span><span>Energy</span><span>Sales</span></div>
       </div>
     </div>
   </div>
@@ -427,8 +421,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="real-arrow-stat">33K → 260K → 1M+</div>
     <div class="real-stats">
       <div class="real-stat-box"><div class="real-stat-num">1.200+</div><div class="real-stat-lbl">Frauen dabei</div></div>
+      <div class="real-stat-box"><div class="real-stat-num">4,9/5</div><div class="real-stat-lbl">Bewertung</div></div>
       <div class="real-stat-box"><div class="real-stat-num">98%</div><div class="real-stat-lbl">Weiterempfehlung</div></div>
-      <div class="real-stat-box"><div class="real-stat-num">4,9/5</div><div class="real-stat-lbl">Ergebnisse / Umsatz*</div></div>
+      <div class="real-stat-box"><div class="real-stat-num">6-stellige</div><div class="real-stat-lbl">Ergebnisse / Umsätze*</div></div>
     </div>
     <div class="testi">
       <p>„Ich arbeite weniger, habe mehr Umsatz und fühle mich einfach wieder wie ich.“</p>
@@ -450,9 +445,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="s-fw">
   <div class="wrap">
     <div class="section-label">Für wen?</div>
-    <h2>This is for <em>you.</em></h2>
     <div class="fw-box fw-yes">
-      <div class="fw-title">✓ This is for you</div>
+      <div class="fw-title">This is for you ✓</div>
       <ul class="fw-list">
         <li>Du spürst, dass mehr für dich möglich ist.</li>
         <li>Du willst ein Business, das wirklich zu dir passt.</li>
@@ -463,7 +457,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </ul>
     </div>
     <div class="fw-box fw-no">
-      <div class="fw-title">✕ This is not for you</div>
+      <div class="fw-title">This is not for you ✕</div>
       <ul class="fw-list">
         <li>Du suchst schnelle Hacks.</li>
         <li>Du willst dich weiter anpassen.</li>
@@ -487,7 +481,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <a href="https://feminess.de/true-spirit-business-anmeldung/" class="btn">Ich bin dabei →</a>
     <div class="final-pills">
-      <span class="final-pill">📍 Live &amp; kostenlos</span>
+      <span class="final-pill">📷 Live &amp; kostenlos</span>
       <span class="final-pill">💻 Online</span>
       <span class="final-pill">⏳ Limitierte Plätze</span>
     </div>
