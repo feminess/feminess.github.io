@@ -27,6 +27,8 @@
       --black:      #070808;
       --dark:       #0d2420;
       --off-white:  #f8f6f2;
+      --ecru:       #f1e8da;
+      --ecru-line:  #e2d5bf;
       --cream:      #f0f5f4;
       --beige:      #ddecea;
       --warm-gray:  #5a7a74;
@@ -42,7 +44,7 @@
       font-family: 'Montserrat', sans-serif;
       font-size: 18px;
       line-height: 1.75;
-      background: var(--off-white);
+      background: var(--ecru);
       color: #0a3828;
       -webkit-font-smoothing: antialiased;
     }
@@ -94,23 +96,23 @@
     .hero-pill { display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.14); padding: 7px 13px; border-radius: 999px; font-size: 11px; font-weight: 600; color: var(--teal-pale); }
 
     /* ── SECTION 02: PROOF STRIP ── */
-    .s-proof { background: var(--off-white); padding: 48px 0; border-bottom: 1px solid var(--beige); }
+    .s-proof { background: var(--ecru); padding: 48px 0; border-bottom: 1px solid var(--ecru-line); }
     .proof-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 32px; text-align: center; }
     .proof-num { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 32px; color: var(--teal-dark); line-height: 1; margin-bottom: 6px; }
     .proof-lbl { font-size: 10.5px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; color: var(--warm-gray); line-height: 1.4; }
-    .proof-quote { background: #fff; border: 1px solid var(--beige); border-left: 3px solid var(--rose); border-radius: 4px; padding: 22px 24px; margin-bottom: 20px; }
+    .proof-quote { background: #fff; border: 1px solid var(--ecru-line); border-left: 3px solid var(--rose); border-radius: 4px; padding: 22px 24px; margin-bottom: 20px; }
     .proof-quote p { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 19px; color: #0a3828; line-height: 1.5; margin-bottom: 12px; }
     .proof-quote-who { display: flex; align-items: center; gap: 10px; }
     .proof-quote-who img { width: 34px; height: 34px; border-radius: 50%; object-fit: cover; }
     .proof-quote-who span { font-size: 12px; font-weight: 700; color: var(--teal-dark); }
     .avatar-row { display: flex; margin-top: -6px; }
-    .avatar-row img { width: 38px; height: 38px; border-radius: 50%; object-fit: cover; border: 2px solid var(--off-white); margin-left: -10px; }
+    .avatar-row img { width: 38px; height: 38px; border-radius: 50%; object-fit: cover; border: 2px solid var(--ecru); margin-left: -10px; }
     .avatar-row img:first-child { margin-left: 0; }
 
     /* ── SECTION 03: WAKE-UP CALL ── */
-    .s-wake { background: #fff; padding: 64px 0; border-bottom: 1px solid var(--beige); }
+    .s-wake { background: var(--ecru); padding: 64px 0; border-bottom: 1px solid var(--ecru-line); }
     .wake-list { display: flex; flex-direction: column; gap: 18px; margin-top: 28px; }
-    .wake-list p { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 21px; color: var(--warm-gray); line-height: 1.5; padding-left: 20px; border-left: 2px solid var(--beige); }
+    .wake-list p { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 21px; color: var(--warm-gray); line-height: 1.5; padding-left: 20px; border-left: 2px solid var(--ecru-line); }
     .wake-list p strong { font-style: normal; font-weight: 600; color: #0a3828; }
 
     /* ── SECTION 04: ALT VS NEU ── */
@@ -139,8 +141,8 @@
     .chosen-tag { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--sand); }
 
     /* ── SECTION 06: 3 DAYS 3 SHIFTS ── */
-    .s-days { background: var(--off-white); padding: 64px 0; border-bottom: 1px solid var(--beige); }
-    .day-card { background: #fff; border: 1px solid var(--beige); border-radius: 14px; overflow: hidden; margin-bottom: 20px; }
+    .s-days { background: var(--ecru); padding: 64px 0; border-bottom: 1px solid var(--ecru-line); }
+    .day-card { background: #fff; border: 1px solid var(--ecru-line); border-radius: 14px; overflow: hidden; margin-bottom: 20px; }
     .day-card:last-child { margin-bottom: 0; }
     .day-img { aspect-ratio: 16/9; overflow: hidden; }
     .day-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
@@ -156,7 +158,7 @@
     .day-tags span { font-size: 9.5px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: var(--teal-dark); background: var(--cream); border: 1px solid var(--beige); padding: 4px 10px; border-radius: 999px; }
 
     /* ── SECTION 07: MARINAS STORY ── */
-    .s-story { background: #fff; padding: 64px 0; border-bottom: 1px solid var(--beige); }
+    .s-story { background: var(--ecru); padding: 64px 0; border-bottom: 1px solid var(--ecru-line); }
     .story-image { border-radius: 16px; overflow: hidden; aspect-ratio: 4/5; margin-bottom: 26px; position: relative; }
     .story-image img { width: 100%; height: 100%; object-fit: cover; object-position: center 15%; display: block; }
     .story-image::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(13,36,32,0.45) 0%, transparent 40%); }
@@ -168,13 +170,13 @@
     .link-more::after { content: '→'; }
 
     /* ── SECTION 08: REAL WOMEN ── */
-    .s-real { background: var(--off-white); padding: 64px 0; border-bottom: 1px solid var(--beige); }
+    .s-real { background: var(--ecru); padding: 64px 0; border-bottom: 1px solid var(--ecru-line); }
     .real-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 28px 0 32px; text-align: center; }
-    .real-stat-box { background: #fff; border: 1px solid var(--beige); border-radius: 10px; padding: 18px 10px; }
+    .real-stat-box { background: #fff; border: 1px solid var(--ecru-line); border-radius: 10px; padding: 18px 10px; }
     .real-stat-num { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 22px; color: var(--teal-dark); margin-bottom: 4px; }
     .real-stat-lbl { font-size: 9px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: var(--warm-gray); line-height: 1.3; }
     .real-arrow-stat { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 26px; color: var(--teal-dark); text-align: center; margin: 4px 0 28px; }
-    .testi { background: #fff; border: 1px solid var(--beige); border-radius: 12px; padding: 22px; margin-bottom: 16px; }
+    .testi { background: #fff; border: 1px solid var(--ecru-line); border-radius: 12px; padding: 22px; margin-bottom: 16px; }
     .testi p { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 18px; color: #0a3828; line-height: 1.5; margin-bottom: 14px; }
     .testi-who { display: flex; align-items: center; gap: 10px; }
     .testi-who img { width: 36px; height: 36px; border-radius: 50%; object-fit: cover; }
@@ -182,7 +184,7 @@
     .testi-who .role { font-size: 11px; color: var(--warm-gray); }
 
     /* ── SECTION 09: FÜR WEN ── */
-    .s-fw { background: #fff; padding: 64px 0; border-bottom: 1px solid var(--beige); }
+    .s-fw { background: var(--ecru); padding: 64px 0; border-bottom: 1px solid var(--ecru-line); }
     .fw-box { border-radius: 14px; padding: 26px 24px; margin-bottom: 18px; }
     .fw-yes { background: #f0faf7; border: 1px solid #9ccfc8; }
     .fw-no { background: #fdf4f5; border: 1px solid var(--rose-light); }
