@@ -135,19 +135,16 @@
       padding: 52px 0 44px;
       background: linear-gradient(180deg, rgba(237,230,218,0.60) 0%, rgba(237,230,218,0.82) 100%), url('img/bg/alt-old.jpg') center 40%/cover no-repeat;
     }
+    .avn-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
     .avn-old .avn-label { font-size: 10.5px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: #8d6a48; margin-bottom: 18px; }
-    .avn-old ul, .avn-new ul { list-style: none; display: flex; flex-direction: column; gap: 4px; }
-    .avn-old li { font-family: 'Cormorant Garamond', serif; font-size: 23px; color: #6b5638; }
-    .avn-arrow { text-align: center; margin-top: 24px; }
+    .avn-old ul, .avn-col-new ul { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+    .avn-old li { font-family: 'Cormorant Garamond', serif; font-size: 20px; color: #6b5638; }
+    .avn-col-new { text-align: right; }
+    .avn-col-new .avn-label { font-size: 10.5px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--teal-dark); margin-bottom: 18px; }
+    .avn-col-new ul { align-items: flex-end; }
+    .avn-col-new li { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; color: var(--teal-dark); }
+    .avn-arrow { text-align: center; margin-top: 28px; }
     .avn-arrow span { display: inline-block; width: 36px; height: 36px; border-radius: 50%; background: var(--teal-dark); color: #fff; line-height: 36px; font-size: 16px; }
-    .avn-new {
-      padding: 44px 0 56px;
-      background: linear-gradient(160deg, rgba(20,18,14,0.45) 0%, rgba(20,18,14,0.62) 100%), url('img/bg/alt-new.jpg') center 30%/cover no-repeat;
-    }
-    .avn-new .wrap { text-align: right; }
-    .avn-new .avn-label { font-size: 10.5px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--teal-pale); margin-bottom: 18px; }
-    .avn-new ul { align-items: flex-end; }
-    .avn-new li { font-family: 'Cormorant Garamond', serif; font-size: 25px; font-weight: 500; color: #fff; }
     .avn-tagline { margin-top: 26px; font-size: 11.5px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--sand); }
 
     /* ── SECTION 05: GEWÄHLT STATT ÜBERZEUGT ── */
@@ -404,29 +401,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="s-avn">
   <div class="avn-old">
     <div class="wrap">
-      <div class="avn-label">Altes Business</div>
-      <ul>
-        <li>Pushen.</li>
-        <li>Überzeugen.</li>
-        <li>Mehr leisten.</li>
-        <li>Sich beweisen.</li>
-        <li>Funktionieren.</li>
-        <li>Ausbrennen.</li>
-      </ul>
+      <div class="avn-row">
+        <div class="avn-col-old">
+          <div class="avn-label">Altes Business</div>
+          <ul>
+            <li>Pushen.</li>
+            <li>Überzeugen.</li>
+            <li>Mehr leisten.</li>
+            <li>Sich beweisen.</li>
+            <li>Funktionieren.</li>
+            <li>Ausbrennen.</li>
+          </ul>
+        </div>
+        <div class="avn-col-new">
+          <div class="avn-label">True Spirit Business</div>
+          <ul>
+            <li>Anziehen.</li>
+            <li>Führen.</li>
+            <li>Empfangen.</li>
+            <li>Verkörpern.</li>
+            <li>Gewählt werden.</li>
+            <li>Frei sein.</li>
+          </ul>
+        </div>
+      </div>
       <div class="avn-arrow"><span>↓</span></div>
-    </div>
-  </div>
-  <div class="avn-new">
-    <div class="wrap">
-      <div class="avn-label">True Spirit Business</div>
-      <ul>
-        <li>Anziehen.</li>
-        <li>Führen.</li>
-        <li>Empfangen.</li>
-        <li>Verkörpern.</li>
-        <li>Gewählt werden.</li>
-        <li>Frei sein.</li>
-      </ul>
     </div>
   </div>
 </section>
