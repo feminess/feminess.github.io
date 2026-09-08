@@ -81,7 +81,10 @@
     .on-dark .btn-note { color: var(--teal-pale); }
 
     /* ── SECTION 01: HERO ── */
-    .s-hero { background: linear-gradient(160deg, #1b5c50 0%, #0d2420 65%); position: relative; overflow: hidden; padding: 44px 0 40px; }
+    .s-hero {
+      position: relative; overflow: hidden; padding: 44px 0 40px;
+      background: linear-gradient(180deg, rgba(13,36,32,0.80) 0%, rgba(13,36,32,0.55) 40%, rgba(13,36,32,0.90) 100%), url('img/bg/hero.jpg') center 25%/cover no-repeat;
+    }
     .s-hero::before { content: ''; position: absolute; top: -60px; right: -80px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(207,90,115,0.20) 0%, transparent 65%); pointer-events: none; }
     .hero-logo { text-align: center; margin-bottom: 28px; position: relative; z-index: 2; }
     .hero-logo span { font-family: 'Montserrat', sans-serif; font-weight: 700; letter-spacing: 4px; font-size: 14px; color: #fff; }
@@ -92,15 +95,15 @@
     .hero-h1 { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: clamp(46px, 13vw, 62px); line-height: 0.98; color: #fff; margin-bottom: 8px; }
     .hero-sub { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 500; font-size: clamp(22px, 5.5vw, 27px); color: var(--sand); margin-bottom: 20px; }
     .hero-lede { font-size: 16px; color: #fff; line-height: 1.75; max-width: 440px; margin-bottom: 30px; }
-    .hero-image { border-radius: 18px; overflow: hidden; margin-bottom: 30px; position: relative; aspect-ratio: 4/5; }
-    .hero-image img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; display: block; }
-    .hero-image::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(13,36,32,0.55) 0%, transparent 45%); }
-    .hero-image-caption { position: absolute; bottom: 18px; left: 20px; right: 20px; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 17px; color: #fff; line-height: 1.4; z-index: 2; }
+    .hero-image-caption { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 17px; color: var(--sand); line-height: 1.4; margin-bottom: 30px; }
     .hero-pills { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 30px; }
     .hero-pill { display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.14); padding: 7px 13px; border-radius: 999px; font-size: 11px; font-weight: 600; color: var(--teal-pale); }
 
     /* ── SECTION 02: PROOF STRIP ── */
-    .s-proof { background: var(--ecru); padding: 48px 0; border-bottom: 1px solid var(--ecru-line); }
+    .s-proof {
+      padding: 48px 0; border-bottom: 1px solid var(--ecru-line);
+      background: linear-gradient(180deg, rgba(241,232,218,0.93) 0%, rgba(241,232,218,0.96) 100%), url('img/bg/proof.jpg') center 30%/cover no-repeat;
+    }
     .proof-list { display: flex; flex-direction: column; gap: 18px; margin-bottom: 32px; }
     .proof-row { display: flex; align-items: baseline; gap: 16px; padding-bottom: 18px; border-bottom: 1px solid var(--ecru-line); }
     .proof-row:last-child { border-bottom: none; padding-bottom: 0; }
@@ -109,14 +112,17 @@
     .proof-quote { background: #fff; border: 1px solid var(--ecru-line); border-left: 3px solid var(--rose); border-radius: 4px; padding: 22px 24px; margin-bottom: 20px; }
     .proof-quote p { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 19px; color: #0a3828; line-height: 1.5; margin-bottom: 12px; }
     .proof-quote-who { display: flex; align-items: center; gap: 10px; }
-    .proof-quote-who img { width: 34px; height: 34px; border-radius: 50%; object-fit: cover; }
+    .avatar-circle { width: 34px; height: 34px; border-radius: 50%; background: var(--teal-dark); color: #fff; display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-size: 14px; font-weight: 600; flex-shrink: 0; }
     .proof-quote-who span { font-size: 12px; font-weight: 700; color: var(--teal-dark); }
     .avatar-row { display: flex; margin-top: -6px; }
-    .avatar-row img { width: 38px; height: 38px; border-radius: 50%; object-fit: cover; border: 2px solid var(--ecru); margin-left: -10px; }
-    .avatar-row img:first-child { margin-left: 0; }
+    .avatar-row .avatar-circle { width: 38px; height: 38px; border: 2px solid var(--ecru); margin-left: -10px; }
+    .avatar-row .avatar-circle:first-child { margin-left: 0; }
 
     /* ── SECTION 03: WAKE-UP CALL ── */
-    .s-wake { background: var(--ecru); padding: 64px 0; border-bottom: 1px solid var(--ecru-line); }
+    .s-wake {
+      padding: 64px 0; border-bottom: 1px solid var(--ecru-line);
+      background: linear-gradient(180deg, rgba(241,232,218,0.90) 0%, rgba(241,232,218,0.95) 100%), url('img/bg/wake.jpg') center 25%/cover no-repeat;
+    }
     .wake-list { display: flex; flex-direction: column; gap: 16px; margin: 28px 0 32px; }
     .wake-list p { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 21px; color: var(--warm-gray); line-height: 1.5; padding-left: 20px; border-left: 2px solid var(--ecru-line); }
     .wake-list p strong { font-style: normal; font-weight: 600; color: #0a3828; }
@@ -125,19 +131,28 @@
 
     /* ── SECTION 04: ALT VS NEU ── */
     .s-avn { padding: 0; }
-    .avn-old { background: #ede6da; padding: 52px 0 44px; }
+    .avn-old {
+      padding: 52px 0 44px;
+      background: linear-gradient(180deg, rgba(237,230,218,0.90) 0%, rgba(237,230,218,0.94) 100%), url('img/bg/alt-old.jpg') center 40%/cover no-repeat;
+    }
     .avn-old .avn-label { font-size: 10.5px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: #8d6a48; margin-bottom: 18px; }
     .avn-old ul, .avn-new ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
     .avn-old li { font-family: 'Cormorant Garamond', serif; font-size: 23px; color: #6b5638; }
     .avn-arrow { text-align: center; padding: 14px 0; background: #ede6da; }
     .avn-arrow span { display: inline-block; width: 36px; height: 36px; border-radius: 50%; background: var(--teal-dark); color: #fff; line-height: 36px; font-size: 16px; }
-    .avn-new { background: linear-gradient(160deg, #1b5c50 0%, #0d2420 100%); padding: 44px 0 56px; }
+    .avn-new {
+      padding: 44px 0 56px;
+      background: linear-gradient(160deg, rgba(27,92,80,0.82) 0%, rgba(13,36,32,0.90) 100%), url('img/bg/alt-new.jpg') center 30%/cover no-repeat;
+    }
     .avn-new .avn-label { font-size: 10.5px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--teal-pale); margin-bottom: 18px; }
     .avn-new li { font-family: 'Cormorant Garamond', serif; font-size: 25px; font-weight: 500; color: #fff; }
     .avn-tagline { margin-top: 26px; font-size: 11.5px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--sand); }
 
     /* ── SECTION 05: GEWÄHLT STATT ÜBERZEUGT ── */
-    .s-chosen { background: #0d2420; padding: 68px 0; text-align: center; position: relative; overflow: hidden; }
+    .s-chosen {
+      padding: 68px 0; text-align: center; position: relative; overflow: hidden;
+      background: linear-gradient(180deg, rgba(13,36,32,0.82) 0%, rgba(13,36,32,0.92) 100%), url('img/bg/chosen.jpg') center 30%/cover no-repeat;
+    }
     .s-chosen::before { content: ''; position: absolute; top: -100px; left: 50%; transform: translateX(-50%); width: 600px; height: 600px; background: radial-gradient(circle, rgba(37,124,108,0.22) 0%, transparent 65%); }
     .s-chosen .wrap { position: relative; z-index: 2; }
     .s-chosen .section-label { justify-content: center; }
@@ -149,7 +164,10 @@
     .chosen-tag { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--sand); }
 
     /* ── SECTION 06: 3 DAYS 3 SHIFTS ── */
-    .s-days { background: var(--ecru); padding: 64px 0; border-bottom: 1px solid var(--ecru-line); }
+    .s-days {
+      padding: 64px 0; border-bottom: 1px solid var(--ecru-line);
+      background: linear-gradient(180deg, rgba(241,232,218,0.92) 0%, rgba(241,232,218,0.96) 100%), url('img/bg/days.jpg') center 25%/cover no-repeat;
+    }
     .day-card { background: #fff; border: 1px solid var(--ecru-line); border-radius: 14px; overflow: hidden; margin-bottom: 20px; padding: 22px 22px 24px; }
     .day-card:last-child { margin-bottom: 0; }
     .day-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px; }
@@ -167,7 +185,10 @@
     .day-tags span { font-size: 9.5px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: var(--teal-dark); background: var(--cream); border: 1px solid var(--beige); padding: 4px 10px; border-radius: 999px; }
 
     /* ── SECTION 07: MARINAS STORY ── */
-    .s-story { background: var(--ecru); padding: 64px 0; border-bottom: 1px solid var(--ecru-line); }
+    .s-story {
+      padding: 64px 0; border-bottom: 1px solid var(--ecru-line);
+      background: linear-gradient(180deg, rgba(241,232,218,0.92) 0%, rgba(241,232,218,0.96) 100%), url('img/bg/story.jpg') center 20%/cover no-repeat;
+    }
     .story-image { border-radius: 16px; overflow: hidden; aspect-ratio: 4/5; margin-bottom: 26px; position: relative; }
     .story-image img { width: 100%; height: 100%; object-fit: cover; object-position: center 15%; display: block; }
     .story-image::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(13,36,32,0.45) 0%, transparent 40%); }
@@ -179,7 +200,10 @@
     .link-more::after { content: '→'; }
 
     /* ── SECTION 08: REAL WOMEN ── */
-    .s-real { background: var(--ecru); padding: 64px 0; border-bottom: 1px solid var(--ecru-line); }
+    .s-real {
+      padding: 64px 0; border-bottom: 1px solid var(--ecru-line);
+      background: linear-gradient(180deg, rgba(241,232,218,0.92) 0%, rgba(241,232,218,0.96) 100%), url('img/bg/real.jpg') center 30%/cover no-repeat;
+    }
     .real-stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin: 28px 0 32px; text-align: center; }
     .real-stat-box { background: #fff; border: 1px solid var(--ecru-line); border-radius: 10px; padding: 18px 10px; }
     .real-stat-num { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 22px; color: var(--teal-dark); margin-bottom: 4px; }
@@ -188,12 +212,15 @@
     .testi { background: #fff; border: 1px solid var(--ecru-line); border-radius: 12px; padding: 22px; margin-bottom: 16px; }
     .testi p { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 18px; color: #0a3828; line-height: 1.5; margin-bottom: 14px; }
     .testi-who { display: flex; align-items: center; gap: 10px; }
-    .testi-who img { width: 36px; height: 36px; border-radius: 50%; object-fit: cover; }
+    .testi-who .avatar-circle { width: 36px; height: 36px; }
     .testi-who .name { font-size: 13px; font-weight: 700; color: var(--teal-dark); }
     .testi-who .role { font-size: 11px; color: var(--warm-gray); }
 
     /* ── SECTION 09: FÜR WEN ── */
-    .s-fw { background: var(--ecru); padding: 64px 0; border-bottom: 1px solid var(--ecru-line); }
+    .s-fw {
+      padding: 64px 0; border-bottom: 1px solid var(--ecru-line);
+      background: linear-gradient(180deg, rgba(241,232,218,0.92) 0%, rgba(241,232,218,0.96) 100%), url('img/bg/fw.jpg') center 20%/cover no-repeat;
+    }
     .fw-box { border-radius: 14px; padding: 26px 24px; margin-bottom: 18px; }
     .fw-yes { background: #f0faf7; border: 1px solid #9ccfc8; }
     .fw-no { background: #fdf4f5; border: 1px solid var(--rose-light); }
@@ -204,7 +231,10 @@
     .fw-no .fw-list li::before { content: '✕'; position: absolute; left: 0; color: var(--rose-light); font-weight: 700; }
 
     /* ── SECTION 10: FINAL CTA ── */
-    .s-final { background: linear-gradient(160deg, #1b5c50 0%, #0d2420 100%); padding: 68px 0 56px; position: relative; overflow: hidden; }
+    .s-final {
+      padding: 68px 0 56px; position: relative; overflow: hidden;
+      background: linear-gradient(180deg, rgba(13,36,32,0.82) 0%, rgba(13,36,32,0.55) 45%, rgba(13,36,32,0.92) 100%), url('img/bg/final.jpg') center 30%/cover no-repeat;
+    }
     .s-final::before { content: ''; position: absolute; bottom: -120px; right: -80px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(207,90,115,0.14) 0%, transparent 65%); }
     .s-final .wrap { position: relative; z-index: 2; }
     .final-dates { font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--teal-pale); margin-bottom: 20px; }
@@ -212,10 +242,7 @@
     .final-h2 em { font-style: italic; color: var(--sand); }
     .final-p { font-size: 16px; color: #fff; line-height: 1.7; margin-bottom: 30px; }
     .final-p strong { font-weight: 700; }
-    .final-image { border-radius: 16px; overflow: hidden; aspect-ratio: 16/10; margin-bottom: 30px; position: relative; }
-    .final-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .final-image::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(13,36,32,0.5) 0%, transparent 50%); }
-    .final-image-cap { position: absolute; bottom: 16px; left: 18px; right: 18px; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 16px; color: #fff; z-index: 2; }
+    .final-image-cap { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 16px; color: var(--sand); margin-bottom: 30px; }
     .final-pills { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 22px; }
     .final-pill { display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.14); padding: 7px 13px; border-radius: 999px; font-size: 11px; font-weight: 600; color: var(--teal-pale); }
 
@@ -250,10 +277,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="hero-h1">TRUE SPIRIT<br>BUSINESS</div>
     <div class="hero-sub">Gewählt statt überzeugt.</div>
     <p class="hero-lede">3 Tage. Tiefe Transformation. Ein Business, das zu dir passt – und Menschen anzieht, die genau dich wollen.</p>
-    <div class="hero-image">
-      <img src="../Bilder/Marina_MAI2314232 Kopie.jpg" alt="Marina Henze">
-      <p class="hero-image-caption">Mehr du. Mehr Wirkung. Mehr Freiheit.</p>
-    </div>
+    <p class="hero-image-caption">Mehr du. Mehr Wirkung. Mehr Freiheit.</p>
     <a href="#formular" class="btn">Ich bin dabei →</a>
     <div class="hero-pills" style="margin-top:22px;">
       <span class="hero-pill">📷 Live &amp; kostenlos</span>
@@ -278,15 +302,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="proof-quote">
       <p>„Ich arbeite weniger, habe mehr Umsatz und fühle mich endlich wieder wie ich.“</p>
       <div class="proof-quote-who">
-        <img src="img/Elena.jpg" alt="Sabrina">
+        <div class="avatar-circle">S</div>
         <span>Sabrina, Business Mentorin</span>
       </div>
     </div>
     <div class="avatar-row">
-      <img src="img/Denise.PNG" alt="">
-      <img src="img/Leonie.PNG" alt="">
-      <img src="img/Ursula.png" alt="">
-      <img src="img/Yvonne.png" alt="">
+      <div class="avatar-circle">D</div>
+      <div class="avatar-circle">L</div>
+      <div class="avatar-circle">U</div>
+      <div class="avatar-circle">Y</div>
     </div>
   </div>
 </section>
@@ -303,7 +327,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p>Vielleicht musst du nicht noch <strong>von anderen lernen.</strong></p>
       <p>Vielleicht brauchst du endlich einen neuen <strong>Blick auf DICH.</strong></p>
     </div>
-    <div class="wake-image"><img src="img/wake-up-sunset.jpg" alt=""></div>
   </div>
 </section>
 
@@ -427,15 +450,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <div class="testi">
       <p>„Ich arbeite weniger, habe mehr Umsatz und fühle mich einfach wieder wie ich.“</p>
-      <div class="testi-who"><img src="img/Elena.jpg" alt=""><div><div class="name">Sabrina</div><div class="role">Business Mentorin</div></div></div>
+      <div class="testi-who"><div class="avatar-circle">S</div><div><div class="name">Sabrina</div><div class="role">Business Mentorin</div></div></div>
     </div>
     <div class="testi">
       <p>„Der Workshop war ein Wendepunkt. Ich habe mein Angebot neu kreiert – und meine Traumkundinnen ziehen es an.“</p>
-      <div class="testi-who"><img src="img/Yvonne.png" alt=""><div><div class="name">Melanie</div><div class="role">Online Unternehmerin</div></div></div>
+      <div class="testi-who"><div class="avatar-circle">M</div><div><div class="name">Melanie</div><div class="role">Online Unternehmerin</div></div></div>
     </div>
     <div class="testi">
       <p>„So klar. So echt. So transformierend. Ich kann es jeder Frau empfehlen.“</p>
-      <div class="testi-who"><img src="img/Ursula.png" alt=""><div><div class="name">Katrin</div><div class="role">Human Design Coach</div></div></div>
+      <div class="testi-who"><div class="avatar-circle">K</div><div><div class="name">Katrin</div><div class="role">Human Design Coach</div></div></div>
     </div>
     <a href="#formular" class="link-more">Alle Testimonials</a>
   </div>
@@ -475,10 +498,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="final-dates">22.–24. September 2026</div>
     <h2 class="final-h2">Die Frau, die am 24. September hier rausgeht, <em>denkt anders, entscheidet anders, verkauft anders, führt anders.</em></h2>
     <p class="final-p">Und baut endlich ein Business, das sich nach IHR anfühlt.</p>
-    <div class="final-image">
-      <img src="../Bilder/Marina_MAI2314376 Kopie.jpg" alt="Marina Henze">
-      <p class="final-image-cap">Deine Zukunft wartet nicht.</p>
-    </div>
+    <p class="final-image-cap">Deine Zukunft wartet nicht.</p>
     <a href="https://feminess.de/true-spirit-business-anmeldung/" class="btn">Ich bin dabei →</a>
     <div class="final-pills">
       <span class="final-pill">📷 Live &amp; kostenlos</span>
