@@ -166,8 +166,12 @@
     /* ── SECTION 06: 3 DAYS 3 SHIFTS ── */
     .s-days {
       padding: 64px 0; border-bottom: 1px solid var(--ecru-line);
-      background: linear-gradient(180deg, rgba(241,232,218,0.60) 0%, rgba(241,232,218,0.82) 100%), url('img/bg/days.jpg') center 35%/cover no-repeat;
+      background: linear-gradient(180deg, rgba(13,36,32,0.35) 0%, rgba(13,36,32,0.55) 100%), url('img/bg/days.jpg') center 30%/cover no-repeat;
     }
+    .s-days .section-label { color: var(--teal-pale); }
+    .s-days .section-label::after { background: var(--teal-pale); }
+    .s-days h2 { color: #fff; }
+    .s-days h2 em { color: var(--sand); }
     .day-card { background: #fff; border: 1px solid var(--ecru-line); border-radius: 14px; overflow: hidden; margin-bottom: 20px; padding: 22px 22px 24px; }
     .day-card:last-child { margin-bottom: 0; }
     .day-head { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 6px; }
