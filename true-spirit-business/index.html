@@ -137,7 +137,7 @@
       padding: 52px 0 44px;
       background: linear-gradient(180deg, rgba(237,230,218,0.60) 0%, rgba(237,230,218,0.82) 100%), url('img/bg/alt-old.jpg') center 40%/cover no-repeat;
     }
-    .avn-row { display: grid; grid-template-columns: 1fr auto 1fr; gap: 12px; align-items: center; }
+    .avn-row { display: grid; grid-template-columns: 1fr auto 1fr; gap: 12px; align-items: start; }
     .avn-old .avn-label { font-size: 10.5px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: #8d6a48; margin-bottom: 18px; }
     .avn-old ul, .avn-col-new ul { list-style: none; display: flex; flex-direction: column; gap: 4px; }
     .avn-old li { font-family: 'Cormorant Garamond', serif; font-size: 20px; color: #6b5638; }
@@ -145,8 +145,8 @@
     .avn-col-new .avn-label { font-size: 10.5px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--teal-dark); margin-bottom: 18px; }
     .avn-col-new ul { align-items: flex-end; }
     .avn-col-new li { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; color: var(--teal-dark); }
-    .avn-arrow { text-align: center; }
-    .avn-arrow span { display: inline-block; width: 32px; height: 32px; border-radius: 50%; background: var(--teal-dark); color: #fff; line-height: 32px; font-size: 14px; transform: rotate(-90deg); }
+    .avn-arrow { text-align: center; margin-top: 165px; }
+    .avn-arrow svg { width: 70px; height: auto; overflow: visible; }
     .avn-tagline { margin-top: 26px; font-size: 11.5px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--sand); }
 
     /* ── SECTION 05: GEWÄHLT STATT ÜBERZEUGT ── */
@@ -415,7 +415,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <li>Ausbrennen.</li>
           </ul>
         </div>
-        <div class="avn-arrow"><span>↓</span></div>
+        <div class="avn-arrow">
+          <svg viewBox="0 0 70 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 26C16 34 30 30 40 18C46 11 50 8 56 7" stroke="#1b5c50" stroke-width="3.5" stroke-linecap="round"/>
+            <path d="M46 4L57 7L52 17" stroke="#1b5c50" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
         <div class="avn-col-new">
           <div class="avn-label">True Spirit Business</div>
           <ul>
