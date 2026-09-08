@@ -214,15 +214,16 @@
     .link-more { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #0a3828; text-decoration: none; margin-top: 6px; }
 
     /* ── SECTION: BEKANNT AUS ── */
-    .s-logos { background: var(--ecru); padding: 40px 0; text-align: center; border-bottom: 1px solid var(--ecru-line); }
-    .logos-label { font-size: 10.5px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--warm-gray); margin-bottom: 24px; }
-    .logos-row { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 28px 36px; }
-    .logos-row img { height: 22px; width: auto; object-fit: contain; filter: grayscale(1); opacity: 0.6; }
+    .s-logos { background: linear-gradient(135deg, #1b5c50 0%, #0d2420 100%); padding: 40px 0; text-align: center; }
+    .logos-label { font-size: 10.5px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--teal-pale); margin-bottom: 24px; }
+    .logos-row { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 14px 16px; }
+    .logos-chip { background: rgba(255,255,255,0.92); border-radius: 8px; padding: 8px 14px; display: inline-flex; align-items: center; }
+    .logos-chip img { height: 20px; width: auto; object-fit: contain; filter: grayscale(1); opacity: 0.75; display: block; }
 
     /* ── SECTION: WAS SICH ÄNDERT ── */
     .s-changes {
       padding: 64px 0; border-bottom: 1px solid var(--ecru-line);
-      background: linear-gradient(180deg, rgba(13,36,32,0.85) 0%, rgba(13,36,32,0.92) 100%), url('img/bg/chosen.jpg') center 60%/cover no-repeat;
+      background: linear-gradient(135deg, #1b5c50 0%, #0d2420 100%);
     }
     .changes-list { list-style: none; display: flex; flex-direction: column; gap: 14px; margin: 28px 0 32px; }
     .changes-list li { font-size: 16px; color: var(--teal-pale); line-height: 1.6; padding-left: 24px; position: relative; }
@@ -241,11 +242,11 @@
     /* ── SECTION 09: FÜR WEN ── */
     .s-fw {
       padding: 64px 0; border-bottom: 1px solid var(--ecru-line);
-      background: linear-gradient(180deg, rgba(241,232,218,0.60) 0%, rgba(241,232,218,0.82) 100%), url('img/bg/fw.jpg') center 30%/cover no-repeat;
+      background: var(--ecru);
     }
     .fw-box { border-radius: 14px; padding: 26px 24px; margin-bottom: 18px; }
-    .fw-yes { background: rgba(240,250,247,0.55); border: 1px solid #9ccfc8; backdrop-filter: blur(2px); }
-    .fw-no { background: rgba(253,244,245,0.55); border: 1px solid var(--rose-light); backdrop-filter: blur(2px); }
+    .fw-yes { background: #f0faf7; border: 1px solid #9ccfc8; }
+    .fw-no { background: #fdf4f5; border: 1px solid var(--rose-light); }
     .fw-title { font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #0a3828; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
     .fw-list { list-style: none; display: flex; flex-direction: column; gap: 11px; }
     .fw-list li { font-size: 15.5px; color: #0a3828; line-height: 1.6; padding-left: 22px; position: relative; }
@@ -383,12 +384,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="wrap">
     <div class="logos-label">Bekannt aus</div>
     <div class="logos-row">
-      <img src="../Logos/Cosmopolitan-Logo-neue-Masse.png" alt="Cosmopolitan">
-      <img src="../Logos/Stern-Logo.png" alt="Stern">
-      <img src="../Logos/handelsblatt-logo-1.png" alt="Handelsblatt">
-      <img src="../Logos/Focus-Money-Logo-neue-masse.png" alt="Focus Money">
-      <img src="../Logos/Huffpost-Logo-neue-Masse.png" alt="Huffpost">
-      <img src="../Logos/Wirschafwoche.png" alt="Wirtschaftswoche">
+      <div class="logos-chip"><img src="../Logos/Cosmopolitan-Logo-neue-Masse.png" alt="Cosmopolitan"></div>
+      <div class="logos-chip"><img src="../Logos/Stern-Logo.png" alt="Stern"></div>
+      <div class="logos-chip"><img src="../Logos/handelsblatt-logo-1.png" alt="Handelsblatt"></div>
+      <div class="logos-chip"><img src="../Logos/Focus-Money-Logo-neue-masse.png" alt="Focus Money"></div>
+      <div class="logos-chip"><img src="../Logos/Huffpost-Logo-neue-Masse.png" alt="Huffpost"></div>
+      <div class="logos-chip"><img src="../Logos/Wirschafwoche.png" alt="Wirtschaftswoche"></div>
     </div>
   </div>
 </section>
@@ -515,7 +516,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="section-label">The Proof</div>
     <h2>Noch mehr echte Frauen &amp; <em>echte Ergebnisse.</em></h2>
     <div class="testi-gallery">
-      <img src="img/testimonials/elena.jpg" alt="Testimonial">
       <img src="img/testimonials/leonie-roessle-7k.jpg" alt="Testimonial">
       <img src="img/testimonials/denise.png" alt="Testimonial">
       <img src="img/testimonials/webinar-anmeldungen.jpg" alt="Testimonial">
