@@ -63,11 +63,12 @@
     .on-dark h2 em { color: var(--sand); }
 
     /* ── TOP BAR (repeats like the reference phone-screen header) ── */
-    .topbar { background: var(--teal-deep); padding: 16px 0; position: sticky; top: 0; z-index: 50; }
-    .topbar-inner { max-width: 560px; margin: 0 auto; padding: 0 28px; display: flex; align-items: center; justify-content: space-between; }
-    .topbar-logo { font-family: 'Montserrat', sans-serif; font-weight: 700; letter-spacing: 3px; font-size: 13px; color: #fff; }
-    .topbar-menu { display: flex; flex-direction: column; gap: 4px; width: 20px; }
-    .topbar-menu span { display: block; height: 2px; background: #fff; border-radius: 2px; }
+    .topbar { background: var(--teal-deep); padding: 14px 0; position: sticky; top: 0; z-index: 50; }
+    .topbar-inner { max-width: 560px; margin: 0 auto; padding: 0 28px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .topbar-left { display: flex; flex-direction: column; gap: 5px; min-width: 0; }
+    .topbar-logo-img { height: 20px; width: auto; display: block; }
+    .topbar-badge { font-size: 8.5px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: var(--teal-pale); line-height: 1.4; }
+    .topbar-btn { flex-shrink: 0; background: var(--teal); color: #fff; text-decoration: none; padding: 10px 16px; border-radius: 999px; font-family: 'Montserrat', sans-serif; font-size: 10.5px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; white-space: nowrap; }
 
     /* ── BUTTON ── */
     .btn {
@@ -203,7 +204,6 @@
     .s-story p strong { font-weight: 700; }
     .story-emph { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 21px; color: var(--teal-dark); margin: 22px 0; }
     .link-more { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--teal-dark); text-decoration: none; margin-top: 6px; }
-    .link-more::after { content: '→'; }
 
     /* ── SECTION: BEKANNT AUS ── */
     .s-logos { background: var(--ecru); padding: 40px 0; text-align: center; border-bottom: 1px solid var(--ecru-line); }
@@ -288,87 +288,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div class="topbar">
   <div class="topbar-inner">
-    <span class="topbar-logo">FEMINESS.</span>
-    <span class="topbar-menu"><span></span><span></span><span></span></span>
+    <div class="topbar-left">
+      <img class="topbar-logo-img" src="img/logo-rosegold.png" alt="Feminess">
+      <div class="topbar-badge">Free Live Experience · 22.–24. Sept. 2026</div>
+    </div>
+    <a href="#formular" class="topbar-btn">Yes, ich bin dabei</a>
   </div>
 </div>
 
 <!-- 01 HERO -->
 <section class="s-hero">
   <div class="wrap">
-    <div class="hero-badge">Free Live Experience · 22.–24. September 2026</div>
     <p class="hero-preline">Für Frauen, die in keine Schublade passen. Die weder Lust auf Push-Marketing und Hard-Selling haben, noch auf Feenstaub und „ich mach Millionen aus der Badewanne".</p>
     <div class="hero-h1">TRUE SPIRIT<br>BUSINESS</div>
     <div class="hero-sub">Unangepasst erfolgreich.</div>
     <p class="hero-lede">Ich sag dir nicht, wer du sein sollst. Ich zeig dir, wie du mit deiner Einzigartigkeit zur 1. Wahl für deine Perfect Match Kunden wirst und planbaren CashFlow hast, der bleibt, auch wenn du am Strand Kokosnüsse schlürfst ;-)</p>
-    <a href="#formular" class="btn">Yes, ich bin dabei&nbsp;→</a>
+    <a href="#formular" class="btn">Yes, ich bin dabei</a>
     <div class="online-tag">Live &amp; Free Online</div>
-  </div>
-</section>
-
-<!-- 02 PROOF STRIP -->
-<section class="s-proof">
-  <div class="wrap">
-    <div class="section-label">Proof Strip</div>
-    <h2>Echte Frauen. <em>Echte Ergebnisse.</em></h2>
-    <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:19px;color:var(--warm-gray);margin-bottom:28px;">Das erleben Kundinnen, die umsetzen, was du in True Spirit Business erfährst.</p>
-    <div class="proof-list">
-      <div class="proof-row"><div class="proof-num">1.200+</div><div class="proof-lbl">Frauen dabei</div></div>
-      <div class="proof-row"><div class="proof-num">98%</div><div class="proof-lbl">würden es weiterempfehlen</div></div>
-      <div class="proof-row"><div class="proof-num">4,9★</div><div class="proof-lbl">Bewertung</div></div>
-      <div class="proof-row"><div class="proof-num">6-stellige</div><div class="proof-lbl">Ergebnisse / Umsätze*</div></div>
-    </div>
-    <div class="proof-quote">
-      <p>„Ich arbeite weniger, habe mehr Umsatz und fühle mich endlich wieder wie ich.“</p>
-      <div class="proof-quote-who">
-        <div class="avatar-circle">S</div>
-        <span>Sabrina, Business Mentorin</span>
-      </div>
-    </div>
-    <div class="avatar-row">
-      <div class="avatar-circle">D</div>
-      <div class="avatar-circle">L</div>
-      <div class="avatar-circle">U</div>
-      <div class="avatar-circle">Y</div>
-    </div>
-  </div>
-</section>
-
-<!-- 03 WAKE-UP CALL -->
-<section class="s-wake">
-  <div class="wrap">
-    <div class="section-label">Wake-Up Call</div>
-    <h2>Du brauchst nicht noch <em>eine Strategie.</em></h2>
-    <div class="wake-list">
-      <p>Keine <strong>Social Media Show.</strong></p>
-      <p>Keine <strong>auswendig gelernten Skripte.</strong></p>
-      <p>Kein <strong>noch mehr posten.</strong></p>
-      <p>Es braucht nur <strong>dich in deiner Einzigartigkeit.</strong></p>
-    </div>
-    <p class="wake-emph">Es ist Zeit für deinen eigenen Weg.</p>
-  </div>
-</section>
-
-<!-- MARINAS STORY -->
-<section class="s-story">
-  <div class="wrap">
-    <div class="section-label">Marinas Story</div>
-    <h2>Ich habe Tausende Euro verbrannt, um etwas <em>Wichtiges zu verstehen.</em></h2>
-    <div class="story-image">
-      <img src="../Bilder/Marina_MAI2314266 Kopie.jpg" alt="Marina Henze">
-      <p class="story-cap">Ich weiß, wie es sich anfühlt.</p>
-    </div>
-    <div class="story-stats">
-      <div class="story-stat-box"><div class="story-stat-num">20+</div><div class="story-stat-lbl">Jahre Unternehmerin</div></div>
-      <div class="story-stat-box"><div class="story-stat-num">20.000+</div><div class="story-stat-lbl">Frauen in meinen Räumen</div></div>
-      <div class="story-stat-box"><div class="story-stat-num">20 Mio+</div><div class="story-stat-lbl">in Sales</div></div>
-    </div>
-    <p>Ich habe alles ausprobiert, die Tools, die Formeln, die angeblich funktionieren. Und trotzdem hat sich nichts wirklich richtig angefühlt.</p>
-    <p>Heute weiß ich: Es lag nicht an mir. Sondern daran, dass ich mich angepasst habe, an eine Strategie, die nie meine eigene Identität &amp; Energie hatte.</p>
-    <p>Die einen predigen Push-Marketing, mehr posten, mehr Funnels, Verkaufen im Kampfmodus. Die anderen Feenstaub, Schaumbad-Content, „ich mach meine Millionen aus der Badewanne". Beide sagen dir, wie du sein sollst, statt dich zu fragen, wer du <strong>WIRKLICH</strong> bist.</p>
-    <p class="story-emph">True Spirit Business ist meine Antwort darauf.</p>
-    <p>Denn ich sag dir nicht, welche Strategie die richtige ist. Es gibt keine Einheitslösung. Es gibt nur die, die aus deiner eigenen Wahrheit entsteht.</p>
-    <a href="#formular" class="link-more">Meine ganze Story</a>
   </div>
 </section>
 
@@ -430,7 +366,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p>Einfach du.</p>
     </div>
     <div class="chosen-tag" style="margin-bottom:28px;">Business beyond the norm.</div>
-    <a href="#formular" class="btn">Ich will gewählt werden&nbsp;→</a>
+    <a href="#formular" class="btn">Ich will gewählt werden</a>
   </div>
 </section>
 
@@ -499,7 +435,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <li>Sich selbst infrage stellen, wenn eine Strategie nicht sofort funktioniert.</li>
     </ul>
     <p class="changes-close">Stattdessen haben sie ein Business, das aus ihrer eigenen Energie wächst und ihnen Freude macht. Sie leben ihre Träume. <strong>Nicht irgendwann. Jetzt.</strong></p>
-    <a href="#formular" class="btn">Das will ich auch&nbsp;→</a>
+    <a href="#formular" class="btn">Das will ich auch</a>
   </div>
 </section>
 
@@ -564,7 +500,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="final-dates">22.–24. September 2026</div>
     <h2 class="final-h2">Die Frau, die hier rausgeht, <em>denkt anders. entscheidet anders. verkauft anders. führt anders.</em></h2>
     <p class="final-p">Und baut endlich ein Business, das sich nach ihr anfühlt.</p>
-    <a href="https://feminess.de/true-spirit-business-anmeldung/" class="btn">Give me the shift&nbsp;→</a>
+    <a href="https://feminess.de/true-spirit-business-anmeldung/" class="btn">Give me the shift</a>
     <div class="online-tag">Live &amp; Free Online</div>
   </div>
 </section>
