@@ -226,7 +226,11 @@
       background: linear-gradient(135deg, #1b5c50 0%, #0d2420 100%);
     }
     .changes-list { list-style: none; display: flex; flex-direction: column; gap: 14px; margin: 28px 0 32px; }
-    .changes-list li { font-size: 16px; color: var(--teal-pale); line-height: 1.6; padding-left: 24px; position: relative; }
+    .s-changes .section-label { color: #fff; }
+    .s-changes .section-label::after { background: #fff; }
+    .s-changes h2 { color: #fff; }
+    .s-changes h2 em { color: var(--sand); }
+    .changes-list li { font-size: 16px; color: #fff; line-height: 1.6; padding-left: 24px; position: relative; }
     .changes-list li::before { content: '✕'; position: absolute; left: 0; color: var(--rose-light); font-weight: 700; }
     .changes-close { font-size: 16px; color: #fff; line-height: 1.75; margin-bottom: 30px; }
     .changes-close strong { font-weight: 700; }
