@@ -227,17 +227,8 @@
       padding: 64px 0; border-bottom: 1px solid var(--ecru-line);
       background: linear-gradient(180deg, rgba(241,232,218,0.60) 0%, rgba(241,232,218,0.82) 100%), url('img/bg/real.jpg') center 30%/cover no-repeat;
     }
-    .real-stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin: 28px 0 32px; text-align: center; }
-    .real-stat-box { background: #fff; border: 1px solid var(--ecru-line); border-radius: 10px; padding: 18px 10px; }
-    .real-stat-num { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 22px; color: #0a3828; margin-bottom: 4px; }
-    .real-stat-lbl { font-size: 9px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: var(--warm-gray); line-height: 1.3; }
-    .real-arrow-stat { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 26px; color: #0a3828; text-align: center; margin: 4px 0 28px; }
-    .testi { background: #fff; border: 1px solid var(--ecru-line); border-radius: 12px; padding: 22px; margin-bottom: 16px; }
-    .testi p { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 18px; color: #0a3828; line-height: 1.5; margin-bottom: 14px; }
-    .testi-who { display: flex; align-items: center; gap: 10px; }
-    .testi-who .avatar-circle { width: 36px; height: 36px; }
-    .testi-who .name { font-size: 13px; font-weight: 700; color: #0a3828; }
-    .testi-who .role { font-size: 11px; color: var(--warm-gray); }
+    .testi-gallery { column-count: 2; column-gap: 12px; margin-top: 28px; }
+    .testi-gallery img { display: block; width: 100%; height: auto; border-radius: 10px; margin-bottom: 12px; break-inside: avoid; box-shadow: 0 2px 10px rgba(13,36,32,0.10); }
 
     /* ── SECTION 09: FÜR WEN ── */
     .s-fw {
@@ -501,26 +492,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="wrap">
     <div class="section-label">The Proof</div>
     <h2>Noch mehr echte Frauen &amp; <em>echte Ergebnisse.</em></h2>
-    <div class="real-arrow-stat">33K → 260K → 1M+</div>
-    <div class="real-stats">
-      <div class="real-stat-box"><div class="real-stat-num">1.200+</div><div class="real-stat-lbl">Frauen dabei</div></div>
-      <div class="real-stat-box"><div class="real-stat-num">4,9/5</div><div class="real-stat-lbl">Bewertung</div></div>
-      <div class="real-stat-box"><div class="real-stat-num">98%</div><div class="real-stat-lbl">Weiterempfehlung</div></div>
-      <div class="real-stat-box"><div class="real-stat-num">6-stellige</div><div class="real-stat-lbl">Ergebnisse / Umsätze*</div></div>
+    <div class="testi-gallery">
+      <img src="img/testimonials/elena.jpg" alt="Testimonial">
+      <img src="img/testimonials/leonie-roessle-7k.jpg" alt="Testimonial">
+      <img src="img/testimonials/denise.png" alt="Testimonial">
+      <img src="img/testimonials/webinar-anmeldungen.jpg" alt="Testimonial">
+      <img src="img/testimonials/yvonne.png" alt="Testimonial">
+      <img src="img/testimonials/leonie.png" alt="Testimonial">
+      <img src="img/testimonials/t1-4calls.jpg" alt="Testimonial">
+      <img src="img/testimonials/yvonne-2.png" alt="Testimonial">
     </div>
-    <div class="testi">
-      <p>„Ich liebe die Zusammenarbeit mit Marina so sehr. Durch sie hat sich so viel in meinem Unternehmen erleichtert. Ich arbeite viel weniger, hab viel mehr Umsatz, es fällt mir viel leichter. Ich mache monatlich 6-stellige Umsätze und bin Marina einfach unendlich dankbar.“</p>
-      <div class="testi-who"><div><div class="name">Sigrid Aviana Waedt</div></div></div>
-    </div>
-    <div class="testi">
-      <p>„Also erstmal WOOOW! Ich liebe das Programm so sehr! Was für ein geiler Scheiß! Hatte Gänsehaut, Tränen in den Augen und immer wieder ‚HELL YES'-Momente.“</p>
-      <div class="testi-who"><div><div class="name">Leonie Rössle</div></div></div>
-    </div>
-    <div class="testi">
-      <p>„Ich bin mit rund 5.000 EUR Umsatz im Monat gestartet, aber das Geld wollte nie bei mir bleiben. Durch Zufall bin ich zu euch gekommen. Im ersten halben Jahr machte ich 33.000 EUR, im zweiten Jahr 260.000 EUR – und jetzt, im dritten Jahr, wird es über eine Million. Ich kenne diese Grenzen nicht mehr und habe keine Angst mehr vor dem Geld.“</p>
-      <div class="testi-who"><div><div class="name">Melanie Pressler</div></div></div>
-    </div>
-    <a href="#formular" class="link-more">Alle Testimonials</a>
   </div>
 </section>
 
