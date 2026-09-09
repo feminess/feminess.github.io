@@ -97,11 +97,14 @@
   .proof h2{font-size:40px; line-height:1.03; margin-bottom:14px;}
   .proof > p.lede{margin-bottom:36px; max-width:36ch; color:var(--text-soft);}
   .t-card{
-    border:1px solid rgba(32,32,29,0.18);
+    background:#FFFFFF;
+    border:1px solid rgba(32,32,29,0.12);
     border-radius:8px;
     padding:26px;
-    margin-bottom:28px;
+    margin-bottom:20px;
+    box-shadow:0 4px 16px rgba(32,32,29,0.06);
   }
+  .t-card:last-child{margin-bottom:0;}
   .t-card p.quote{
     font-family:'Cormorant Garamond', serif;
     font-style:italic;
@@ -111,22 +114,6 @@
     margin-bottom:14px;
   }
   .t-card .name{font-family:'Montserrat',sans-serif; font-size:13px; font-weight:600; color:var(--text);}
-  .slider{
-    display:flex; gap:16px; overflow-x:auto; scroll-snap-type:x mandatory;
-    margin:0 -22px; padding:0 22px 8px;
-    -webkit-overflow-scrolling:touch;
-  }
-  .slider::-webkit-scrollbar{display:none;}
-  .slide{
-    flex:0 0 78%; scroll-snap-align:start;
-    border:1px solid rgba(32,32,29,0.15); border-radius:8px; padding:22px;
-    background:var(--offwhite-2);
-  }
-  .slide p.quote{
-    font-family:'Cormorant Garamond', serif; font-style:italic; font-size:16.5px;
-    line-height:1.45; margin-bottom:12px;
-  }
-  .slide .name{font-size:12.5px; font-weight:600;}
 
   /* ---------- 03 WAKE-UP CALL ---------- */
   .wakeup{background:var(--offwhite); padding:120px 22px;}
@@ -337,15 +324,13 @@
       <div class="name">Sigrid Aviana Waedt</div>
     </div>
 
-    <div class="slider">
-      <div class="slide">
-        <p class="quote">&bdquo;Also erstmal WOOOW! Ich liebe das Programm so sehr! Was für ein geiler Scheiß! Hatte Gänsehaut, Tränen in den Augen und immer wieder &lsquo;HELL YES&rsquo;&#8209;Momente.&ldquo;</p>
-        <div class="name">Leonie Rössle</div>
-      </div>
-      <div class="slide">
-        <p class="quote">&bdquo;Ich bin mit rund 5.000 EUR Umsatz im Monat gestartet, aber das Geld wollte nie bei mir bleiben. Im ersten halben Jahr machte ich 33.000 EUR, im zweiten Jahr 260.000 EUR – und jetzt wird es über eine Million.&ldquo;</p>
-        <div class="name">Melanie Pressler</div>
-      </div>
+    <div class="t-card">
+      <p class="quote">&bdquo;Also erstmal WOOOW! Ich liebe das Programm so sehr! Was für ein geiler Scheiß! Hatte Gänsehaut, Tränen in den Augen und immer wieder &lsquo;HELL YES&rsquo;&#8209;Momente.&ldquo;</p>
+      <div class="name">Leonie Rössle</div>
+    </div>
+    <div class="t-card">
+      <p class="quote">&bdquo;Ich bin mit rund 5.000 EUR Umsatz im Monat gestartet, aber das Geld wollte nie bei mir bleiben. Im ersten halben Jahr machte ich 33.000 EUR, im zweiten Jahr 260.000 EUR – und jetzt wird es über eine Million.&ldquo;</p>
+      <div class="name">Melanie Pressler</div>
     </div>
   </section>
 
