@@ -249,18 +249,19 @@
 
   /* ---------- 09 FOR YOU / NOT FOR YOU ---------- */
   .fory{background:var(--offwhite-2); padding:36px 26px;}
-  .notfory{background:var(--green-dark); color:var(--offwhite); padding:36px 26px;}
+  .notfory{background:#FFFFFF; color:var(--text); padding:36px 26px;}
   .fory h3, .notfory h3{
     font-family:'Cormorant Garamond', serif; font-weight:500;
     font-size:32px; margin-bottom:22px;
   }
+  .notfory h3{color:#C0392B;}
   .fory ul, .notfory ul{list-style:none;}
   .fory li, .notfory li{
     font-size:17px; line-height:1.5; margin-bottom:16px;
     padding-left:26px; position:relative;
   }
   .fory li::before{content:"✓"; position:absolute; left:0; color:var(--green-dark); font-weight:700;}
-  .notfory li::before{content:"✕"; position:absolute; left:0; color:var(--offwhite); font-weight:700;}
+  .notfory li::before{content:"✕"; position:absolute; left:0; color:#C0392B; font-weight:700;}
 
   /* ---------- 10 ZWEITER TESTIMONIAL-BLOCK ---------- */
   .wall{background:var(--offwhite); padding:88px 22px;}
