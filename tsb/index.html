@@ -310,6 +310,18 @@
   .fory li::before{content:"✓"; position:absolute; left:0; color:var(--green-dark); font-weight:700;}
   .notfory li::before{content:"✕"; position:absolute; left:0; color:#C0392B; font-weight:700;}
 
+  /* ---------- 09b MARINA ZWISCHENBILD ---------- */
+  .midimg{background:var(--offwhite); padding:56px 22px 0;}
+  .mid-figure{
+    width:auto; height:480px; overflow:hidden; margin:0 calc(var(--pad) * -1);
+    background:var(--offwhite);
+  }
+  .mid-figure img{
+    width:100%; height:100%; object-fit:cover; display:block;
+    mask-image:linear-gradient(to bottom, transparent 0%, black 30%);
+    -webkit-mask-image:linear-gradient(to bottom, transparent 0%, black 30%);
+  }
+
   /* ---------- 10 ZWEITER TESTIMONIAL-BLOCK ---------- */
   .wall{background:var(--offwhite); padding:88px 22px;}
   .wall h2{font-size:44px; line-height:1.02; margin-bottom:44px;}
@@ -611,6 +623,11 @@
       <li>Du findest immer Gründe, warum es nicht geht.</li>
     </ul>
   </div>
+
+  <!-- 09b MARINA ZWISCHENBILD -->
+  <section class="midimg">
+    <div class="mid-figure"><img src="../Bilder/Marina_MAI2314232 Kopie.jpg" alt="Marina Henze"></div>
+  </section>
 
   <!-- 10 ZWEITER TESTIMONIAL-BLOCK -->
   <section class="wall">
