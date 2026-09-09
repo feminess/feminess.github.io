@@ -14,7 +14,7 @@
     --green:#257c6c;
     --green-dark:#1b5c50;
     --offwhite:#F6F0E8;
-    --offwhite-2:#FAF6F0;
+    --offwhite-2:#F6F0E8;
     --text:#20201D;
     --text-soft:#5a5650;
   }
@@ -89,8 +89,12 @@
   }
   .hero .script-sub{font-size:32px; color:var(--green-dark); margin-bottom:28px; display:block;}
   .hero p.body{margin-bottom:32px; max-width:38ch;}
-  .hero-figure{margin-top:32px; width:100%; height:430px; overflow:hidden;}
-  .hero-figure img{width:100%; height:100%; object-fit:cover; display:block;}
+  .hero-figure{margin-top:32px; width:100%; height:430px; overflow:hidden; background:var(--offwhite);}
+  .hero-figure img{
+    width:100%; height:100%; object-fit:cover; display:block;
+    mask-image:linear-gradient(to bottom, transparent 0%, black 30%);
+    -webkit-mask-image:linear-gradient(to bottom, transparent 0%, black 30%);
+  }
 
   /* ---------- 02 PROOF ---------- */
   .proof{background:var(--offwhite); padding:64px 22px;}
@@ -134,8 +138,12 @@
   /* ---------- 04 MARINA STORY ---------- */
   .story{background:var(--offwhite-2); padding:88px 22px;}
   .story h2{font-size:42px; line-height:1.0; margin-bottom:28px; max-width:15ch;}
-  .story-figure{width:100%; height:360px; overflow:hidden; margin-bottom:28px;}
-  .story-figure img{width:100%; height:100%; object-fit:cover; display:block;}
+  .story-figure{width:100%; height:360px; overflow:hidden; margin-bottom:28px; background:var(--offwhite);}
+  .story-figure img{
+    width:100%; height:100%; object-fit:cover; display:block;
+    mask-image:linear-gradient(to bottom, transparent 0%, black 30%);
+    -webkit-mask-image:linear-gradient(to bottom, transparent 0%, black 30%);
+  }
   .story p{margin-bottom:16px; color:var(--text-soft);}
   .story p strong{color:var(--text); font-weight:600;}
   .story-stats{margin-top:48px;}
