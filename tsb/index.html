@@ -244,7 +244,7 @@
     mask-image:linear-gradient(to bottom, transparent 0%, black 22%);
     -webkit-mask-image:linear-gradient(to bottom, transparent 0%, black 22%);
   }
-  .day-card.day-2 .day-figure img{object-position:center 60%;}
+  .day-card.day-2 .day-figure img{object-position:center 38%;}
   .shift-block{margin-bottom:14px;}
   .shift-label{font-size:11px; letter-spacing:.1em; color:var(--text); font-weight:700; text-transform:uppercase; margin-bottom:3px; display:block;}
   .shift-block p{font-size:15px; color:var(--text-soft); line-height:1.5;}
@@ -314,9 +314,19 @@
   }
 
   /* ---------- FOOTER ---------- */
-  footer{background:var(--offwhite); padding:40px 22px 48px;}
-  footer img{height:20px; margin-bottom:12px; opacity:.85;}
-  footer .tagline{font-family:'Cormorant Garamond', serif; font-style:italic; font-size:14px; color:var(--text-soft);}
+  .site-footer{
+    background:#07291d;
+    border-top:1px solid rgba(94,198,179,0.1);
+    padding:28px 22px;
+    text-align:center;
+  }
+  .site-footer p{
+    font-family:'Montserrat', sans-serif;
+    font-size:12px;
+    color:#9ab8b4;
+  }
+  .site-footer a{color:#b8ddd8; text-decoration:none;}
+  .site-footer a:hover{text-decoration:underline;}
 
   @media (min-width:400px){
     :root{--pad:26px;}
@@ -602,9 +612,10 @@
     <div class="final-figure"><img src="../Bilder/Marina_MAI2314136 Kopie.jpg" alt="Marina Henze"></div>
   </section>
 
-  <footer>
-    <img src="https://feminess.github.io/true-spirit-business/img/logo-rosegold.png" alt="Feminess">
-    <div class="tagline">More Women. A Kinder Business.</div>
+  <footer class="site-footer">
+    <img src="https://feminess.github.io/true-spirit-business/img/logo-rosegold.png" alt="Feminess" style="height:22px;width:auto;margin-bottom:16px;">
+    <p>&copy; 2026 Feminess &nbsp;·&nbsp; Marina Henze &nbsp;&nbsp;|&nbsp;&nbsp; <a href="https://feminess.github.io/Impressum/">Impressum</a> &nbsp;|&nbsp; <a href="https://feminess.github.io/Datenschutz/">Datenschutz</a></p>
+    <p style="margin-top:14px;font-size:11px;color:#9ab8b4;max-width:640px;margin-left:auto;margin-right:auto;line-height:1.6;">This site is not a part of the Facebook website or Facebook Inc. Additionally, This site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc.</p>
   </footer>
 
 </div>
