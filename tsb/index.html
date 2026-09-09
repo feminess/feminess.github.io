@@ -342,13 +342,18 @@
   .final{background:var(--offwhite-2); padding:120px 22px 0;}
   .final .eyebrow{margin-bottom:28px;}
   .final h2{font-size:var(--fs-5); line-height:1.0; margin-bottom:32px;}
-  .final .lines{margin-bottom:44px;}
-  .final .lines p{
+  .final .lines{margin-bottom:44px; list-style:none;}
+  .final .lines li{
     font-family:'Cormorant Garamond', serif;
     font-size:var(--fs-5); color:var(--green-dark); line-height:1.0;
     margin-bottom:24px;
+    position:relative; padding-left:34px;
   }
-  .final .lines p:last-child{margin-bottom:0;}
+  .final .lines li::before{
+    content:"•"; position:absolute; left:0; top:-4px;
+    font-size:var(--fs-5);
+  }
+  .final .lines li:last-child{margin-bottom:0;}
   .final .body-h2{font-size:var(--fs-5); line-height:1.05; margin-bottom:36px;}
   .final .btn{margin-bottom:0;}
   .final .meta-line{position:relative; z-index:2; margin-bottom:-70px;}
@@ -674,12 +679,12 @@
   <!-- 11 FINAL CTA -->
   <section class="final" id="formular">
     <h2>Die Frau, die hier rausgeht,</h2>
-    <div class="lines">
-      <p>denkt anders.</p>
-      <p>entscheidet anders.</p>
-      <p>verkauft anders.</p>
-      <p>führt anders.</p>
-    </div>
+    <ul class="lines">
+      <li>denkt anders.</li>
+      <li>entscheidet anders.</li>
+      <li>verkauft anders.</li>
+      <li>führt anders.</li>
+    </ul>
     <h2 class="body-h2">Und baut endlich ein Business, das sich nach ihr anfühlt.</h2>
     <a href="https://feminess.de/true-spirit-business-anmeldung/" class="btn">Give me the shift</a>
     <div class="meta-line">Live &amp; Free · Online</div>
