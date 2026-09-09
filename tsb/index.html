@@ -18,6 +18,11 @@
     --text:#20201D;
     --text-soft:#5a5650;
     --pad:22px;
+    --fs-1:12px;
+    --fs-2:17px;
+    --fs-3:24px;
+    --fs-4:34px;
+    --fs-5:50px;
   }
   *{box-sizing:border-box; margin:0; padding:0;}
   html{scroll-behavior:smooth;}
@@ -39,12 +44,12 @@
     font-weight:500;
     color:var(--text);
   }
-  p{font-family:'Montserrat',sans-serif; line-height:1.6; font-size:17px; color:var(--text); font-weight:400;}
+  p{font-family:'Montserrat',sans-serif; line-height:1.6; font-size:var(--fs-2); color:var(--text); font-weight:400;}
   section{padding:88px 22px;}
   .script{font-family:'Caveat', cursive; font-weight:600; line-height:1;}
   .eyebrow{
     font-family:'Montserrat',sans-serif;
-    font-size:11.5px;
+    font-size:var(--fs-1);
     letter-spacing:.16em;
     color:var(--green-dark);
     font-weight:600;
@@ -59,7 +64,7 @@
     color:var(--offwhite);
     font-family:'Montserrat',sans-serif;
     font-weight:600;
-    font-size:13px;
+    font-size:var(--fs-1);
     letter-spacing:.05em;
     text-transform:uppercase;
     height:52px;
@@ -70,7 +75,7 @@
     cursor:pointer;
   }
   .meta-line{
-    font-family:'Montserrat',sans-serif; font-size:13px; color:var(--text-soft);
+    font-family:'Montserrat',sans-serif; font-size:var(--fs-1); color:var(--text-soft);
     letter-spacing:.02em; margin-top:28px;
   }
 
@@ -81,14 +86,14 @@
   /* ---------- 01 HERO ---------- */
   .hero{background:var(--offwhite-2); padding:64px 22px 0;}
   .hero .eyebrow{margin-top:24px;}
-  .hero .lede{font-size:15.5px; color:var(--text-soft); margin-bottom:28px; max-width:38ch;}
+  .hero .lede{font-size:var(--fs-2); color:var(--text-soft); margin-bottom:28px; max-width:38ch;}
   .hero h1{
-    font-size:52px;
+    font-size:var(--fs-5);
     line-height:.92;
     letter-spacing:-1px;
     margin-bottom:14px;
   }
-  .hero .script-sub{font-size:32px; color:var(--green-dark); margin-bottom:28px; display:block;}
+  .hero .script-sub{font-size:var(--fs-4); color:var(--green-dark); margin-bottom:28px; display:block;}
   .hero p.body{margin-bottom:32px; max-width:38ch;}
   .hero .btn{position:relative; z-index:2;}
   .hero .meta-line{position:relative; z-index:2; margin-bottom:-90px;}
@@ -104,7 +109,7 @@
 
   /* ---------- 02 PROOF ---------- */
   .proof{background:var(--offwhite); padding:64px 22px;}
-  .proof h2{font-size:40px; line-height:1.03; margin-bottom:14px;}
+  .proof h2{font-size:var(--fs-5); line-height:1.03; margin-bottom:14px;}
   .proof > p.lede{margin-bottom:36px; max-width:36ch; color:var(--text-soft);}
   .t-card{
     background:#FFFFFF;
@@ -118,30 +123,30 @@
   .t-card p.quote{
     font-family:'Cormorant Garamond', serif;
     font-style:italic;
-    font-size:19px;
+    font-size:var(--fs-2);
     color:var(--text);
     line-height:1.5;
     margin-bottom:14px;
   }
-  .t-card .name{font-family:'Montserrat',sans-serif; font-size:13px; font-weight:600; color:var(--text);}
+  .t-card .name{font-family:'Montserrat',sans-serif; font-size:var(--fs-1); font-weight:600; color:var(--text);}
 
   /* ---------- 03 WAKE-UP CALL ---------- */
   .wakeup{background:var(--offwhite); padding:120px 22px;}
-  .wakeup h2{font-size:50px; line-height:.98; margin-bottom:36px;}
+  .wakeup h2{font-size:var(--fs-5); line-height:.98; margin-bottom:36px;}
   .wakeup .lines p{
     font-family:'Cormorant Garamond', serif;
-    font-size:20px; color:var(--text); margin-bottom:24px;
+    font-size:var(--fs-3); color:var(--text); margin-bottom:24px;
   }
   .wakeup .closing{
     margin-top:12px;
-    font-size:32px;
+    font-size:var(--fs-4);
     line-height:1.05;
     color:var(--green-dark);
   }
 
   /* ---------- 04 MARINA STORY ---------- */
   .story{background:var(--offwhite-2); padding:88px 22px;}
-  .story h2{font-size:46px; line-height:1.0; margin-bottom:-40px; position:relative; z-index:2;}
+  .story h2{font-size:var(--fs-5); line-height:1.0; margin-bottom:-40px; position:relative; z-index:2;}
   .story-figure{
     width:auto; height:480px; overflow:hidden; margin:0 calc(var(--pad) * -1) 28px;
     background:var(--offwhite); position:relative; z-index:1;
@@ -155,8 +160,8 @@
   .story p strong{color:var(--text); font-weight:600;}
   .story-stats{margin-top:48px;}
   .stat-block{margin-bottom:32px;}
-  .stat-block .num{font-family:'Cormorant Garamond', serif; font-size:44px; display:block; color:var(--green-dark); line-height:1;}
-  .stat-block .label{font-family:'Montserrat',sans-serif; font-size:14px; color:var(--text-soft); margin-top:4px; display:block;}
+  .stat-block .num{font-family:'Cormorant Garamond', serif; font-size:var(--fs-5); display:block; color:var(--green-dark); line-height:1;}
+  .stat-block .label{font-family:'Montserrat',sans-serif; font-size:var(--fs-1); color:var(--text-soft); margin-top:4px; display:block;}
   .logos-row{
     margin-top:40px;
     padding-top:24px; border-top:1px solid rgba(32,32,29,0.15);
@@ -193,15 +198,15 @@
   }
   .transform-label{
     font-family:'Montserrat', sans-serif;
-    font-size:11.5px; font-weight:700; letter-spacing:.14em; text-transform:uppercase;
+    font-size:var(--fs-1); font-weight:700; letter-spacing:.14em; text-transform:uppercase;
     display:block; margin-bottom:22px;
   }
   .transform-card ul{list-style:none;}
   .transform-card li{
     font-family:'Cormorant Garamond', serif;
-    font-size:24px; line-height:1.7; position:relative; padding-left:28px;
+    font-size:var(--fs-3); line-height:1.7; position:relative; padding-left:28px;
   }
-  .transform-card li::before{position:absolute; left:0; top:1px; font-size:16px; font-weight:700;}
+  .transform-card li::before{position:absolute; left:0; top:1px; font-size:var(--fs-2); font-weight:700;}
   .old-biz{background:var(--sand);}
   .old-biz .transform-label{color:rgba(32,32,29,0.55);}
   .old-biz li{color:var(--text);}
@@ -230,15 +235,15 @@
   }
   .chosen .eyebrow{color:rgba(246,240,232,0.65);}
   .chosen h2{
-    font-size:58px;
+    font-size:var(--fs-5);
     line-height:.95;
     color:var(--offwhite);
     margin-bottom:8px;
   }
-  .chosen .script-sub{font-size:38px; color:rgba(246,240,232,0.85); display:block; margin-bottom:48px;}
+  .chosen .script-sub{font-size:var(--fs-4); color:rgba(246,240,232,0.85); display:block; margin-bottom:48px;}
   .chosen .lines p{
     font-family:'Cormorant Garamond', serif;
-    font-size:24px;
+    font-size:var(--fs-3);
     margin-bottom:6px;
     color:var(--offwhite);
   }
@@ -248,7 +253,7 @@
   /* ---------- 07 3 DAYS ---------- */
   .days{background:var(--offwhite-2); padding:88px 22px;}
   .days-head{margin-bottom:48px;}
-  .days-head h2{font-size:38px; line-height:1.05;}
+  .days-head h2{font-size:var(--fs-5); line-height:1.05;}
   .day-card{
     background:#F3E8DC;
     border-radius:6px;
@@ -256,11 +261,11 @@
     margin-bottom:36px;
   }
   .day-card:last-child{margin-bottom:0;}
-  .day-num{font-size:11.5px; letter-spacing:.1em; font-weight:600; color:var(--green-dark); text-transform:uppercase;}
-  .day-date{font-size:12px; color:var(--text-soft); margin-left:8px;}
+  .day-num{font-size:var(--fs-1); letter-spacing:.1em; font-weight:600; color:var(--green-dark); text-transform:uppercase;}
+  .day-date{font-size:var(--fs-1); color:var(--text-soft); margin-left:8px;}
   .day-title{
     font-family:'Cormorant Garamond', serif;
-    font-size:32px; color:var(--text);
+    font-size:var(--fs-4); color:var(--text);
     margin:8px 0 18px; line-height:1.05;
   }
   .day-figure{width:auto; height:190px; overflow:hidden; margin:0 -24px 20px; background:#F3E8DC;}
@@ -271,26 +276,26 @@
   }
   .day-card.day-2 .day-figure img{object-position:center 38%;}
   .shift-block{margin-bottom:14px;}
-  .shift-label{font-size:11px; letter-spacing:.1em; color:var(--text); font-weight:700; text-transform:uppercase; margin-bottom:3px; display:block;}
-  .shift-block p{font-size:15px; color:var(--text-soft); line-height:1.5;}
-  .day-desc{font-size:14.5px; color:var(--text-soft); margin:16px 0 18px;}
+  .shift-label{font-size:var(--fs-1); letter-spacing:.1em; color:var(--text); font-weight:700; text-transform:uppercase; margin-bottom:3px; display:block;}
+  .shift-block p{font-size:var(--fs-2); color:var(--text-soft); line-height:1.5;}
+  .day-desc{font-size:var(--fs-2); color:var(--text-soft); margin:16px 0 18px;}
   .day-desc strong{color:var(--text); font-weight:600;}
   .tags{display:flex; gap:8px; flex-wrap:wrap;}
   .tag-chip{
-    font-size:10px; letter-spacing:.05em; font-weight:600;
+    font-size:var(--fs-1); letter-spacing:.05em; font-weight:600;
     color:var(--text); border:1px solid rgba(32,32,29,0.3);
     padding:6px 8px;
   }
 
   /* ---------- 08 WAS UNSERE FRAUEN NICHT MEHR MACHEN ---------- */
   .nomore{background:var(--sand); padding:88px 22px;}
-  .nomore h2{font-size:42px; line-height:1.05; margin-bottom:50px;}
+  .nomore h2{font-size:var(--fs-5); line-height:1.05; margin-bottom:50px;}
   .nomore-item{margin-bottom:24px;}
-  .nomore-num{font-size:12px; letter-spacing:.08em; font-weight:600; text-transform:uppercase; color:var(--text); display:block; margin-bottom:6px;}
-  .nomore-item p{font-size:18px; color:var(--text); line-height:1.5;}
+  .nomore-num{font-size:var(--fs-1); letter-spacing:.08em; font-weight:600; text-transform:uppercase; color:var(--text); display:block; margin-bottom:6px;}
+  .nomore-item p{font-size:var(--fs-2); color:var(--text); line-height:1.5;}
   .nomore-future{margin-top:50px;}
-  .nomore-future p{font-size:17px; color:var(--text); max-width:38ch;}
-  .nomore-future .script{font-size:42px; color:var(--green-dark); display:block; margin-top:8px;}
+  .nomore-future p{font-size:var(--fs-2); color:var(--text); max-width:38ch;}
+  .nomore-future .script{font-size:var(--fs-4); color:var(--green-dark); display:block; margin-top:8px;}
   .nomore .btn{margin-top:32px; background:var(--green-dark); color:var(--offwhite);}
 
   /* ---------- 09 FOR YOU / NOT FOR YOU ---------- */
@@ -298,12 +303,12 @@
   .notfory{background:var(--offwhite); color:var(--text); padding:36px 26px;}
   .fory h3, .notfory h3{
     font-family:'Cormorant Garamond', serif; font-weight:500;
-    font-size:32px; margin-bottom:22px;
+    font-size:var(--fs-4); margin-bottom:22px;
   }
   .notfory h3{color:#C0392B;}
   .fory ul, .notfory ul{list-style:none;}
   .fory li, .notfory li{
-    font-size:17px; line-height:1.5; margin-bottom:16px;
+    font-size:var(--fs-2); line-height:1.5; margin-bottom:16px;
     padding-left:26px; position:relative;
   }
   .fory li::before{content:"✓"; position:absolute; left:0; color:var(--green-dark); font-weight:700;}
@@ -323,7 +328,7 @@
 
   /* ---------- 10 ZWEITER TESTIMONIAL-BLOCK ---------- */
   .wall{background:var(--offwhite); padding:88px 22px;}
-  .wall h2{font-size:44px; line-height:1.02; margin-bottom:44px;}
+  .wall h2{font-size:var(--fs-5); line-height:1.02; margin-bottom:44px;}
   .wall-gallery{
     margin:0 calc(var(--pad) * -1);
   }
@@ -335,10 +340,10 @@
   /* ---------- 11 FINAL CTA ---------- */
   .final{background:var(--offwhite-2); padding:120px 22px 0;}
   .final .eyebrow{margin-bottom:28px;}
-  .final h2{font-size:48px; line-height:1.0; margin-bottom:32px;}
+  .final h2{font-size:var(--fs-5); line-height:1.0; margin-bottom:32px;}
   .final .lines{margin-bottom:44px;}
-  .final .lines p{font-size:30px; color:var(--green-dark); line-height:1.15;}
-  .final .body-h2{font-size:46px; line-height:1.05; margin-bottom:36px;}
+  .final .lines p{font-size:var(--fs-3); color:var(--green-dark); line-height:1.15;}
+  .final .body-h2{font-size:var(--fs-5); line-height:1.05; margin-bottom:36px;}
   .final .btn{margin-bottom:0;}
   .final .meta-line{position:relative; z-index:2; margin-bottom:-70px;}
   .final-figure{
@@ -360,7 +365,7 @@
   }
   .site-footer p{
     font-family:'Montserrat', sans-serif;
-    font-size:12px;
+    font-size:var(--fs-1);
     color:#9ab8b4;
   }
   .site-footer a{color:#b8ddd8; text-decoration:none;}
@@ -655,7 +660,7 @@
   <footer class="site-footer">
     <img src="https://feminess.github.io/true-spirit-business/img/logo-rosegold.png" alt="Feminess" style="height:22px;width:auto;margin-bottom:16px;">
     <p>&copy; 2026 Feminess &nbsp;·&nbsp; Marina Henze &nbsp;&nbsp;|&nbsp;&nbsp; <a href="https://feminess.github.io/Impressum/">Impressum</a> &nbsp;|&nbsp; <a href="https://feminess.github.io/Datenschutz/">Datenschutz</a></p>
-    <p style="margin-top:14px;font-size:11px;color:#9ab8b4;max-width:640px;margin-left:auto;margin-right:auto;line-height:1.6;">This site is not a part of the Facebook website or Facebook Inc. Additionally, This site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc.</p>
+    <p style="margin-top:14px;font-size:var(--fs-1);color:#9ab8b4;max-width:640px;margin-left:auto;margin-right:auto;line-height:1.6;">This site is not a part of the Facebook website or Facebook Inc. Additionally, This site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc.</p>
   </footer>
 
 </div>
