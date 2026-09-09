@@ -17,6 +17,7 @@
     --offwhite-2:#F6F0E8;
     --text:#20201D;
     --text-soft:#5a5650;
+    --pad:22px;
   }
   *{box-sizing:border-box; margin:0; padding:0;}
   html{scroll-behavior:smooth;}
@@ -92,7 +93,7 @@
   .hero .btn{position:relative; z-index:2;}
   .hero .meta-line{position:relative; z-index:2; margin-bottom:-90px;}
   .hero-figure{
-    margin:32px -22px 0; width:auto; height:460px; overflow:hidden;
+    margin:32px calc(var(--pad) * -1) 0; width:auto; height:460px; overflow:hidden;
     background:var(--offwhite); position:relative; z-index:1;
   }
   .hero-figure img{
@@ -142,7 +143,10 @@
   /* ---------- 04 MARINA STORY ---------- */
   .story{background:var(--offwhite-2); padding:88px 22px;}
   .story h2{font-size:46px; line-height:1.0; margin-bottom:28px;}
-  .story-figure{width:100%; height:360px; overflow:hidden; margin-bottom:28px; background:var(--offwhite);}
+  .story-figure{
+    width:auto; height:360px; overflow:hidden; margin:0 calc(var(--pad) * -1) 28px;
+    background:var(--offwhite);
+  }
   .story-figure img{
     width:100%; height:100%; object-fit:cover; display:block;
     mask-image:linear-gradient(to bottom, transparent 0%, black 30%);
@@ -234,8 +238,12 @@
     font-size:32px; color:var(--text);
     margin:8px 0 18px; line-height:1.05;
   }
-  .day-figure{width:100%; height:190px; overflow:hidden; margin-bottom:20px; border-radius:4px;}
-  .day-figure img{width:100%; height:100%; object-fit:cover; object-position:center 20%; display:block;}
+  .day-figure{width:auto; height:190px; overflow:hidden; margin:0 -24px 20px; background:#F3E8DC;}
+  .day-figure img{
+    width:100%; height:100%; object-fit:cover; object-position:center 20%; display:block;
+    mask-image:linear-gradient(to bottom, transparent 0%, black 22%);
+    -webkit-mask-image:linear-gradient(to bottom, transparent 0%, black 22%);
+  }
   .shift-block{margin-bottom:14px;}
   .shift-label{font-size:11px; letter-spacing:.1em; color:var(--text); font-weight:700; text-transform:uppercase; margin-bottom:3px; display:block;}
   .shift-block p{font-size:15px; color:var(--text-soft); line-height:1.5;}
@@ -308,8 +316,15 @@
   .final .lines p{font-size:30px; color:var(--green-dark); line-height:1.15;}
   .final .body-h2{font-size:46px; line-height:1.05; margin-bottom:36px;}
   .final .btn{margin-bottom:0;}
-  .final-figure{margin-top:56px; width:100%; height:420px; overflow:hidden;}
-  .final-figure img{width:100%; height:100%; object-fit:cover; display:block;}
+  .final-figure{
+    margin:56px calc(var(--pad) * -1) 0; width:auto; height:420px; overflow:hidden;
+    background:var(--offwhite);
+  }
+  .final-figure img{
+    width:100%; height:100%; object-fit:cover; display:block;
+    mask-image:linear-gradient(to bottom, transparent 0%, black 30%);
+    -webkit-mask-image:linear-gradient(to bottom, transparent 0%, black 30%);
+  }
 
   /* ---------- FOOTER ---------- */
   footer{background:var(--offwhite); padding:40px 22px 48px;}
@@ -317,6 +332,7 @@
   footer .tagline{font-family:'Cormorant Garamond', serif; font-style:italic; font-size:14px; color:var(--text-soft);}
 
   @media (min-width:400px){
+    :root{--pad:26px;}
     section, .hero, .proof, .wakeup, .story, .days, .nomore, .wall, .final{padding-left:26px; padding-right:26px;}
     .old-biz, .new-biz{padding-left:28px; padding-right:28px;}
     .fory, .notfory{padding-left:30px; padding-right:30px;}
