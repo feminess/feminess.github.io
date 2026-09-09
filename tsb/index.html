@@ -89,7 +89,12 @@
   }
   .hero .script-sub{font-size:32px; color:var(--green-dark); margin-bottom:28px; display:block;}
   .hero p.body{margin-bottom:32px; max-width:38ch;}
-  .hero-figure{margin-top:32px; width:100%; height:430px; overflow:hidden; background:var(--offwhite);}
+  .hero .btn{position:relative; z-index:2;}
+  .hero .meta-line{position:relative; z-index:2; margin-bottom:-90px;}
+  .hero-figure{
+    margin:32px -22px 0; width:auto; height:460px; overflow:hidden;
+    background:var(--offwhite); position:relative; z-index:1;
+  }
   .hero-figure img{
     width:100%; height:100%; object-fit:cover; display:block;
     mask-image:linear-gradient(to bottom, transparent 0%, black 30%);
