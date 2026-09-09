@@ -143,10 +143,27 @@
   .stat-block .num{font-family:'Cormorant Garamond', serif; font-size:44px; display:block; color:var(--green-dark); line-height:1;}
   .stat-block .label{font-family:'Montserrat',sans-serif; font-size:14px; color:var(--text-soft); margin-top:4px; display:block;}
   .logos-row{
-    display:flex; flex-wrap:wrap; opacity:.55; margin-top:40px;
+    margin-top:40px;
     padding-top:24px; border-top:1px solid rgba(32,32,29,0.15);
+    overflow:hidden; position:relative; width:100%;
+    mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
   }
-  .logos-row span{font-size:12px; font-weight:600; color:var(--text-soft); margin:0 14px 8px 0;}
+  .logos-track{
+    display:flex; align-items:center; gap:56px; width:max-content;
+    animation: logoScroll 24s linear infinite;
+    padding:4px 0;
+  }
+  .logos-track:hover{ animation-play-state:paused; }
+  .logos-track img{
+    height:34px; width:auto; object-fit:contain;
+    opacity:.7; flex-shrink:0; transition:opacity .3s ease;
+  }
+  .logos-track img:hover{ opacity:1; }
+  @keyframes logoScroll{
+    from{ transform:translateX(0); }
+    to{ transform:translateX(-50%); }
+  }
 
   /* ---------- 05 ALT VS NEU ---------- */
   .old-biz, .new-biz{padding:70px 24px;}
@@ -363,12 +380,20 @@
     </div>
 
     <div class="logos-row">
-      <span>Cosmopolitan</span>
-      <span>Stern</span>
-      <span>Handelsblatt</span>
-      <span>Focus Money</span>
-      <span>Huffpost</span>
-      <span>Wirtschaftswoche</span>
+      <div class="logos-track">
+        <img src="../Logos/Cosmopolitan-Logo-neue-Masse.png" alt="Cosmopolitan">
+        <img src="../Logos/Focus-Money-Logo-neue-masse.png" alt="Focus Money">
+        <img src="../Logos/Huffpost-Logo-neue-Masse.png" alt="HuffPost">
+        <img src="../Logos/Stern-Logo.png" alt="Stern">
+        <img src="../Logos/Wirschafwoche.png" alt="Wirtschaftswoche">
+        <img src="../Logos/handelsblatt-logo-1.png" alt="Handelsblatt">
+        <img src="../Logos/Cosmopolitan-Logo-neue-Masse.png" alt="Cosmopolitan">
+        <img src="../Logos/Focus-Money-Logo-neue-masse.png" alt="Focus Money">
+        <img src="../Logos/Huffpost-Logo-neue-Masse.png" alt="HuffPost">
+        <img src="../Logos/Stern-Logo.png" alt="Stern">
+        <img src="../Logos/Wirschafwoche.png" alt="Wirtschaftswoche">
+        <img src="../Logos/handelsblatt-logo-1.png" alt="Handelsblatt">
+      </div>
     </div>
   </section>
 
