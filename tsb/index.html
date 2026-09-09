@@ -372,6 +372,26 @@
   .site-footer a{color:#b8ddd8; text-decoration:none;}
   .site-footer a:hover{text-decoration:underline;}
 
+  /* ---------- STICKY CTA ---------- */
+  .sticky-cta{
+    display:flex; align-items:center; justify-content:center;
+    position:fixed; left:50%; bottom:18px;
+    transform:translate(-50%, 24px);
+    width:calc(100% - 44px); max-width:436px;
+    height:52px;
+    background:var(--green-dark); color:var(--offwhite);
+    font-family:'Montserrat',sans-serif; font-weight:600;
+    font-size:var(--fs-1); letter-spacing:.05em; text-transform:uppercase;
+    border-radius:999px; text-decoration:none;
+    box-shadow:0 10px 26px rgba(27,92,80,0.35);
+    opacity:0; pointer-events:none;
+    transition:opacity .3s ease, transform .3s ease;
+    z-index:50;
+  }
+  .sticky-cta.is-visible{
+    opacity:1; pointer-events:auto; transform:translate(-50%, 0);
+  }
+
   @media (min-width:400px){
     :root{--pad:26px;}
     section, .hero, .proof, .wakeup, .story, .days, .nomore, .wall, .final{padding-left:26px; padding-right:26px;}
@@ -668,5 +688,23 @@
   </footer>
 
 </div>
+
+<a href="#formular" class="sticky-cta" id="stickyCta">Yes, ich bin dabei</a>
+
+<script>
+  (function(){
+    var header = document.querySelector('.site-header');
+    var sticky = document.getElementById('stickyCta');
+    if(!header || !sticky) return;
+    var threshold = header.offsetTop + header.offsetHeight;
+    window.addEventListener('scroll', function(){
+      if(window.scrollY > threshold){
+        sticky.classList.add('is-visible');
+      } else {
+        sticky.classList.remove('is-visible');
+      }
+    }, {passive:true});
+  })();
+</script>
 </body>
 </html>
