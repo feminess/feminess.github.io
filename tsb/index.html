@@ -82,15 +82,31 @@
   /* ---------- HEADER ---------- */
   .site-header{
     background:#07291d;
-    padding:20px 22px;
-    display:flex; justify-content:flex-start;
+    padding:14px 22px;
+    display:flex; align-items:center; gap:12px;
   }
-  .site-header img{height:24px;}
+  .site-header img{height:16px; flex-shrink:0;}
+  .header-eyebrow{
+    font-family:'Montserrat', sans-serif;
+    font-size:var(--fs-1); letter-spacing:.05em;
+    color:rgba(246,240,232,0.75);
+  }
 
   /* ---------- 01 HERO ---------- */
   .hero{background:var(--offwhite-2); padding:28px 22px 0;}
   .hero .eyebrow{margin-top:0;}
   .hero .lede{font-size:var(--fs-2); color:var(--text-soft); margin-bottom:28px; max-width:38ch;}
+
+  /* ---------- COUNTDOWN ---------- */
+  .countdown{display:flex; gap:10px; margin:14px 0 22px;}
+  .cd-unit{
+    display:flex; flex-direction:column; align-items:center;
+    background:var(--green-dark); color:var(--offwhite);
+    border-radius:8px; padding:8px 12px; min-width:52px;
+  }
+  .cd-num{font-family:'Cormorant Garamond', serif; font-size:var(--fs-4); line-height:1;}
+  .cd-label{font-family:'Montserrat', sans-serif; font-size:var(--fs-1); letter-spacing:.05em; text-transform:uppercase; margin-top:2px; opacity:.75;}
+  .final .countdown{margin-bottom:24px;}
   .hero h1{
     font-size:var(--fs-5);
     line-height:.92;
@@ -421,12 +437,18 @@
   <!-- HEADER -->
   <div class="site-header">
     <img src="https://feminess.github.io/true-spirit-business/img/logo-rosegold.png" alt="Feminess">
+    <span class="header-eyebrow">Free Live Experience · 22.–24. Sept. 2026</span>
   </div>
 
   <!-- 01 HERO -->
   <section class="hero">
-    <div class="eyebrow">Free Live Experience · 22.–24. Sept. 2026</div>
-    <p class="lede">Für Frauen, die in keine Schublade passen. Die weder Lust auf Push&#8209;Marketing und Hard&#8209;Selling haben, noch auf Feenstaub und &bdquo;ich mach Millionen aus der Badewanne&ldquo;.</p>
+    <div class="countdown">
+      <div class="cd-unit"><span class="cd-num cd-d">00</span><span class="cd-label">Tage</span></div>
+      <div class="cd-unit"><span class="cd-num cd-h">00</span><span class="cd-label">Std</span></div>
+      <div class="cd-unit"><span class="cd-num cd-m">00</span><span class="cd-label">Min</span></div>
+      <div class="cd-unit"><span class="cd-num cd-s">00</span><span class="cd-label">Sek</span></div>
+    </div>
+    <p class="lede">Für Frauen, die weder Lust auf Push-Marketing noch "ich mach Millionen aus der Badewanne" haben.</p>
     <h1>TRUE SPIRIT<br>BUSINESS</h1>
     <span class="script script-sub">Unangepasst erfolgreich.</span>
     <a href="#formular" class="btn">Yes, ich bin dabei</a>
@@ -692,6 +714,12 @@
       <li>führt anders.</li>
     </ul>
     <h2 class="body-h2">Und baut endlich ein Business, das sich nach ihr anfühlt.</h2>
+    <div class="countdown">
+      <div class="cd-unit"><span class="cd-num cd-d">00</span><span class="cd-label">Tage</span></div>
+      <div class="cd-unit"><span class="cd-num cd-h">00</span><span class="cd-label">Std</span></div>
+      <div class="cd-unit"><span class="cd-num cd-m">00</span><span class="cd-label">Min</span></div>
+      <div class="cd-unit"><span class="cd-num cd-s">00</span><span class="cd-label">Sek</span></div>
+    </div>
     <a href="https://feminess.de/true-spirit-business-anmeldung/" class="btn" id="finalBtn">Give me the shift</a>
     <div class="meta-line">Live &amp; Free · Online</div>
     <div class="final-figure"><img src="../Bilder/Marina_MAI2314136 Kopie.jpg" alt="Marina Henze"></div>
@@ -730,6 +758,27 @@
     window.addEventListener('scroll', update, {passive:true});
     window.addEventListener('resize', update);
     update();
+  })();
+
+  (function(){
+    var target = new Date('2026-09-22T11:00:00').getTime();
+    function pad(n){ return String(n).padStart(2,'0'); }
+    function tick(){
+      var diff = target - Date.now();
+      if(diff < 0) diff = 0;
+      var d = Math.floor(diff / 86400000);
+      var h = Math.floor((diff % 86400000) / 3600000);
+      var m = Math.floor((diff % 3600000) / 60000);
+      var s = Math.floor((diff % 60000) / 1000);
+      document.querySelectorAll('.countdown').forEach(function(cd){
+        cd.querySelector('.cd-d').textContent = pad(d);
+        cd.querySelector('.cd-h').textContent = pad(h);
+        cd.querySelector('.cd-m').textContent = pad(m);
+        cd.querySelector('.cd-s').textContent = pad(s);
+      });
+    }
+    tick();
+    setInterval(tick, 1000);
   })();
 </script>
 </body>
