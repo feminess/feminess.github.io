@@ -368,14 +368,20 @@
   }
 
   /* ---------- 08 WAS UNSERE FRAUEN NICHT MEHR MACHEN ---------- */
-  .nomore{background:var(--sand); padding:88px 22px;}
+  .nomore{background:var(--offwhite); padding:88px 22px;}
   .nomore h2{font-size:var(--fs-5); line-height:1.05; margin-bottom:50px;}
   .nomore-item{margin-bottom:24px;}
-  .nomore-num{font-size:var(--fs-1); letter-spacing:.08em; font-weight:600; text-transform:uppercase; color:var(--green-dark); display:block; margin-bottom:6px;}
+  .nomore-num{
+    font-family:'Cormorant Garamond', serif;
+    font-size:var(--fs-5); letter-spacing:0; font-weight:500;
+    text-transform:none; color:var(--green-dark); display:block; margin-bottom:2px;
+  }
   .nomore-item p{font-size:var(--fs-2); color:var(--text); line-height:1.5;}
+  .nomore-divider{height:2px; background:var(--green-dark); margin:40px 0; opacity:.5;}
   .nomore-future{margin-top:50px;}
-  .nomore-future p{font-size:var(--fs-2); color:var(--text); max-width:38ch;}
-  .nomore-future .script{font-size:var(--fs-4); color:var(--green-dark); display:block; margin-top:8px;}
+  .nomore-future p{font-size:var(--fs-2); color:var(--text); max-width:38ch; margin-bottom:8px;}
+  .nomore-future .nomore-emphasis{font-family:'Montserrat', sans-serif; font-weight:700;}
+  .nomore-future .script{font-family:'Cormorant Garamond', serif; font-weight:500; font-size:var(--fs-4); color:var(--green-dark); display:block; margin-top:8px;}
   .nomore .btn{margin-top:32px; background: linear-gradient(135deg, #1b5c50 0%, #0d2420 100%); color:var(--offwhite);}
 
   /* ---------- 09 FOR YOU / NOT FOR YOU ---------- */
@@ -703,7 +709,7 @@
 
   <!-- 08 WAS UNSERE FRAUEN NICHT MEHR MACHEN -->
   <section class="nomore">
-    <h2>Was unsere Frauen nicht mehr machen.</h2>
+    <h2>WAS UNSERE FRAUEN NICHT MEHR MACHEN.</h2>
 
     <div class="nomore-item">
       <span class="nomore-num">01</span>
@@ -726,8 +732,12 @@
       <p>Sich selbst infrage stellen, wenn eine Strategie nicht sofort funktioniert.</p>
     </div>
 
+    <div class="nomore-divider"></div>
+
     <div class="nomore-future">
-      <p>Stattdessen haben sie ein Business, das aus ihrer eigenen Energie wächst und ihnen Freude macht. Sie leben ihre Träume. Nicht irgendwann.</p>
+      <p>Stattdessen haben sie ein Business, das aus ihrer eigenen Energie wächst und ihnen Freude macht.</p>
+      <p>Sie leben ihre Träume.</p>
+      <p class="nomore-emphasis">Nicht irgendwann.</p>
       <span class="script">JETZT.</span>
     </div>
     <a href="#formular" class="btn">Das will ich auch</a>
