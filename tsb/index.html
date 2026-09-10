@@ -135,8 +135,11 @@
   }
   .hero .script-sub{font-size:var(--fs-4); color:var(--green-dark); margin-bottom:28px; display:block;}
   .hero p.body{margin-bottom:32px; max-width:38ch; position:relative; z-index:2;}
-  .hero .btn{position:relative; z-index:2; margin-bottom:10px;}
-  .hero .meta-line{position:relative; z-index:2; margin-top:0; margin-bottom:-230px;}
+  .hero .btn{
+    position:relative; z-index:2; margin-bottom:10px;
+    display:inline-flex; width:auto; height:52px; font-size:var(--fs-1);
+  }
+  .hero .meta-line{position:relative; z-index:2; margin-top:0; margin-bottom:-230px; color:var(--offwhite);}
   .hero-figure{
     margin:32px calc(var(--pad) * -1) 0; width:auto; height:460px; overflow:hidden;
     background:var(--offwhite); position:relative; z-index:1;
