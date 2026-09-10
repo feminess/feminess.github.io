@@ -431,18 +431,13 @@
   }
   .wall-track{
     display:flex; align-items:center; gap:16px; width:max-content;
-    animation: wallScroll 40s linear infinite;
     padding:4px 0;
+    transition:transform .6s ease;
   }
-  .wall-track:hover{ animation-play-state:paused; }
   .wall-track img{
     width:320px; height:auto; flex-shrink:0;
     border-radius:8px;
     box-shadow:0 10px 24px rgba(32,32,29,0.1);
-  }
-  @keyframes wallScroll{
-    from{ transform:translateX(0); }
-    to{ transform:translateX(-50%); }
   }
 
   /* ---------- 11 FINAL CTA ---------- */
@@ -792,12 +787,7 @@
     <h2>Noch mehr echte Frauen &amp; <em>echte Ergebnisse.</em></h2>
 
     <div class="wall-gallery">
-      <div class="wall-track">
-        <img src="../webinar/Testimonials/Denise.PNG" alt="Testimonial Denise">
-        <img src="../webinar/Testimonials/Elena.jpg" alt="Testimonial Elena">
-        <img src="../webinar/Testimonials/Leonie.PNG" alt="Testimonial Leonie">
-        <img src="../webinar/Testimonials/Yvonne.png" alt="Testimonial Yvonne">
-        <img src="../webinar/Testimonials/Yvonne 2.png" alt="Testimonial Yvonne">
+      <div class="wall-track" id="wallTrack">
         <img src="../webinar/Testimonials/Denise.PNG" alt="Testimonial Denise">
         <img src="../webinar/Testimonials/Elena.jpg" alt="Testimonial Elena">
         <img src="../webinar/Testimonials/Leonie.PNG" alt="Testimonial Leonie">
@@ -882,6 +872,21 @@
     }
     tick();
     setInterval(tick, 1000);
+  })();
+
+  (function(){
+    var track = document.getElementById('wallTrack');
+    if(!track) return;
+    var imgs = track.querySelectorAll('img');
+    if(imgs.length < 2) return;
+    var index = 0;
+    function step(){
+      index = (index + 1) % imgs.length;
+      var gap = parseFloat(getComputedStyle(track).columnGap || getComputedStyle(track).gap) || 16;
+      var offset = imgs[index].offsetLeft;
+      track.style.transform = 'translateX(-' + offset + 'px)';
+    }
+    setInterval(step, 3200);
   })();
 </script>
 </body>
