@@ -56,7 +56,7 @@
     color:var(--text);
   }
   h1 em, h2 em, h3 em{ font-style:italic; }
-  h1 em, h2 em, h3 em, .script-sub, .stat-block .num, .story-signature, .nomore-dream, .nomore-jetzt, .notfory-script, .wakeup .closing{
+  h1 em, h2 em, h3 em, .script-sub, .stat-block .num, .story-signature, .nomore-dream, .nomore-jetzt, .notfory-script, .wakeup .closing, .final .lines li{
     background:linear-gradient(115deg, #8a5d1e 0%, #d9a94b 22%, #f7e6bb 45%, #d9a94b 68%, #8a5d1e 88%, #d9a94b 100%);
     -webkit-background-clip:text; background-clip:text;
     color:transparent; -webkit-text-fill-color:transparent;
@@ -521,14 +521,14 @@
   .final .lines li{
     font-family:'Amsterdam Four', cursive;
     font-style:normal;
-    font-size:var(--fs-5); color:var(--sand); line-height:2.2;
+    font-size:var(--fs-5); line-height:2.2;
     margin-bottom:8px; padding-top:16px; padding-bottom:16px;
     position:relative; padding-left:34px;
   }
   .final .lines li::before{
     content:"•"; position:absolute; left:0; top:0.12em;
     font-family:'Manrope', sans-serif; font-weight:300;
-    font-size:0.55em;
+    font-size:0.55em; color:var(--sand);
   }
   .final .lines li:last-child{margin-bottom:0;}
   .final .body-h2{font-size:var(--fs-5); line-height:1.05; margin-bottom:36px;}
