@@ -380,6 +380,12 @@
     background:rgba(255,255,255,0.05);
     border-left:2px solid var(--sand);
     border-radius:0 6px 6px 0;
+    transition:background .25s ease, border-color .25s ease, transform .25s ease;
+  }
+  .nomore-item:hover, .nomore-item:active{
+    background:rgba(255,255,255,0.11);
+    border-left-color:var(--offwhite);
+    transform:translateX(8px);
   }
   .nomore-num{
     font-family:'Cormorant Garamond', serif;
