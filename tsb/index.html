@@ -84,13 +84,25 @@
   .site-header{
     background:#07291d;
     padding:14px 22px;
-    display:flex; align-items:center; gap:12px;
+    display:flex; flex-direction:column; align-items:center; gap:6px;
   }
-  .site-header img{height:16px; flex-shrink:0;}
   .header-eyebrow{
     font-family:'Montserrat', sans-serif;
     font-size:var(--fs-1); letter-spacing:.05em;
     color:rgba(246,240,232,0.75);
+  }
+  .countdown-header{
+    gap:6px; margin:0;
+  }
+  .countdown-header .cd-unit{
+    background:transparent; padding:0; min-width:auto;
+  }
+  .countdown-header .cd-num{
+    font-family:'Montserrat', sans-serif; font-size:var(--fs-1); font-weight:700;
+    color:rgba(246,240,232,0.9);
+  }
+  .countdown-header .cd-label{
+    font-size:9px; color:rgba(246,240,232,0.55); margin-top:0;
   }
 
   /* ---------- 01 HERO ---------- */
@@ -466,8 +478,13 @@
 
   <!-- HEADER -->
   <div class="site-header">
-    <img src="https://feminess.github.io/true-spirit-business/img/logo-rosegold.png" alt="Feminess">
     <span class="header-eyebrow">Free Live Experience · 22.–24. Sept.</span>
+    <div class="countdown countdown-header">
+      <div class="cd-unit"><span class="cd-num cd-d">00</span><span class="cd-label">Tage</span></div>
+      <div class="cd-unit"><span class="cd-num cd-h">00</span><span class="cd-label">Std</span></div>
+      <div class="cd-unit"><span class="cd-num cd-m">00</span><span class="cd-label">Min</span></div>
+      <div class="cd-unit"><span class="cd-num cd-s">00</span><span class="cd-label">Sek</span></div>
+    </div>
   </div>
 
   <!-- 01 HERO -->
