@@ -405,7 +405,7 @@
   .notfory li::before{content:"✕"; position:absolute; left:0; color:#C0392B; font-weight:700;}
   .notfory-script{
     display:block; margin-top:22px;
-    font-size:var(--fs-4); color:var(--green-dark);
+    font-size:56px; line-height:1.1; color:var(--green-dark);
   }
 
   /* ---------- 09b MARINA ZWISCHENBILD ---------- */
@@ -431,13 +431,13 @@
   }
   .wall-track{
     display:flex; align-items:center; gap:16px; width:max-content;
-    animation: wallScroll 30s linear infinite;
+    animation: wallScroll 40s linear infinite;
     padding:4px 0;
   }
   .wall-track:hover{ animation-play-state:paused; }
   .wall-track img{
-    height:280px; width:auto; object-fit:contain;
-    border-radius:8px; flex-shrink:0;
+    width:320px; height:auto; flex-shrink:0;
+    border-radius:8px;
     box-shadow:0 10px 24px rgba(32,32,29,0.1);
   }
   @keyframes wallScroll{
@@ -779,7 +779,7 @@
       <li>Du willst nur Tools und neue Strategien.</li>
       <li>Du findest immer Gründe, warum es nicht geht.</li>
     </ul>
-    <span class="script notfory-script">Echte Veränderung beginnt mit dir</span>
+    <span class="script notfory-script">Echte Veränderung<br>beginnt mit dir</span>
   </div>
 
   <!-- 09b MARINA ZWISCHENBILD -->
