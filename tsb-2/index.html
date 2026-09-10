@@ -9,14 +9,16 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Caveat:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --sand:#c2ab8d;
-    --sand-dark:#a99386;
+    --sand:#cda86a;
+    --sand-dark:#b8935a;
     --green:#257c6c;
     --green-dark:#1b5c50;
-    --offwhite:#F6F0E8;
-    --offwhite-2:#F6F0E8;
-    --text:#20201D;
-    --text-soft:#5a5650;
+    --offwhite:#F3EDE2;
+    --offwhite-2:#F3EDE2;
+    --bg:#0d2420;
+    --bg-alt:#123830;
+    --text:#F3EDE2;
+    --text-soft:rgba(243,237,226,0.68);
     --pad:22px;
     --fs-1:12px;
     --fs-2:17px;
@@ -27,7 +29,7 @@
   *{box-sizing:border-box; margin:0; padding:0;}
   html{scroll-behavior:smooth;}
   body{
-    background:#e8ddc9;
+    background:var(--bg);
     font-family:'Montserrat',sans-serif;
     color:var(--text);
     -webkit-font-smoothing:antialiased;
@@ -35,7 +37,7 @@
   .page{
     max-width:480px;
     margin:0 auto;
-    background:var(--offwhite-2);
+    background:var(--bg);
     overflow:hidden;
     position:relative;
   }
@@ -44,6 +46,7 @@
     font-weight:500;
     color:var(--text);
   }
+  h1 em, h2 em, h3 em{ color:var(--sand); font-style:italic; }
   p{font-family:'Montserrat',sans-serif; line-height:1.6; font-size:var(--fs-2); color:var(--text); font-weight:400;}
   section{padding:88px 22px;}
   .script{font-family:'Caveat', cursive; font-weight:600; line-height:1;}
@@ -51,7 +54,7 @@
     font-family:'Montserrat',sans-serif;
     font-size:var(--fs-1);
     letter-spacing:.16em;
-    color:var(--green-dark);
+    color:var(--sand);
     font-weight:600;
     text-transform:uppercase;
     margin-bottom:14px;
@@ -108,7 +111,7 @@
   }
 
   /* ---------- 01 HERO ---------- */
-  .hero{background:var(--offwhite-2); padding:28px 22px 0;}
+  .hero{background:var(--bg-alt); padding:28px 22px 0;}
   .hero .eyebrow{margin-top:0;}
   .hero .lede{font-size:var(--fs-2); color:var(--text); margin-bottom:28px; max-width:38ch;}
 
@@ -131,7 +134,7 @@
     letter-spacing:-1px;
     margin-bottom:14px;
   }
-  .hero .script-sub{font-size:var(--fs-4); color:var(--green-dark); margin-bottom:28px; display:block;}
+  .hero .script-sub{font-size:var(--fs-4); color:var(--sand); margin-bottom:28px; display:block;}
   .hero p.body{margin-bottom:32px; max-width:38ch; position:relative; z-index:2;}
   .hero .btn{
     position:relative; z-index:2; margin-bottom:10px;
@@ -140,7 +143,7 @@
   .hero .meta-line{position:relative; z-index:2; margin-top:0; margin-bottom:-230px; color:var(--offwhite);}
   .hero-figure{
     margin:32px calc(var(--pad) * -1) 0; width:auto; height:460px; overflow:hidden;
-    background:var(--offwhite); position:relative; z-index:1;
+    background:var(--bg); position:relative; z-index:1;
   }
   .hero-figure img{
     width:100%; height:100%; object-fit:cover; object-position:30% center; display:block;
@@ -149,16 +152,15 @@
   }
 
   /* ---------- 02 PROOF ---------- */
-  .proof{background:var(--offwhite); padding:64px 22px 32px;}
+  .proof{background:var(--bg); padding:64px 22px 32px;}
   .proof h2{font-size:var(--fs-5); line-height:1.03; margin-bottom:14px;}
   .proof > p.lede{margin-bottom:36px; max-width:36ch; color:var(--text-soft);}
   .t-card{
-    background:#FFFFFF;
-    border:1px solid rgba(32,32,29,0.06);
-    border-radius:8px;
+    background:rgba(255,255,255,0.05);
+    border-left:2px solid var(--sand);
+    border-radius:0 8px 8px 0;
     padding:26px;
     margin-bottom:20px;
-    box-shadow:0 14px 32px rgba(32,32,29,0.10), 0 2px 8px rgba(32,32,29,0.05);
   }
   .t-card:last-child{margin-bottom:0;}
   .t-card p.quote{
@@ -172,7 +174,7 @@
   .t-card .name{font-family:'Montserrat',sans-serif; font-size:var(--fs-1); font-weight:600; color:var(--text);}
 
   /* ---------- 03 WAKE-UP CALL ---------- */
-  .wakeup{background:var(--offwhite); padding:60px 22px 20px;}
+  .wakeup{background:var(--bg); padding:60px 22px 20px;}
   .wakeup h2{font-size:var(--fs-5); line-height:.98; margin-bottom:36px;}
   .wakeup-image-wrap{
     position:relative; overflow:hidden;
@@ -202,15 +204,15 @@
     font-size:var(--fs-4);
     font-weight:700;
     line-height:1.05;
-    color:var(--green-dark);
+    color:var(--sand);
   }
 
   /* ---------- 04 MARINA STORY ---------- */
-  .story{background:var(--offwhite-2); padding:50px 22px 0;}
+  .story{background:var(--bg-alt); padding:50px 22px 0;}
   .story h2{font-size:var(--fs-5); line-height:1.0; margin-bottom:-40px; position:relative; z-index:2;}
   .story-figure{
     width:auto; height:480px; overflow:hidden; margin:0 calc(var(--pad) * -1) 28px;
-    background:var(--offwhite); position:relative; z-index:1;
+    background:var(--bg); position:relative; z-index:1;
   }
   .story-figure img{
     width:100%; height:100%; object-fit:cover; display:block;
@@ -219,16 +221,16 @@
   }
   .story p{margin-bottom:16px; color:var(--text-soft);}
   .story p strong{color:var(--text); font-weight:600;}
-  .story-signature{display:block; font-size:38px; color:var(--green-dark); margin-top:16px;}
+  .story-signature{display:block; font-size:38px; color:var(--sand); margin-top:16px;}
   .story-stats{margin-top:48px; text-align:center;}
   .stat-block{margin-bottom:40px;}
-  .stat-block .num{font-family:'Cormorant Garamond', serif; font-size:72px; display:block; color:var(--green-dark); line-height:1;}
+  .stat-block .num{font-family:'Cormorant Garamond', serif; font-size:72px; display:block; color:var(--sand); line-height:1;}
   .stat-block .label{font-family:'Montserrat',sans-serif; font-size:var(--fs-3); color:var(--text-soft); margin-top:8px; display:block;}
   .logos-row{
     margin-top:40px;
     padding:24px 0;
-    border-top:1px solid rgba(32,32,29,0.15);
-    border-bottom:1px solid rgba(32,32,29,0.15);
+    border-top:1px solid rgba(255,255,255,0.15);
+    border-bottom:1px solid rgba(255,255,255,0.15);
     overflow:hidden; position:relative; width:100%;
     mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
     -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
@@ -251,7 +253,7 @@
 
   /* ---------- 05 ALT VS NEU ---------- */
   .transform{
-    background:var(--offwhite); padding:40px 22px 64px;
+    background:var(--bg); padding:40px 22px 64px;
     display:flex; flex-direction:column; align-items:center; gap:28px;
   }
   .transform-card{
@@ -273,12 +275,12 @@
   }
   .transform-card li:last-child{margin-bottom:0;}
   .transform-card li::before{position:absolute; left:0; top:1px; font-size:var(--fs-2); font-weight:700;}
-  .old-biz{background:rgba(232,160,176,0.18);}
-  .old-biz .transform-label{color:rgba(32,32,29,0.55);}
+  .old-biz{background:rgba(232,160,176,0.1); border:1px solid rgba(232,160,176,0.25);}
+  .old-biz .transform-label{color:rgba(243,237,226,0.55);}
   .old-biz li{color:var(--text); font-size:25px;}
-  .old-biz li::before{content:"✕"; color:rgba(32,32,29,0.4);}
+  .old-biz li::before{content:"✕"; color:#e8a0b0;}
   .transform-arrow{
-    color:var(--green-dark);
+    color:var(--sand);
     font-size:64px;
     font-weight:700;
     line-height:1;
@@ -327,7 +329,7 @@
   }
 
   /* ---------- 07 3 DAYS ---------- */
-  .days{background:var(--offwhite-2); padding:88px 22px;}
+  .days{background:var(--bg-alt); padding:88px 22px;}
   .days-head{margin-bottom:48px;}
   .days-head h2{font-size:var(--fs-5); line-height:1.05; margin-bottom:20px;}
   .days-sub{
@@ -337,20 +339,20 @@
     color:var(--text);
   }
   .day-card{
-    background:#F3E8DC;
+    background:rgba(255,255,255,0.05);
     border-radius:6px;
     padding:24px;
     margin-bottom:36px;
   }
   .day-card:last-child{margin-bottom:0;}
-  .day-num{font-size:var(--fs-1); letter-spacing:.1em; font-weight:600; color:var(--green-dark); text-transform:uppercase;}
+  .day-num{font-size:var(--fs-1); letter-spacing:.1em; font-weight:600; color:var(--sand); text-transform:uppercase;}
   .day-date{font-size:var(--fs-1); color:var(--text-soft); margin-left:8px;}
   .day-title{
     font-family:'Cormorant Garamond', serif;
     font-size:var(--fs-4); color:var(--text); font-weight:700;
     margin:8px 0 18px; line-height:1.05;
   }
-  .day-figure{width:auto; height:190px; overflow:hidden; margin:0 -24px 20px; background:#F3E8DC;}
+  .day-figure{width:auto; height:190px; overflow:hidden; margin:0 -24px 20px; background:rgba(255,255,255,0.05);}
   .day-figure img{
     width:100%; height:100%; object-fit:cover; object-position:center 20%; display:block;
     mask-image:linear-gradient(to bottom, transparent 0%, black 22%);
@@ -366,7 +368,7 @@
   .tags{display:flex; gap:8px; flex-wrap:wrap;}
   .tag-chip{
     font-size:var(--fs-1); letter-spacing:.05em; font-weight:600;
-    color:var(--text); border:1px solid rgba(32,32,29,0.3);
+    color:var(--text); border:1px solid rgba(255,255,255,0.25);
     padding:6px 8px;
   }
 
@@ -405,31 +407,31 @@
   }
 
   /* ---------- 09 FOR YOU / NOT FOR YOU ---------- */
-  .fory{background:var(--offwhite-2); padding:36px 26px;}
-  .notfory{background:var(--offwhite); color:var(--text); padding:36px 26px 20px;}
+  .fory{background:var(--bg-alt); padding:36px 26px;}
+  .notfory{background:var(--bg); color:var(--text); padding:36px 26px 20px;}
   .fory h3, .notfory h3{
     font-family:'Cormorant Garamond', serif; font-weight:500;
     font-size:var(--fs-4); margin-bottom:22px;
   }
-  .fory h3{color:var(--green-dark);}
+  .fory h3{color:var(--sand);}
   .notfory h3{color:#C0392B;}
   .fory ul, .notfory ul{list-style:none;}
   .fory li, .notfory li{
     font-size:var(--fs-2); line-height:1.5; margin-bottom:16px;
     padding-left:26px; position:relative;
   }
-  .fory li::before{content:"✓"; position:absolute; left:0; color:var(--green-dark); font-weight:700;}
+  .fory li::before{content:"✓"; position:absolute; left:0; color:var(--sand); font-weight:700;}
   .notfory li::before{content:"✕"; position:absolute; left:0; color:#C0392B; font-weight:700;}
   .notfory-script{
     display:block; margin-top:40px;
-    font-size:56px; line-height:1.1; color:var(--green-dark);
+    font-size:56px; line-height:1.1; color:var(--sand);
   }
 
   /* ---------- 09b MARINA ZWISCHENBILD ---------- */
-  .midimg{background:var(--offwhite); padding:20px 22px 0;}
+  .midimg{background:var(--bg); padding:20px 22px 0;}
   .mid-figure{
     width:auto; height:480px; overflow:hidden; margin:0 calc(var(--pad) * -1);
-    background:var(--offwhite);
+    background:var(--bg);
   }
   .mid-figure img{
     width:100%; height:100%; object-fit:cover; display:block;
@@ -438,7 +440,7 @@
   }
 
   /* ---------- 10 ZWEITER TESTIMONIAL-BLOCK ---------- */
-  .wall{background:var(--offwhite); padding:88px 22px 40px;}
+  .wall{background:var(--bg); padding:88px 22px 40px;}
   .wall h2{font-size:var(--fs-5); line-height:1.02; margin-bottom:44px;}
   .wall-slider{
     position:relative;
@@ -452,9 +454,9 @@
   .wall-arrow{
     flex-shrink:0;
     width:32px; height:32px; border-radius:50%;
-    border:1px solid rgba(32,32,29,0.15);
-    background:rgba(255,255,255,0.6);
-    color:var(--text-soft);
+    border:1px solid rgba(255,255,255,0.25);
+    background:rgba(255,255,255,0.08);
+    color:var(--text);
     font-size:18px; line-height:1;
     display:flex; align-items:center; justify-content:center;
     cursor:pointer;
@@ -474,14 +476,14 @@
   }
 
   /* ---------- 11 FINAL CTA ---------- */
-  .final{background:var(--offwhite-2); padding:64px 22px 0;}
+  .final{background:var(--bg-alt); padding:64px 22px 0;}
   .final .eyebrow{margin-bottom:28px;}
   .final h2{font-size:64px; line-height:1.0; margin-bottom:32px;}
   .final .lines{margin-bottom:88px; list-style:none;}
   .final .lines li{
     font-family:'Caveat', cursive;
     font-style:italic;
-    font-size:var(--fs-5); color:var(--green-dark); line-height:1.0;
+    font-size:var(--fs-5); color:var(--sand); line-height:1.0;
     margin-bottom:24px;
     position:relative; padding-left:34px;
   }
@@ -496,7 +498,7 @@
   .final .meta-line{position:relative; z-index:2; margin-bottom:-160px;}
   .final-figure{
     margin:56px calc(var(--pad) * -1) 0; width:auto; height:540px; overflow:hidden;
-    background:var(--offwhite); position:relative; z-index:1;
+    background:var(--bg); position:relative; z-index:1;
   }
   .final-figure img{
     width:100%; height:100%; object-fit:cover; display:block;
