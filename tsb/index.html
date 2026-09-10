@@ -425,10 +425,8 @@
   .wall{background:var(--offwhite); padding:88px 22px 40px;}
   .wall h2{font-size:var(--fs-5); line-height:1.02; margin-bottom:44px;}
   .wall-gallery{
-    overflow:hidden; position:relative; width:100%;
-    margin:0 calc(var(--pad) * -1);
-    mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+    overflow:hidden; position:relative;
+    width:320px; margin:0 auto;
   }
   .wall-track{
     display:flex; align-items:center; gap:16px; width:max-content;
@@ -795,6 +793,7 @@
         <img src="../webinar/Testimonials/Leonie.PNG" alt="Testimonial Leonie">
         <img src="../webinar/Testimonials/Yvonne.png" alt="Testimonial Yvonne">
         <img src="../webinar/Testimonials/Yvonne 2.png" alt="Testimonial Yvonne">
+        <img src="../webinar/Testimonials/Denise.PNG" alt="Testimonial Denise">
       </div>
     </div>
   </section>
@@ -880,13 +879,22 @@
     var track = document.getElementById('wallTrack');
     if(!track) return;
     var imgs = track.querySelectorAll('img');
-    if(imgs.length < 2) return;
+    var realCount = imgs.length - 1;
+    if(realCount < 2) return;
     var index = 0;
+    function goTo(i, animate){
+      track.style.transition = animate ? 'transform .6s ease' : 'none';
+      track.style.transform = 'translateX(-' + imgs[i].offsetLeft + 'px)';
+    }
     function step(){
-      index = (index + 1) % imgs.length;
-      var gap = parseFloat(getComputedStyle(track).columnGap || getComputedStyle(track).gap) || 16;
-      var offset = imgs[index].offsetLeft;
-      track.style.transform = 'translateX(-' + offset + 'px)';
+      index++;
+      goTo(index, true);
+      if(index === realCount){
+        setTimeout(function(){
+          index = 0;
+          goTo(index, false);
+        }, 650);
+      }
     }
     setInterval(step, 3200);
   })();
