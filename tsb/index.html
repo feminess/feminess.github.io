@@ -424,10 +424,28 @@
   /* ---------- 10 ZWEITER TESTIMONIAL-BLOCK ---------- */
   .wall{background:var(--offwhite); padding:88px 22px 40px;}
   .wall h2{font-size:var(--fs-5); line-height:1.02; margin-bottom:44px;}
+  .wall-slider{
+    position:relative;
+    display:flex; align-items:center; justify-content:center;
+    gap:8px;
+  }
   .wall-gallery{
     overflow:hidden; position:relative;
-    width:320px; margin:0 auto;
+    width:320px;
   }
+  .wall-arrow{
+    flex-shrink:0;
+    width:32px; height:32px; border-radius:50%;
+    border:1px solid rgba(32,32,29,0.15);
+    background:rgba(255,255,255,0.6);
+    color:var(--text-soft);
+    font-size:18px; line-height:1;
+    display:flex; align-items:center; justify-content:center;
+    cursor:pointer;
+    transition:opacity .2s ease;
+    opacity:.6;
+  }
+  .wall-arrow:hover{ opacity:1; }
   .wall-track{
     display:flex; align-items:center; gap:16px; width:max-content;
     padding:4px 0;
@@ -786,15 +804,19 @@
   <section class="wall">
     <h2>Noch mehr echte Frauen &amp; <em>echte Ergebnisse.</em></h2>
 
-    <div class="wall-gallery">
-      <div class="wall-track" id="wallTrack">
-        <img src="../webinar/Testimonials/Denise.PNG" alt="Testimonial Denise">
-        <img src="../webinar/Testimonials/Elena.jpg" alt="Testimonial Elena">
-        <img src="../webinar/Testimonials/Leonie.PNG" alt="Testimonial Leonie">
-        <img src="../webinar/Testimonials/Yvonne.png" alt="Testimonial Yvonne">
-        <img src="../webinar/Testimonials/Yvonne 2.png" alt="Testimonial Yvonne">
-        <img src="../webinar/Testimonials/Denise.PNG" alt="Testimonial Denise">
+    <div class="wall-slider">
+      <button type="button" class="wall-arrow wall-arrow-prev" id="wallPrev" aria-label="Vorheriges Testimonial">&#8249;</button>
+      <div class="wall-gallery">
+        <div class="wall-track" id="wallTrack">
+          <img src="../webinar/Testimonials/Denise.PNG" alt="Testimonial Denise">
+          <img src="../webinar/Testimonials/Elena.jpg" alt="Testimonial Elena">
+          <img src="../webinar/Testimonials/Leonie.PNG" alt="Testimonial Leonie">
+          <img src="../webinar/Testimonials/Yvonne.png" alt="Testimonial Yvonne">
+          <img src="../webinar/Testimonials/Yvonne 2.png" alt="Testimonial Yvonne">
+          <img src="../webinar/Testimonials/Denise.PNG" alt="Testimonial Denise">
+        </div>
       </div>
+      <button type="button" class="wall-arrow wall-arrow-next" id="wallNext" aria-label="Nächstes Testimonial">&#8250;</button>
     </div>
   </section>
 
@@ -882,11 +904,12 @@
     var realCount = imgs.length - 1;
     if(realCount < 2) return;
     var index = 0;
+    var timer = null;
     function goTo(i, animate){
       track.style.transition = animate ? 'transform .6s ease' : 'none';
       track.style.transform = 'translateX(-' + imgs[i].offsetLeft + 'px)';
     }
-    function step(){
+    function next(){
       index++;
       goTo(index, true);
       if(index === realCount){
@@ -896,7 +919,33 @@
         }, 650);
       }
     }
-    setInterval(step, 3200);
+    function prev(){
+      if(index === 0){
+        index = realCount;
+        goTo(index, false);
+        requestAnimationFrame(function(){
+          requestAnimationFrame(function(){
+            index = realCount - 1;
+            goTo(index, true);
+          });
+        });
+      } else {
+        index--;
+        goTo(index, true);
+      }
+    }
+    function startAuto(){
+      timer = setInterval(next, 3200);
+    }
+    function restartAuto(){
+      clearInterval(timer);
+      startAuto();
+    }
+    var prevBtn = document.getElementById('wallPrev');
+    var nextBtn = document.getElementById('wallNext');
+    if(prevBtn) prevBtn.addEventListener('click', function(){ prev(); restartAuto(); });
+    if(nextBtn) nextBtn.addEventListener('click', function(){ next(); restartAuto(); });
+    startAuto();
   })();
 </script>
 </body>
