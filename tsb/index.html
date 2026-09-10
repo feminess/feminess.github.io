@@ -321,7 +321,13 @@
   /* ---------- 07 3 DAYS ---------- */
   .days{background:var(--offwhite-2); padding:88px 22px;}
   .days-head{margin-bottom:48px;}
-  .days-head h2{font-size:var(--fs-5); line-height:1.05;}
+  .days-head h2{font-size:var(--fs-5); line-height:1.05; margin-bottom:20px;}
+  .days-sub{
+    font-family:'Cormorant Garamond', serif;
+    font-size:var(--fs-3); line-height:1.1;
+    white-space:nowrap;
+    color:var(--text);
+  }
   .day-card{
     background:#F3E8DC;
     border-radius:6px;
@@ -621,7 +627,8 @@
   <!-- 07 3 DAYS 3 SHIFTS -->
   <section class="days">
     <div class="days-head">
-      <h2>3 Days. 3 Shifts.<br>Deine neue <em>Realität.</em></h2>
+      <h2>3 Days. 3 Shifts.</h2>
+      <p class="days-sub">Deine neue <em>Realität.</em></p>
     </div>
 
     <div class="day-card day-1">
