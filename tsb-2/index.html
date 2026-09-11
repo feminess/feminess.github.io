@@ -305,19 +305,22 @@
   .transform-card ul{list-style:none;}
   .transform-card li{
     font-family:'Instrument Serif', serif;
-    font-size:32px; line-height:1.2; position:relative; padding-left:30px;
-    margin-bottom:16px;
+    line-height:1.15; position:relative;
+    margin-bottom:6px;
   }
   .transform-card li:last-child{margin-bottom:0;}
-  .transform-card li::before{position:absolute; left:0; top:0.15em; font-size:18px; font-weight:700;}
   .old-biz{background:var(--bg);}
+  .old-biz li{font-size:36px;}
   .old-biz .transform-label{
     background:linear-gradient(115deg, #8a5d1e 0%, #d9a94b 22%, #f7e6bb 45%, #d9a94b 68%, #8a5d1e 88%, #d9a94b 100%);
     -webkit-background-clip:text; background-clip:text; color:transparent; -webkit-text-fill-color:transparent;
     opacity:.55;
   }
   .old-biz li{color:rgba(243,237,226,0.65); font-style:italic;}
-  .old-biz li::before{content:"✕"; color:rgba(232,160,176,0.7);}
+  @keyframes pulse-arrow{
+    0%, 100% { transform:translateY(0) scale(1); opacity:.85; }
+    50%      { transform:translateY(6px) scale(1.1); opacity:1; }
+  }
   .transform-arrow{
     text-align:center;
     color:var(--sand);
@@ -325,6 +328,7 @@
     font-weight:400;
     line-height:1;
     padding:6px 0;
+    animation:pulse-arrow 1.8s ease-in-out infinite;
     background:var(--bg);
   }
   .new-biz{background: linear-gradient(180deg, var(--bg) 0%, var(--green-dark) 100%);}
@@ -332,8 +336,7 @@
     background:linear-gradient(115deg, #8a5d1e 0%, #d9a94b 22%, #f7e6bb 45%, #d9a94b 68%, #8a5d1e 88%, #d9a94b 100%);
     -webkit-background-clip:text; background-clip:text; color:transparent; -webkit-text-fill-color:transparent;
   }
-  .new-biz li{color:var(--offwhite);}
-  .new-biz li::before{content:"✓"; color:var(--sand);}
+  .new-biz li{color:var(--offwhite); font-size:40px;}
 
   /* ---------- 06 GEWÄHLT ---------- */
   .chosen{
