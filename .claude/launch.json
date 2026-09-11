@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "feminess-preview-v2",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["--yes", "http-server", "C:\\Users\\kloui\\Documents\\Claude\\feminess.github.io", "-p", "5173", "-c-1"],
+      "port": 5173
+    }
+  ]
+}
