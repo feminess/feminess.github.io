@@ -165,7 +165,16 @@
 
     /* ── FOOTER ── */
     footer { background: #07291d; padding: 40px var(--pad); border-top: 1px solid var(--hairline); text-align: center; }
-    .footer-logo { height: 30px; width: auto; max-width: 100%; margin-bottom: 20px; }
+    .footer-logo {
+      display: inline-block;
+      width: 150px; height: 30px; max-width: 100%; margin-bottom: 20px;
+      background: linear-gradient(115deg, #8a5d1e 0%, #d9a94b 22%, #f7e6bb 45%, #d9a94b 68%, #8a5d1e 88%, #d9a94b 100%);
+      -webkit-mask-image: url('https://feminess.github.io/true-spirit-business/img/logo-rosegold.png');
+      mask-image: url('https://feminess.github.io/true-spirit-business/img/logo-rosegold.png');
+      -webkit-mask-size: contain; mask-size: contain;
+      -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
+      -webkit-mask-position: center; mask-position: center;
+    }
     .footer-links { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; margin-bottom: 16px; }
     .footer-links a { font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--offwhite-55); text-decoration: none; }
     .footer-links a:hover { color: var(--sand); }
@@ -443,7 +452,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- FOOTER -->
 <footer>
-  <img src="../webinar/Bilder/Logo-rosegoldverlauf-rgb-transparent.png" alt="Feminess" class="footer-logo">
+  <span class="footer-logo" role="img" aria-label="Feminess"></span>
   <div class="footer-links">
     <a href="https://feminess.github.io/Datenschutz/">Datenschutzerklärung</a>
     <a href="https://feminess.github.io/Impressum/">Impressum</a>
