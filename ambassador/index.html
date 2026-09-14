@@ -103,12 +103,7 @@
     .text-section p strong { color: var(--offwhite); font-weight: 700; }
 
     /* ── REWARD REVEAL ── */
-    .price-section {
-      background:
-        linear-gradient(rgba(18,56,48,0.88), rgba(13,36,32,0.92)),
-        url('../webinar/Bilder/Marina_MAI2314232 Kopie.jpg') center 25% / cover no-repeat;
-      text-align: center;
-    }
+    .price-section { background: var(--bg-alt); text-align: center; }
     .price-card { background: var(--green-dark); border-radius: 16px; padding: 40px 24px; }
     .price-card h3 { font-size: 24px; margin-bottom: 28px; }
     .price-new { font-size: 56px; margin-bottom: 8px; }
@@ -128,7 +123,11 @@
     .reward-commission strong { color: #fff; font-weight: 700; }
 
     /* ── SO FUNKTIONIERT'S ── */
-    .benefits-section { background: var(--bg); }
+    .benefits-section {
+      background:
+        linear-gradient(rgba(13,36,32,0.82), rgba(13,36,32,0.9)),
+        url('Bilder/sunset-ocean.png') center / cover no-repeat;
+    }
     .benefits-header { text-align: center; margin-bottom: 40px; }
     .benefits-header h2 { font-size: clamp(30px, 8vw, 38px); }
     .benefits-grid { display: flex; flex-direction: column; gap: 16px; }
