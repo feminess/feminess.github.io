@@ -76,6 +76,16 @@
     .hero-video { position: relative; width: 100%; padding: 56.25% 0 0 0; margin: 0 0 32px; border-radius: 12px; overflow: hidden; border: 1px solid var(--hairline); }
     .hero-video iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
+    /* ── BILDER: einbluten statt einrahmen (wie experience/index.html) ── */
+    .mid-figure { width: auto; height: 360px; overflow: hidden; margin: 40px calc(var(--pad) * -1) 0; background: var(--bg-alt); position: relative; }
+    .mid-figure::before { content: ''; position: absolute; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(to bottom, var(--bg-alt) 0%, transparent 38%); }
+    .mid-figure img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; display: block; mask-image: linear-gradient(to bottom, transparent 0%, black 30%); -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 30%); }
+
+    .final-figure-wrap { background: var(--bg); }
+    .final-figure { width: auto; height: 420px; overflow: hidden; margin: 0 calc(var(--pad) * -1); background: var(--bg); position: relative; }
+    .final-figure::before { content: ''; position: absolute; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(to bottom, var(--bg) 0%, transparent 38%); }
+    .final-figure img { width: 100%; height: 100%; object-fit: cover; object-position: center 25%; display: block; mask-image: linear-gradient(to bottom, transparent 0%, black 30%); -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 30%); }
+
     /* ── BUTTONS ── */
     @keyframes pulse-btn {
       0%, 100% { transform: scale(1); box-shadow: 0 6px 28px rgba(138,93,30,.45); }
@@ -297,6 +307,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <script src="https://player.vimeo.com/api/player.js"></script>
 
   <a href="#" class="btn" onclick="document.getElementById('ambassadorPopup').classList.add('is-visible'); return false;">JETZT AMBASSADOR WERDEN</a>
+
+  <div class="mid-figure">
+    <img src="../webinar/Bilder/Marina_MAI2314232 Kopie.jpg" alt="Marina Henze">
+  </div>
 </section>
 
 <!-- MAIN TEXT -->
@@ -419,6 +433,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p class="faq-answer">Die Aktion läuft bis <strong>26.09.2026, 12:00 Uhr</strong>. Danach zählen keine neuen Empfehlungen mehr für diese Aktion.</p>
   </details>
 </section>
+
+<div class="final-figure-wrap">
+  <div class="final-figure">
+    <img src="../webinar/Bilder/Marina_MAI2314136 Kopie.jpg" alt="Marina Henze">
+  </div>
+</div>
 
 <!-- FINAL CTA -->
 <section class="final-cta">
