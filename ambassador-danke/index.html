@@ -464,6 +464,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     const input = document.getElementById("nameInput");
     const button = document.getElementById("generateBtn");
     const resultDiv = document.getElementById("result");
+    const copyBtn = document.getElementById("copyTemplateBtn");
+    const templateText = document.getElementById("shareTemplateText");
+    const templateBase = templateText ? templateText.textContent : "";
 
     button.addEventListener("click", function () {
       const name = input.value.trim();
@@ -482,10 +485,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <a href="${webinarLink}" target="_blank">${webinarLink}</a><br>
         <button onclick="navigator.clipboard.writeText('${webinarLink}').then(() => alert('✅ Link wurde kopiert!'))">📋 Link kopieren</button></p>
       `;
+
+      if (templateText) {
+        templateText.textContent = templateBase.replace("[dein Link]", webinarLink);
+      }
     });
 
-    const copyBtn = document.getElementById("copyTemplateBtn");
-    const templateText = document.getElementById("shareTemplateText");
     if (copyBtn && templateText) {
       copyBtn.addEventListener("click", function () {
         navigator.clipboard.writeText(templateText.textContent.replace(/^„|"$/g, "")).then(() => {
