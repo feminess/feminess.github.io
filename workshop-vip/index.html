@@ -18,6 +18,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
 :root {
+  --fc-gold-dark:  #8A6A3A;
+  --fc-gold:       #C9A24D;
+  --fc-gold-light: #F3DFA8;
   --teal:       #257c6c;
   --teal-dark:  #1b5c50;
   --teal-light: #f8f6f2;
@@ -31,6 +34,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   --cream:      #f0f5f4;
   --beige:      #ddecea;
   --warm-gray:  #5a7a74;
+}
+
+.fc-gold-text {
+  background: linear-gradient(135deg, var(--fc-gold-dark) 0%, var(--fc-gold) 45%, var(--fc-gold-light) 70%, var(--fc-gold) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -48,7 +58,7 @@ body {
 
 /* ── TOPBAR (Rosegold-Verlauf) ── */
 .topbar {
-  background: linear-gradient(90deg, #8a5d1e 0%, #d9a94b 25%, #f7e6bb 50%, #d9a94b 75%, #8a5d1e 100%);
+  background: linear-gradient(90deg, var(--fc-gold-dark) 0%, var(--fc-gold) 25%, var(--fc-gold-light) 50%, var(--fc-gold) 75%, var(--fc-gold-dark) 100%);
   padding: 13px 24px;
   text-align: center;
 }
@@ -102,7 +112,7 @@ body {
   font-weight: 600;
   line-height: 1.15;
   margin-bottom: 24px;
-  background: linear-gradient(90deg, #d9a94b 0%, #f7e6bb 50%, #d9a94b 100%);
+  background: linear-gradient(135deg, var(--fc-gold-dark) 0%, var(--fc-gold) 45%, var(--fc-gold-light) 70%, var(--fc-gold) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -144,7 +154,7 @@ body {
   display: inline-block;
   width: 100%;
   max-width: 480px;
-  background: linear-gradient(90deg, #8a5d1e 0%, #d9a94b 25%, #f7e6bb 50%, #d9a94b 75%, #8a5d1e 100%);
+  background: linear-gradient(90deg, var(--fc-gold-dark) 0%, var(--fc-gold) 25%, var(--fc-gold-light) 50%, var(--fc-gold) 75%, var(--fc-gold-dark) 100%);
   color: var(--dark);
   padding: 20px 36px;
   border-radius: 999px;
@@ -162,8 +172,8 @@ body {
 }
 .btn-cta:hover { opacity: 0.88; transform: translateY(-1px); animation: none; }
 @keyframes pulse-btn {
-  0%, 100% { transform: scale(1); box-shadow: 0 6px 28px rgba(138,93,30,0.40); }
-  50%      { transform: scale(1.03); box-shadow: 0 10px 36px rgba(138,93,30,0.58); }
+  0%, 100% { transform: scale(1); box-shadow: 0 6px 28px rgba(138,106,58,0.40); }
+  50%      { transform: scale(1.03); box-shadow: 0 10px 36px rgba(138,106,58,0.58); }
 }
 .cta-decline {
   display: block; text-align: center; font-size: 13px; color: var(--warm-gray);
