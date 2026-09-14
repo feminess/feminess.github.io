@@ -656,23 +656,26 @@
     /* Randlose Bleed-Bild-Container brechen bei fixer Höhe + voller Bildschirmbreite
        (Seitenverhältnis wird absurd breit, Gesicht fällt aus dem Bild).
        Ab hier: fester max-width, zentriert statt randlos, Höhe angepasst. */
+    /* width fest + negativer Ausbruch aus der 680px-Spalte, statt margin:auto -
+       ein Block kann nicht breiter als sein Elter werden, wenn man ihn per
+       "auto" zentrieren will; er muss aktiv mit negativem Rand ausbrechen. */
     .hero-figure{
-      max-width:640px; height:560px; margin:40px auto 0;
+      width:860px; max-width:none; height:750px; margin:40px -90px 0;
     }
     .story-figure{
-      max-width:640px; height:600px; margin:0 auto 28px;
+      width:860px; max-width:none; height:800px; margin:0 -90px 28px;
     }
     .chosen-figure{
-      max-width:640px; height:560px; margin:56px auto 0;
+      width:860px; max-width:none; height:750px; margin:56px -90px 0;
     }
     .mid-figure{
-      max-width:640px; height:560px; margin:20px auto 0;
+      width:860px; max-width:none; height:750px; margin:20px -90px 0;
     }
     .final-figure{
-      max-width:640px; height:620px; margin:56px auto 0;
+      width:860px; max-width:none; height:830px; margin:56px -90px 0;
     }
     .day-figure{
-      max-width:640px; height:280px; margin:0 auto 20px;
+      height:320px;
     }
   }
 </style>
