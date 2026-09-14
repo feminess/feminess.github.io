@@ -134,7 +134,13 @@
     /* ── SO FUNKTIONIERT'S ── */
     .benefits-section {
       background:
-        linear-gradient(rgba(13,36,32,0.82), rgba(13,36,32,0.9)),
+        linear-gradient(to bottom,
+          var(--bg-alt) 0%,
+          rgba(18,56,48,0.7) 14%,
+          rgba(13,36,32,0.88) 50%,
+          rgba(18,56,48,0.7) 86%,
+          var(--bg-alt) 100%
+        ),
         url('Bilder/sunset-ocean.png') center / cover no-repeat;
     }
     .benefits-header { text-align: center; margin-bottom: 40px; }
