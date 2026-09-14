@@ -100,7 +100,13 @@
     /* ── TEXT SECTION ── */
     .text-section {
       background:
-        linear-gradient(rgba(13,36,32,0.82), rgba(13,36,32,0.9)),
+        linear-gradient(to bottom,
+          var(--bg-alt) 0%,
+          rgba(18,56,48,0.7) 14%,
+          rgba(13,36,32,0.88) 50%,
+          rgba(18,56,48,0.7) 86%,
+          var(--bg-alt) 100%
+        ),
         url('Bilder/golden-sphere.png') center / cover no-repeat;
     }
     .text-section p { font-size: 17px; line-height: 1.8; color: var(--offwhite-70); margin-bottom: 18px; }
