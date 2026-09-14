@@ -652,6 +652,28 @@
 
     /* Popup darf auf Desktop etwas breiter sein */
     .popup-box{max-width:560px;}
+
+    /* Randlose Bleed-Bild-Container brechen bei fixer Höhe + voller Bildschirmbreite
+       (Seitenverhältnis wird absurd breit, Gesicht fällt aus dem Bild).
+       Ab hier: fester max-width, zentriert statt randlos, Höhe angepasst. */
+    .hero-figure{
+      max-width:640px; height:560px; margin:40px auto 0;
+    }
+    .story-figure{
+      max-width:640px; height:600px; margin:0 auto 28px;
+    }
+    .chosen-figure{
+      max-width:640px; height:560px; margin:56px auto 0;
+    }
+    .mid-figure{
+      max-width:640px; height:560px; margin:20px auto 0;
+    }
+    .final-figure{
+      max-width:640px; height:620px; margin:56px auto 0;
+    }
+    .day-figure{
+      max-width:640px; height:280px; margin:0 auto 20px;
+    }
   }
 </style>
 <style>
