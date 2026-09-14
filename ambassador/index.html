@@ -213,6 +213,12 @@
       .hero-subtitle { font-size: 19px; }
       .reward-tier-title { font-size: 18px; }
       .reward-tier-value { font-size: 28px; }
+
+      /* Bild nicht mehr randlos bluten lassen (wird bei sehr breiten
+         Viewports sonst zu einem hauchdünnen Streifen zugeschnitten) –
+         stattdessen in der normalen Inhaltsspalte zeigen. */
+      .final-figure { width: 100%; max-width: 640px; margin: 40px auto 0; height: 640px; border-radius: 16px; }
+      .final-figure img { object-position: center 18%; }
     }
 
     /* ── AMBASSADOR POPUP ── */
