@@ -624,6 +624,35 @@
     section, .hero, .proof, .wakeup, .story, .days, .nomore, .wall, .final{padding-left:26px; padding-right:26px;}
     .fory, .notfory{padding-left:30px; padding-right:30px;}
   }
+
+  /* ---------- DESKTOP: Sektionen bleiben volle Breite, Inhalt wird auf eine
+     ~680px-Spalte zentriert. Struktur/Reihenfolge/Komponenten unverändert -
+     nur horizontales Padding, ein paar Überschriftengrößen und die
+     Popup-Formularbreite werden angepasst. Mobil (< 860px) bleibt 1:1 wie zuvor. ---------- */
+  @media (min-width:860px){
+    :root{
+      --pad: calc(50vw - 340px);
+      --fs-5: 64px;
+    }
+    .page{max-width:none;}
+
+    section,
+    .site-header,
+    .hero, .proof, .wakeup, .story, .days, .nomore, .wall, .final,
+    .chosen, .midimg, .site-footer{
+      padding-left:var(--pad); padding-right:var(--pad);
+    }
+    .fory, .notfory{padding-left:var(--pad); padding-right:var(--pad);}
+
+    /* Überschriften: einige gezielt größer (--fs-5 oben deckt proof/wakeup/days/nomore/wall/final ab) */
+    .hero h1{font-size:clamp(64px, 8vw, 108px);}
+    .chosen h2{font-size:clamp(72px, 12vw, 130px);}
+    .final h2{font-size:80px;}
+    .days-sub{font-size:60px;}
+
+    /* Popup darf auf Desktop etwas breiter sein */
+    .popup-box{max-width:560px;}
+  }
 </style>
 <style>
 /* ── EXIT POPUP ── */
