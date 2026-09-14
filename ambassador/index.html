@@ -218,8 +218,14 @@
       font-size: 15px; color: var(--offwhite-70); line-height: 1.6; margin-bottom: 24px;
     }
 
-    /* ── FEMINESS OVERRIDES FÜR FORMULAR #585 ── */
-    #_form_585_ {
+    /* ── FEMINESS OVERRIDES FÜR FORMULAR #585 ──
+       Das AC-Vendor-CSS wird inline IM Popup geladen, also NACH diesem
+       <style> im Head. Bei gleicher Selektor-Spezifität gewinnt das
+       spätere Vendor-CSS trotz !important (Text unlesbar: dunkle
+       Schrift auf transparentem Feld). Deshalb hier überall bewusst
+       spezifischer selektieren als das Vendor-CSS (z. B. per
+       [id="_form_585_"]-Zusatzattribut oder tieferer Verschachtelung). */
+    #_form_585_[id="_form_585_"] {
       background: transparent !important;
       border: none !important;
       box-shadow: none !important;
@@ -228,22 +234,21 @@
       margin: 0 !important;
       padding: 0 !important;
     }
-    #_form_585_ ._form-branding { display: none !important; }
-    #_form_585_ ._form-label { color: #fff !important; font-family: 'Manrope', sans-serif !important; font-size: 11px !important; font-weight: 700 !important; letter-spacing: 1.5px !important; }
-    #_form_585_ .field-required { color: var(--sand) !important; }
-    #_form_585_ input[type="text"],
-    #_form_585_ ._form_element input[type="text"] {
-      background: rgba(255,255,255,0.07) !important;
-      border: 1px solid rgba(255,255,255,0.13) !important;
+    #_form_585_[id="_form_585_"] ._form-branding { display: none !important; }
+    #_form_585_[id="_form_585_"] ._form-label { color: #fff !important; font-family: 'Manrope', sans-serif !important; font-size: 11px !important; font-weight: 700 !important; letter-spacing: 1.5px !important; }
+    #_form_585_[id="_form_585_"] .field-required { color: var(--sand) !important; }
+    #_form_585_[id="_form_585_"] ._form_element ._field-wrapper input[type="text"] {
+      background: rgba(255,255,255,0.1) !important;
+      border: 1px solid rgba(255,255,255,0.25) !important;
       border-radius: 8px !important;
       color: #fff !important;
       font-family: 'Manrope', sans-serif !important;
       font-size: 14px !important;
       padding: 13px 16px !important;
     }
-    #_form_585_ input[type="text"]:focus { border-color: var(--sand) !important; outline: none !important; }
-    #_form_585_ input::placeholder { color: rgba(255,255,255,0.35) !important; }
-    #_form_585_ ._submit {
+    #_form_585_[id="_form_585_"] ._form_element ._field-wrapper input[type="text"]:focus { border-color: var(--sand) !important; outline: none !important; }
+    #_form_585_[id="_form_585_"] input::placeholder { color: rgba(255,255,255,0.5) !important; }
+    #_form_585_[id="_form_585_"] ._submit {
       background: linear-gradient(90deg, #8a5d1e 0%, #d9a94b 25%, #f7e6bb 50%, #d9a94b 75%, #8a5d1e 100%) !important;
       border-radius: 999px !important;
       color: var(--bg) !important;
