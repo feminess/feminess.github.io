@@ -144,11 +144,16 @@
     .share-template button:hover { background: rgba(255,255,255,0.16); }
 
     /* ── REWARD REVEAL ── */
-    .price-section { background: var(--bg-alt); text-align: center; }
+    .price-section {
+      background:
+        linear-gradient(rgba(18,56,48,0.88), rgba(13,36,32,0.92)),
+        url('../webinar/Bilder/Marina_MAI2314232 Kopie.jpg') center 25% / cover no-repeat;
+      text-align: center;
+    }
     .price-card { background: var(--green-dark); border-radius: 16px; padding: 40px 24px; }
     .price-card h3 { font-size: 24px; margin-bottom: 28px; }
 
-    .reward-tiers { display: flex; flex-direction: column; gap: 12px; margin-bottom: 4px; text-align: left; }
+    .reward-tiers { display: flex; flex-direction: column; gap: 12px; margin-bottom: 28px; text-align: left; }
     .reward-tier { display: flex; gap: 14px; align-items: center; background: rgba(255,255,255,0.05); border: 1px solid var(--hairline); border-radius: 12px; padding: 14px 16px; }
     .reward-tier-num { font-family: 'Instrument Serif', serif; font-size: 30px; line-height: 1; flex-shrink: 0; width: 40px; text-align: center; }
     .reward-tier-body { flex: 1; min-width: 0; }
@@ -157,7 +162,7 @@
     .reward-tier-meta { display: block; font-size: 12px; color: var(--offwhite-70); line-height: 1.5; margin-top: 3px; }
     .reward-tier-value { flex-shrink: 0; font-family: 'Instrument Serif', serif; font-size: 22px; white-space: nowrap; }
 
-    .reward-commission { border-top: 1px solid var(--hairline); padding-top: 22px; margin-top: 22px; text-align: left; }
+    .reward-commission { border-top: 1px solid var(--hairline); padding-top: 22px; margin-bottom: 28px; text-align: left; }
     .reward-commission p { font-size: 14.5px; color: var(--offwhite-70); line-height: 1.6; }
     .reward-commission strong { color: #fff; font-weight: 700; }
 
