@@ -242,7 +242,7 @@
          zu flacher Ausschnitt bei fixer 260px-Höhe) – stattdessen begrenzte, zentrierte Box
          mit größerer Höhe, damit kein vertikaler Zuschnitt mehr nötig ist. */
       .figure { max-width: 640px; height: 480px; margin: 40px auto 0; border-radius: 16px; }
-      .figure img { object-position: center; mask-image: none; -webkit-mask-image: none; }
+      .figure img { height: 100%; object-position: center; mask-image: none; -webkit-mask-image: none; }
       .figure::before { display: none; }
 
       .price-card h3,
