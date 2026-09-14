@@ -130,10 +130,22 @@
     }
     .btn:hover { transform: translateY(-1px); }
 
-    /* ── TEXT SECTION ── */
-    .text-section { background: var(--bg); }
-    .text-section p { font-size: 17px; line-height: 1.8; color: var(--offwhite-70); margin-bottom: 18px; }
-    .text-section p strong { color: var(--offwhite); font-weight: 700; }
+    /* ── SHARING TIPS ── */
+    .share-section { background: var(--bg); }
+    .share-grid { display: flex; flex-direction: column; gap: 14px; margin-bottom: 28px; }
+    .share-card { background: var(--green-dark); border-radius: 14px; padding: 22px 22px; display: flex; gap: 16px; align-items: flex-start; }
+    .share-icon { font-size: 24px; line-height: 1; flex-shrink: 0; width: 32px; text-align: center; }
+    .share-body h3 { font-size: 18px; margin-bottom: 6px; }
+    .share-body p { font-size: 14.5px; color: var(--offwhite-70); line-height: 1.6; }
+    .share-template { background: rgba(255,255,255,0.04); border: 1px solid var(--hairline); border-radius: 12px; padding: 22px; }
+    .share-template-label { display: block; font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--sand); margin-bottom: 12px; }
+    .share-template p { font-size: 15px; font-style: italic; color: var(--offwhite-70); line-height: 1.65; margin-bottom: 16px; }
+    .share-template button {
+      background: rgba(255,255,255,0.08); color: var(--offwhite); border: 1px solid var(--hairline);
+      border-radius: 999px; padding: 10px 20px; font-family: 'Manrope', sans-serif; font-size: 12px; font-weight: 700;
+      letter-spacing: 1px; cursor: pointer; transition: background 0.2s;
+    }
+    .share-template button:hover { background: rgba(255,255,255,0.16); }
 
     /* ── REWARD REVEAL ── */
     .price-section { background: var(--bg-alt); text-align: center; }
@@ -231,7 +243,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="hero">
   <span class="hero-status-pill">Anmeldung erfolgreich</span>
   <h1><em class="gold-text">Super, du bist<br>Feminess Ambassador!</em></h1>
-  <p class="hero-subtitle">Nur noch ein Schritt: Erstelle jetzt deinen persönlichen Empfehlungslink zur <strong>Live-Experience TRUE SPIRIT Business</strong> und sammle deine <strong>Prämien</strong>.</p>
+  <p class="hero-subtitle">Wir haben dir gerade eine <strong>Bestätigungs-E-Mail</strong> geschickt. Nur noch ein Schritt fehlt: Erstelle jetzt deinen persönlichen Empfehlungslink und leg direkt los.</p>
 </section>
 
 <div class="figure">
@@ -255,11 +267,40 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-<!-- MAIN TEXT -->
-<section class="text-section">
-  <p>Vielleicht kennst du das Gefühl: Du hast bei uns etwas erlebt, das dich wirklich weitergebracht hat und deine Veränderungen sind sichtbar – und ganz automatisch denkst du an die eine Frau, die genau das jetzt auch brauchen könnte.</p>
-  <p><strong>Genau dafür gibt es diese Weiterempfehlungs-Aktion.</strong> Du brauchst nichts verkaufen, nichts erklären, keine Überzeugungsarbeit leisten.</p>
-  <p>Du teilst einfach deinen persönlichen Link zur Live-Experience und sobald sich Frauen kostenfrei anmelden, erhältst du <strong>geniale Prämien</strong>!</p>
+<!-- SHARING TIPS -->
+<section class="share-section">
+  <div class="benefits-header">
+    <span class="eyebrow" style="justify-content:center;display:flex;">So geht's am einfachsten</span>
+    <h2>Deinen Link <em class="gold-text">teilen</em></h2>
+  </div>
+  <div class="share-grid">
+    <div class="share-card">
+      <div class="share-icon">💬</div>
+      <div class="share-body">
+        <h3>Per WhatsApp</h3>
+        <p>Schick den Link direkt an eine Freundin, die du gerade im Kopf hast – persönlich wirkt immer am besten.</p>
+      </div>
+    </div>
+    <div class="share-card">
+      <div class="share-icon">✉️</div>
+      <div class="share-body">
+        <h3>Per E-Mail</h3>
+        <p>Ein paar persönliche Zeilen, warum du an sie gedacht hast, plus deinen Link darunter.</p>
+      </div>
+    </div>
+    <div class="share-card">
+      <div class="share-icon">📱</div>
+      <div class="share-body">
+        <h3>In deiner Story</h3>
+        <p>Teile dein Erlebnis auf Instagram oder Facebook und verlinke deinen persönlichen Link.</p>
+      </div>
+    </div>
+  </div>
+  <div class="share-template">
+    <span class="share-template-label">Textvorschlag zum Kopieren</span>
+    <p id="shareTemplateText">„Hey! Ich hab neulich die Live-Experience TRUE SPIRIT Business gemacht und war richtig begeistert. Ich glaube, das könnte auch was für dich sein – schau's dir gerne mal kostenfrei an: [dein Link]"</p>
+    <button id="copyTemplateBtn" type="button">📋 Text kopieren</button>
+  </div>
 </section>
 
 <!-- REWARD REVEAL -->
@@ -377,7 +418,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- FINAL CTA -->
 <section class="final-cta">
   <h2>Wer fällt dir gerade <em class="gold-text">ein?</em></h2>
-  <a href="#link-generator" class="btn">Meinen Link jetzt erstellen</a>
+  <a href="#link-generator" class="btn">Zu meinem Link scrollen</a>
+  <p class="final-note">Fragen zu deinem Ambassador-Status? Schreib uns einfach – wir melden uns persönlich bei dir.</p>
 </section>
 
 <!-- FOOTER -->
@@ -444,6 +486,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <button onclick="navigator.clipboard.writeText('${produktLink}').then(() => alert('✅ Programm-Link wurde kopiert!'))">📋 Link kopieren</button></p>
       `;
     });
+
+    const copyBtn = document.getElementById("copyTemplateBtn");
+    const templateText = document.getElementById("shareTemplateText");
+    if (copyBtn && templateText) {
+      copyBtn.addEventListener("click", function () {
+        navigator.clipboard.writeText(templateText.textContent.replace(/^„|"$/g, "")).then(() => {
+          copyBtn.textContent = "✅ Kopiert!";
+          setTimeout(() => { copyBtn.textContent = "📋 Text kopieren"; }, 2000);
+        });
+      });
+    }
   });
 </script>
 
