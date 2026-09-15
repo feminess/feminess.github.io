@@ -7,89 +7,123 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Caveat:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital,wght@0,400;1,400&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
+@font-face{
+  font-family:'Amsterdam Four';
+  src:url('../fonts/AmsterdamFour.woff') format('woff'), url('../fonts/AmsterdamFour.ttf') format('truetype');
+  font-weight:400;
+  font-style:normal;
+  font-display:swap;
+}
+
 :root{
-  --cream:#f6efe5;
-  --paper:#fbf6ef;
-  --sand:#c2ab8d;
-  --sand2:#a99386;
+  --fc-gold-dark:#8A6A3A;
+  --fc-gold:#C9A24D;
+  --fc-gold-light:#F3DFA8;
+  --sand:var(--fc-gold);
   --green:#257c6c;
-  --deep:#1b5c50;
-  --ink:#171815;
-  --white:#fffdf9;
+  --green-dark:#1b5c50;
+  --bg:#0d2420;
+  --bg-alt:#123830;
+  --text:#F3EDE2;
+  --text-soft:rgba(243,237,226,0.68);
+  --hairline:rgba(243,237,226,0.14);
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{
   margin:0;
-  background:#ddd4c8;
-  color:var(--ink);
+  background:#07160f;
+  color:var(--text);
   font-family:"Manrope",Arial,sans-serif;
   -webkit-font-smoothing:antialiased;
 }
 .page{
   width:min(100%,430px);
   margin:0 auto;
-  background:var(--paper);
+  background:var(--bg);
   overflow:hidden;
-  box-shadow:0 0 45px rgba(0,0,0,.12);
+  box-shadow:0 0 45px rgba(0,0,0,.35);
 }
 img{display:block;width:100%}
 section{position:relative}
-.serif,h1,h2,h3{font-family:"Instrument Serif",Georgia,serif;font-weight:400}
-.script{font-family:"Caveat",cursive;font-weight:500}
+h1,h2,h3{font-family:"Instrument Serif",Georgia,serif;font-weight:500;color:var(--text)}
+.script{
+  font-family:"Amsterdam Four",cursive;font-weight:400;
+  line-height:2.4;display:inline-block;padding:14px 0;
+}
+.gold-text,
+h1 em,h2 em,h3 em,.script.gold,.num.gold{
+  background:linear-gradient(135deg, var(--fc-gold-dark) 0%, var(--fc-gold) 45%, var(--fc-gold-light) 70%, var(--fc-gold) 100%);
+  -webkit-background-clip:text;background-clip:text;
+  color:transparent;-webkit-text-fill-color:transparent;
+}
 .eyebrow{
-  font-size:9px;line-height:1.25;letter-spacing:.18em;
-  text-transform:uppercase;font-weight:800;
+  display:block;
+  font-size:11px;line-height:1.25;letter-spacing:.18em;
+  text-transform:uppercase;font-weight:700;
+  color:var(--sand);
+}
+@keyframes pulse-btn{
+  0%,100%{transform:scale(1);box-shadow:0 6px 28px rgba(138,93,30,.45)}
+  50%{transform:scale(1.06);box-shadow:0 14px 46px rgba(217,169,75,.7)}
 }
 .btn{
   display:inline-flex;align-items:center;justify-content:center;
-  min-height:52px;padding:0 18px;
-  border-radius:2px;text-decoration:none;
-  background:var(--deep);color:white;
-  font:800 11px/1 "Manrope";letter-spacing:.055em;
+  min-height:56px;padding:0 22px;width:100%;
+  border-radius:999px;text-decoration:none;border:none;cursor:pointer;
+  background:linear-gradient(90deg, var(--fc-gold-dark) 0%, var(--fc-gold) 45%, var(--fc-gold-light) 70%, var(--fc-gold) 100%);
+  color:var(--bg);
+  font:700 12px/1 "Manrope";letter-spacing:.06em;
   text-transform:uppercase;
+  animation:pulse-btn 2.2s ease-in-out infinite;
 }
-p{margin:0;font-size:15px;line-height:1.5}
+p{margin:0;font-size:15px;line-height:1.55;color:var(--text)}
 
-/* 1. FIRST SCREEN — VIDEO IMMEDIATELY VISIBLE */
+/* SITE HEADER */
+.site-header{
+  background:#07160f;
+  padding:14px 22px;
+  display:flex;flex-direction:column;align-items:center;gap:6px;
+}
+.site-header .header-eyebrow{
+  font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;
+  color:rgba(246,240,232,.7);
+}
+
+/* 1. HERO */
 .hero{
-  padding:14px 18px 12px;
-  background:var(--cream);
-  border-bottom:1px solid rgba(23,24,21,.12);
+  padding:28px 22px 14px;
+  background:var(--bg-alt);
 }
-.logo{width:88px;margin:0 auto 12px}
-.hero .meta{
-  display:flex;justify-content:center;align-items:center;
-  margin-bottom:10px;text-align:center
-}
+.hero .eyebrow{margin-bottom:16px}
 .hero h1{
   margin:0;
-  font-size:50px;line-height:.78;
-  letter-spacing:-.055em;
+  font-size:52px;line-height:.8;
+  letter-spacing:-.03em;
   text-transform:uppercase;
 }
 .hero .script{
-  margin:6px 0 7px 76px;
-  font-size:25px;line-height:.9;
-  color:var(--deep);
-  transform:rotate(-3deg);
+  margin:6px 0 8px -4px;
+  font-size:29px;
+  color:var(--fc-gold-light);
 }
 .hero-copy{
   max-width:350px;
-  font-size:11.5px;line-height:1.32
+  font-size:12.5px;line-height:1.4;
+  color:var(--text-soft);
 }
-.hero-copy strong{font-weight:800}
+.hero-copy strong{font-weight:700;color:var(--text)}
 
 /* VIDEO */
-.video-sec{background:var(--ink);color:white}
+.video-sec{background:#07160f}
 .video-shell{
   position:relative;
   width:100%;
   aspect-ratio:9/16;
-  background:#0b0f0d;
+  background:#050b09;
   overflow:hidden;
 }
 .video-shell iframe{
@@ -100,395 +134,401 @@ p{margin:0;font-size:15px;line-height:1.5}
 .video-label{
   position:absolute;left:16px;top:15px;z-index:3;
   padding:7px 9px;
-  background:rgba(13,18,16,.62);
+  background:rgba(7,22,15,.72);
   backdrop-filter:blur(8px);
-  font-size:8px;letter-spacing:.15em;
-  text-transform:uppercase;font-weight:800;
+  border:1px solid var(--hairline);
+  font-size:8.5px;letter-spacing:.14em;
+  text-transform:uppercase;font-weight:700;
+  color:var(--sand);
   pointer-events:none;
 }
 
 /* 2. EMOTIONAL */
 .share{
-  padding:72px 20px 76px;
-  background:var(--paper);
+  padding:80px 22px 84px;
+  background:var(--bg);
 }
 .share .eyebrow{margin-bottom:22px}
 .share h2{
   margin:0;
-  font-size:57px;line-height:.72;
-  letter-spacing:-.055em;
+  font-size:44px;line-height:.86;
+  letter-spacing:-.02em;
   max-width:380px;
 }
 .share .script{
-  font-size:36px;color:var(--green);
-  margin:19px 0 32px 74px;
-  transform:rotate(-4deg)
+  font-size:32px;
+  margin:18px 0 30px -4px;
 }
 .share-copy{
-  margin-left:56px;
-  max-width:300px;
+  max-width:320px;
+  color:var(--text-soft);
 }
+.share-copy p{color:var(--text-soft)}
 .share-copy p+p{margin-top:15px}
 .share .quote{
-  margin:32px 0 0 -56px;
+  margin:30px 0 0;
   font-family:"Instrument Serif";
   font-style:italic;
-  font-size:31px;line-height:1.02;
-  letter-spacing:-.02em
+  font-size:27px;line-height:1.1;
+  color:var(--text)
 }
 .door{
-  margin:50px -20px -76px;
-  padding:52px 20px 58px;
-  background:var(--sand);
+  margin:46px -22px -84px;
+  padding:50px 22px 56px;
+  background:var(--green-dark);
   font-family:"Instrument Serif";
-  font-size:47px;line-height:.82;
-  letter-spacing:-.045em;
+  font-size:38px;line-height:.9;
+  letter-spacing:-.02em;
 }
 
 /* 3. REWARD INTRO */
 .rewards-intro{
-  padding:88px 20px 72px;
-  background:var(--cream);
+  padding:88px 22px 72px;
+  background:var(--bg-alt);
 }
 .rewards-intro h2{
   margin:0;
-  font-size:67px;line-height:.69;
-  letter-spacing:-.065em;
+  font-size:50px;line-height:.82;
+  letter-spacing:-.03em;
   text-transform:uppercase;
 }
 .rewards-intro .script{
-  margin:20px 0 29px 72px;
-  font-size:31px;
-  color:var(--deep);
-  transform:rotate(-3deg)
+  margin:18px 0 26px -4px;
+  font-size:28px;
 }
 .rewards-intro p{
-  max-width:290px;
-  margin-left:65px;
+  max-width:300px;
+  color:var(--text-soft);
 }
 .rewards-intro .numbers{
-  margin-top:40px;
+  margin-top:38px;
   font-family:"Instrument Serif";
-  font-size:52px;line-height:.9;
-  letter-spacing:-.04em;
+  font-size:44px;line-height:.95;
+  letter-spacing:-.02em;
 }
 
 /* 4-7 LADDER */
-.ladder{background:var(--paper)}
+.ladder{background:var(--bg)}
 .level{
-  padding:68px 20px 74px;
-  border-top:1px solid rgba(23,24,21,.16);
+  padding:64px 22px 70px;
+  border-top:1px solid var(--hairline);
   overflow:hidden;
 }
-.level:nth-child(2){background:var(--sand)}
-.level:nth-child(3){background:var(--deep);color:white}
-.level:nth-child(4){background:var(--ink);color:white}
+.level:nth-child(1){background:var(--bg)}
+.level:nth-child(2){background:var(--bg-alt)}
+.level:nth-child(3){background:var(--green-dark)}
+.level:nth-child(4){background:#081a15}
 .level .meta{
   display:flex;justify-content:space-between;gap:12px;
-  align-items:flex-start;margin-bottom:40px
+  align-items:flex-start;margin-bottom:36px
 }
 .level .num{
   font-family:"Instrument Serif";
-  font-size:116px;line-height:.62;
-  letter-spacing:-.07em;
+  font-size:98px;line-height:.65;
+  letter-spacing:-.03em;
 }
 .level .people{
   margin-top:12px;
-  font:800 11px/1 "Manrope";
-  letter-spacing:.16em;text-transform:uppercase
+  font:700 11px/1 "Manrope";
+  letter-spacing:.16em;text-transform:uppercase;
+  color:var(--text-soft)
 }
 .level h3{
-  margin:50px 0 18px;
-  font-size:58px;line-height:.72;
-  letter-spacing:-.055em;
+  margin:44px 0 16px;
+  font-size:44px;line-height:.86;
+  letter-spacing:-.02em;
   max-width:365px;
   text-transform:uppercase;
 }
 .level .desc{
-  max-width:290px;
-  margin-left:56px;
-  font-size:13px;
+  max-width:300px;
+  font-size:13.5px;
+  color:var(--text-soft);
 }
 .level .value{
-  margin-top:34px;
+  margin-top:32px;
   padding-top:16px;
-  border-top:1px solid currentColor;
+  border-top:1px solid var(--hairline);
   display:flex;justify-content:space-between;gap:15px;
   align-items:flex-end;
 }
 .level .value strong{
   font-family:"Instrument Serif";
-  font-size:36px;line-height:1;font-weight:400
+  font-size:32px;line-height:1;font-weight:400
 }
 .level .value span{
-  font-size:9px;letter-spacing:.12em;
-  text-transform:uppercase;font-weight:800
+  font-size:9.5px;letter-spacing:.12em;
+  text-transform:uppercase;font-weight:700;
+  color:var(--text-soft)
 }
 .level .micro-script{
-  font-family:"Caveat";
-  font-size:28px;
-  margin-top:20px;
-  transform:rotate(-2deg);
+  font-family:"Amsterdam Four";
+  font-size:26px;
+  line-height:2;
+  margin-top:14px;
+  color:var(--fc-gold-light);
 }
-.level:nth-child(3) .micro-script,
-.level:nth-child(4) .micro-script{color:#eadcca}
 .level-big{
-  padding-top:86px;
-  padding-bottom:92px
+  padding-top:80px;
+  padding-bottom:86px
 }
-.level-big h3{font-size:66px}
+.level-big h3{font-size:52px}
 .level-big .bigline{
-  margin-top:44px;
-  font:800 18px/.95 "Manrope";
-  letter-spacing:-.025em;
+  margin-top:40px;
+  font:700 16px/1.15 "Manrope";
+  letter-spacing:-.01em;
   text-transform:uppercase;
 }
 
 /* 8 COMMISSION */
 .commission{
-  padding:96px 20px 92px;
-  background:#111714;
-  color:white;
+  padding:92px 22px 88px;
+  background:#050e0a;
   overflow:hidden;
 }
 .commission h2{
-  margin:12px 0 0;
-  font-size:126px;line-height:.62;
-  letter-spacing:-.075em;
+  margin:10px 0 0;
+  font-size:104px;line-height:.68;
+  letter-spacing:-.03em;
 }
 .commission .script{
-  font-size:31px;color:#eadcca;
-  margin:24px 0 40px 72px;
-  transform:rotate(-4deg)
+  font-size:28px;
+  margin:20px 0 34px -4px;
 }
 .commission p{
   max-width:305px;
-  margin-left:50px;
   font-size:14px;
+  color:var(--text-soft);
 }
 .commission .provision-word{
-  margin:40px 0 0;
+  margin:36px 0 0;
   font-family:"Instrument Serif";
-  font-size:61px;line-height:.75;
-  letter-spacing:-.05em;
+  font-size:48px;line-height:.85;
+  letter-spacing:-.02em;
 }
 .commission .money{
-  margin:46px 0 8px;
+  margin:42px 0 8px;
   font-family:"Instrument Serif";
-  font-size:67px;line-height:.75;
-  letter-spacing:-.05em;
+  font-size:56px;line-height:.82;
+  letter-spacing:-.02em;
 }
 .commission .money-caption{
   margin:0;
   max-width:none;
-  font-size:9px;letter-spacing:.14em;
-  text-transform:uppercase;font-weight:800;
+  font-size:9.5px;letter-spacing:.14em;
+  text-transform:uppercase;font-weight:700;
+  color:var(--text-soft)
 }
 .commission .closing{
-  margin-top:43px;
+  margin-top:40px;
   font-family:"Instrument Serif";
-  font-size:29px;line-height:1.08;
+  font-size:25px;line-height:1.2;
   max-width:355px;
+  color:var(--text-soft)
 }
-.commission .closing strong{font-weight:400;color:#eadcca}
+.commission .closing strong{font-weight:500;color:transparent}
 
 /* 9 TRANSITION */
 .nosell{
-  padding:92px 20px 88px;
-  background:var(--deep);
-  color:white;
+  padding:88px 22px 84px;
+  background:var(--green-dark);
   overflow:hidden;
 }
-.nosell .eyebrow{opacity:.65;margin-bottom:36px}
+.nosell .eyebrow{opacity:.75;margin-bottom:32px;color:var(--fc-gold-light)}
 .nosell h2{
-  margin:0 -4px;
-  font-family:"Manrope";
-  font-weight:800;
-  font-size:52px;line-height:.82;
-  letter-spacing:-.045em;
+  margin:0 -2px;
+  font-weight:500;
+  font-size:42px;line-height:.9;
+  letter-spacing:-.02em;
   text-transform:uppercase;
 }
 .nosell .script{
-  color:#eadcca;
-  font-size:46px;line-height:.8;
-  margin:25px 0 45px 56px;
-  transform:rotate(-4deg)
+  font-size:38px;
+  margin:22px 0 40px -4px;
 }
 .nosell p{
   max-width:310px;
-  margin-left:45px;
   font-size:14px;
 }
-.nosell strong{font-weight:800}
+.nosell strong{font-weight:700}
 
 /* 10 HOW */
 .how{
-  padding:84px 20px 82px;
-  background:var(--paper);
+  padding:82px 22px 80px;
+  background:var(--bg);
 }
 .how h2{
   margin:0;
-  font-size:61px;line-height:.72;
-  letter-spacing:-.055em;
+  font-size:46px;line-height:.86;
+  letter-spacing:-.02em;
 }
 .how .script{
-  font-size:35px;color:var(--green);
-  margin:18px 0 40px 72px;
-  transform:rotate(-4deg)
+  font-size:30px;
+  margin:16px 0 36px -4px;
 }
 .step{
   display:grid;
   grid-template-columns:42px 1fr;
   gap:14px;
-  padding:22px 0;
-  border-top:1px solid rgba(23,24,21,.2);
+  padding:20px 0;
+  border-top:1px solid var(--hairline);
 }
 .step .n{
   font-family:"Instrument Serif";
-  font-size:31px;line-height:1;
+  font-size:27px;line-height:1;
+  color:var(--sand)
 }
 .step h3{
   margin:0 0 7px;
   font-family:"Manrope";
-  font-size:11px;font-weight:800;
+  font-size:11px;font-weight:700;
   letter-spacing:.1em;text-transform:uppercase;
+  color:var(--text)
 }
-.step p{font-size:13px;line-height:1.45}
+.step p{font-size:13px;line-height:1.45;color:var(--text-soft)}
 .step .sample{
-  margin-top:10px;
+  margin-top:8px;
   font-family:"Instrument Serif";
   font-style:italic;
-  font-size:20px;line-height:1.08;
+  font-size:18px;line-height:1.1;
+  color:var(--text)
 }
-.how .btn{margin-top:32px}
+.how .btn{margin-top:30px}
 .how .cta-note{
-  margin-top:8px;
+  margin-top:10px;
   font-size:10px;
   font-style:italic;
-  opacity:.65
+  color:var(--text-soft);
+  text-align:center
 }
 
 /* 11 KNOW HER */
 .know{
   min-height:760px;
-  padding:78px 20px 0;
-  background:var(--sand);
+  padding:76px 22px 0;
+  background:var(--bg-alt);
   overflow:hidden;
 }
 .know h2{
   position:relative;z-index:3;
   margin:0;
-  font-size:69px;line-height:.7;
-  letter-spacing:-.065em;
+  font-size:50px;line-height:.86;
+  letter-spacing:-.03em;
   text-transform:uppercase;
 }
 .know .script{
   position:relative;z-index:3;
-  margin:16px 0 31px 88px;
-  font-size:35px;
-  color:var(--deep);
-  transform:rotate(-4deg)
+  margin:14px 0 26px -4px;
+  font-size:30px;
 }
 .know .copy{
   position:relative;z-index:3;
-  max-width:285px;
-  margin-left:66px;
-  font-size:13px;
+  max-width:300px;
+  font-size:13.5px;
+  color:var(--text-soft)
 }
 .know .genau{
   position:relative;z-index:3;
-  margin:32px 0 26px;
+  margin:30px 0 24px;
   font-family:"Instrument Serif";
-  font-size:57px;line-height:.8;
+  font-size:44px;line-height:.85;
 }
-.know-photo{
-  width:calc(100% + 40px);
+.know .figure{
+  position:relative;
+  width:calc(100% + 44px);
   height:360px;
+  margin:44px -22px 0;
+  overflow:hidden;
+  background:var(--bg-alt);
+}
+.know .figure img{
+  width:100%;height:100%;
   object-fit:cover;
   object-position:center 25%;
-  margin:46px -20px 0;
-  filter:saturate(.92);
+  display:block;
+  mask-image:linear-gradient(to bottom, transparent 0%, black 35%);
+  -webkit-mask-image:linear-gradient(to bottom, transparent 0%, black 35%);
+}
+.know .figure::before{
+  content:'';position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(to bottom, var(--bg-alt) 0%, transparent 45%);
 }
 .know .btn{
-  position:absolute;
-  z-index:4;
-  left:20px;
-  bottom:28px;
-  background:var(--paper);
-  color:var(--deep);
+  position:absolute;z-index:4;
+  left:22px;right:22px;width:auto;
+  bottom:30px;
 }
 .know .cta-note{
-  position:absolute;z-index:4;left:20px;bottom:12px;
-  font-size:9px;color:white;text-shadow:0 1px 5px rgba(0,0,0,.4)
+  position:absolute;z-index:4;left:22px;bottom:12px;
+  font-size:9px;color:rgba(243,237,226,.75)
 }
 
 /* 12 MOVEMENT */
 .movement{
-  padding:96px 20px 92px;
-  background:var(--deep);
-  color:white;
+  padding:92px 22px 88px;
+  background:var(--green-dark);
 }
 .movement h2{
   margin:0;
-  font-size:67px;line-height:.68;
-  letter-spacing:-.06em;
+  font-size:48px;line-height:.84;
+  letter-spacing:-.02em;
   text-transform:uppercase;
 }
 .movement .script{
-  margin:24px 0 40px 80px;
-  font-size:37px;color:#eadcca;
-  transform:rotate(-3deg)
+  margin:20px 0 36px -4px;
+  font-size:32px;
 }
 .movement p{
-  max-width:300px;
-  margin-left:52px;
+  max-width:305px;
   font-size:14px;
+  color:var(--text-soft)
 }
 .movement p+p{margin-top:15px}
 .movement .chant{
-  margin:48px 0 0;
+  margin:44px 0 0;
   font-family:"Instrument Serif";
-  font-size:35px;line-height:.95;
+  font-size:29px;line-height:1.05;
 }
 
 /* 13 FINE PRINT */
 .fine{
-  padding:82px 20px 76px;
-  background:var(--cream);
+  padding:80px 22px 74px;
+  background:var(--bg);
 }
 .fine h2{
-  margin:0 0 38px;
-  font-size:55px;line-height:.75;
-  letter-spacing:-.05em;
+  margin:0 0 34px;
+  font-size:40px;line-height:.9;
+  letter-spacing:-.02em;
 }
 .rule{
   display:grid;
   grid-template-columns:42px 1fr;
   gap:13px;
-  padding:17px 0;
-  border-top:1px solid rgba(23,24,21,.18);
+  padding:16px 0;
+  border-top:1px solid var(--hairline);
 }
 .rule .n{
   font-family:"Instrument Serif";
-  font-size:25px;
+  font-size:22px;
+  color:var(--sand)
 }
-.rule p{font-size:12.5px;line-height:1.42}
+.rule p{font-size:12.5px;line-height:1.42;color:var(--text-soft)}
 
 /* 14 FAQ */
 .faq{
-  padding:84px 20px 82px;
-  background:var(--paper);
+  padding:82px 22px 80px;
+  background:var(--bg-alt);
 }
 .faq h2{
-  margin:0 0 34px;
-  font-size:56px;line-height:.75;
-  letter-spacing:-.05em;
+  margin:0 0 32px;
+  font-size:42px;line-height:.9;
+  letter-spacing:-.02em;
 }
 details{
-  border-top:1px solid rgba(23,24,21,.2);
+  border-top:1px solid var(--hairline);
   padding:18px 0;
 }
-details:last-of-type{border-bottom:1px solid rgba(23,24,21,.2)}
+details:last-of-type{border-bottom:1px solid var(--hairline)}
 summary{
   cursor:pointer;
   list-style:none;
@@ -496,70 +536,69 @@ summary{
   grid-template-columns:1fr 22px;
   gap:12px;
   font-size:13px;
-  font-weight:800;
+  font-weight:700;
+  color:var(--text)
 }
 summary::-webkit-details-marker{display:none}
 summary:after{
   content:"+";
   font-family:"Instrument Serif";
-  font-size:24px;line-height:.7;
+  font-size:22px;line-height:.7;
+  color:var(--sand)
 }
 details[open] summary:after{content:"–"}
 details p{
   padding-top:14px;
   font-size:12.5px;line-height:1.5;
-  max-width:350px
+  max-width:350px;
+  color:var(--text-soft)
 }
 
 /* 15 FINAL */
 .final{
-  padding:92px 20px 92px;
-  background:var(--deep);
-  color:white;
-  min-height:760px;
+  padding:88px 22px 88px;
+  background:#050e0a;
+  min-height:700px;
   display:flex;
   flex-direction:column;
   justify-content:center;
 }
 .final h2{
   margin:0;
-  font-size:72px;line-height:.67;
-  letter-spacing:-.065em;
+  font-size:54px;line-height:.82;
+  letter-spacing:-.03em;
   text-transform:uppercase;
 }
 .final .script{
-  margin:23px 0 38px 82px;
-  font-size:41px;color:#eadcca;
-  transform:rotate(-4deg)
+  margin:20px 0 34px -4px;
+  font-size:34px;
 }
 .final p{
   max-width:300px;
-  margin-left:55px;
   font-size:14px;
+  color:var(--text-soft)
 }
 .final .send{
-  margin:45px 0 30px;
+  margin:42px 0 28px;
   font-family:"Instrument Serif";
-  font-size:59px;line-height:.73;
-  letter-spacing:-.05em;
-}
-.final .btn{
-  background:var(--paper);
-  color:var(--deep);
-  align-self:flex-start;
+  font-size:46px;line-height:.85;
+  letter-spacing:-.02em;
 }
 .final .brand{
-  margin-top:34px;
-  font-size:9px;letter-spacing:.15em;
-  text-transform:uppercase;font-weight:800;opacity:.75
+  margin-top:32px;
+  font-size:9.5px;letter-spacing:.15em;
+  text-transform:uppercase;font-weight:700;
+  color:var(--text-soft)
 }
 .final .foot{
-  margin-top:6px;
-  font-family:"Caveat";
-  font-size:25px;color:#eadcca
+  margin-top:8px;
+  font-family:"Amsterdam Four";
+  font-size:22px;
+  line-height:2;
+  color:var(--fc-gold-light)
 }
 
-/* Sticky only after reward intro */
+/* Sticky */
 .sticky{
   position:fixed;
   z-index:40;
@@ -568,40 +607,42 @@ details p{
   width:min(calc(100% - 24px),406px);
   display:flex;align-items:center;justify-content:space-between;
   gap:12px;
-  padding:10px 10px 10px 14px;
-  background:rgba(6,63,54,.96);
-  color:white;
-  box-shadow:0 12px 30px rgba(0,0,0,.22);
+  padding:10px 10px 10px 16px;
+  background:rgba(7,22,15,.94);
+  border:1px solid var(--hairline);
+  box-shadow:0 12px 30px rgba(0,0,0,.4);
   backdrop-filter:blur(12px);
+  border-radius:14px;
   opacity:0;pointer-events:none;
   transition:.25s ease;
 }
 .sticky.show{opacity:1;pointer-events:auto;transform:translate(-50%,0)}
 .sticky .copy{
   font-size:9px;line-height:1.3;
-  text-transform:uppercase;letter-spacing:.08em;font-weight:800
+  text-transform:uppercase;letter-spacing:.08em;font-weight:700;
+  color:var(--text-soft)
 }
 .sticky .btn{
-  min-height:42px;background:var(--paper);color:var(--deep);
-  font-size:9px;padding:0 12px;
+  min-height:42px;width:auto;
+  font-size:9px;padding:0 14px;
 }
 
 footer{
-  background:#102f2a;color:#e7ddd0;
+  background:#07160f;color:rgba(243,237,226,.5);
   padding:30px 18px 42px;text-align:center;
   font-size:9px;line-height:1.6
 }
 footer a{color:inherit}
 
 @media(max-width:374px){
-  .hero h1{font-size:46px}
-  .share h2{font-size:52px}
-  .rewards-intro h2{font-size:61px}
-  .level h3{font-size:52px}
-  .commission h2{font-size:112px}
-  .know h2{font-size:61px}
-  .movement h2{font-size:60px}
-  .final h2{font-size:64px}
+  .hero h1{font-size:44px}
+  .share h2{font-size:38px}
+  .rewards-intro h2{font-size:44px}
+  .level h3{font-size:38px}
+  .commission h2{font-size:88px}
+  .know h2{font-size:44px}
+  .movement h2{font-size:42px}
+  .final h2{font-size:46px}
 }
 </style>
 </head>
@@ -609,13 +650,16 @@ footer a{color:inherit}
 <body>
 <main class="page">
 
+<div class="site-header">
+  <span class="header-eyebrow">Feminess · True Spirit Business</span>
+</div>
+
 <!-- 1. ERSTER SCREEN -->
 <section class="hero">
-  <img class="logo" src="https://feminess.github.io/true-spirit-business/img/logo-rosegold.png" alt="Feminess">
-  <div class="meta eyebrow">TRUE SPIRIT BUSINESS · AMBASSADOR</div>
-  <h1>SAG ES WEITER.</h1>
+  <span class="eyebrow">TRUE SPIRIT BUSINESS · AMBASSADOR</span>
+  <h1>SAG ES<br>WEITER.</h1>
   <div class="script">You already know her.</div>
-  <p class="hero-copy"><strong>Es gibt Frauen, bei denen du sofort weißt:</strong> Das hier ist für sie.<br>Erzähle ihr von der TRUE SPIRIT BUSINESS Experience &amp; sichere dir geniale Rewards</p>
+  <p class="hero-copy"><strong>Es gibt Frauen, bei denen du sofort weißt:</strong> Das hier ist für sie.<br>Erzähle ihr von der TRUE SPIRIT BUSINESS Experience &amp; sichere dir geniale Rewards.</p>
 </section>
 
 <section class="video-sec">
@@ -632,8 +676,8 @@ footer a{color:inherit}
 
 <!-- 2. NACH DEM VIDEO -->
 <section class="share">
-  <div class="eyebrow">ES GIBT DINGE DIE ES WERT SIND ZU EMPFEHLEN</div>
-  <h2>SOME THINGS<br>ARE TOO GOOD<br>TO KEEP<br>TO YOURSELF.</h2>
+  <span class="eyebrow">ES GIBT DINGE DIE ES WERT SIND ZU EMPFEHLEN</span>
+  <h2>Some things are <em>too good</em> to keep to yourself.</h2>
   <div class="script">Sag es weiter!</div>
 
   <div class="share-copy">
@@ -651,80 +695,80 @@ footer a{color:inherit}
 
 <!-- 3. REWARD INTRO -->
 <section class="rewards-intro" id="rewards">
-  <div class="eyebrow">THE AMBASSADOR EXPERIENCE</div>
-  <h2>AND YES.<br>THERE'S<br>SOMETHING<br>IN IT<br>FOR YOU.</h2>
+  <span class="eyebrow">THE AMBASSADOR EXPERIENCE</span>
+  <h2>And yes. There's <em>something in it</em> for you.</h2>
   <div class="script">The more you share, the more you unlock.</div>
   <p>Für jede Frau, die über deinen persönlichen Link zu TRUE SPIRIT BUSINESS kommt, kommst du deinem nächsten Ambassador Level näher.</p>
-  <div class="numbers">1. &nbsp;5. &nbsp;10. &nbsp;20.</div>
-  <p style="margin-top:14px;margin-left:0"><b>Let's see how far you go.</b></p>
+  <div class="numbers">1 · 5 · 10 · 20</div>
+  <p style="margin-top:14px"><b>Let's see how far you go.</b></p>
 </section>
 
 <!-- 4-7 LEVELS -->
 <section class="ladder">
   <article class="level">
     <div class="meta"><span class="eyebrow">AMBASSADOR LEVEL 01</span></div>
-    <div class="num">1</div>
+    <div class="num gold">1</div>
     <div class="people">WOMAN</div>
-    <p class="desc" style="margin-top:38px">Eine Frau kommt durch dich zu TRUE SPIRIT BUSINESS.</p>
-    <p class="desc" style="margin-top:14px"><b>Du bekommst:</b></p>
-    <h3>GELDMAGNET<br>MEDITATION</h3>
-    <div class="value"><span>Wert</span><strong>47 €</strong></div>
+    <p class="desc" style="margin-top:36px">Eine Frau kommt durch dich zu TRUE SPIRIT BUSINESS.</p>
+    <p class="desc" style="margin-top:12px"><b>Du bekommst:</b></p>
+    <h3>Geldmagnet Meditation</h3>
+    <div class="value"><span>Wert</span><strong class="gold-text">47 €</strong></div>
     <div class="micro-script">Your first unlock.</div>
   </article>
 
   <article class="level">
     <div class="meta"><span class="eyebrow">AMBASSADOR LEVEL 02</span></div>
-    <div class="num">5</div>
+    <div class="num gold">5</div>
     <div class="people">WOMEN</div>
-    <p class="desc" style="margin-top:38px">Fünf Frauen erleben TRUE SPIRIT BUSINESS durch deine Empfehlung.</p>
-    <p class="desc" style="margin-top:14px"><b>Du unlockst:</b></p>
-    <h3>THE<br>WORKSHOP<br>CODE</h3>
-    <div class="value"><span>Wert</span><strong>297 €</strong></div>
+    <p class="desc" style="margin-top:36px">Fünf Frauen erleben TRUE SPIRIT BUSINESS durch deine Empfehlung.</p>
+    <p class="desc" style="margin-top:12px"><b>Du unlockst:</b></p>
+    <h3>The Workshop Code</h3>
+    <div class="value"><span>Wert</span><strong class="gold-text">297 €</strong></div>
     <div class="micro-script">Keep going.</div>
   </article>
 
   <article class="level">
     <div class="meta"><span class="eyebrow">AMBASSADOR LEVEL 03</span></div>
-    <div class="num">10</div>
+    <div class="num gold">10</div>
     <div class="people">WOMEN</div>
-    <p class="desc" style="margin-top:38px">Jetzt wird aus einer Empfehlung ein Movement.</p>
-    <p class="desc" style="margin-top:14px"><b>Du bekommst:</b></p>
-    <h3>ROOT<br>TO RISE</h3>
+    <p class="desc" style="margin-top:36px">Jetzt wird aus einer Empfehlung ein Movement.</p>
+    <p class="desc" style="margin-top:12px"><b>Du bekommst:</b></p>
+    <h3>Root to Rise</h3>
     <p class="desc"><b>7 Wochen live mit Marina &amp; Vera</b></p>
-    <div class="value"><span>Wert</span><strong>397 €</strong></div>
+    <div class="value"><span>Wert</span><strong class="gold-text">397 €</strong></div>
     <div class="micro-script">This is where it gets interesting.</div>
   </article>
 
   <article class="level level-big">
     <div class="meta"><span class="eyebrow">AMBASSADOR LEVEL 04 · THE BIG ONE</span></div>
-    <div class="num">20</div>
-    <div class="people">WOMEN.</div>
-    <div class="micro-script" style="margin-top:30px">You brought the movement with you.</div>
-    <p class="desc" style="margin-top:36px"><b>Du bekommst:</b></p>
-    <h3>FIRST<br>CHOICE<br>ROOT.</h3>
+    <div class="num gold">20</div>
+    <div class="people">WOMEN</div>
+    <div class="micro-script" style="margin-top:26px">You brought the movement with you.</div>
+    <p class="desc" style="margin-top:32px"><b>Du bekommst:</b></p>
+    <h3>First Choice Root</h3>
     <p class="desc"><b>7 Wochen · 2× pro Woche live<br>mit Marina &amp; Vera</b></p>
-    <div class="value"><span>Wert</span><strong>997 €</strong></div>
-    <div class="bigline">20 WOMEN.<br>ONE BIG YES.</div>
+    <div class="value"><span>Wert</span><strong class="gold-text">997 €</strong></div>
+    <div class="bigline">20 Women.<br>One big yes.</div>
   </article>
 </section>
 
 <!-- 8. PROVISION -->
 <section class="commission">
-  <div class="eyebrow">AND THERE'S MORE.</div>
-  <h2>10%</h2>
+  <span class="eyebrow">AND THERE'S MORE.</span>
+  <h2 class="gold-text">10%</h2>
   <div class="script">Yes. Really.</div>
   <p>Wenn eine Frau durch deine Empfehlung zu TRUE SPIRIT BUSINESS kommt und anschließend mit uns weitergeht, erhältst du zusätzlich:</p>
-  <div class="provision-word">10 %<br>PROVISION.</div>
-  <p style="margin-top:38px">Je nachdem, wofür sie sich entscheidet, können das</p>
-  <div class="money">100–700 €</div>
+  <div class="provision-word gold-text">10 % Provision.</div>
+  <p style="margin-top:36px">Je nachdem, wofür sie sich entscheidet, können das</p>
+  <div class="money gold-text">100–700 €</div>
   <p class="money-caption">für einen einzigen Perfect Match sein.</p>
-  <div class="closing">Du hast nichts verkauft.<br><br>Du hast nicht überzeugt.<br><br><strong>Du hast eine Verbindung hergestellt.</strong><br><br>Den Rest machen wir.</div>
+  <div class="closing">Du hast nichts verkauft.<br><br>Du hast nicht überzeugt.<br><br><span class="gold-text">Du hast eine Verbindung hergestellt.</span><br><br>Den Rest machen wir.</div>
 </section>
 
 <!-- 9. ÜBERGANG -->
 <section class="nosell">
-  <div class="eyebrow">TRUE SPIRIT BUSINESS · AMBASSADOR</div>
-  <h2>NO SELLING.<br>NO PUSHING.</h2>
+  <span class="eyebrow">TRUE SPIRIT BUSINESS · AMBASSADOR</span>
+  <h2>No selling. No pushing.</h2>
   <div class="script">Just sharing.</div>
   <p>Du bekommst deinen persönlichen TRUE SPIRIT BUSINESS Ambassador-Link.</p>
   <p style="margin-top:14px">Du teilst ihn mit den Frauen, bei denen du fühlst:</p>
@@ -735,8 +779,8 @@ footer a{color:inherit}
 
 <!-- 10. WIE FUNKTIONIERT ES -->
 <section class="how">
-  <div class="eyebrow">ES IST SUPER EINFACH.</div>
-  <h2>NO SELLING.<br>JUST SHARING.</h2>
+  <span class="eyebrow">ES IST SUPER EINFACH.</span>
+  <h2>No selling.<br>Just sharing.</h2>
 
   <div class="step">
     <div class="n">01</div>
@@ -783,28 +827,30 @@ footer a{color:inherit}
     </div>
   </div>
 
-  <a class="btn ambassador-link" href="https://feminess.github.io/ambassador-danke/">GET MY PERSONAL LINK →</a>
+  <a class="btn ambassador-link" href="https://feminess.github.io/ambassador-danke/">Get my personal link →</a>
   <div class="cta-note">Persönlichen Ambassador-Link erstellen.</div>
 </section>
 
 <!-- 11. EMOTIONAL MARINA -->
 <section class="know">
-  <div class="eyebrow">THINK OF HER.</div>
-  <h2>YOU<br>ALREADY<br>KNOW HER.</h2>
+  <span class="eyebrow">THINK OF HER.</span>
+  <h2>You already know her.</h2>
   <div class="script">don't you?</div>
   <p class="copy">Die Frau, an die du beim Lesen dieser Seite gerade gedacht hast.</p>
   <p class="copy" style="margin-top:14px">Vielleicht ist sie nur <b>eine Nachricht</b> davon entfernt, etwas zu entdecken, das für sie alles verändern könnte.</p>
   <p class="copy" style="margin-top:14px">Und vielleicht bist ausgerechnet <b>du</b> die Person, durch die sie davon erfährt.</p>
-  <div class="genau">GENAU SIE.</div>
+  <div class="genau gold-text">Genau sie.</div>
 
-  <img class="know-photo" src="https://feminess.github.io/Bilder/Marina_MAI2314232%20Kopie.jpg" alt="Marina Henze">
-  <a class="btn ambassador-link" href="https://feminess.github.io/ambassador-danke/">I KNOW WHO →</a>
+  <div class="figure">
+    <img src="https://feminess.github.io/Bilder/Marina_MAI2314232%20Kopie.jpg" alt="Marina Henze">
+  </div>
+  <a class="btn ambassador-link" href="https://feminess.github.io/ambassador-danke/">I know who →</a>
   <div class="cta-note">Jetzt meinen persönlichen Link holen.</div>
 </section>
 
 <!-- 12. MOVEMENT -->
 <section class="movement">
-  <h2>THIS IS<br>BIGGER THAN<br>A REWARD.</h2>
+  <h2>This is bigger than a reward.</h2>
   <div class="script">It's a ripple effect.</div>
   <p>Eine Frau erzählt einer Frau.</p>
   <p>Die erzählt einer anderen.</p>
@@ -812,13 +858,13 @@ footer a{color:inherit}
   <p><b>Sondern durch jemanden, dem sie vertrauen.</b></p>
   <p>Durch dich.</p>
   <p>Das ist die Art, wie wir TRUE SPIRIT BUSINESS weitertragen wollen.</p>
-  <div class="chant">Woman to woman.<br>Truth to truth.<br>Spirit to spirit.</div>
+  <div class="chant gold-text">Woman to woman.<br>Truth to truth.<br>Spirit to spirit.</div>
 </section>
 
 <!-- 13. BEDINGUNGEN -->
 <section class="fine">
-  <div class="eyebrow">THE FINE PRINT</div>
-  <h2>DAMIT ALLES<br>KLAR IST.</h2>
+  <span class="eyebrow">THE FINE PRINT</span>
+  <h2>Damit alles klar ist.</h2>
 
   <div class="rule"><div class="n">01</div><p>Deine Prämien richten sich danach, wie viele Frauen sich über deinen persönlichen Link kostenfrei für die Live-Experience TRUE SPIRIT Business anmelden.</p></div>
   <div class="rule"><div class="n">02</div><p>Ab 1 Anmeldung gibt es die Geldmagnet-Meditation, ab 5 den „The Workshop Code" Online-Kurs, ab 10 „Root to Rise" und ab 20 „First Choice Root".</p></div>
@@ -830,8 +876,8 @@ footer a{color:inherit}
 
 <!-- 14. FAQ -->
 <section class="faq">
-  <div class="eyebrow">QUESTIONS? WE GOT YOU.</div>
-  <h2>GOOD TO<br>KNOW.</h2>
+  <span class="eyebrow">QUESTIONS? WE GOT YOU.</span>
+  <h2>Good to know.</h2>
 
   <details>
     <summary>Wie erkennt ihr, dass eine Anmeldung von mir kommt?</summary>
@@ -851,7 +897,7 @@ footer a{color:inherit}
 
 <!-- 15. FINAL -->
 <section class="final">
-  <h2>WHO WILL<br>YOU BRING<br>WITH YOU?</h2>
+  <h2>Who will you bring with you?</h2>
   <div class="script">Pass it on.</div>
   <p>Du musst keine 20 Frauen kennen.</p>
   <p style="margin-top:12px">Du musst keine fünf kennen.</p>
@@ -860,8 +906,8 @@ footer a{color:inherit}
   <p style="margin-top:16px">Die eine Frau, bei der du gerade fühlst:</p>
   <p style="margin-top:12px"><i>„Das könnte genau ihr Moment sein.“</i></p>
 
-  <div class="send">SEND<br>HER<br>THE LINK.</div>
-  <a class="btn ambassador-link" href="https://feminess.github.io/ambassador-danke/">GET MY PERSONAL LINK →</a>
+  <div class="send gold-text">Send her<br>the link.</div>
+  <a class="btn ambassador-link" href="https://feminess.github.io/ambassador-danke/">Get my personal link →</a>
   <div class="brand">TRUE SPIRIT BUSINESS · AMBASSADOR</div>
   <div class="foot">Woman to woman. Spirit to spirit.</div>
 </section>
@@ -876,7 +922,7 @@ footer a{color:inherit}
 
 <div class="sticky">
   <div class="copy">SAG ES WEITER.</div>
-  <a class="btn ambassador-link" href="https://feminess.github.io/ambassador-danke/">GET MY LINK →</a>
+  <a class="btn ambassador-link" href="https://feminess.github.io/ambassador-danke/">Get my link →</a>
 </div>
 
 <script>
