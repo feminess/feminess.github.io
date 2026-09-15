@@ -522,23 +522,8 @@ p{margin:0;font-size:15px;line-height:1.55;color:var(--text)}
 /* 13 FINE PRINT */
 .fine{
   padding:80px 22px 74px;
-  background:
-    linear-gradient(rgba(11,29,25,.9), rgba(13,36,32,.94)),
-    url('https://feminess.github.io/Bilder/gold-spheres-ripple.jpg');
-  background-size:cover;
-  background-position:center 30%;
+  background:var(--bg);
 }
-.fine::before,
-.fine::after{
-  content:'';
-  position:absolute;left:0;right:0;
-  height:80px;
-  pointer-events:none;
-  z-index:1;
-}
-.fine::before{top:0;background:linear-gradient(to bottom, var(--green-dark) 0%, transparent 100%)}
-.fine::after{bottom:0;background:linear-gradient(to top, var(--bg-alt) 0%, transparent 100%)}
-.fine > *{position:relative;z-index:2}
 .fine h2{
   margin:0 0 34px;
   font-size:40px;line-height:.9;
