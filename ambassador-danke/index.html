@@ -277,11 +277,34 @@ b{color:var(--cream);font-weight:700}
 .final .btn{align-self:flex-start}
 .final .foot{margin-top:32px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:rgba(243,237,226,.5)}
 
-footer{
-  background:#061a16;color:rgba(243,237,226,.55);padding:34px 22px 44px;
-  text-align:center;font-size:11px;line-height:1.7
+.site-footer{
+  background:#07291d;
+  border-top:1px solid rgba(94,198,179,0.1);
+  padding:28px 22px;
+  text-align:center;
 }
-footer a{color:inherit}
+.footer-logo{
+  display:inline-block;
+  width:150px;height:16px;
+  margin-bottom:16px;
+  background:linear-gradient(135deg, #8A6A3A 0%, #C9A24D 45%, #F3DFA8 70%, #C9A24D 100%);
+  -webkit-mask-image:url('https://feminess.github.io/true-spirit-business/img/logo-rosegold.png');
+  mask-image:url('https://feminess.github.io/true-spirit-business/img/logo-rosegold.png');
+  -webkit-mask-size:contain;mask-size:contain;
+  -webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;
+  -webkit-mask-position:center;mask-position:center;
+}
+.site-footer p{
+  font-family:"Manrope",sans-serif;
+  font-size:12px;
+  color:#9ab8b4;
+}
+.site-footer a{color:#b8ddd8;text-decoration:none}
+.site-footer a:hover{text-decoration:underline}
+.disclaimer{
+  margin-top:14px;font-size:12px;color:#9ab8b4;
+  max-width:640px;margin-left:auto;margin-right:auto;line-height:1.6;
+}
 
 /* DESKTOP OVERRIDES — kept last so they win the cascade */
 @media(min-width:900px){
@@ -294,17 +317,19 @@ footer a{color:inherit}
   .share h2,.rewards h2,.share-item,.reward,.provision{max-width:none}
   .share-item,.reward{grid-template-columns:64px 1fr}
 
-  /* minimum 15px type size on desktop */
-  .eyebrow,.generator .label,.generator .note,.link-result .mini,
-  .share-item h3,.material .micro,.reward h3,.final .foot,footer{font-size:15px}
-  .btn{font-size:15px}
-  .hero-copy{font-size:15px}
-  .generated-url{font-size:15px}
-  .copybtn{font-size:15px}
-  .share-item p,.reward p{font-size:15px}
-  .smallbtn{font-size:15px}
-  .provision p{font-size:15px}
-  .support p{font-size:15px}
+  /* minimum 18px type size on desktop */
+  p,.eyebrow,.generator .label,.generator .note,.link-result .mini,
+  .share-item h3,.material .micro,.reward h3,.final .foot{font-size:18px}
+  .site-footer p,.disclaimer{font-size:18px}
+  .btn{font-size:18px}
+  .hero-copy{font-size:18px}
+  .generated-url{font-size:18px}
+  .copybtn{font-size:18px}
+  .share-item p,.reward p{font-size:18px}
+  .smallbtn{font-size:18px}
+  .provision p{font-size:18px}
+  .support p{font-size:18px}
+  .ready p,.material p,.her p,.final p{font-size:18px}
 }
 </style>
 </head>
@@ -447,21 +472,20 @@ footer a{color:inherit}
 
 <section class="final">
   <div class="eyebrow">TRUE SPIRIT BUSINESS · AMBASSADOR</div>
-  <h2>NOW MAKE<br>THE FIRST<br><em class="gold-text">MOVE.</em></h2>
+  <h2>NOW MAKE<br class="lb-desktop"> THE FIRST <br class="lb-desktop"><em class="gold-text">MOVE.</em></h2>
   <div class="script">Sag es weiter.</div>
   <p>Dein Link steht.</p>
   <p style="margin-top:12px">Jetzt fehlt nur noch die eine Frau, bei der du gerade fühlst:</p>
   <p style="margin-top:14px"><b>„Das könnte genau ihr Moment sein.“</b></p>
-  <div class="send">SENDE IHR<br><em class="gold-text">DEN LINK.</em></div>
+  <div class="send">SENDE IHR <br class="lb-desktop"><em class="gold-text">DEN LINK.</em></div>
   <a class="btn" href="#link">ZU MEINEM LINK</a>
   <div class="foot">Woman to woman.<br>Spirit to spirit.</div>
 </section>
 
-<footer>
-  © 2026 FEMINESS · MARINA HENZE<br>
-  <a href="https://feminess.de/datenschutz/">Datenschutzerklärung</a>
-  &nbsp; · &nbsp;
-  <a href="https://feminess.de/impressum/">Impressum</a>
+<footer class="site-footer">
+  <span class="footer-logo" role="img" aria-label="Feminess"></span>
+  <p>&copy; 2026 Feminess &nbsp;·&nbsp; Marina Henze &nbsp;&nbsp;|&nbsp;&nbsp; <a href="https://feminess.github.io/Impressum/">Impressum</a> &nbsp;|&nbsp; <a href="https://feminess.github.io/Datenschutz/">Datenschutz</a></p>
+  <p class="disclaimer">This site is not a part of the Facebook website or Facebook Inc. Additionally, This site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc.</p>
 </footer>
 
 </main>
