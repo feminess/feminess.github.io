@@ -717,6 +717,10 @@ details p{
 }
 .site-footer a{color:#b8ddd8;text-decoration:none}
 .site-footer a:hover{text-decoration:underline}
+.disclaimer{
+  margin-top:14px;font-size:12px;color:#9ab8b4;
+  max-width:640px;margin-left:auto;margin-right:auto;line-height:1.6;
+}
 
 @media(max-width:374px){
   .hero h1{font-size:44px}
@@ -743,7 +747,9 @@ details p{
 
   /* bump base typography for the wider desktop layout */
   p{font-size:18px}
-  .eyebrow{font-size:12.5px;letter-spacing:.18em}
+  .eyebrow{font-size:15px;letter-spacing:.16em}
+  .btn{font-size:15px}
+  .video-label{font-size:15px}
 
   /* hero + video side by side */
   .intro-flex{
@@ -792,8 +798,9 @@ details p{
   .level .num{font-size:116px}
   .level h3{font-size:50px}
   .level .desc{font-size:15px;max-width:340px}
+  .level .people{font-size:15px}
   .level .value strong{font-size:38px}
-  .level .value span{font-size:10.5px}
+  .level .value span{font-size:15px}
   .level .micro-script{font-size:28px}
   .level-big h3{font-size:58px}
   /* commission / movement / nosell centered readable column */
@@ -802,7 +809,7 @@ details p{
   .commission p,.nosell p,.movement p{max-width:520px;font-size:17px}
   .commission .provision-word{font-size:58px}
   .commission .money{font-size:68px}
-  .commission .money-caption{font-size:10.5px}
+  .commission .money-caption{font-size:15px}
   .commission .closing{max-width:520px;font-size:29px}
 
   .interstitial{height:420px}
@@ -816,11 +823,11 @@ details p{
   .how > h2{max-width:640px;font-size:52px}
   .how .script{font-size:34px}
   .step{flex:0 0 calc(50% - 20px)}
-  .step h3{font-size:12px}
+  .step h3{font-size:15px}
   .step p{font-size:15px}
   .step .sample{font-size:20px}
   .how .btn{flex:0 0 auto;width:auto;padding:0 48px;align-self:flex-start;margin-top:24px}
-  .how .cta-note{text-align:left;font-size:11px}
+  .how .cta-note{text-align:left;font-size:15px}
 
   /* know: text + image side by side */
   .know{
@@ -853,7 +860,7 @@ details p{
   }
   .know .cta-note{
     position:static;grid-column:1;grid-row:3;
-    text-shadow:none;color:var(--text-soft);margin-top:10px;font-size:10px;
+    text-shadow:none;color:var(--text-soft);margin-top:10px;font-size:15px;
   }
 
   .movement h2{font-size:54px}
@@ -866,14 +873,14 @@ details p{
   .fine > h2{font-size:46px}
   .rule{flex:0 0 calc(50% - 20px)}
   .rule .n{font-size:24px}
-  .rule p{font-size:13.5px}
+  .rule p{font-size:15px}
 
   .faq{display:flex;flex-wrap:wrap;gap:0 40px;max-width:1020px;margin:0 auto}
   .faq .eyebrow,.faq > h2{flex:0 0 100%}
   .faq > h2{font-size:48px}
   details{flex:0 0 calc(50% - 20px)}
-  summary{font-size:14.5px}
-  details p{font-size:13.5px}
+  summary{font-size:15px}
+  details p{font-size:15px}
 
   /* generic CTAs: no longer full-width blocks */
   .commission,.nosell,.movement,.final{text-align:left}
@@ -884,6 +891,13 @@ details p{
   .final .script{font-size:38px}
   .final p{max-width:460px;font-size:17px}
   .final .send{font-size:52px}
+  .final .brand{font-size:15px}
+
+  .site-footer p{font-size:15px}
+  .disclaimer{font-size:15px}
+
+  .popup-kicker{font-size:15px}
+  .popup-box > p{font-size:15px}
 }
 </style>
 
@@ -938,6 +952,12 @@ details p{
   padding: 16px 24px !important;
   width: 100% !important;
   animation: pulse-btn 2.2s ease-in-out infinite !important;
+}
+@media(min-width:860px){
+  #_form_585_ ._form-label{ font-size: 15px !important; }
+  #_form_585_ .field-required{ font-size: 15px !important; }
+  #_form_585_ input[type="text"]{ font-size: 16px !important; }
+  #_form_585_ ._submit{ font-size: 15px !important; }
 }
 </style>
 </head>
@@ -1219,7 +1239,7 @@ details p{
 <footer class="site-footer">
   <span class="footer-logo" role="img" aria-label="Feminess"></span>
   <p>&copy; 2026 Feminess &nbsp;·&nbsp; Marina Henze &nbsp;&nbsp;|&nbsp;&nbsp; <a href="https://feminess.github.io/Impressum/">Impressum</a> &nbsp;|&nbsp; <a href="https://feminess.github.io/Datenschutz/">Datenschutz</a></p>
-  <p style="margin-top:14px;font-size:12px;color:#9ab8b4;max-width:640px;margin-left:auto;margin-right:auto;line-height:1.6;">This site is not a part of the Facebook website or Facebook Inc. Additionally, This site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc.</p>
+  <p class="disclaimer">This site is not a part of the Facebook website or Facebook Inc. Additionally, This site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc.</p>
 </footer>
 
 </main>
