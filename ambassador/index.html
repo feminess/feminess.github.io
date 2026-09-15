@@ -52,7 +52,7 @@ section{position:relative}
 h1,h2,h3{font-family:"Instrument Serif",Georgia,serif;font-weight:500;color:var(--text)}
 .script{
   font-family:"Amsterdam Four",cursive;font-weight:400;
-  line-height:2.4;display:inline-block;padding:14px 0;
+  line-height:2.4;display:inline-block;padding:18px 0;
 }
 .gold-text,
 h1 em,h2 em,h3 em,.script.gold,.num.gold{
@@ -134,15 +134,14 @@ p{margin:0;font-size:15px;line-height:1.55;color:var(--text)}
   border:0;
 }
 .video-label{
-  position:absolute;left:16px;top:15px;z-index:3;
+  display:inline-block;
+  margin-bottom:12px;
   padding:7px 9px;
-  background:rgba(7,22,15,.72);
-  backdrop-filter:blur(8px);
+  background:rgba(255,255,255,.05);
   border:1px solid var(--hairline);
   font-size:8.5px;letter-spacing:.14em;
   text-transform:uppercase;font-weight:700;
   color:var(--sand);
-  pointer-events:none;
 }
 
 /* 2. EMOTIONAL */
@@ -266,8 +265,10 @@ p{margin:0;font-size:15px;line-height:1.55;color:var(--text)}
 .level .micro-script{
   font-family:"Amsterdam Four";
   font-size:26px;
-  line-height:2;
-  margin-top:14px;
+  line-height:2.3;
+  display:inline-block;
+  padding:8px 0;
+  margin-top:6px;
   color:var(--fc-gold-light);
 }
 .level-big{
@@ -593,10 +594,12 @@ details p{
   color:var(--text-soft)
 }
 .final .foot{
-  margin-top:8px;
+  margin-top:0;
   font-family:"Amsterdam Four";
   font-size:22px;
-  line-height:2;
+  line-height:2.3;
+  display:inline-block;
+  padding:6px 0;
   color:var(--fc-gold-light)
 }
 
@@ -753,9 +756,10 @@ details p{
   .intro-flex .hero-copy{max-width:440px;font-size:16px}
   .intro-flex .video-sec{
     flex:1 1 48%;
-    display:flex;align-items:center;justify-content:center;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
     padding:40px;
   }
+  .intro-flex .video-label{align-self:flex-start}
   .intro-flex .video-shell{
     width:100%;
     aspect-ratio:16/9;
@@ -952,6 +956,7 @@ details p{
 </section>
 
 <section class="video-sec">
+  <div class="video-label">A PERSONAL MESSAGE FROM MARINA</div>
   <div class="video-shell">
     <iframe
       src="https://player.vimeo.com/video/1226521900?app_id=58479&autopause=0&badge=0&player_id=0&title=0&byline=0&portrait=0"
@@ -959,7 +964,6 @@ details p{
       allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
       allowfullscreen>
     </iframe>
-    <div class="video-label">A PERSONAL MESSAGE FROM MARINA</div>
   </div>
 </section>
 </div>
