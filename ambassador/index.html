@@ -644,6 +644,120 @@ footer a{color:inherit}
   .movement h2{font-size:42px}
   .final h2{font-size:46px}
 }
+
+/* ===================== DESKTOP ===================== */
+@media(min-width:860px){
+  body{padding:40px 24px}
+  .page{
+    width:min(100%,860px);
+    border-radius:20px;
+    box-shadow:0 30px 80px rgba(0,0,0,.5);
+  }
+  .site-header{border-radius:20px 20px 0 0}
+  footer{border-radius:0 0 20px 20px}
+
+  section{padding-left:56px;padding-right:56px}
+
+  /* hero + video side by side */
+  .intro-flex{
+    display:flex;
+    align-items:stretch;
+  }
+  .intro-flex .hero{
+    flex:1 1 52%;
+    display:flex;flex-direction:column;justify-content:center;
+    padding:56px 56px;
+  }
+  .intro-flex .hero h1{font-size:64px}
+  .intro-flex .hero-copy{max-width:400px}
+  .intro-flex .video-sec{
+    flex:1 1 48%;
+    display:flex;align-items:center;justify-content:center;
+    padding:40px;
+  }
+  .intro-flex .video-shell{
+    width:min(280px,100%);
+    aspect-ratio:9/16;
+    border-radius:18px;
+    box-shadow:0 20px 50px rgba(0,0,0,.5);
+  }
+
+  .share h2,.rewards-intro h2{max-width:640px}
+  .share-copy,.rewards-intro p{max-width:440px}
+  .door{margin-left:-56px;margin-right:-56px;padding-left:56px;padding-right:56px}
+
+  /* level cards as a 2x2 grid */
+  .ladder{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+  }
+  .level{
+    border-top:none;
+    border:1px solid var(--hairline);
+    border-radius:16px;
+    margin:12px;
+    padding:44px 40px 48px;
+  }
+  .level-big{grid-column:1 / -1}
+
+  /* commission / movement / nosell centered readable column */
+  .commission p,.nosell p,.movement p{max-width:480px}
+  .commission .closing{max-width:480px}
+
+  /* how: steps as 2x2 grid */
+  .how{display:flex;flex-wrap:wrap;gap:8px 40px;max-width:900px;margin:0 auto}
+  .how .eyebrow,.how > h2,.how .cta-note{flex:0 0 100%}
+  .how > h2{max-width:600px}
+  .step{flex:0 0 calc(50% - 20px)}
+  .how .btn{flex:0 0 auto;width:auto;padding:0 48px;align-self:flex-start;margin-top:24px}
+  .how .cta-note{text-align:left}
+
+  /* know: text + image side by side */
+  .know{
+    min-height:auto;
+    display:grid;
+    grid-template-columns:1fr 320px;
+    gap:0 48px;
+    align-items:start;
+    padding-bottom:56px;
+  }
+  .know-text{grid-column:1;grid-row:1}
+  .know .figure{
+    grid-column:2;grid-row:1/4;
+    width:100%;height:520px;
+    margin:0;border-radius:18px;
+    align-self:start;
+  }
+  .know .figure img{
+    mask-image:none;-webkit-mask-image:none;
+  }
+  .know .figure::before{display:none}
+  .know .btn{
+    position:static;grid-column:1;grid-row:2;
+    width:auto;padding:0 48px;align-self:start;
+    margin-top:28px;
+  }
+  .know .cta-note{
+    position:static;grid-column:1;grid-row:3;
+    text-shadow:none;color:var(--text-soft);margin-top:10px;
+  }
+
+  /* fine print + faq as two columns */
+  .fine{display:flex;flex-wrap:wrap;gap:0 40px;max-width:900px;margin:0 auto}
+  .fine .eyebrow,.fine > h2{flex:0 0 100%}
+  .rule{flex:0 0 calc(50% - 20px)}
+
+  .faq{display:flex;flex-wrap:wrap;gap:0 40px;max-width:900px;margin:0 auto}
+  .faq .eyebrow,.faq > h2{flex:0 0 100%}
+  details{flex:0 0 calc(50% - 20px)}
+
+  /* generic CTAs: no longer full-width blocks */
+  .commission,.nosell,.movement,.final{text-align:left}
+  .final .btn,.commission .btn{width:auto}
+
+  .final{min-height:auto;padding-top:100px;padding-bottom:100px}
+  .final p{max-width:420px}
+}
 </style>
 </head>
 
@@ -654,6 +768,7 @@ footer a{color:inherit}
   <span class="header-eyebrow">Feminess · True Spirit Business</span>
 </div>
 
+<div class="intro-flex">
 <!-- 1. ERSTER SCREEN -->
 <section class="hero">
   <span class="eyebrow">TRUE SPIRIT BUSINESS · AMBASSADOR</span>
@@ -673,6 +788,7 @@ footer a{color:inherit}
     <div class="video-label">A PERSONAL MESSAGE FROM MARINA</div>
   </div>
 </section>
+</div>
 
 <!-- 2. NACH DEM VIDEO -->
 <section class="share">
@@ -833,6 +949,7 @@ footer a{color:inherit}
 
 <!-- 11. EMOTIONAL MARINA -->
 <section class="know">
+  <div class="know-text">
   <span class="eyebrow">THINK OF HER.</span>
   <h2>You already know her.</h2>
   <div class="script">don't you?</div>
@@ -840,6 +957,7 @@ footer a{color:inherit}
   <p class="copy" style="margin-top:14px">Vielleicht ist sie nur <b>eine Nachricht</b> davon entfernt, etwas zu entdecken, das für sie alles verändern könnte.</p>
   <p class="copy" style="margin-top:14px">Und vielleicht bist ausgerechnet <b>du</b> die Person, durch die sie davon erfährt.</p>
   <div class="genau gold-text">Genau sie.</div>
+  </div>
 
   <div class="figure">
     <img src="https://feminess.github.io/Bilder/Marina_MAI2314232%20Kopie.jpg" alt="Marina Henze">
