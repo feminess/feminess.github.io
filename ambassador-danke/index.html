@@ -172,7 +172,7 @@ b{color:var(--cream);font-weight:700}
 }
 
 /* SHARE QUICK */
-.share{background:var(--bg)}
+.share{background:var(--bg);padding-bottom:0}
 .share h2{
   margin:20px 0 44px;font-size:clamp(36px,10vw,48px);line-height:.85;letter-spacing:-.03em
 }
@@ -225,7 +225,11 @@ b{color:var(--cream);font-weight:700}
 .reward h3{
   margin:4px 0 0;font-family:"Manrope";font-size:15px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--cream)
 }
-.reward p{font-size:clamp(34px,9vw,44px);line-height:.9}
+.reward p{--rp-size:clamp(34px,9vw,44px);font-family:"Instrument Serif";font-size:var(--rp-size);line-height:.9}
+.reward-sub{
+  display:block;margin-top:6px;
+  font-family:"Manrope";font-size:calc(var(--rp-size) - 10px);line-height:1.2;letter-spacing:normal
+}
 .reward .value{
   margin-top:8px;font-family:"Instrument Serif";font-size:clamp(34px,9.5vw,46px);line-height:.85;text-align:right;background:var(--sand-gradient);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent
 }
@@ -266,6 +270,9 @@ b{color:var(--cream);font-weight:700}
 .figwrap::after{
   content:'';position:absolute;inset:0;z-index:1;pointer-events:none;
   background:linear-gradient(to top, var(--bg) 0%, transparent 28%);
+}
+.figwrap-fade-alt::after{
+  background:linear-gradient(to top, var(--bg-alt) 0%, transparent 28%);
 }
 .figwrap-beach img{
   mask-image:linear-gradient(to bottom, transparent 0%, black 22%, black 82%, transparent 100%);
@@ -440,12 +447,12 @@ b{color:var(--cream);font-weight:700}
       <div class="script" style="font-size:clamp(25px,6vw,31px);line-height:2.6;padding:26px 0 14px;background:var(--sand-gradient);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;margin-top:14px">So wie es sich für dich gut anfühlt.</div>
     </div>
   </div>
-  <div class="figwrap figwrap-tall">
+  <div class="figwrap figwrap-tall figwrap-fade-alt">
     <img src="../Bilder/marina-steps.jpg" alt="Marina" style="object-position:50% 20%">
   </div>
 </section>
 
-<section class="material">
+<section class="material" style="padding-top:48px">
   <div class="eyebrow">WIR MACHEN ES EINFACH FÜR DICH</div>
   <h2>READY <br class="lb-desktop"><em class="gold-text">TO SHARE.</em></h2>
   <div class="script">Wir sind für dich da.</div>
@@ -461,8 +468,8 @@ b{color:var(--cream);font-weight:700}
   <h2>THE MORE YOU SHARE, <br class="lb-desktop"><em class="gold-text">THE MORE YOU GET.</em></h2>
   <div class="reward"><div class="reward-label"><div class="big">1</div><h3>FRAU</h3></div><div><p>Geldmagnet Meditation</p><div class="value">Wert: 47 €</div></div></div>
   <div class="reward"><div class="reward-label"><div class="big">5</div><h3>FRAUEN</h3></div><div><p>The Workshop Code</p><div class="value">Wert: 297 €</div></div></div>
-  <div class="reward"><div class="reward-label"><div class="big">10</div><h3>FRAUEN</h3></div><div><p>ROOT TO RISE<br>7 Wochen live mit Marina &amp; Vera</p><div class="value">Wert: 397 €</div></div></div>
-  <div class="reward"><div class="reward-label"><div class="big">20</div><h3>FRAUEN</h3></div><div><p>FIRST CHOICE ROOT<br>7 Wochen · 2× pro Woche live<br>mit Marina &amp; Vera</p><div class="value">Wert: 997 €</div></div></div>
+  <div class="reward"><div class="reward-label"><div class="big">10</div><h3>FRAUEN</h3></div><div><p>ROOT TO RISE<span class="reward-sub">7 Wochen live mit Marina &amp; Vera</span></p><div class="value">Wert: 397 €</div></div></div>
+  <div class="reward"><div class="reward-label"><div class="big">20</div><h3>FRAUEN</h3></div><div><p>FIRST CHOICE ROOT<span class="reward-sub">7 Wochen · 2× pro Woche live mit Marina &amp; Vera</span></p><div class="value">Wert: 997 €</div></div></div>
   <div class="script" style="font-size:clamp(22px,7vw,30px);background:var(--sand-gradient);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;margin-top:30px">Wie weit kommst du?</div>
 
   <div class="provision">
