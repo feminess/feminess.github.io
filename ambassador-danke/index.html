@@ -260,6 +260,13 @@ b{color:var(--cream);font-weight:700}
   content:'';position:absolute;inset:0;z-index:1;pointer-events:none;
   background:linear-gradient(to top, var(--bg) 0%, transparent 28%);
 }
+.figwrap-beach img{
+  mask-image:linear-gradient(to bottom, transparent 0%, black 22%, black 82%, transparent 100%);
+  -webkit-mask-image:linear-gradient(to bottom, transparent 0%, black 22%, black 82%, transparent 100%);
+}
+.figwrap-beach::before{
+  background:linear-gradient(to bottom, var(--bg) 0%, transparent 22%);
+}
 .her .btn{
   position:absolute;left:22px;bottom:26px;z-index:4;
 }
@@ -478,8 +485,8 @@ b{color:var(--cream);font-weight:700}
   <p style="margin-top:14px"><b>„Da wartet eigentlich noch so viel mehr auf sie.“</b></p>
   <p style="margin-top:14px">Vielleicht ist sie nur <b>eine Nachricht</b> davon entfernt, TRUE SPIRIT BUSINESS für sich zu entdecken.</p>
   <div class="serif" style="position:relative;z-index:3;font-size:clamp(38px,11vw,50px);line-height:.82;letter-spacing:-.03em;margin-top:34px;color:var(--cream)">SENDE ES <em class="gold-text">IHR.</em></div>
-  <div class="figwrap">
-    <img src="../Bilder/marina-beach.jpg" alt="Marina" style="object-position:65% 50%">
+  <div class="figwrap figwrap-beach">
+    <img src="../Bilder/marina-beach.jpg" alt="Marina" style="object-position:65% 0%">
   </div>
   <a class="btn" href="#link">ZU MEINEM LINK</a>
   <div style="height:26px"></div>
