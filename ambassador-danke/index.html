@@ -83,7 +83,6 @@ b{color:var(--cream);font-weight:700}
 
 /* HERO / ACTION FIRST */
 .hero{
-  min-height:100svh;
   padding-top:22px;padding-bottom:32px;
   background:linear-gradient(180deg, var(--bg) 0%, var(--bg-alt) 100%);
   display:flex;flex-direction:column;
@@ -107,7 +106,7 @@ b{color:var(--cream);font-weight:700}
   font-size:13.5px;line-height:1.45
 }
 .generator{
-  margin-top:auto;
+  margin-top:40px;
   padding-top:22px;
   border-top:1px solid var(--hairline);
 }
@@ -309,7 +308,7 @@ b{color:var(--cream);font-weight:700}
 /* DESKTOP OVERRIDES — kept last so they win the cascade */
 @media(min-width:900px){
   .lb-desktop{display:none}
-  .hero{min-height:auto;padding-top:56px;padding-bottom:56px}
+  .hero{padding-top:56px;padding-bottom:56px}
   .hero .generator{margin-top:64px}
   .final{min-height:auto;padding-top:100px;padding-bottom:100px}
   .figwrap{height:560px}
