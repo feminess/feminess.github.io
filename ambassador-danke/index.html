@@ -20,13 +20,19 @@
   --bg:#0d2420;
   --bg-alt:#123830;
   --green:#1b5c50;
-  --sand:#cda86a;
+  --sand:#C9A24D;
   --cream:#f3ede2;
   --cream-soft:rgba(243,237,226,0.68);
   --hairline:rgba(243,237,226,0.14);
   --gold-a:#8a5d1e;
   --gold-b:#d9a94b;
   --gold-c:#f7e6bb;
+  --sand-gradient:linear-gradient(135deg, #8A6A3A 0%, #C9A24D 35%, #F3DFA8 70%, #C9A24D 100%);
+}
+.sand-text{
+  background:var(--sand-gradient);
+  -webkit-background-clip:text;background-clip:text;
+  color:transparent;-webkit-text-fill-color:transparent;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -43,7 +49,7 @@ img{display:block;width:100%}
 section{position:relative;padding:88px 22px}
 h1,h2,h3,.serif{font-family:"Instrument Serif",Georgia,serif;font-weight:400;margin:0;color:var(--cream)}
 .script{font-family:"Amsterdam Four",cursive;font-weight:400;display:inline-block;line-height:2.4;padding:14px 0}
-.eyebrow{font-size:11px;line-height:1.3;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--sand)}
+.eyebrow{font-size:11px;line-height:1.3;letter-spacing:.16em;text-transform:uppercase;font-weight:700;background:var(--sand-gradient);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
 p{margin:0;font-size:15px;line-height:1.55;color:var(--cream-soft)}
 b{color:var(--cream);font-weight:700}
 
@@ -92,14 +98,14 @@ b{color:var(--cream);font-weight:700}
   display:flex;justify-content:space-between;gap:12px;
   margin-bottom:30px
 }
-.hero .check{color:var(--sand)}
+.hero .check{background:var(--sand-gradient);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
 .hero h1{
   font-size:clamp(46px,14vw,74px);line-height:.72;
   letter-spacing:-.05em;text-transform:uppercase;
 }
 .hero .script{
   margin:10px 0 6px 6px;
-  font-size:clamp(26px,8vw,36px);color:var(--sand);
+  font-size:clamp(26px,8vw,36px);background:var(--sand-gradient);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;
 }
 .hero-copy{
   max-width:340px;margin-top:8px;
@@ -112,7 +118,7 @@ b{color:var(--cream);font-weight:700}
 }
 .generator .label{
   display:block;margin-bottom:9px;
-  font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--sand)
+  font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;background:var(--sand-gradient);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent
 }
 .fieldrow{display:grid;grid-template-columns:1fr auto;gap:8px}
 .generator input{
@@ -133,7 +139,7 @@ b{color:var(--cream);font-weight:700}
 .link-result.show{display:block}
 .link-result .mini{
   font-size:10px;letter-spacing:.14em;text-transform:uppercase;
-  font-weight:700;color:var(--sand);margin-bottom:10px
+  font-weight:700;background:var(--sand-gradient);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;margin-bottom:10px
 }
 .generated-url{
   font-size:13px;line-height:1.4;word-break:break-all;
@@ -157,7 +163,7 @@ b{color:var(--cream);font-weight:700}
   font-size:clamp(38px,11vw,56px);line-height:.78;letter-spacing:-.04em;text-transform:uppercase
 }
 .ready .script{
-  display:block;margin:14px 0 26px;font-size:clamp(24px,7vw,32px);color:var(--sand)
+  display:block;margin:14px 0 26px;font-size:clamp(24px,7vw,32px);background:var(--sand-gradient);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent
 }
 .ready p{max-width:320px;font-size:15px}
 .ready .line{
@@ -174,7 +180,7 @@ b{color:var(--cream);font-weight:700}
   display:grid;grid-template-columns:44px 1fr;gap:14px;
   padding:26px 0;border-top:1px solid var(--hairline)
 }
-.share-item .n{font-family:"Instrument Serif";font-size:32px;line-height:1;color:var(--sand)}
+.share-item .n{font-family:"Instrument Serif";font-size:32px;line-height:1;background:var(--sand-gradient);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
 .share-item h3{
   margin:0 0 8px;font-family:"Manrope";font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--cream)
 }
@@ -197,7 +203,7 @@ b{color:var(--cream);font-weight:700}
   font-size:clamp(38px,11vw,52px);line-height:.8;letter-spacing:-.04em;text-transform:uppercase
 }
 .material .script{
-  display:block;margin:14px 0 24px;font-size:clamp(22px,6.5vw,30px);color:var(--sand)
+  display:block;margin:14px 0 24px;font-size:clamp(22px,6.5vw,30px);background:var(--sand-gradient);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent
 }
 .material p{max-width:310px;font-size:15px}
 .material .btn{margin-top:30px;display:inline-flex}
@@ -213,14 +219,14 @@ b{color:var(--cream);font-weight:700}
   padding:20px 0;border-top:1px solid var(--hairline);align-items:start
 }
 .reward .big{
-  font-family:"Instrument Serif";font-size:46px;line-height:.85;color:var(--sand)
+  font-family:"Instrument Serif";font-size:46px;line-height:.85;background:var(--sand-gradient);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent
 }
 .reward h3{
   margin:0 0 6px;font-family:"Manrope";font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--cream)
 }
 .reward p{font-size:13.5px;line-height:1.4}
 .reward .value{
-  margin-top:8px;font-family:"Instrument Serif";font-size:20px;color:var(--sand)
+  margin-top:8px;font-family:"Instrument Serif";font-size:20px;background:var(--sand-gradient);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent
 }
 .provision{
   margin-top:44px;padding:40px 24px;border-radius:14px;
@@ -243,7 +249,7 @@ b{color:var(--cream);font-weight:700}
 }
 .her .script{
   display:block;position:relative;z-index:3;margin:14px 0 26px;
-  font-size:clamp(24px,7.5vw,34px);color:var(--sand)
+  font-size:clamp(24px,7.5vw,34px);background:var(--sand-gradient);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent
 }
 .her p{position:relative;z-index:3;max-width:300px;font-size:15px}
 .figwrap{position:relative;overflow:hidden;background:var(--bg);margin:48px calc(-1 * var(--pad,22px)) 0;height:390px}
@@ -288,7 +294,7 @@ b{color:var(--cream);font-weight:700}
   font-size:clamp(44px,13vw,64px);line-height:.76;letter-spacing:-.045em;text-transform:uppercase
 }
 .final .script{
-  display:block;margin:16px 0 26px;font-size:clamp(28px,8vw,38px);color:var(--sand)
+  display:block;margin:16px 0 26px;font-size:clamp(28px,8vw,38px);background:var(--sand-gradient);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent
 }
 .final p{max-width:305px;font-size:15px}
 .final .send{
@@ -302,7 +308,7 @@ b{color:var(--cream);font-weight:700}
   line-height:1.5;
   display:inline-block;
   padding:16px 0;
-  color:var(--sand)
+  background:var(--sand-gradient);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent
 }
 
 .site-footer{
@@ -431,7 +437,7 @@ b{color:var(--cream);font-weight:700}
       <p>Du möchtest nicht nur einzelne Frauen anschreiben?</p>
       <p style="margin-top:9px">Dann teile TRUE SPIRIT BUSINESS in deiner Story, Reels, Beiträge oder schicke direkt einen Newsletter. Textvorlagen findest du weiter unten auf dieser Seite.</p>
       <p style="margin-top:12px"><b>Wichtig:</b> Verwende dabei immer deinen persönlichen Ambassador-Link.</p>
-      <div class="script" style="font-size:clamp(20px,6vw,26px);color:var(--sand);margin-top:14px">So wie es sich für dich gut anfühlt.</div>
+      <div class="script" style="font-size:clamp(20px,6vw,26px);background:var(--sand-gradient);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;margin-top:14px">So wie es sich für dich gut anfühlt.</div>
     </div>
   </div>
   <div class="figwrap figwrap-tall">
@@ -458,7 +464,7 @@ b{color:var(--cream);font-weight:700}
   <div class="reward"><div class="big">5</div><div><h3>FRAUEN</h3><p>The Workshop Code</p><div class="value">Wert: 297 €</div></div></div>
   <div class="reward"><div class="big">10</div><div><h3>FRAUEN</h3><p>ROOT TO RISE<br>7 Wochen live mit Marina &amp; Vera</p><div class="value">Wert: 397 €</div></div></div>
   <div class="reward"><div class="big">20</div><div><h3>FRAUEN</h3><p>FIRST CHOICE ROOT<br>7 Wochen · 2× pro Woche live<br>mit Marina &amp; Vera</p><div class="value">Wert: 997 €</div></div></div>
-  <div class="script" style="font-size:clamp(22px,7vw,30px);color:var(--sand);margin-top:30px">Wie weit kommst du?</div>
+  <div class="script" style="font-size:clamp(22px,7vw,30px);background:var(--sand-gradient);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;margin-top:30px">Wie weit kommst du?</div>
 
   <div class="provision">
     <div class="eyebrow">NICHT VERGESSEN</div>
