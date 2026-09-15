@@ -90,9 +90,10 @@ p{margin:0;font-size:15px;line-height:1.55;color:var(--text)}
 .hero .eyebrow{margin-bottom:16px}
 .hero h1{
   margin:0;
-  font-size:52px;line-height:.8;
+  font-size:40px;line-height:.9;
   letter-spacing:-.03em;
   text-transform:uppercase;
+  white-space:nowrap;
 }
 .hero .script{
   margin:6px 0 8px -4px;
@@ -745,7 +746,7 @@ details p{
 }
 
 @media(max-width:374px){
-  .hero h1{font-size:44px}
+  .hero h1{font-size:32px}
   .share h2{font-size:38px}
   .rewards-intro h2{font-size:44px}
   .level h3{font-size:38px}
@@ -783,7 +784,7 @@ details p{
     display:flex;flex-direction:column;justify-content:center;
     padding:64px 72px;
   }
-  .intro-flex .hero h1{font-size:78px}
+  .intro-flex .hero h1{font-size:52px}
   .intro-flex .hero .script{font-size:36px}
   .intro-flex .hero-copy{max-width:440px;font-size:18px}
   .intro-flex .video-sec{
@@ -799,9 +800,10 @@ details p{
     box-shadow:0 20px 50px rgba(0,0,0,.5);
   }
 
-  .share h2,.rewards-intro h2{max-width:680px;font-size:56px}
+  .share h2,.rewards-intro h2{max-width:1000px;font-size:44px;white-space:nowrap}
   .share .script,.rewards-intro .script{font-size:36px}
   .share-copy,.rewards-intro p{max-width:480px;font-size:18px}
+  .share .quote{max-width:700px;font-size:24px;white-space:nowrap}
   .rewards-intro .numbers{font-size:56px}
   .door{margin-left:-72px;margin-right:-72px;padding-left:72px;padding-right:72px;font-size:44px}
 
@@ -842,7 +844,8 @@ details p{
   /* how: steps as 2x2 grid */
   .how{display:flex;flex-wrap:wrap;gap:8px 40px;max-width:1020px;margin:0 auto}
   .how .eyebrow,.how > h2,.how .cta-note{flex:0 0 100%}
-  .how > h2{max-width:640px;font-size:52px}
+  .how > h2{max-width:750px;font-size:46px;white-space:nowrap}
+  br.mobile-break{display:none}
   .how .script{font-size:34px}
   .step{flex:0 0 calc(50% - 20px)}
   .step h3{font-size:18px}
@@ -992,7 +995,7 @@ details p{
 <!-- 1. ERSTER SCREEN -->
 <section class="hero">
   <span class="eyebrow">TRUE SPIRIT BUSINESS · AMBASSADOR</span>
-  <h1>SAG ES<br>WEITER.</h1>
+  <h1>SAG ES WEITER.</h1>
   <div class="script">Du kennst sie.</div>
   <p class="hero-copy"><strong>Es gibt Frauen, bei denen du sofort weißt:</strong> Das hier ist für sie.<br>Erzähle ihr von der TRUE SPIRIT BUSINESS Experience &amp; sichere dir geniale Rewards.</p>
 </section>
@@ -1124,7 +1127,7 @@ details p{
 <!-- 10. WIE FUNKTIONIERT ES -->
 <section class="how">
   <span class="eyebrow">ES IST SUPER EINFACH.</span>
-  <h2>No selling.<br>Just sharing.</h2>
+  <h2>No selling.<br class="mobile-break">Just sharing.</h2>
 
   <div class="step">
     <div class="n">01</div>
