@@ -55,7 +55,9 @@ h1,h2,h3{font-family:"Instrument Serif",Georgia,serif;font-weight:500;color:var(
   line-height:2.4;display:inline-block;padding:18px 0;
 }
 .gold-text,
-h1 em,h2 em,h3 em,.script.gold,.num.gold{
+h1 em,h2 em,h3 em,.script.gold,.num.gold,
+.eyebrow,.step .n,.rule .n,summary:after,
+.hero .script,.nosell .eyebrow,.final .foot,.popup-kicker{
   background:linear-gradient(135deg, var(--fc-gold-dark) 0%, var(--fc-gold) 45%, var(--fc-gold-light) 70%, var(--fc-gold) 100%);
   -webkit-background-clip:text;background-clip:text;
   color:transparent;-webkit-text-fill-color:transparent;
@@ -64,7 +66,6 @@ h1 em,h2 em,h3 em,.script.gold,.num.gold{
   display:block;
   font-size:11px;line-height:1.25;letter-spacing:.18em;
   text-transform:uppercase;font-weight:700;
-  color:var(--sand);
   margin-bottom:18px;
 }
 @keyframes pulse-btn{
@@ -99,12 +100,11 @@ p{margin:0;font-size:15px;line-height:1.55;color:var(--text)}
 .hero .script{
   margin:6px 0 8px -4px;
   font-size:29px;
-  color:var(--fc-gold-light);
 }
 .hero-copy{
   max-width:350px;
   font-size:12.5px;line-height:1.4;
-  color:var(--text-soft);
+  color:var(--text);
 }
 .hero-copy strong{font-weight:700;color:var(--text)}
 
@@ -132,7 +132,6 @@ p{margin:0;font-size:15px;line-height:1.55;color:var(--text)}
   border:1px solid var(--hairline);
   font-size:8.5px;letter-spacing:.14em;
   text-transform:uppercase;font-weight:700;
-  color:var(--sand);
 }
 
 /* 2. EMOTIONAL */
@@ -153,9 +152,9 @@ p{margin:0;font-size:15px;line-height:1.55;color:var(--text)}
 }
 .share-copy{
   max-width:320px;
-  color:var(--text-soft);
+  color:var(--text);
 }
-.share-copy p{color:var(--text-soft)}
+.share-copy p{color:var(--text)}
 .share-copy p+p{margin-top:15px}
 .share .quote{
   margin:30px 0 0;
@@ -190,7 +189,7 @@ p{margin:0;font-size:15px;line-height:1.55;color:var(--text)}
 }
 .rewards-intro p{
   max-width:300px;
-  color:var(--text-soft);
+  color:var(--text);
 }
 .rewards-intro .numbers{
   margin-top:38px;
@@ -224,7 +223,7 @@ p{margin:0;font-size:15px;line-height:1.55;color:var(--text)}
   margin-top:12px;
   font:700 11px/1 "Manrope";
   letter-spacing:.16em;text-transform:uppercase;
-  color:var(--text-soft)
+  color:var(--text)
 }
 .level h3{
   margin:44px 0 16px;
@@ -236,7 +235,7 @@ p{margin:0;font-size:15px;line-height:1.55;color:var(--text)}
 .level .desc{
   max-width:300px;
   font-size:13.5px;
-  color:var(--text-soft);
+  color:var(--text);
 }
 .level .value{
   margin-top:32px;
@@ -252,7 +251,7 @@ p{margin:0;font-size:15px;line-height:1.55;color:var(--text)}
 .level .value span{
   font-size:9.5px;letter-spacing:.12em;
   text-transform:uppercase;font-weight:700;
-  color:var(--text-soft)
+  color:var(--text)
 }
 .level .micro-script{
   font-family:"Amsterdam Four";
@@ -287,7 +286,7 @@ p{margin:0;font-size:15px;line-height:1.55;color:var(--text)}
 .commission p{
   max-width:305px;
   font-size:14px;
-  color:var(--text-soft);
+  color:var(--text);
 }
 .commission .provision-word{
   margin:36px 0 0;
@@ -306,14 +305,14 @@ p{margin:0;font-size:15px;line-height:1.55;color:var(--text)}
   max-width:none;
   font-size:9.5px;letter-spacing:.14em;
   text-transform:uppercase;font-weight:700;
-  color:var(--text-soft)
+  color:var(--text)
 }
 .commission .closing{
   margin-top:40px;
   font-family:"Instrument Serif";
   font-size:25px;line-height:1.2;
   max-width:355px;
-  color:var(--text-soft)
+  color:var(--text)
 }
 .commission .closing strong{font-weight:500;color:transparent}
 
@@ -352,7 +351,7 @@ p{margin:0;font-size:15px;line-height:1.55;color:var(--text)}
   background:var(--green-dark);
   overflow:hidden;
 }
-.nosell .eyebrow{opacity:.75;margin-bottom:36px;color:var(--fc-gold-light)}
+.nosell .eyebrow{opacity:.75;margin-bottom:36px}
 .nosell h2{
   margin:0 -2px;
   font-weight:500;
@@ -394,7 +393,6 @@ p{margin:0;font-size:15px;line-height:1.55;color:var(--text)}
 .step .n{
   font-family:"Instrument Serif";
   font-size:27px;line-height:1;
-  color:var(--sand)
 }
 .step h3{
   margin:0 0 7px;
@@ -403,7 +401,7 @@ p{margin:0;font-size:15px;line-height:1.55;color:var(--text)}
   letter-spacing:.1em;text-transform:uppercase;
   color:var(--text)
 }
-.step p{font-size:13px;line-height:1.45;color:var(--text-soft)}
+.step p{font-size:13px;line-height:1.45;color:var(--text)}
 .step .sample{
   margin-top:8px;
   font-family:"Instrument Serif";
@@ -416,7 +414,7 @@ p{margin:0;font-size:15px;line-height:1.55;color:var(--text)}
   margin-top:10px;
   font-size:10px;
   font-style:italic;
-  color:var(--text-soft);
+  color:var(--text);
   text-align:center
 }
 
@@ -443,7 +441,7 @@ p{margin:0;font-size:15px;line-height:1.55;color:var(--text)}
   position:relative;z-index:3;
   max-width:300px;
   font-size:13.5px;
-  color:var(--text-soft)
+  color:var(--text)
 }
 .know .genau{
   position:relative;z-index:3;
@@ -510,7 +508,7 @@ p{margin:0;font-size:15px;line-height:1.55;color:var(--text)}
 .movement p{
   max-width:305px;
   font-size:14px;
-  color:var(--text-soft)
+  color:var(--text)
 }
 .movement p+p{margin-top:15px}
 .movement .chant{
@@ -540,9 +538,8 @@ p{margin:0;font-size:15px;line-height:1.55;color:var(--text)}
 .rule .n{
   font-family:"Instrument Serif";
   font-size:22px;
-  color:var(--sand)
 }
-.rule p{font-size:12.5px;line-height:1.42;color:var(--text-soft)}
+.rule p{font-size:12.5px;line-height:1.42;color:var(--text)}
 
 /* 14 FAQ */
 .faq{
@@ -574,14 +571,13 @@ summary:after{
   content:"+";
   font-family:"Instrument Serif";
   font-size:22px;line-height:.7;
-  color:var(--sand)
 }
 details[open] summary:after{content:"–"}
 details p{
   padding-top:14px;
   font-size:12.5px;line-height:1.5;
   max-width:350px;
-  color:var(--text-soft)
+  color:var(--text)
 }
 
 /* 15 FINAL */
@@ -606,7 +602,7 @@ details p{
 .final p{
   max-width:300px;
   font-size:14px;
-  color:var(--text-soft)
+  color:var(--text)
 }
 .final .send{
   margin:42px 0 28px;
@@ -618,7 +614,7 @@ details p{
   margin-top:32px;
   font-size:9.5px;letter-spacing:.15em;
   text-transform:uppercase;font-weight:700;
-  color:var(--text-soft)
+  color:var(--text)
 }
 .final .foot{
   margin-top:0;
@@ -627,7 +623,6 @@ details p{
   line-height:1.5;
   display:inline-block;
   padding:16px 0;
-  color:var(--fc-gold-light)
 }
 
 /* POPUP */
@@ -672,7 +667,7 @@ details p{
 .popup-kicker{
   font-family:"Manrope",sans-serif;
   font-size:10px;font-weight:700;letter-spacing:3px;
-  color:var(--sand);margin-bottom:14px;
+  margin-bottom:14px;
   display:flex;align-items:center;gap:10px;
 }
 .popup-kicker::before{content:'';display:block;width:20px;height:1px;background:var(--sand)}
@@ -683,7 +678,7 @@ details p{
 }
 .popup-box > p{
   font-family:"Manrope",sans-serif;
-  font-size:14px;color:var(--text-soft);line-height:1.6;margin-bottom:22px;
+  font-size:14px;color:var(--text);line-height:1.6;margin-bottom:22px;
 }
 
 /* Sticky */
@@ -871,7 +866,7 @@ details p{
   }
   .know .cta-note{
     position:static;grid-column:1;grid-row:3;
-    text-shadow:none;color:var(--text-soft);margin-top:10px;font-size:18px;
+    text-shadow:none;color:var(--text);margin-top:10px;font-size:18px;
   }
 
   .movement h2{font-size:54px}
@@ -936,7 +931,11 @@ details p{
   font-weight: 700 !important;
   letter-spacing: 1.5px !important;
 }
-#_form_585_ .field-required { color: var(--sand) !important; }
+#_form_585_ .field-required {
+  background: linear-gradient(135deg, var(--fc-gold-dark) 0%, var(--fc-gold) 45%, var(--fc-gold-light) 70%, var(--fc-gold) 100%) !important;
+  -webkit-background-clip: text !important; background-clip: text !important;
+  color: transparent !important; -webkit-text-fill-color: transparent !important;
+}
 #_form_585_ input[type="text"],
 #_form_585_ ._form_element input[type="text"] {
   background: rgba(255,255,255,0.07) !important;
@@ -987,7 +986,7 @@ details p{
 </section>
 
 <section class="video-sec">
-  <div class="video-label">PERSÖNLICHE NACHRICHT VON MARINA</div>
+  <div class="video-label"><span class="gold-text">PERSÖNLICHE NACHRICHT VON MARINA</span></div>
   <div class="video-shell">
     <iframe
       src="https://player.vimeo.com/video/1226521900?app_id=58479&autopause=0&badge=0&player_id=0&title=0&byline=0&portrait=0"
