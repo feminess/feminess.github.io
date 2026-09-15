@@ -454,14 +454,6 @@ footer a{color:inherit}
 </main>
 
 <script>
-/*
-  WICHTIG FÜR DEN LIVE-EINBAU:
-  Die öffentlich sichtbare Ambassador-Danke-Seite zeigt den Linkgenerator,
-  aber nicht die dahinterliegende Tracking-Logik/URL-Struktur.
-  Deshalb bleibt der Generator in dieser Vorschau eine Frontend-Demo.
-  Beim Deployment bitte die bestehende Live-Generator-Logik an
-  #generate-btn, #ambassador-name und #generated-url anbinden.
-*/
 (function(){
   const input = document.getElementById('ambassador-name');
   const btn = document.getElementById('generate-btn');
@@ -471,9 +463,9 @@ footer a{color:inherit}
   const templateButtons = document.querySelectorAll('.copy-template');
   const samples = document.querySelectorAll('.sample[data-template]');
   let currentLink = '';
-  function demoLink(name){
+  function ambassadorLink(name){
     const slug = name.trim().toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/ß/g,'ss').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
-    return 'DEIN-BESTEHENDER-TRACKING-LINK/' + (slug || 'dein-name');
+    return 'https://feminess.github.io/experience/?utm_source=' + (slug || 'dein-name');
   }
   function updateSamples(){
     samples.forEach(el=>{
@@ -482,7 +474,7 @@ footer a{color:inherit}
   }
   btn.addEventListener('click', function(){
     if(!input.value.trim()){ input.focus(); return; }
-    currentLink = demoLink(input.value);
+    currentLink = ambassadorLink(input.value);
     out.textContent = currentLink;
     result.classList.add('show');
     updateSamples();
