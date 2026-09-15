@@ -338,7 +338,7 @@ footer a{color:inherit}
       <p>Die schnellste und persönlichste Variante.</p>
       <p style="margin-top:9px">Schreib ihr nicht wie ein Affiliate.</p>
       <p style="margin-top:9px">Schreib ihr wie <b>du</b>.</p>
-      <div class="sample" id="share-copy-1">„Hey, ich musste gerade direkt an dich denken. Marina macht diese kostenlose TRUE SPIRIT Business Experience und ich glaube wirklich, dass das etwas für dich sein könnte. Schau es dir mal an: [DEIN LINK]“</div>
+      <div class="sample" id="share-copy-1" data-template="„Hey, ich musste gerade direkt an dich denken. Marina macht diese kostenlose TRUE SPIRIT Business Experience und ich glaube wirklich, dass das etwas für dich sein könnte. Schau es dir mal an: [DEIN LINK]“">„Hey, ich musste gerade direkt an dich denken. Marina macht diese kostenlose TRUE SPIRIT Business Experience und ich glaube wirklich, dass das etwas für dich sein könnte. Schau es dir mal an: [DEIN LINK]“</div>
       <div class="toolrow"><button class="smallbtn copy-template" type="button" data-source="share-copy-1">TEXT KOPIEREN</button></div>
     </div>
   </div>
@@ -347,7 +347,7 @@ footer a{color:inherit}
     <div>
       <h3>SOCIAL MEDIA DIREKT NACHRICHT</h3>
       <p>Noch kürzer:</p>
-      <div class="sample" id="share-copy-2">„Okay, das hier musste ich dir schicken 😄 Ich glaube, das könnte gerade ziemlich gut zu dir passen: [DEIN LINK]“</div>
+      <div class="sample" id="share-copy-2" data-template="„Okay, das hier musste ich dir schicken 😄 Ich glaube, das könnte gerade ziemlich gut zu dir passen: [DEIN LINK]“">„Okay, das hier musste ich dir schicken 😄 Ich glaube, das könnte gerade ziemlich gut zu dir passen: [DEIN LINK]“</div>
       <div class="toolrow"><button class="smallbtn copy-template" type="button" data-source="share-copy-2">TEXT KOPIEREN</button></div>
     </div>
   </div>
@@ -462,16 +462,23 @@ footer a{color:inherit}
   const out = document.getElementById('generated-url');
   const copyGenerated = document.getElementById('copy-generated');
   const templateButtons = document.querySelectorAll('.copy-template');
+  const samples = document.querySelectorAll('.sample[data-template]');
   let currentLink = '';
   function demoLink(name){
     const slug = name.trim().toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/ß/g,'ss').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
     return 'DEIN-BESTEHENDER-TRACKING-LINK/' + (slug || 'dein-name');
+  }
+  function updateSamples(){
+    samples.forEach(el=>{
+      el.textContent = el.dataset.template.replace('[DEIN LINK]', currentLink || '[DEIN LINK]');
+    });
   }
   btn.addEventListener('click', function(){
     if(!input.value.trim()){ input.focus(); return; }
     currentLink = demoLink(input.value);
     out.textContent = currentLink;
     result.classList.add('show');
+    updateSamples();
   });
   async function copy(value, button){
     if(!value) return;
@@ -486,8 +493,7 @@ footer a{color:inherit}
   templateButtons.forEach(button=>{
     button.addEventListener('click',()=>{
       const source = document.getElementById(button.dataset.source);
-      const text = source.textContent.replace('[DEIN LINK]', currentLink || '[DEIN LINK]');
-      copy(text,button);
+      copy(source.textContent,button);
     });
   });
 })();
