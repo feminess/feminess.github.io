@@ -1,511 +1,467 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
 <head>
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-NQMQT7QH');</script>
-  <!-- End Google Tag Manager -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Willkommen im Ambassador-Programm | Feminess</title>
-  <link rel="icon" href="https://feminess.de/wp-content/uploads/cropped-favicon@2x-1-32x32.png" sizes="32x32">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital,wght@0,400;1,400&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg:          #0d2420;
-      --bg-alt:      #123830;
-      --green-dark:  #1b5c50;
-      --sand:        #C9A24D;
-      --offwhite:    #f3ede2;
-      --offwhite-70: rgba(243,237,226,0.68);
-      --offwhite-55: rgba(243,237,226,0.55);
-      --hairline:    rgba(243,237,226,0.14);
-      --gold-a:      #8A6A3A;
-      --gold-b:      #C9A24D;
-      --gold-c:      #F3DFA8;
-      --pad:         22px;
-    }
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>FEMINESS · Ambassador Link</title>
 
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    em, i { font-style: normal; }
-    html { scroll-behavior: smooth; overflow-x: hidden; }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Caveat:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    body {
-      font-family: 'Manrope', sans-serif;
-      font-size: 17px;
-      line-height: 1.65;
-      background: var(--bg);
-      color: var(--offwhite);
-      -webkit-font-smoothing: antialiased;
-      overflow-x: hidden;
-    }
+<style>
+:root{
+  --cream:#f6efe5;
+  --paper:#fbf6ef;
+  --sand:#c2ab8d;
+  --green:#257c6c;
+  --deep:#1b5c50;
+  --ink:#171815;
+  --white:#fffdf9;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:#ddd4c8;color:var(--ink);
+  font-family:"Manrope",Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+.page{
+  width:min(100%,430px);margin:0 auto;background:var(--paper);
+  overflow:hidden;box-shadow:0 0 45px rgba(0,0,0,.12);
+}
+img{display:block;width:100%}
+section{position:relative}
+h1,h2,h3,.serif{font-family:"Instrument Serif",Georgia,serif;font-weight:400}
+.script{font-family:"Caveat",cursive;font-weight:500}
+.eyebrow{font-size:9px;line-height:1.25;letter-spacing:.18em;text-transform:uppercase;font-weight:800}
+p{margin:0;font-size:15px;line-height:1.5}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:52px;padding:0 18px;border:0;border-radius:2px;
+  background:var(--deep);color:white;text-decoration:none;
+  font:800 11px/1 "Manrope";letter-spacing:.055em;text-transform:uppercase;
+  cursor:pointer;
+}
 
-    h1, h2, h3 { font-family: 'Instrument Serif', serif; font-weight: 500; color: var(--offwhite); line-height: 1.08; }
+/* HERO / ACTION FIRST */
+.hero{
+  min-height:100svh;
+  padding:17px 18px 28px;
+  background:var(--cream);
+  display:flex;flex-direction:column;
+}
+.logo{width:90px;margin:0 auto 18px}
+.hero .topline{
+  display:flex;justify-content:space-between;gap:12px;
+  margin-bottom:26px
+}
+.hero .check{color:var(--deep)}
+.hero h1{
+  margin:0 -4px;
+  font-size:69px;line-height:.68;
+  letter-spacing:-.065em;
+  text-transform:uppercase;
+}
+.hero .script{
+  margin:14px 0 15px 76px;
+  font-size:31px;line-height:.9;
+  color:var(--deep);transform:rotate(-4deg)
+}
+.hero-copy{
+  max-width:332px;margin-left:34px;
+  font-size:12.5px;line-height:1.38
+}
+.generator{
+  margin-top:auto;
+  padding:18px 0 0;
+  border-top:1px solid rgba(23,24,21,.2);
+}
+.generator .label{
+  display:block;margin-bottom:8px;
+  font-size:9px;font-weight:800;letter-spacing:.13em;text-transform:uppercase
+}
+.fieldrow{display:grid;grid-template-columns:1fr auto;gap:8px}
+.generator input{
+  min-width:0;height:52px;border:1px solid rgba(23,24,21,.25);
+  border-radius:2px;background:rgba(255,255,255,.5);
+  padding:0 13px;font:600 13px/1 "Manrope";color:var(--ink);outline:none
+}
+.generator input:focus{border-color:var(--deep)}
+.generator button{padding:0 14px}
+.generator .note{
+  margin-top:10px;font-size:10px;line-height:1.35;opacity:.7
+}
+.link-result{
+  display:none;margin-top:16px;padding:14px;
+  background:var(--deep);color:white;
+}
+.link-result.show{display:block}
+.link-result .mini{
+  font-size:8px;letter-spacing:.15em;text-transform:uppercase;
+  font-weight:800;opacity:.7;margin-bottom:8px
+}
+.generated-url{
+  font-size:12px;line-height:1.35;word-break:break-all;
+  padding:10px 0 13px
+}
+.copybtn{
+  width:100%;min-height:44px;border:1px solid rgba(255,255,255,.45);
+  background:transparent;color:white;border-radius:2px;
+  font:800 10px/1 "Manrope";letter-spacing:.08em;text-transform:uppercase
+}
 
-    .gold-text {
-      background: linear-gradient(135deg, var(--gold-a) 0%, var(--gold-b) 45%, var(--gold-c) 70%, var(--gold-b) 100%);
-      -webkit-background-clip: text; background-clip: text;
-      color: transparent; -webkit-text-fill-color: transparent;
-    }
+/* MOMENTUM */
+.ready{
+  padding:82px 20px 82px;background:var(--deep);color:white;
+}
+.ready h2{
+  margin:0;font-size:65px;line-height:.7;letter-spacing:-.06em;text-transform:uppercase
+}
+.ready .script{
+  margin:21px 0 37px 78px;font-size:37px;color:#eadcca;transform:rotate(-3deg)
+}
+.ready p{max-width:305px;margin-left:52px;font-size:14px}
+.ready .line{
+  margin:40px 0 0;
+  font-family:"Instrument Serif";font-size:32px;line-height:1.02
+}
 
-    .page { max-width: 480px; margin: 0 auto; background: var(--bg); overflow: hidden; position: relative; }
+/* SHARE QUICK */
+.share{
+  padding:84px 20px 78px;background:var(--paper);
+}
+.share h2{
+  margin:0 0 40px;font-size:60px;line-height:.72;letter-spacing:-.055em
+}
+.share-item{
+  display:grid;grid-template-columns:44px 1fr;gap:14px;
+  padding:22px 0;border-top:1px solid rgba(23,24,21,.18)
+}
+.share-item .n{font-family:"Instrument Serif";font-size:31px;line-height:1}
+.share-item h3{
+  margin:0 0 7px;font-family:"Manrope";font-size:11px;font-weight:800;letter-spacing:.11em;text-transform:uppercase
+}
+.share-item p{font-size:13px}
+.sample{
+  margin-top:14px;padding:16px;background:var(--cream);
+  font-family:"Instrument Serif";font-style:italic;font-size:20px;line-height:1.1
+}
+.toolrow{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.smallbtn{
+  min-height:40px;padding:0 12px;border:1px solid rgba(23,24,21,.25);
+  background:transparent;color:var(--ink);border-radius:2px;
+  font:800 9px/1 "Manrope";letter-spacing:.07em;text-transform:uppercase;
+  cursor:pointer
+}
 
-    /* ── TOP BANNER / COUNTDOWN ── */
-    .top-banner { background: var(--bg-alt); padding: 16px var(--pad); text-align: center; border-bottom: 1px solid var(--hairline); }
-    .banner-row { display: flex; flex-wrap: nowrap; align-items: baseline; justify-content: center; gap: 8px; }
-    .banner-text { font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--offwhite-70); white-space: nowrap; }
-    .banner-countdown { font-family: 'Instrument Serif', serif; font-size: 20px; white-space: nowrap; }
-    .banner-countdown .cd-unit { font-family: 'Manrope', sans-serif; font-size: 9px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--offwhite-55); margin-left: 2px; }
-    .banner-countdown .cd-sep { color: var(--offwhite-55); margin: 0 3px; }
+/* MATERIAL */
+.material{
+  padding:88px 20px 86px;background:var(--sand);
+}
+.material h2{
+  margin:0;font-size:64px;line-height:.7;letter-spacing:-.06em;text-transform:uppercase
+}
+.material .script{
+  margin:20px 0 34px 82px;font-size:34px;color:var(--deep);transform:rotate(-3deg)
+}
+.material p{max-width:300px;margin-left:48px;font-size:14px}
+.material .btn{margin-top:34px;background:var(--ink)}
+.material .micro{margin-top:10px;font-size:9px;letter-spacing:.11em;text-transform:uppercase;font-weight:800;opacity:.7}
 
-    /* ── SECTIONS ── */
-    section { padding: 64px var(--pad); }
-    .eyebrow { display: block; font-size: 12px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--sand); margin-bottom: 14px; }
+/* REWARDS CONDENSED */
+.rewards{
+  padding:88px 20px;background:var(--cream);
+}
+.rewards h2{
+  margin:0 0 42px;font-size:61px;line-height:.71;letter-spacing:-.055em
+}
+.reward{
+  display:grid;grid-template-columns:74px 1fr;gap:16px;
+  padding:18px 0;border-top:1px solid rgba(23,24,21,.18);align-items:start
+}
+.reward .big{
+  font-family:"Instrument Serif";font-size:54px;line-height:.78
+}
+.reward h3{
+  margin:0 0 6px;font-family:"Manrope";font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase
+}
+.reward p{font-size:12.5px;line-height:1.4}
+.reward .value{
+  margin-top:8px;font-family:"Instrument Serif";font-size:23px
+}
+.provision{
+  margin-top:42px;padding:37px 20px;background:var(--deep);color:white
+}
+.provision .ten{
+  font-family:"Instrument Serif";font-size:88px;line-height:.68;letter-spacing:-.06em
+}
+.provision p{margin-top:20px;font-size:13px}
 
-    /* ── HERO ── */
-    .hero { background: var(--bg-alt); text-align: center; padding-top: 56px; }
-    .hero-status-pill {
-      display: inline-flex; align-items: center; gap: 8px; width: fit-content;
-      background: rgba(201,162,77,0.12); border: 1px solid rgba(201,162,77,0.4);
-      color: var(--sand); font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
-      padding: 8px 18px; border-radius: 999px; margin: 0 auto 20px;
-    }
-    .hero-status-pill::before { content: '✓'; font-weight: 900; }
-    .hero h1 { font-size: clamp(38px, 11vw, 48px); margin-bottom: 18px; }
-    .hero-subtitle { font-size: 17px; color: var(--offwhite-70); max-width: 40ch; margin: 0 auto 32px; }
-    .hero-subtitle strong { color: var(--offwhite); font-weight: 700; }
+/* HER */
+.her{
+  padding:82px 20px 0;background:var(--ink);color:white;
+}
+.her h2{
+  margin:0;font-size:69px;line-height:.68;letter-spacing:-.065em;text-transform:uppercase;position:relative;z-index:3
+}
+.her .script{
+  position:relative;z-index:3;margin:17px 0 28px 80px;
+  font-size:36px;color:#eadcca;transform:rotate(-4deg)
+}
+.her p{position:relative;z-index:3;max-width:295px;margin-left:54px;font-size:14px}
+.her-photo{
+  width:calc(100% + 40px);margin:48px -20px 0;height:390px;
+  object-fit:cover;object-position:center 25%;filter:saturate(.92)
+}
+.her .btn{
+  position:absolute;left:20px;bottom:26px;z-index:4;
+  background:var(--paper);color:var(--deep)
+}
 
-    /* ── BILDER: einbluten statt einrahmen ── */
-    .figure { position: relative; overflow: hidden; background: var(--bg-alt); margin: 0 calc(var(--pad) * -1) -1px; }
-    .figure img {
-      width: 100%; height: 260px; object-fit: cover; object-position: center 25%; display: block;
-      mask-image: linear-gradient(to bottom, transparent 0%, black 35%);
-      -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 35%);
-    }
-    .figure::before {
-      content: ''; position: absolute; inset: 0; z-index: 1; pointer-events: none;
-      background: linear-gradient(to bottom, var(--bg-alt) 0%, transparent 45%);
-    }
+/* SUPPORT */
+.support{
+  padding:76px 20px;background:var(--paper);
+}
+.support h2{
+  margin:0 0 24px;font-size:51px;line-height:.76;letter-spacing:-.045em
+}
+.support p{max-width:320px;font-size:13px}
+.support .btn{margin-top:28px}
 
-    /* ── LINK GENERATOR ── */
-    #link-generator { max-width: 400px; margin: 0 auto; text-align: left; background: var(--green-dark); border-radius: 16px; padding: 32px 26px; }
-    #link-generator label { display: block; font-size: 13px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--offwhite-70); margin-bottom: 8px; }
-    #link-generator input#nameInput {
-      width: 100%; padding: 14px 16px; margin-top: 4px; font-family: 'Manrope', sans-serif; font-size: 16px;
-      border: 1px solid var(--hairline); border-radius: 10px; background: rgba(255,255,255,0.08); color: var(--offwhite);
-    }
-    #link-generator input#nameInput::placeholder { color: var(--offwhite-55); }
-    #link-generator input#nameInput:focus { outline: none; border-color: var(--sand); }
-    #link-generator #generateBtn { margin-top: 18px; }
-    #link-generator #result { font-size: 15px; color: var(--offwhite-70); line-height: 1.7; margin-top: 22px; }
-    #link-generator #result a { color: var(--sand); font-weight: 700; word-break: break-all; }
-    #link-generator #result button {
-      margin-top: 10px; background: rgba(255,255,255,0.08); color: var(--offwhite); border: 1px solid var(--hairline);
-      border-radius: 999px; padding: 9px 18px; font-family: 'Manrope', sans-serif; font-size: 12px; font-weight: 700;
-      letter-spacing: 1px; cursor: pointer; transition: background 0.2s;
-    }
-    #link-generator #result button:hover { background: rgba(255,255,255,0.16); }
+/* FINAL */
+.final{
+  padding:92px 20px;background:var(--deep);color:white;
+  min-height:660px;display:flex;flex-direction:column;justify-content:center
+}
+.final h2{
+  margin:0;font-size:72px;line-height:.66;letter-spacing:-.065em;text-transform:uppercase
+}
+.final .script{
+  margin:22px 0 34px 86px;font-size:40px;color:#eadcca;transform:rotate(-4deg)
+}
+.final p{max-width:300px;margin-left:54px;font-size:14px}
+.final .send{
+  margin:44px 0 29px;font-family:"Instrument Serif";font-size:59px;line-height:.73;letter-spacing:-.05em
+}
+.final .btn{background:var(--paper);color:var(--deep);align-self:flex-start}
+.final .foot{margin-top:30px;font-size:9px;letter-spacing:.15em;text-transform:uppercase;font-weight:800;opacity:.65}
 
-    /* ── BUTTONS ── */
-    @keyframes pulse-btn {
-      0%, 100% { transform: scale(1); box-shadow: 0 6px 28px rgba(138,106,58,.45); }
-      50% { transform: scale(1.05); box-shadow: 0 14px 46px rgba(201,162,77,.7); }
-    }
-    .btn {
-      display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%;
-      background: linear-gradient(90deg, var(--gold-a) 0%, var(--gold-b) 25%, var(--gold-c) 50%, var(--gold-b) 75%, var(--gold-a) 100%);
-      color: var(--bg); font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 15px;
-      letter-spacing: .05em; text-transform: uppercase; height: 56px; padding: 0 24px;
-      border-radius: 999px; border: none; cursor: pointer; text-decoration: none;
-      animation: pulse-btn 2.2s ease-in-out infinite; transition: transform 0.15s;
-    }
-    .btn:hover { transform: translateY(-1px); }
+footer{
+  background:#102f2a;color:#e7ddd0;padding:30px 18px 40px;
+  text-align:center;font-size:9px;line-height:1.6
+}
+footer a{color:inherit}
 
-    /* ── SHARING TIPS ── */
-    .share-section {
-      background:
-        linear-gradient(to bottom, var(--bg) 0%, transparent 18%, transparent 82%, var(--bg) 100%),
-        linear-gradient(rgba(13,36,32,0.88), rgba(13,36,32,0.92)),
-        url('../webinar/Bilder/ChatGPT Image 9. Sept. 2026, 16_11_22.png') center / cover no-repeat;
-    }
-    .share-grid { display: flex; flex-direction: column; gap: 14px; margin-bottom: 28px; }
-    .share-card { background: var(--green-dark); border-radius: 14px; padding: 22px 22px; display: flex; gap: 16px; align-items: flex-start; }
-    .share-icon { font-size: 24px; line-height: 1; flex-shrink: 0; width: 32px; text-align: center; }
-    .share-body h3 { font-size: 18px; margin-bottom: 6px; }
-    .share-body p { font-size: 14.5px; color: var(--offwhite-70); line-height: 1.6; }
-    .share-template { background: rgba(255,255,255,0.04); border: 1px solid var(--hairline); border-radius: 12px; padding: 22px; }
-    .share-template-label { display: block; font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--sand); margin-bottom: 12px; }
-    .share-template p { font-size: 15px; font-style: italic; color: var(--offwhite-70); line-height: 1.65; margin-bottom: 16px; }
-    .share-template button {
-      background: rgba(255,255,255,0.08); color: var(--offwhite); border: 1px solid var(--hairline);
-      border-radius: 999px; padding: 10px 20px; font-family: 'Manrope', sans-serif; font-size: 12px; font-weight: 700;
-      letter-spacing: 1px; cursor: pointer; transition: background 0.2s;
-    }
-    .share-template button:hover { background: rgba(255,255,255,0.16); }
-
-    /* ── REWARD REVEAL ── */
-    .price-section { background: var(--bg); text-align: center; }
-    .price-card { background: var(--green-dark); border-radius: 16px; padding: 40px 24px; }
-    .price-card h3 { font-size: clamp(30px, 8vw, 38px); margin-bottom: 28px; }
-
-    .reward-tiers { display: flex; flex-direction: column; gap: 12px; margin-bottom: 28px; text-align: left; }
-    .reward-tier { display: flex; gap: 14px; align-items: center; background: rgba(255,255,255,0.05); border: 1px solid var(--hairline); border-radius: 12px; padding: 16px 18px; }
-    .reward-tier-body { flex: 1; min-width: 0; }
-    .reward-tier-label { display: block; font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--sand); margin-bottom: 5px; }
-    .reward-tier-title { display: block; font-family: 'Manrope', sans-serif; font-size: 17px; font-weight: 700; color: #fff; line-height: 1.35; }
-    .reward-tier-meta { display: block; font-size: 13.5px; color: var(--offwhite-70); line-height: 1.5; margin-top: 4px; }
-    .reward-tier-value { flex-shrink: 0; font-family: 'Instrument Serif', serif; font-size: 26px; white-space: nowrap; }
-
-    .reward-commission { border-top: 1px solid var(--hairline); padding-top: 22px; margin-bottom: 28px; text-align: left; }
-    .reward-commission p { font-size: 14.5px; color: var(--offwhite-70); line-height: 1.6; }
-    .reward-commission strong { color: #fff; font-weight: 700; }
-
-    /* ── SO FUNKTIONIERT'S ── */
-    .benefits-section {
-      background:
-        linear-gradient(to bottom, var(--bg) 0%, transparent 18%, transparent 82%, var(--bg) 100%),
-        linear-gradient(rgba(13,36,32,0.72), rgba(13,36,32,0.72)),
-        url('../webinar/Bilder/FEMINESS_gold_energy_oben_links_1zu1_highres.png') center / cover no-repeat;
-    }
-    .benefits-header { text-align: center; margin-bottom: 40px; }
-    .benefits-header h2 { font-size: clamp(30px, 8vw, 38px); }
-    .benefits-grid { display: flex; flex-direction: column; gap: 16px; }
-    .benefit-card { background: var(--green-dark); border-radius: 14px; padding: 26px 24px; display: flex; gap: 18px; align-items: flex-start; }
-    .benefit-num { font-size: 40px; color: rgba(243,237,226,0.32); line-height: 1; flex-shrink: 0; width: 40px; }
-    .benefit-body h3 { font-size: 21px; margin-bottom: 8px; }
-    .benefit-body p { font-size: 15.5px; color: var(--offwhite-70); line-height: 1.65; }
-
-    /* ── BEDINGUNGEN ── */
-    .rules-section { background: var(--bg-alt); }
-    .rules-section h2 { text-align: center; margin-bottom: 32px; font-size: clamp(28px, 8vw, 36px); }
-    .rules-box { background: rgba(255,255,255,0.04); border: 1px solid var(--hairline); border-radius: 12px; padding: 28px 24px; }
-    .rules-list { list-style: none; display: flex; flex-direction: column; gap: 16px; }
-    .rules-list li { position: relative; padding-left: 26px; font-size: 15.5px; color: var(--offwhite-70); line-height: 1.65; }
-    .rules-list li::before { content: '✓'; position: absolute; left: 0; top: 1px; font-size: 13px; font-weight: 700; color: var(--sand); }
-    .rules-list li strong { color: var(--offwhite); }
-
-    /* ── FAQ ── */
-    .faq-section { background: var(--bg); }
-    .faq-section h2 { margin-bottom: 28px; font-size: clamp(28px, 8vw, 36px); }
-    .faq-item { border-bottom: 1px solid var(--hairline); }
-    .faq-item summary { cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 18px 0; font-family: 'Instrument Serif', serif; font-weight: 400; font-size: 20px; color: var(--offwhite); }
-    .faq-item summary::-webkit-details-marker { display: none; }
-    .faq-item summary::after { content: '+'; flex-shrink: 0; font-size: 22px; color: var(--sand); }
-    .faq-item[open] summary::after { content: '–'; }
-    .faq-answer { font-size: 14.5px; color: var(--offwhite-70); line-height: 1.7; padding: 0 0 20px; }
-    .faq-answer strong { color: var(--offwhite); }
-
-    /* ── WERBEMATERIAL ── */
-    .material-section { background: linear-gradient(to bottom, var(--bg) 0%, var(--bg-alt) 18%, var(--bg-alt) 82%, var(--bg) 100%); }
-    .material-box { background: var(--green-dark); border-radius: 16px; padding: 40px 28px; text-align: center; }
-    .material-box h2 { font-size: clamp(28px, 8vw, 34px); margin-bottom: 12px; }
-    .material-box p { font-size: 15.5px; color: var(--offwhite-70); max-width: 34ch; margin: 0 auto 28px; }
-
-    /* ── FINAL CTA ── */
-    .final-cta { background: linear-gradient(180deg, var(--bg) 0%, var(--green-dark) 100%); text-align: center; }
-    .final-cta h2 { font-size: clamp(28px, 8vw, 36px); margin-bottom: 24px; }
-    .final-note { font-size: 13px; color: var(--offwhite-55); margin-top: 24px; line-height: 1.7; }
-    .final-note strong { color: var(--offwhite); }
-
-    /* ── FOOTER ── */
-    footer { background: #07291d; padding: 40px var(--pad); border-top: 1px solid var(--hairline); text-align: center; }
-    .footer-logo { height: 30px; width: auto; max-width: 100%; margin-bottom: 20px; }
-    .footer-links { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; margin-bottom: 16px; }
-    .footer-links a { font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--offwhite-55); text-decoration: none; }
-    .footer-links a:hover { color: var(--sand); }
-    .footer-copy { font-size: 11px; color: var(--offwhite-55); }
-
-    @media (min-width: 400px) {
-      :root { --pad: 26px; }
-    }
-
-    /* ── DESKTOP (mobile layout above stays untouched) ──
-       Sektions-Hintergründe volle Breite, Inhalt bleibt in zentrierter ~680px-Spalte,
-       Struktur/Reihenfolge/Komponenten identisch zur Mobilversion. */
-    @media (min-width: 900px) {
-      .page { max-width: none; width: 100%; }
-
-      section, .top-banner, footer {
-        padding-left: max(64px, calc(50% - 340px));
-        padding-right: max(64px, calc(50% - 340px));
-      }
-      section { padding-top: 100px; padding-bottom: 100px; }
-
-      .hero h1 { font-size: clamp(44px, 4vw, 56px); }
-
-      /* Bild-Container: auf Desktop nicht mehr randlos bluten (sonst extrem breiter,
-         zu flacher Ausschnitt bei fixer 260px-Höhe) – stattdessen begrenzte, zentrierte Box
-         mit größerer Höhe, damit kein vertikaler Zuschnitt mehr nötig ist. */
-      .figure { max-width: 640px; height: 480px; margin: 40px auto 0; border-radius: 16px; }
-      .figure img { height: 100%; object-position: center; mask-image: none; -webkit-mask-image: none; }
-      .figure::before { display: none; }
-
-      .price-card h3,
-      .benefits-header h2,
-      .rules-section h2,
-      .faq-section h2,
-      .material-box h2,
-      .final-cta h2 {
-        font-size: clamp(34px, 3vw, 42px);
-      }
-    }
-  </style>
+@media(max-width:374px){
+  .hero h1{font-size:62px}
+  .ready h2,.material h2{font-size:58px}
+  .share h2,.rewards h2{font-size:55px}
+  .her h2{font-size:62px}
+  .final h2{font-size:64px}
+}
+</style>
 </head>
+
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NQMQT7QH"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+<main class="page">
 
-<div class="page">
-
-<!-- TOP BANNER -->
-<div class="top-banner">
-  <div class="banner-row">
-    <span class="banner-text">Aktion endet in</span>
-    <span class="banner-countdown">
-      <span id="b-days" class="gold-text">00</span><span class="cd-unit">Tage</span>
-      <span class="cd-sep">:</span>
-      <span id="b-hours" class="gold-text">00</span><span class="cd-unit">Std</span>
-      <span class="cd-sep">:</span>
-      <span id="b-minutes" class="gold-text">00</span><span class="cd-unit">Min</span>
-      <span class="cd-sep">:</span>
-      <span id="b-seconds" class="gold-text">00</span><span class="cd-unit">Sek</span>
-    </span>
+<section class="hero" id="link">
+  <img class="logo" src="https://feminess.github.io/true-spirit-business/img/logo-rosegold.png" alt="Feminess">
+  <div class="topline eyebrow">
+    <span>TRUE SPIRIT BUSINESS · AMBASSADOR</span>
+    <span class="check">✓ DU BIST DABEI</span>
   </div>
-</div>
-
-<!-- HERO -->
-<div class="hero-wrap">
-<section class="hero">
-  <span class="hero-status-pill">Anmeldung erfolgreich</span>
-  <h1>Super, du bist<br><em class="gold-text">Feminess Ambassador!</em></h1>
-  <p class="hero-subtitle">Wir haben dir gerade eine <strong>Bestätigungs-E-Mail</strong> geschickt. Nur noch ein Schritt fehlt: Erstelle jetzt deinen persönlichen Empfehlungslink und leg direkt los.</p>
-
-  <div id="link-generator">
-    <label for="nameInput">Dein Name</label>
-    <input type="text" id="nameInput" placeholder="z. B. Erika Musterfrau">
-    <button id="generateBtn" class="btn">Link generieren</button>
-
-    <div id="result"></div>
-  </div>
-</section>
-
-<div class="figure">
-  <img src="../webinar/Bilder/DSCF1055 Kopie.jpg" alt="Marina Henze">
-</div>
-</div>
-
-<!-- REWARD REVEAL -->
-<section class="price-section">
-  <div class="price-card">
-    <h3>Deine Prämien als <em class="gold-text">Ambassador</em></h3>
-
-    <div class="reward-tiers">
-      <div class="reward-tier">
-        <div class="reward-tier-body">
-          <span class="reward-tier-label">Ab 1 Empfehlung</span>
-          <span class="reward-tier-title">Geldmagnet-Meditation</span>
-        </div>
-        <span class="reward-tier-value gold-text">47 €</span>
-      </div>
-      <div class="reward-tier">
-        <div class="reward-tier-body">
-          <span class="reward-tier-label">Ab 5 Empfehlungen</span>
-          <span class="reward-tier-title">„The Workshop Code" Online-Kurs</span>
-        </div>
-        <span class="reward-tier-value gold-text">297 €</span>
-      </div>
-      <div class="reward-tier">
-        <div class="reward-tier-body">
-          <span class="reward-tier-label">Ab 10 Empfehlungen</span>
-          <span class="reward-tier-title">„Root to Rise"</span>
-          <span class="reward-tier-meta">7 Wochen · 1×/Woche live mit Marina &amp; Vera</span>
-        </div>
-        <span class="reward-tier-value gold-text">397 €</span>
-      </div>
-      <div class="reward-tier">
-        <div class="reward-tier-body">
-          <span class="reward-tier-label">Ab 20 Anmeldungen</span>
-          <span class="reward-tier-title">„First Choice Root"</span>
-          <span class="reward-tier-meta">7 Wochen inkl. Online-Kurs · 2×/Woche live mit Marina &amp; Vera</span>
-        </div>
-        <span class="reward-tier-value gold-text">997 €</span>
-      </div>
+  <h1>YOU'RE IN.</h1>
+  <div class="script">Jetzt sag es weiter ;-).</div>
+  <p class="hero-copy">Deine Anmeldung als Ambassador ist bestätigt.<br>Jetzt fehlt nur noch <b>dein persönlicher Empfehlungslink.</b><br><br>Trag deinen Namen ein, generiere deinen Link und dann denk an die erste Frau, die TRUE SPIRIT BUSINESS unbedingt sehen sollte.</p>
+  <div class="generator">
+    <label class="label" for="ambassador-name">DEIN NAME</label>
+    <div class="fieldrow">
+      <input id="ambassador-name" type="text" placeholder="Vorname Nachname" autocomplete="name">
+      <button class="btn" id="generate-btn" type="button">LINK GENERIEREN →</button>
     </div>
-
-    <div class="reward-commission">
-      <p>Für jede Frau, die sich entscheidet, mit uns weiterzugehen, erhältst du zusätzlich <strong>10 % Empfehlungs-Provision</strong> (zwischen 100 € und 700 €).</p>
+    <div class="link-result" id="link-result">
+      <div class="mini">YOUR PERSONAL AMBASSADOR LINK</div>
+      <div class="generated-url" id="generated-url">–</div>
+      <button class="copybtn" id="copy-generated" type="button">LINK KOPIEREN →</button>
+      <div class="note" style="color:white;opacity:.78">Dieser Link ist dir persönlich zugeordnet. Teile immer diesen Link, damit deine Empfehlungen automatisch dir zugeordnet werden können.</div>
     </div>
   </div>
 </section>
 
-<!-- SHARING TIPS -->
-<section class="share-section">
-  <div class="benefits-header">
-    <span class="eyebrow" style="justify-content:center;display:flex;">So geht's am einfachsten</span>
-    <h2>Deinen Link <em class="gold-text">teilen</em></h2>
-  </div>
-  <div class="share-grid">
-    <div class="share-card">
-      <div class="share-icon">💬</div>
-      <div class="share-body">
-        <h3>Per WhatsApp</h3>
-        <p>Schick den Link direkt an eine Freundin, die du gerade im Kopf hast – persönlich wirkt immer am besten.</p>
-      </div>
-    </div>
-    <div class="share-card">
-      <div class="share-icon">✉️</div>
-      <div class="share-body">
-        <h3>Per E-Mail</h3>
-        <p>Ein paar persönliche Zeilen, warum du an sie gedacht hast, plus deinen Link darunter.</p>
-      </div>
-    </div>
-    <div class="share-card">
-      <div class="share-icon">📱</div>
-      <div class="share-body">
-        <h3>In deiner Story</h3>
-        <p>Teile deinen Link auf Instagram oder Facebook und verlinke deinen persönlichen Link.</p>
-      </div>
-    </div>
-  </div>
-  <div class="share-template">
-    <span class="share-template-label">Textvorschlag zum Kopieren</span>
-    <p id="shareTemplateText">„Hey! Kennst du schon die Live-Experience TRUE SPIRIT Business von Feminess? Ich glaube, das könnte auch was für dich sein! Schau's dir gerne mal kostenfrei an: [dein Link]"</p>
-    <button id="copyTemplateBtn" type="button">📋 Text kopieren</button>
-  </div>
+<section class="ready">
+  <div class="eyebrow">THAT'S IT. YOU'RE READY.</div>
+  <h2>ONE LINK.<br>ONE WOMAN.<br>ONE MOVE.</h2>
+  <div class="script">You already know her.</div>
+  <p>Du musst jetzt keine Liste mit 20 Frauen schreiben.</p>
+  <p style="margin-top:13px">Du musst niemanden überzeugen.</p>
+  <p style="margin-top:13px">Du musst auch keine perfekte Nachricht formulieren.</p>
+  <p style="margin-top:22px"><b>Denk einfach an die erste Frau, die dir gerade in den Kopf kommt.</b></p>
+  <div class="line">„Das hier muss sie sehen.“</div>
+  <p style="margin-top:22px">Und dann schick ihr deinen Link.</p>
 </section>
 
-<!-- WERBEMATERIAL -->
-<section class="material-section">
-  <div class="material-box">
-    <span class="eyebrow" style="justify-content:center;display:flex;">Für deine Empfehlung</span>
-    <h2>Dein <em class="gold-text">Werbematerial</em></h2>
-    <p>Bilder, Texte und Grafiken zum Teilen – fertig für WhatsApp, Story & Co.</p>
-    <a href="https://bitrix24public.com/feminess.bitrix24.de/folder/8B5lzaE2RDXhMkZKMK9z" class="btn" target="_blank" rel="noopener">Werbematerial herunterladen</a>
-  </div>
-</section>
-
-<!-- SO FUNKTIONIERT'S -->
-<section class="benefits-section">
-  <div class="benefits-header">
-    <span class="eyebrow" style="justify-content:center;display:flex;">In drei Schritten</span>
-    <h2>Zu deinen <em class="gold-text">Prämien</em></h2>
-  </div>
-  <div class="benefits-grid">
-    <div class="benefit-card">
-      <div class="benefit-num gold-text">1</div>
-      <div class="benefit-body">
-        <h3>Link erstellen</h3>
-        <p>Trag oben deinen Namen ein und generiere deinen persönlichen Empfehlungslink.</p>
-      </div>
+<section class="share">
+  <div class="eyebrow">MACH ES PERSÖNLICH.</div>
+  <h2>SHARE IT<br>YOUR WAY.</h2>
+  <div class="share-item">
+    <div class="n">01</div>
+    <div>
+      <h3>WHATSAPP / TELEGRAM</h3>
+      <p>Die schnellste und persönlichste Variante.</p>
+      <p style="margin-top:9px">Schreib ihr nicht wie ein Affiliate.</p>
+      <p style="margin-top:9px">Schreib ihr wie <b>du</b>.</p>
+      <div class="sample" id="share-copy-1">„Hey, ich musste gerade direkt an dich denken. Marina macht diese kostenlose TRUE SPIRIT Business Experience und ich glaube wirklich, dass das etwas für dich sein könnte. Schau es dir mal an: [DEIN LINK]“</div>
+      <div class="toolrow"><button class="smallbtn copy-template" type="button" data-source="share-copy-1">TEXT KOPIEREN →</button></div>
     </div>
-    <div class="benefit-card">
-      <div class="benefit-num gold-text">2</div>
-      <div class="benefit-body">
-        <h3>Mit Frauen teilen</h3>
-        <p>Schick den Link an Frauen, die bereit für Veränderung sind – per WhatsApp, Mail oder Social Media.</p>
-      </div>
+  </div>
+  <div class="share-item">
+    <div class="n">02</div>
+    <div>
+      <h3>SOCIAL MEDIA DIREKT NACHRICHT</h3>
+      <p>Noch kürzer:</p>
+      <div class="sample" id="share-copy-2">„Okay, das hier musste ich dir schicken 😄 Ich glaube, das könnte gerade ziemlich gut zu dir passen: [DEIN LINK]“</div>
+      <div class="toolrow"><button class="smallbtn copy-template" type="button" data-source="share-copy-2">TEXT KOPIEREN →</button></div>
     </div>
-    <div class="benefit-card">
-      <div class="benefit-num gold-text">3</div>
-      <div class="benefit-body">
-        <h3>Deine Prämien</h3>
-        <p>Meldet sie sich über deinen Link an, bekommst du deine Prämie.</p>
-      </div>
+  </div>
+  <div class="share-item">
+    <div class="n">03</div>
+    <div>
+      <h3>SOCIAL MEDIA POST | NEWSLETTER</h3>
+      <p>Du möchtest nicht nur einzelne Frauen anschreiben?</p>
+      <p style="margin-top:9px">Dann teile TRUE SPIRIT BUSINESS in deiner Story, Reels, Beiträge oder schicke direkt einen Newsletter. Textvorlagen findest du weiter unten auf dieser Seite.</p>
+      <p style="margin-top:12px"><b>Wichtig:</b> Verwende dabei immer deinen persönlichen Ambassador-Link.</p>
+      <div class="script" style="font-size:27px;color:var(--deep);margin-top:14px;transform:rotate(-2deg)">Whatever feels like you.</div>
     </div>
   </div>
 </section>
 
-<!-- FINAL CTA -->
-<section class="final-cta">
-  <h2>Wer fällt dir gerade <em class="gold-text">ein?</em></h2>
-  <a href="#link-generator" class="btn">Zu meinem Link scrollen</a>
-  <p class="final-note">Fragen zu deinem Ambassador-Status? Schreib uns einfach – wir melden uns persönlich bei dir.</p>
+<section class="material">
+  <div class="eyebrow">WIR MACHEN ES EINFACH FÜR DICH</div>
+  <h2>READY<br>TO SHARE.</h2>
+  <div class="script">We've got you.</div>
+  <p>Du musst keine eigenen Grafiken bauen.</p>
+  <p style="margin-top:12px">Wir haben für dich <b>Bilder, Story-Vorlagen und Texte</b> vorbereitet, die du direkt für deine Empfehlung verwenden kannst.</p>
+  <p style="margin-top:15px">WhatsApp.<br>Instagram.<br>Facebook.<br>E-Mail uvm.</p>
+  <p style="margin-top:15px">Nimm, was zu dir passt.</p>
+  <a class="btn" href="https://bitrix24public.com/" target="_blank" rel="noopener">WERBEMATERIAL HOLEN →</a>
+  <div class="micro">Your TRUE SPIRIT BUSINESS Ambassador Toolkit.</div>
 </section>
 
-<!-- FOOTER -->
+<section class="rewards">
+  <div class="eyebrow">REMEMBER WHAT YOU'RE PLAYING FOR.</div>
+  <h2>THE MORE<br>YOU SHARE,<br>THE MORE<br>YOU GET.</h2>
+  <div class="reward"><div class="big">1</div><div><h3>FRAU</h3><p>Geldmagnet Meditation</p><div class="value">47 € Value</div></div></div>
+  <div class="reward"><div class="big">5</div><div><h3>FRAUEN</h3><p>The Workshop Code</p><div class="value">297 € Value</div></div></div>
+  <div class="reward"><div class="big">10</div><div><h3>FRAUEN</h3><p>ROOT TO RISE<br>7 Wochen live mit Marina &amp; Vera</p><div class="value">397 € Value</div></div></div>
+  <div class="reward"><div class="big">20</div><div><h3>FRAUEN</h3><p>FIRST CHOICE ROOT<br>7 Wochen · 2× pro Woche live<br>mit Marina &amp; Vera</p><div class="value">997 € Value</div></div></div>
+  <div class="script" style="font-size:32px;color:var(--deep);margin:30px 0 0 86px;transform:rotate(-3deg)">How far will you go?</div>
+</section>
+
+<section class="provision" style="margin:0;padding:80px 20px 84px">
+  <div class="eyebrow">AND DON'T FORGET.</div>
+  <div class="ten" style="font-size:112px;margin-top:16px">10%</div>
+  <p>Wenn eine Frau durch deine Empfehlung zu TRUE SPIRIT BUSINESS kommt und anschließend mit uns weitergeht, erhältst du zusätzlich:</p>
+  <div class="serif" style="font-size:57px;line-height:.76;letter-spacing:-.045em;margin-top:37px">10 %<br>PROVISION.</div>
+  <p style="margin-top:35px">Je nach Angebot können das etwa</p>
+  <div class="serif" style="font-size:63px;line-height:.8;letter-spacing:-.05em;margin-top:12px">100–700 €</div>
+  <p style="margin-top:8px"><b>für einen einzigen Perfect Match sein.</b></p>
+  <p style="margin-top:34px">Aber:</p>
+  <p style="margin-top:10px"><b>Du musst nichts verkaufen.</b></p>
+  <p style="margin-top:10px">Deine Aufgabe ist nur, die richtige Frau auf die richtige Tür aufmerksam zu machen.</p>
+  <p style="margin-top:10px"><b>Den Rest machen wir.</b></p>
+</section>
+
+<section class="her">
+  <div class="eyebrow">DENK AN SIE.</div>
+  <h2>WHO<br>CAME<br>TO MIND?</h2>
+  <div class="script">einfach hier.</div>
+  <p>Während du diese Seite gelesen hast, ist dir wahrscheinlich längst jemand eingefallen.</p>
+  <p style="margin-top:14px">Vielleicht deine Freundin.<br>Eine Kundin.<br>Eine ehemalige Kollegin.<br>Eine Frau aus deiner Community.</p>
+  <p style="margin-top:14px">Oder jemand, bei dem du schon länger denkst:</p>
+  <p style="margin-top:14px"><b>„Da wartet eigentlich noch so viel mehr auf sie.“</b></p>
+  <p style="margin-top:14px">Vielleicht ist sie nur <b>eine Nachricht</b> davon entfernt, TRUE SPIRIT BUSINESS für sich zu entdecken.</p>
+  <div class="serif" style="position:relative;z-index:3;font-size:53px;line-height:.74;letter-spacing:-.05em;margin:37px 0 0">SEND IT<br>TO HER.</div>
+  <img class="her-photo" src="https://feminess.github.io/Bilder/Marina_MAI2314232%20Kopie.jpg" alt="Marina">
+  <a class="btn" href="#link">ZU MEINEM LINK ↑</a>
+</section>
+
+<section class="support">
+  <div class="eyebrow">WIR SIND DA.</div>
+  <h2>NOCH FRAGEN?</h2>
+  <p>Du bist unsicher, ob deine Empfehlung gezählt wurde, hast eine Frage zu deinen Prämien oder brauchst Unterstützung mit deinem Ambassador-Link?</p>
+  <p style="margin-top:14px"><b>Schreib uns einfach.</b></p>
+  <p style="margin-top:8px">Wir melden uns persönlich bei dir.</p>
+  <a class="btn" href="mailto:info@feminess.de">FEMINESS TEAM KONTAKTIEREN →</a>
+</section>
+
+<section class="final">
+  <div class="eyebrow">TRUE SPIRIT BUSINESS · AMBASSADOR</div>
+  <h2>NOW<br>MAKE<br>THE FIRST<br>MOVE.</h2>
+  <div class="script">Sag es weiter.</div>
+  <p>Dein Link steht.</p>
+  <p style="margin-top:12px">Jetzt fehlt nur noch die eine Frau, bei der du gerade fühlst:</p>
+  <p style="margin-top:14px"><b>„Das könnte genau ihr Moment sein.“</b></p>
+  <div class="send">SENDE IHR<br>DEN LINK.</div>
+  <a class="btn" href="#link">ZU MEINEM LINK →</a>
+  <div class="foot">Woman to woman.<br>Spirit to spirit.</div>
+</section>
+
 <footer>
-  <img src="../webinar/Bilder/Feminess-Logo-Gold.png" alt="Feminess" class="footer-logo">
-  <div class="footer-links">
-    <a href="https://feminess.github.io/Datenschutz/">Datenschutzerklärung</a>
-    <a href="https://feminess.github.io/Impressum/">Impressum</a>
-  </div>
-  <p class="footer-copy">© 2026 FEMINESS – MARINA HENZE</p>
+  © 2026 FEMINESS · MARINA HENZE<br>
+  <a href="https://feminess.de/datenschutz/">Datenschutzerklärung</a>
+  &nbsp; · &nbsp;
+  <a href="https://feminess.de/impressum/">Impressum</a>
 </footer>
 
-</div>
+</main>
 
 <script>
-  /* ── COUNTDOWN: 26.09.2026 12:00 Uhr CEST = 10:00 UTC ── */
-  const target = new Date('2026-09-26T10:00:00Z');
-  const idsBanner = [['b-days','b-hours','b-minutes','b-seconds']];
-  function pad(n) { return String(n).padStart(2,'0'); }
-  function updateIds(tgt, idSets) {
-    const diff = tgt - new Date();
-    const d = diff > 0 ? Math.floor(diff/86400000) : 0;
-    const h = diff > 0 ? Math.floor((diff%86400000)/3600000) : 0;
-    const m = diff > 0 ? Math.floor((diff%3600000)/60000) : 0;
-    const s = diff > 0 ? Math.floor((diff%60000)/1000) : 0;
-    idSets.forEach(([dEl,hEl,mEl,sEl]) => {
-      document.getElementById(dEl).textContent = pad(d);
-      document.getElementById(hEl).textContent = pad(h);
-      document.getElementById(mEl).textContent = pad(m);
-      document.getElementById(sEl).textContent = pad(s);
-    });
+/*
+  WICHTIG FÜR DEN LIVE-EINBAU:
+  Die öffentlich sichtbare Ambassador-Danke-Seite zeigt den Linkgenerator,
+  aber nicht die dahinterliegende Tracking-Logik/URL-Struktur.
+  Deshalb bleibt der Generator in dieser Vorschau eine Frontend-Demo.
+  Beim Deployment bitte die bestehende Live-Generator-Logik an
+  #generate-btn, #ambassador-name und #generated-url anbinden.
+*/
+(function(){
+  const input = document.getElementById('ambassador-name');
+  const btn = document.getElementById('generate-btn');
+  const result = document.getElementById('link-result');
+  const out = document.getElementById('generated-url');
+  const copyGenerated = document.getElementById('copy-generated');
+  const templateButtons = document.querySelectorAll('.copy-template');
+  let currentLink = '';
+  function demoLink(name){
+    const slug = name.trim().toLowerCase().normalize('NFD').replace(/[\\u0300-\\u036f]/g,'').replace(/ß/g,'ss').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+    return 'DEIN-BESTEHENDER-TRACKING-LINK/' + (slug || 'dein-name');
   }
-  function tick() { updateIds(target, idsBanner); }
-  tick(); setInterval(tick, 1000);
-
-</script>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const input = document.getElementById("nameInput");
-    const button = document.getElementById("generateBtn");
-    const resultDiv = document.getElementById("result");
-    const copyBtn = document.getElementById("copyTemplateBtn");
-    const templateText = document.getElementById("shareTemplateText");
-    const templateBase = templateText ? templateText.textContent : "";
-
-    button.addEventListener("click", function () {
-      const name = input.value.trim();
-
-      if (!name) {
-        resultDiv.innerHTML = "❗Bitte gib deinen Namen ein.";
-        return;
-      }
-
-      // Leerzeichen mit + ersetzen
-      const encodedName = encodeURIComponent(name).replace(/%20/g, "+");
-      const webinarLink = `https://feminess.github.io/workshop/?utm_source=${encodedName}`;
-
-      resultDiv.innerHTML = `
-        <p>Link zur Live-Experience:<br>
-        <a href="${webinarLink}" target="_blank">${webinarLink}</a><br>
-        <button onclick="navigator.clipboard.writeText('${webinarLink}').then(() => alert('✅ Link wurde kopiert!'))">📋 Link kopieren</button></p>
-      `;
-
-      if (templateText) {
-        templateText.textContent = templateBase.replace("[dein Link]", webinarLink);
-      }
-    });
-
-    if (copyBtn && templateText) {
-      copyBtn.addEventListener("click", function () {
-        navigator.clipboard.writeText(templateText.textContent.replace(/^„|"$/g, "")).then(() => {
-          copyBtn.textContent = "✅ Kopiert!";
-          setTimeout(() => { copyBtn.textContent = "📋 Text kopieren"; }, 2000);
-        });
-      });
-    }
+  btn.addEventListener('click', function(){
+    if(!input.value.trim()){ input.focus(); return; }
+    currentLink = demoLink(input.value);
+    out.textContent = currentLink;
+    result.classList.add('show');
   });
+  async function copy(value, button){
+    if(!value) return;
+    try{
+      await navigator.clipboard.writeText(value);
+      const old = button.textContent;
+      button.textContent = 'KOPIERT ✓';
+      setTimeout(()=>button.textContent=old,1400);
+    }catch(e){}
+  }
+  copyGenerated.addEventListener('click',()=>copy(currentLink,copyGenerated));
+  templateButtons.forEach(button=>{
+    button.addEventListener('click',()=>{
+      const source = document.getElementById(button.dataset.source);
+      const text = source.textContent.replace('[DEIN LINK]', currentLink || '[DEIN LINK]');
+      copy(text,button);
+    });
+  });
+})();
 </script>
-
 </body>
 </html>
