@@ -100,7 +100,7 @@ b{color:var(--cream);font-weight:700}
 }
 .hero .check{background:var(--sand-gradient);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
 .hero h1{
-  font-size:clamp(46px,14vw,74px);line-height:.72;
+  margin-top:20px;font-size:clamp(46px,14vw,74px);line-height:.72;
   letter-spacing:-.05em;text-transform:uppercase;
 }
 .hero .script{
@@ -160,7 +160,7 @@ b{color:var(--cream);font-weight:700}
   background-color:var(--bg-alt);
 }
 .ready h2{
-  font-size:clamp(38px,11vw,56px);line-height:.78;letter-spacing:-.04em;text-transform:uppercase
+  margin-top:20px;font-size:clamp(38px,11vw,56px);line-height:.78;letter-spacing:-.04em;text-transform:uppercase
 }
 .ready .script{
   display:block;margin:14px 0 26px;font-size:clamp(24px,7vw,32px);background:var(--sand-gradient);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent
@@ -174,7 +174,7 @@ b{color:var(--cream);font-weight:700}
 /* SHARE QUICK */
 .share{background:var(--bg)}
 .share h2{
-  margin:0 0 44px;font-size:clamp(36px,10vw,48px);line-height:.85;letter-spacing:-.03em
+  margin:20px 0 44px;font-size:clamp(36px,10vw,48px);line-height:.85;letter-spacing:-.03em
 }
 .share-item{
   display:grid;grid-template-columns:44px 1fr;gap:14px;
@@ -200,7 +200,7 @@ b{color:var(--cream);font-weight:700}
 /* MATERIAL */
 .material{background:var(--bg-alt)}
 .material h2{
-  font-size:clamp(38px,11vw,52px);line-height:.8;letter-spacing:-.04em;text-transform:uppercase
+  margin-top:20px;font-size:clamp(38px,11vw,52px);line-height:.8;letter-spacing:-.04em;text-transform:uppercase
 }
 .material .script{
   display:block;margin:14px 0 24px;font-size:clamp(22px,6.5vw,30px);background:var(--sand-gradient);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent
@@ -212,7 +212,7 @@ b{color:var(--cream);font-weight:700}
 /* REWARDS CONDENSED */
 .rewards{background:var(--bg)}
 .rewards h2{
-  margin:0 0 44px;font-size:clamp(34px,9.5vw,46px);line-height:.85;letter-spacing:-.03em
+  margin:20px 0 44px;font-size:clamp(34px,9.5vw,46px);line-height:.85;letter-spacing:-.03em
 }
 .reward{
   display:grid;grid-template-columns:74px 1fr;gap:16px;
@@ -237,7 +237,7 @@ b{color:var(--cream);font-weight:700}
   background-color:var(--green);
 }
 .provision .ten{
-  font-family:"Instrument Serif";font-size:80px;line-height:.72;letter-spacing:-.04em
+  margin-top:20px;font-family:"Instrument Serif";font-size:80px;line-height:.72;letter-spacing:-.04em
 }
 .provision p{margin-top:20px;font-size:15px;color:var(--cream)}
 
@@ -246,7 +246,7 @@ b{color:var(--cream);font-weight:700}
   padding-bottom:0;background:var(--bg)
 }
 .her h2{
-  font-size:clamp(42px,12vw,60px);line-height:.78;letter-spacing:-.04em;text-transform:uppercase;position:relative;z-index:3
+  margin-top:20px;font-size:clamp(42px,12vw,60px);line-height:.78;letter-spacing:-.04em;text-transform:uppercase;position:relative;z-index:3
 }
 .her .script{
   display:block;position:relative;z-index:3;margin:14px 0 26px;
@@ -281,7 +281,7 @@ b{color:var(--cream);font-weight:700}
 /* SUPPORT */
 .support{background:var(--bg-alt)}
 .support h2{
-  margin:0 0 26px;font-size:clamp(32px,9vw,42px);line-height:.85;letter-spacing:-.03em
+  margin:20px 0 26px;font-size:clamp(32px,9vw,42px);line-height:.85;letter-spacing:-.03em
 }
 .support p{max-width:320px;font-size:15px}
 .support .btn{margin-top:30px;display:inline-flex}
@@ -292,7 +292,7 @@ b{color:var(--cream);font-weight:700}
   min-height:640px;display:flex;flex-direction:column;justify-content:center
 }
 .final h2{
-  font-size:clamp(44px,13vw,64px);line-height:.76;letter-spacing:-.045em;text-transform:uppercase
+  margin-top:20px;font-size:clamp(44px,13vw,64px);line-height:.76;letter-spacing:-.045em;text-transform:uppercase
 }
 .final .script{
   display:inline-block;margin:16px 0 26px;padding:24px 0 14px;font-size:clamp(28px,8vw,38px);line-height:2.6;background:var(--sand-gradient);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent
@@ -376,10 +376,9 @@ b{color:var(--cream);font-weight:700}
 <section class="hero" id="link">
   <div class="topline eyebrow">
     <span>TRUE SPIRIT BUSINESS · AMBASSADOR</span>
-    <span class="check">✓ DU BIST DABEI</span>
   </div>
-  <h1>YOU'RE <em class="gold-text">IN.</em></h1>
-  <div class="script">Jetzt sag es weiter ;-).</div>
+  <h1 style="color:#fff">YOU'RE IN.</h1>
+  <div class="script">Jetzt sag es weiter.</div>
   <p class="hero-copy">Deine Anmeldung als Ambassador ist bestätigt.<br>Jetzt fehlt nur noch <b>dein persönlicher Empfehlungslink.</b><br><br>Trag deinen Namen ein, generiere deinen Link und dann denk an die erste Frau, die TRUE SPIRIT BUSINESS unbedingt sehen sollte.</p>
   <div class="generator">
     <label class="label" for="ambassador-name">DEIN NAME</label>
