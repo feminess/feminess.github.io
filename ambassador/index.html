@@ -1309,10 +1309,13 @@ details p{
 (function(){
   const sticky = document.querySelector('.sticky');
   const rewards = document.querySelector('#rewards');
+  const footer = document.querySelector('.site-footer');
   if(!sticky || !rewards) return;
 
   function updateSticky(){
-    if(window.scrollY > rewards.offsetTop - 300){
+    const pastRewards = window.scrollY > rewards.offsetTop - 300;
+    const footerVisible = footer && footer.getBoundingClientRect().top < window.innerHeight;
+    if(pastRewards && !footerVisible){
       sticky.classList.add('show');
     } else {
       sticky.classList.remove('show');
