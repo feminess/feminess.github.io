@@ -315,6 +315,35 @@ p{margin:0;font-size:15px;line-height:1.55;color:var(--text)}
 }
 .commission .closing strong{font-weight:500;color:transparent}
 
+/* INTERSTITIAL IMAGES */
+.interstitial{
+  position:relative;
+  height:300px;
+  overflow:hidden;
+}
+.interstitial img{
+  position:absolute;inset:0;
+  width:100%;height:100%;
+  object-fit:cover;
+  display:block;
+}
+.interstitial::before,
+.interstitial::after{
+  content:'';
+  position:absolute;left:0;right:0;
+  height:55%;
+  pointer-events:none;
+  z-index:1;
+}
+.interstitial::before{top:0}
+.interstitial::after{bottom:0}
+
+.interstitial-1::before{background:linear-gradient(to bottom, var(--green-dark) 0%, transparent 100%)}
+.interstitial-1::after{background:linear-gradient(to top, var(--bg-alt) 0%, transparent 100%)}
+
+.interstitial-2::before{background:linear-gradient(to bottom, #050e0a 0%, transparent 100%)}
+.interstitial-2::after{background:linear-gradient(to top, var(--green-dark) 0%, transparent 100%)}
+
 /* 9 TRANSITION */
 .nosell{
   padding:88px 22px 84px;
@@ -453,7 +482,11 @@ p{margin:0;font-size:15px;line-height:1.55;color:var(--text)}
 /* 12 MOVEMENT */
 .movement{
   padding:92px 22px 88px;
-  background:var(--green-dark);
+  background:
+    linear-gradient(rgba(20,68,59,.88), rgba(27,92,80,.93)),
+    url('https://feminess.github.io/Bilder/gold-spheres-ripple.jpg');
+  background-size:cover;
+  background-position:center 30%;
 }
 .movement h2{
   margin:0;
@@ -772,6 +805,8 @@ details p{
   .commission .money-caption{font-size:10.5px}
   .commission .closing{max-width:520px;font-size:29px}
 
+  .interstitial{height:420px}
+
   .nosell h2{font-size:50px}
   .nosell .script{font-size:42px}
 
@@ -952,6 +987,10 @@ details p{
   <div class="door">Du darfst ihr einfach die Tür zeigen.</div>
 </section>
 
+<div class="interstitial interstitial-1">
+  <img src="https://feminess.github.io/Bilder/FEMINESS_gold_energy_oben_links_1zu1_highres.png" alt="">
+</div>
+
 <!-- 3. REWARD INTRO -->
 <section class="rewards-intro" id="rewards">
   <span class="eyebrow">THE AMBASSADOR EXPERIENCE</span>
@@ -1023,6 +1062,10 @@ details p{
   <p class="money-caption">für einen einzigen Perfect Match sein.</p>
   <div class="closing">Du hast nichts verkauft.<br><br>Du hast nicht überzeugt.<br><br><span class="gold-text">Du hast eine Verbindung hergestellt.</span><br><br>Den Rest machen wir.</div>
 </section>
+
+<div class="interstitial interstitial-2">
+  <img src="https://feminess.github.io/Bilder/gold-sphere-sunset.jpg" alt="">
+</div>
 
 <!-- 9. ÜBERGANG -->
 <section class="nosell">
