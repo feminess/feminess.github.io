@@ -56,8 +56,8 @@ h1,h2,h3{font-family:"Instrument Serif",Georgia,serif;font-weight:500;color:var(
 }
 .gold-text,
 h1 em,h2 em,h3 em,.script.gold,.num.gold,
-.eyebrow,.step .n,.rule .n,summary:after,
-.hero .script,.nosell .eyebrow,.final .foot,.popup-kicker{
+.eyebrow,.step .n,.step h3,.rule .n,summary:after,
+.hero .script,.nosell .eyebrow,.nosell .script,.final .foot,.popup-kicker{
   background:linear-gradient(135deg, var(--fc-gold-dark) 0%, var(--fc-gold) 45%, var(--fc-gold-light) 70%, var(--fc-gold) 100%);
   -webkit-background-clip:text;background-clip:text;
   color:transparent;-webkit-text-fill-color:transparent;
@@ -399,7 +399,6 @@ p{margin:0;font-size:15px;line-height:1.55;color:var(--text)}
   font-family:"Manrope";
   font-size:15px;font-weight:700;
   letter-spacing:.08em;text-transform:uppercase;
-  color:var(--text)
 }
 .step p{font-size:15px;line-height:1.45;color:var(--text)}
 .step .sample{
@@ -811,7 +810,7 @@ details p{
   /* commission / movement / nosell centered readable column */
   .commission h2{font-size:128px}
   .commission .script{font-size:32px}
-  .commission p,.nosell p,.movement p{max-width:520px;font-size:18px}
+  .commission p,.nosell p,.movement p{max-width:none;font-size:18px}
   .commission .provision-word{font-size:58px}
   .commission .money{font-size:68px}
   .commission .money-caption{font-size:18px}
@@ -847,7 +846,7 @@ details p{
   .know-text{grid-column:1;grid-row:1}
   .know h2{font-size:56px}
   .know .script{font-size:40px}
-  .know .copy{font-size:18px;max-width:520px}
+  .know .copy{font-size:18px;max-width:none}
   .know .genau{font-size:50px}
   .know .figure{
     grid-column:2;grid-row:1;
@@ -1243,7 +1242,7 @@ details p{
   <p style="margin-top:12px"><i>„Das könnte genau ihr Moment sein.“</i></p>
 
   <div class="send gold-text">SCHICK IHR DEN LINK.</div>
-  <a class="btn ambassador-link" href="#" onclick="document.getElementById('ambassadorPopup').classList.add('is-visible'); return false;">GIB MIR MEINEN LINK</a>
+  <a class="btn ambassador-link" href="#" onclick="document.getElementById('ambassadorPopup').classList.add('is-visible'); return false;">Ich will meinen Link</a>
   <div class="brand">TRUE SPIRIT BUSINESS · AMBASSADOR</div>
   <div class="foot">Woman to woman.<br class="mobile-break"> Spirit to spirit.</div>
 </section>
