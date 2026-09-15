@@ -215,18 +215,19 @@ b{color:var(--cream);font-weight:700}
   margin:0 0 44px;font-size:clamp(34px,9.5vw,46px);line-height:.85;letter-spacing:-.03em
 }
 .reward{
-  display:grid;grid-template-columns:64px 1fr;gap:16px;
+  display:grid;grid-template-columns:74px 1fr;gap:16px;
   padding:20px 0;border-top:1px solid var(--hairline);align-items:start
 }
+.reward-label{display:flex;flex-direction:column;align-items:flex-start}
 .reward .big{
   font-family:"Instrument Serif";font-size:46px;line-height:.85;background:var(--sand-gradient);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent
 }
 .reward h3{
-  margin:0 0 6px;font-family:"Manrope";font-size:15px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--cream)
+  margin:4px 0 0;font-family:"Manrope";font-size:15px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--cream)
 }
 .reward p{font-size:15px;line-height:1.4}
 .reward .value{
-  margin-top:8px;font-family:"Instrument Serif";font-size:20px;background:var(--sand-gradient);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent
+  margin-top:8px;font-family:"Instrument Serif";font-size:clamp(32px,9vw,60px);text-align:right;background:var(--sand-gradient);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent
 }
 .provision{
   margin-top:44px;padding:40px 24px;border-radius:14px;
@@ -350,7 +351,7 @@ b{color:var(--cream);font-weight:700}
   .figwrap.figwrap-tall{height:760px}
   .hero-copy,.ready p,.material p,.her p,.support p,.final p,.generator,
   .share h2,.rewards h2,.share-item,.reward,.provision{max-width:none}
-  .share-item,.reward{grid-template-columns:64px 1fr}
+  .share-item{grid-template-columns:64px 1fr}
 
   /* minimum 18px type size on desktop */
   p,.eyebrow,.generator .label,.generator .note,.link-result .mini,
@@ -460,10 +461,10 @@ b{color:var(--cream);font-weight:700}
 <section class="rewards">
   <div class="eyebrow">REMEMBER WHAT YOU'RE PLAYING FOR.</div>
   <h2>THE MORE YOU SHARE, <br class="lb-desktop"><em class="gold-text">THE MORE YOU GET.</em></h2>
-  <div class="reward"><div class="big">1</div><div><h3>FRAU</h3><p>Geldmagnet Meditation</p><div class="value">Wert: 47 €</div></div></div>
-  <div class="reward"><div class="big">5</div><div><h3>FRAUEN</h3><p>The Workshop Code</p><div class="value">Wert: 297 €</div></div></div>
-  <div class="reward"><div class="big">10</div><div><h3>FRAUEN</h3><p>ROOT TO RISE<br>7 Wochen live mit Marina &amp; Vera</p><div class="value">Wert: 397 €</div></div></div>
-  <div class="reward"><div class="big">20</div><div><h3>FRAUEN</h3><p>FIRST CHOICE ROOT<br>7 Wochen · 2× pro Woche live<br>mit Marina &amp; Vera</p><div class="value">Wert: 997 €</div></div></div>
+  <div class="reward"><div class="reward-label"><div class="big">1</div><h3>FRAU</h3></div><div><p>Geldmagnet Meditation</p><div class="value">Wert: 47 €</div></div></div>
+  <div class="reward"><div class="reward-label"><div class="big">5</div><h3>FRAUEN</h3></div><div><p>The Workshop Code</p><div class="value">Wert: 297 €</div></div></div>
+  <div class="reward"><div class="reward-label"><div class="big">10</div><h3>FRAUEN</h3></div><div><p>ROOT TO RISE<br>7 Wochen live mit Marina &amp; Vera</p><div class="value">Wert: 397 €</div></div></div>
+  <div class="reward"><div class="reward-label"><div class="big">20</div><h3>FRAUEN</h3></div><div><p>FIRST CHOICE ROOT<br>7 Wochen · 2× pro Woche live<br>mit Marina &amp; Vera</p><div class="value">Wert: 997 €</div></div></div>
   <div class="script" style="font-size:clamp(22px,7vw,30px);background:var(--sand-gradient);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;margin-top:30px">Wie weit kommst du?</div>
 
   <div class="provision">
