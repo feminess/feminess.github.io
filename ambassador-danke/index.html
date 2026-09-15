@@ -75,6 +75,16 @@ b{color:var(--cream);font-weight:700}
   section{padding-left:26px;padding-right:26px}
 }
 
+@media(min-width:900px){
+  :root{--pad:110px}
+  .page{width:min(100%,1180px)}
+  section{padding-left:var(--pad);padding-right:var(--pad)}
+  .hero-copy,.ready p,.material p,.her p,.support p,.final p,.generator{max-width:560px}
+  .share h2,.rewards h2{max-width:760px}
+  .share-item,.reward{grid-template-columns:64px 1fr;max-width:760px}
+  .provision{max-width:760px}
+}
+
 /* HERO / ACTION FIRST */
 .hero{
   min-height:100svh;
