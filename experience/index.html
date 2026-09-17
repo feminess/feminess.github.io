@@ -830,6 +830,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <!-- 01 HERO -->
   <section class="hero">
+    <div id="utm-message" style="display:none; background:linear-gradient(90deg, var(--fc-gold-dark) 0%, var(--fc-gold) 22%, var(--fc-gold-light) 45%, var(--fc-gold) 68%, var(--fc-gold-dark) 88%, var(--fc-gold) 100%); border-radius:10px; padding:16px 22px; margin-bottom:20px;">
+      <p style="margin:0; font-family:'Manrope',sans-serif; font-size:17px; font-weight:700; color:var(--bg); line-height:1.5;">Super, du hast dir die Analyse gesichert &ndash; und wir haben noch ein Geschenk für dich!</p>
+    </div>
+    <script>
+      (function() {
+        var f = new URLSearchParams(window.location.search).get('utm_source');
+        if (f === 'umc' || f === 'cbc' || f === 'tcc') {
+          document.getElementById('utm-message').style.display = 'block';
+        }
+      })();
+    </script>
     <p class="lede">Für Frauen, die weder Lust auf Push-Marketing noch "ich mach Millionen aus der Badewanne" haben.</p>
     <h1><em>TRUE SPIRIT</em><br>Business</h1>
     <span class="script script-sub">Unangepasst erfolgreich.</span>
