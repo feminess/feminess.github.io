@@ -3019,6 +3019,9 @@ window._load_script = function(url, callback, isSubmit) {
             allInputs[i].dataset.name = allInputs[i].name;
         }
         var fieldVal = getUrlParam(allInputs[i].dataset.name);
+        if (!fieldVal && allInputs[i].dataset.name === 'firstname') {
+            fieldVal = getUrlParam('vorname');
+        }
 
         if (fieldVal) {
             if (allInputs[i].dataset.autofill === "false") {
