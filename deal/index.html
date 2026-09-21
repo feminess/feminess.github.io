@@ -72,7 +72,7 @@ h3{font-size:clamp(30px,4vw,54px);}
 .offer-hero:before{
   content:""; position:absolute; inset:0;
   background-image:url('Bilder/hero.jpg');
-  background-size:cover; background-position:left 35%;
+  background-size:cover; background-position:right 35%;
   transform:scaleX(-1);
   z-index:-2;
 }
@@ -203,6 +203,14 @@ h3{font-size:clamp(30px,4vw,54px);}
 
 /* ---------- FOOTER ---------- */
 .site-footer{background:#07291d; border-top:1px solid rgba(205,168,106,.15); padding:32px 22px; text-align:center;}
+.footer-logo{
+  display:inline-block; width:170px; height:18px; margin-bottom:16px;
+  background:linear-gradient(135deg, var(--gold-dark) 0%, var(--gold) 45%, var(--gold-light) 70%, var(--gold) 100%);
+  -webkit-mask-image:url('Bilder/logo-rosegold.png'); mask-image:url('Bilder/logo-rosegold.png');
+  -webkit-mask-size:contain; mask-size:contain;
+  -webkit-mask-repeat:no-repeat; mask-repeat:no-repeat;
+  -webkit-mask-position:center; mask-position:center;
+}
 .site-footer p{font-family:'Manrope',sans-serif; font-size:13px; color:#9ab8b4;}
 .site-footer a{color:#cda86a; text-decoration:none;}
 .site-footer a:hover{text-decoration:underline;}
@@ -364,7 +372,7 @@ h3{font-size:clamp(30px,4vw,54px);}
   <div class="eyebrow">Closed Card</div>
   <div class="lock gold-text">26.09.</div>
   <h2>Danach ist dieses Experience Special geschlossen.</h2>
-  <p class="lead">Du kannst dir FIRST CHOICE zu diesen Experience-Konditionen bis zum</p>
+  <p class="lead">Sicher dir FIRST CHOICE zu diesen Experience-Konditionen nur noch bis zum</p>
   <div class="date">26.09.2026 · 12:00 Uhr</div>
   <div class="count-wrap" data-countdown="close" style="justify-content:center">
    <div class="count-box"><span class="count-num" data-unit="days">00</span><span class="count-label">Tage</span></div>
@@ -396,6 +404,7 @@ h3{font-size:clamp(30px,4vw,54px);}
 </section>
 
 <footer class="site-footer">
+  <span class="footer-logo"></span>
   <p>&copy; 2026 Feminess &nbsp;·&nbsp; Marina Henze &nbsp;&nbsp;|&nbsp;&nbsp; <a href="https://feminess.github.io/Impressum/">Impressum</a> &nbsp;|&nbsp; <a href="https://feminess.github.io/Datenschutz/">Datenschutz</a></p>
 </footer>
 
