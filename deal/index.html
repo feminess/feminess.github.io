@@ -65,7 +65,7 @@ h3{font-size:clamp(30px,4vw,54px);}
 
 /* ---------- HERO ---------- */
 .offer-hero{
-  background:linear-gradient(135deg, var(--alt) 0%, var(--bg) 100%);
+  background:var(--bg);
   position:relative; overflow:hidden;
 }
 .offer-hero:before{
@@ -83,7 +83,7 @@ h3{font-size:clamp(30px,4vw,54px);}
 .hero-image img{width:100%; height:100%; object-fit:cover; object-position:center 30%; display:block; transform:scaleX(-1);}
 .hero-image:before{
   content:""; position:absolute; inset:0;
-  background:linear-gradient(to right, var(--bg) 0%, rgba(13,36,32,.35) 30%, transparent 55%);
+  background:linear-gradient(to right, var(--bg) 0%, var(--bg) 8%, rgba(13,36,32,.55) 28%, rgba(13,36,32,.15) 50%, transparent 68%);
   z-index:1; pointer-events:none;
 }
 .hero-image:after{
