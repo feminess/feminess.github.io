@@ -118,15 +118,33 @@ h3{font-size:clamp(30px,4vw,54px);}
 .feel-intro h2{font-size:clamp(50px,7vw,98px);}
 .feel-intro .feel-lines{margin:42px auto 0; max-width:760px; font-size:clamp(19px,2vw,26px);}
 .feel-intro .feel-lines p{margin:12px 0;}
-.feel-intro .anchor{font-family:'Instrument Serif',Georgia,serif; font-size:clamp(40px,5.5vw,76px); line-height:1.15; color:var(--gold-dark); margin-top:44px; padding:.08em 0;}
+.feel-intro .anchor{
+  font-family:'Instrument Serif',Georgia,serif; font-size:clamp(40px,5.5vw,76px); line-height:1.15; margin-top:44px; padding:.08em 0;
+  background:linear-gradient(135deg, var(--gold-dark) 0%, var(--gold) 45%, var(--gold-light) 70%, var(--gold) 100%);
+  -webkit-background-clip:text; background-clip:text;
+  color:transparent; -webkit-text-fill-color:transparent;
+}
 
 /* ---------- BRIDGE ---------- */
 .bridge{background:linear-gradient(135deg,#071e19,#123830); text-align:center;}
 .bridge .wrap{max-width:1000px;}
 .bridge h2{font-size:clamp(56px,8vw,112px);}
 .bridge .lead{margin-left:auto; margin-right:auto;}
-.bridge .build{display:grid; grid-template-columns:repeat(5,1fr); gap:10px; margin:48px auto 0; max-width:1000px;}
-.bridge .build span{border-top:1px solid rgba(205,168,106,.5); padding:17px 6px 0; font-size:13px; letter-spacing:.08em; text-transform:uppercase; color:var(--gold);}
+.bridge .build{display:flex; flex-direction:column; gap:14px; margin:48px auto 0; max-width:760px; text-align:left;}
+.bridge .build span{
+  display:flex; align-items:center; gap:20px;
+  border-left:3px solid var(--gold);
+  background:rgba(243,237,226,.06);
+  padding:22px 26px;
+  font-family:'Manrope',sans-serif; font-size:18px; font-weight:500;
+  color:var(--cream); text-transform:none; letter-spacing:normal;
+  counter-increment:build-step;
+}
+.bridge .build span:before{
+  content:counter(build-step, decimal-leading-zero);
+  font-family:'Instrument Serif',Georgia,serif; font-size:28px; color:var(--gold); flex-shrink:0;
+}
+.bridge .build{counter-reset:build-step;}
 
 /* ---------- BIG STATEMENT ---------- */
 .big-statement{background:var(--cream); color:var(--deep); text-align:center;}
@@ -287,8 +305,7 @@ h3{font-size:clamp(30px,4vw,54px);}
   .bonus strong{font-size:27px;}
   .close-card .lock{font-size:96px;}
   .btn{width:100%; padding:17px 18px;}
-  .bridge .build{grid-template-columns:1fr 1fr;}
-  .bridge .build span:last-child{grid-column:1/-1;}
+  .bridge .build span{padding:18px 20px; font-size:16px; gap:14px;}
   .future-feel .questions{grid-template-columns:1fr; gap:0;}
   .feel-intro h2, .bridge h2, .coherence h2, .decision h2{font-size:clamp(44px,13vw,68px);}
   .visual-break{min-height:58vh; background-position:58% center; padding-bottom:54px;}
