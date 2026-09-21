@@ -156,7 +156,14 @@ h3{font-size:clamp(30px,4vw,54px);}
 
 /* ---------- BIG STATEMENT ---------- */
 .big-statement{background:#1b5c50; color:var(--cream); text-align:center;}
-.big-statement h2{max-width:1000px; margin:0 auto 24px;}
+.big-statement .eyebrow{color:var(--cream);}
+.big-statement h2{
+  max-width:1000px; margin:0 auto 24px;
+  background:linear-gradient(135deg, var(--gold-dark) 0%, var(--gold) 45%, var(--gold-light) 70%, var(--gold) 100%);
+  -webkit-background-clip:text; background-clip:text;
+  color:transparent; -webkit-text-fill-color:transparent;
+  padding:.08em 0;
+}
 .big-statement .lead{margin:0 auto;}
 
 /* ---------- VISUAL BREAK ---------- */
