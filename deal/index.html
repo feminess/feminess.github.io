@@ -205,6 +205,32 @@ h3{font-size:clamp(30px,4vw,54px);}
 .is-closed .closed-state{display:block;}
 .is-closed .fast-live{display:none!important;}
 
+/* ---------- STICKY CTA ---------- */
+@keyframes pulse-sticky{
+  0%,100%{ transform:translate(-50%,0) scale(1);    box-shadow:0 10px 26px rgba(138,93,30,0.4); }
+  50%    { transform:translate(-50%,0) scale(1.05); box-shadow:0 16px 44px rgba(217,169,75,0.7); }
+}
+.sticky-cta{
+  display:flex; align-items:center; justify-content:center;
+  position:fixed; left:50%; bottom:22px;
+  transform:translate(-50%, 24px);
+  width:min(420px, calc(100% - 44px));
+  padding:16px 24px;
+  background:linear-gradient(90deg, var(--gold-dark) 0%, var(--gold) 45%, var(--gold-light) 70%, var(--gold) 100%);
+  color:var(--bg);
+  font-family:'Manrope',sans-serif; font-weight:800; letter-spacing:.04em; text-transform:uppercase;
+  border-radius:999px; text-decoration:none;
+  box-shadow:0 10px 26px rgba(13,36,32,0.35);
+  opacity:0; pointer-events:none;
+  transition:opacity .3s ease, transform .3s ease;
+  z-index:50;
+}
+.sticky-cta.is-visible{
+  opacity:1; pointer-events:auto; transform:translate(-50%, 0);
+  animation:pulse-sticky 2.2s ease-in-out infinite;
+}
+.is-closed .sticky-cta{display:none!important;}
+
 /* ---------- PLACEHOLDER ---------- */
 .placeholder-block{background:radial-gradient(circle at 50% 28%, rgba(205,168,106,.18), transparent 28%), #071e19; min-height:200px;}
 .placeholder-block #embedable-form-wrapper{opacity:.93;}
@@ -308,6 +334,27 @@ h3{font-size:clamp(30px,4vw,54px);}
  </div>
 </section>
 
+<section class="fast" id="fast-action">
+ <div class="wrap fast-grid">
+  <div>
+   <div class="eyebrow">Fast Action Bonus</div>
+   <h2>Wenn du dich<br><em>jetzt</em> entscheidest.</h2>
+   <p class="lead">Bei Buchung bis <strong>24.09.2026 um 23:59 Uhr</strong> bekommst du zusätzlich:</p>
+   <div class="count-wrap fast-live" data-countdown="fast">
+    <div class="count-box"><span class="count-num" data-unit="days">00</span><span class="count-label">Tage</span></div>
+    <div class="count-box"><span class="count-num" data-unit="hours">00</span><span class="count-label">Stunden</span></div>
+    <div class="count-box"><span class="count-num" data-unit="minutes">00</span><span class="count-label">Minuten</span></div>
+    <div class="count-box"><span class="count-num" data-unit="seconds">00</span><span class="count-label">Sekunden</span></div>
+   </div>
+   <div class="deadline fast-live">Fast Action endet am 24.09.2026 · 23:59 Uhr</div>
+  </div>
+  <div class="bonus-card fast-live">
+   <div class="bonus"><strong>1× 1:1 Strategie-Call mit Marina</strong><span>60 Minuten persönlich mit Marina</span><span class="value">Wert: 997 €</span></div>
+   <div class="bonus"><strong>6× 30 Minuten 1:1 Begleitung mit Vera</strong><span>Persönliche Begleitung für deine Umsetzung.</span></div>
+  </div>
+ </div>
+</section>
+
 <section class="visual-break">
  <div class="wrap">
   <div class="eyebrow">The First Choice Feeling</div>
@@ -342,27 +389,6 @@ h3{font-size:clamp(30px,4vw,54px);}
   </div>
   <p class="copy">Sondern du weißt:</p>
   <div class="answer">Das ist mein Business.<br>Das ist mein Weg.<br><em>Und ich vertraue mir darin.</em></div>
- </div>
-</section>
-
-<section class="fast" id="fast-action">
- <div class="wrap fast-grid">
-  <div>
-   <div class="eyebrow">Fast Action Bonus</div>
-   <h2>Wenn du dich<br><em>jetzt</em> entscheidest.</h2>
-   <p class="lead">Bei Buchung bis <strong>24.09.2026 um 23:59 Uhr</strong> bekommst du zusätzlich:</p>
-   <div class="count-wrap fast-live" data-countdown="fast">
-    <div class="count-box"><span class="count-num" data-unit="days">00</span><span class="count-label">Tage</span></div>
-    <div class="count-box"><span class="count-num" data-unit="hours">00</span><span class="count-label">Stunden</span></div>
-    <div class="count-box"><span class="count-num" data-unit="minutes">00</span><span class="count-label">Minuten</span></div>
-    <div class="count-box"><span class="count-num" data-unit="seconds">00</span><span class="count-label">Sekunden</span></div>
-   </div>
-   <div class="deadline fast-live">Fast Action endet am 24.09.2026 · 23:59 Uhr</div>
-  </div>
-  <div class="bonus-card fast-live">
-   <div class="bonus"><strong>1× 1:1 Strategie-Call mit Marina</strong><span>60 Minuten persönlich mit Marina</span><span class="value">Wert: 997 €</span></div>
-   <div class="bonus"><strong>6× 30 Minuten 1:1 Begleitung mit Vera</strong><span>Persönliche Begleitung für deine Umsetzung.</span></div>
-  </div>
  </div>
 </section>
 
@@ -421,6 +447,8 @@ h3{font-size:clamp(30px,4vw,54px);}
  </div>
 </section>
 
+<a href="#booking-form" class="sticky-cta cta-live" id="stickyCta">Experience Special sichern</a>
+
 <footer class="site-footer">
   <span class="footer-logo"></span>
   <p>&copy; 2026 Feminess &nbsp;·&nbsp; Marina Henze &nbsp;&nbsp;|&nbsp;&nbsp; <a href="https://feminess.github.io/Impressum/">Impressum</a> &nbsp;|&nbsp; <a href="https://feminess.github.io/Datenschutz/">Datenschutz</a></p>
@@ -451,6 +479,19 @@ h3{font-size:clamp(30px,4vw,54px);}
   }
   tick();
   setInterval(tick, 1000);
+})();
+
+(function(){
+  const hero = document.querySelector('.offer-hero');
+  const stickyCta = document.getElementById('stickyCta');
+  if (!hero || !stickyCta) return;
+  function toggle(){
+    const heroBottom = hero.getBoundingClientRect().bottom;
+    stickyCta.classList.toggle('is-visible', heroBottom < 0);
+  }
+  toggle();
+  window.addEventListener('scroll', toggle, { passive: true });
+  window.addEventListener('resize', toggle);
 })();
 </script>
 </body>
