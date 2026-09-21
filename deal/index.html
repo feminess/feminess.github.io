@@ -65,27 +65,32 @@ h3{font-size:clamp(30px,4vw,54px);}
 
 /* ---------- HERO ---------- */
 .offer-hero{
-  min-height:92vh; display:flex; align-items:flex-end;
-  background-image:linear-gradient(105deg, rgba(7,41,29,.97) 0%, rgba(7,41,29,.76) 42%, rgba(7,41,29,.06) 68%, rgba(7,41,29,0) 80%),
-                    radial-gradient(circle at 82% 20%, rgba(205,168,106,.25), transparent 35%);
+  background:linear-gradient(135deg, var(--alt) 0%, var(--bg) 100%);
+  position:relative; overflow:hidden;
 }
 .offer-hero:before{
-  content:""; position:absolute; inset:0;
-  background-image:url('Bilder/hero.jpg');
-  background-size:cover; background-position:calc(100% - 100px) 35%; background-repeat:no-repeat;
-  transform:scaleX(-1);
-  -webkit-mask-image:linear-gradient(270deg, transparent 0%, transparent 40%, white 68%);
-  mask-image:linear-gradient(270deg, transparent 0%, transparent 40%, white 68%);
-  z-index:-2;
+  content:""; position:absolute; top:-80px; left:-80px; width:600px; height:600px;
+  background:radial-gradient(circle, rgba(205,168,106,.20) 0%, transparent 60%);
+  pointer-events:none; z-index:1;
 }
-.offer-hero:after{
-  content:""; position:absolute; inset:auto 0 0; height:34%;
-  background:linear-gradient(transparent, var(--bg)); z-index:-1;
-}
+.hero-inner{display:grid; grid-template-columns:55fr 45fr; min-height:92vh; position:relative; z-index:2;}
+.offer-hero .wrap{width:auto; margin:0; padding:72px 56px 72px min(6vw,80px); display:flex; flex-direction:column; justify-content:center;}
 .kicker{font-size:13px; letter-spacing:.25em; text-transform:uppercase; color:var(--gold); font-weight:800; margin-bottom:22px;}
 .offer-hero h1{max-width:1000px;}
 .offer-hero .sub{font-family:'Instrument Serif',Georgia,serif; font-size:clamp(28px,4vw,58px); line-height:1.04; max-width:900px; margin:0 0 24px;}
 .offer-hero .micro, .offer-hero .lead{max-width:720px;}
+.hero-image{position:relative; overflow:hidden;}
+.hero-image img{width:100%; height:100%; object-fit:cover; object-position:center 30%; display:block; transform:scaleX(-1);}
+.hero-image:before{
+  content:""; position:absolute; inset:0;
+  background:linear-gradient(to right, var(--bg) 0%, rgba(13,36,32,.35) 30%, transparent 55%);
+  z-index:1; pointer-events:none;
+}
+.hero-image:after{
+  content:""; position:absolute; bottom:0; left:0; right:0; height:30%;
+  background:linear-gradient(to top, var(--bg) 0%, transparent 100%);
+  z-index:1; pointer-events:none;
+}
 .count-wrap{margin-top:44px; display:flex; gap:12px; flex-wrap:wrap;}
 .count-box{min-width:110px; padding:18px 20px; border:1px solid rgba(243,237,226,.28); background:rgba(7,41,29,.46); backdrop-filter:blur(8px);}
 .count-num{display:block; font-family:'Instrument Serif'; font-size:48px; line-height:.85; color:var(--cream);}
@@ -220,7 +225,12 @@ h3{font-size:clamp(30px,4vw,54px);}
 @media(max-width:800px){
   section{padding:78px 0;}
   .wrap{width:min(100% - 28px, 1180px);}
-  .offer-hero{min-height:88vh; background-position:62% center;}
+  .hero-inner{grid-template-columns:1fr; min-height:auto;}
+  .hero-image{height:34vh; order:-1;}
+  .hero-image img{object-position:center 25%;}
+  .hero-image:before{background:linear-gradient(to bottom, transparent 30%, var(--bg) 100%);}
+  .hero-image:after{display:none;}
+  .offer-hero .wrap{padding:32px 24px 56px;}
   .offer-hero h1{font-size:clamp(58px,20vw,92px);}
   .offer-grid, .fast-grid{grid-template-columns:1fr; gap:38px;}
   .offer-sticky{position:static;}
@@ -248,14 +258,19 @@ h3{font-size:clamp(30px,4vw,54px);}
 </head>
 <body>
 <section class="offer-hero">
-  <div class="wrap">
-    <div class="kicker">TRUE SPIRIT BUSINESS · EXPERIENCE SPECIAL</div>
-    <h1>FIRST<br><span class="gold-text italic">CHOICE</span></h1>
-    <p class="sub">Gewählt statt überzeugt.</p>
-    <p class="lead">Sei du selbst. Und baue daraus ein Business, bei dem deine Perfect Match Kunden erkennen: <em>Die will ich.</em></p>
-    <a class="btn cta-live" href="#booking-form">Experience Special sichern</a>
-    <div class="closed-state">Die Anmeldung für dieses Experience Special ist geschlossen.</div>
-    <div class="deadline">Experience Special · Anmeldung nur bis 26.09.2026 · 12:00 Uhr</div>
+  <div class="hero-inner">
+    <div class="wrap">
+      <div class="kicker">TRUE SPIRIT BUSINESS · EXPERIENCE SPECIAL</div>
+      <h1>FIRST<br><span class="gold-text italic">CHOICE</span></h1>
+      <p class="sub">Gewählt statt überzeugt.</p>
+      <p class="lead">Sei du selbst. Und baue daraus ein Business, bei dem deine Perfect Match Kunden erkennen: <em>Die will ich.</em></p>
+      <a class="btn cta-live" href="#booking-form">Experience Special sichern</a>
+      <div class="closed-state">Die Anmeldung für dieses Experience Special ist geschlossen.</div>
+      <div class="deadline">Experience Special · Anmeldung nur bis 26.09.2026 · 12:00 Uhr</div>
+    </div>
+    <div class="hero-image">
+      <img src="Bilder/hero.jpg" alt="Marina Henze – Feminess">
+    </div>
   </div>
 </section>
 
