@@ -9,6 +9,15 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
+@font-face{
+  font-family:'Amsterdam Four';
+  src:url('../fonts/AmsterdamFour.woff') format('woff'), url('../fonts/AmsterdamFour.ttf') format('truetype');
+  font-weight:400;
+  font-style:normal;
+  font-display:swap;
+}
+</style>
+<style>
 :root{
   --bg:#0d2420;
   --alt:#123830;
@@ -38,6 +47,7 @@ h3{font-size:clamp(30px,4vw,54px);}
 .small{font-size:14px; opacity:.8;}
 
 /* Gold-Verlauf: nur für große Einzelworte/Zahlen, sonst matschig */
+.script{font-family:'Amsterdam Four', cursive; font-weight:400; line-height:2.4; display:inline-block; padding:14px 0;}
 .gold-text{
   background:linear-gradient(135deg, var(--gold-dark) 0%, var(--gold) 45%, var(--gold-light) 70%, var(--gold) 100%);
   -webkit-background-clip:text; background-clip:text;
@@ -77,8 +87,8 @@ h3{font-size:clamp(30px,4vw,54px);}
 .hero-inner{display:grid; grid-template-columns:55fr 45fr; min-height:92vh; position:relative; z-index:2;}
 .offer-hero .wrap{width:auto; margin:0; padding:72px 56px 72px min(6vw,80px); display:flex; flex-direction:column; justify-content:center;}
 .kicker{font-size:13px; letter-spacing:.25em; text-transform:uppercase; color:var(--gold); font-weight:800; margin-bottom:22px;}
-.offer-hero h1{max-width:1000px;}
-.offer-hero .sub{font-family:'Instrument Serif',Georgia,serif; font-size:clamp(28px,4vw,58px); line-height:1.04; max-width:900px; margin:0 0 24px;}
+.offer-hero h1{max-width:1000px; line-height:1.08; padding-top:.1em;}
+.offer-hero .sub{font-size:clamp(34px,5vw,64px); line-height:1.6; max-width:900px; margin:0 0 24px;}
 .offer-hero .micro, .offer-hero .lead{max-width:720px;}
 .hero-image{position:relative; overflow:hidden;}
 .hero-image img{width:100%; height:100%; object-fit:cover; object-position:center 18%; display:block; transform:scaleX(-1);}
@@ -258,7 +268,7 @@ h3{font-size:clamp(30px,4vw,54px);}
   .hero-image:before{background:linear-gradient(to bottom, transparent 30%, var(--bg) 100%);}
   .hero-image:after{display:none;}
   .offer-hero .wrap{padding:32px 24px 56px;}
-  .offer-hero h1{font-size:clamp(58px,20vw,92px);}
+  .offer-hero h1{font-size:clamp(64px,26vw,120px); max-width:100%;}
   .offer-grid, .fast-grid{grid-template-columns:1fr; gap:38px;}
   .offer-sticky{position:static;}
   .offer-sticky h2, .fast h2{font-size:clamp(50px,15vw,76px);}
@@ -288,9 +298,9 @@ h3{font-size:clamp(30px,4vw,54px);}
   <div class="hero-inner">
     <div class="wrap">
       <div class="kicker">TRUE SPIRIT BUSINESS · EXPERIENCE SPECIAL</div>
-      <h1>FIRST<br><span class="gold-text italic">CHOICE</span></h1>
-      <p class="sub">Gewählt statt überzeugt.</p>
-      <p class="lead">Sei du selbst. Und baue daraus ein Business, bei dem deine Perfect Match Kunden erkennen: <em>Die will ich.</em></p>
+      <h1 class="gold-text">FIRST<br><span class="italic">CHOICE</span></h1>
+      <p class="sub script">Gewählt statt überzeugt.</p>
+      <p class="lead">Sei du selbst. Und baue daraus ein Business, bei dem deine Perfect Match Kunden erkennen: <em>Sie will ich.</em></p>
       <a class="btn cta-live" href="#booking-form">Experience Special sichern</a>
       <div class="closed-state">Die Anmeldung für dieses Experience Special ist geschlossen.</div>
       <div class="deadline">Experience Special · Anmeldung nur bis 26.09.2026 · 12:00 Uhr</div>
