@@ -143,6 +143,15 @@ h3{font-size:clamp(30px,4vw,54px);}
 
 /* ---------- FAST ACTION ---------- */
 .fast{background:linear-gradient(135deg, rgba(138,106,58,.55), rgba(243,223,168,.7)), url('Bilder/gold-silk.png'); background-size:cover; background-position:top left; color:var(--deep); position:relative; overflow:hidden;}
+@media(max-width:800px){
+  .fast{
+    background-image:linear-gradient(135deg, rgba(138,106,58,.55), rgba(243,223,168,.7)), url('Bilder/gold-silk.png');
+    background-repeat:no-repeat, no-repeat;
+    background-size:auto, 640px auto;
+    background-position:0 0, center 40px;
+    background-color:#dcb877;
+  }
+}
 .fast-grid{display:grid; grid-template-columns:1fr 1fr; gap:70px; align-items:center; position:relative; z-index:1;}
 .fast h2{font-size:clamp(58px,8vw,116px); margin-bottom:20px;}
 .fast .eyebrow{color:var(--deep); opacity:.65;}
