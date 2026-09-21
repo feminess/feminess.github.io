@@ -67,9 +67,14 @@ h3{font-size:clamp(30px,4vw,54px);}
 .offer-hero{
   min-height:92vh; display:flex; align-items:flex-end;
   background-image:linear-gradient(105deg, rgba(7,41,29,.97) 0%, rgba(7,41,29,.76) 48%, rgba(7,41,29,.20) 78%),
-                    radial-gradient(circle at 82% 20%, rgba(205,168,106,.25), transparent 35%),
-                    url('Bilder/hero.jpg');
+                    radial-gradient(circle at 82% 20%, rgba(205,168,106,.25), transparent 35%);
+}
+.offer-hero:before{
+  content:""; position:absolute; inset:0;
+  background-image:url('Bilder/hero.jpg');
   background-size:cover; background-position:center 35%;
+  transform:scaleX(-1);
+  z-index:-2;
 }
 .offer-hero:after{
   content:""; position:absolute; inset:auto 0 0; height:34%;
