@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FIRST CHOICE — Gewählt statt überzeugt. | Feminess</title>
+<meta name="description" content="Gewählt statt überzeugt. FIRST CHOICE Experience Special — baue ein Business, das so klar nach dir aussieht, dass die richtigen Menschen nicht überzeugt werden müssen.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0d2420;
+  --alt:#123830;
+  --deep:#07291d;
+  --green:#1b5c50;
+  --gold-dark:#8A6A3A;
+  --gold:#C9A24D;
+  --gold-light:#F3DFA8;
+  --cream:#f3ede2;
+  --ink:#111b18;
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg); color:var(--cream); font-family:'Manrope',Arial,sans-serif; line-height:1.55; -webkit-font-smoothing:antialiased;}
+.serif{font-family:'Instrument Serif',Georgia,serif;}
+.italic{font-style:italic;}
+.wrap{width:min(1180px, calc(100% - 40px)); margin:auto;}
+section{position:relative; overflow:hidden; padding:110px 0;}
+.eyebrow{font-size:12px; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); font-weight:700;}
+h1,h2,h3,p{margin-top:0;}
+h1,h2,h3{font-family:'Instrument Serif',Georgia,serif; font-weight:400; line-height:.98;}
+h1{font-size:clamp(72px,12vw,180px); letter-spacing:-.055em; margin-bottom:22px;}
+h2{font-size:clamp(52px,7vw,105px); letter-spacing:-.045em; margin-bottom:30px;}
+h3{font-size:clamp(30px,4vw,54px);}
+.lead{font-size:clamp(20px,2.3vw,31px); max-width:840px; line-height:1.35;}
+.copy{font-size:18px; max-width:760px;}
+.small{font-size:14px; opacity:.8;}
+
+/* Gold-Verlauf: nur für große Einzelworte/Zahlen, sonst matschig */
+.gold-text{
+  background:linear-gradient(135deg, var(--gold-dark) 0%, var(--gold) 45%, var(--gold-light) 70%, var(--gold) 100%);
+  -webkit-background-clip:text; background-clip:text;
+  color:transparent; -webkit-text-fill-color:transparent;
+}
+
+@keyframes pulse-btn{
+  0%,100%{ transform:scale(1);    box-shadow:0 6px 28px rgba(138,93,30,0.45); }
+  50%    { transform:scale(1.05); box-shadow:0 14px 46px rgba(217,169,75,0.75); }
+}
+.btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:10px;
+  margin-top:32px; padding:18px 32px;
+  border-radius:999px;
+  background:linear-gradient(90deg, var(--gold-dark) 0%, var(--gold) 45%, var(--gold-light) 70%, var(--gold) 100%);
+  color:var(--bg);
+  text-decoration:none;
+  font-family:'Manrope',sans-serif;
+  font-weight:800;
+  letter-spacing:.04em;
+  text-transform:uppercase;
+  border:none; cursor:pointer;
+  animation:pulse-btn 2.2s ease-in-out infinite;
+}
+
+/* ---------- HERO ---------- */
+.offer-hero{
+  min-height:92vh; display:flex; align-items:flex-end;
+  background-image:linear-gradient(105deg, rgba(7,41,29,.97) 0%, rgba(7,41,29,.76) 48%, rgba(7,41,29,.20) 78%),
+                    radial-gradient(circle at 82% 20%, rgba(205,168,106,.25), transparent 35%),
+                    url('Bilder/hero.jpg');
+  background-size:cover; background-position:center 35%;
+}
+.offer-hero:after{
+  content:""; position:absolute; inset:auto 0 0; height:34%;
+  background:linear-gradient(transparent, var(--bg)); z-index:-1;
+}
+.kicker{font-size:13px; letter-spacing:.25em; text-transform:uppercase; color:var(--gold); font-weight:800; margin-bottom:22px;}
+.offer-hero h1{max-width:1000px;}
+.offer-hero .sub{font-family:'Instrument Serif',Georgia,serif; font-size:clamp(28px,4vw,58px); line-height:1.04; max-width:900px; margin:0 0 24px;}
+.offer-hero .micro, .offer-hero .lead{max-width:720px;}
+.count-wrap{margin-top:44px; display:flex; gap:12px; flex-wrap:wrap;}
+.count-box{min-width:110px; padding:18px 20px; border:1px solid rgba(243,237,226,.28); background:rgba(7,41,29,.46); backdrop-filter:blur(8px);}
+.count-num{display:block; font-family:'Instrument Serif'; font-size:48px; line-height:.85; color:var(--cream);}
+.count-label{font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:var(--gold); font-weight:800; margin-top:9px; display:block;}
+.deadline{margin-top:18px; font-size:13px; letter-spacing:.08em; text-transform:uppercase; color:var(--gold);}
+
+/* ---------- FEEL INTRO ---------- */
+.feel-intro{background:var(--cream); color:var(--deep); text-align:center;}
+.feel-intro .wrap{max-width:980px;}
+.feel-intro h2{font-size:clamp(50px,7vw,98px);}
+.feel-intro .feel-lines{margin:42px auto 0; max-width:760px; font-size:clamp(19px,2vw,26px);}
+.feel-intro .feel-lines p{margin:12px 0;}
+.feel-intro .anchor{font-family:'Instrument Serif',Georgia,serif; font-size:clamp(40px,5.5vw,76px); line-height:1; color:var(--green); margin-top:44px;}
+
+/* ---------- BRIDGE ---------- */
+.bridge{background:linear-gradient(135deg,#071e19,#123830); text-align:center;}
+.bridge .wrap{max-width:1000px;}
+.bridge h2{font-size:clamp(56px,8vw,112px);}
+.bridge .lead{margin-left:auto; margin-right:auto;}
+.bridge .build{display:grid; grid-template-columns:repeat(5,1fr); gap:10px; margin:48px auto 0; max-width:1000px;}
+.bridge .build span{border-top:1px solid rgba(205,168,106,.5); padding:17px 6px 0; font-size:13px; letter-spacing:.08em; text-transform:uppercase; color:var(--gold);}
+
+/* ---------- BIG STATEMENT ---------- */
+.big-statement{background:var(--cream); color:var(--deep); text-align:center;}
+.big-statement h2{max-width:1000px; margin:0 auto 24px;}
+.big-statement .lead{margin:0 auto;}
+
+/* ---------- VISUAL BREAK ---------- */
+.visual-break{
+  min-height:70vh; display:flex; align-items:flex-end;
+  background-image:linear-gradient(180deg, rgba(7,41,29,.08), rgba(7,41,29,.9)), url('Bilder/break.png');
+  background-size:cover; background-position:center;
+  padding-bottom:80px;
+}
+.visual-break h2{font-size:clamp(58px,9vw,132px); max-width:930px; text-shadow:0 12px 34px rgba(0,0,0,.35);}
+.visual-break p{font-family:'Instrument Serif',Georgia,serif; font-size:clamp(25px,3.2vw,44px); max-width:760px; color:var(--gold-light);}
+
+/* ---------- OFFER ---------- */
+.offer-core{background:var(--alt); position:relative;}
+.offer-core:before{
+  content:"FIRST CHOICE"; position:absolute; right:-.04em; top:.12em;
+  font-family:'Instrument Serif'; font-size:clamp(100px,18vw,290px); line-height:.8;
+  color:rgba(243,237,226,.035); white-space:nowrap; z-index:0;
+}
+.offer-grid{display:grid; grid-template-columns:.8fr 1.2fr; gap:70px; align-items:start; position:relative; z-index:1;}
+.offer-sticky{position:sticky; top:28px;}
+.offer-sticky h2{font-size:clamp(58px,8vw,118px);}
+.offer-items{border-top:1px solid rgba(243,237,226,.22);}
+.offer-item{padding:30px 12px; border-bottom:1px solid rgba(243,237,226,.22); display:grid; grid-template-columns:70px 1fr; gap:18px; transition:transform .25s ease, background .25s ease;}
+.offer-item:hover{transform:translateX(8px); background:rgba(243,237,226,.035);}
+.offer-no{font-family:'Instrument Serif'; font-size:38px; color:var(--gold); line-height:1;}
+.offer-item h3{font-size:34px; margin-bottom:8px;}
+.offer-item p{margin:0; opacity:.86;}
+
+/* ---------- FUTURE FEEL ---------- */
+.future-feel{background:var(--cream); color:var(--deep);}
+.future-feel .wrap{max-width:1040px;}
+.future-feel h2{max-width:900px;}
+.future-feel .questions{margin:48px 0; display:grid; grid-template-columns:1fr 1fr; gap:0 54px;}
+.future-feel .questions p{font-family:'Instrument Serif',Georgia,serif; font-size:clamp(28px,3.3vw,48px); line-height:1.05; border-bottom:1px solid rgba(7,41,29,.16); padding:20px 0; margin:0; color:var(--green);}
+.future-feel .answer{font-family:'Instrument Serif',Georgia,serif; font-size:clamp(40px,5.5vw,78px); line-height:1.02; max-width:900px; margin-top:50px;}
+
+/* ---------- FAST ACTION ---------- */
+.fast{background:linear-gradient(135deg,var(--gold),var(--gold-light)); color:var(--deep); position:relative; overflow:hidden;}
+.fast:after{
+  content:"FAST ACTION"; position:absolute; right:-.08em; bottom:-.15em;
+  font-family:'Instrument Serif'; font-size:clamp(100px,17vw,250px); line-height:.8;
+  color:rgba(7,41,29,.055); pointer-events:none;
+}
+.fast-grid{display:grid; grid-template-columns:1fr 1fr; gap:70px; align-items:center; position:relative; z-index:1;}
+.fast h2{font-size:clamp(58px,8vw,116px); margin-bottom:20px;}
+.fast .eyebrow{color:var(--deep); opacity:.65;}
+.fast .count-box{border-color:rgba(7,41,29,.24); background:rgba(243,237,226,.48);}
+.fast .count-num{color:var(--deep);}
+.fast .count-label, .fast .deadline{color:var(--deep);}
+.bonus-card{background:rgba(243,237,226,.68); border:1px solid rgba(7,41,29,.22); padding:34px; position:relative; z-index:2; box-shadow:0 30px 70px rgba(7,41,29,.14);}
+.bonus{padding:22px 0; border-bottom:1px solid rgba(7,41,29,.18);}
+.bonus:last-child{border-bottom:0;}
+.bonus strong{display:block; font-family:'Instrument Serif'; font-size:30px; font-weight:400; line-height:1.05;}
+.bonus .value{font-size:12px; letter-spacing:.14em; text-transform:uppercase; font-weight:800; margin-top:8px; display:block;}
+
+/* ---------- COHERENCE ---------- */
+.coherence{background:linear-gradient(120deg, rgba(7,41,29,.97), rgba(18,56,48,.91)); text-align:center;}
+.coherence .wrap{max-width:1000px;}
+.coherence h2{font-size:clamp(56px,8vw,112px);}
+.coherence .stack{margin:42px auto; max-width:760px; font-family:'Instrument Serif',Georgia,serif; font-size:clamp(28px,3.6vw,50px); line-height:1.08; color:var(--gold);}
+.coherence .stack div{margin:8px 0;}
+.coherence .tagline{font-size:clamp(46px,7vw,100px); line-height:.95; margin-top:55px;}
+
+/* ---------- DECISION ---------- */
+.decision{background:var(--cream); color:var(--deep); text-align:center;}
+.decision .wrap{max-width:980px;}
+.decision h2{font-size:clamp(54px,8vw,112px);}
+.decision .lead{margin-left:auto; margin-right:auto;}
+.decision .cycle{font-family:'Instrument Serif',Georgia,serif; font-size:clamp(32px,4.4vw,62px); color:var(--green); line-height:1.05; margin:44px auto; max-width:900px;}
+
+/* ---------- CLOSE CARD ---------- */
+.close-card{background:radial-gradient(circle at 50% 28%, rgba(205,168,106,.18), transparent 28%), #071e19; text-align:center;}
+.close-card .lock{font-family:'Instrument Serif'; font-size:clamp(72px,12vw,180px); line-height:.8; color:var(--gold); margin-bottom:24px;}
+.close-card h2{max-width:900px; margin:0 auto 28px;}
+.close-card .lead{margin:0 auto 26px;}
+.close-card .date{display:inline-block; font-family:'Instrument Serif'; font-size:clamp(34px,5vw,68px); color:var(--gold); border-top:1px solid rgba(205,168,106,.45); border-bottom:1px solid rgba(205,168,106,.45); padding:18px 28px; margin:10px 0 22px;}
+
+/* ---------- FINAL OFFER ---------- */
+.final-offer{background:linear-gradient(135deg,var(--cream),#e7d9bf); color:var(--deep); text-align:center;}
+.final-offer h2{max-width:900px; margin:0 auto 24px;}
+.final-offer .lead{margin:0 auto;}
+.final-offer .btn{font-size:17px;}
+
+.closed-state{display:none; padding:18px 22px; border:1px solid rgba(243,237,226,.28); margin-top:26px; max-width:620px; font-weight:700;}
+.is-closed .cta-live{display:none!important;}
+.is-closed .closed-state{display:block;}
+.is-closed .fast-live{display:none!important;}
+
+/* ---------- FOOTER ---------- */
+.site-footer{background:#07291d; border-top:1px solid rgba(205,168,106,.15); padding:32px 22px; text-align:center;}
+.site-footer p{font-family:'Manrope',sans-serif; font-size:13px; color:#9ab8b4;}
+.site-footer a{color:#cda86a; text-decoration:none;}
+.site-footer a:hover{text-decoration:underline;}
+
+@media(max-width:800px){
+  section{padding:78px 0;}
+  .wrap{width:min(100% - 28px, 1180px);}
+  .offer-hero{min-height:88vh; background-position:62% center;}
+  .offer-hero h1{font-size:clamp(58px,20vw,92px);}
+  .offer-grid, .fast-grid{grid-template-columns:1fr; gap:38px;}
+  .offer-sticky{position:static;}
+  .offer-sticky h2, .fast h2{font-size:clamp(50px,15vw,76px);}
+  .offer-item{grid-template-columns:48px 1fr; gap:12px; padding:24px 4px;}
+  .offer-no{font-size:30px;}
+  .offer-item h3{font-size:28px;}
+  .count-wrap{gap:8px;}
+  .count-box{min-width:calc(25% - 6px); padding:14px 8px; text-align:center;}
+  .count-num{font-size:36px;}
+  .count-label{font-size:8px; letter-spacing:.1em;}
+  .bonus-card{padding:24px;}
+  .bonus strong{font-size:27px;}
+  .close-card .lock{font-size:96px;}
+  .btn{width:100%; padding:17px 18px;}
+  .bridge .build{grid-template-columns:1fr 1fr;}
+  .bridge .build span:last-child{grid-column:1/-1;}
+  .future-feel .questions{grid-template-columns:1fr; gap:0;}
+  .feel-intro h2, .bridge h2, .coherence h2, .decision h2{font-size:clamp(44px,13vw,68px);}
+  .visual-break{min-height:58vh; background-position:58% center; padding-bottom:54px;}
+  .visual-break h2{font-size:clamp(48px,14vw,72px);}
+  .offer-item:hover{transform:none;}
+}
+</style>
+</head>
+<body>
+<section class="offer-hero">
+  <div class="wrap">
+    <div class="kicker">TRUE SPIRIT BUSINESS · EXPERIENCE SPECIAL</div>
+    <h1>FIRST<br><span class="gold-text italic">CHOICE</span></h1>
+    <p class="sub">Gewählt statt überzeugt.</p>
+    <p class="lead">Sei du selbst. Und baue daraus ein Business, bei dem deine Perfect Match Kunden erkennen: <em>Die will ich.</em></p>
+    <a class="btn cta-live" href="#special">→ Experience Special sichern</a>
+    <div class="closed-state">Die Anmeldung für dieses Experience Special ist geschlossen.</div>
+    <div class="deadline">Experience Special · Anmeldung nur bis 26.09.2026 · 12:00 Uhr</div>
+  </div>
+</section>
+
+<section class="feel-intro">
+ <div class="wrap">
+  <div class="eyebrow">Nach diesen 3 Tagen</div>
+  <h2>Du hast in dieser Experience etwas gemerkt.</h2>
+  <div class="feel-lines">
+   <p>Vielleicht ist dein Problem gar nicht, dass du noch nicht genug weißt.</p>
+   <p>Vielleicht brauchst du nicht noch mehr Content.</p>
+   <p>Nicht noch eine Strategie.</p>
+   <p>Nicht noch jemanden, der dir sagt, wie Business „richtig" geht.</p>
+  </div>
+  <div class="anchor">Vielleicht geht es jetzt darum, aus all dem, was du erkannt hast, <em>dein Business</em> zu machen.</div>
+  <p class="lead" style="margin:36px auto 0">Und zwar eins, das nicht nur funktioniert. <strong>Sondern zu dir passt.</strong></p>
+ </div>
+</section>
+
+<section class="bridge">
+ <div class="wrap">
+  <div class="eyebrow">Die Experience war der Anfang.</div>
+  <h2>Jetzt wird aus Erkenntnis <span class="gold-text italic">dein Business.</span></h2>
+  <p class="lead">Du hast gesehen, was möglich wird, wenn du aufhörst, dein Business nur von außen zu optimieren. FIRST CHOICE ist der Raum, in dem wir es mit dir aufbauen.</p>
+  <div class="build"><span>Deine Positionierung.</span><span>Dein Angebot.</span><span>Dein Marketing.</span><span>Deine Art zu verkaufen.</span><span>Deine Strukturen.</span></div>
+  <h3 style="margin:54px auto 0;font-size:clamp(38px,5vw,70px)">Nicht nach irgendeiner Blaupause.<br><span class="gold-text italic">Nach deiner.</span></h3>
+ </div>
+</section>
+
+<section class="big-statement">
+ <div class="wrap">
+  <div class="eyebrow">First Choice</div>
+  <h2>Du brauchst nicht noch mehr Strategien.</h2>
+  <p class="lead">Du brauchst ein Business, das so klar nach dir aussieht, dass die richtigen Menschen nicht überzeugt werden müssen.</p>
+ </div>
+</section>
+
+<section class="visual-break">
+ <div class="wrap">
+  <div class="eyebrow">The First Choice Feeling</div>
+  <h2>Ein Business, das sich genauso gut anfühlt, wie dein Erfolg aussieht.</h2>
+  <p>Mehr von dir. Mehr von den Richtigen. Mehr Freiheit.</p>
+ </div>
+</section>
+
+<section class="offer-core" id="special">
+ <div class="wrap offer-grid">
+  <div class="offer-sticky">
+   <div class="eyebrow">Dein Experience Special</div>
+   <h2>Das ist<br><span class="gold-text italic">drin.</span></h2>
+   <p class="copy">FIRST CHOICE verbindet Identität, Positionierung, Angebot, Marketing, Sales und Wachstum zu einem Business, das zu dir passt.</p>
+  </div>
+  <div class="offer-items">
+   <div class="offer-item"><div class="offer-no">01</div><div><h3>Identity Blueprint</h3><p>Dein Fundament für Businessentscheidungen, die wirklich zu dir passen.</p></div></div>
+   <div class="offer-item"><div class="offer-no">02</div><div><h3>7 FIRST CHOICE Shifts</h3><p>Von Power of Purpose bis Secret of Scale.</p></div></div>
+   <div class="offer-item"><div class="offer-no">03</div><div><h3>6 Monate Live-Begleitung</h3><p>3 Live-Calls pro Woche, Aufzeichnungen und persönliche Telegram-Begleitung zwischen den Calls.</p></div></div>
+   <div class="offer-item"><div class="offer-no">04</div><div><h3>FEMINESS AI</h3><p>Dein persönliches Business-Sparring auf Basis deines Identity Blueprints und des FIRST-CHOICE-Systems.</p></div></div>
+   <div class="offer-item"><div class="offer-no">05</div><div><h3>Nervensystem &amp; Umsetzung</h3><p>Damit du dein nächstes Level nicht nur erreichst, sondern auch halten kannst.</p></div></div>
+  </div>
+ </div>
+</section>
+
+<section class="future-feel">
+ <div class="wrap">
+  <div class="eyebrow">Was du eigentlich willst</div>
+  <h2>Stell dir vor, du musst dich nicht mehr ständig fragen:</h2>
+  <div class="questions">
+   <p>„Mache ich genug?"</p><p>„Poste ich genug?"</p><p>„Ist mein Angebot richtig?"</p><p>„Sollte ich meine Positionierung wieder ändern?"</p><p>„Warum funktioniert es bei ihr?"</p><p>„Was muss ich als Nächstes ändern?"</p>
+  </div>
+  <p class="copy">Sondern du weißt:</p>
+  <div class="answer">Das ist mein Business.<br>Das ist mein Weg.<br><em>Und ich vertraue mir darin.</em></div>
+ </div>
+</section>
+
+<section class="fast" id="fast-action">
+ <div class="wrap fast-grid">
+  <div>
+   <div class="eyebrow">Fast Action Bonus</div>
+   <h2>Wenn du dich<br><em>jetzt</em> entscheidest.</h2>
+   <p class="lead">Bei Buchung bis <strong>24.09.2026 um 23:59 Uhr</strong> bekommst du zusätzlich:</p>
+   <div class="count-wrap fast-live" data-countdown="fast">
+    <div class="count-box"><span class="count-num" data-unit="days">00</span><span class="count-label">Tage</span></div>
+    <div class="count-box"><span class="count-num" data-unit="hours">00</span><span class="count-label">Stunden</span></div>
+    <div class="count-box"><span class="count-num" data-unit="minutes">00</span><span class="count-label">Minuten</span></div>
+    <div class="count-box"><span class="count-num" data-unit="seconds">00</span><span class="count-label">Sekunden</span></div>
+   </div>
+   <div class="deadline fast-live">Fast Action endet am 24.09.2026 · 23:59 Uhr</div>
+  </div>
+  <div class="bonus-card fast-live">
+   <div class="bonus"><strong>1× 1:1 Strategie-Call mit Marina</strong><span>60 Minuten persönlich mit Marina</span><span class="value">Wert: 997 €</span></div>
+   <div class="bonus"><strong>6× 30 Minuten 1:1 Begleitung mit Vera</strong><span>Persönliche Begleitung für deine Umsetzung.</span></div>
+  </div>
+ </div>
+</section>
+
+<section class="coherence">
+ <div class="wrap">
+  <div class="eyebrow">Es geht nicht darum, noch mehr zu machen.</div>
+  <h2>Es geht darum, dass das, was du machst, endlich <span class="gold-text italic">zusammenpasst.</span></h2>
+  <div class="stack"><div>Wer du bist.</div><div>Wen du erreichen willst.</div><div>Wofür du stehen willst.</div><div>Was du verkaufen willst.</div><div>Wie du sichtbar sein willst.</div><div>Wie du Geld verdienen willst.</div><div>Und wie du dabei leben willst.</div></div>
+  <div class="tagline serif">SAME YOU.<br><span class="gold-text">BIGGER BUSINESS.</span><br>BIGGER LIFE.</div>
+ </div>
+</section>
+
+<section class="decision">
+ <div class="wrap">
+  <div class="eyebrow">Warum jetzt?</div>
+  <h2>Du musst dein Business nicht noch einmal neu erfinden.</h2>
+  <p class="lead">Du kannst natürlich noch eine Strategie testen, deine Positionierung wieder verändern und noch ein paar Monate schauen, was passiert.</p>
+  <div class="cycle">probieren → hoffen → zweifeln → verändern → neu anfangen.</div>
+  <p class="lead">Oder du nutzt diesen Moment, um aufzuhören, dein Business immer wieder infrage zu stellen – und anfängst, <strong>deins zu bauen.</strong></p>
+ </div>
+</section>
+
+<section class="close-card">
+ <div class="wrap">
+  <div class="eyebrow">Closed Card</div>
+  <div class="lock gold-text">26.09.</div>
+  <h2>Danach ist dieses Experience Special geschlossen.</h2>
+  <p class="lead">Du kannst dir FIRST CHOICE zu diesen Experience-Konditionen bis zum</p>
+  <div class="date">26.09.2026 · 12:00 Uhr</div>
+  <div class="count-wrap" data-countdown="close" style="justify-content:center">
+   <div class="count-box"><span class="count-num" data-unit="days">00</span><span class="count-label">Tage</span></div>
+   <div class="count-box"><span class="count-num" data-unit="hours">00</span><span class="count-label">Stunden</span></div>
+   <div class="count-box"><span class="count-num" data-unit="minutes">00</span><span class="count-label">Minuten</span></div>
+   <div class="count-box"><span class="count-num" data-unit="seconds">00</span><span class="count-label">Sekunden</span></div>
+  </div>
+  <a class="btn cta-live" href="#booking">→ First Choice jetzt sichern</a>
+  <div class="closed-state" style="margin-left:auto;margin-right:auto">Dieses Experience Special ist geschlossen.</div>
+ </div>
+</section>
+
+<section class="final-offer" id="booking">
+ <div class="wrap">
+  <div class="eyebrow">Gewählt. Nicht überzeugt.</div>
+  <h2>Werde klarer darin, wer du bist.</h2>
+  <p class="lead">Und baue daraus ein Business, bei dem die richtigen Menschen sagen: <strong>Die will ich.</strong></p>
+  <a class="btn cta-live" href="#special">→ Experience Special sichern</a>
+  <div class="closed-state" style="margin-left:auto;margin-right:auto">Closed Card: 26.09.2026 um 12:00 Uhr.</div>
+  <p class="small" style="margin:20px auto 0;max-width:620px">Fast Action Bonus bei Buchung bis 24.09.2026 um 23:59 Uhr. Experience Special schließt am 26.09.2026 um 12:00 Uhr.</p>
+ </div>
+</section>
+
+<footer class="site-footer">
+  <p>&copy; 2026 Feminess &nbsp;·&nbsp; Marina Henze &nbsp;&nbsp;|&nbsp;&nbsp; <a href="https://feminess.github.io/Impressum/">Impressum</a> &nbsp;|&nbsp; <a href="https://feminess.github.io/Datenschutz/">Datenschutz</a></p>
+</footer>
+
+<script>
+(function(){
+  // Deadlines sind auf Europe/Berlin (MESZ im September 2026) fixiert.
+  const fastEnd = new Date('2026-09-24T23:59:00+02:00').getTime();
+  const closeEnd = new Date('2026-09-26T12:00:00+02:00').getTime();
+  const pad = n => String(Math.max(0, n)).padStart(2, '0');
+  function render(group, end){
+    const now = Date.now(), diff = Math.max(0, end - now);
+    const vals = {
+      days: Math.floor(diff / 86400000),
+      hours: Math.floor(diff % 86400000 / 3600000),
+      minutes: Math.floor(diff % 3600000 / 60000),
+      seconds: Math.floor(diff % 60000 / 1000)
+    };
+    document.querySelectorAll('[data-countdown="' + group + '"] [data-unit]').forEach(el => el.textContent = pad(vals[el.dataset.unit]));
+    return now >= end;
+  }
+  function tick(){
+    const fastDone = render('fast', fastEnd);
+    const closed = render('close', closeEnd);
+    if (fastDone) document.querySelectorAll('.fast-live').forEach(el => el.style.display = 'none');
+    if (closed) document.body.classList.add('is-closed');
+  }
+  tick();
+  setInterval(tick, 1000);
+})();
+</script>
+</body>
+</html>
