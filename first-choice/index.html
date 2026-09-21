@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+
+<html lang="de">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>FIRST CHOICE — Gewählt statt überzeugt.</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+:root{--bg:#0d2420;--alt:#123830;--green:#1b5c50;--sand:#cda86a;--cream:#f3ede2;--deep:#07291d;--ink:#111b18;}
+*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--bg);color:var(--cream);font-family:Manrope,Arial,sans-serif;line-height:1.55}
+.serif{font-family:"Instrument Serif",Georgia,serif} .gold{color:var(--sand)} .italic{font-style:italic}
+.wrap{width:min(1180px,calc(100% - 40px));margin:auto} section{position:relative;overflow:hidden;padding:110px 0}
+.eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--sand);font-weight:700}
+h1,h2,h3,p{margin-top:0} h1,h2,h3{font-family:"Instrument Serif",Georgia,serif;font-weight:400;line-height:.98}
+h1{font-size:clamp(72px,12vw,180px);letter-spacing:-.055em;margin-bottom:22px} h2{font-size:clamp(52px,7vw,105px);letter-spacing:-.045em;margin-bottom:30px} h3{font-size:clamp(30px,4vw,54px)}
+.lead{font-size:clamp(20px,2.3vw,31px);max-width:840px;line-height:1.35} .copy{font-size:18px;max-width:760px} .small{font-size:14px;opacity:.8}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;margin-top:32px;padding:18px 32px;border-radius:999px;background:linear-gradient(90deg,#8A6A3A 0%,#C9A24D 25%,#F3DFA8 50%,#C9A24D 75%,#8A6A3A 100%);color:var(--bg);text-decoration:none;font-weight:800;letter-spacing:.05em;text-transform:uppercase;font-size:14px;animation:pulse-btn 2.2s ease-in-out infinite}
+@keyframes pulse-btn{0%,100%{transform:scale(1);box-shadow:0 6px 28px rgba(138,106,58,.45)}50%{transform:scale(1.05);box-shadow:0 14px 46px rgba(201,162,77,.65)}}
+.gold-text{background:linear-gradient(115deg,#8A6A3A 0%,#C9A24D 22%,#F3DFA8 45%,#C9A24D 68%,#8A6A3A 88%,#C9A24D 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.hero{min-height:96vh;display:flex;align-items:flex-end;background-image:linear-gradient(90deg,rgba(7,41,29,.96) 0%,rgba(7,41,29,.75) 43%,rgba(7,41,29,.08) 76%),url('../Bilder/first-choice/fc-img-0.jpg');background-size:cover;background-position:center}
+.hero .wrap{padding-bottom:30px} .hero h1 span{display:block;color:var(--sand);font-style:italic}
+.hero-copy{max-width:680px} .hero .lead{max-width:680px}
+.statement{background:var(--cream);color:var(--bg)} .statement .giant{font-family:"Instrument Serif";font-size:clamp(58px,9vw,145px);line-height:.92;letter-spacing:-.055em;max-width:1100px}
+.truth{background-image:linear-gradient(90deg,rgba(13,36,32,.97),rgba(13,36,32,.78) 55%,rgba(13,36,32,.18)),url('../Bilder/first-choice/fc-img-1.png');background-size:cover;background-position:center}
+.staccato{font-family:"Instrument Serif";font-size:clamp(38px,6vw,82px);line-height:1.05} .staccato span{display:block} .staccato span:nth-child(even){color:var(--sand);font-style:italic;margin-left:8vw}
+.split{display:grid;grid-template-columns:1fr 1fr;min-height:720px;padding:0} .split>div{padding:110px max(30px,6vw);display:flex;flex-direction:column;justify-content:center}
+.old{background:#10231f} .new{background:var(--cream);color:var(--bg)} .old p,.new p{font-family:"Instrument Serif";font-size:clamp(28px,3vw,46px);line-height:1.1;margin:8px 0}
+.dream{min-height:92vh;background-image:linear-gradient(90deg,rgba(13,36,32,.9),rgba(13,36,32,.28)),url('../Bilder/first-choice/fc-img-2.png');background-size:cover;background-position:center;display:flex;align-items:center}
+.dream-lines p{font-family:"Instrument Serif";font-size:clamp(28px,3.8vw,56px);line-height:1.08;max-width:920px;margin:0 0 22px}
+.mechanism{background:var(--cream);color:var(--bg)} .mechanism .big-du{font-family:"Instrument Serif";font-size:clamp(120px,25vw,360px);line-height:.72;color:var(--sand);letter-spacing:-.08em}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center} .visual{min-height:620px;background-size:cover;background-position:center}
+.blueprint .visual{background-image:linear-gradient(rgba(13,36,32,.08),rgba(13,36,32,.28)),url('../Bilder/first-choice/fc-img-3.png')}
+.ai{background:var(--alt)} .ai .visual{background-image:url('../Bilder/first-choice/fc-img-4.png')}
+.nervous{background-image:linear-gradient(90deg,rgba(13,36,32,.95),rgba(13,36,32,.35)),url('../Bilder/first-choice/fc-img-5.png');background-size:cover;background-position:center}
+.shifts{background:var(--cream);color:var(--bg)} .shift{display:grid;grid-template-columns:100px 1fr;gap:25px;padding:58px 0;border-top:1px solid rgba(13,36,32,.18)} .shift-no{font-family:"Instrument Serif";font-size:58px;color:var(--sand)} .shift .fromto{font-family:"Instrument Serif";font-size:clamp(30px,4vw,58px);line-height:1.03;max-width:900px} .shift .fromto em{color:#8A6A3A} .shift-name{font-size:12px;letter-spacing:.18em;font-weight:800;margin-top:20px}
+.outcomes{background:var(--deep)} .outcome-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(205,168,106,.28);margin-top:55px} .outcome{background:var(--deep);padding:42px} .outcome h3{color:var(--sand);font-size:38px;margin-bottom:12px}
+.keep{background-image:linear-gradient(90deg,rgba(13,36,32,.94),rgba(13,36,32,.4)),url('../Bilder/first-choice/fc-img-6.png');background-size:cover;background-position:center}
+.support{background:var(--cream);color:var(--bg)} .support-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:50px} .support-card{border-top:1px solid rgba(13,36,32,.28);padding:28px 0 38px} .support-card h3{font-size:38px;margin-bottom:12px}
+.fit{background:var(--alt)} .fit-copy{max-width:850px} .fit-copy p{font-family:"Instrument Serif";font-size:clamp(25px,3vw,43px);line-height:1.12}
+.notfit{background:var(--cream);color:var(--bg)}
+.proof{background:var(--deep)} .proof-placeholder{border:1px solid rgba(205,168,106,.45);padding:45px;margin-top:40px;display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.marinas{background-image:linear-gradient(90deg,rgba(13,36,32,.98),rgba(13,36,32,.65) 55%,rgba(13,36,32,.05)),url('../Bilder/first-choice/fc-img-7.jpg');background-size:cover;background-position:center}
+.why-now{background:var(--cream);color:var(--bg)} .cycle{font-family:"Instrument Serif";font-size:clamp(34px,5vw,74px);line-height:1.05;color:#8A6A3A;margin:45px 0}
+.faq{background:var(--bg)} details{border-top:1px solid rgba(205,168,106,.35);padding:26px 0} summary{cursor:pointer;font-family:"Instrument Serif";font-size:clamp(24px,3vw,38px);list-style:none} details p{max-width:820px;margin:20px 0 0;font-size:17px}
+.final{min-height:92vh;background-image:linear-gradient(90deg,rgba(7,41,29,.96),rgba(7,41,29,.42)),url('../Bilder/first-choice/fc-img-2.png');background-size:cover;background-position:center;display:flex;align-items:center} .final h2{font-size:clamp(80px,13vw,190px);margin-bottom:8px} .final h2 em{display:block;color:var(--sand)} 
+@media(max-width:800px){section{padding:78px 0}.wrap{width:min(100% - 28px,1180px)}.split,.two-col{grid-template-columns:1fr}.split>div{padding:75px 28px}.visual{min-height:430px}.shift{grid-template-columns:1fr}.outcome-grid,.support-grid,.proof-placeholder{grid-template-columns:1fr}.hero{background-position:62% center}}
+
+/* V5 additions: mechanism + nervous-system + ownership */
+.mechanism{background:#f3ede2;color:#0d2420;padding:120px 0}.mechanism .route{display:grid;grid-template-columns:1fr auto 1fr;gap:28px;align-items:center;margin:55px 0}.mechanism .route-card{padding:34px;border-top:1px solid rgba(13,36,32,.25);border-bottom:1px solid rgba(13,36,32,.25)}.mechanism .route-card strong{display:block;font-family:'Instrument Serif',serif;font-size:clamp(30px,4vw,54px);font-weight:400;line-height:1}.mechanism .arrow{font-size:34px;color:#a57b37}.mechanism .begin{font-family:'Instrument Serif',serif;font-size:clamp(48px,7vw,92px);line-height:.95;margin-top:34px}.mechanism .begin em{color:#a57b37}.nervous .contrast-lines{margin-top:45px;max-width:900px}.nervous .contrast-lines p{font-family:'Instrument Serif',serif;font-size:clamp(25px,3vw,40px);line-height:1.15;margin:25px 0}.nervous .contrast-lines span{color:#cda86a}.ownership{background:#f3ede2;color:#0d2420;padding:120px 0;text-align:center}.ownership h2{font-size:clamp(54px,8vw,110px);line-height:.9}.ownership .names{margin:50px auto 0;max-width:900px;font-size:clamp(22px,3vw,38px);line-height:1.5}.ownership .names .no{text-decoration:line-through;opacity:.48}.ownership .names .yes{font-family:'Instrument Serif',serif;font-size:clamp(50px,8vw,100px);color:#a57b37;display:block;margin-top:20px}.why-now .cycle{font-family:'Instrument Serif',serif;font-size:clamp(28px,4vw,52px);line-height:1.15;margin:45px 0;color:#cda86a}.why-now .choice{font-size:clamp(25px,3vw,38px);max-width:900px;line-height:1.35}.outcomes .outcome-grid{margin-top:45px}@media(max-width:760px){.mechanism .route{grid-template-columns:1fr}.mechanism .arrow{transform:rotate(90deg);text-align:center}}
+
+/* V6 exact-text compatibility */
+section .wrap > p.copy{margin:0 0 14px;max-width:850px}
+section .wrap > h2{max-width:1050px}
+section .wrap > h3{max-width:980px;margin-top:34px}
+section.shifts .wrap>h3{color:var(--sand);margin-top:58px}
+section.outcomes .wrap>h3, section.support .wrap>h3, section.faq .wrap>h3{color:var(--sand);margin-top:42px}
+section.ownership{text-align:center}
+section.ownership .wrap>*{margin-left:auto;margin-right:auto}
+section.final{text-align:center}
+section.final .wrap>*{margin-left:auto;margin-right:auto}
+section.final .btn{margin-left:auto;margin-right:auto}
+@media(max-width:760px){section{padding:72px 0}.wrap{width:min(100% - 28px,1180px)}section .wrap>h3{margin-top:26px}}
+</style>
+<style>
+/* ===== V7 Emotional Visual Journey — text remains unchanged ===== */
+.v7 section{isolation:isolate}
+.v7 section:before,.v7 section:after{content:"";position:absolute;pointer-events:none;z-index:-1}
+.v7 .v7-impact{position:relative;display:inline-block;max-width:100%;padding:.08em .18em .12em;margin-top:.2em;text-wrap:balance}
+.v7 h2.v7-impact,.v7 h3.v7-impact{font-size:clamp(42px,6.2vw,92px);line-height:.95;letter-spacing:-.045em}
+.v7 .v7-impact:after{content:"";position:absolute;left:0;right:0;bottom:-8px;height:2px;background:linear-gradient(90deg,transparent,#cda86a,#f3dfa8,#cda86a,transparent);opacity:.85}
+.v7 .statement .v7-impact,.v7 .ownership .v7-impact,.v7 .final .v7-impact{filter:drop-shadow(0 16px 30px rgba(0,0,0,.22))}
+.v7 .mechanism{background:radial-gradient(circle at 78% 30%,rgba(205,168,106,.14),transparent 28%),linear-gradient(145deg,#071e19,#123830 72%)}
+.v7 .mechanism:after{width:44vw;height:44vw;border:1px solid rgba(205,168,106,.22);border-radius:50%;right:-15vw;top:12%;box-shadow:0 0 0 45px rgba(205,168,106,.025),0 0 0 90px rgba(205,168,106,.018)}
+.v7 .mechanism h2{max-width:900px}.v7 .mechanism .v7-impact{font-size:clamp(76px,13vw,190px);color:#f3dfa8;text-transform:uppercase}
+.v7 .blueprint{background:linear-gradient(110deg,rgba(243,237,226,.98),rgba(243,237,226,.91));color:#0d2420}
+.v7 .blueprint:after{width:55vw;height:55vw;right:-18vw;top:-10vw;border:1px solid rgba(27,92,80,.15);transform:rotate(18deg);border-radius:48% 52% 60% 40%}
+.v7 .blueprint .copy{border-left:1px solid rgba(27,92,80,.18);padding-left:24px}
+.v7 .ai{background:linear-gradient(135deg,#0b2922,#123830)}
+.v7 .ai:after{inset:0;background:linear-gradient(115deg,transparent 45%,rgba(205,168,106,.08) 45.2%,transparent 45.5%),linear-gradient(65deg,transparent 70%,rgba(205,168,106,.06) 70.2%,transparent 70.5%)}
+.v7 .ai .v7-impact{color:#f3dfa8}
+.v7 .nervous{background:radial-gradient(ellipse at 50% 48%,rgba(205,168,106,.18),transparent 34%),#071e19;text-align:center}
+.v7 .nervous .wrap{max-width:980px}.v7 .nervous .copy{margin-left:auto;margin-right:auto}.v7 .nervous h2{font-size:clamp(60px,9vw,132px)}
+.v7 .nervous .v7-impact{font-size:clamp(50px,7vw,105px);color:#f3dfa8}
+.v7 .shifts{background:#f3ede2;color:#0d2420}
+.v7 .shifts .wrap{max-width:1100px}.v7 .v7-shift-title{margin-top:90px;padding-top:26px;border-top:1px solid rgba(13,36,32,.28);font-family:Manrope,Arial,sans-serif;font-size:13px;letter-spacing:.18em;font-weight:800;text-transform:uppercase;color:#1b5c50}
+.v7 .shifts h3:not(.v7-shift-title){font-size:clamp(38px,5vw,70px);max-width:850px}
+.v7 .shifts .copy{font-size:19px}.v7 .shifts em{color:#1b5c50}
+.v7 .outcomes{background:linear-gradient(155deg,#0d2420 0%,#123830 100%)}
+.v7 .outcomes .v7-asset{margin-top:62px;padding:30px 0 12px;border-top:1px solid rgba(205,168,106,.35);font-size:clamp(36px,4.6vw,68px);color:#f3dfa8}
+.v7 .ownership{text-align:center;min-height:82vh;display:flex;align-items:center;background:radial-gradient(circle at center,rgba(205,168,106,.16),transparent 35%),#071e19}
+.v7 .ownership h2{margin-left:auto;margin-right:auto}.v7 .ownership .copy{margin-left:auto;margin-right:auto;font-size:clamp(20px,2vw,28px)}
+.v7 .ownership .v7-impact{font-size:clamp(100px,17vw,250px);color:#f3dfa8}
+.v7 .support{background:#f3ede2;color:#0d2420}.v7 .support h3{margin-top:72px;color:#1b5c50}.v7 .support .copy{border-bottom:1px solid rgba(13,36,32,.12);padding-bottom:14px}
+.v7 .dream:nth-of-type(12){background:linear-gradient(90deg,rgba(7,41,29,.96),rgba(7,41,29,.65)),radial-gradient(circle at 80% 30%,rgba(205,168,106,.22),transparent 30%)}
+.v7 .fit{background:linear-gradient(135deg,#f3ede2 0 62%,#d9c8a9 62%);color:#0d2420}.v7 .fit .v7-impact{color:#1b5c50}
+.v7 .marinas{background:linear-gradient(130deg,#0b2922,#123830)}.v7 .marinas .copy:nth-of-type(-n+3){font-family:"Instrument Serif",Georgia,serif;font-size:clamp(34px,4vw,62px);line-height:1.02;color:#f3dfa8;margin-bottom:18px}
+.v7 .why-now{background:#071e19}.v7 .why-now h2{font-size:clamp(76px,11vw,160px)}.v7 .why-now .copy{font-size:clamp(19px,2vw,27px)}
+.v7 .why-now .v7-impact{font-size:clamp(42px,6vw,88px);color:#f3dfa8}
+.v7 .faq{background:#f3ede2;color:#0d2420}.v7 .faq h3{margin-top:76px;padding-top:34px;border-top:1px solid rgba(13,36,32,.2);font-size:clamp(32px,4vw,54px);color:#1b5c50}
+.v7 .final{min-height:100vh;display:flex;align-items:center;text-align:center;background:radial-gradient(circle at 50% 42%,rgba(205,168,106,.2),transparent 30%),linear-gradient(180deg,#071e19,#0d2420)}.v7 .final .wrap{max-width:980px}.v7 .final h1{font-size:clamp(86px,15vw,220px)}.v7 .final .copy,.v7 .final h2,.v7 .final h3{margin-left:auto;margin-right:auto}.v7 .final .v7-impact{color:#f3dfa8}
+@media(max-width:760px){.v7 section{padding:78px 0}.v7 .fit{background:#f3ede2}.v7 .v7-shift-title{margin-top:62px}.v7 .blueprint .copy{padding-left:16px}.v7 .ownership{min-height:70vh}}
+
+/* Signature Gold-Verlauf-Text statt flachem Gold auf grossen Einzel-Akzenten */
+.v7 .v7-impact,
+.v7 .v7-impact em,
+.v7 .mechanism .v7-impact,
+.v7 .ownership .v7-impact,
+.v7 .final .v7-impact{
+  background:linear-gradient(115deg,#8A6A3A 0%,#C9A24D 22%,#F3DFA8 45%,#C9A24D 68%,#8A6A3A 88%,#C9A24D 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;
+}
+</style></head>
+<body class="v7">
+<section class="hero"><div class="wrap"><h2>FIRST CHOICE</h2>
+<h3>Gewählt statt überzeugt.</h3>
+<p class="copy">Sei du selbst. Und kreiere daraus ein Business, bei dem deine Perfect Match Kunden nicht erst überzeugt werden müssen, sondern erkennen:</p>
+<h3 class="v7-impact"><em>SIE will ich.  </em></h3>
+<p class="copy">Mehr Kunden.</p>
+<p class="copy">Mehr CashFlow.</p>
+<p class="copy">Mehr Freiheit.</p>
+<p class="copy">Nicht, indem du dich verstellst.</p>
+<p class="copy">Nicht, indem du noch mehr postest.</p>
+<p class="copy">Und ganz sicher nicht, indem du dich in die nächste Strategie presst.</p>
+<h3 class="v7-impact"><em>Sondern indem du mehr DU wirst.</em></h3>
+<a class="btn" href="#">→ ICH WILL FIRST CHOICE</a></div></section><section class="dream"><div class="wrap"><h2>Stell dir vor, dein Business fühlt sich endlich so gut an, wie dein Erfolg aussieht.</h2>
+<p class="copy">Du wachst morgens auf und weißt, was du zu tun hast.</p>
+<p class="copy">Nicht, weil irgendein Coach dir gesagt hat, was gerade funktioniert.</p>
+<p class="copy">Sondern weil du weißt:</p>
+<p class="copy"><strong>Das bin ich.</strong></p>
+<p class="copy"><strong>  Dafür stehe ich.</strong></p>
+<p class="copy"><strong>  Das will ich.</strong></p>
+<p class="copy"><strong>  Und genau so will ich Business machen.</strong></p>
+<p class="copy">Du siehst andere Menschen launchen, posten, skalieren – und musst nicht mehr sofort überlegen, ob du jetzt auch alles ändern solltest.</p>
+<p class="copy">Du vertraust dir.</p>
+<p class="copy">Du triffst Entscheidungen schneller.</p>
+<p class="copy">Du zeigst dich klarer.</p>
+<p class="copy">Du verkaufst selbstbewusster.</p>
+<p class="copy">Und du ziehst Kunden an, bei denen du nicht erst stundenlang erklären musst, warum du die Richtige bist.</p>
+<h3 class="v7-impact"><em>Sie wissen es.</em></h3>
+<p class="copy">Nicht, weil du sie perfekt überzeugt hast.</p>
+<h3 class="v7-impact"><em>Sondern weil sie dich erkennen.</em></h3>
+<h2>Erfolg darf sich nach Lebendigkeit anfühlen.</h2>
+<p class="copy">Nicht nach:</p>
+<p class="copy">noch mehr funktionieren.</p>
+<p class="copy">noch mehr Content.</p>
+<p class="copy">noch mehr Calls.</p>
+<p class="copy">noch mehr „Ich müsste eigentlich …“</p>
+<p class="copy">Sondern nach:</p>
+<h3 class="v7-impact"><em>Fuck yes. Genau so will ich leben und arbeiten.</em></h3>
+<p class="copy">Du arbeitest mit Menschen, auf die du dich freust.</p>
+<p class="copy">Du verkaufst ein Angebot, hinter dem du zu 100 % stehst.</p>
+<p class="copy">Du verdienst Geld auf eine Art, die zu dir passt.</p>
+<p class="copy">Du wirst sichtbar, ohne dein ganzes Leben ins Internet stellen zu müssen.</p>
+<p class="copy">Und dein Business wächst, ohne dass du dich mit jedem nächsten Umsatzlevel weiter von dir entfernst.</p>
+<h3 class="v7-impact"><em>Das ist FIRST CHOICE.</em></h3></div></section><section class="statement"><div class="wrap"><h2>Du musst nicht mehr werden.</h2>
+<h3>Du darfst mehr DU sein.</h3>
+<p class="copy">Du bist längst gut in dem, was du tust.</p>
+<p class="copy">Vielleicht hast du bereits Kunden.</p>
+<p class="copy">Vielleicht hast du sogar schon richtig gutes Geld verdient.</p>
+<p class="copy">Und trotzdem spürst du:</p>
+<h3 class="v7-impact"><em>Da geht noch mehr.</em></h3>
+<p class="copy">Mehr von dir.</p>
+<p class="copy">Mehr von den richtigen Kunden.</p>
+<p class="copy">Mehr Klarheit.</p>
+<p class="copy">Mehr Umsatz.</p>
+<p class="copy">Mehr Freiheit.</p>
+<p class="copy">Aber bitte nicht mehr auf eine Art, bei der du dich selbst unterwegs verlierst.</p>
+<p class="copy">Du willst nicht das nächste Business bauen, das von außen beeindruckend aussieht.</p>
+<h3 class="v7-impact"><em>Du willst eins, das sich von innen richtig anfühlt.</em></h3>
+<p class="copy">Und genau da beginnt FIRST CHOICE.</p></div></section><section class="mechanism"><div class="wrap"><h2>Aber wie soll das funktionieren?</h2>
+<p class="copy">Nicht indem wir dir die nächste Strategie überstülpen.</p>
+<p class="copy">Sondern indem wir die Reihenfolge ändern.</p>
+<p class="copy">Die meisten Business-Programme beginnen hier:</p>
+<h3><em>Strategie → Marketing → Sales → mehr.</em></h3>
+<p class="copy">FIRST CHOICE beginnt hier:</p>
+<h2 class="v7-impact">BEI DIR.</h2>
+<p class="copy">Wer bist du?</p>
+<p class="copy">Wofür stehst du?</p>
+<p class="copy">Wie willst du arbeiten?</p>
+<p class="copy">Welche Menschen willst du in deinem Business?</p>
+<p class="copy">Was kannst – und willst – du langfristig tragen?</p>
+<p class="copy">Und <strong>dann</strong> bauen wir Positionierung, Angebot, Marketing, Sales und Wachstum darum.</p>
+<h3><em>Nicht du passt dich deinem Business an.</em></h3>
+<h3>Dein Business passt sich dir an.</h3></div></section><section class="blueprint"><div class="wrap"><h2>Dein Fundament: Identity Blueprint</h2>
+<p class="copy">Dein Identity Blueprint ist kein Persönlichkeitstest.</p>
+<p class="copy">Und auch kein hübsches PDF, das danach irgendwo auf deinem Desktop verschwindet.</p>
+<p class="copy">Er wird zur Grundlage deiner Businessentscheidungen.</p>
+<p class="copy">Du erkennst:</p>
+<p class="copy"><strong>Wer bin ich?</strong></p>
+<p class="copy"><strong>Wofür stehe ich?</strong></p>
+<p class="copy"><strong>Wie verkaufe ich?</strong></p>
+<p class="copy"><strong>Wie will ich sichtbar sein?</strong></p>
+<p class="copy"><strong>Welche Strategie passt wirklich zu mir – und welche darf ich guten Gewissens ignorieren?</strong></p>
+<p class="copy">Damit nicht dein Coach entscheidet, wer du sein sollst.</p>
+<p class="copy">Nicht Instagram.</p>
+<p class="copy">Nicht der Algorithmus.</p>
+<p class="copy">Nicht der nächste Trend.</p>
+<h3 class="v7-impact"><em>Sondern du.</em></h3></div></section><section class="ai"><div class="wrap"><h2>Und deine FEMINESS AI?</h2>
+<p class="copy">Stell dir Dienstagabend vor.</p>
+<p class="copy">Du sitzt vor einem neuen Angebot.</p>
+<p class="copy">Oder einem Post.</p>
+<p class="copy">Oder einer Nachricht eines Kunden.</p>
+<p class="copy">Oder du siehst die nächste Strategie, bei der plötzlich alle sagen:</p>
+<p class="copy"><strong>„Das MUSST du jetzt machen.“</strong></p>
+<p class="copy">Und sofort ist sie wieder da, diese Frage:</p>
+<p class="copy"><strong><em>Sollte ich es auch so machen? Vielleicht geht das leichter, oder schneller?</em></strong></p>
+<p class="copy">Du musst nicht bis zum nächsten Call warten.</p>
+<p class="copy">Deine FEMINESS AI verbindet das FIRST-CHOICE-System mit deinem persönlichen Identity Blueprint.</p>
+<p class="copy">Sie kennt deine Ausrichtung, deine Werte und die Art von Business, die du aufbauen willst.</p>
+<p class="copy">Und wird damit zu deinem persönlichen Business-Sparring für die Entscheidungen, die jeden Tag entstehen.</p>
+<p class="copy">Nicht:</p>
+<h3><em>„Hier sind fünf Tipps, die für jeden funktionieren.“</em></h3>
+<p class="copy">Sondern:</p>
+<h3 class="v7-impact"><em>„Was ist jetzt für DICH der richtige nächste Schritt?“</em></h3></div></section><section class="nervous"><div class="wrap"><h2>Und dein Nervensystem?</h2>
+<p class="copy">Das ist kein Extra-Modul für ein bisschen „Mindset“.</p>
+<p class="copy">Es ist der Unterschied zwischen:</p>
+<h3><em>wissen, was zu tun wäre</em></h3>
+<p class="copy">und</p>
+<h2 class="v7-impact">es wirklich tun und halten können.</h2>
+<p class="copy">Denn was bringt dir die beste Positionierung, wenn du dich versteckst, sobald mehr Menschen dich sehen?</p>
+<p class="copy">Was bringt dir ein Premium-Angebot, wenn du beim Preis wieder einknickst?</p>
+<p class="copy">Was bringt dir Wachstum, wenn dein System bei jedem nächsten Level sagt:</p>
+<p class="copy"><strong>Zu viel.</strong></p>
+<p class="copy"><strong>  Zu gefährlich.</strong></p>
+<p class="copy"><strong>  Zurück.</strong></p>
+<p class="copy">Deshalb arbeiten wir nicht nur daran, <strong>was du aufbaust.</strong></p>
+<p class="copy">Sondern auch daran, dass du die Frau wirst, die es halten kann.</p></div></section><section class="shifts"><div class="wrap"><h2>7 SHIFTS</h2>
+<p class="copy">Nicht sieben Module, die du einfach nur konsumierst.</p>
+<h3><em>Sieben Veränderungen, die du in deinem Business sehen und spüren wirst.</em></h3>
+<h3 class="v7-shift-title">SHIFT 1 · POWER OF PURPOSE</h3>
+<p class="copy v7-transition">Von:</p>
+<p class="copy"><strong>„Ich weiß nicht mal, wofür ich wirklich stehe.“</strong></p>
+<p class="copy v7-transition">Zu:</p>
+<h3><em>„Ich weiß, wer ich bin – und wofür ich brenne.“</em></h3>
+<p class="copy">Du hörst auf, dich daran zu orientieren, was gerade am Markt funktioniert.</p>
+<p class="copy">Und findest den Kern, aus dem du dein Business führen willst.</p>
+<h3 class="v7-shift-title">SHIFT 2 · SECRET OF SOULCLIENTS</h3>
+<p class="copy v7-transition">Von:</p>
+<p class="copy"><strong>„Ich spreche irgendwie mit allen.“</strong></p>
+<p class="copy v7-transition">Zu:</p>
+<h3><em>„Meine Perfect Match Kunden erkennen sich sofort.“</em></h3>
+<p class="copy">Du verstehst nicht nur, wer deine Kunden sind.</p>
+<p class="copy">Sondern was sie wirklich wollen, was sie bewegt und warum gerade du für sie relevant bist.</p>
+<h3 class="v7-shift-title">SHIFT 3 · POWER OF POSITIONING</h3>
+<p class="copy v7-transition">Von:</p>
+<p class="copy"><strong>„Ich bin eine von vielen.“</strong></p>
+<p class="copy v7-transition">Zu:</p>
+<h3><em>„Ich bin die EINE, an die man denkt.“</em></h3>
+<p class="copy">Deine Positionierung macht klar, wofür du stehst, für wen du richtig bist und warum deine Arbeit nicht austauschbar ist.</p>
+<h3 class="v7-shift-title">SHIFT 4 · ART OF OFFER</h3>
+<p class="copy v7-transition">Von:</p>
+<p class="copy"><strong>„Ich verkaufe meine Zeit.“</strong></p>
+<p class="copy v7-transition">Zu:</p>
+<h3><em>„Ich habe ein Signature-Angebot, das meine Kundinnen haben wollen.“</em></h3>
+<p class="copy">Deine Expertise wird zu einem Angebot mit einem klaren Ergebnis, einer klaren Transformation und einem Wert, den deine Kundinnen verstehen und deshalb kaufen..</p>
+<p class="copy">Ein Angebot, für das du bekannt werden kannst.</p>
+<h3 class="v7-shift-title">SHIFT 5 · MASTERY OF MARKETING</h3>
+<p class="copy v7-transition">Von:</p>
+<p class="copy"><strong>„Ich poste und hoffe, dass mich jemand sieht.“</strong></p>
+<p class="copy v7-transition">Zu:</p>
+<h3><em>„Meine Expertise wird zum Magneten.“</em></h3>
+<p class="copy">Kein Content-Hamsterrad.</p>
+<p class="copy">Keine Social-Media-Theatershow.</p>
+<p class="copy">Marketing macht sichtbar, wofür du stehst – und zieht die Menschen an, die genau das suchen.</p>
+<h3 class="v7-shift-title">SHIFT 6 · SECRET OF SALES</h3>
+<p class="copy v7-transition">Von:</p>
+<p class="copy"><strong>„Ich muss überzeugen.“</strong></p>
+<p class="copy v7-transition">Zu:</p>
+<h3><em>„Die Richtigen kommen bereits mit einem inneren Ja.“</em></h3>
+<p class="copy">Du führst.</p>
+<p class="copy">Du hörst zu.</p>
+<p class="copy">Du machst den Wert deiner Arbeit sichtbar.</p>
+<p class="copy">Und lässt deinen Kunden entscheiden.</p>
+<h3><em>Gewählt statt überzeugt.</em></h3>
+<h3 class="v7-shift-title">SHIFT 7 · SECRET OF SCALE</h3>
+<p class="copy v7-transition">Von:</p>
+<p class="copy"><strong>„Wenn ich aufhöre, bricht mein Umsatz ein.“</strong></p>
+<p class="copy v7-transition">Zu:</p>
+<h3><em>„Mein Business wächst weiter, auch wenn ich nicht permanent funktioniere.“</em></h3>
+<p class="copy">Mehr Umsatz muss nicht automatisch mehr Calls, mehr Posts, mehr Stunden und mehr Erschöpfung bedeuten.</p>
+<p class="copy">Du baust Prozesse und Strukturen, die Wachstum ermöglichen.</p>
+<h3><em>Und dir gleichzeitig mehr Freiheit geben.</em></h3></div></section><section class="outcomes"><div class="wrap"><h2>Und am Ende hast du nicht einfach mehr Wissen.</h2>
+<h3 class="v7-asset">Du hast etwas aufgebaut.</h3>
+<h3 class="v7-asset"><em>Deinen Identity Blueprint.</em></h3>
+<p class="copy">Damit du weißt, wer du bist und welche Businessentscheidungen zu dir passen.</p>
+<h3 class="v7-asset"><em>Dein unwiderstehliches Angebot.</em></h3>
+<p class="copy">Ein klares Angebot, das deine Perfect Match Kunden verstehen und haben wollen.</p>
+<h3 class="v7-asset"><em>Deine unverwechselbare Positionierung.</em></h3>
+<p class="copy">Damit du nicht mehr eine von vielen bist.</p>
+<h3 class="v7-asset"><em>Dein einzigartiges Marketing-System.</em></h3>
+<p class="copy">Damit Sichtbarkeit nicht mehr bedeutet, jeden Tag dein Leben ins Internet zu stellen.</p>
+<h3 class="v7-asset"><em>Deinen sexy Sales-Prozess.</em></h3>
+<p class="copy">Ohne Druck.</p>
+<p class="copy">Ohne Manipulation.</p>
+<p class="copy">Ohne auswendig gelernte Closer-Sätze.</p>
+<h3 class="v7-asset"><em>Deine FEMINESS AI.</em></h3>
+<p class="copy">Als Business-Sparring für deine täglichen Entscheidungen auf Basis deines Blueprints und des FIRST-CHOICE-Systems.</p>
+<h3 class="v7-asset"><em>Dein Fundament für Scale.</em></h3>
+<p class="copy">Damit dein nächstes Umsatzlevel nicht automatisch dein nächstes Erschöpfungslevel wird.</p></div></section><section class="ownership"><div class="wrap"><h2>Das ist dein Business.</h2>
+<p class="copy">Nicht Marinas.</p>
+<p class="copy">Nicht das deines letzten Coaches.</p>
+<p class="copy">Nicht das, das gerade auf Instagram funktioniert.</p>
+<h2 class="v7-impact">Deins.</h2></div></section><section class="support"><div class="wrap"><h2>Was ist drin?</h2>
+<h3>STEP 1 · FIRST CHOICE</h3>
+<p class="copy">Die 7 Shifts von Power of Purpose bis Secret of Scale.</p>
+<p class="copy">Mit deinem Identity Blueprint als Fundament für dein Business.</p>
+<p class="copy">Und persönlicher Nervensystem-Arbeit innerhalb des Prozesses, damit du nicht einfach Wissen konsumierst, sondern das Neue tatsächlich umsetzt und halten kannst.</p>
+<h3>STEP 2 · DEINE LIVE-BEGLEITUNG</h3>
+<h3><em>6 Monate. 3 Live-Calls pro Woche.</em></h3>
+<p class="copy">Damit eine Frage nicht drei Wochen lang dein Business blockiert.</p>
+<p class="copy">Alle Calls werden aufgezeichnet.</p>
+<p class="copy">Dazu kommt persönliche Telegram-Begleitung zwischen den Calls.</p>
+<p class="copy">Und dein Fundament-Check zum Start:</p>
+<p class="copy">Was funktioniert bereits?</p>
+<p class="copy">Was verkauft sich?</p>
+<p class="copy">Was lieben deine Kunden?</p>
+<p class="copy">Was macht dir Freude?</p>
+<p class="copy">Was kostet dich unnötig Energie?</p>
+<h3><em>Wir reißen nicht ein, was funktioniert.</em></h3>
+<p class="copy">Wir finden heraus, was wirklich deins ist – und wachsen von dort.</p>
+<h3>STEP 3 · DEINE FEMINESS AI</h3>
+<p class="copy">Dein persönliches Business-Sparring auf Basis deines Identity Blueprints und des FIRST-CHOICE-Systems.</p>
+<p class="copy">Damit FIRST CHOICE nicht nur etwas ist, das du im Programm verstehst.</p>
+<h3><em>Sondern etwas, das du jeden Tag in deinem Business lebst.</em></h3></div></section><section class="dream"><div class="wrap"><h2>Stell dir dein Business sechs Monate von heute vor.</h2>
+<p class="copy">Du weißt, wofür du stehst.</p>
+<p class="copy">Du weißt, wen du erreichen willst.</p>
+<p class="copy">Du hast ein Angebot, das du liebst zu verkaufen.</p>
+<p class="copy">Deine Kundinnen verstehen, warum genau dieses Angebot für sie ist.</p>
+<p class="copy">Dein Marketing klingt nach dir.</p>
+<p class="copy">Deine Sales-Gespräche fühlen sich nicht mehr wie überreden an.</p>
+<p class="copy">Du triffst Entscheidungen nicht mehr aus Panik, Vergleich oder dem neuesten Instagram-Trend.</p>
+<p class="copy">Du kannst wachsen, ohne bei jedem nächsten Level dein ganzes Business wieder umzubauen.</p>
+<p class="copy">Und wenn du dir einen freien Tag nimmst?</p>
+<h3 class="v7-impact"><em>Dann hast du frei.</em></h3>
+<p class="copy">Nicht offiziell frei und heimlich trotzdem 37-mal Social Media &amp; Mails checken.</p>
+<p class="copy v7-impact"><strong>Wirklich frei.</strong></p>
+<p class="copy">Das ist nicht weniger Ambition.</p>
+<h3 class="v7-impact"><em>Das ist Erfolg, den du auch genießen kannst.</em></h3></div></section><section class="fit"><div class="wrap"><h2>FIRST CHOICE ist für dich, wenn …</h2>
+<p class="copy">du Expertise hast und daraus ein echtes Business bauen willst.</p>
+<p class="copy">du spürst, dass da noch mehr möglich ist, aber nicht mehr auf Kosten von dir selbst.</p>
+<p class="copy">du nicht einfach mehr Kundinnen willst, sondern die <strong>richtigen</strong>.</p>
+<p class="copy">du nicht mehr bei jedem Problem dein gesamtes Business infrage stellen willst.</p>
+<p class="copy">du bereit bist, nicht nur über Veränderung zu reden, sondern sie sechs Monate lang aufzubauen.</p>
+<p class="copy">Und wenn du denkst:</p>
+<h3 class="v7-impact"><em>„Ich will mehr. Aber nicht mehr so.“</em></h3>
+<p class="copy">Dann bist du hier richtig.</p>
+<p class="copy">FIRST CHOICE ist nicht:</p>
+<p class="copy"><strong>„Sag mir, was ich machen soll.“</strong></p>
+<p class="copy">FIRST CHOICE ist:</p>
+<h2>„Zeig mir, wie ich mein Business zu meinem mache.“</h2></div></section><section class="proof"><div class="wrap"><h2>Was andere Frauen sagen</h2>
+<p class="copy"><em>[Testimonials / Cases]</em></p></div></section><section class="marinas"><div class="wrap"><h2>Warum Marina?</h2>
+<p class="copy">20+ Jahre Unternehmerin.</p>
+<p class="copy">Über 20.000 Frauen begleitet.</p>
+<p class="copy">Über 20 Millionen Euro Umsatz.</p>
+<p class="copy">Aber FIRST CHOICE ist nicht entstanden, weil bei mir immer alles funktioniert hat.</p>
+<p class="copy">Sondern auch, weil es das nicht hat.</p>
+<p class="copy">Ich habe selbst Tausende Euro in Strategien investiert.</p>
+<p class="copy">Ich habe aufgebaut.</p>
+<p class="copy">Verändert.</p>
+<p class="copy">Neu angefangen.</p>
+<p class="copy">Mich angepasst.</p>
+<p class="copy">Und irgendwann verstanden:</p>
+<h3><em>Ich brauche niemanden, der mir noch einmal erklärt, wie Business grundsätzlich funktioniert.</em></h3>
+<p class="copy">Ich musste verstehen:</p>
+<h2 class="v7-impact">Wie funktioniert MEIN Business?</h2>
+<p class="copy">Aus meiner Identität.</p>
+<p class="copy">Mit meiner Positionierung.</p>
+<p class="copy">Mit meinem Angebot.</p>
+<p class="copy">Mit meinem Marketing.</p>
+<p class="copy">Mit meiner Art zu verkaufen.</p>
+<p class="copy">Mit Strukturen, die mir Wachstum ermöglichen, ohne dass ich mich darin verliere.</p>
+<p class="copy">Und genau darum geht es in FIRST CHOICE.</p>
+<p class="copy">Nicht um ein Business, das irgendwie funktioniert.</p>
+<h3><em>Sondern um eins, das dir dient.</em></h3>
+<p class="copy">Und dir die finanzielle und persönliche Freiheit ermöglicht, für die du einmal losgegangen bist.</p></div></section><section class="why-now"><div class="wrap"><h2>Warum jetzt?</h2>
+<p class="copy">Du kannst natürlich weitermachen wie bisher.</p>
+<p class="copy">Noch eine Strategie testen.</p>
+<p class="copy">Noch einmal deine Positionierung ändern.</p>
+<p class="copy">Noch einen Kurs kaufen.</p>
+<p class="copy">Noch drei Monate posten und schauen, was passiert.</p>
+<p class="copy">Vielleicht funktioniert etwas davon.</p>
+<h3><em>Aber was passiert, wenn nicht?</em></h3>
+<p class="copy">Dann beginnt derselbe Kreislauf wieder:</p>
+<h2>probieren → hoffen → zweifeln → verändern → neu anfangen.</h2>
+<p class="copy">FIRST CHOICE ist nicht die nächste Runde dieses Kreislaufs.</p>
+<p class="copy">Es ist der Punkt, an dem du aufhörst, dein Business immer wieder in Frage zu stellen und neu zu erfinden –</p>
+<h3 class="v7-impact">und anfängst, deins zu bauen.</h3></div></section><section class="faq"><div class="wrap"><h2>Häufige Fragen</h2>
+<h3><em>„Ich habe schon einmal richtig gut verdient und mir dann alles kaputt gemacht, weil ich mehr wollte. Was, wenn das wieder passiert?“</em></h3>
+<p class="copy">Deshalb beginnen wir nicht mit:</p>
+<p class="copy"><strong>„Was bauen wir jetzt alles neu?“</strong></p>
+<p class="copy">Wir beginnen mit deinem Fundament.</p>
+<p class="copy">Was funktioniert?</p>
+<p class="copy">Was trägt?</p>
+<p class="copy">Was verkauft sich?</p>
+<p class="copy">Was lieben deine Kundinnen?</p>
+<p class="copy">Und was davon darf bleiben?</p>
+<p class="copy">Wir optimieren nicht weg, was bereits funktioniert.</p>
+<p class="copy">Wir bauen darauf auf.</p>
+<h3><em>„Ich bin vom ständigen Live-Sein und Funktionieren ausgebrannt. Wird FIRST CHOICE nicht wieder genauso?“</em></h3>
+<p class="copy">Das Ziel ist genau das Gegenteil.</p>
+<p class="copy">Wir wollen kein Business bauen, das noch stärker von deiner permanenten Energie und Anwesenheit abhängig ist.</p>
+<p class="copy">Deshalb gehören Nervensystem, Strukturen und Scale zusammen.</p>
+<p class="copy">Du sollst Wachstum nicht nur erreichen können.</p>
+<h3><em>Du sollst es auch halten können.</em></h3>
+<h3><em>„Ich weiß nicht, ob ich schon erfahren genug bin.“</em></h3>
+<p class="copy">Du brauchst keine riesige Marke.</p>
+<p class="copy">Keine Millionenumsätze.</p>
+<p class="copy">Und auch keine perfekte Positionierung.</p>
+<p class="copy">Du brauchst Expertise, mit der du Menschen helfen kannst, und die ernsthafte Entscheidung, daraus dein Business aufzubauen.</p>
+<p class="copy">Wir starten dort, wo du bist.</p>
+<h3><em>„Ich habe schon so viele Programme gemacht.“</em></h3>
+<p class="copy">Dann brauchst du wahrscheinlich nicht noch mehr Strategien.</p>
+<p class="copy">FIRST CHOICE soll nicht dein nächster Ordner voller Videos werden.</p>
+<p class="copy">Wir bauen konkrete Business-Assets:</p>
+<p class="copy">deine Positionierung, dein Angebot, dein Marketing-System, deinen Sales-Prozess, dein Fundament für Wachstum.</p>
+<p class="copy">Und du bekommst Begleitung genau dort, wo aus:</p>
+<p class="copy"><strong>„Ich weiß das doch eigentlich.“</strong></p>
+<p class="copy">endlich:</p>
+<h3><em>„Ich mache es.“</em></h3>
+<p class="copy">wird.</p>
+<h3><em>„Was, wenn die Investition zu groß für mich ist?“</em></h3>
+<p class="copy">Dann schauen wir uns das offen und gemeinsam an.</p>
+<p class="copy">Ob FIRST CHOICE wirklich zu dir passt.</p>
+<p class="copy">Welche Zahlungsmöglichkeiten es gibt.</p>
+<p class="copy">Und ob diese Entscheidung für dich und dein Business gerade sinnvoll ist.</p>
+<p class="copy">Keine Entscheidung, die du aus Druck triffst.</p>
+<h3><em>Sondern eine, hinter der du stehen kannst.</em></h3></div></section><section class="final"><div class="wrap"><h2>FIRST CHOICE</h2>
+<h3>GEWÄHLT. NICHT ÜBERZEUGT.</h3>
+<p class="copy">Du musst nicht besser darin werden, dich zu verkaufen.</p>
+<p class="copy">Du musst nicht lauter werden.</p>
+<p class="copy">Du musst nicht noch mehr machen.</p>
+<h3><em>Werde klarer darin, wer du bist.</em></h3>
+<p class="copy">Und baue daraus ein Business, bei dem die richtigen Menschen sagen:</p>
+<h2 class="v7-impact">Die will ich.</h2>
+<a class="btn" href="#">→ KOSTENFREIES FIRST-CHOICE-GESPRÄCH BUCHEN</a>
+<p class="copy">Wir schauen gemeinsam, wo dein Business gerade steht, was bereits funktioniert und ob FIRST CHOICE für dich der richtige nächste Schritt ist.</p></div></section></body></html>
