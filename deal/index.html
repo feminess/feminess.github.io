@@ -251,6 +251,25 @@ h3{font-size:clamp(30px,4vw,54px);}
 .future-feel .answer{font-family:'Instrument Serif',Georgia,serif; font-size:clamp(40px,5.5vw,78px); line-height:1.02; max-width:900px; margin-top:90px;}
 .future-feel .answer .script{padding-top:1.1em; padding-left:.15em; margin-top:.2em;}
 
+/* ---------- MIDIMG TRANSITION ---------- */
+.midimg{background:var(--bg); padding:20px 22px 0;}
+.mid-figure{
+  width:auto; height:420px; overflow:hidden; margin:0 auto; max-width:1180px;
+  background:var(--bg); position:relative;
+}
+.mid-figure:before{
+  content:""; position:absolute; inset:0; z-index:1; pointer-events:none;
+  background:linear-gradient(to bottom, var(--bg) 0%, transparent 38%);
+}
+.mid-figure img{
+  width:100%; height:100%; object-fit:cover; display:block;
+  mask-image:linear-gradient(to bottom, transparent 0%, black 30%);
+  -webkit-mask-image:linear-gradient(to bottom, transparent 0%, black 30%);
+}
+@media(min-width:860px){
+  .mid-figure{height:600px;}
+}
+
 /* ---------- FAST ACTION ---------- */
 .fast{background:var(--bg); color:var(--cream); position:relative; overflow:hidden;}
 .fast:before{
@@ -503,6 +522,10 @@ h3{font-size:clamp(30px,4vw,54px);}
   <p class="copy">Sondern du weißt:</p>
   <div class="answer">Das ist mein Business.<br>Das ist mein Weg.<br><span class="gold-text script" style="font-style:normal">Und ich vertraue mir darin.</span></div>
  </div>
+</section>
+
+<section class="midimg">
+  <div class="mid-figure"><img src="Bilder/sphere-transition.png" alt=""></div>
 </section>
 
 <section class="coherence">
