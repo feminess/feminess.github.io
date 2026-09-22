@@ -272,7 +272,13 @@ h3{font-size:clamp(30px,4vw,54px);}
   .big-statement{padding-bottom:48px;}
   .fast{padding-top:48px;}
 }
-.fast-grid{display:grid; grid-template-columns:1fr 1fr; gap:70px; align-items:center; position:relative; z-index:1;}
+.fast-grid{
+  display:grid; grid-template-columns:1fr 1fr; gap:70px 70px; align-items:center; position:relative; z-index:1;
+  grid-template-areas:"copy bonus" "count bonus";
+}
+.fast-copy{grid-area:copy;}
+.bonus-card{grid-area:bonus;}
+.fast-count{grid-area:count;}
 .fast h2{font-size:clamp(58px,8vw,116px); margin-bottom:20px;}
 .fast .eyebrow{color:var(--gold); opacity:1;}
 .fast .count-box{border-color:rgba(243,237,226,.28); background:rgba(7,41,29,.46);}
@@ -383,7 +389,8 @@ h3{font-size:clamp(30px,4vw,54px);}
   .hero-image-logo{width:min(320px, 72vw); margin-bottom:8px;}
   .hero-inner{padding:40px 0 56px;}
   .hero-topbar{padding:16px 0;}
-  .offer-grid, .fast-grid{grid-template-columns:1fr; gap:38px;}
+  .offer-grid{grid-template-columns:1fr; gap:38px;}
+  .fast-grid{grid-template-columns:1fr; gap:32px; grid-template-areas:"copy" "bonus" "count";}
   .offer-sticky{position:static;}
   .offer-sticky h2, .fast h2{font-size:clamp(50px,15vw,76px);}
   .offer-item{grid-template-columns:48px 1fr; gap:12px; padding:24px 4px;}
@@ -464,10 +471,16 @@ h3{font-size:clamp(30px,4vw,54px);}
 
 <section class="fast" id="fast-action">
  <div class="wrap fast-grid">
-  <div>
+  <div class="fast-copy">
    <div class="eyebrow">Fast Action Bonus</div>
    <h2>Wenn du dich<br><em>jetzt</em> entscheidest.</h2>
    <p class="lead">Bei Buchung bis <strong>24.09.2026 um 23:59 Uhr</strong> bekommst du zusätzlich:</p>
+  </div>
+  <div class="bonus-card fast-live">
+   <div class="bonus"><strong>1× 1:1 Strategie-Call mit Marina</strong><span>60 Minuten persönlich mit Marina</span><span class="value">Wert: 997 €</span></div>
+   <div class="bonus"><strong>6× 30 Minuten 1:1 Begleitung mit Vera</strong><span>Persönliche Begleitung für deine Umsetzung.</span><span class="value">Wert: 897 €</span></div>
+  </div>
+  <div class="fast-count">
    <div class="count-wrap fast-live" data-countdown="fast">
     <div class="count-box"><span class="count-num" data-unit="days">00</span><span class="count-label">Tage</span></div>
     <div class="count-box"><span class="count-num" data-unit="hours">00</span><span class="count-label">Stunden</span></div>
@@ -475,10 +488,6 @@ h3{font-size:clamp(30px,4vw,54px);}
     <div class="count-box"><span class="count-num" data-unit="seconds">00</span><span class="count-label">Sekunden</span></div>
    </div>
    <div class="deadline fast-live">Fast Action endet am 24.09.2026 · 23:59 Uhr</div>
-  </div>
-  <div class="bonus-card fast-live">
-   <div class="bonus"><strong>1× 1:1 Strategie-Call mit Marina</strong><span>60 Minuten persönlich mit Marina</span><span class="value">Wert: 997 €</span></div>
-   <div class="bonus"><strong>6× 30 Minuten 1:1 Begleitung mit Vera</strong><span>Persönliche Begleitung für deine Umsetzung.</span></div>
   </div>
  </div>
 </section>
