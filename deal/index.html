@@ -76,12 +76,9 @@ h3{font-size:clamp(30px,4vw,54px);}
 
 /* ---------- HERO ---------- */
 .offer-hero{
-  background:radial-gradient(circle at 78% 46%, #2c7a65 0%, #184a3d 38%, var(--bg) 72%);
+  background:radial-gradient(circle at 50% 34%, #2c7a65 0%, #184a3d 40%, var(--bg) 74%);
   position:relative; overflow:hidden;
   padding:0;
-}
-@media(max-width:800px){
-  .offer-hero{background:radial-gradient(circle at 50% 20%, #2c7a65 0%, #184a3d 42%, var(--bg) 72%);}
 }
 .offer-hero:before{
   content:""; position:absolute; top:-80px; left:-80px; width:600px; height:600px;
@@ -93,9 +90,11 @@ h3{font-size:clamp(30px,4vw,54px);}
   background:radial-gradient(circle, rgba(205,168,106,.12) 0%, transparent 62%);
   pointer-events:none; z-index:0;
 }
-.hero-inner{display:grid; grid-template-columns:55fr 45fr; min-height:92vh; position:relative; z-index:2;}
-.offer-hero .wrap{width:auto; margin:0; padding:72px 56px 72px min(6vw,80px); display:flex; flex-direction:column; justify-content:center;}
-.kicker{font-size:13px; letter-spacing:.25em; text-transform:uppercase; color:var(--gold); font-weight:800; margin-bottom:22px;}
+.hero-topbar{background:var(--bg); position:relative; z-index:3; padding:20px 0;}
+.hero-topbar .wrap{text-align:center;}
+.hero-inner{display:flex; flex-direction:column; align-items:center; text-align:center; min-height:auto; padding:56px 0 72px; position:relative; z-index:2;}
+.offer-hero .wrap{width:min(760px, calc(100% - 40px)); margin:auto; display:flex; flex-direction:column; align-items:center;}
+.kicker{font-size:13px; letter-spacing:.25em; text-transform:uppercase; color:var(--gold); font-weight:800; margin-bottom:0;}
 .offer-hero h1{max-width:1000px; line-height:1.08; padding-top:.1em;}
 .offer-hero .sub{font-size:clamp(34px,5vw,64px); line-height:1.6; max-width:900px; margin:0 0 24px;}
 .offer-hero .micro, .offer-hero .lead{max-width:720px;}
@@ -111,7 +110,7 @@ h3{font-size:clamp(30px,4vw,54px);}
   background:linear-gradient(to top, var(--bg) 0%, transparent 100%);
   z-index:1; pointer-events:none;
 }
-.hero-image-logo{background:transparent; display:flex; align-items:center; justify-content:center; position:relative;}
+.hero-image-logo{background:transparent; display:flex; align-items:center; justify-content:center; position:relative; width:min(440px, 78vw); aspect-ratio:1/1; margin:0 auto 12px;}
 .hero-image-logo:before, .hero-image-logo:after{display:none;}
 .hero-image-logo:after{
   content:""; position:absolute; inset:0; z-index:0;
@@ -360,15 +359,9 @@ h3{font-size:clamp(30px,4vw,54px);}
 @media(max-width:800px){
   section{padding:78px 0;}
   .wrap{width:min(100% - 28px, 1180px);}
-  .hero-inner{grid-template-columns:1fr; min-height:auto;}
-  .hero-image{height:34vh; order:-1;}
-  .hero-image img{object-position:center 25%;}
-  .hero-image-logo{height:42vh;}
-  .hero-image-logo img{width:60%;}
-  .hero-image:before{background:linear-gradient(to bottom, transparent 30%, var(--bg) 100%);}
-  .hero-image:after{display:none;}
-  .offer-hero .wrap{padding:32px 24px 56px;}
-  .offer-hero h1{font-size:clamp(64px,26vw,120px); max-width:100%;}
+  .hero-image-logo{width:min(320px, 72vw); margin-bottom:8px;}
+  .hero-inner{padding:40px 0 56px;}
+  .hero-topbar{padding:16px 0;}
   .offer-grid, .fast-grid{grid-template-columns:1fr; gap:38px;}
   .offer-sticky{position:static;}
   .offer-sticky h2, .fast h2{font-size:clamp(50px,15vw,76px);}
@@ -395,18 +388,22 @@ h3{font-size:clamp(30px,4vw,54px);}
 </head>
 <body>
 <section class="offer-hero">
-  <div class="hero-inner">
+  <div class="hero-topbar">
     <div class="wrap">
       <div class="kicker">TRUE SPIRIT BUSINESS · EXPERIENCE SPECIAL</div>
+    </div>
+  </div>
+  <div class="hero-inner">
+    <div class="hero-image hero-image-logo">
+      <img src="Bilder/first-choice-logo.png" alt="FIRST CHOICE">
+    </div>
+    <div class="wrap">
       <h1 class="sr-only">First Choice</h1>
       <p class="sub script gold-text">Gewählt statt überzeugt.</p>
       <p class="lead">Sei du selbst. Und baue daraus ein Business, bei dem deine Perfect Match Kunden erkennen: <em>Sie will ich.</em></p>
       <a class="btn cta-live" href="#booking-form">Experience Special sichern</a>
       <div class="closed-state">Die Anmeldung für dieses Experience Special ist geschlossen.</div>
       <div class="deadline">Experience Special · Anmeldung nur bis 26.09.2026 · 12:00 Uhr</div>
-    </div>
-    <div class="hero-image hero-image-logo">
-      <img src="Bilder/first-choice-logo.png" alt="FIRST CHOICE">
     </div>
   </div>
 </section>
