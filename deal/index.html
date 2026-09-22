@@ -283,7 +283,7 @@ h3{font-size:clamp(30px,4vw,54px);}
 .coherence{background:linear-gradient(120deg, rgba(7,41,29,.97), rgba(18,56,48,.91)); text-align:center;}
 .coherence .wrap{max-width:1000px;}
 .coherence h2{font-size:clamp(56px,8vw,112px);}
-.coherence h2 .script{padding-top:0; padding-bottom:12px; line-height:1.8; margin-top:-.1em;}
+.coherence h2 .script{padding-top:0; padding-bottom:12px; line-height:1.3; margin-top:-.35em;}
 .coherence .stack{margin:42px auto; max-width:760px; font-family:'Instrument Serif',Georgia,serif; font-size:clamp(28px,3.6vw,50px); line-height:1.08; color:var(--gold);}
 .coherence .stack div{margin:8px 0;}
 .coherence .tagline{font-size:clamp(46px,7vw,100px); line-height:.95; margin-top:55px;}
@@ -591,11 +591,14 @@ h3{font-size:clamp(30px,4vw,54px);}
 
 (function(){
   const hero = document.querySelector('.offer-hero');
+  const bookingForm = document.getElementById('booking-form');
   const stickyCta = document.getElementById('stickyCta');
   if (!hero || !stickyCta) return;
   function toggle(){
     const heroBottom = hero.getBoundingClientRect().bottom;
-    stickyCta.classList.toggle('is-visible', heroBottom < 0);
+    const pastHero = heroBottom < 0;
+    const reachedForm = bookingForm && bookingForm.getBoundingClientRect().top < window.innerHeight * 0.6;
+    stickyCta.classList.toggle('is-visible', pastHero && !reachedForm);
   }
   toggle();
   window.addEventListener('scroll', toggle, { passive: true });
