@@ -108,7 +108,17 @@ p.lead b, p.lead strong { color: var(--cream); font-weight: 700; }
 
 /* ── FOOTER ── */
 .site-footer { background: var(--bg); border-top: 1px solid var(--hairline); padding: 28px 22px; text-align: center; }
-.footer-logo img { max-width: 170px; margin: 0 auto 16px; display: block; mix-blend-mode: screen; }
+.footer-logo {
+  display: block;
+  width: 170px; height: 17px;
+  margin: 0 auto 16px;
+  background: var(--gold-text);
+  -webkit-mask-image: url('Bilder/Logo-rosegoldverlauf-rgb.png');
+  mask-image: url('Bilder/Logo-rosegoldverlauf-rgb.png');
+  -webkit-mask-size: contain; mask-size: contain;
+  -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
+  -webkit-mask-position: center; mask-position: center;
+}
 .footer-links { display: flex; justify-content: center; gap: 20px; list-style: none; margin-bottom: 10px; }
 .footer-links a { color: var(--cream-soft); text-decoration: none; font-size: 12px; letter-spacing: .04em; }
 .footer-links a:hover { color: var(--cream); text-decoration: underline; }
@@ -226,9 +236,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <!-- ── FOOTER ── -->
   <footer class="site-footer">
-    <div class="footer-logo">
-      <img src="Bilder/Logo-rosegoldverlauf-rgb.png" alt="Feminess">
-    </div>
+    <span class="footer-logo" role="img" aria-label="Feminess"></span>
     <ul class="footer-links">
       <li><a href="https://feminess.github.io/Datenschutz/">Datenschutzerklärung</a></li>
       <li><a href="https://feminess.github.io/Impressum/">Impressum</a></li>
