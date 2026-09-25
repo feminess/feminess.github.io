@@ -340,7 +340,15 @@
     .sl-dot.active { background: var(--gold-b); transform: scale(1.35); }
 
     /* ── FÜR DICH ── */
-    .fuer-dich-section { background: var(--bg-alt); padding: 100px 0; }
+    .fuer-dich-section {
+      background: url('Bilder/gold-spheres.jpg') center center / cover no-repeat;
+      padding: 100px 0; position: relative;
+    }
+    .fuer-dich-section::before {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(to bottom, rgba(7,41,29,0.82) 0%, rgba(13,36,32,0.88) 50%, rgba(7,41,29,0.82) 100%);
+    }
+    .fuer-dich-inner { position: relative; z-index: 1; }
     .fuer-dich-inner { max-width: 860px; margin: 0 auto; padding: 0 40px; }
     .fuer-dich-inner > h2 { font-size: clamp(28px, 3.8vw, 48px); text-align: center; margin-bottom: 48px; }
     .fuer-dich-stack { display: flex; flex-direction: column; gap: 20px; }
