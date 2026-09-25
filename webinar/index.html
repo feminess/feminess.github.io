@@ -465,6 +465,15 @@
     .floating-cta.is-visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
     .floating-cta:hover { opacity: 0.88; animation: none; transform: translateY(-3px); }
 
+    /* ── DIVIDER IMAGE ── */
+    .divider-img-wrap {
+      width: 100%; line-height: 0; position: relative;
+      mask-image: linear-gradient(to bottom, transparent 0%, black 18%, black 82%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 18%, black 82%, transparent 100%);
+    }
+    .divider-img { width: 100%; height: 420px; object-fit: cover; object-position: center 40%; display: block; }
+    @media (max-width: 600px) { .divider-img { height: 260px; } }
+
     /* ── FOOTER ── */
     footer {
       background: #07291d; padding: 48px 40px;
@@ -1118,6 +1127,11 @@ window._load_script = function(url, callback, isSubmit) {
     </div>
   </div>
 </section>
+
+<!-- DIVIDER IMAGE -->
+<div class="divider-img-wrap">
+  <img src="Bilder/sunset-gold.webp" alt="" class="divider-img">
+</div>
 
 <!-- TESTIMONIALS -->
 <section class="testimonials-section">
