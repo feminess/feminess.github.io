@@ -7,7 +7,7 @@
 <link rel="icon" href="https://feminess.de/wp-content/uploads/cropped-favicon@2x-1-32x32.png" sizes="32x32">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital,wght@0,400;1,400&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -16,203 +16,114 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-NQMQT7QH');</script>
 <!-- End Google Tag Manager -->
 <style>
-  :root {
-    --teal:       #257c6c;
-    --teal-dark:  #1b5c50;
-    --teal-light: #f8f6f2;
-    --teal-pale:  #b8ddd8;
-    --rose:       #cf5a73;
-    --rose-light: #e8a0b0;
-    --sand:       #c2ab8d;
-    --black:      #070808;
-    --dark:       #0d2420;
-    --off-white:  #f8f6f2;
-    --cream:      #f0f5f4;
-    --beige:      #ddecea;
-    --warm-gray:  #5a7a74;
-    --ink:        #0a3828;
-  }
+:root {
+  --bg:         #0d2420;
+  --bg-alt:     #123830;
+  --green:      #1b5c50;
+  --sand:       #C9A24D;
+  --cream:      #f3ede2;
+  --cream-soft: rgba(243,237,226,0.68);
+  --hairline:   rgba(243,237,226,0.14);
+  --gold-a:     #8A6A3A;
+  --gold-b:     #C9A24D;
+  --gold-c:     #F3DFA8;
+  --gold-text:  linear-gradient(135deg, var(--gold-a) 0%, var(--gold-b) 45%, var(--gold-c) 70%, var(--gold-b) 100%);
+  --gold-btn:   linear-gradient(90deg, var(--gold-a) 0%, var(--gold-b) 25%, var(--gold-c) 50%, var(--gold-b) 75%, var(--gold-a) 100%);
+}
 
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  em, i { font-style: normal; }
-  html { scroll-behavior: smooth; }
-  body {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
-    line-height: 1.75;
-    background: var(--off-white);
-    color: var(--ink);
-    -webkit-font-smoothing: antialiased;
-  }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+em, i { font-style: normal; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--cream);
+  font-family: 'Manrope', sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
 
-  .page-frame { display: flex; flex-direction: column; }
+.page { width: min(100%, 480px); margin: 0 auto; background: var(--bg); overflow: hidden; position: relative; }
 
-  /* ── PROGRESS BAR (im Top-Banner-Stil des Guides) ── */
-  .progress-wrap {
-    width: 100%;
-    background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%);
-  }
-  .progress-inner { max-width: 1400px; margin: 0 auto; padding: 16px 33px; }
-  .progress-labels {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    font-weight: 700;
-    font-size: 12px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-  }
-  .progress-labels .left  { color: var(--dark); }
-  .progress-labels .right { color: var(--dark); }
-  .progress-track { height: 4px; border-radius: 999px; background: rgba(13,36,32,0.18); width: 100%; overflow: hidden; }
-  .progress-fill { height: 100%; width: 90%; border-radius: 999px; background: var(--dark); }
+h1, h2, h3 { font-family: 'Instrument Serif', serif; font-weight: 400; color: var(--cream); }
 
-  /* ── BLOCKS (alternating hell/dunkel) ── */
-  .block {
-    padding: 72px 33px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    background: var(--off-white);
-    border-bottom: 1px solid var(--beige);
-  }
-  .block.dark { background: linear-gradient(135deg, #1b5c50 0%, #0d2420 100%); border-bottom: none; }
+.gold-text {
+  background: var(--gold-text);
+  -webkit-background-clip: text; background-clip: text;
+  color: transparent; -webkit-text-fill-color: transparent;
+}
 
-  .block h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 600;
-    font-style: normal;
-    font-size: clamp(28px, 4vw, 40px);
-    line-height: 1.25;
-    letter-spacing: -0.5px;
-    color: var(--ink);
-    margin-bottom: 24px;
-    max-width: 780px;
-  }
-  .block.dark h2 { color: #fff; }
-  .block h2 em { font-style: normal; font-weight: 600; color: inherit; }
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  background: var(--gold-text);
+  -webkit-background-clip: text; background-clip: text;
+  color: transparent; -webkit-text-fill-color: transparent;
+  margin-bottom: 16px;
+}
+.eyebrow::after { content: ''; display: block; width: 40px; height: 1px; background: var(--sand); opacity: .6; -webkit-text-fill-color: initial; }
 
-  .block .lead {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
-    line-height: 1.75;
-    color: var(--warm-gray);
-    max-width: 620px;
-    margin: 0 auto 32px;
-  }
-  .block.dark .lead { color: #fff; }
-  .block .lead strong { font-weight: 700; color: var(--ink); }
-  .block.dark .lead strong { color: #fff; }
+section { position: relative; padding: 72px 22px; text-align: center; }
+section.bg-alt { background: var(--bg-alt); }
+section + section { border-top: 1px solid var(--hairline); }
 
-  .video-wrap {
-    width: 100%;
-    max-width: 680px;
-    margin: 0 auto 40px;
-    border-radius: 12px;
-    overflow: hidden;
-    border: 1px solid rgba(255,255,255,0.15);
-    box-shadow: 0 20px 50px rgba(0,0,0,0.25);
-  }
+.block h2 { font-size: clamp(28px, 6vw, 40px); line-height: 1.2; letter-spacing: -0.02em; margin: 0 auto 20px; max-width: 30ch; }
 
-  /* ── SECTION LABEL (Schritt-Kicker) ── */
-  .step-kicker {
-    display: inline-flex;
-    align-items: center;
-    gap: 14px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    color: var(--teal);
-    margin-bottom: 20px;
-  }
-  .block.dark .step-kicker { color: var(--teal-light); }
-  .step-kicker::after { content: ''; display: block; width: 60px; height: 1px; background: currentColor; opacity: 0.5; }
+p.lead { font-size: 16px; line-height: 1.65; color: var(--cream-soft); max-width: 40ch; margin: 0 auto 20px; }
+p.lead:last-of-type { margin-bottom: 32px; }
+p.lead b, p.lead strong { color: var(--cream); font-weight: 700; }
 
-  .microtext {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 15px;
-    color: var(--warm-gray);
-    margin-top: 16px;
-  }
-  .block.dark .microtext { color: #fff; opacity: 0.85; }
+.video-wrap {
+  width: 100%; max-width: 400px; margin: 0 auto 32px;
+  border-radius: 10px; overflow: hidden; border: 1px solid var(--hairline);
+}
 
-  /* ── BUTTONS: ein Typ, immer eine Pille ── */
-  .cal-buttons { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin: 8px auto 0; }
-  .cal-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    background: linear-gradient(90deg, #a0685a 0%, #d4a090 25%, #f0ccc0 50%, #d4a090 75%, #a0685a 100%);
-    color: var(--dark);
-    text-decoration: none;
-    padding: 20px 40px;
-    border-radius: 999px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    border: none;
-    cursor: pointer;
-    animation: pulse-btn 2.2s ease-in-out infinite;
-    transition: opacity 0.2s ease;
-  }
-  .cal-btn:hover { opacity: 0.88; animation-play-state: paused; }
-  .cal-btn svg { width: 18px; height: 18px; flex-shrink: 0; }
-  .cal-btn-emoji { font-size: 16px; line-height: 1; flex-shrink: 0; }
-  @keyframes pulse-btn {
-    0%, 100% { transform: scale(1);     box-shadow: 0 6px 28px rgba(160,104,90,0.40); }
-    50%      { transform: scale(1.04);  box-shadow: 0 10px 36px rgba(160,104,90,0.58); }
-  }
+.microtext { font-size: 13px; color: var(--cream-soft); margin-top: 16px; }
 
-  /* ── FOOTER ── */
-  .site-footer {
-    background: #07291d;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    padding: 28px 40px;
-  }
-  .footer-logo img { max-width: 200px; display: block; mix-blend-mode: screen; }
-  .footer-links { display: flex; gap: 24px; list-style: none; }
-  .footer-links a {
-    color: #fff;
-    opacity: 0.7;
-    text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 13px;
-    letter-spacing: 0.2px;
-    transition: opacity 0.2s ease;
-  }
-  .footer-links a:hover { opacity: 1; text-decoration: underline; }
-  .footer-copyright {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 12px;
-    color: #fff;
-    opacity: 0.7;
-    text-align: center;
-    flex: 1;
-    min-width: 200px;
-  }
+/* ── BUTTONS ── */
+.cal-buttons { display: flex; flex-direction: column; gap: 14px; align-items: center; margin-top: 8px; }
+@keyframes pulse-btn {
+  0%, 100% { transform: scale(1);    box-shadow: 0 6px 28px rgba(138,106,58,.45); }
+  50%      { transform: scale(1.04); box-shadow: 0 14px 40px rgba(201,162,77,.65); }
+}
+.cal-btn {
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  width: 100%; max-width: 340px; min-height: 56px; padding: 0 24px;
+  background: var(--gold-btn);
+  color: var(--bg);
+  text-decoration: none;
+  font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 14px;
+  letter-spacing: .05em; text-transform: uppercase;
+  border: none; border-radius: 999px; cursor: pointer;
+  animation: pulse-btn 2.2s ease-in-out infinite;
+}
+.cal-btn:hover { animation-play-state: paused; opacity: .92; }
+.cal-btn svg { width: 18px; height: 18px; flex-shrink: 0; }
+.cal-btn-emoji { font-size: 16px; line-height: 1; flex-shrink: 0; }
 
-  @media (max-width: 767px) {
-    .progress-inner { padding: 20px 18px; }
-    .progress-labels { font-size: 10px; letter-spacing: 2px; }
-    .block { padding: 48px 18px; }
-    .block .lead { font-size: 16px; margin-bottom: 26px; }
-    .cal-buttons { flex-direction: column; align-items: stretch; }
-    .cal-btn { width: 100%; padding: 16px 24px; font-size: 14px; letter-spacing: 1px; }
-    .site-footer { flex-direction: column; text-align: center; padding: 24px 20px; }
-    .footer-links { justify-content: center; }
-    .footer-logo img { max-width: 150px; }
-  }
+/* ── FOOTER ── */
+.site-footer { background: var(--bg); border-top: 1px solid var(--hairline); padding: 28px 22px; text-align: center; }
+.footer-logo img { max-width: 170px; margin: 0 auto 16px; display: block; mix-blend-mode: screen; }
+.footer-links { display: flex; justify-content: center; gap: 20px; list-style: none; margin-bottom: 10px; }
+.footer-links a { color: var(--cream-soft); text-decoration: none; font-size: 12px; letter-spacing: .04em; }
+.footer-links a:hover { color: var(--cream); text-decoration: underline; }
+.footer-copyright { font-size: 12px; color: var(--cream-soft); }
+
+@media (min-width: 900px) {
+  .page { width: min(100%, 1180px); }
+  section { padding: 100px 60px; }
+  body { font-size: 17px; }
+  .block h2 { font-size: clamp(32px, 3.4vw, 46px); }
+  p.lead { font-size: 18px; max-width: 52ch; }
+  .cal-buttons { flex-direction: row; flex-wrap: wrap; justify-content: center; }
+  .cal-btn { width: auto; min-width: 260px; font-size: 15px; }
+  .video-wrap { max-width: 560px; }
+}
 </style>
 </head>
 <body>
@@ -221,46 +132,38 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-<div class="page-frame">
+<main class="page">
 
-  <!-- ── PROGRESS BAR ── -->
-  <div class="progress-wrap">
-    <div class="progress-inner">
-      <div class="progress-labels">
-        <span class="left">Nur noch ein Schritt</span>
-        <span class="right">100 %</span>
-      </div>
-      <div class="progress-track">
-        <div class="progress-fill"></div>
-      </div>
+  <!-- ── PROGRESS ── -->
+  <section style="padding:22px; text-align:left; background:var(--gold-btn);">
+    <div style="display:flex; justify-content:space-between; align-items:baseline; font-family:'Manrope',sans-serif; font-weight:800; font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:var(--bg); margin-bottom:10px;">
+      <span>Nur noch ein Schritt</span>
+      <span>100 %</span>
     </div>
-  </div>
+    <div style="height:4px; border-radius:999px; background:rgba(13,36,32,0.25); overflow:hidden;">
+      <div style="height:100%; width:90%; border-radius:999px; background:var(--bg);"></div>
+    </div>
+  </section>
 
-  <!-- ── INTRO / VIDEO (dunkel) ── -->
-  <section class="block dark">
-    <h2>Achtung!<br>Nur noch ein Schritt, um deine Anmeldung abzuschließen.</h2>
+  <!-- ── INTRO / VIDEO ── -->
+  <section class="block bg-alt">
+    <h1 style="font-size:clamp(26px,6.5vw,38px); line-height:1.15; margin-bottom:20px;">Achtung! Nur noch ein Schritt, um deine Anmeldung <span class="gold-text">abzuschließen.</span></h1>
 
-    <p class="lead">
-      Schau dir kurz das Video an und folge den Schritten unten.
-    </p>
+    <p class="lead">Schau dir kurz das Video an und folge den Schritten unten.</p>
 
     <div class="video-wrap">
       <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1206729935?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="EFM DankeSeite"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
     </div>
   </section>
 
-  <!-- ── SCHRITT 1: KALENDER (hell) ── -->
+  <!-- ── SCHRITT 1: KALENDER ── -->
   <section class="block">
-    <span class="step-kicker">Schritt 1</span>
+    <span class="eyebrow">Schritt 1</span>
     <h2>Trage dir jetzt den Termin in deinen Kalender und tritt unserer exklusiven Telegram Community bei:</h2>
 
-    <p class="lead">
-      Klicke hier, um dir den Termin in den Kalender einzutragen. Wenn du LIVE dabei bist, erlebst du die volle Energie der Masterclass und kannst deine Fragen stellen - was in einer Aufzeichnung nicht möglich ist.
-    </p>
+    <p class="lead">Klicke hier, um dir den Termin in den Kalender einzutragen. Wenn du LIVE dabei bist, erlebst du die volle Energie der Masterclass und kannst deine Fragen stellen - was in einer Aufzeichnung nicht möglich ist.</p>
 
-    <p class="lead">
-      Die Masterclass findet am <strong>1. Oktober</strong> von <strong>11 bis 13 Uhr</strong> statt.
-    </p>
+    <p class="lead">Die Masterclass findet am <strong>1. Oktober</strong> von <strong>11 bis 13 Uhr</strong> statt.</p>
 
     <div class="cal-buttons">
       <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Feminess%20Webinar%20%E2%80%93%20Energy%20for%20Million&dates=20261001T090000Z/20261001T110000Z&details=Dein%20Webinar-Termin%20mit%20Feminess.%20Den%20Zugangslink%20erh%C3%A4ltst%20du%20per%20E-Mail.&location=Online%20(Link%20per%20E-Mail)" target="_blank" rel="noopener" class="cal-btn">
@@ -279,26 +182,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </section>
 
-  <!-- ── SCHRITT 2: TELEGRAM (dunkel) ── -->
-  <section class="block dark">
-    <span class="step-kicker">Schritt 2</span>
+  <!-- ── SCHRITT 2: TELEGRAM ── -->
+  <section class="block bg-alt">
+    <span class="eyebrow">Schritt 2</span>
     <h2>Warte nicht auf das Webinar.<br>Fang jetzt an.</h2>
 
-    <p class="lead">
-      Du bekommst hier Impulse &amp; Dinge, die ich sonst nirgends teile. Nicht später. Nicht öffentlich. Jetzt. Hier.
-    </p>
+    <p class="lead">Du bekommst hier Impulse &amp; Dinge, die ich sonst nirgends teile. Nicht später. Nicht öffentlich. Jetzt. Hier.</p>
 
-    <p class="lead">
-      Du wirst in diesem Raum bereits anfangen, deine Muster zu durchschauen und zu durchbrechen. Live. Während du vielleicht noch überlegst.
-    </p>
+    <p class="lead">Du wirst in diesem Raum bereits anfangen, deine Muster zu durchschauen und zu durchbrechen. Live. Während du vielleicht noch überlegst.</p>
 
-    <p class="lead">
-      Und genau dieser eine Klick? Das ist schon der erste Schritt.
-    </p>
+    <p class="lead">Und genau dieser eine Klick? Das ist schon der erste Schritt.</p>
 
-    <p class="lead">
-      Raus aus dem Kopf, in dem du sonst allein bist. Rein in einen geschützten Raum, der dich trägt und in deine volle Energie bringt, ohne dass du dich erklären musst.
-    </p>
+    <p class="lead">Raus aus dem Kopf, in dem du sonst allein bist. Rein in einen geschützten Raum, der dich trägt und in deine volle Energie bringt, ohne dass du dich erklären musst.</p>
 
     <div class="cal-buttons">
       <a href="https://t.me/+jMPD3ni3hgo0YWU6" target="_blank" rel="noopener" class="cal-btn">
@@ -312,9 +207,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p class="microtext">Komm rein. Bevor du wieder nur zuschaust.</p>
   </section>
 
-  <!-- ── SCHRITT 3: UMFRAGE (hell) ── -->
+  <!-- ── SCHRITT 3: UMFRAGE ── -->
   <section class="block">
-    <span class="step-kicker">Schritt 3</span>
+    <span class="eyebrow">Schritt 3</span>
     <h2>Fülle jetzt die Umfrage aus, damit wir das Webinar gezielt auf deine Wünsche und Herausforderungen anpassen können:</h2>
 
     <div class="cal-buttons">
@@ -342,7 +237,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="footer-copyright">© 2026 FEMINESS – MARINA HENZE</div>
   </footer>
 
-</div>
+</main>
 
 </body>
 </html>
