@@ -403,14 +403,15 @@
     }
 
     /* ── BONUS ── */
-    .bonus-section { background: var(--green-deep); padding: 88px 0; color: #F2E9DA; }
+    .bonus-section { background: var(--bg-alt); padding: 88px 0; color: var(--text); }
     .bonus-inner { max-width: 700px; margin: 0 auto; padding: 0 40px; }
-    .bonus-section h2 { text-align: center; font-size: clamp(30px, 4vw, 48px); margin-bottom: 40px; color: #F2E9DA; }
+    .bonus-section h2 { text-align: center; font-size: clamp(30px, 4vw, 48px); margin-bottom: 40px; color: var(--text); }
     .bonus-gift-box {
       display: flex; gap: 36px; align-items: center;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(201,162,77,0.2);
+      background: rgba(255,255,255,0.65);
+      border: 1px solid rgba(139,114,57,0.22);
       border-radius: 16px; padding: 44px;
+      box-shadow: 0 2px 16px rgba(17,46,31,0.07);
     }
     .bonus-gift-icon {
       flex-shrink: 0; width: 96px; height: 96px;
@@ -425,8 +426,8 @@
       -webkit-background-clip: text; background-clip: text;
       color: transparent; -webkit-text-fill-color: transparent;
     }
-    .bonus-gift-text p { font-size: 17px; color: rgba(242,233,218,0.75); line-height: 1.8; }
-    .bonus-gift-text p strong { color: #F2E9DA; }
+    .bonus-gift-text p { font-size: 17px; color: var(--muted); line-height: 1.8; }
+    .bonus-gift-text p strong { color: var(--text); }
 
     /* ── TESTIMONIALS ── */
     .testimonials-section { background: var(--bg-alt); padding: 88px 0; }
