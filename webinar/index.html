@@ -242,10 +242,11 @@
     .logos-track:hover { animation-play-state: paused; }
     .logos-track img {
       height: 38px; width: auto; object-fit: contain;
-      filter: brightness(0) opacity(0.75); flex-shrink: 0;
-      transition: filter 0.3s;
+      mix-blend-mode: multiply;
+      opacity: 0.70; flex-shrink: 0;
+      transition: opacity 0.3s;
     }
-    .logos-track img:hover { filter: brightness(0) opacity(1); }
+    .logos-track img:hover { opacity: 1; }
 
     /* ── VIDEO ── */
     .video-section { background: var(--bg); padding: 72px 0; }
