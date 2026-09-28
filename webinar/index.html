@@ -277,7 +277,13 @@
     }
     .benefits-section::before {
       content: ''; position: absolute; inset: 0;
-      background: rgba(250,246,239,0.72);
+      background:
+        linear-gradient(to bottom,
+          #FAF6EF 0%,
+          rgba(250,246,239,0.55) 15%,
+          rgba(250,246,239,0.55) 85%,
+          #F2E9DA 100%
+        );
     }
     .benefits-section .section-inner { position: relative; z-index: 1; }
     .benefits-header { text-align: center; margin-bottom: 56px; }
