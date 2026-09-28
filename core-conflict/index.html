@@ -581,7 +581,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     padding: 40px 24px;
     text-align: center;
   }
-  .site-footer .footer-logo { display: block; margin: 0 auto 20px; height: 32px; width: auto; }
+  .site-footer .footer-logo {
+    display: block;
+    margin: 0 auto 20px;
+    height: 32px;
+    width: auto;
+    aspect-ratio: 2076 / 199;
+    background: linear-gradient(90deg, var(--gold-a) 0%, var(--gold-b) 25%, var(--gold-c) 50%, var(--gold-b) 75%, var(--gold-a) 100%);
+    -webkit-mask-image: url('../CI/Logo-rosegoldverlauf-transparent.png');
+    mask-image: url('../CI/Logo-rosegoldverlauf-transparent.png');
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-position: center;
+    mask-position: center;
+  }
   .site-footer p {
     font-size: 0.78rem;
     color: rgba(243,237,226,0.32);
@@ -873,7 +888,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- FOOTER -->
 <footer class="site-footer">
-  <img class="footer-logo" src="../CI/Logo-rosegoldverlauf-transparent.png" alt="Feminess">
+  <div class="footer-logo" role="img" aria-label="Feminess"></div>
   <p>
     &copy; 2026 Feminess &middot; Marina Henze<br>
     <a href="../Impressum/index.html">Impressum</a>
