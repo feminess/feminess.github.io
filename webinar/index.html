@@ -553,8 +553,13 @@
     /* ── MOBILE ── */
     @media (max-width: 900px) {
       .hero-inner { grid-template-columns: 1fr; }
-      .hero-image { min-height: 280px; order: 1; }
-      .hero-image::before { background: linear-gradient(to bottom, var(--bg-alt) 0%, transparent 40%); }
+      .hero-image { min-height: 320px; order: 1; }
+      .hero-image img {
+        object-position: center top;
+        mask-image: linear-gradient(to bottom, black 0%, black 75%, transparent 100%);
+        -webkit-mask-image: linear-gradient(to bottom, black 0%, black 75%, transparent 100%);
+      }
+      .hero-image::before { background: linear-gradient(to bottom, transparent 0%, var(--bg-alt) 95%); }
       .hero-content { padding: 36px 40px 60px; }
       .benefits-grid { grid-template-columns: 1fr; }
       .testimonials-grid { grid-template-columns: 1fr 1fr; }
@@ -567,8 +572,8 @@
       .top-banner { padding: 10px 16px; }
       .top-banner p { font-size: 9px; letter-spacing: 1px; white-space: normal; }
       .hero-content { padding: 24px 20px 48px; }
-      .hero-image { min-height: 200px; }
-      .hero-content h1 { font-size: clamp(42px, 14vw, 72px); }
+      .hero-image { min-height: 300px; }
+      .hero-content h1 { font-size: clamp(36px, 11vw, 60px); }
       .hero-subtitle { font-size: 16px; }
       h2 { font-size: clamp(28px, 8.5vw, 44px) !important; }
       .fuer-dich-inner > h2,
