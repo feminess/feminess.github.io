@@ -1,0 +1,671 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ENERGY for MILLION – Live Money-Masterclass</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>@font-face{font-family:'Amsterdam Four';src:url('../fonts/AmsterdamFour.woff') format('woff'),url('../fonts/AmsterdamFour.ttf') format('truetype');font-weight:400;font-style:normal;font-display:swap}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Caveat:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --cream:#f7f1e9;
+  --paper:#fbf8f3;
+  --sand:#c2ab8d;
+  --sand2:#a99386;
+  --green:#257c6c;
+  --deep:#1b5c50;
+  --ink:#20201d;
+  --white:#fffdf9;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:#e6e0d8;
+  color:var(--ink);
+  font-family:"Manrope",Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+.page{
+  width:min(100%,430px);
+  margin:0 auto;
+  background:var(--cream);
+  overflow:hidden;
+}
+img{display:block;width:100%}
+section{padding:82px 24px}
+.serif,h1,h2,h3{font-family:"Instrument Serif",Georgia,serif;font-weight:400}
+.script{font-family:"Caveat",cursive}
+.eyebrow{
+  font-size:10px;line-height:1.35;letter-spacing:.19em;
+  text-transform:uppercase;font-weight:700;
+}
+p{margin:0;font-size:16.5px;line-height:1.65}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:54px;padding:0 25px;border-radius:4px;
+  background:var(--deep);color:white;text-decoration:none;
+  font-size:12px;font-weight:700;letter-spacing:.02em;
+}
+.hero{
+  min-height:100svh;
+  padding:34px 24px 50px;
+  display:flex;flex-direction:column;justify-content:center;
+  background:var(--paper);
+}
+.logo{width:142px;margin:0 auto 36px}
+.hero .audience{font-size:13px;line-height:1.55;margin:24px 0 36px;max-width:350px}
+.hero h1{
+  margin:0;font-size:61px;line-height:.82;
+  letter-spacing:-.045em;
+}
+.hero .tagline{
+  margin:13px 0 28px;
+  font-size:31px;line-height:1;color:var(--green);
+  transform:rotate(-2deg);transform-origin:left;
+}
+.hero .btn{margin-top:32px;align-self:flex-start}
+.micro{
+  margin-top:14px;font-size:9px;text-transform:uppercase;
+  letter-spacing:.18em;font-weight:700;
+}
+.countdown{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:5px;
+  margin-top:30px;border-top:1px solid rgba(32,32,29,.17);
+  padding-top:18px;
+}
+.countdown div{text-align:center}
+.countdown b{display:block;font-family:"Instrument Serif";font-size:27px;font-weight:400}
+.countdown span{font-size:8px;text-transform:uppercase;letter-spacing:.12em}
+
+.proof{background:var(--sand)}
+.proof h2,.wake h2,.story h2,.notmore h2,.more h2,.final h2{
+  margin:0 0 24px;font-size:46px;line-height:.92;letter-spacing:-.025em;
+}
+.testimonial{
+  margin-top:34px;padding-top:22px;border-top:1px solid rgba(32,32,29,.25)
+}
+.testimonial blockquote{
+  margin:0;font-family:"Instrument Serif";font-size:22px;line-height:1.22
+}
+.testimonial cite{
+  display:block;margin-top:14px;font-style:normal;font-size:10px;
+  font-weight:700;text-transform:uppercase;letter-spacing:.12em
+}
+
+.wake{background:var(--paper)}
+.wake h2{font-size:49px}
+.wake-img{
+  margin:32px -24px 38px;width:calc(100% + 48px);height:360px;object-fit:cover
+}
+.wake-lines{
+  font-family:"Instrument Serif";font-size:28px;line-height:1.23
+}
+.wake-lines div{margin:12px 0}
+.wake-lines .accent{color:var(--green);font-style:italic;margin-top:27px}
+
+.story{background:var(--cream)}
+.story h2{font-size:45px}
+.story-photo{
+  margin:34px 0 36px;aspect-ratio:4/5;object-fit:cover;object-position:center 30%
+}
+.story p+p{margin-top:18px}
+.story .truth{margin-top:18px}
+.story .answer{margin-top:18px}
+.stats{
+  display:grid;grid-template-columns:1fr;
+  margin-top:36px;border-top:1px solid rgba(32,32,29,.18)
+}
+.stat{padding:18px 0;border-bottom:1px solid rgba(32,32,29,.18)}
+.stat strong{
+  display:block;font-family:"Instrument Serif";font-size:42px;line-height:1;font-weight:400
+}
+.stat span{font-size:10px;text-transform:uppercase;letter-spacing:.12em}
+.logos{
+  display:grid;grid-template-columns:repeat(2,1fr);gap:12px;
+  margin-top:34px
+}
+.logo-card{
+  background:#fff;padding:12px;min-height:68px;display:flex;align-items:center;justify-content:center
+}
+.logo-card img{max-height:38px;object-fit:contain}
+
+.compare{padding:0}
+.compare .old,.compare .new{padding:72px 24px}
+.compare .old{background:var(--sand)}
+.compare .new{background:var(--green);color:white}
+.compare h3{
+  margin:0 0 30px;font-family:"Manrope";font-size:10px;
+  text-transform:uppercase;letter-spacing:.19em;font-weight:700
+}
+.compare ul{list-style:none;padding:0;margin:0}
+.compare li{
+  font-family:"Instrument Serif";font-size:35px;line-height:1.08;margin:10px 0
+}
+.arrow{
+  display:flex;justify-content:center;align-items:center;
+  height:52px;background:var(--paper);font-size:25px
+}
+
+.chosen{
+  min-height:90svh;background:var(--deep);color:white;
+  display:flex;flex-direction:column;justify-content:center;
+  padding-top:100px;padding-bottom:100px
+}
+.chosen h2{
+  margin:12px 0 0;font-size:67px;line-height:.82;letter-spacing:-.045em
+}
+.chosen .script{
+  margin:10px 0 42px;font-size:34px;color:#eadbc8;transform:rotate(-2deg);transform-origin:left
+}
+.chosen .lines{
+  font-family:"Instrument Serif";font-size:29px;line-height:1.3
+}
+.chosen .btn{margin-top:34px;background:var(--paper);color:var(--deep)}
+
+.days{background:var(--paper);padding:82px 0 0}
+.days-head{padding:0 24px 48px}
+.days-head h2{margin:0;font-size:53px;line-height:.88;letter-spacing:-.035em}
+.days-head .script{font-size:29px;color:var(--green);margin-top:8px}
+.day{padding:54px 24px 64px;border-top:1px solid rgba(32,32,29,.14)}
+.day:nth-of-type(2){background:#f6efe7}
+.day:nth-of-type(3){background:#eee2d4}
+.day:nth-of-type(4){background:#dfcfbb}
+.day .meta{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+.day h3{
+  margin:14px 0 28px;font-size:40px;line-height:.91;letter-spacing:-.025em
+}
+.day-image{
+  margin:0 0 30px;aspect-ratio:16/10;object-fit:cover
+}
+.day-placeholder{
+  margin:0 0 30px;aspect-ratio:16/10;
+  background:linear-gradient(145deg,#c2ab8d,#f0e6da);
+  display:flex;align-items:flex-end;padding:15px;
+  font-size:9px;letter-spacing:.14em;text-transform:uppercase
+}
+.shift{margin:22px 0}
+.shift b{
+  display:block;font-size:9px;letter-spacing:.17em;text-transform:uppercase;margin-bottom:7px
+}
+.shift p{font-family:"Instrument Serif";font-size:23px;line-height:1.2}
+.shift.to p{font-size:26px;color:var(--deep)}
+.day .subhead{
+  margin-top:28px;font-family:"Instrument Serif";font-size:24px;line-height:1.2
+}
+.day .body{margin-top:15px;font-size:15px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.tag{
+  font-size:9px;text-transform:uppercase;letter-spacing:.12em;
+  border:1px solid rgba(32,32,29,.22);padding:8px 10px;border-radius:999px
+}
+
+.notmore{background:var(--deep);color:white}
+.notmore h2{font-size:47px}
+.rule{
+  display:grid;grid-template-columns:44px 1fr;gap:14px;
+  padding:21px 0;border-top:1px solid rgba(255,255,255,.24)
+}
+.rule .num{font-family:"Instrument Serif";font-size:26px}
+.rule p{font-size:15px}
+.notmore .instead{margin-top:38px}
+.notmore .jetzt{
+  margin-top:10px;font-family:"Instrument Serif";font-size:45px;line-height:1
+}
+.notmore .btn{margin-top:31px;background:var(--paper);color:var(--deep)}
+
+.forwho{padding:0}
+.for,.notfor{padding:72px 24px}
+.for{background:var(--sand)}
+.notfor{background:var(--paper)}
+.forwho h3{margin:0 0 32px;font-size:39px;line-height:.95}
+.forwho ul{list-style:none;padding:0;margin:0}
+.forwho li{padding:14px 0;border-top:1px solid rgba(32,32,29,.18);font-size:15px;line-height:1.5}
+.forwho-photo{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 30%}
+
+.more{background:var(--cream)}
+.more h2{font-size:43px}
+.shots{display:grid;gap:14px;margin-top:32px}
+.shots img{background:white;border:1px solid rgba(32,32,29,.08)}
+
+.final{
+  min-height:95svh;background:var(--green);color:white;
+  display:flex;flex-direction:column;justify-content:center;
+  padding-top:94px;padding-bottom:94px
+}
+.final h2{font-size:49px}
+.final ul{list-style:none;padding:0;margin:24px 0 34px}
+.final li{
+  font-family:"Instrument Serif";font-size:37px;line-height:1.07;margin:3px 0
+}
+.final .closing{
+  font-family:"Instrument Serif";font-size:29px;line-height:1.15
+}
+.final .countdown{border-top-color:rgba(255,255,255,.28);margin-top:34px}
+.final .btn{margin-top:30px;align-self:flex-start;background:var(--paper);color:var(--deep)}
+.final-photo{
+  width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 25%
+}
+footer{
+  background:#133f38;color:#e9e0d4;padding:38px 24px 44px;
+  font-size:10px;line-height:1.6;text-align:center
+}
+footer .logo{margin:0 auto 22px;filter:none}
+footer a{color:inherit}
+.disclaimer{margin-top:18px;opacity:.72}
+
+@media(max-width:374px){
+  section{padding-left:21px;padding-right:21px}
+  .hero{padding-left:21px;padding-right:21px}
+  .hero h1{font-size:55px}
+  .chosen h2{font-size:60px}
+  .days-head{padding-left:21px;padding-right:21px}
+  .day{padding-left:21px;padding-right:21px}
+}
+</style>
+
+<style id="energy-rebellion">
+:root{
+ --cream:#f6efe5;--paper:#fbf6ef;--sand:#c2ab8d;--sand2:#a99386;
+ --green:#257c6c;--deep:#1b5c50;--ink:#171815;--white:#fffdf9;
+}
+html{scroll-behavior:smooth}
+body{background:#dcd2c5;font-family:"Manrope",sans-serif;color:var(--ink)}
+.page{width:min(100%,430px);overflow:hidden;background:var(--paper);box-shadow:0 0 45px rgba(0,0,0,.12)}
+section{position:relative}
+p{font-size:16px;line-height:1.48}
+.eyebrow{font-family:"Manrope";font-size:10px;font-weight:800;letter-spacing:.19em;text-transform:uppercase}
+.script{font-family:"Caveat",cursive!important;font-weight:500!important}
+.btn{border-radius:2px;min-height:52px;padding:0 19px;font:800 12px/1 "Manrope";letter-spacing:.055em;text-transform:uppercase;box-shadow:none}
+
+/* HERO — oversized type + image collision */
+.hero{padding:25px 18px 0;min-height:920px;background:var(--cream);display:block}
+.hero .logo{width:104px;margin-bottom:48px}
+.hero .eyebrow{max-width:230px;line-height:1.35;margin-bottom:19px}
+.hero .audience{position:absolute;top:390px;left:20px;width:235px;z-index:4;font-size:14px;line-height:1.3}
+.hero h1{
+ font-family:"Instrument Serif",serif;font-weight:400;font-size:78px;line-height:.68;
+ letter-spacing:-.065em;text-transform:uppercase;margin:0 -8px;position:relative;z-index:3
+}
+.hero .tagline{
+ position:absolute;top:303px;right:-5px;z-index:5;font-size:36px;line-height:.8;
+ transform:rotate(-7deg);color:var(--deep);width:245px;text-align:right
+}
+.hero p:not(.audience){position:absolute;top:530px;left:20px;width:245px;z-index:5;font-size:14px;line-height:1.35}
+.hero .btn{position:absolute;top:465px;left:20px;z-index:6;background:var(--deep);color:#fff}
+.hero .micro{position:absolute;top:520px;right:16px;writing-mode:vertical-rl;font-size:9px}
+.hero-image{position:absolute!important;left:0;right:0;bottom:0;width:100%;height:365px!important;object-fit:cover;margin:0!important;filter:saturate(.92)}
+.hero:after{
+ content:"TRUE / NOT TAME";position:absolute;bottom:20px;right:-5px;z-index:3;
+ font:800 10px/1 "Manrope";letter-spacing:.18em;color:white;transform:rotate(-90deg);transform-origin:right bottom
+}
+.countdown{display:none}
+
+/* PROOF — giant claim, stats as graphic objects */
+.proof{padding:86px 20px 78px;background:var(--paper)}
+.proof h2{
+ font:400 61px/.76 "Instrument Serif";letter-spacing:-.05em;max-width:330px;margin-bottom:25px
+}
+.proof>p{font-size:15px;max-width:255px;margin-left:80px}
+.testimonial{border:0;border-left:2px solid var(--deep);border-radius:0;padding:18px 0 18px 18px;margin:50px 0 10px;background:transparent}
+.testimonial blockquote{font:italic 400 27px/1.04 "Instrument Serif";letter-spacing:-.02em}
+.testimonial cite{font:700 10px/1 "Manrope";letter-spacing:.08em}
+.stats{border:0;display:block;margin-top:46px}
+.stat{border:0!important;padding:9px 0;text-align:left}
+.stat:nth-child(2){margin-left:105px}
+.stat strong{font:400 61px/.8 "Instrument Serif";color:var(--green);letter-spacing:-.05em}
+.stat span{display:block;font:700 11px/1.2 "Manrope";letter-spacing:.03em;text-transform:uppercase}
+
+/* WAKE UP — visual interruption */
+.wake{padding:0 20px 90px;background:var(--sand);overflow:hidden}
+.wake-img{width:calc(100% + 40px)!important;height:470px!important;margin:0 -20px 55px!important;object-fit:cover}
+.wake h2{font:400 64px/.76 "Instrument Serif";letter-spacing:-.055em;margin:0 -4px 35px;max-width:370px}
+.wake-lines{font:700 17px/1.3 "Manrope"!important;border-left:1px solid var(--ink);padding-left:18px;max-width:300px;margin-left:50px}
+.wake-lines div{margin:5px 0}
+.wake-lines .accent{font:italic 400 36px/.95 "Instrument Serif"!important;margin:32px 0 0 -50px;width:340px}
+
+/* MARINA STORY — portrait cuts into headline */
+.story{padding:0 20px 88px;background:var(--cream)}
+.story-photo{width:calc(100% + 40px)!important;height:520px!important;margin:0 -20px 0!important;object-fit:cover}
+.story h2{font:400 57px/.78 "Instrument Serif";letter-spacing:-.055em;margin:-38px 0 34px;position:relative;z-index:3;background:var(--cream);padding:15px 8px 0 0;width:92%}
+.story p{font-size:14px;line-height:1.4;max-width:330px}
+.story p:nth-of-type(even){margin-left:50px}
+.story .stats{margin-top:50px}
+.story .stat{text-align:right}
+.story .stat:nth-child(2){margin-left:0;text-align:left}
+.story .stat strong{font-size:53px}
+.logos{opacity:.55}
+
+/* ALT / NEU — no polite cards, hard split */
+.compare{padding:0;background:var(--ink)}
+.compare .old,.compare .new{border-radius:0;padding:72px 22px 78px}
+.compare .old{background:var(--sand);color:var(--ink)}
+.compare .new{background:var(--deep);color:#fff}
+.compare h3{font:800 10px/1 "Manrope";letter-spacing:.2em;text-transform:uppercase;margin-bottom:32px}
+.compare li{font:400 47px/.86 "Instrument Serif";letter-spacing:-.04em;margin:7px 0}
+.compare .old li:nth-child(even){margin-left:35px}
+.compare .new li:nth-child(odd){margin-left:28px}
+.arrow{height:78px;background:var(--ink);color:white;font-size:48px}
+
+/* GEWÄHLT — brutal full-screen campaign */
+.chosen{min-height:100svh;padding:105px 20px 70px;background:var(--deep);color:white;overflow:hidden}
+.chosen .eyebrow{margin-bottom:55px}
+.chosen h2{font:400 91px/.63 "Instrument Serif";letter-spacing:-.07em;margin:0 -8px}
+.chosen .script{font-size:43px;line-height:.75;transform:rotate(-6deg);margin:24px 0 60px 55px;color:#eadcca}
+.chosen .lines{font:800 31px/.98 "Manrope";letter-spacing:-.035em;text-transform:uppercase}
+.chosen .lines br{display:block}
+.chosen .btn{margin-top:55px;background:transparent;border:1px solid white;color:white}
+.chosen:after{content:"BEYOND THE NORM";position:absolute;right:-68px;top:48%;font:800 9px/1 "Manrope";letter-spacing:.22em;transform:rotate(90deg)}
+
+/* DAYS — each day feels like a campaign page */
+.days{padding:0;background:var(--paper)}
+.days-head{padding:90px 20px 45px}
+.days-head h2{font:800 12px/1.1 "Manrope"!important;letter-spacing:.15em;text-transform:uppercase;max-width:180px}
+.days-head .script{font:400 55px/.8 "Instrument Serif"!important;letter-spacing:-.04em;display:block;width:300px;margin-top:15px}
+.day{padding:60px 20px 78px;border-top:1px solid var(--ink);background:var(--paper)!important;overflow:hidden}
+.day:nth-of-type(even){background:var(--sand)!important}
+.day .meta{margin-bottom:35px}
+.day .meta .eyebrow{font-size:10px}
+.day h3{font:400 64px/.74 "Instrument Serif";letter-spacing:-.055em;max-width:340px;margin-bottom:28px}
+.day-image,.day-placeholder{width:calc(100% + 40px);margin:0 -20px 35px;border-radius:0;aspect-ratio:16/8;object-fit:cover}
+.shift{margin:22px 0}
+.shift b{font:800 10px/1 "Manrope";letter-spacing:.13em}
+.shift p{font:500 15px/1.3 "Manrope"}
+.shift.to{margin-left:55px;border-left:2px solid var(--deep);padding-left:15px}
+.shift.to p{font:italic 400 26px/1.02 "Instrument Serif";color:var(--deep)}
+.day .subhead{font:800 12px/1.15 "Manrope";letter-spacing:.08em;text-transform:uppercase;margin-top:33px}
+.day .body{font-size:14px}
+.tags{gap:5px}
+.tag{border:1px solid currentColor;border-radius:0;font-size:9px;font-weight:800;letter-spacing:.07em}
+
+/* NOT MORE — manifesto / poster */
+.notmore{padding:92px 20px;background:var(--cream);color:var(--ink)}
+.notmore h2{font:400 61px/.7 "Instrument Serif";letter-spacing:-.06em;text-transform:uppercase;margin-bottom:55px}
+.rule{grid-template-columns:54px 1fr;border-top:1px solid var(--ink);padding:16px 0}
+.rule .num{font:400 34px/.9 "Instrument Serif"}
+.rule p{font-size:13px;line-height:1.25}
+.notmore .instead{font:500 15px/1.4 "Manrope";margin-top:45px;max-width:260px;margin-left:80px}
+.notmore .jetzt{font:400 82px/.72 "Instrument Serif";letter-spacing:-.06em;color:var(--ink);margin:32px 0}
+.notmore .btn{background:var(--deep);color:white}
+
+/* FOR WHO — graphic contrast */
+.forwho{padding:0;background:var(--paper)}
+.for,.notfor{padding:72px 20px;border-radius:0}
+.for{background:var(--paper)}
+.notfor{background:var(--deep);color:#fff}
+.forwho h3{font:400 52px/.8 "Instrument Serif";letter-spacing:-.04em;margin-bottom:35px}
+.forwho li{font:600 14px/1.25 "Manrope";padding:12px 0;border-bottom:1px solid rgba(100,100,100,.25)}
+.forwho-photo{margin:0;width:100%;border-radius:0;aspect-ratio:4/5;object-fit:cover}
+
+/* SECOND PROOF — keep rhythm but make it editorial */
+.more{padding:88px 20px;background:var(--sand)}
+.more h2{font:400 57px/.78 "Instrument Serif";letter-spacing:-.05em;max-width:330px}
+.more .testimonial{border-color:var(--ink)}
+
+/* FINAL — huge typographic crescendo + image */
+.final{padding:90px 20px 0;background:var(--cream);color:var(--ink);min-height:auto}
+.final h2{font:400 62px/.76 "Instrument Serif";letter-spacing:-.055em;max-width:360px}
+.final ul{margin:42px 0}
+.final li{font:500 42px/.83 "Caveat";transform:rotate(-2deg);margin:8px 0}
+.final li:nth-child(even){margin-left:45px;transform:rotate(2deg)}
+.final .closing{font:400 45px/.86 "Instrument Serif";letter-spacing:-.035em;max-width:345px}
+.final .btn{background:var(--deep);color:#fff;margin:38px 0}
+.final-photo{width:calc(100% + 40px);margin:30px -20px 0;aspect-ratio:4/5;border-radius:0;object-fit:cover}
+footer{background:var(--ink);color:white;padding:28px 18px;font-size:10px}
+
+@media(max-width:374px){
+ .hero h1{font-size:70px}
+ .chosen h2{font-size:82px}
+ .wake h2,.day h3{font-size:58px}
+ .notmore h2{font-size:55px}
+}
+</style>
+
+
+<style id="energy-million-fixes">
+.hero h1{font-size:73px}
+.hero .tagline{top:300px;width:270px}
+.hero .audience{top:385px}
+.hero p:not(.audience){top:545px;width:270px}
+.hero .btn{top:475px}
+.hero .micro{top:540px}
+@media(max-width:374px){.hero h1{font-size:64px}}
+</style>
+
+<style id="final-adapter">
+body{background:#dcd2c5}.wrap{width:auto;margin:0}.page{width:min(100%,430px);margin:auto;background:var(--paper);overflow:hidden;box-shadow:0 0 45px rgba(0,0,0,.12)}
+body>section{width:min(100%,430px);margin:auto;position:relative;padding:88px 20px}.hero{min-height:auto;padding:82px 20px 95px;background:var(--cream);display:block}.hero .content{max-width:none}.brand{font:400 76px/.68 "Instrument Serif";letter-spacing:-.065em;text-transform:uppercase;color:var(--ink);margin:24px -7px 38px}.hero h2{font:400 57px/.78 "Instrument Serif";letter-spacing:-.055em;margin:0 0 22px}.hero .sub{font:500 39px/.9 "Caveat";color:var(--deep);transform:rotate(-4deg);margin:0 0 28px}.hero p{font:500 15px/1.45 "Manrope";max-width:320px}.hero .btn{position:static;margin-top:32px}.hero:after{display:none}.meta{font:800 9px/1.4 "Manrope";letter-spacing:.14em;text-transform:uppercase;margin-top:16px;color:var(--ink)}
+.proof-strip{background:var(--paper);padding:86px 20px}.proof-strip .eyebrow{text-align:left;color:var(--ink)}.testimonials{display:block}.quote{background:transparent;border:0;border-left:2px solid var(--deep);padding:18px 0 18px 18px;color:var(--ink);margin-top:38px}.quote p{font:italic 400 27px/1.04 "Instrument Serif"}.quote strong{color:inherit}.quote .name{font:800 10px/1 "Manrope";letter-spacing:.08em}
+body>section:not(.hero):not(.proof-strip){padding:88px 20px}.intro{text-align:left;max-width:none}.intro h2,.big h2,.question,.desire h2,.fit h2,.marina h2,.final h2{font:400 61px/.76 "Instrument Serif";letter-spacing:-.055em}.intro p{font-size:15px}.em{font:italic 400 31px/.98 "Instrument Serif";color:var(--deep)}
+.dark{background:var(--deep);color:#fff}.dark .eyebrow{color:#fff}.dark .question{color:#fff}.rules{display:block}.rules .list{margin:40px 0}.rules .list p{font:400 35px/1.02 "Instrument Serif";border-bottom:1px solid #ffffff44;padding:13px 0}.dark .em{color:#eadcca}
+.center{text-align:left;max-width:none}.goldline{margin:24px 0;background:var(--deep)}.center h3{font:400 42px/.9 "Instrument Serif"!important}.btn{background:var(--deep);color:#fff;border-radius:2px;min-height:52px;padding:0 19px;font:800 12px/52px "Manrope";letter-spacing:.055em;text-transform:uppercase}
+.master{background:var(--paper);padding:0!important}.master-head{padding:90px 20px 45px;margin:0}.master-head h2{font:400 58px/.78 "Instrument Serif"}.cards{display:block}.card{box-shadow:none;border:0;border-top:1px solid var(--ink);padding:60px 20px 72px;background:var(--paper)}.card:nth-child(even){background:var(--sand)}.card .num{font:800 10px/1 "Manrope";letter-spacing:.15em}.card h3{font:400 61px/.76 "Instrument Serif";letter-spacing:-.055em}.card p{font-size:14px}.card .result{margin-left:48px;border-left:2px solid var(--deep);padding-left:15px;font:italic 400 25px/1.04 "Instrument Serif";color:var(--deep)}.outcome{margin:0;padding:90px 20px;background:var(--cream);color:var(--ink)}.outcome h3{font:400 58px/.78 "Instrument Serif"}.outcome .em{color:var(--ink)}
+.mirror{background:var(--sand)}.mirrorbox{border:0;padding:0;text-align:left;max-width:none}.mirrorbox h2{font:400 61px/.76 "Instrument Serif"}.mirrorbox .small{font:800 9px/1.4 "Manrope";letter-spacing:.14em;text-transform:uppercase}.desire{background:var(--paper)}.desire-grid{display:block}.desire-grid div{font:400 29px/1.05 "Instrument Serif";padding:17px 0;border-bottom:1px solid #2223}.desire .center{margin-top:55px!important}.desire .center h2{font-size:82px!important}
+.fit{padding:0!important}.fit-grid{display:block}.fit-grid>div{padding:78px 20px}.fit-grid>div:first-child{background:var(--paper)}.fit-grid>div:last-child{background:var(--deep);color:#fff}.fit h2{font-size:53px}.fit p{font:600 14px/1.35 "Manrope";padding:12px 0;border-bottom:1px solid #7774}.marina{background:var(--cream);color:var(--ink)}.marina .eyebrow{color:var(--ink)}.marina h2,.marina h3{color:var(--ink)}.marina h3{font:400 48px/.82 "Instrument Serif"!important}.marina .em{color:var(--deep)}
+.final{background:var(--deep);color:#fff;text-align:left;padding:95px 20px!important}.final .eyebrow{color:#fff}.final h2{color:#fff}.final .em{color:#eadcca}.final .pillars{font:500 39px/.95 "Caveat";color:#eadcca;margin:38px 0}.final .btn{background:var(--paper);color:var(--deep)}.small{color:inherit}
+@media(max-width:374px){.brand{font-size:68px}.intro h2,.big h2,.question,.desire h2,.marina h2,.final h2,.card h3{font-size:54px}}
+</style>
+
+<style id="mockup-match">
+:root{
+ --cream:#f7f0e5; --paper:#fcf8f1; --sand:#eadcc8;
+ --deep:#0f4a3e; --green:#166858; --gold:#b58a55; --ink:#171a17;
+}
+body{background:#d9d4cc}
+.page{width:min(100%,430px);box-shadow:0 0 50px #00000018}
+section{padding:72px 22px}
+.ey{font:800 10px/1.35 "Manrope";letter-spacing:.15em;text-transform:uppercase}
+.italic{font:500 29px/1.02 "Caveat";color:var(--green)}
+.btn{border-radius:3px;background:var(--deep);min-height:54px}
+
+/* Hero: image-led editorial cover */
+.hero{min-height:auto!important;padding:36px 22px 0!important;background:var(--paper);display:block!important}
+.hero .wrap{width:100%}
+.hero .ey{margin-bottom:25px}
+.hero h1{font:400 clamp(61px,18vw,78px)/.78 "Instrument Serif";letter-spacing:-.055em;margin:0 0 28px}
+.hero h2{font:400 37px/.9 "Instrument Serif";letter-spacing:-.04em;margin:0 0 10px;text-transform:none}
+.hero .sub{font:500 31px/.95 "Caveat";color:var(--gold);margin:0 0 25px}
+.hero p{font:500 14px/1.45 "Manrope";max-width:340px}
+.hero .btn{margin:28px 0 14px;width:100%}
+.hero .meta{font:800 9px/1.55 "Manrope";letter-spacing:.08em;text-transform:uppercase;text-align:center;margin-bottom:28px}
+.hero::after{
+ content:"";display:block;width:calc(100% + 44px);height:390px;margin-left:-22px;
+ background:url("https://feminess.github.io/Bilder/Marina_MAI2314136%20Kopie.jpg") center 24%/cover no-repeat;
+}
+
+/* Immediate proof, dark green */
+.proof{background:var(--deep)!important;color:#fff;padding:74px 22px}
+.proof .wrap{width:100%}
+.proof .ey{color:#e8d5b9;margin-bottom:22px}
+.proof .quotes{display:block}
+.proof .quote{border:0;border-top:1px solid #ffffff38;padding:28px 0;margin:0;background:transparent}
+.proof .quote:first-child{border-top:0;padding-top:0}
+.proof .quote p{font:400 28px/1.05 "Instrument Serif";color:#fff;margin:0 0 18px}
+.proof .quote b:last-child{font:800 10px/1.3 "Manrope";letter-spacing:.08em;text-transform:uppercase;color:#e8d5b9}
+
+/* Identification */
+section:not([class]){background:var(--paper)}
+section:not([class]) .wrap{width:100%}
+section:not([class]) .center{text-align:left}
+section:not([class]) h2.big{font:400 55px/.78 "Instrument Serif";letter-spacing:-.055em;text-transform:none}
+section:not([class]) h3{font:400 43px/.9 "Instrument Serif"}
+section:not([class]) p{font-size:14px;line-height:1.45}
+section:not([class]):nth-of-type(3)::after{
+ content:"";display:block;width:calc(100% + 44px);height:320px;margin:48px -22px -72px;
+ background:url("https://feminess.github.io/Bilder/wakeup-strand.png") center/cover no-repeat;
+}
+
+/* Old rule confrontation */
+.dark{background:var(--sand)!important;color:var(--ink)!important;padding:78px 22px}
+.dark .wrap{width:100%}
+.dark .ey{color:var(--ink)}
+.dark h2.big{font:400 55px/.78 "Instrument Serif";letter-spacing:-.055em;color:var(--ink);text-transform:none}
+.dark .twocol{display:block}
+.dark .twocol>div:first-child{margin:38px 0}
+.dark .twocol>div:first-child p{font:400 30px/1.02 "Instrument Serif";padding:15px 0;border-bottom:1px solid #171a1730}
+.dark p{font-size:14px;line-height:1.45}
+.dark .italic{font:500 29px/1 "Caveat";color:var(--deep)}
+
+/* Money question: photo first, then giant title */
+section:nth-of-type(5){padding:0 22px 76px;background:var(--paper)}
+section:nth-of-type(5)::before{
+ content:"";display:block;width:calc(100% + 44px);height:340px;margin:0 -22px 60px;
+ background:url("https://feminess.github.io/Bilder/Marina_MAI2314232%20Kopie.jpg") center 28%/cover no-repeat;
+}
+section:nth-of-type(5) .center{text-align:left}
+section:nth-of-type(5) h2.big{font:400 57px/.77 "Instrument Serif";letter-spacing:-.055em;text-transform:none}
+section:nth-of-type(5) p{font-size:14px;line-height:1.45}
+section:nth-of-type(5) h3{font:400 39px/.9 "Instrument Serif"!important}
+section:nth-of-type(5) .btn{width:100%}
+
+/* Four learning blocks: full-width editorial rhythm */
+.master{padding:0!important;background:var(--paper)}
+.master>.wrap{width:100%}
+.master>.wrap>.ey,.master>.wrap>h2.big,.master>.wrap>p{margin-left:22px;margin-right:22px}
+.master>.wrap>.ey{padding-top:78px}
+.master>.wrap>h2.big{font:400 57px/.78 "Instrument Serif";letter-spacing:-.055em;text-transform:none}
+.master>.wrap>p{font-size:14px;line-height:1.45;margin-bottom:45px}
+.cards{display:block}
+.card{box-shadow:none;border:0;border-top:1px solid #171a1740;padding:58px 22px 68px;background:var(--paper)}
+.card:nth-child(even){background:var(--sand)}
+.card h3{font:400 48px/.82 "Instrument Serif";letter-spacing:-.045em}
+.card p{font-size:13.5px;line-height:1.4}
+.card .result{font:500 25px/1.05 "Caveat";color:var(--deep);border-left:2px solid var(--deep);padding-left:15px;margin:26px 0 0 38px}
+.outcome{margin:0;background:var(--deep);color:#fff;padding:76px 22px}
+.outcome h3{font:400 48px/.82 "Instrument Serif";color:#fff}
+.outcome .italic{color:#e8d5b9}
+
+/* Mirror: dark statement panel + water image */
+.mirror{background:var(--deep);color:#fff;padding:76px 22px 0}
+.mirrorbox{border:0;padding:0;text-align:left}
+.mirrorbox h2.big{font:400 55px/.78 "Instrument Serif";color:#fff}
+.mirrorbox .italic{color:#e8d5b9}
+.mirrorbox p{font-size:14px;line-height:1.45}
+.mirrorbox .btn{background:#e8d5b9;color:var(--deep);width:100%}
+.mirror::after{
+ content:"";display:block;width:calc(100% + 44px);height:230px;margin:55px -22px 0;
+ background:linear-gradient(#0f4a3e10,#0f4a3e10),url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=85") center/cover no-repeat;
+}
+
+/* Desire: luxury lifestyle */
+.desire{background:var(--paper);padding:76px 22px 0}
+.desire .wrap{width:100%}
+.desire h2.big{font:400 53px/.8 "Instrument Serif";letter-spacing:-.05em;text-transform:none}
+.desire .twocol{display:block}
+.desire .item{font:400 27px/1.05 "Instrument Serif";padding:16px 0;border-bottom:1px solid #171a1725}
+.desire::after{
+ content:"";display:block;width:calc(100% + 44px);height:300px;margin:55px -22px 0;
+ background:url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=85") center/cover no-repeat;
+}
+.desire .center h2.big{font-size:72px}
+
+/* Qualification split */
+section:nth-of-type(9){padding:0;background:var(--paper)}
+section:nth-of-type(9)>.wrap{width:100%;display:block}
+section:nth-of-type(9)>.wrap>div{padding:72px 22px}
+section:nth-of-type(9)>.wrap>div:last-child{background:var(--sand)}
+section:nth-of-type(9) h2{font:400 48px/.82 "Instrument Serif"}
+section:nth-of-type(9) p{font-size:14px;line-height:1.4;padding:12px 0;border-bottom:1px solid #171a1720}
+
+/* Marina: portrait-led authority */
+.marina{background:var(--paper)!important;color:var(--ink)!important;padding:0 22px 78px}
+.marina::before{
+ content:"";display:block;width:calc(100% + 44px);height:410px;margin:0 -22px 60px;
+ background:url("https://feminess.github.io/Bilder/Marina_MAI2314300%20Kopie.jpg") center 25%/cover no-repeat;
+}
+.marina .wrap{width:100%}
+.marina .ey{color:var(--ink)}
+.marina h2.big{font:400 55px/.78 "Instrument Serif";color:var(--ink);text-transform:none}
+.marina h3{font:400 43px/.83 "Instrument Serif"!important;color:var(--ink)}
+.marina p{font-size:14px;line-height:1.45}
+.marina .italic{color:var(--deep)}
+
+/* Final editorial CTA */
+.final{background:var(--paper)!important;color:var(--ink)!important;text-align:left;padding:82px 22px 0!important}
+.final .wrap{width:100%}
+.final .ey{color:var(--ink)}
+.final h2{font:400 53px/.78 "Instrument Serif";color:var(--ink);text-transform:none}
+.final .italic{color:var(--gold)}
+.final p b{font:500 34px/1.05 "Caveat";color:var(--deep)}
+.final .btn{background:var(--deep);color:#fff;width:100%;margin:28px 0 0}
+.final::after{
+ content:"";display:block;width:calc(100% + 44px);height:360px;margin:55px -22px 0;
+ background:url("https://feminess.github.io/Bilder/Marina_MAI2314136%20Kopie.jpg") center 30%/cover no-repeat;
+}
+@media(max-width:374px){
+ .hero h1{font-size:61px}.hero h2{font-size:33px}
+ .card h3,.dark h2.big,.master>.wrap>h2.big,.mirrorbox h2.big,.marina h2.big{font-size:48px}
+}
+</style>
+<style id="feminess-gold">
+:root{--bg:#0d2420;--bg-alt:#123830;--cream:#123830;--paper:#0d2420;--sand:#163f36;--deep:#0d2420;--green:#C9A24D;--ink:#F3EDE2;--gold:#C9A24D;
+--gold-grad:linear-gradient(135deg,#8A6A3A 0%,#C9A24D 45%,#F3DFA8 70%,#C9A24D 100%)}
+body{background:#07130f;color:#F3EDE2}
+.page{background:var(--bg);box-shadow:none}
+.site-header{background:#07291d;padding:16px 22px;text-align:center}
+.site-header img{width:150px;margin:0 auto}
+.hero{background:var(--bg-alt)!important}
+.proof{background:var(--bg)!important}
+.dark,.mirror,.outcome{background:var(--bg-alt)!important;color:#F3EDE2!important}
+.marina,.final,section:not([class]),section:nth-of-type(5),.desire,.master{background:var(--bg)!important;color:#F3EDE2!important}
+section:nth-of-type(9)>.wrap>div:last-child{background:var(--bg-alt)}
+.card{background:var(--bg)!important;border-top-color:rgba(243,237,226,.2)!important}
+.card:nth-child(even){background:var(--bg-alt)!important}
+.dark .twocol>div:first-child p,.desire .item,section:nth-of-type(9) p{border-color:rgba(243,237,226,.18)!important}
+h1,h2,h3,.big{font-family:'Instrument Serif',serif!important;font-weight:400}
+.dark h2.big,.dark .ey,.marina h2.big,.marina h3,.marina .ey,.final h2,.final .ey,.hero h2,.hero p,.mirrorbox p,.outcome h3{color:#F3EDE2!important}
+.ey,.dark .ey,.marina .ey,.final .ey,.proof .ey,.proof .quote b:last-child{color:#C9A24D!important;font-family:'Manrope',sans-serif}
+.italic,.hero .sub,.card .result,.final p b,.dark .italic,.mirrorbox .italic,.outcome .italic,.marina .italic,.final .italic{
+ font-family:'Amsterdam Four',cursive!important;font-weight:400!important;line-height:2.2!important;padding:14px 0;
+ background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent!important;-webkit-text-fill-color:transparent;max-width:none}
+.hero .sub,.italic{font-size:32px!important}
+.card .result{font-size:27px!important;line-height:1.9!important;border-left-color:#C9A24D;padding-left:15px}
+.final p b{font-size:32px;display:inline-block}
+.hero h1,.desire .center h2.big,.mirrorbox h2.big{background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent!important}
+.hero .meta{color:rgba(243,237,226,.75)}
+.proof .quote p{color:#F3EDE2}
+.proof .quote{border-top-color:rgba(243,237,226,.2)}
+.btn,.mirrorbox .btn,.final .btn{background:var(--gold-grad)!important;color:#0d2420!important;border-radius:999px;font:700 14px/54px 'Manrope',sans-serif;letter-spacing:.05em;text-transform:uppercase;text-align:center;padding:0 24px;display:block;text-decoration:none;animation:pulse 2.2s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:scale(1);box-shadow:0 6px 28px rgba(138,93,30,.45)}50%{transform:scale(1.04);box-shadow:0 14px 46px rgba(217,169,75,.6)}}
+section:nth-of-type(3)::after,section:nth-of-type(5)::before,.marina::before,.mirror::after,.desire::after,.final::after,.hero::after{
+ -webkit-mask-image:linear-gradient(to bottom,transparent 0%,black 30%,black 80%,transparent 100%);mask-image:linear-gradient(to bottom,transparent 0%,black 30%,black 80%,transparent 100%)}
+.press{background:var(--bg);padding:34px 0;border-top:1px solid rgba(243,237,226,.12);overflow:hidden}
+.press .ey{text-align:center;margin-bottom:18px;display:block;font-size:10px;letter-spacing:.16em;text-transform:uppercase;font-weight:700}
+.press-row{overflow:hidden;-webkit-mask-image:linear-gradient(to right,transparent,black 8%,black 92%,transparent);mask-image:linear-gradient(to right,transparent,black 8%,black 92%,transparent)}
+.press-track{display:flex;align-items:center;gap:56px;width:max-content;animation:ps 22s linear infinite}
+.press-track img{height:40px;width:auto;opacity:.75;flex-shrink:0}
+@keyframes ps{to{transform:translateX(-50%)}}
+footer.site-footer{background:#07291d;padding:32px 22px;text-align:center;font-size:12px;color:rgba(243,237,226,.6)}
+footer.site-footer img{width:150px;margin:0 auto 14px}
+footer.site-footer a{color:inherit;margin:0 8px}
+.hero::after,.chosen::after{position:static!important;transform:none!important;right:auto!important;bottom:auto!important;top:auto!important;font:inherit}
+.hero .btn{width:100%;position:static}
+
+</style>
+</head>
+<body><main class="page">
+<div class="site-header"><img src="../Bilder/Feminess-Logo-Gold.png" alt="Feminess"></div>
+<section class="hero"><div class="wrap"><div class="ey">Free & Live Money-Masterclass für selbstständige Frauen</div><h1>ENERGY for MILLION</h1><h2>DU ARBEITEST MEHR, ALS DEIN KONTO ZEIGT.</h2><p class="sub">Zeit, dass sich das ändert.</p><p>Du willst mehr verdienen. Aber ganz sicher nicht, indem du einfach <b>noch mehr arbeitest, noch mehr postest und noch mehr versuchst.</b></p><p>Sondern indem du lernst, <b>mehr Geld zu empfangen, mehr davon zu behalten und mehr daraus zu machen.</b></p><a class="btn" href="#anmeldung">Ich will mehr</a><div class="meta">01. Oktober 2026 · 11:00–13:00 Uhr · live & kostenfrei · keine Aufzeichnung · limitiert auf 100 Frauen</div></div></section>
+<div class="press"><span class="ey">Bekannt aus</span><div class="press-row"><div class="press-track"><img src="../Logos/Cosmopolitan-Logo-neue-Masse.png" alt=""><img src="../Logos/Focus-Money-Logo-neue-masse.png" alt=""><img src="../Logos/Huffpost-Logo-neue-Masse.png" alt=""><img src="../Logos/Stern-Logo.png" alt=""><img src="../Logos/Wirschafwoche.png" alt=""><img src="../Logos/handelsblatt-logo-1.png" alt=""><img src="../Logos/Cosmopolitan-Logo-neue-Masse.png" alt=""><img src="../Logos/Focus-Money-Logo-neue-masse.png" alt=""><img src="../Logos/Huffpost-Logo-neue-Masse.png" alt=""><img src="../Logos/Stern-Logo.png" alt=""><img src="../Logos/Wirschafwoche.png" alt=""><img src="../Logos/handelsblatt-logo-1.png" alt=""></div></div></div>
+<section class="proof"><div class="wrap"><div class="ey">Was Frauen über Marina sagen</div><div class="quotes"><div class="quote"><p>„Ich liebe die Zusammenarbeit mit Marina so sehr. Durch sie hat sich so viel in meinem Unternehmen erleichtert. <b>Ich arbeite viel weniger, hab viel mehr Umsatz, es fällt mir viel leichter.</b> Ich mache monatlich 6-stellige Umsätze und bin Marina einfach unendlich dankbar.“</p><b>Sigrid Aviana Waedt</b></div><div class="quote"><p>„Das war ein mega Event! Es war intensiv, energiegeladen, motivierend und hat einfach Spaß gemacht. Marina hat einen tollen Überblick gegeben, auf was es ankommt, wenn man erfolgreich sein möchte. <b>Verständlich, klar und nachvollziehbar.</b>“</p><b>Anja M.</b></div></div></div></section>
+<section><div class="wrap center"><div class="ey">Vielleicht kennst du genau diesen Gedanken</div><h2 class="big">DA IST FINANZIELL NOCH MEHR FÜR MICH DRIN.</h2><p>Vielleicht stehst du mit deinem Business noch relativ am Anfang. Vielleicht verdienst du schon gutes Geld. Vielleicht läuft es sogar richtig gut.</p><p class="italic">„Das kann doch noch nicht alles gewesen sein.“</p><p>Du willst mehr Umsatz. Mehr Geld auf deinem Konto. Rücklagen. Investieren. Dir Unterstützung holen. Vermögen aufbauen. Und einfach wissen:</p><h3>„Ich kann mir das leisten.“</h3><p><b>Du willst mehr. Punkt.</b> Und nein, dafür musst du dich nicht rechtfertigen.</p></div></section>
+<section class="dark"><div class="wrap"><div class="ey">Mal eine unbequeme Frage</div><h2 class="big">WARUM SOLLTE MEHR GELD AUTOMATISCH MEHR VON DIR KOSTEN?</h2><div class="twocol"><div><p>Du willst mehr Umsatz? <b>Dann mach mehr.</b></p><p>Du willst mehr Kunden? <b>Dann werde noch sichtbarer.</b></p><p>Du willst mehr verdienen? <b>Dann streng dich mehr an.</b></p></div><div><p>Also machst du. Du lernst. Du investierst. Du probierst aus. Du optimierst.</p><p class="italic">„Für das, was ich alles mache, müsste da eigentlich mehr sein.“</p><p>Vielleicht brauchst du nicht die nächste Sache, die du <b>auch noch machen sollst.</b></p></div></div></div></section>
+<section><div class="wrap center"><div class="ey">Genau da wird es spannend</div><h2 class="big">WIE GUT BIST DU EIGENTLICH DARIN, GELD ZU HABEN?</h2><p>Nicht nur darin, es zu verdienen. Sondern es <b>anzunehmen. Zu behalten. Zu investieren. Und mehr daraus zu machen.</b></p><p class="italic">„Was kann ich mir gerade irgendwie leisten?“</p><p>Sondern:</p><h3>„Was will ich mit meinem Geld möglich machen?“</h3><a class="btn" href="#anmeldung">Ja. Da will ich hin.</a></div></section>
+<section class="master"><div class="wrap"><div class="ey">Die 2 Stunden</div><h2 class="big">UND WAS HAST DU DANACH DAVON?</h2><p>Keine 27 neuen Dinge, die du ab Montag auch noch machen sollst. Sondern Antworten auf Fragen, die für dein Geld viel entscheidender sind.</p><div class="cards">
+<div class="card"><b>01 · LEISTUNG</b><h3>Warum mache ich eigentlich immer mehr, sobald ich mehr verdienen will?</h3><p>Der Umsatz soll hoch – also geht automatisch dein Einsatz hoch. Noch ein Angebot. Noch mehr Content. Noch mehr arbeiten.</p><p class="result">Danach weißt du, wo „noch mehr machen“ bei dir aufhören darf.</p></div>
+<div class="card"><b>02 · EMPFANGEN</b><h3>Warum will ich mehr – und halte mich an manchen Stellen trotzdem zurück?</h3><p>Der höhere Preis. Mehr Sichtbarkeit. Eine größere Investition. Eine Entscheidung, bei der du vorher nicht weißt, ob sie funktioniert.</p><p class="result">Du erkennst, wo du längst weiterwillst – aber bei Geld noch Entscheidungen triffst, die dich genau da halten, wo du bist.</p></div>
+<div class="card"><b>03 · HALTEN</b><h3>Warum verdiene ich Geld – aber es fühlt sich trotzdem nicht nach „viel“ an?</h3><p><b>Umsatz ist nicht das Gleiche wie Geld haben.</b> Was bleibt? Was gibst du aus? Was legst du zurück? Was investierst du?</p><p class="result">Irgendwann willst du nicht nur sagen: „Ich mache guten Umsatz.“ Du willst Geld HABEN.</p></div>
+<div class="card"><b>04 · AUFBAUEN</b><h3>Und was mache ich dann mit mehr Geld?</h3><p>Was willst du behalten? Investieren? Dir ermöglichen? Und was soll aus diesem Geld einmal werden?</p><p class="result">Das ist der Unterschied zwischen „Ich verdiene gut“ und „Ich baue mir wirklich etwas auf.“</p></div></div>
+<div class="outcome"><h3>Nach diesen 2 Stunden sollst du nicht denken:</h3><p class="italic">„Okay, was muss ich jetzt alles noch machen?“</p><p><b>Sondern:</b> „Jetzt verstehe ich, warum ich finanziell an diesem Punkt stehe. Jetzt sehe ich, wo ich mir selbst im Weg stehe. Und jetzt weiß ich, was ich anders machen will.“</p></div></div></section>
+<section class="mirror"><div class="wrap"><div class="mirrorbox"><div class="ey">Nur live</div><h2 class="big">THE ENERGY BLOCK MIRROR</h2><p class="italic">Du willst wissen, wo es bei DIR gerade hängt?</p><p>Machst du ständig mehr, sobald du mehr Geld willst? Kommt Geld rein – aber bleibt nicht wirklich? Fällt es dir schwer, höhere Preise selbstbewusst zu verlangen? Oder verdienst du längst gut und fragst dich trotzdem, warum es sich finanziell noch nicht so frei anfühlt, wie du dachtest?</p><p><b>Der Energy Block Mirror zeigt dir, wo dein persönlicher Hebel liegt.</b></p><a class="btn" href="#anmeldung">Ich will das für mich sehen</a></div></div></section>
+<section class="desire"><div class="wrap"><div class="ey">Und jetzt mal weg vom Business</div><h2 class="big">WAS WÜRDE MEHR GELD FÜR DICH GANZ PERSÖNLICH VERÄNDERN?</h2><div class="twocol"><div><div class="item">Dir endlich Unterstützung holen.</div><div class="item">Investieren, ohne danach nervös aufs Konto zu schauen.</div><div class="item">Geld zurücklegen, ohne es kurz darauf wieder zu brauchen.</div></div><div><div class="item">Anfangen, wirklich Vermögen aufzubauen.</div><div class="item">Öfter reisen. Weniger selbst machen. Mehr auswählen können.</div><div class="item">Nicht mehr zuerst fragen: „Kann ich mir das leisten?“</div></div></div><div class="center"><p>Sondern:</p><h2 class="big">„WILL ICH DAS?“</h2><p class="italic">Darum willst du mehr.</p></div></div></section>
+<section><div class="wrap twocol"><div><div class="ey">Das ist für dich, wenn …</div><h2>DU DICH HIER WIEDERERKENNST.</h2><p>„Ich weiß, dass ich finanziell noch lange nicht da bin, wo ich hinwill.“</p><p>„Ich will gutes Geld verdienen – ohne dass mein Business irgendwann mein ganzes Leben frisst.“</p><p>„Ich will nicht nur Umsatz machen. Ich will endlich auch etwas davon haben.“</p><p>„Ich bin bereit, Dinge anders zu machen, wenn mich genau das weiterbringt.“</p><p><b>Egal, ob du gerade ernsthaft anfängst oder schon gutes Geld verdienst: Du willst weiter.</b></p></div><div><div class="ey">Dann spar dir die zwei Stunden</div><h2>WENN DU EIGENTLICH NICHTS VERÄNDERN WILLST.</h2><p>Wenn du nur den nächsten schnellen Trick willst. Wenn du nur noch eine kostenlose Masterclass sammeln willst. Oder wenn du danach genauso weitermachen möchtest wie bisher.</p><p class="italic">„Ich will endlich verstehen, was bei mir den Unterschied machen würde.“</p><p><b>Wenn du das denkst: Dann sei dabei.</b></p></div></div></section>
+<section class="marina"><div class="wrap"><div class="ey">Marina Henze · CEO & Gründerin FEMINESS</div><h2 class="big">ICH KENNE DIESEN GEDANKEN VERDAMMT GUT:</h2><p class="italic">„Wenn ich mehr will, muss ich eben mehr machen.“</p><p>Ich bin seit über 20 Jahren Unternehmerin. Ich habe Millionenumsätze gemacht, mehr als 20.000 Frauen begleitet, große Entscheidungen getroffen, Fehler gemacht, neu angefangen, Geld verdient und Geld investiert.</p><h3>MEHR GELD BEGINNT NICHT DAMIT, DASS DU IMMER NOCH MEHR VON DIR GIBST.</h3><p>Es beginnt damit, dass du <b>anders mit Geld umgehst.</b> Mit dem, das du willst. Mit dem, das du verdienst. Und mit dem, das bereits da ist.</p></div></section>
+<section class="final" id="anmeldung"><div class="wrap"><div class="ey">Die Frage ist also nicht</div><h2>„WIE VIEL MEHR KANN ICH NOCH MACHEN?“</h2><p class="italic">Sondern:</p><h2>„WAS WÜRDE SICH VERÄNDERN, WENN ICH ENDLICH ANDERS MIT GELD UMGEHE?“</h2><p><b>Mehr verdienen. · Mehr behalten. · Mehr daraus machen. · Mehr davon haben.</b></p><p>01. Oktober 2026 · 11:00–13:00 Uhr<br>kostenfrei · live · keine Aufzeichnung · limitiert auf 100 Frauen</p><a class="btn" href="#">Ich will dabei sein</a></div></section>
+<footer class="site-footer"><img src="../Bilder/Feminess-Logo-Gold.png" alt="Feminess"><div><a href="../Impressum/">Impressum</a><a href="../Datenschutz/">Datenschutz</a></div></footer>
+</main></body></html>
