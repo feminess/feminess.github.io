@@ -735,6 +735,16 @@ section:nth-of-type(9)>.wrap>div:last-child .btn{margin-top:28px}
 /* Karten-Ergebnisse: Instrument Serif statt Amsterdam Four */
 .card .result{font-family:'Instrument Serif',serif!important;font-style:italic;font-size:26px!important;line-height:1.25!important;padding:4px 0 4px 15px!important;margin-right:0!important;
  background:none!important;-webkit-background-clip:border-box!important;background-clip:border-box!important;color:#6E5726!important;-webkit-text-fill-color:#6E5726!important}
+/* ===== Weiche Farbuebergaenge: jede Sektion blendet oben aus der Farbe der vorherigen ein ===== */
+.page .press{background-image:linear-gradient(#FAF6EF,rgba(250,246,239,0) 90px)!important}
+.page .proof{background-image:linear-gradient(#DED0B3,rgba(222,208,179,0) 90px)!important}
+.page section:nth-of-type(3){background-image:linear-gradient(#F2E9DA,rgba(242,233,218,0) 100px)!important}
+.page section:nth-of-type(5){background-image:linear-gradient(#DED0B3,rgba(222,208,179,0) 160px)!important}
+.page .master{background-image:linear-gradient(#112E1F,rgba(17,46,31,0) 160px)!important}
+.page .mirror{background-image:linear-gradient(#F2E9DA,rgba(242,233,218,0) 110px),linear-gradient(to top,#F2E9DA,rgba(242,233,218,0) 130px),linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.6)),url('mirror.png')!important;background-size:auto,auto,auto,cover!important;background-position:0 0,0 100%,0 0,center!important;background-repeat:no-repeat!important}
+.page .marina{background-image:linear-gradient(#F2E9DA,rgba(242,233,218,0) 160px)!important}
+.page .final{background-image:linear-gradient(#112E1F,rgba(17,46,31,0) 160px)!important}
+footer.site-footer{background-image:linear-gradient(#DED0B3,rgba(222,208,179,0) 70px)!important}
 
 /* ===== Popup (aus /webinar/ uebernommen) ===== */
 .modal-overlay{--bg:#FAF6EF;--green-deep:#112E1F;--gold-a:#8B7239;--gold-b:#CBAB73;--gold-c:#E2D0A6;--hairline:rgba(139,114,57,.22);--text:#10261E;--muted:#576954;--cream:#F2E9DA}
