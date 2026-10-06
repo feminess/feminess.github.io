@@ -963,6 +963,19 @@ h2,.kicker:not(.script),.fw-top p.kicker:not(.script),.hero-bottom .product-name
 .offer-card .deal-card-offer .timebox small{color:#d7dcd9}
 </style>
 
+<style id="offer-card-deal-light">
+.offer-card .deal-card-offer{background:rgba(255,253,248,.55)!important;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);border:1.5px solid #C9A24D;border-radius:0;animation:dealGlowLight 3s ease-in-out infinite}
+.offer-card .deal-card-offer .price{background-image:var(--gold-metal-light);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;filter:none;text-shadow:none}
+.offer-card .deal-card-offer .timebox{border-left-color:rgba(138,106,58,.35)}
+.offer-card .deal-card-offer .timebox strong{color:#10261e;text-shadow:none}
+.offer-card .deal-card-offer .timebox small{color:#8A6A3A;text-shadow:none}
+@keyframes dealGlowLight{
+ 0%,100%{box-shadow:0 0 22px rgba(201,162,77,.30),0 0 60px rgba(201,162,77,.16)}
+ 50%{box-shadow:0 0 34px rgba(201,162,77,.55),0 0 90px rgba(201,162,77,.30)}
+}
+@media(prefers-reduced-motion:reduce){.offer-card .deal-card-offer{animation:none;box-shadow:0 0 34px rgba(201,162,77,.45)}}
+</style>
+
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
