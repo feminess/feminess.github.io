@@ -625,6 +625,19 @@ h1,h2{max-width:1000px}
  url("bg-lounge.webp") center/cover no-repeat}
 </style>
 
+<style id="pool-bg-image">
+.pool-bg{background:
+ linear-gradient(180deg,rgba(255,253,248,.74),rgba(255,253,248,.86)),
+ url("bg-pool.webp") center/cover no-repeat;
+ padding:54px 44px}
+.pool-bg .lines{margin-bottom:0}
+.final h2.final-brand{font-size:clamp(4.5rem,12vw,9rem);margin-top:70px}
+@media(max-width:800px){
+ .pool-bg{padding:34px 20px}
+ .final h2.final-brand{font-size:4rem;margin:55px 0 20px;text-align:center}
+}
+</style>
+
 </head>
 <body>
 
@@ -936,6 +949,7 @@ h1,h2{max-width:1000px}
 
 <section class="final">
   <div class="narrow">
+    <div class="pool-bg">
     <h2>DU BRAUCHST NICHT NOCH EINE VERSION VON DIR, DIE ALLES RICHTIG MACHT.</h2>
     <p class="kicker">Du brauchst dich.</p>
     <div class="lines">
@@ -947,7 +961,8 @@ h1,h2{max-width:1000px}
       <p>Die sich nicht kleiner macht, wenn es größer wird.</p>
       <p>Und die aufhört, sich selbst zu verlassen, sobald es unbequem wird.</p>
     </div>
-    <h2>ROOT TO RISE</h2>
+    </div>
+    <h2 class="final-brand">ROOT TO RISE</h2>
     <div class="last">Nicht damit du jemand anderes wirst.<br><strong>Sondern damit endlich nichts mehr zwischen dir und deinem Erfolg steht.</strong></div>
     <a class="btn" href="#deal">Ja. Das ist meins.</a>
   </div>
