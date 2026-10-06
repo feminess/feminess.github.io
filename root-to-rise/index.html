@@ -935,6 +935,15 @@ h2,.kicker:not(.script),.fw-top p.kicker:not(.script),.hero-bottom .product-name
 
 <style id="deal-card-top">.hero-top .deal-card-top{margin:34px auto 0;max-width:760px;margin-right:auto;margin-left:auto}</style>
 
+<style id="deal-glow-strong">
+.deal-card{border-width:1.5px;animation:dealGlow2 2.8s ease-in-out infinite}
+@keyframes dealGlow2{
+ 0%,100%{box-shadow:0 0 26px rgba(226,208,166,.55),0 0 70px rgba(203,171,115,.38),0 0 130px rgba(203,171,115,.20),inset 0 0 26px rgba(226,208,166,.16);border-color:rgba(226,208,166,.9)}
+ 50%{box-shadow:0 0 44px rgba(243,223,168,.85),0 0 110px rgba(203,171,115,.60),0 0 190px rgba(203,171,115,.34),inset 0 0 40px rgba(243,223,168,.26);border-color:#F3DFA8}
+}
+@media(prefers-reduced-motion:reduce){.deal-card{animation:none;box-shadow:0 0 40px rgba(226,208,166,.6),0 0 100px rgba(203,171,115,.35)}}
+</style>
+
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
