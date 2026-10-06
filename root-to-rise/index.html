@@ -10,6 +10,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preload" as="image" href="hero-bg-m.webp" media="(max-width:800px)" fetchpriority="high">
+<link rel="preload" as="image" href="hero-bg.webp" media="(min-width:801px)" fetchpriority="high">
 <title>ROOT TO RISE · FEMINESS</title>
 <meta name="description" content="ROOT TO RISE – 7 Wochen persönliche Live-Begleitung mit Marina & Vera. Root. Identity. Momentum.">
 <style>
@@ -631,6 +633,40 @@ h1,h2{max-width:1000px}
 footer.site-footer{background:#112E1F;padding:32px 22px;text-align:center;font-size:12px;color:rgba(242,233,218,.6)}
 footer.site-footer img{width:150px;margin:0 auto 14px;display:block}
 footer.site-footer a{color:inherit;margin:0 8px;text-decoration:none}
+</style>
+
+<style id="image-system">
+:root{--ov-light:linear-gradient(180deg,rgba(255,253,248,.76),rgba(255,253,248,.86));--ov-dark:linear-gradient(180deg,rgba(8,26,21,.72),rgba(8,26,21,.84));--gold-dark:#8a6a2c}
+@media(min-width:801px){
+ .hero-top{background-image:var(--ov-dark),url("hero-bg.webp")}
+ .hero-bottom{background-image:var(--ov-dark),url("hero-bg-2.webp")}
+ .desire .narrow.woman::before{background-image:var(--ov-light),url("bg-woman.webp")}
+ .phase.phase-root{background-image:var(--ov-dark),url("bg-root.webp")}
+ .phase.phase-momentum{background-image:var(--ov-dark),url("bg-momentum.webp")}
+ .bring{background-image:var(--ov-light),url("bg-bring.webp")}
+ .moment-bg::before{background-image:var(--ov-light),url("bg-moment.webp")}
+ .forwho{background-image:var(--ov-light),url("bg-compass.webp")}
+ .mv-bg::before{background-image:var(--ov-light),url("bg-arches.webp")}
+ .offer{background-image:var(--ov-light),url("bg-lounge.webp")}
+ .pool-bg::before{background-image:var(--ov-light),url("bg-pool.webp")}
+ .imagine{background-image:var(--ov-light),url("bg-imagine.webp")}
+}
+@media(max-width:800px){
+ .hero-top{background-image:var(--ov-dark),url("hero-bg-m.webp")}
+ .hero-bottom{background-image:var(--ov-dark),url("hero-bg-2-m.webp")}
+ .desire .narrow.woman::before{background-image:var(--ov-light),url("bg-woman-m.webp")}
+ .phase.phase-root{background-image:var(--ov-dark),url("bg-root-m.webp")}
+ .phase.phase-momentum{background-image:var(--ov-dark),url("bg-momentum-m.webp")}
+ .bring{background-image:var(--ov-light),url("bg-bring-m.webp")}
+ .moment-bg::before{background-image:var(--ov-light),url("bg-moment-m.webp")}
+ .forwho{background-image:var(--ov-light),url("bg-compass-m.webp")}
+ .mv-bg::before{background-image:var(--ov-light),url("bg-arches-m.webp")}
+ .offer{background-image:var(--ov-light),url("bg-lounge-m.webp")}
+ .pool-bg::before{background-image:var(--ov-light),url("bg-pool-m.webp")}
+ .imagine::before{background-image:var(--ov-light),url("bg-imagine-m.webp")}
+}
+.imagine .kicker,.desire .narrow.woman .kicker,.moment-bg .kicker,.pool-bg .kicker,.offer-card .kicker,.forwho .kicker,.mv-bg .kicker{color:var(--gold-dark)}
+.offer-card .eyebrow{color:#3a3a3a!important}
 </style>
 
 </head>
