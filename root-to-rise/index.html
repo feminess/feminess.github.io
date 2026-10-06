@@ -675,6 +675,16 @@ footer.site-footer a{color:inherit;margin:0 8px;text-decoration:none}
 }
 </style>
 
+<style id="floating-cta-style">
+.mobile-cta{display:block;position:fixed;z-index:40;left:50%;bottom:18px;transform:translateX(-50%);width:auto;min-width:260px;transition:opacity .25s,transform .25s}
+.mobile-cta .btn{width:100%;box-shadow:0 10px 35px rgba(0,0,0,.28)}
+.mobile-cta.is-hidden{opacity:0;pointer-events:none;transform:translateX(-50%) translateY(20px)}
+@media(max-width:800px){
+ .mobile-cta{left:14px;right:14px;width:auto;min-width:0;transform:none}
+ .mobile-cta.is-hidden{transform:translateY(20px)}
+}
+</style>
+
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -1010,8 +1020,22 @@ footer.site-footer a{color:inherit;margin:0 8px;text-decoration:none}
 
 
 
+<div class="mobile-cta" id="floating-cta"><a class="btn" href="#deal">Das will ich</a></div>
+
 <footer class="site-footer"><img src="../Bilder/Feminess-Logo-Gold.png" alt="Feminess"><div><a href="../Impressum/">Impressum</a><a href="../Datenschutz/">Datenschutz</a></div></footer>
 
+<script>
+(function(){
+  var cta=document.getElementById("floating-cta");
+  if(!cta||!("IntersectionObserver" in window)) return;
+  var seen=new Set();
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ e.isIntersecting?seen.add(e.target):seen.delete(e.target); });
+    cta.classList.toggle("is-hidden",seen.size>0);
+  });
+  document.querySelectorAll(".hero-top,.offer,.closed,.site-footer").forEach(function(el){io.observe(el);});
+})();
+</script>
 <script>
 // Set the real deadline here, e.g. "2026-10-10T14:00:00+02:00".
 const DEADLINE = "2026-10-08T12:00:00+02:00";
