@@ -606,6 +606,13 @@ h1,h2{max-width:1000px}
 }
 </style>
 
+<style id="imagine-fullbleed-mobile">
+@media(max-width:800px){
+ .imagine{background:none;position:relative;isolation:isolate;padding:34px 0}
+ .imagine::before{content:"";position:absolute;z-index:-1;top:0;bottom:0;left:50%;width:100vw;margin-left:-50vw;background:linear-gradient(180deg,rgba(255,253,248,.74),rgba(255,253,248,.86)),url("bg-imagine.webp") center/cover no-repeat}
+}
+</style>
+
 </head>
 <body>
 
