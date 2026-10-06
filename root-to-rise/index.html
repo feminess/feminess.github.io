@@ -522,10 +522,15 @@ h1,h2{max-width:1000px}
  linear-gradient(180deg,rgba(8,26,21,.78),rgba(8,26,21,.88)),
  url("hero-bg.webp") center/cover no-repeat;
  min-height:62vh;display:flex;align-items:center;padding:130px 0 100px;position:relative;z-index:1}
-.hero-rest{position:relative;z-index:1;padding-top:0;padding-bottom:100px}
+.hero-rest{position:relative;z-index:1;padding-top:0;padding-bottom:50px}
+.hero-bottom{background:
+ linear-gradient(180deg,rgba(8,26,21,.72),rgba(8,26,21,.82)),
+ url("hero-bg-2.webp") center/cover no-repeat;
+ position:relative;z-index:1;padding:80px 0 100px}
 @media(max-width:800px){
  .hero-top{min-height:0;padding:68px 0 52px}
- .hero-rest{padding-bottom:58px}
+ .hero-rest{padding-bottom:36px}
+ .hero-bottom{padding:52px 0 58px;background-position:center,93% 50%}
 }
 </style>
 
@@ -559,6 +564,9 @@ h1,h2{max-width:1000px}
     <p class="statement">Ganz schön viele Regeln für eine Frau, die eigentlich frei sein will.</p>
     <p class="lead">Und wahrscheinlich weißt du das längst.<br>Du brauchst nicht noch jemanden, der dir erklärt, dass du mehr an dich glauben, größer denken oder aus deiner Komfortzone kommen sollst.</p>
     <p class="statement">Du willst endlich aufhören, dir selbst zu sabotieren, wenn es darauf ankommt.</p>
+  </div>
+  <div class="hero-bottom">
+  <div class="wrap content">
     <p class="lead">Genau dafür gibt es:</p>
 
     <div class="product">
@@ -578,6 +586,7 @@ h1,h2{max-width:1000px}
         <div class="timebox"><strong data-seconds>00</strong><small>Sek</small></div>
       </div>
     </div>
+  </div>
   </div>
 </header>
 
