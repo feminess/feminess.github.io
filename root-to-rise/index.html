@@ -544,16 +544,6 @@ h1,h2{max-width:1000px}
 }
 </style>
 
-<style id="woman-bg-image">
-.desire .narrow.woman{background:
- linear-gradient(180deg,rgba(255,253,248,.72),rgba(255,253,248,.84)),
- url("bg-woman.webp") center/cover no-repeat;
- margin-top:54px;padding:60px 48px!important}
-@media(max-width:800px){
- .desire .narrow.woman{margin-top:42px;padding:38px 22px!important}
-}
-</style>
-
 <style id="root-bg-image">
 .phase.phase-root{background:
  linear-gradient(180deg,rgba(8,26,21,.68),rgba(8,26,21,.82)),
@@ -584,57 +574,29 @@ h1,h2{max-width:1000px}
 }
 </style>
 
-<style id="moment-bg-image">
-.moment-bg{background:
- linear-gradient(180deg,rgba(255,253,248,.72),rgba(255,253,248,.84)),
- url("bg-moment.webp") center/cover no-repeat;
- padding:34px 40px;margin:28px 0 0}
-.moment-bg .pullquote{margin-top:0}
-.moment-bg>p:last-child{margin-bottom:0}
-@media(max-width:800px){
- .moment-bg{padding:26px 20px}
-}
-</style>
-
-<style id="compass-bg-image">
-.forwho .forwho-box{background:
- linear-gradient(180deg,rgba(255,253,248,.74),rgba(255,253,248,.86)),
- url("bg-compass.webp") center/cover no-repeat;
- padding:56px 60px 56px 70px}
-@media(max-width:800px){
- .forwho .forwho-box{padding:40px 22px;background-position:center,21% center}
-}
-</style>
-
-<style id="arches-bg-image">
-.mv-bg{background:
- linear-gradient(180deg,rgba(255,253,248,.74),rgba(255,253,248,.86)),
- url("bg-arches.webp") center/cover no-repeat;
- padding:56px 50px}
+<style id="fullbleed-bg-images">
+.desire .narrow.woman{position:relative;isolation:isolate;margin-top:54px;padding:60px 0!important}
+.desire .narrow.woman::before{content:"";position:absolute;z-index:-1;top:0;bottom:0;left:50%;width:100vw;margin-left:-50vw;background:linear-gradient(180deg,rgba(255,253,248,.74),rgba(255,253,248,.86)),url("bg-woman.webp") center/cover no-repeat}
+.moment-bg{position:relative;isolation:isolate;margin:28px 0 0;padding:34px 0}
+.moment-bg::before{content:"";position:absolute;z-index:-1;top:0;bottom:0;left:50%;width:100vw;margin-left:-50vw;background:linear-gradient(180deg,rgba(255,253,248,.72),rgba(255,253,248,.84)),url("bg-moment.webp") center/cover no-repeat}
+.mv-bg{position:relative;isolation:isolate;padding:56px 0}
+.mv-bg::before{content:"";position:absolute;z-index:-1;top:0;bottom:0;left:50%;width:100vw;margin-left:-50vw;background:linear-gradient(180deg,rgba(255,253,248,.74),rgba(255,253,248,.86)),url("bg-arches.webp") center/cover no-repeat}
 .mv-bg .section-intro{margin-bottom:34px}
 .mv-bg .mentor{background:transparent}
-@media(max-width:800px){
- .mv-bg{padding:38px 22px}
- .mv-bg .mentor{padding:26px 0}
-}
-</style>
-
-<style id="lounge-bg-image">
-.offer .offer-card{background:
- linear-gradient(180deg,rgba(255,253,248,.74),rgba(255,253,248,.86)),
- url("bg-lounge.webp") center/cover no-repeat}
-</style>
-
-<style id="pool-bg-image">
-.pool-bg{background:
- linear-gradient(180deg,rgba(255,253,248,.74),rgba(255,253,248,.86)),
- url("bg-pool.webp") center/cover no-repeat;
- padding:54px 44px}
+.pool-bg{position:relative;isolation:isolate;padding:54px 0}
+.pool-bg::before{content:"";position:absolute;z-index:-1;top:0;bottom:0;left:50%;width:100vw;margin-left:-50vw;background:linear-gradient(180deg,rgba(255,253,248,.74),rgba(255,253,248,.86)),url("bg-pool.webp") center/cover no-repeat}
 .pool-bg .lines{margin-bottom:0}
 .final h2.final-brand{font-size:clamp(4.5rem,12vw,9rem);margin-top:70px}
+.forwho{background:linear-gradient(180deg,rgba(255,253,248,.74),rgba(255,253,248,.86)),url("bg-compass.webp") center/cover no-repeat}
+.offer{background:linear-gradient(180deg,rgba(255,253,248,.74),rgba(255,253,248,.86)),url("bg-lounge.webp") center/cover no-repeat}
 @media(max-width:800px){
- .pool-bg{padding:34px 20px}
+ .desire .narrow.woman{margin-top:42px;padding:38px 0!important}
+ .moment-bg{padding:26px 0}
+ .mv-bg{padding:38px 0}
+ .mv-bg .mentor{padding:26px 0}
+ .pool-bg{padding:34px 0}
  .final h2.final-brand{font-size:4rem;margin:55px 0 20px;text-align:center}
+ .forwho{background-position:center,21% center}
 }
 </style>
 
