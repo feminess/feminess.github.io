@@ -901,6 +901,31 @@ p.kicker.script{font-size:clamp(2.4rem,7vw,3.4rem);margin:-.3em 0}
 
 <style id="hero-question-center">.hero-top h1.hero-question{text-align:center;margin-left:auto;margin-right:auto}</style>
 
+<style id="type-scale">
+:root{--fs-label:11px;--fs-text:16px;--fs-textl:20px;--fs-sub:28px;--fs-h2:40px;--fs-display:46px;--fs-script:40px}
+@media(min-width:801px){:root{--fs-label:12.5px;--fs-text:17px;--fs-textl:22px;--fs-sub:38px;--fs-h2:64px;--fs-display:72px;--fs-script:64px}}
+body{font-size:var(--fs-text)}
+/* 1 Label */
+.eyebrow,.topbar .inner,.timebox small,.site-footer,.quote strong{font-size:var(--fs-label)!important}
+/* 2 Text */
+.included-card p,.phase p,.mentor p,.bring div,.business .reasons div,.pattern .but,.hero .friction span,.offer-list span{font-size:var(--fs-text)!important}
+/* 3 Text gross */
+.desire .desire-item:nth-child(n),.pattern .know,.quote p,.included-card h3,.hero .friction b,.hero .lead,.timebox strong,.final .lines p{font-size:var(--fs-textl)!important}
+/* 4 Zwischentitel */
+h3,.phase h3,.hero .statement,.phase .impact,.pullquote,.identity-quote,.deal-card .price,.final .last,.mentor h3,.desire .desire-item:nth-child(n) b{font-size:var(--fs-sub)!important}
+.included-card h3{font-size:var(--fs-textl)!important}
+/* 5 Ueberschrift */
+h2,.kicker:not(.script),.fw-top p.kicker:not(.script),.hero-bottom .product-name{font-size:var(--fs-h2)!important}
+.offer-card .kicker{font-size:var(--fs-textl)!important}
+.offer-card h2{font-size:clamp(4rem,10vw,8.5rem)!important}
+.final h2.final-brand{font-size:clamp(4.5rem,12vw,9rem)!important}
+@media(max-width:800px){.offer-card h2{font-size:3.65rem!important}.final h2.final-brand{font-size:4rem!important}}
+/* 6 Display */
+.hero-top h1.hero-question,.fw-bottom .more span{font-size:var(--fs-display)!important}
+/* 7 Script */
+.script-h,.script,p.kicker.script,.fw-top p.kicker .script{font-size:var(--fs-script)!important}
+</style>
+
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
