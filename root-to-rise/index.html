@@ -708,6 +708,21 @@ footer.site-footer a{color:inherit;margin:0 8px;text-decoration:none}
 @media(prefers-reduced-motion:reduce){.deal-card{animation:none}}
 </style>
 
+<style id="gold-workshop">
+:root{--gold:#C9A24D;--gold-soft:#F3DFA8;--gold-dark:#8A6A3A;
+ --gold-metal:linear-gradient(90deg,#8A6A3A 0%,#C9A24D 22%,#F3DFA8 45%,#C9A24D 68%,#8A6A3A 88%,#C9A24D 100%);
+ --gold-metal-light:linear-gradient(90deg,#8A6A3A 0%,#C9A24D 50%,#8A6A3A 100%)}
+.eyebrow,.kicker,.mentor .role{display:inline-block;background:var(--gold-metal-light);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+.topbar strong,.hero .eyebrow,.hero .kicker,.method .eyebrow,.method .kicker,.business .eyebrow,.business .kicker,.closed .eyebrow,.closed .kicker,.aha .eyebrow,.aha .kicker,.phase .eyebrow,.phase .impact,.price,.hero .statement{background:var(--gold-metal);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+.phase .impact,.price{display:inline-block}
+.hero .statement{width:fit-content}
+.deal-card .price{text-shadow:none;filter:drop-shadow(0 0 14px rgba(243,223,168,.45))}
+.btn{background:var(--gold-metal);background-size:100% 100%;color:#0d2420;box-shadow:0 6px 28px rgba(138,106,58,.40);animation:btnPulse 2.2s ease-in-out infinite}
+.btn:hover{opacity:.88;transform:translateY(-1px);animation:none}
+@keyframes btnPulse{0%,100%{transform:scale(1);box-shadow:0 6px 28px rgba(138,106,58,.40)}50%{transform:scale(1.04);box-shadow:0 10px 36px rgba(138,106,58,.58)}}
+.checkout{background:#112E1F}
+</style>
+
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
