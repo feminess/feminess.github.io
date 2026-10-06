@@ -1054,7 +1054,7 @@ footer.site-footer a{color:inherit;margin:0 8px;text-decoration:none}
     entries.forEach(function(e){ e.isIntersecting?seen.add(e.target):seen.delete(e.target); });
     cta.classList.toggle("is-hidden",seen.size>0);
   });
-  document.querySelectorAll(".hero-top,.offer,.closed,.site-footer").forEach(function(el){io.observe(el);});
+  document.querySelectorAll(".hero-top,.offer,.closed,.checkout,.site-footer").forEach(function(el){io.observe(el);});
 })();
 </script>
 <script>
