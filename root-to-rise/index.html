@@ -517,9 +517,16 @@ h1,h2{max-width:1000px}
 </style>
 
 <style id="hero-bg-image">
-.hero{background:
+.hero{display:block;min-height:0;padding:0}
+.hero-top{background:
  linear-gradient(180deg,rgba(8,26,21,.78),rgba(8,26,21,.88)),
- url("hero-bg.webp") center/cover no-repeat}
+ url("hero-bg.webp") center/cover no-repeat;
+ min-height:62vh;display:flex;align-items:center;padding:130px 0 100px;position:relative;z-index:1}
+.hero-rest{position:relative;z-index:1;padding-top:0;padding-bottom:100px}
+@media(max-width:800px){
+ .hero-top{min-height:0;padding:68px 0 52px}
+ .hero-rest{padding-bottom:58px}
+}
 </style>
 
 </head>
@@ -533,10 +540,14 @@ h1,h2{max-width:1000px}
 </div>
 
 <header class="hero">
+  <div class="hero-top">
   <div class="wrap content">
     <div class="product-name">ROOT TO RISE</div>
     <div class="kicker">DU WEISST LÄNGST, WAS DU WILLST.</div>
     <h1>DIE FRAGE IST: WARUM STEHST DU DIR DABEI IMMER WIEDER SELBST IM WEG?</h1>
+  </div>
+  </div>
+  <div class="wrap content hero-rest">
 
     <div class="friction">
       <div><b>Du willst mehr Geld verdienen.</b><span>Aber wenn du deinen Preis nennst, wirst du plötzlich unsicher.</span></div>
