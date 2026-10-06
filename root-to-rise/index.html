@@ -700,6 +700,14 @@ footer.site-footer a{color:inherit;margin:0 8px;text-decoration:none}
 
 <style id="checkout-style">.checkout{padding:70px 0;overflow:visible;background:var(--paper)}.checkout .wrap{max-width:900px}</style>
 
+<style id="deal-glow">
+.deal-card{position:relative;border:1px solid #CBAB73;background:linear-gradient(135deg,rgba(226,208,166,.14),rgba(203,171,115,.06));box-shadow:0 0 22px rgba(203,171,115,.40),0 0 60px rgba(203,171,115,.20),inset 0 0 26px rgba(226,208,166,.14);animation:dealGlow 3s ease-in-out infinite}
+.deal-card .price{text-shadow:0 0 18px rgba(226,208,166,.55)}
+.deal-card .timebox strong{text-shadow:0 0 12px rgba(226,208,166,.6)}
+@keyframes dealGlow{0%,100%{box-shadow:0 0 18px rgba(203,171,115,.32),0 0 48px rgba(203,171,115,.14),inset 0 0 22px rgba(226,208,166,.10);border-color:rgba(203,171,115,.85)}50%{box-shadow:0 0 30px rgba(226,208,166,.62),0 0 80px rgba(203,171,115,.32),inset 0 0 34px rgba(226,208,166,.20);border-color:#E2D0A6}}
+@media(prefers-reduced-motion:reduce){.deal-card{animation:none}}
+</style>
+
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
