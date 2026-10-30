@@ -10,8 +10,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="preload" as="image" href="hero-bg-m.webp" media="(max-width:800px)" fetchpriority="high">
-<link rel="preload" as="image" href="hero-bg.webp" media="(min-width:801px)" fetchpriority="high">
+<link rel="preload" as="image" href="sphere-m.webp" media="(max-width:800px)" fetchpriority="high">
+<link rel="preload" as="image" href="sphere.webp" media="(min-width:801px)" fetchpriority="high">
 <title>ROOT TO RISE · FEMINESS</title>
 <meta name="description" content="ROOT TO RISE – 6 Monate live begleitet mit Marina & Vera. Für Frauen, die MEHR vom Leben wollen.">
 <style>
@@ -21,7 +21,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   --gold:#b99658;--gold-soft:#d8c39a;--gold-dark:#8a6a2c;--muted:#6d756f;--line:rgba(16,43,36,.14);
   --shadow:0 24px 70px rgba(18,35,29,.12);
   --ov-light:linear-gradient(180deg,rgba(255,253,248,.76),rgba(255,253,248,.86));
-  --ov-dark:linear-gradient(180deg,rgba(8,26,21,.72),rgba(8,26,21,.84));
+  --ov-dark:linear-gradient(180deg,rgba(8,26,21,.6),rgba(8,26,21,.76));
   --serif:"Instrument Serif",Georgia,serif;--sans:"Manrope",Arial,sans-serif;
 }
 *{box-sizing:border-box}
@@ -57,7 +57,7 @@ a{text-decoration:none}
 
 /* Hero */
 .topline{text-align:center;background:linear-gradient(90deg,#8a6a2c,#d8c39a,#8a6a2c);color:#11271f;padding:13px 16px;font-size:.78rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
-.hero{color:#fff;padding:110px 0 120px;background-image:var(--ov-dark),url("hero-bg.webp");background-size:cover;background-position:center}
+.hero{color:#fff;padding:110px 0 120px;background-image:linear-gradient(90deg,rgba(8,26,21,.82),rgba(8,26,21,.35)),url("sphere.webp");background-size:cover;background-position:center}
 .hero .content{max-width:920px}
 .hero .name{font-family:var(--serif);font-size:clamp(2.2rem,5vw,3.6rem);color:var(--gold-soft);margin:0 0 14px;line-height:1}
 .hero .sub{font-family:var(--serif);font-style:italic;font-size:clamp(1.7rem,3.8vw,2.8rem);color:#E2D0A6;margin-bottom:26px}
@@ -124,7 +124,7 @@ footer.site-footer a{color:inherit;margin:0 8px}
 @media(max-width:800px){
   body{font-size:17px}
   .section{padding:72px 0}
-  .hero{padding:70px 0 80px;background-image:var(--ov-dark),url("hero-bg-m.webp")}
+  .hero{padding:70px 0 80px;background-image:linear-gradient(180deg,rgba(8,26,21,.7),rgba(8,26,21,.5)),url("sphere-m.webp")}
   .scenes,.moments,.timeline{grid-template-columns:1fr}
   .stage{padding:30px 24px}
   .offer-card{padding:28px 22px}
@@ -154,16 +154,8 @@ html{font-synthesis:none}
 .quote.serif-q{padding:0;font-family:var(--serif)!important;font-style:italic!important;line-height:1.25!important;font-size:clamp(1.9rem,4vw,3rem)}
 </style>
 <style id="bg-images">
-.i-woman{--img:url("bg-woman.webp")}.i-moment{--img:url("bg-moment2.webp")}.i-arches{--img:url("bg-arches.webp")}
-.i-root{--img:url("bg-root.webp")}.i-momentum{--img:url("bg-momentum.webp")}.i-imagine{--img:url("bg-imagine.webp")}
-.i-lounge{--img:url("bg-lounge.webp")}.i-compass{--img:url("bg-compass.webp")}.i-pool{--img:url("bg-pool.webp")}
-.i-bring{--img:url("bg-bring.webp")}.i-hero2{--img:url("hero-bg-2.webp")}
-@media(max-width:800px){
-.i-woman{--img:url("bg-woman-m.webp")}.i-moment{--img:url("bg-moment2-m.webp")}.i-arches{--img:url("bg-arches-m.webp")}
-.i-root{--img:url("bg-root-m.webp")}.i-momentum{--img:url("bg-momentum-m.webp")}.i-imagine{--img:url("bg-imagine-m.webp")}
-.i-lounge{--img:url("bg-lounge-m.webp")}.i-compass{--img:url("bg-compass-m.webp")}.i-pool{--img:url("bg-pool-m.webp")}
-.i-bring{--img:url("bg-bring-m.webp")}.i-hero2{--img:url("hero-bg-2-m.webp")}
-}
+.i-sphere{--img:url("sphere.webp")}.i-splash{--img:url("splash.webp");background-position:70% center}
+@media(max-width:800px){.i-sphere{--img:url("sphere-m.webp")}.i-splash{--img:url("splash-m.webp")}}
 </style>
 </head>
 <body>
@@ -185,7 +177,7 @@ html{font-synthesis:none}
   </div></div>
 </header>
 
-<section class="section cream bg bg-light i-woman">
+<section class="section cream">
   <div class="wrap"><div class="narrow center">
     <h2>Du hast nur dieses eine Leben. Wie hot soll es werden?</h2>
     <p class="lead">Nicht nur „lauwarm“. Nicht nur durchorganisiert. Nicht nur für alle anderen.</p>
@@ -211,7 +203,7 @@ html{font-synthesis:none}
   </div>
 </section>
 
-<section class="section dark bg bg-dark i-imagine">
+<section class="section dark bg bg-dark i-splash">
   <div class="wrap"><div class="narrow">
     <h2>Seit wann muss eine Frau ihre Wünsche eigentlich rechtfertigen?</h2>
     <div class="rows">
@@ -225,7 +217,7 @@ html{font-synthesis:none}
   </div></div>
 </section>
 
-<section class="section cream bg bg-light i-arches">
+<section class="section cream">
   <div class="wrap"><div class="narrow">
     <h2>Wir machen SCHLUSS mit „Irgendwann“.</h2>
     <div class="manifest">
@@ -244,7 +236,7 @@ html{font-synthesis:none}
   </div></div>
 </section>
 
-<section class="section dark bg bg-dark i-moment">
+<section class="section dark bg bg-dark i-sphere">
   <div class="wrap">
     <h2>Was wäre, wenn aus „Das wäre schön“ endlich „Ich mach das!“ wird?</h2>
     <div class="moments">
@@ -267,7 +259,7 @@ html{font-synthesis:none}
     <p class="lead">Wir reden nicht sechs Monate darüber, was du irgendwann mal machen könntest.</p>
     <p class="lead">Wir gehen mit dir zu deinem großen Wunsch, zur echten Entscheidung und dann mitten rein ins Leben.</p>
     <div class="timeline">
-      <div class="stage i-root">
+      <div class="stage i-splash">
         <h3>ROOT</h3>
         <span class="pill">Woche 1–9 · Mit Marina</span>
         <p class="lead">Was willst du wirklich und was steht dir noch im Weg?</p>
@@ -276,7 +268,7 @@ html{font-synthesis:none}
         <div class="pillar"><strong>MUT</strong><div class="serif">Die Freiheit, deinen eigenen Weg zu gehen.</div><p>Die Entscheidung treffen, vor der du dich schon ewig drückst. Auch wenn andere den Kopf schütteln und dein Herz bis zum Hals klopft.</p></div>
         <p class="closing">Jede Woche 2 Stunden live.</p>
       </div>
-      <div class="stage i-momentum">
+      <div class="stage i-sphere">
         <h3>RISE</h3>
         <span class="pill">Woche 10–26 · Mit Vera oder Marina</span>
         <p class="lead">Jetzt wird aus deinem Plan dein echtes Leben.</p>
@@ -288,7 +280,7 @@ html{font-synthesis:none}
   </div>
 </section>
 
-<section class="section cream bg bg-light i-pool">
+<section class="section cream">
   <div class="wrap"><div class="narrow center">
     <div class="eyebrow">Woche 9</div>
     <h2>RISE DAY</h2>
@@ -301,7 +293,7 @@ html{font-synthesis:none}
   </div></div>
 </section>
 
-<section class="section dark bg bg-dark i-bring">
+<section class="section dark bg bg-dark i-sphere">
   <div class="wrap"><div class="narrow">
     <h2>Weil dein Leben nicht am Montag nach dem Workshop aufhört.</h2>
     <p class="lead">Du kennst das:</p>
@@ -313,7 +305,7 @@ html{font-synthesis:none}
   </div></div>
 </section>
 
-<section class="section sand bg bg-light i-lounge">
+<section class="section sand">
   <div class="wrap">
     <div class="center">
       <h2>ROOT TO RISE</h2>
@@ -334,7 +326,7 @@ html{font-synthesis:none}
   </div>
 </section>
 
-<section class="section dark bg bg-dark i-compass">
+<section class="section dark bg bg-dark i-splash">
   <div class="wrap"><div class="narrow center">
     <h2>Du musst nicht am Tiefpunkt sein, um mehr vom Leben zu wollen.</h2>
     <p class="lead">Angestellt oder selbstständig.</p>
@@ -356,7 +348,7 @@ html{font-synthesis:none}
   </div></div>
 </section>
 
-<section class="section dark bg bg-dark i-hero2" id="kontakt">
+<section class="section dark bg bg-dark i-sphere" id="kontakt">
   <div class="wrap"><div class="narrow center">
     <div class="eyebrow">Wann geht es los?</div>
     <h2>Irgendwann ist kein Datum.</h2>
@@ -385,7 +377,7 @@ html{font-synthesis:none}
   </div></div>
 </section>
 
-<section class="section dark bg bg-dark i-woman">
+<section class="section dark bg bg-dark i-splash">
   <div class="wrap"><div class="narrow center">
     <div class="eyebrow">Ein letzter Gedanke</div>
     <h2>Du wirst nicht jünger. Deine Wünsche übrigens auch nicht.</h2>
