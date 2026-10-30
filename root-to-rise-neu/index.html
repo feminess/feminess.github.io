@@ -152,8 +152,11 @@ html{font-synthesis:none}
 .hero .sub{display:block;font-size:clamp(2.4rem,5.4vw,4rem);line-height:2.3;padding:.4em .9em .4em .5em;margin-bottom:10px;width:fit-content;max-width:100%}
 .quote{font-size:clamp(2.1rem,4.6vw,3.3rem);line-height:2.2;padding:.5em .8em;margin:10px auto;width:fit-content;max-width:100%}
 .script-line{font-size:clamp(2rem,4vw,3.1rem)!important;line-height:2.1!important;padding:.5em 1.05em;margin:10px auto 0!important;width:fit-content;max-width:100%;text-wrap:balance}
-@media(max-width:800px){.hero .sub{font-size:2.05rem;padding:.4em .9em .4em .5em;line-height:2.2}.quote{font-size:1.9rem;padding:.5em .7em}.script-line{font-size:min(1.75rem,7.2vw)!important;padding:.5em 1.05em}
-.script-line.sl-nw{font-size:min(1.75rem,calc((100vw - 44px)/15))!important}}
+@media(max-width:800px){.hero .sub{font-size:2.05rem;padding:.4em .9em .4em .5em;line-height:2.2}
+.quote:not(.serif-q),.script-line{width:auto;max-width:none;margin-left:-21px;margin-right:-21px}
+.quote{font-size:1.9rem;padding:.5em .6em}
+.script-line{font-size:min(1.75rem,7.4vw)!important;padding:.5em 1em}
+.script-line.sl-nw{font-size:min(1.75rem,calc(100vw/14.6))!important}}
 .quote.serif-q{padding:0;font-family:var(--serif)!important;font-style:normal!important;line-height:1.25!important;font-size:clamp(1.9rem,4vw,3rem)}
 </style>
 <style id="bg-images">
