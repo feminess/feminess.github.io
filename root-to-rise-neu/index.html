@@ -160,7 +160,12 @@ html{font-synthesis:none}
 .i-marina{--img:url("marina-sunset.webp");background-position:100% center;background-size:150% auto}
 .i-silk{--img:url("silk.webp");background-position:center}
 .i-riseday{--img:url("risedaysil.webp");background-position:100% center;background-size:165% auto}
-.i-riseday.bg-dark{background-image:linear-gradient(180deg,rgba(8,26,21,.35),rgba(8,26,21,.5)),var(--img)}
+.i-riseday.bg-dark{background-image:linear-gradient(180deg,rgba(8,26,21,.55),rgba(8,26,21,.7)),var(--img)}
+@media(min-width:801px){
+.i-riseday.bg-dark{background-image:linear-gradient(90deg,rgba(8,26,21,.1) 0%,rgba(8,26,21,.35) 38%,rgba(8,26,21,.82) 62%,rgba(8,26,21,.88) 100%),var(--img)}
+.i-riseday .narrow{width:46%;margin-left:auto;margin-right:0;text-align:left}
+.i-riseday .script-line{padding-left:0;padding-right:0}
+}
 .i-marble{--img:url("marble-wide.webp");background-position:center}
 .i-cliffsun{--img:url("cliffsun.webp");background-position:100% center;background-size:165% auto}
 .manifest .last{background-image:linear-gradient(90deg,#6b4f1d,#8a6a3a 50%,#6b4f1d)}
