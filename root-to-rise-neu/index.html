@@ -1,0 +1,1401 @@
+<!doctype html>
+<html lang="de">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NQMQT7QH');</script>
+<!-- End Google Tag Manager -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preload" as="image" href="hero-bg-m.webp" media="(max-width:800px)" fetchpriority="high">
+<link rel="preload" as="image" href="hero-bg.webp" media="(min-width:801px)" fetchpriority="high">
+<title>ROOT TO RISE · FEMINESS</title>
+<meta name="description" content="ROOT TO RISE – 7 Wochen persönliche Live-Begleitung mit Marina & Vera. Root. Identity. Momentum.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital,wght@0,400;1,400&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root{
+  --forest:#102b24;
+  --forest-2:#17382f;
+  --ink:#15211d;
+  --cream:#f5efe5;
+  --paper:#fffdf8;
+  --gold:#b99658;
+  --gold-soft:#d8c39a;
+  --muted:#6d756f;
+  --line:rgba(16,43,36,.14);
+  --shadow:0 24px 70px rgba(18,35,29,.12);
+  --serif:"Instrument Serif", Georgia, serif;
+  --sans:"Manrope", Arial, sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:18px;line-height:1.7}
+h1,h2,h3,p{margin-top:0}
+h1,h2,h3{font-family:var(--serif);line-height:1.05;letter-spacing:-.025em}
+h1{font-size:clamp(3rem,7vw,6.7rem)}
+h2{font-size:clamp(2.25rem,5vw,4.6rem)}
+h3{font-size:clamp(1.45rem,3vw,2.3rem)}
+a{text-decoration:none}
+.wrap{width:min(1120px,calc(100% - 42px));margin:auto}
+.narrow{width:min(790px,calc(100% - 42px));margin:auto}
+.eyebrow{font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--gold)}
+.kicker{font-family:var(--serif);font-style:italic;font-size:clamp(1.2rem,2.4vw,1.65rem);color:var(--gold)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:58px;padding:0 28px;border-radius:999px;background:var(--gold);color:#11271f;font-weight:800;letter-spacing:.04em;text-transform:uppercase;box-shadow:0 12px 28px rgba(203,171,115,.24);transition:.2s}
+.btn:hover{transform:translateY(-2px);filter:brightness(1.04)}
+.topbar{position:sticky;top:0;z-index:50;background:#0c241d;color:#fff;border-bottom:1px solid rgba(255,255,255,.12)}
+.topbar .inner{min-height:48px;display:flex;gap:18px;align-items:center;justify-content:center;font-size:.78rem;text-transform:uppercase;letter-spacing:.1em}
+.topbar strong{color:#E2D0A6}.topbar .mini-count{font-variant-numeric:tabular-nums;font-weight:800}
+.hero{background:
+ radial-gradient(circle at 82% 12%,rgba(203,171,115,.17),transparent 26rem),
+ linear-gradient(145deg,#0c241d,#17372e 70%,#102b24);
+ color:#fff;padding:86px 0 92px;position:relative;overflow:hidden}
+.hero:after{content:"ROOT";position:absolute;right:-.04em;bottom:-.25em;font:700 clamp(8rem,22vw,22rem)/1 var(--serif);color:rgba(255,255,255,.025);pointer-events:none}
+.hero .content{max-width:920px;position:relative;z-index:1}
+.hero h1{max-width:980px;margin:10px 0 28px}
+.hero .lead{max-width:750px;font-size:clamp(1.06rem,2vw,1.28rem);color:rgba(255,255,255,.83)}
+.hero .friction{margin:34px 0;display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.12)}
+.hero .friction div{padding:18px 20px;background:rgba(255,255,255,.035)}
+.hero .friction b{display:block;color:#fff}.hero .friction span{color:#d8d9d5}
+.hero .statement{font-family:var(--serif);font-style:italic;color:#E2D0A6;font-size:clamp(1.35rem,3vw,2rem);max-width:750px;margin:30px 0}
+.hero .product{margin-top:38px;display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+.hero .product-name{font:700 clamp(2rem,4vw,3.5rem)/1 var(--serif)}
+.hero .product-meta{color:#e6d8bd}
+.deal-card{margin-top:42px;padding:24px;border:1px solid rgba(226,208,166,.4);background:rgba(255,255,255,.06);backdrop-filter:blur(8px);display:flex;gap:24px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.price{font:700 2.2rem/1 var(--serif);color:#E2D0A6}.countdown{display:flex;gap:8px}
+.timebox{min-width:64px;padding:8px;text-align:center;border-left:1px solid rgba(255,255,255,.15)}
+.timebox strong{display:block;font-size:1.2rem}.timebox small{font-size:.58rem;text-transform:uppercase;letter-spacing:.1em;color:#bfc8c4}
+.logo-strip{padding:28px 0;border-bottom:1px solid var(--line);text-align:center;color:var(--muted)}
+.logo-strip .logos{display:flex;justify-content:center;gap:28px;flex-wrap:wrap;margin-top:12px;opacity:.55;font-weight:700;letter-spacing:.08em}
+.logo-strip{overflow:hidden}.press-row{margin-top:16px;overflow:hidden;-webkit-mask-image:linear-gradient(to right,transparent,black 8%,black 92%,transparent);mask-image:linear-gradient(to right,transparent,black 8%,black 92%,transparent)}.press-track{display:flex;align-items:center;gap:56px;width:max-content;animation:ps 22s linear infinite}.press-track img{height:40px;width:auto;flex-shrink:0;filter:grayscale(1) contrast(1.1);mix-blend-mode:multiply;opacity:.85}@keyframes ps{to{transform:translateX(-50%)}}
+section{padding:92px 0}
+.section-intro{max-width:820px;margin-bottom:44px}
+.section-intro h2{margin-bottom:22px}
+.patterns{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.pattern{padding:24px 26px;border:1px solid var(--line);background:#fff}
+.pattern .know{font-weight:700}.pattern .but{color:var(--muted);margin-top:6px}
+.aha{margin-top:42px;padding:38px 42px;background:var(--forest);color:#fff;box-shadow:var(--shadow)}
+.aha h2{margin:0;color:#fff}.aha .kicker{margin-bottom:8px}
+.desire{background:var(--cream)}
+.desire-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:start}
+.desire-list{display:grid;gap:12px}
+.desire-item{padding:17px 0;border-bottom:1px solid rgba(16,43,36,.15)}
+.desire-item b{font-family:var(--serif);font-size:1.25rem}
+.pullquote{font:600 italic clamp(1.8rem,4vw,3.4rem)/1.15 var(--serif);color:var(--forest);margin:34px 0}
+.method{background:var(--forest);color:#f7f3ea}
+.method .section-intro{margin-bottom:60px}.method h2,.method h3{color:#fff}
+.method-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.phase{border:1px solid rgba(255,255,255,.14);padding:34px 30px;background:rgba(255,255,255,.035);position:relative}
+.phase .num{font:700 4.5rem/1 var(--serif);color:rgba(226,208,166,.16);position:absolute;right:18px;top:14px}
+.phase .eyebrow{margin-bottom:25px}.phase p{color:#d7ded9}
+.phase .impact{font-family:var(--serif);font-weight:700;font-size:1.35rem;color:#E2D0A6;margin-top:22px}
+.identity-quote{margin-top:50px;text-align:center;padding:35px;border-top:1px solid rgba(255,255,255,.15);border-bottom:1px solid rgba(255,255,255,.15);font:600 clamp(1.8rem,4vw,3.2rem)/1.15 var(--serif);color:#fff}
+.live{background:#fff}
+.live-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:70px}
+.bring{display:grid;gap:10px}
+.bring div{padding:15px 18px;background:var(--cream);border-left:3px solid var(--gold)}
+.bring b{color:var(--forest)}
+.editorial-callout{margin:60px 0 0;background:var(--forest);color:#fff;padding:52px;text-align:center}
+.editorial-callout h2{margin:0 auto 15px;max-width:850px}.editorial-callout p{max-width:700px;margin:0 auto;color:#d5ddd8}
+.included{background:linear-gradient(#f7f2e9,#fff)}
+.included-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.included-card{padding:28px;border:1px solid var(--line);background:#fff;min-height:180px}
+.included-card h3{font-size:1.35rem;margin-bottom:10px}.included-card p{font-size:.94rem;color:var(--muted)}
+.forwho{padding-top:40px}
+.forwho-box{border:1px solid var(--line);padding:50px;background:#fff}
+.more{display:flex;gap:9px;flex-wrap:wrap;margin:28px 0}
+.more span{padding:9px 14px;border:1px solid var(--gold-soft);border-radius:999px;font-weight:700}
+.proof{background:var(--cream)}
+.quotes{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.quote{padding:30px;background:#fff;border:1px solid var(--line)}
+.quote p{font-family:var(--serif);font-size:1.3rem;line-height:1.45}.quote strong{font-size:.85rem;letter-spacing:.08em;text-transform:uppercase}
+.quote.featured{grid-column:span 2;background:var(--forest);color:#fff}
+.mentors{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.mentor{padding:34px;border:1px solid var(--line);background:#fff}
+.mentor h3{margin-bottom:6px}.mentor .role{color:var(--gold);font-weight:700;margin-bottom:18px}
+.mentor p{color:#4e5b55}
+.business{background:#111f1b;color:#fff}
+.business h2{color:#fff}.business .copy{max-width:780px}
+.business .reasons{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:32px}
+.business .reasons div{padding:17px;border:1px solid rgba(255,255,255,.13);color:#dce2df}
+.offer{padding:100px 0;background:
+ radial-gradient(circle at 20% 0,rgba(203,171,115,.15),transparent 25rem),
+ var(--paper)}
+.offer-card{max-width:900px;margin:auto;border:1px solid var(--gold-soft);padding:58px;text-align:center;box-shadow:var(--shadow);background:#fff}
+.offer-card .price-big{font:700 clamp(3.5rem,8vw,6.5rem)/1 var(--serif);color:var(--forest);margin:22px 0}
+.offer-list{display:flex;justify-content:center;gap:10px 18px;flex-wrap:wrap;color:var(--muted);margin:28px 0 34px}
+.wait{padding:85px 0;background:var(--cream)}
+.wait .narrow{font-size:1.08rem}.wait h2{margin-bottom:28px}
+.closed{background:var(--forest);color:#fff;padding:84px 0;text-align:center}
+.closed h2{color:#fff}.closed .date{font:600 italic 1.5rem var(--serif);color:#e5cb95}
+.big-count{display:flex;justify-content:center;gap:12px;margin:35px auto;flex-wrap:wrap}
+.big-count .timebox{min-width:105px;border:1px solid rgba(255,255,255,.16);padding:18px}
+.big-count .timebox strong{font-size:2rem}
+.final{padding:105px 0;text-align:center}
+.final h2{max-width:900px;margin:0 auto 22px}.final .lines{max-width:620px;margin:35px auto;text-align:left}
+.final .lines p{padding:9px 0;border-bottom:1px solid var(--line);margin:0}
+.final .last{font:600 italic clamp(1.5rem,3vw,2.2rem)/1.3 var(--serif);color:var(--forest);max-width:800px;margin:35px auto}
+.mobile-cta{display:none}
+@media(max-width:800px){
+ body{font-size:16px}
+ .wrap,.narrow{width:min(100% - 30px,1120px)}
+ section{padding:66px 0}
+ .topbar .inner{justify-content:space-between;padding:0 14px}.topbar .deal-label{display:none}
+ .hero{padding:64px 0 72px}.hero .friction,.patterns,.method-grid,.included-grid,.quotes,.mentors,.business .reasons{grid-template-columns:1fr}
+ .desire-grid,.live-grid{grid-template-columns:1fr;gap:38px}
+ .quote.featured{grid-column:auto}
+ .deal-card{align-items:flex-start}.countdown{width:100%;justify-content:space-between}.timebox{min-width:auto;flex:1}
+ .offer-card,.forwho-box{padding:34px 22px}
+ .editorial-callout{padding:38px 22px}
+ .big-count .timebox{min-width:72px}
+ .mobile-cta{display:block;position:fixed;z-index:40;left:14px;right:14px;bottom:12px}
+ .mobile-cta .btn{width:100%;box-shadow:0 10px 35px rgba(0,0,0,.25)}
+ body{padding-bottom:78px}
+}
+</style>
+
+<style id="feminess-editorial-v2">
+:root{
+  --forest:#09251d;
+  --forest-2:#14362b;
+  --cream:#f3ecdf;
+  --paper:#fbf8f1;
+  --gold:#b99555;
+  --gold-soft:#dbc59a;
+  --ink:#12231d;
+}
+body{background:
+  linear-gradient(90deg,rgba(9,37,29,.028) 1px,transparent 1px) 0 0/86px 86px,
+  var(--paper);}
+section{position:relative;overflow:hidden}
+section:nth-of-type(odd):not(.method):not(.business):not(.closed):before{
+  content:"";position:absolute;width:1px;height:120px;background:var(--gold);
+  left:max(22px,calc((100vw - 1120px)/2 - 34px));top:0;opacity:.55
+}
+.eyebrow{position:relative;display:inline-block;padding-left:34px}
+.eyebrow:before{content:"";position:absolute;left:0;top:50%;width:22px;height:1px;background:currentColor}
+h1,h2{max-width:1000px}
+.hero{min-height:92vh;display:flex;align-items:center;padding:110px 0 100px}
+.hero:before{content:"R / R";position:absolute;left:4vw;top:90px;
+ font:600 12px/1 var(--sans);letter-spacing:.35em;color:rgba(255,255,255,.38)}
+.hero .content:before{content:"01";position:absolute;right:0;top:-35px;
+ font:600 11px/1 var(--sans);letter-spacing:.2em;color:var(--gold-soft)}
+.hero h1{font-size:clamp(2.56rem,6.08vw,5.84rem);max-width:1040px}
+.hero .statement{max-width:860px;border-left:1px solid var(--gold);padding-left:24px}
+.hero .friction{max-width:940px;transform:translateX(6vw);margin-top:48px}
+.hero .friction div:nth-child(2),.hero .friction div:nth-child(3){background:rgba(203,171,115,.06)}
+.deal-card{max-width:930px;margin-left:auto;margin-right:-4vw;border-radius:0}
+.logo-strip{background:#fff}
+.patterns{grid-template-columns:repeat(12,1fr);gap:14px;align-items:start}
+.pattern{grid-column:span 6;min-height:155px;position:relative;padding:31px}
+.pattern:nth-child(2){margin-top:48px}
+.pattern:nth-child(3){grid-column:2/span 6;margin-top:-8px}
+.pattern:nth-child(4){grid-column:7/span 6;margin-top:42px}
+.pattern:nth-child(5){grid-column:3/span 7;margin-top:0}
+.pattern:after{content:"";position:absolute;right:20px;bottom:18px;width:30px;height:1px;background:var(--gold)}
+.aha{width:min(980px,92%);margin:76px 0 0 auto;padding:58px 64px;position:relative}
+.aha:before{content:"AHA";position:absolute;right:25px;top:18px;font:700 10px/1 var(--sans);letter-spacing:.3em;color:var(--gold)}
+.aha h2{font-size:clamp(3rem,7vw,6.6rem)}
+.desire{padding-top:120px}
+.desire:after{content:"DESIRE";position:absolute;right:-.05em;top:.05em;
+ font:700 clamp(6rem,16vw,15rem)/1 var(--serif);color:rgba(9,37,29,.035)}
+.desire-grid{grid-template-columns:1.05fr .95fr;position:relative;z-index:1}
+.desire-list{margin-top:70px}
+.desire-item{font-size:1.04rem;padding:20px 4px}
+.desire-item:nth-child(odd){transform:translateX(-24px)}
+.desire-item b{display:block;font-size:1.65rem;color:var(--forest)}
+.method{padding:125px 0}
+.method:after{content:"R → I → M";position:absolute;right:-1vw;bottom:-.18em;
+ font:700 clamp(5rem,15vw,13rem)/1 var(--serif);color:rgba(255,255,255,.025)}
+.method-grid{gap:0;border-top:1px solid rgba(255,255,255,.16);border-bottom:1px solid rgba(255,255,255,.16)}
+.phase{border:0;border-right:1px solid rgba(255,255,255,.16);padding:52px 36px 46px;background:transparent;min-height:610px}
+.phase:last-child{border-right:0}
+.phase:nth-child(2){transform:translateY(38px);background:rgba(255,255,255,.035)}
+.phase .num{font-size:7rem;top:10px}
+.identity-quote{margin-top:100px;border:0;text-align:left;max-width:930px;padding:0 0 0 80px;position:relative}
+.identity-quote:before{content:"“";position:absolute;left:0;top:-28px;font:700 8rem/1 var(--serif);color:var(--gold)}
+.live{padding-top:125px}
+.live-grid{grid-template-columns:.8fr 1.2fr}
+.bring{position:relative}
+.bring div{background:transparent;border:0;border-bottom:1px solid var(--line);padding:21px 4px 21px 46px;position:relative}
+.bring div:before{content:"↳";position:absolute;left:4px;color:var(--gold);font-size:1.35rem}
+.editorial-callout{margin-top:100px;max-width:1040px;margin-left:auto;margin-right:0;text-align:left;padding:70px 74px}
+.editorial-callout h2{margin-left:0;font-size:clamp(2.8rem,6vw,5.6rem)}
+.included{padding-top:120px}
+.included-grid{grid-template-columns:repeat(12,1fr);gap:12px}
+.included-card{grid-column:span 4;min-height:230px;padding:34px 30px;display:flex;flex-direction:column;justify-content:flex-end;position:relative}
+.included-card:nth-child(2),.included-card:nth-child(5){transform:translateY(34px)}
+.included-card:before{content:"+";position:absolute;left:28px;top:20px;font:400 2rem/1 var(--serif);color:var(--gold)}
+.forwho{padding:140px 0 110px}
+.forwho-box{max-width:1000px;margin-left:auto;border:0;border-left:1px solid var(--gold);padding:30px 0 30px 70px;background:transparent}
+.forwho-box h2{font-size:clamp(2.7rem,5.8vw,5.5rem)}
+.more span{border-radius:0;border:0;border-bottom:1px solid var(--gold);padding:9px 3px;margin-right:18px}
+.proof{padding:120px 0}
+.quotes{grid-template-columns:repeat(12,1fr);gap:18px}
+.quote{grid-column:span 5;padding:38px}
+.quote:nth-child(2){grid-column:7/span 6;margin-top:60px}
+.quote.featured{grid-column:2/span 9;margin-top:22px;padding:58px}
+.quote:last-child{grid-column:8/span 5;margin-top:20px}
+.quote p:before{content:"“";display:block;font:700 4rem/1 var(--serif);color:var(--gold);height:35px}
+.mentors{gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.mentor{border:0;padding:50px}
+.mentor:first-child{border-right:1px solid var(--line)}
+.business{padding:125px 0}
+.business .copy{margin-left:10vw}
+.business .reasons{max-width:900px;margin-left:auto;margin-top:55px;gap:0}
+.business .reasons div{padding:26px;border:0;border-top:1px solid rgba(255,255,255,.16)}
+.offer{padding:135px 0}
+.offer-card{border:0;box-shadow:none;background:transparent;position:relative;padding:70px}
+.offer-card:before,.offer-card:after{content:"";position:absolute;width:95px;height:95px}
+.offer-card:before{left:0;top:0;border-left:1px solid var(--gold);border-top:1px solid var(--gold)}
+.offer-card:after{right:0;bottom:0;border-right:1px solid var(--gold);border-bottom:1px solid var(--gold)}
+.offer-card h2{font-size:clamp(4rem,10vw,8.5rem);margin:auto}
+.offer-card .price-big{font-size:clamp(5rem,12vw,9rem)}
+.wait{padding:120px 0}
+.wait .narrow{position:relative}
+.wait .narrow:before{content:"WAIT?";position:absolute;left:-18vw;top:0;
+ font:700 clamp(6rem,12vw,10rem)/1 var(--serif);color:rgba(9,37,29,.04)}
+.closed{padding:115px 0}
+.closed h2{font-size:clamp(3.4rem,8vw,7rem);margin-left:auto;margin-right:auto}
+.big-count{gap:0}
+.big-count .timebox{border:0;border-left:1px solid rgba(255,255,255,.18);min-width:130px}
+.big-count .timebox:last-child{border-right:1px solid rgba(255,255,255,.18)}
+.final{padding:140px 0}
+.final h2:first-of-type{font-size:clamp(3rem,6vw,5.7rem)}
+.final .lines{border-left:1px solid var(--gold);padding-left:34px}
+.final .lines p{border:0;font-family:var(--serif);font-size:1.25rem}
+.final h2:nth-of-type(2){font-size:clamp(4.5rem,12vw,9rem);margin-top:70px}
+@media(max-width:800px){
+ .hero{min-height:auto;padding-top:78px}
+ .hero .friction{transform:none}
+ .deal-card{margin-right:0}
+ .patterns,.included-grid,.quotes{display:grid;grid-template-columns:1fr}
+ .pattern,.pattern:nth-child(n),.included-card,.included-card:nth-child(n),.quote,.quote:nth-child(n),.quote.featured,.quote:last-child{
+   grid-column:auto;margin-top:0;transform:none
+ }
+ .aha{width:100%;padding:38px 24px}
+ .desire-item:nth-child(odd){transform:none}
+ .method-grid{display:block;border:0}
+ .phase,.phase:nth-child(2){min-height:0;transform:none;border:0;border-top:1px solid rgba(255,255,255,.16);padding:42px 10px}
+ .identity-quote{padding-left:45px;margin-top:60px}
+ .editorial-callout{padding:44px 24px}
+ .forwho-box{padding:20px 0 20px 25px}
+ .mentors{display:block}.mentor:first-child{border-right:0;border-bottom:1px solid var(--line)}
+ .business .copy{margin-left:0}
+ .offer-card{padding:48px 15px}
+ .big-count .timebox{min-width:0}
+}
+</style>
+
+
+<style id="feminess-mobile-premium-v3">
+/* Mobile-first refinement: same copy, stronger hierarchy, less card-template feel */
+@media (max-width: 800px){
+  html{scroll-padding-top:54px}
+  body{
+    font-size:16px; line-height:1.62; overflow-x:hidden;
+    background:var(--paper);
+  }
+  .wrap,.narrow{width:calc(100% - 34px);max-width:none}
+  section{padding:72px 0}
+  section:nth-of-type(odd):not(.method):not(.business):not(.closed):before{display:none}
+  h1,h2,h3{letter-spacing:-.035em}
+  h1{font-size:clamp(3rem,14vw,4.65rem);line-height:.94}
+  h2{font-size:clamp(2.35rem,11vw,3.65rem);line-height:.98}
+  h3{font-size:1.65rem;line-height:1.08}
+  p{margin-bottom:1.15em}
+  .eyebrow{font-size:.68rem;letter-spacing:.17em;padding-left:28px}
+  .eyebrow:before{width:17px}
+  .kicker{font-size:1.25rem;line-height:1.35}
+  .btn{width:100%;min-height:58px;padding:0 18px;font-size:.78rem}
+
+  /* Topbar */
+  .topbar .inner{min-height:45px;padding:0 2px;gap:10px;font-size:.64rem}
+  .topbar .mini-count{white-space:nowrap}
+
+  /* Hero = campaign cover, not stacked cards */
+  .hero{min-height:auto;padding:68px 0 58px}
+  .hero:before{left:17px;top:68px;font-size:9px}
+  .hero:after{font-size:42vw;right:-.22em;bottom:.03em}
+  .hero .content:before{right:2px;top:-15px}
+  .hero .kicker{margin-top:20px;max-width:260px}
+  .hero h1{margin:12px 0 34px;max-width:96%}
+  .hero .friction{
+    display:block;margin:34px 0 30px;transform:none;
+    border:0;background:transparent;
+  }
+  .hero .friction div{
+    padding:17px 0 18px;background:transparent!important;
+    border-top:1px solid rgba(255,255,255,.16)
+  }
+  .hero .friction div:last-child{border-bottom:1px solid rgba(255,255,255,.16)}
+  .hero .friction b{font-family:var(--serif);font-size:1.22rem;line-height:1.15;margin-bottom:5px}
+  .hero .friction span{font-size:.93rem;line-height:1.45}
+  .hero .statement{
+    font-size:1.45rem;line-height:1.2;padding-left:18px;margin:29px 0
+  }
+  .hero .lead{font-size:1rem;line-height:1.62}
+  .hero .product{display:block;margin-top:38px}
+  .hero .product-name{font-size:2.75rem}
+  .hero .product-meta{margin:9px 0 22px;font-size:.91rem;line-height:1.5}
+  .deal-card{
+    margin:32px 0 0;padding:20px 17px;display:block;
+    border-top:1px solid rgba(226,208,166,.4);border-bottom:1px solid rgba(226,208,166,.4);
+    border-left:0;border-right:0;background:transparent;backdrop-filter:none
+  }
+  .deal-card .price{font-size:1.8rem;margin:3px 0 18px}
+  .countdown{gap:0;border-top:1px solid rgba(255,255,255,.12)}
+  .timebox{padding:12px 4px;border-left:0;border-right:1px solid rgba(255,255,255,.12)}
+  .timebox:last-child{border-right:0}
+  .logo-strip{padding:23px 0}
+  .logo-strip .logos{gap:17px;font-size:.72rem}
+
+  /* Recognition */
+  .section-intro{margin-bottom:32px}
+  .patterns{display:block}
+  .pattern,.pattern:nth-child(n){
+    min-height:0;margin:0;padding:23px 4px 24px;
+    border:0;border-top:1px solid var(--line);background:transparent
+  }
+  .pattern:last-child{border-bottom:1px solid var(--line)}
+  .pattern:after{display:none}
+  .pattern .know{font-family:var(--serif);font-size:1.2rem;line-height:1.25}
+  .pattern .but{font-size:.93rem;line-height:1.48}
+  .aha{
+    width:calc(100% + 17px);margin:48px -17px 0 0;
+    padding:42px 24px 44px 25px;box-shadow:none
+  }
+  .aha h2{font-size:3.15rem;line-height:.92;margin-top:8px}
+  .aha:before{right:17px;top:15px}
+
+  /* Desire = elegant list */
+  .desire{padding:78px 0 72px}
+  .desire:after{font-size:31vw;right:-.15em;top:.03em}
+  .desire-grid{display:block}
+  .desire-grid h2{max-width:95%}
+  .desire-list{margin-top:38px}
+  .desire-item,.desire-item:nth-child(odd){
+    transform:none;padding:17px 0;font-size:.92rem
+  }
+  .desire-item b{font-size:1.48rem;margin-top:2px}
+  .pullquote{font-size:1.8rem;line-height:1.18;margin:30px 0}
+  .desire .narrow{padding-top:42px!important}
+  .desire .narrow h2{font-size:2.7rem}
+
+  /* Framework = 3 editorial chapters */
+  .method{padding:82px 0 90px}
+  .method:after{font-size:30vw;bottom:-.03em}
+  .method .section-intro{margin-bottom:36px}
+  .method-grid{display:block;border-top:1px solid rgba(255,255,255,.17)}
+  .phase,.phase:nth-child(2){
+    position:relative;min-height:0;transform:none;background:transparent;
+    padding:48px 2px 46px;border:0;border-bottom:1px solid rgba(255,255,255,.17)
+  }
+  .phase .num{font-size:5.7rem;right:0;top:26px}
+  .phase h3{max-width:86%;font-size:2rem}
+  .phase p{font-size:.96rem}
+  .phase .impact{font-size:1.45rem;line-height:1.2}
+  .identity-quote{
+    margin-top:65px;padding:0 0 0 44px;font-size:1.95rem;line-height:1.08
+  }
+  .identity-quote:before{font-size:5.5rem;top:-17px}
+
+  /* Live room */
+  .live{padding:82px 0}
+  .live-grid{display:block}
+  .live h2{font-size:3.5rem}
+  .bring{margin-top:36px}
+  .bring div{padding:18px 0 18px 34px;font-size:.94rem}
+  .bring div:before{left:0}
+  .editorial-callout{
+    width:calc(100% - 17px);margin:64px 0 0 auto;padding:43px 24px 45px;
+    text-align:left
+  }
+  .editorial-callout h2{font-size:2.75rem;line-height:.96}
+  .live > .narrow{padding-top:42px!important}
+
+  /* Included = numbered editorial index instead of cards */
+  .included{padding:82px 0 95px}
+  .included-grid{display:block}
+  .included-card,.included-card:nth-child(n){
+    min-height:0;transform:none;margin:0;padding:25px 0 25px 42px;
+    border:0;border-top:1px solid var(--line);background:transparent
+  }
+  .included-card:last-child{border-bottom:1px solid var(--line)}
+  .included-card:before{left:0;top:22px;font-size:1.65rem}
+  .included-card h3{font-size:1.35rem}
+  .included-card p{margin:0;font-size:.91rem}
+
+  /* Qualification */
+  .forwho{padding:90px 0}
+  .forwho-box{
+    margin:0;padding:8px 0 8px 23px;border:0;border-left:1px solid var(--gold);background:transparent
+  }
+  .forwho-box h2{font-size:2.75rem;line-height:.98}
+  .more{display:block;margin:28px 0}
+  .more span{
+    display:block;margin:0;padding:11px 0;border:0;border-bottom:1px solid var(--gold-soft);
+    font-family:var(--serif);font-size:1.25rem
+  }
+
+  /* Proof = magazine quotes */
+  .proof{padding:88px 0}
+  .quotes{display:block}
+  .quote,.quote:nth-child(n),.quote.featured,.quote:last-child{
+    margin:0 0 18px;padding:30px 24px;transform:none;border:0;border-left:1px solid var(--gold)
+  }
+  .quote.featured{background:var(--forest);padding:39px 27px;border-left:0}
+  .quote p{font-size:1.2rem}
+  .quote p:before{font-size:3.4rem;height:28px}
+
+  /* Mentors */
+  .mentors{display:block;border:0}
+  .mentor{padding:34px 0;border:0;border-top:1px solid var(--line)}
+  .mentor:first-child{border-right:0}
+  .mentor:last-child{border-bottom:1px solid var(--line)}
+  .mentor h3{font-size:1.8rem}
+  .mentor p{font-size:.94rem}
+  section .narrow[style*="text-align:center"]{text-align:left!important}
+
+  /* Business boundary */
+  .business{padding:88px 0}
+  .business .copy{margin:0}
+  .business h2{font-size:3rem}
+  .business .reasons{display:block;margin:38px 0 0}
+  .business .reasons div{padding:19px 0;font-size:.94rem}
+
+  /* Offer = luxury object */
+  .offer{padding:90px 0}
+  .offer-card{padding:48px 18px 52px;text-align:center}
+  .offer-card:before,.offer-card:after{width:58px;height:58px}
+  .offer-card h2{font-size:3.65rem}
+  .offer-card .price-big{font-size:5.3rem;margin:28px 0 7px}
+  .offer-list{display:block;margin:29px 0}
+  .offer-list span{display:block;padding:8px 0;border-bottom:1px solid var(--line)}
+
+  /* Decision */
+  .wait{padding:88px 0}
+  .wait .narrow:before{left:-.1em;top:-.22em;font-size:27vw}
+  .wait h2{position:relative}
+  .wait .pullquote{font-size:1.85rem}
+
+  /* Closed */
+  .closed{padding:90px 0 100px}
+  .closed h2{font-size:3.45rem}
+  .closed .date{font-size:1.25rem}
+  .big-count{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:30px 0}
+  .big-count .timebox,.big-count .timebox:last-child{
+    min-width:0;padding:14px 2px;border:0;border-left:1px solid rgba(255,255,255,.18)
+  }
+  .big-count .timebox:last-child{border-right:1px solid rgba(255,255,255,.18)}
+  .big-count .timebox strong{font-size:1.55rem}
+
+  /* Finale */
+  .final{padding:95px 0 105px;text-align:left}
+  .final h2:first-of-type{font-size:3rem}
+  .final .kicker{text-align:left}
+  .final .lines{margin:34px 0;padding-left:22px}
+  .final .lines p{font-size:1.08rem;line-height:1.35;padding:7px 0}
+  .final h2:nth-of-type(2){font-size:4rem;margin:55px 0 20px;text-align:center}
+  .final .last{text-align:center;font-size:1.55rem}
+  .final .btn{margin-top:10px}
+
+  /* Mobile sticky CTA */
+  .mobile-cta{left:10px;right:10px;bottom:10px}
+  .mobile-cta .btn{min-height:56px;border:1px solid rgba(255,255,255,.22)}
+}
+@media (max-width: 380px){
+  h1{font-size:2.85rem}
+  h2{font-size:2.25rem}
+  .hero .product-name{font-size:2.4rem}
+  .aha h2{font-size:2.75rem}
+  .editorial-callout h2,.forwho-box h2,.business h2{font-size:2.45rem}
+  .closed h2{font-size:3rem}
+}
+</style>
+
+
+<style id="feminess-clean-microcopy">
+.hero:before,
+.hero .content:before,
+.aha:before,
+.wait .narrow:before{content:none!important;display:none!important}
+</style>
+
+<style id="hero-bg-image">
+.hero{display:block;min-height:0;padding:0}
+.hero-top{background:
+ linear-gradient(180deg,rgba(8,26,21,.78),rgba(8,26,21,.88)),
+ url("hero-bg.webp") center/cover no-repeat;
+ min-height:62vh;display:flex;align-items:center;padding:130px 0 100px;position:relative;z-index:1}
+.hero-rest{position:relative;z-index:1;padding-top:0;padding-bottom:50px}
+.hero-bottom{background:
+ linear-gradient(180deg,rgba(8,26,21,.72),rgba(8,26,21,.82)),
+ url("hero-bg-2.webp") center/cover no-repeat;
+ position:relative;z-index:1;padding:80px 0 100px}
+@media(max-width:800px){
+ .hero-top{min-height:0;padding:68px 0 52px}
+ .hero-rest{padding-bottom:36px}
+ .hero-bottom{padding:52px 0 58px;background-position:center,93% 50%}
+}
+</style>
+
+<style id="imagine-bg-image">
+.imagine{background:
+ linear-gradient(180deg,rgba(255,253,248,.74),rgba(255,253,248,.86)),
+ url("bg-imagine.webp") center/cover no-repeat;
+ padding:52px 46px}
+@media(max-width:800px){
+ .imagine{padding:34px 22px}
+}
+</style>
+
+<style id="root-bg-image">
+.phase.phase-root{background:
+ linear-gradient(180deg,rgba(8,26,21,.68),rgba(8,26,21,.82)),
+ url("bg-root.webp") 22% center/cover no-repeat;
+ padding:52px 36px 46px}
+@media(max-width:800px){
+ .phase.phase-root{padding:42px 22px;background-position:center,12% center}
+}
+</style>
+
+<style id="momentum-bg-image">
+.phase.phase-momentum{background:
+ linear-gradient(180deg,rgba(8,26,21,.70),rgba(8,26,21,.84)),
+ url("bg-momentum.webp") 35% center/cover no-repeat;
+ padding:52px 36px 46px}
+@media(max-width:800px){
+ .phase.phase-momentum{padding:42px 22px;background-position:center,35% center}
+}
+</style>
+
+<style id="bring-bg-image">
+.bring{background:
+ linear-gradient(180deg,rgba(255,253,248,.74),rgba(255,253,248,.86)),
+ url("bg-bring.webp") center/cover no-repeat;
+ padding:26px 30px}
+@media(max-width:800px){
+ .bring{padding:14px 20px}
+}
+</style>
+
+<style id="fullbleed-bg-images">
+.desire .narrow.woman{position:relative;isolation:isolate;margin-top:54px;padding:60px 0!important}
+.desire .narrow.woman::before{content:"";position:absolute;z-index:-1;top:0;bottom:0;left:50%;width:100vw;margin-left:-50vw;background:linear-gradient(180deg,rgba(255,253,248,.74),rgba(255,253,248,.86)),url("bg-woman.webp") center/cover no-repeat}
+.moment-bg{position:relative;isolation:isolate;margin:28px 0 0;padding:34px 0}
+.moment-bg::before{content:"";position:absolute;z-index:-1;top:0;bottom:0;left:50%;width:100vw;margin-left:-50vw;background:linear-gradient(180deg,rgba(255,253,248,.72),rgba(255,253,248,.84)),url("bg-moment2.webp") center/cover no-repeat}
+.mv-bg{position:relative;isolation:isolate;padding:56px 0}
+.mv-bg::before{content:"";position:absolute;z-index:-1;top:0;bottom:0;left:50%;width:100vw;margin-left:-50vw;background:linear-gradient(180deg,rgba(255,253,248,.74),rgba(255,253,248,.86)),url("bg-arches.webp") center/cover no-repeat}
+.mv-bg .section-intro{margin-bottom:34px}
+.mv-bg .mentor{background:transparent}
+.pool-bg{position:relative;isolation:isolate;padding:54px 0}
+.pool-bg::before{content:"";position:absolute;z-index:-1;top:0;bottom:0;left:50%;width:100vw;margin-left:-50vw;background:linear-gradient(180deg,rgba(255,253,248,.74),rgba(255,253,248,.86)),url("bg-pool.webp") center/cover no-repeat}
+.pool-bg .lines{margin-bottom:0}
+.final h2.final-brand{font-size:clamp(4.5rem,12vw,9rem);margin-top:70px}
+.forwho{background:linear-gradient(180deg,rgba(255,253,248,.74),rgba(255,253,248,.86)),url("bg-compass.webp") center/cover no-repeat}
+.offer{background:linear-gradient(180deg,rgba(255,253,248,.74),rgba(255,253,248,.86)),url("bg-lounge.webp") center/cover no-repeat}
+@media(max-width:800px){
+ .desire .narrow.woman{margin-top:42px;padding:38px 0!important}
+ .moment-bg{padding:26px 0}
+ .mv-bg{padding:38px 0}
+ .mv-bg .mentor{padding:26px 0}
+ .pool-bg{padding:34px 0}
+ .final h2.final-brand{font-size:4rem;margin:55px 0 20px;text-align:center}
+ .forwho{background-position:center,21% center}
+}
+</style>
+
+<style id="topbar-center-mobile">
+@media(max-width:800px){
+ .topbar .inner{justify-content:center;text-align:center}
+}
+</style>
+
+<style id="imagine-fullbleed-mobile">
+@media(max-width:800px){
+ .imagine{background:none;position:relative;isolation:isolate;padding:34px 0}
+ .imagine::before{content:"";position:absolute;z-index:-1;top:0;bottom:0;left:50%;width:100vw;margin-left:-50vw;background:linear-gradient(180deg,rgba(255,253,248,.74),rgba(255,253,248,.86)),url("bg-imagine.webp") center/cover no-repeat}
+}
+</style>
+
+<style id="tweaks-white-gap-and-text">
+.live{padding-bottom:0}
+.live .moment-bg{margin-bottom:0}
+.mv-bg .mentor p{color:#000}
+.offer-list,.offer-list span{color:#000}
+</style>
+
+<style id="site-footer-style">
+footer.site-footer{background:#112E1F;padding:32px 22px;text-align:center;font-size:12px;color:rgba(242,233,218,.6)}
+footer.site-footer img{width:150px;margin:0 auto 14px;display:block}
+footer.site-footer a{color:inherit;margin:0 8px;text-decoration:none}
+</style>
+
+<style id="image-system">
+:root{--ov-light:linear-gradient(180deg,rgba(255,253,248,.76),rgba(255,253,248,.86));--ov-dark:linear-gradient(180deg,rgba(8,26,21,.72),rgba(8,26,21,.84));--gold-dark:#8a6a2c}
+@media(min-width:801px){
+ .hero-top{background-image:var(--ov-dark),url("hero-bg.webp")}
+ .hero-bottom{background-image:var(--ov-dark),url("hero-bg-2.webp")}
+ .desire .narrow.woman::before{background-image:var(--ov-light),url("bg-woman.webp")}
+ .phase.phase-root{background-image:var(--ov-dark),url("bg-root.webp")}
+ .phase.phase-momentum{background-image:var(--ov-dark),url("bg-momentum.webp")}
+ .bring{background-image:var(--ov-light),url("bg-bring.webp")}
+ .moment-bg::before{background-image:var(--ov-light),url("bg-moment2.webp")}
+ .forwho{background-image:var(--ov-light),url("bg-compass.webp")}
+ .mv-bg::before{background-image:var(--ov-light),url("bg-arches.webp")}
+ .offer{background-image:var(--ov-light),url("bg-lounge.webp")}
+ .pool-bg::before{background-image:var(--ov-light),url("bg-pool.webp")}
+ .imagine{background-image:var(--ov-light),url("bg-imagine.webp")}
+}
+@media(max-width:800px){
+ .hero-top{background-image:var(--ov-dark),url("hero-bg-m.webp")}
+ .hero-bottom{background-image:var(--ov-dark),url("hero-bg-2-m.webp")}
+ .desire .narrow.woman::before{background-image:var(--ov-light),url("bg-woman-m.webp")}
+ .phase.phase-root{background-image:var(--ov-dark),url("bg-root-m.webp")}
+ .phase.phase-momentum{background-image:var(--ov-dark),url("bg-momentum-m.webp")}
+ .bring{background-image:var(--ov-light),url("bg-bring-m.webp")}
+ .moment-bg::before{background-image:var(--ov-light),url("bg-moment2-m.webp")}
+ .forwho{background-image:var(--ov-light),url("bg-compass-m.webp")}
+ .mv-bg::before{background-image:var(--ov-light),url("bg-arches-m.webp")}
+ .offer{background-image:var(--ov-light),url("bg-lounge-m.webp")}
+ .pool-bg::before{background-image:var(--ov-light),url("bg-pool-m.webp")}
+ .imagine::before{background-image:var(--ov-light),url("bg-imagine-m.webp")}
+}
+.imagine .kicker,.desire .narrow.woman .kicker,.moment-bg .kicker,.pool-bg .kicker,.offer-card .kicker,.forwho .kicker,.mv-bg .kicker{color:var(--gold-dark)}
+.offer-card .eyebrow{color:#3a3a3a!important}
+</style>
+
+<style id="key-visible">
+@media(max-width:800px){
+ .hero-bottom{background-image:linear-gradient(180deg,rgba(8,26,21,.5),rgba(8,26,21,.66)),url("hero-bg-2-m.webp")}
+}
+</style>
+
+<style id="floating-cta-style">
+.mobile-cta{display:block;position:fixed;z-index:40;left:50%;bottom:18px;transform:translateX(-50%);width:auto;min-width:260px;transition:opacity .25s,transform .25s}
+.mobile-cta .btn{width:100%;box-shadow:0 10px 35px rgba(0,0,0,.28)}
+.mobile-cta.is-hidden{opacity:0;pointer-events:none;transform:translateX(-50%) translateY(20px)}
+@media(max-width:800px){
+ .mobile-cta{left:14px;right:14px;width:auto;min-width:0;transform:none}
+ .mobile-cta.is-hidden{transform:translateY(20px)}
+}
+</style>
+
+<style id="mv-flush">.mv-section{padding-top:0}</style>
+
+<style id="gold-system">
+:root{--gold:#CBAB73;--gold-soft:#E2D0A6;--gold-dark:#8B7239;--gold-metal:linear-gradient(110deg,#8B7239 0%,#CBAB73 30%,#E2D0A6 50%,#CBAB73 72%,#8B7239 100%)}
+.eyebrow,.kicker,.mentor .role{color:var(--gold-dark)}
+.topbar strong,.hero .eyebrow,.hero .kicker,.method .eyebrow,.method .kicker,.business .eyebrow,.business .kicker,.closed .eyebrow,.closed .kicker,.aha .eyebrow,.aha .kicker,.phase .eyebrow{color:var(--gold)}
+.btn{background:var(--gold-metal);background-size:220% 100%;color:#10261E;box-shadow:0 12px 28px rgba(139,114,57,.30);animation:btnPulse 2.4s ease-in-out infinite,btnShine 5s ease-in-out infinite}
+.btn:hover{animation-play-state:paused;transform:translateY(-2px)}
+@keyframes btnPulse{0%,100%{transform:scale(1);box-shadow:0 12px 28px rgba(139,114,57,.30),0 0 0 0 rgba(203,171,115,.55)}50%{transform:scale(1.03);box-shadow:0 14px 32px rgba(139,114,57,.34),0 0 0 14px rgba(203,171,115,0)}}
+@keyframes btnShine{0%,100%{background-position:0 0}50%{background-position:100% 0}}
+@media(prefers-reduced-motion:reduce){.btn{animation:none}}
+</style>
+
+<style id="checkout-style">.checkout{padding:70px 0;overflow:visible;background:var(--paper)}.checkout .wrap{max-width:900px}</style>
+
+<style id="deal-glow">
+.deal-card{position:relative;border:1px solid #CBAB73;background:linear-gradient(135deg,rgba(226,208,166,.14),rgba(203,171,115,.06));box-shadow:0 0 22px rgba(203,171,115,.40),0 0 60px rgba(203,171,115,.20),inset 0 0 26px rgba(226,208,166,.14);animation:dealGlow 3s ease-in-out infinite}
+.deal-card .price{text-shadow:0 0 18px rgba(226,208,166,.55)}
+.deal-card .timebox strong{text-shadow:0 0 12px rgba(226,208,166,.6)}
+@keyframes dealGlow{0%,100%{box-shadow:0 0 18px rgba(203,171,115,.32),0 0 48px rgba(203,171,115,.14),inset 0 0 22px rgba(226,208,166,.10);border-color:rgba(203,171,115,.85)}50%{box-shadow:0 0 30px rgba(226,208,166,.62),0 0 80px rgba(203,171,115,.32),inset 0 0 34px rgba(226,208,166,.20);border-color:#E2D0A6}}
+@media(prefers-reduced-motion:reduce){.deal-card{animation:none}}
+</style>
+
+<style id="gold-workshop">
+:root{--gold:#C9A24D;--gold-soft:#F3DFA8;--gold-dark:#8A6A3A;
+ --gold-metal:linear-gradient(90deg,#8A6A3A 0%,#C9A24D 22%,#F3DFA8 45%,#C9A24D 68%,#8A6A3A 88%,#C9A24D 100%);
+ --gold-metal-light:linear-gradient(90deg,#8A6A3A 0%,#C9A24D 50%,#8A6A3A 100%)}
+.eyebrow,.kicker,.mentor .role{display:inline-block;background:var(--gold-metal-light);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+.topbar strong,.hero .eyebrow,.hero .kicker,.method .eyebrow,.method .kicker,.business .eyebrow,.business .kicker,.closed .eyebrow,.closed .kicker,.aha .eyebrow,.aha .kicker,.phase .eyebrow,.phase .impact,.price,.hero .statement{background:var(--gold-metal);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+.phase .impact,.price{display:inline-block}
+.hero .statement{width:fit-content}
+.deal-card .price{text-shadow:none;filter:drop-shadow(0 0 14px rgba(243,223,168,.45))}
+.btn{background:var(--gold-metal);background-size:100% 100%;color:#0d2420;box-shadow:0 6px 28px rgba(138,106,58,.40);animation:btnPulse 2.2s ease-in-out infinite}
+.btn:hover{opacity:.88;transform:translateY(-1px);animation:none}
+@keyframes btnPulse{0%,100%{transform:scale(1);box-shadow:0 6px 28px rgba(138,106,58,.40)}50%{transform:scale(1.04);box-shadow:0 10px 36px rgba(138,106,58,.58)}}
+.checkout{background:#112E1F}
+</style>
+
+<style id="no-divider-lines">
+.hero .friction{border:0!important;gap:0!important;background:transparent!important}
+.hero .friction div{border:0!important}
+.desire-item{border:0!important}
+.bring div{border-top:0!important;border-right:0!important;border-bottom:0!important}
+.business .reasons div{border:0!important}
+</style>
+
+<style id="deal-overlay">.deal-card{background:linear-gradient(135deg,rgba(8,26,21,.82),rgba(8,26,21,.70));-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}</style>
+
+<style id="gold-words-and-desire">
+.desire:after{content:none!important;display:none!important}
+.gt{background:var(--gold-metal-light);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+.gt.gt-dark{background-image:linear-gradient(90deg,#C9A24D 0%,#F3DFA8 50%,#C9A24D 100%);-webkit-background-clip:text;background-clip:text;font-weight:700}
+</style>
+
+<style id="gap-forwho-proof">
+.forwho{padding-bottom:70px}
+.proof{padding-top:64px}
+@media(max-width:800px){
+ .forwho{padding-bottom:44px}
+ .proof{padding-top:44px}
+}
+</style>
+
+<style id="batch-tweaks">
+.kicker.kicker-black{background:none;-webkit-text-fill-color:#000;color:#000}
+body{padding-bottom:0!important}
+</style>
+
+<style id="topbar-gold-and-more">
+.topbar{background:linear-gradient(90deg,#8A6A3A 0%,#C9A24D 22%,#F3DFA8 45%,#C9A24D 68%,#8A6A3A 88%,#C9A24D 100%);color:#0d2420;border-bottom:0}
+.topbar .inner,.topbar .deal-label,.topbar .mini-count{color:#0d2420}
+.topbar strong{background:none;-webkit-text-fill-color:#0d2420;color:#0d2420}
+.gt.gt-big{background-image:var(--gold-metal)}
+.checkout{scroll-margin-top:60px}
+</style>
+
+<style id="fonts-guide">
+@font-face{font-family:'Amsterdam Four';src:url('../fonts/AmsterdamFour.woff') format('woff'),url('../fonts/AmsterdamFour.ttf') format('truetype');font-display:swap}
+html{font-synthesis:none}
+h1,h2,h3{letter-spacing:-.01em;font-weight:400}
+.script{font-family:'Amsterdam Four',cursive!important;font-weight:400!important;font-style:normal!important;text-transform:none!important;letter-spacing:0!important;line-height:2.4!important;display:inline-block;padding:16px 8px;font-size:1.25em}
+h2 .script{font-size:1.55em;padding:18px 12px;margin:-.45em 0}
+p.kicker.script{font-size:clamp(2.4rem,7vw,3.4rem);margin:-.3em 0}
+</style>
+
+<style id="hero-fullwidth-title">
+.hero-top{container-type:inline-size}
+.hero-top .product-name{white-space:nowrap;line-height:1;font-size:calc(min(1120px,100cqw - 42px)/5.05);margin-bottom:6px}
+@media(max-width:800px){.hero-top .product-name{font-size:calc((100cqw - 34px)/5.05)}}
+.hero .friction b{width:fit-content;background-image:linear-gradient(90deg,#C9A24D 0%,#F3DFA8 50%,#C9A24D 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+</style>
+
+<style id="no-rim">.method:after{content:none!important;display:none!important}</style>
+
+<style id="no-watermarks">.hero:after,.wait .narrow:before,.aha:before{content:none!important;display:none!important}</style>
+
+<style id="desire-flush-mobile">@media(max-width:800px){.desire{padding-top:0}}</style>
+
+<style id="no-lines-2">.pattern,.included-card,.more span{border:0!important}</style>
+
+<style id="no-lines-offer">.offer-list span{border:0!important}.offer-card .eyebrow:before{content:none!important;display:none!important}.offer-card .eyebrow{padding-left:0!important}</style>
+
+<style id="no-vlines">.hero .statement,.final .lines{border-left:0!important;padding-left:0!important}</style>
+
+<style id="hero-gold-title">
+.hero-top .product-name{width:fit-content;background-image:var(--gold-metal);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+.hero-top .kicker{background:none;-webkit-text-fill-color:#fff;color:#fff}
+</style>
+
+<style id="desire-dark-list">
+.desire{background:radial-gradient(circle at 82% 12%,rgba(203,171,115,.17),transparent 26rem),linear-gradient(145deg,#0c241d,#17372e 70%,#102b24)}
+.desire-item{color:#fff;font-size:1.35rem}
+.desire-item b{display:block;width:fit-content;font-size:2.3rem;line-height:1.1;margin-top:4px;background-image:linear-gradient(90deg,#C9A24D 0%,#F3DFA8 50%,#C9A24D 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+@media(max-width:800px){
+ .desire-item{font-size:1.2rem}
+ .desire-item b{font-size:2rem}
+}
+</style>
+
+<style id="desire-size-fix">
+.desire .desire-item:nth-child(n){font-size:1.35rem}
+.desire .desire-item:nth-child(n) b{font-size:2.3rem}
+@media(max-width:800px){
+ .desire .desire-item:nth-child(n){font-size:1.2rem}
+ .desire .desire-item:nth-child(n) b{font-size:2rem}
+}
+</style>
+
+<style id="kicker-bigger">
+.kicker:not(.script){font-size:clamp(1.6rem,3.2vw,2.15rem);line-height:1.3}
+.offer-card .kicker{font-size:clamp(1.2rem,2.4vw,1.65rem)}
+@media(max-width:800px){
+ .kicker:not(.script){font-size:1.6rem;line-height:1.3}
+ .offer-card .kicker{font-size:1.25rem}
+ .hero-top .kicker{max-width:none}
+}
+</style>
+
+<style id="desire-flush-bottom">.desire{padding-bottom:0}</style>
+
+<style id="gold-multiline">.gt.gt-big{display:block;background-image:linear-gradient(90deg,#C9A24D 0%,#F3DFA8 42%,#C9A24D 75%,#F3DFA8 100%)}</style>
+
+<style id="wir-arbeiten-wide">
+@media(max-width:800px){
+ .live p.kicker.script{white-space:nowrap;font-size:calc((100vw - 52px)/6.9)!important;padding:16px 8px 16px 12px}
+}
+</style>
+
+<style id="phase-aligned">.phase:nth-child(2){transform:none!important}</style>
+
+<style id="einmalig-above">.offer-card .eyebrow{display:block!important;width:fit-content;margin-left:auto!important;margin-right:auto!important}.offer-card .btn{display:inline-flex}</style>
+
+<style id="root-card-tweaks">
+.phase-root .eyebrow{background:none;-webkit-text-fill-color:#fff;color:#fff}
+.phase-root .impact{display:block;width:fit-content;margin:30px auto 32px;text-align:center;font-size:2.1rem;line-height:1.15}
+@media(max-width:800px){.phase-root .impact{font-size:2rem;margin:28px auto 30px}}
+</style>
+
+<style id="phase-cards-tweaks">
+.phase-identity .eyebrow,.phase-momentum .eyebrow{background:none;-webkit-text-fill-color:#fff;color:#fff}
+.phase-identity .impact,.phase-momentum .impact{display:block;width:fit-content;margin:30px auto 32px;text-align:center;font-size:1.8rem;line-height:1.2}
+@media(max-width:800px){.phase-identity .impact,.phase-momentum .impact{font-size:1.8rem;margin:28px auto 30px}}
+</style>
+
+<style id="bring-gold-bullets">
+.bring div:before{content:"•"!important;font-size:1.6rem!important;line-height:1;top:20px;color:var(--gold-dark)}
+.bring b{background-image:var(--gold-metal-light);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+</style>
+
+<style id="forwho-split">
+.forwho{padding:0!important;background:none!important}
+.fw-top{background:var(--ov-light),url("bg-compass.webp") center/cover no-repeat;padding:140px 0 50px}
+.fw-bottom{background:radial-gradient(circle at 82% 12%,rgba(203,171,115,.17),transparent 26rem),linear-gradient(145deg,#0c241d,#17372e 70%,#102b24);padding:50px 0 100px;color:#fff}
+.fw-bottom p,.fw-bottom h3,.fw-bottom .more span,.fw-bottom strong{color:#fff}
+.fw-top p.kicker:not(.script){font-size:clamp(2.2rem,4.2vw,3rem);line-height:1.25}
+@media(max-width:800px){
+ .fw-top{background:var(--ov-light),url("bg-compass-m.webp") 21% center/cover no-repeat;padding:90px 0 36px}
+ .fw-bottom{padding:36px 0 70px}
+ .fw-top p.kicker:not(.script){font-size:2.1rem}
+}
+</style>
+
+<style id="more-big-gold">
+.fw-bottom .more{gap:6px 28px}
+.fw-bottom .more span{font-family:var(--serif);font-weight:400;font-size:clamp(2.6rem,5.2vw,4.2rem);line-height:1.1;padding:6px 2px;margin-right:0;background-image:linear-gradient(90deg,#C9A24D 0%,#F3DFA8 50%,#C9A24D 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+@media(max-width:800px){
+ .fw-bottom .more span{display:block;width:fit-content;font-size:2.8rem;padding:4px 0}
+}
+</style>
+
+<style id="script-and-italic">
+.quote p{font-style:italic}
+.script-h{font-size:clamp(2.6rem,11.5vw,5.2rem)!important;padding:14px 14px!important;margin:-.2em 0}
+.fw-top p.kicker .script{font-size:1.3em;margin:-.3em 0;padding:12px 8px}
+</style>
+
+<style id="header-and-pullquote">
+.hero-top .product-name{font-size:calc(min(1120px,100cqw - 42px)/4.72)}
+@media(max-width:800px){.hero-top .product-name{font-size:calc((100cqw - 34px)/4.72)}}
+.hero-top .kicker.hero-script{display:block!important;width:auto;max-width:none!important;text-align:center;white-space:nowrap;font-family:'Amsterdam Four',cursive;font-style:normal;font-weight:400;text-transform:none;letter-spacing:0;line-height:2.4;padding:10px 0;margin:0 0 4px;font-size:min(4rem,calc((min(1120px,100cqw - 42px))/11.9))}
+@media(max-width:800px){.hero-top .kicker.hero-script{font-size:calc((100cqw - 34px)/11.9)}}
+</style>
+
+<style id="hero-question">.hero-top h1.hero-question{color:#fff}</style>
+
+<style id="callout-spacing">
+.editorial-callout h2{margin:48px 0;line-height:1.18}
+@media(max-width:800px){.editorial-callout h2{margin:40px 0;line-height:1.2}}
+</style>
+
+<style id="script-h-tight">h3 .script-h{line-height:1.25!important;padding:.75em 14px .3em!important;margin:-.4em 0 -.1em}</style>
+
+<style id="wait-bold-gold">.wait strong.gt{font-weight:800}</style>
+
+<style id="hero-question-center">.hero-top h1.hero-question{text-align:center;margin-left:auto;margin-right:auto}</style>
+
+<style id="type-scale">
+:root{--fs-label:11px;--fs-text:16px;--fs-textl:20px;--fs-sub:28px;--fs-h2:40px;--fs-display:46px;--fs-script:40px}
+@media(min-width:801px){:root{--fs-label:12.5px;--fs-text:17px;--fs-textl:22px;--fs-sub:38px;--fs-h2:64px;--fs-display:72px;--fs-script:64px}}
+body{font-size:var(--fs-text)}
+/* 1 Label */
+.eyebrow,.topbar .inner,.timebox small,.site-footer,.quote strong{font-size:var(--fs-label)!important}
+/* 2 Text */
+.included-card p,.phase p,.mentor p,.bring div,.business .reasons div,.pattern .but,.hero .friction span,.offer-list span{font-size:var(--fs-text)!important}
+/* 3 Text gross */
+.desire .desire-item:nth-child(n),.pattern .know,.quote p,.included-card h3,.hero .friction b,.hero .lead,.timebox strong,.final .lines p{font-size:var(--fs-textl)!important}
+/* 4 Zwischentitel */
+h3,.phase h3,.hero .statement,.phase .impact,.pullquote,.identity-quote,.deal-card .price,.final .last,.mentor h3,.desire .desire-item:nth-child(n) b{font-size:var(--fs-sub)!important}
+.included-card h3{font-size:var(--fs-textl)!important}
+/* 5 Ueberschrift */
+h2,.kicker:not(.script),.fw-top p.kicker:not(.script),.hero-bottom .product-name{font-size:var(--fs-h2)!important}
+.offer-card .kicker{font-size:var(--fs-textl)!important}
+.offer-card h2{font-size:clamp(4rem,10vw,8.5rem)!important}
+.final h2.final-brand{font-size:clamp(4.5rem,12vw,9rem)!important}
+@media(max-width:800px){.offer-card h2{font-size:3.65rem!important}.final h2.final-brand{font-size:4rem!important}}
+/* 6 Display */
+.hero-top h1.hero-question,.fw-bottom .more span{font-size:var(--fs-display)!important}
+/* 7 Script */
+.script-h,.script,p.kicker.script,.fw-top p.kicker .script{font-size:var(--fs-script)!important}
+</style>
+
+<style id="type-scale-fix">
+.hero-top .kicker.hero-script{font-size:min(4rem,calc((min(1120px,100cqw - 42px))/11.9))!important}
+@media(max-width:800px){.hero-top .kicker.hero-script{font-size:calc((100cqw - 34px)/11.9)!important}}
+</style>
+
+<style id="script-h-clipfix">h3 .script-h{padding:.6em 16px .8em!important;margin:-.3em 0 -.5em!important}</style>
+
+<style id="deal-card-top">.hero-top .deal-card-top{margin:34px auto 0;max-width:760px;margin-right:auto;margin-left:auto}</style>
+
+<style id="deal-glow-strong">
+.deal-card{border-width:1.5px;animation:dealGlow2 2.8s ease-in-out infinite}
+@keyframes dealGlow2{
+ 0%,100%{box-shadow:0 0 26px rgba(226,208,166,.55),0 0 70px rgba(203,171,115,.38),0 0 130px rgba(203,171,115,.20),inset 0 0 26px rgba(226,208,166,.16);border-color:rgba(226,208,166,.9)}
+ 50%{box-shadow:0 0 44px rgba(243,223,168,.85),0 0 110px rgba(203,171,115,.60),0 0 190px rgba(203,171,115,.34),inset 0 0 40px rgba(243,223,168,.26);border-color:#F3DFA8}
+}
+@media(prefers-reduced-motion:reduce){.deal-card{animation:none;box-shadow:0 0 40px rgba(226,208,166,.6),0 0 100px rgba(203,171,115,.35)}}
+</style>
+
+<style id="deal-top-center">
+.deal-card-top{justify-content:center!important;text-align:center;flex-direction:column;align-items:center!important}
+.deal-card-top>div:first-child{width:100%;text-align:center}
+.deal-card-top .price{display:inline-block}
+.deal-card-top .countdown{width:100%;justify-content:center}
+</style>
+
+<style id="title-center">.hero-top .product-name{position:relative;left:50%;transform:translateX(-50%);margin-left:0;margin-right:0}</style>
+
+<style id="offer-pre">.offer-top .offer-pre{display:block;width:fit-content;margin:0 auto 4px}</style>
+
+<style id="offer-card-deal">.offer-card .deal-card-offer{margin:36px auto 0;max-width:760px}</style>
+
+<style id="offer-card-deal-fix">
+.offer-card .deal-card-offer{background:linear-gradient(135deg,rgba(8,26,21,.94),rgba(8,26,21,.88))}
+.offer-card .deal-card-offer .timebox strong{color:#fff}
+.offer-card .deal-card-offer .timebox small{color:#d7dcd9}
+</style>
+
+<style id="offer-card-deal-light">
+.offer-card .deal-card-offer{background:rgba(255,253,248,.55)!important;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);border:1.5px solid #C9A24D;border-radius:0;animation:dealGlowLight 3s ease-in-out infinite}
+.offer-card .deal-card-offer .price{background-image:var(--gold-metal-light);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;filter:none;text-shadow:none}
+.offer-card .deal-card-offer .timebox{border-left-color:rgba(138,106,58,.35)}
+.offer-card .deal-card-offer .timebox strong{color:#10261e;text-shadow:none}
+.offer-card .deal-card-offer .timebox small{color:#8A6A3A;text-shadow:none}
+@keyframes dealGlowLight{
+ 0%,100%{box-shadow:0 0 22px rgba(201,162,77,.30),0 0 60px rgba(201,162,77,.16)}
+ 50%{box-shadow:0 0 34px rgba(201,162,77,.55),0 0 90px rgba(201,162,77,.30)}
+}
+@media(prefers-reduced-motion:reduce){.offer-card .deal-card-offer{animation:none;box-shadow:0 0 34px rgba(201,162,77,.45)}}
+</style>
+
+<style id="friction-b-sub">.hero .friction b{font-size:var(--fs-sub)!important}</style>
+
+<style id="offer-count-color">.offer-card .deal-card-offer .timebox strong{color:#8A6A3A!important}</style>
+
+<style id="business-spacing">
+.business .reasons{margin-top:0!important;gap:0!important}
+.business .reasons div{padding:0!important;margin:0 0 1.15em!important}
+.business .reasons div:last-child{margin-bottom:0!important}
+.business .kicker{margin-bottom:1.15em!important}
+.business h3{margin-top:1.4em!important;margin-bottom:0!important}
+.business{padding-bottom:48px!important}
+</style>
+
+<style id="batch-logos-center-gold">
+.press-track img{filter:none!important;mix-blend-mode:normal!important;opacity:1!important}
+.phase-identity>p:last-of-type{text-align:center}
+.gt.gt-block{display:block}
+.wait .fuck-line{font-size:var(--fs-sub)!important;line-height:1.2}
+</style>
+
+<style id="zum-deal">.hero-top .btn-zum-deal{display:flex;width:fit-content;min-width:260px;margin:30px auto 0}@media(max-width:800px){.hero-top .btn-zum-deal{width:100%;min-width:0}}</style>
+
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NQMQT7QH" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="topbar">
+  <div class="inner wrap">
+    <span class="deal-label">CLOSED CARD SPECIAL DEAL 333 € ENDET IN</span>
+    <span class="mini-count" data-countdown>00 TAGE : 00 STD : 00 MIN : 00 SEK</span>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="hero-top">
+  <div class="wrap content">
+    <div class="product-name">ROOT to RISE</div>
+    <div class="kicker hero-script">Du weißt längst, was du willst.</div>
+    <h1 class="hero-question">Warum stehst du dir dabei immer wieder selbst im Weg?</h1>
+    <div class="deal-card deal-card-top">
+      <div><div class="price">333 EUR SPECIAL DEAL ENDET IN</div></div>
+      <div class="countdown" aria-label="Countdown">
+        <div class="timebox"><strong data-days>00</strong><small>Tage</small></div>
+        <div class="timebox"><strong data-hours>00</strong><small>Std</small></div>
+        <div class="timebox"><strong data-minutes>00</strong><small>Min</small></div>
+        <div class="timebox"><strong data-seconds>00</strong><small>Sek</small></div>
+      </div>
+    </div>
+    <a class="btn btn-zum-deal" href="#checkout">ZUM DEAL</a>
+  </div>
+  </div>
+  <div class="wrap content hero-rest">
+
+    <div class="friction">
+      <div><b>Du willst mehr Geld verdienen.</b><span>Aber wenn du deinen Preis nennst, wirst du plötzlich unsicher.</span></div>
+      <div><b>Du willst sichtbarer werden.</b><span>Aber du hältst dich zurück, aus Angst vor Kritik.</span></div>
+      <div><b>Du willst Grenzen setzen.</b><span>Und rechtfertigst dein Nein danach trotzdem noch 5 Minuten lang.</span></div>
+      <div><b>Du willst größer werden.</b><span>Aber bitte, ohne dass jemand dich dafür arrogant, geldgeil, egoistisch oder „zu viel“ findet.</span></div>
+    </div>
+
+    <p class="statement">Ganz schön viele Regeln für eine Frau, die eigentlich frei sein will.</p>
+    <p class="lead">Und wahrscheinlich weißt du das längst.<br>Du brauchst nicht noch jemanden, der dir erklärt, dass du mehr an dich glauben, größer denken oder aus deiner Komfortzone kommen sollst.</p>
+    <p class="statement">Du willst endlich aufhören, dich selbst zu sabotieren, wenn es darauf ankommt.</p>
+  </div>
+</header>
+
+<section class="offer offer-top">
+  <div class="wrap">
+    <div class="offer-card">
+      
+      <p class="kicker offer-pre">Genau dafür gibt es</p>
+      <h2>ROOT TO RISE</h2>
+      <p class="kicker">ROOT → IDENTITY → MOMENTUM</p>
+      <div class="offer-list"><span>7 Wochen</span><span>7 Freitage LIVE</span><span>Coachings & Hot Seats</span><span>Geführte Prozesse</span><span>Workbook & Integration</span><span>Begleitungsraum</span></div>
+      <p>Und sehr viel Raum für das, was <strong>bei dir</strong> wirklich los ist.</p>
+      <div class="price-big">333 €</div>
+      <div class="eyebrow" style="color:var(--muted);margin-bottom:25px">einmalig</div>
+      <a class="btn" href="#checkout">Ja. Ich will rein.</a>
+      <div class="deal-card deal-card-top deal-card-offer">
+      <div><div class="price">SPECIAL DEAL NUR 333€</div></div>
+      <div class="countdown" aria-label="Countdown">
+        <div class="timebox"><strong data-days>00</strong><small>Tage</small></div>
+        <div class="timebox"><strong data-hours>00</strong><small>Std</small></div>
+        <div class="timebox"><strong data-minutes>00</strong><small>Min</small></div>
+        <div class="timebox"><strong data-seconds>00</strong><small>Sek</small></div>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<div class="logo-strip">
+  <div class="wrap">
+    <div>Marina Henze ist bekannt aus:</div>
+    <div class="press-row"><div class="press-track"><img src="../Logos/Cosmopolitan-Logo-neue-Masse.png" alt=""><img src="../Logos/Focus-Money-Logo-neue-masse.png" alt=""><img src="../Logos/Huffpost-Logo-neue-Masse.png" alt=""><img src="../Logos/Stern-Logo.png" alt=""><img src="../Logos/Wirschafwoche.png" alt=""><img src="../Logos/handelsblatt-logo-1.png" alt=""><img src="../Logos/Cosmopolitan-Logo-neue-Masse.png" alt=""><img src="../Logos/Focus-Money-Logo-neue-masse.png" alt=""><img src="../Logos/Huffpost-Logo-neue-Masse.png" alt=""><img src="../Logos/Stern-Logo.png" alt=""><img src="../Logos/Wirschafwoche.png" alt=""><img src="../Logos/handelsblatt-logo-1.png" alt=""></div></div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="section-intro">
+      
+      <h2>ES IST JA NICHT SO, ALS WÜSSTEST DU ES NICHT BESSER.</h2>
+    </div>
+    <div class="patterns">
+      <div class="pattern"><div class="know">Du weißt, dass du nicht jedem gefallen musst.</div><div class="but">Und trotzdem trifft dich Kritik.</div></div>
+      <div class="pattern"><div class="know">Du weißt, dass dein Wert nicht von einem Kunden abhängt.</div><div class="but">Und trotzdem fühlt sich ein Nein manchmal verdammt persönlich an.</div></div>
+      <div class="pattern"><div class="know">Du weißt, dass du deine Preise nicht rechtfertigen musst.</div><div class="but">Und trotzdem erklärst du plötzlich, was alles enthalten ist.</div></div>
+      <div class="pattern"><div class="know">Du weißt, dass der Erfolg einer anderen Frau nichts über deinen aussagt.</div><div class="but">Und fünf Minuten Instagram reichen trotzdem, damit du dein halbes Business hinterfragst.</div></div>
+      <div class="pattern"><div class="know">Du weißt, dass du nicht immer funktionieren musst.</div><div class="but">Und sitzt trotzdem noch am Laptop, obwohl du frei hast.</div></div>
+    </div>
+    <div class="aha">
+      <div class="kicker">Genau deshalb brauchst du nicht noch mehr Wissen.</div>
+      <p>Denn dein Kopf hat es schon längst verstanden. Die interessantere Frage ist:</p>
+      <h2>WARUM MACHST DU ES TROTZDEM?</h2>
+      <p style="margin:16px 0 0;color:#d6ded9">Und genau dort beginnt <span class="gt gt-dark">ROOT TO RISE</span>.</p>
+    </div>
+  </div>
+</section>
+
+<section class="desire">
+  <div class="wrap desire-grid">
+    <div class="imagine">
+      
+      <h2>STELL DIR VOR, DU MUSST DICH NICHT MEHR STÄNDIG SELBST ÜBERWINDEN.</h2>
+      <p>Und wenn etwas nicht funktioniert, bedeutet das nicht sofort:</p>
+      <p class="pullquote">Vielleicht bin ich einfach nicht gut genug.</p>
+      <p><strong>Stell dir vor, wie unglaublich viel Energie frei wird, wenn du nicht mehr ständig gegen dich selbst arbeitest.</strong></p>
+    </div>
+    <div class="desire-list">
+      <div class="desire-item">Du willst den Preis? <b>Du nennst ihn!</b></div>
+      <div class="desire-item">Du willst Nein sagen? <b>Du sagst Nein!</b></div>
+      <div class="desire-item">Du hast eine Idee? <b>Du gehst damit raus!</b></div>
+      <div class="desire-item">Jemand findet sie scheiße? <b>Egal!</b></div>
+      <div class="desire-item">Eine andere Frau ist weiter? <b>Schön für sie!</b></div>
+      <div class="desire-item">Ein Kunde kauft nicht? <b>Dann halt nicht!</b></div>
+      <div class="desire-item">Du willst mehr Geld? <b>Du nimmst es einfach!</b></div>
+      <div class="desire-item">Du willst größer werden? <b>Du gehst dafür, kompromisslos!</b></div>
+    </div>
+  </div>
+  <div class="narrow woman" style="padding-top:54px;text-align:center">
+    <p>Wie viel leichter du entscheidest.<br>Wie anders du verkaufst.<br>Wie klar du Grenzen setzt.<br>Wie selbstverständlich du über Geld sprichst.<br>Wie viel mutiger du handelst.<br>Und wie viel mehr Spaß plötzlich wieder entsteht, wenn nicht jede Entscheidung gleichzeitig eine Verhandlung mit dir selbst ist.</p>
+    <h2><span class="gt">DAS IST DIE FRAU, DIE WIR IN ROOT TO RISE BEFREIEN.</span></h2>
+    <p class="kicker kicker-black">Nicht irgendeine optimierte „High Performance Version“ von dir. Dich. Nur ohne den ganzen Mist dazwischen.</p>
+    <a class="btn" href="#checkout">Da will ich hin.</a>
+  </div>
+</section>
+
+<section class="method">
+  <div class="wrap">
+    <div class="section-intro">
+      <div class="eyebrow">ROOT → IDENTITY → MOMENTUM</div>
+      <h2>7 WOCHEN. UND WIR BLEIBEN NICHT AN DER OBERFLÄCHE.</h2>
+    </div>
+    <div class="method-grid">
+      <article class="phase phase-root">
+        <div class="eyebrow">Root</div>
+        <h3><span class="gt gt-big">WARUM PASSIERT MIR DAS IMMER WIEDER?</span></h3>
+        <p>Warum wirst du beim Geld kleiner?<br>Warum willst du es allen recht machen?<br>Warum hältst du dich genau dann zurück, wenn du eigentlich raus willst?<br>Warum fühlt sich Erfolg vielleicht gleichzeitig geil und bedrohlich an?<br>Warum musst du erst alles perfekt haben, bevor du losgehst?<br>Warum kannst du fünf anderen Frauen sagen, was sie tun sollten, und bei dir selbst wird plötzlich alles kompliziert?</p>
+        <p>Wir doktern nicht am Symptom herum.</p>
+        <div class="impact">Wir gehen an die Wurzel.</div>
+        <p>Nicht damit du sieben Wochen in deiner Vergangenheit herumwühlst. Sondern damit das, was gestern entstanden ist, nicht weiter deine Entscheidungen von heute trifft. Und nicht weiter zwischen dir und deinem Traumleben steht.</p>
+      </article>
+      <article class="phase phase-identity">
+        <div class="eyebrow">Identity</div>
+        <h3><span class="gt gt-big">WER BIST DU, WENN DEINE GESCHICHTE DICH NICHT MEHR BEEINFLUSST?</span></h3>
+        <p>Wenn du dich nicht mehr über Leistung beweisen musst.<br>Wenn du nicht mehr die Brave sein musst.<br>Die Vernünftige.<br>Die Angepasste.<br>Die, die alles schafft.<br>Die, die niemanden enttäuscht.<br>Die, die bloß nicht zu laut, zu erfolgreich, zu teuer oder zu viel wird.</p>
+        <div class="impact">Was bleibt dann?<br>Du.</div>
+        <p>Mit deinem Wert.<br>Deiner Stimme.<br>Deinen Grenzen.<br>Deinem Geld.<br>Deiner Größe.<br>Deiner Lust auf mehr.<br>Und einer ziemlich neuen Erfahrung.</p>
+      </article>
+      <article class="phase phase-momentum">
+        <div class="eyebrow">Momentum</div>
+        <h3><span class="gt gt-big">UND DANN WIRD ES REAL.</span></h3>
+        <p>Denn wir wollen nicht, dass du sieben Wochen später 43 neue Erkenntnisse über deine Kindheit hast.<br>Wir wollen sehen, was sich heute verändert.</p>
+        <p>Du nennst höhere Preise.<br>Du führst das Gespräch anders.<br>Du setzt die Grenze.<br>Du triffst die Entscheidung.<br>Du gehst raus.<br>Du hältst ein Nein aus.<br>Du lässt mehr Erfolg zu.<br>Du machst wirklich Feierabend.<br>Du bleibst bei dir, obwohl jemand anderes deine Entscheidung nicht versteht.<br>Das ist der Punkt.</p>
+        <div class="impact">Nicht nur verstehen, warum du etwas tust.<br>SONDERN AB SOFORT ANDERS TUN</div>
+      </article>
+    </div>
+    <div class="identity-quote">ICH MUSS MICH NICHT MEHR VERLASSEN, NUR DAMIT ANDERE BEI MIR BLEIBEN.</div>
+  </div>
+</section>
+
+<section class="live">
+  <div class="wrap live-grid">
+    <div>
+      
+      <h2>UND JETZT KOMMT DER TEIL, DER <span class="gt">ROOT TO RISE</span> BESONDERS MACHT.</h2>
+      <h2><span class="gt">DU BEKOMMST UNS.</span></h2>
+      <p>Nicht 52 Videos.<br>Nicht irgendeinen Selbstlernkurs über Selbstwert.<br>Und auch keinen hübschen Wochenimpuls, über den du anschließend ein bisschen journalst.</p>
+      <p class="kicker script">Wir arbeiten mit dir.</p>
+      <h3>7 Freitage lang.<br>Jeweils 2 Stunden<br>LIVE.</h3>
+      <p>Du kommst mit dem rein, was gerade wirklich da ist.</p>
+    </div>
+    <div class="bring">
+      <div>Du hattest ein Verkaufsgespräch und bist komplett eingeknickt? <b>Bring es mit.</b></div>
+      <div>Du willst etwas entscheiden und merkst, dass du wieder auf die Zustimmung anderer wartest? <b>Bring es mit.</b></div>
+      <div>Geld triggert dich gerade? <b>Bring es mit.</b></div>
+      <div>Du hast Angst vor deinem nächsten Schritt? <b>Bring es mit.</b></div>
+      <div>Jemand hat etwas gesagt und plötzlich zweifelst du wieder an dir? <b>Bring es mit.</b></div>
+      <div>Du weißt selbst nicht genau, warum du gerade festhängst? <b>Perfekt. Bring genau das mit.</b></div>
+    </div>
+  </div>
+  <div class="wrap editorial-callout">
+    <p>Wir fragen nach.<br>Wir spiegeln.<br>Wir transformieren.<br>Wir arbeiten mit geführten Prozessen.<br>Und wir bleiben nicht bei der ersten Antwort stehen, nur weil sie vernünftig klingt.</p>
+    <h2><span class="gt gt-big">DU MUSST NICHT GLAUBEN, DASS WIR „TIEF ARBEITEN“.<br>DU WIRST ES ERLEBEN.</span></h2>
+    <p>Manchmal ist das Problem, mit dem du in den Call kommst, gar nicht das Problem. Und genau da wird es interessant.</p>
+  </div>
+  <div class="narrow" style="padding-top:55px">
+    <p>Du bist selbst im 1 zu 1. Marina arbeitet mit einer anderen Frau und nach zwei Minuten denkst du: <strong>„Scheiße. Das mache ich auch.“</strong></p>
+    <p>Du hörst einen Satz, der dich den Rest der Woche nicht mehr loslässt. Du triffst endlich eine Entscheidung, die du seit Monaten vor dich her schiebst. Oder du reagierst plötzlich in einer Situation anders und merkst erst danach:</p>
+    <div class="moment-bg">
+    <p class="pullquote">Moment mal. Früher hätte ich das niemals so gemacht.</p>
+    <p>Genau darum geht es.</p>
+    <p><strong><span class="gt">ROOT TO RISE</span> soll nicht einfach sieben schöne Freitage produzieren.<br>Es bringt etwas in Bewegung das bleibt.</strong></p>
+    </div>
+  </div>
+</section>
+
+<section class="included">
+  <div class="wrap">
+    <div class="section-intro"><h2>WAS DU BEKOMMST</h2></div>
+    <div class="included-grid">
+      <div class="included-card"><h3>7 × ROOT TO RISE LIVE</h3><p>Jeden Freitag 2 Stunden persönliche Arbeit mit Marina & Vera.</p></div>
+      <div class="included-card"><h3>PERSÖNLICHE COACHINGS & HOT SEATS</h3><p>Mit dem, was bei dir und den Frauen im Raum gerade wirklich passiert.</p></div>
+      <div class="included-card"><h3>GEFÜHRTE PROZESSE</h3><p>Wenn Denken und Reden allein nicht reichen.</p></div>
+      <div class="included-card"><h3>ROOT → IDENTITY → MOMENTUM</h3><p>Damit wir nicht nur erkennen, sondern verändern und ins echte Leben bringen.</p></div>
+      <div class="included-card"><h3>WORKBOOK & INTEGRATION</h3><p>Für das, was zwischen zwei Freitagen passiert.</p></div>
+      <div class="included-card"><h3>GESCHLOSSENER BEGLEITUNGSRAUM</h3><p>Damit der Prozess nicht Freitag um 11 Uhr endet.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="forwho">
+  <div class="fw-top"><div class="wrap forwho-box">
+    
+    <h2><span class="gt">ROOT TO RISE</span> IST NICHT FÜR DIE FRAU, DIE GERETTET WERDEN WILL.</h2>
+    <p>Das hier ist kein:<br>„Mach mich erfolgreich.“<br>Kein:<br>„Sag mir bitte, was ich tun soll.“<br>Und auch kein:<br>„Löst ihr mal mein Leben für mich.“</p>
+    <p class="kicker">Wir wollen die Frau, die etwas vorhat.<br><span class="gt script">Die mehr will.</span></p>
+  </div></div>
+  <div class="fw-bottom"><div class="wrap forwho-box">
+    <div class="more"><span>Mehr Geld.</span><span>Mehr Erfolg.</span><span>Mehr Freiheit.</span><span>Mehr Wirkung.</span><span>Mehr von sich.</span></div>
+    <p>Und die bereit ist hinzuschauen, wenn sie merkt: <strong>Da ist etwas in mir, das mich immer wieder kleiner hält, als ich eigentlich sein will.</strong></p>
+    <p>Nicht um sich dafür fertigzumachen. Sondern weil sie keinen Bock hat, dieselbe Schleife noch fünf Jahre zu drehen.</p>
+    <h3>Wenn du diese Frau bist, bist du hier genau richtig.</h3>
+  </div></div>
+</section>
+
+<section class="proof">
+  <div class="wrap">
+    <div class="section-intro"><h2>WAS FRAUEN ÜBER UNSERE ARBEIT SAGEN</h2></div>
+    <div class="quotes">
+      <div class="quote"><p>„Es ist echt faszinierend, was sich in diesen 6 Tagen schon bei mir bewegt hat … Ich freue mich so sehr auf die 7 Wochen.“</p><strong>Verena Meier-Koll</strong></div>
+      <div class="quote"><p>„Ich bin zutiefst beeindruckt. Es ist der Verzicht auf jegliche Show, zugunsten von Authentizität!“</p><strong>Cristina Hornung</strong></div>
+      <div class="quote featured"><p>„Ich liebe die Zusammenarbeit mit Marina so sehr. Durch sie hat sich so viel in meinem Unternehmen erleichtert. Ich mache monatlich 6-stellige Umsätze.“</p><strong>Sigrid Aviana Waedt</strong></div>
+      <div class="quote"><p>Es ist eines der besten Seminare die je gebucht habe.</p><strong>NICOLE WAGNER</strong></div>
+    </div>
+  </div>
+</section>
+
+<section class="mv-section">
+  <div class="wrap">
+    <div class="mv-bg">
+    <div class="section-intro"><h3>MARINA & VERA</h3><h2>WIR WERDEN DIR NICHT ERZÄHLEN, DASS DU EINFACH NUR MEHR AN DICH GLAUBEN MUSST.</h2></div>
+    <div class="mentors">
+      <div class="mentor"><p>Marina begleitet seit über 20 Jahren Frauen und hat mit ihren Unternehmen Millionenumsätze aufgebaut. Mehr als 20.000 Frauen waren bereits in ihren Räumen.</p></div>
+      <div class="mentor"><p>Vera ist seit 22 Jahren selbstständig, davon 14 Jahre im Vertrieb, Expertin für Verkaufspsychologie und hat Millionenumsätze im Sales geschrieben.</p></div>
+    </div>
+    </div>
+    <div class="narrow" style="padding-top:48px;text-align:center">
+      <p>Schöne Zahlen.</p>
+      <p class="kicker kicker-black">Aber freitagmorgens geht es nicht um unsere.</p>
+      <h2><span class="gt script script-h">Sondern um dich.</span></h2>
+      <p>Wir wollen wissen:</p>
+      <p>Wo wirst du plötzlich klein?<br>Wo verlässt du dich selbst?<br>Wo weißt du eigentlich längst, was du willst, tust aber etwas anderes?<br>Und was liegt wirklich darunter?</p>
+      <h3><span class="gt script script-h">Genau dort fangen wir an.</span></h3>
+    </div>
+  </div>
+</section>
+
+<section class="business">
+  <div class="wrap">
+    <div class="copy">
+      
+      <h2><span class="gt gt-big">UND WAS IST MIT BUSINESS, MARKETING UND SALES?</span></h2>
+      <p><strong>Nicht hier.</strong></p>
+      <p>ROOT TO RISE ist bewusst <strong>nicht FIRST CHOICE light</strong>.</p>
+      <p>Wir bauen hier nicht sieben Wochen deinen Funnel, deine Positionierung oder deine Contentstrategie.</p>
+      <p>Das ist nicht der Job dieses Raumes.</p>
+      <p>ROOT TO RISE arbeitet mit der Frau, die später all diese Strategien umsetzen, Entscheidungen treffen, verkaufen, führen, Geld halten und Wachstum tragen soll.</p>
+      <p class="kicker">Denn du kannst die beste Strategie der Welt haben.</p>
+    </div>
+    <div class="reasons">
+      <div>Wenn du beim Preis einknickst, bringt sie dir wenig.</div>
+      <div>Wenn du dich nicht zeigst, bringt sie dir wenig.</div>
+      <div>Wenn du bei jedem Gegenwind deine Entscheidung änderst, bringt sie dir wenig.</div>
+      <div>Wenn mehr Erfolg automatisch mehr Druck in dir auslöst, wird Wachstum irgendwann verdammt anstrengend.</div>
+    </div>
+    <h3 style="margin-top:34px"><span class="gt gt-big">Genau deshalb gehen wir hier zuerst an dich.</span></h3>
+  </div>
+</section>
+
+<section class="offer" id="deal">
+  <div class="wrap">
+    <div class="offer-card">
+      
+      <h2>ROOT TO RISE</h2>
+      <p class="kicker">ROOT → IDENTITY → MOMENTUM</p>
+      <div class="offer-list"><span>7 Wochen</span><span>7 Freitage LIVE</span><span>Coachings & Hot Seats</span><span>Geführte Prozesse</span><span>Workbook & Integration</span><span>Begleitungsraum</span></div>
+      <p>Und sehr viel Raum für das, was <strong>bei dir</strong> wirklich los ist.</p>
+      <div class="price-big">333 €</div>
+      <div class="eyebrow" style="color:var(--muted);margin-bottom:25px">einmalig</div>
+      <a class="btn" href="#checkout">Ja. Ich will rein.</a>
+      <div class="deal-card deal-card-top deal-card-offer">
+      <div><div class="price">SPECIAL DEAL NUR 333€</div></div>
+      <div class="countdown" aria-label="Countdown">
+        <div class="timebox"><strong data-days>00</strong><small>Tage</small></div>
+        <div class="timebox"><strong data-hours>00</strong><small>Std</small></div>
+        <div class="timebox"><strong data-minutes>00</strong><small>Min</small></div>
+        <div class="timebox"><strong data-seconds>00</strong><small>Sek</small></div>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section class="wait">
+  <div class="narrow">
+    
+    <h2>DU KANNST NATÜRLICH NOCH EIN BISSCHEN WARTEN.</h2>
+    <p>Bis du mehr Zeit hast. Bis du weniger zweifelst. Bis du perfekt vorbereitet bist. Bis du dich endlich bereit fühlst.</p>
+    <p>Kleines Problem:</p>
+    <p class="pullquote"><span class="gt gt-block">Genau darauf wartest du wahrscheinlich schon eine ganze Weile, stimmt´s?</span></p>
+    <p><strong class="gt">ROOT TO RISE</strong> ist nicht für die Version von dir, die irgendwann keine Angst, Zweifel oder Trigger mehr hat.</p>
+    <p>Es ist für die Frau, die heute sagt:</p>
+    <p class="pullquote"><span class="gt gt-block">Ich habe keine Lust mehr, darauf zu warten, dass ich mich irgendwann anders fühle, bevor ich anders handle.</span></p>
+    <p>Und wenn gerade etwas in dir denkt:<br><strong class="gt fuck-line"><em>Fuck. Ja. Genau das will ich!</em></strong><br>Dann musst du daraus nicht wieder ein Drei-Tage-Denkprojekt machen.</p>
+  </div>
+</section>
+
+<section class="closed" id="closed">
+  <div class="wrap">
+    
+    <h2>DIE TÜR ZU <span class="gt gt-dark">ROOT TO RISE</span> SCHLIESST.</h2>
+    <p class="date">DONNERSTAG, 08.10.26 · 12 UHR</p>
+    <p>Diese Runde startet gemeinsam.<br>Wenn die Tür zu ist, ist sie zu.</p>
+    <div class="big-count">
+      <div class="timebox"><strong data-days>00</strong><small>Tage</small></div>
+      <div class="timebox"><strong data-hours>00</strong><small>Std</small></div>
+      <div class="timebox"><strong data-minutes>00</strong><small>Min</small></div>
+      <div class="timebox"><strong data-seconds>00</strong><small>Sek</small></div>
+    </div>
+    <a class="btn" href="#checkout">Ich bin dabei.</a>
+  </div>
+</section>
+
+<section class="final">
+  <div class="narrow">
+    <div class="pool-bg">
+    <h2>DU BRAUCHST NICHT NOCH EINE VERSION VON DIR, DIE ALLES RICHTIG MACHT.</h2>
+    <p class="kicker script">Du brauchst dich.</p>
+    <div class="lines">
+      <p>Die Frau, die weiß, was sie will.</p>
+      <p>Die sich selbst glaubt.</p>
+      <p>Die mehr will, ohne sich dafür zu entschuldigen.</p>
+      <p>Die ein Nein aushält.</p>
+      <p>Die ihren Wert nicht jedes Mal neu verhandelt.</p>
+      <p>Die sich nicht kleiner macht, wenn es größer wird.</p>
+      <p>Und die aufhört, sich selbst zu verlassen, sobald es unbequem wird.</p>
+    </div>
+    </div>
+    <h2 class="final-brand"><span class="gt">ROOT TO RISE</span></h2>
+    <div class="last">Nicht damit du jemand anderes wirst.<br><strong>Sondern damit endlich nichts mehr zwischen dir und deinem Erfolg steht.</strong></div>
+    <a class="btn" href="#checkout">Ja. Das ist meins.</a>
+  </div>
+</section>
+
+
+
+<section class="checkout" id="checkout">
+  <div class="wrap">
+    <script data-token='DqYZsooX2B6txDyJPPg8' id='embedable-form-script' src='https://myablefy.com/assets/embedable_form/index.js' defer></script>        <div id='embedable-form-wrapper'></div>
+  </div>
+</section>
+
+<div class="mobile-cta" id="floating-cta"><a class="btn" href="#checkout">Das will ich</a></div>
+
+<footer class="site-footer"><img src="../Bilder/Feminess-Logo-Gold.png" alt="Feminess"><div><a href="../Impressum/">Impressum</a><a href="../Datenschutz/">Datenschutz</a></div></footer>
+
+<script>
+(function(){
+  var cta=document.getElementById("floating-cta");
+  if(!cta||!("IntersectionObserver" in window)) return;
+  var seen=new Set();
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ e.isIntersecting?seen.add(e.target):seen.delete(e.target); });
+    cta.classList.toggle("is-hidden",seen.size>0);
+  });
+  document.querySelectorAll(".hero-top,.offer,.closed,.checkout,.site-footer").forEach(function(el){io.observe(el);});
+})();
+</script>
+<script>
+// Set the real deadline here, e.g. "2026-10-10T14:00:00+02:00".
+const DEADLINE = "2026-10-08T12:00:00+02:00";
+function pad(n){ return String(Math.max(0,n)).padStart(2,"0"); }
+function updateCountdown(){
+  let d=0,h=0,m=0,s=0;
+  if(DEADLINE){
+    const diff=Math.max(0,new Date(DEADLINE)-new Date());
+    d=Math.floor(diff/86400000); h=Math.floor(diff/3600000)%24;
+    m=Math.floor(diff/60000)%60; s=Math.floor(diff/1000)%60;
+  }
+  document.querySelectorAll("[data-days]").forEach(x=>x.textContent=pad(d));
+  document.querySelectorAll("[data-hours]").forEach(x=>x.textContent=pad(h));
+  document.querySelectorAll("[data-minutes]").forEach(x=>x.textContent=pad(m));
+  document.querySelectorAll("[data-seconds]").forEach(x=>x.textContent=pad(s));
+  document.querySelectorAll("[data-countdown]").forEach(x=>x.textContent=`${pad(d)} TAGE : ${pad(h)} STD : ${pad(m)} MIN : ${pad(s)} SEK`);
+}
+updateCountdown(); setInterval(updateCountdown,1000);
+</script>
+</body>
+</html>
