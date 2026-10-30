@@ -133,6 +133,26 @@ footer.site-footer a{color:inherit;margin:0 8px}
   footer.site-footer{padding-bottom:100px}
 }
 </style>
+<style id="gold-script">
+/* Gold-Verlauf + Schreibschrift */
+@font-face{font-family:'Amsterdam Four';src:url('../fonts/AmsterdamFour.woff') format('woff'),url('../fonts/AmsterdamFour.ttf') format('truetype');font-display:swap}
+:root{--gold-metal:linear-gradient(90deg,#8A6A3A 0%,#C9A24D 22%,#F3DFA8 45%,#C9A24D 68%,#8A6A3A 88%,#C9A24D 100%);--gold-metal-light:linear-gradient(90deg,#8A6A3A 0%,#C9A24D 50%,#8A6A3A 100%);--gold-metal-dark:linear-gradient(90deg,#C9A24D 0%,#F3DFA8 50%,#C9A24D 100%)}
+html{font-synthesis:none}
+.eyebrow,.statement,.quote,.hero .name,.hero .sub,.num,.pillar strong,.closing,.scene strong,.pill,.stage h3,.manifest .last,.faq summary:after{background-image:var(--gold-metal-light);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+.dark .eyebrow,.dark .statement,.dark .quote,.bg-dark .eyebrow,.hero .name,.hero .sub,.num,.pillar strong,.closing,.stage h3,.stage .pill,.moment .num{background-image:var(--gold-metal-dark)}
+.pill{border-color:#C9A24D}
+.hero .name,.eyebrow,.num,.pillar strong,.scene strong{display:block;width:fit-content}
+.center .eyebrow{margin-left:auto;margin-right:auto}
+.pill{display:inline-block}
+.btn{background:var(--gold-metal);background-size:220% 100%;box-shadow:0 12px 28px rgba(139,114,57,.30)}
+.btn:hover{background-position:100% 0}
+.script,.hero .sub,.quote,.script-line{font-family:'Amsterdam Four',cursive!important;font-style:normal!important;font-weight:400!important;letter-spacing:0!important;text-transform:none!important}
+.hero .sub{display:block;font-size:clamp(2.4rem,5.4vw,4rem);line-height:2.3;padding:14px 48px 14px 10px;margin-bottom:10px;width:fit-content;max-width:100%}
+.quote{font-size:clamp(2.1rem,4.6vw,3.3rem);line-height:2.2;padding:14px 40px;margin:10px 0}
+.script-line{font-size:clamp(2rem,4vw,3.1rem)!important;line-height:2.1!important;padding:14px 40px;margin:10px 0 0!important;text-wrap:balance}
+@media(max-width:800px){.hero .sub{font-size:2.05rem;padding:8px 24px 8px 4px;line-height:2.2}.quote{font-size:1.9rem;padding:10px 12px}.script-line{font-size:1.75rem!important;padding:10px 12px}}
+.quote.serif-q{padding:0;font-family:var(--serif)!important;font-style:italic!important;line-height:1.25!important;font-size:clamp(1.9rem,4vw,3rem)}
+</style>
 <style id="bg-images">
 .i-woman{--img:url("bg-woman.webp")}.i-moment{--img:url("bg-moment2.webp")}.i-arches{--img:url("bg-arches.webp")}
 .i-root{--img:url("bg-root.webp")}.i-momentum{--img:url("bg-momentum.webp")}.i-imagine{--img:url("bg-imagine.webp")}
@@ -172,7 +192,7 @@ footer.site-footer a{color:inherit;margin:0 8px}
     <p class="lead">Sondern eins, in dem du morgens aufstehst und dich auf den Tag freust. In dem du liebst, lachst, etwas wagst, viel Geld verdienst und außergewöhnliche Momente erlebst.</p>
     <p>Und irgendwann sagst:</p>
     <p class="quote">„Yes. War das ein geiles Leben.“</p>
-    <p class="statement">Dein Leben darf alles sein. Außer gewöhnlich.</p>
+    <p class="statement script-line">Dein Leben darf alles sein. Außer gewöhnlich.</p>
   </div></div>
 </section>
 
@@ -272,7 +292,7 @@ footer.site-footer a{color:inherit;margin:0 8px}
   <div class="wrap"><div class="narrow center">
     <div class="eyebrow">Woche 9</div>
     <h2>RISE DAY</h2>
-    <p class="statement" style="margin-top:0">Aus irgendwann wird JETZT.</p>
+    <p class="statement script-line">Aus irgendwann wird JETZT.</p>
     <p class="lead" style="margin-top:28px">Du sprichst aus, was du willst.</p>
     <p class="lead">Ohne „vielleicht“. Ohne deine Wünsche so klein zu machen, dass bloß niemand die Augen verdreht.</p>
     <p class="lead">Und hinter dir stehen Frauen, die wissen, wie viel Mut das manchmal braucht.</p>
@@ -321,7 +341,7 @@ footer.site-footer a{color:inherit;margin:0 8px}
     <p class="lead">Single, in einer Beziehung, mit Kindern oder ohne.</p>
     <p class="lead">25 oder 65.</p>
     <p class="lead">Du brauchst keinen perfekten Plan. Nur die Bereitschaft, ehrlich hinzuschauen und deine nächsten Schritte selbst zu gehen.</p>
-    <p class="quote">Wir sind keine Gruppe, die gemeinsam jammert. Wir sind Frauen, die noch richtig viel vorhaben.</p>
+    <p class="quote serif-q">Wir sind keine Gruppe, die gemeinsam jammert. Wir sind Frauen, die noch richtig viel vorhaben.</p>
   </div></div>
 </section>
 
