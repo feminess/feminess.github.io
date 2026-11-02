@@ -202,6 +202,13 @@ header.hero .name{font-size:3.1rem}
 header.hero .sub{font-size:2.55rem;width:auto;max-width:none;text-align:center;padding:.4em .2em;margin-left:0;margin-right:0}
 }
 </style>
+
+<style id="hero-fix-2">
+h2.big-h2{font-size:clamp(2.7rem,6vw,5.2rem);line-height:1.02}
+h2.big-h2 .ln{display:block;text-wrap:balance}
+h2.big-h2 .ln+.ln{margin-top:.4em}
+h2.big-h2-end{margin:34px 0 0}
+</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -224,12 +231,12 @@ header.hero .sub{font-size:2.55rem;width:auto;max-width:none;text-align:center;p
 
 <section class="section cream">
   <div class="wrap"><div class="narrow center">
-    <h2>Du hast nur dieses eine Leben. Wie hot soll es werden?</h2>
+    <h2 class="big-h2"><span class="ln">Du hast nur dieses eine Leben.</span><span class="ln">Wie hot soll es werden?</span></h2>
     <p class="lead">Nicht nur „lauwarm“. Nicht nur durchorganisiert. Nicht nur für alle anderen.</p>
     <p class="lead">Sondern eins, in dem du morgens aufstehst und dich auf den Tag freust. In dem du liebst, lachst, etwas wagst, viel Geld verdienst und außergewöhnliche Momente erlebst.</p>
     <p>Und irgendwann sagst:</p>
     <p class="quote">„Yes. War das ein geiles Leben.“</p>
-    <p class="statement script-line sl-nw"><span class="nw">Dein Leben darf alles sein.</span><br>Außer gewöhnlich.</p>
+    <h2 class="big-h2 big-h2-end"><span class="ln">Dein Leben darf alles sein.</span><span class="ln">Außer gewöhnlich.</span></h2>
   </div></div>
 </section>
 
