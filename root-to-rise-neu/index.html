@@ -157,7 +157,7 @@ html{font-synthesis:none}
 .quote{font-size:1.9rem;padding:.5em .6em}
 .script-line{font-size:min(1.75rem,7.4vw)!important;padding:.5em 1em}
 .script-line.sl-nw{font-size:min(1.75rem,calc(100vw/14.6))!important}
-.script-line.rd-script{font-size:min(2.7rem,10.4vw)!important}}
+.script-line.rd-script{font-size:min(2.7rem,calc(100vw/10.8))!important;margin-left:-21px!important;margin-right:-21px!important;width:auto;max-width:none;padding:.55em .8em}}
 .quote.serif-q{padding:0;font-family:var(--serif)!important;font-style:normal!important;line-height:1.25!important;font-size:clamp(1.9rem,4vw,3rem)}
 </style>
 <style id="bg-images">
@@ -176,7 +176,8 @@ html{font-synthesis:none}
 .aber-light{background-image:var(--gold-metal-dark);font-size:1.6em;line-height:1.05}
 .fb{font-weight:700;font-synthesis:weight}
 @media(min-width:801px){.script-line.rd-script{font-size:clamp(3rem,7.4vw,6.2rem)!important}}
-.script-line.rd-script{line-height:1.9!important;padding:.55em 1.05em;text-wrap:balance}
+.script-line.rd-script{line-height:1.9!important;padding:.55em 1.05em;white-space:nowrap}
+@media(min-width:801px){.script-line.rd-script{width:min(1120px,calc(100vw - 42px));max-width:none;margin-left:calc((100% - min(1120px,100vw - 42px))/2)!important;margin-right:0!important}}
 .statement-big{font-size:clamp(2rem,4.4vw,3.4rem);line-height:1.15}
 .section.sec-tight-b{padding-bottom:40px}
 .section.sec-tight-t{padding-top:50px}
