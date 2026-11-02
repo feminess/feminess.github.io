@@ -7,7 +7,7 @@
 <link rel="icon" href="https://feminess.de/wp-content/uploads/cropped-favicon@2x-1-32x32.png" sizes="32x32">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital,wght@0,400;1,400&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -17,121 +17,123 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 <style>
 :root {
-  --bg:         #0d2420;
-  --bg-alt:     #123830;
-  --green:      #1b5c50;
-  --sand:       #C9A24D;
-  --cream:      #f3ede2;
-  --cream-soft: rgba(243,237,226,0.68);
-  --hairline:   rgba(243,237,226,0.14);
-  --gold-a:     #8A6A3A;
-  --gold-b:     #C9A24D;
-  --gold-c:     #F3DFA8;
-  --gold-text:  linear-gradient(135deg, var(--gold-a) 0%, var(--gold-b) 45%, var(--gold-c) 70%, var(--gold-b) 100%);
-  --gold-btn:   linear-gradient(90deg, var(--gold-a) 0%, var(--gold-b) 25%, var(--gold-c) 50%, var(--gold-b) 75%, var(--gold-a) 100%);
+  --ivory:   #FAF6EF;
+  --beige:   #F2E9DA;
+  --tan:     #DED0B3;
+  --green:   #2C4734;
+  --emerald: #112E1F;
+  --text:    #10261E;
+  --muted:   #576954;
+  --gold-grad: linear-gradient(110deg, #8B7239 0%, #CBAB73 30%, #E2D0A6 50%, #CBAB73 72%, #8B7239 100%);
+  --gold-dark: linear-gradient(110deg, #6E5726 0%, #A88643 35%, #C4A163 55%, #A88643 75%, #6E5726 100%);
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 em, i { font-style: normal; }
 html { scroll-behavior: smooth; }
 body {
-  background: var(--bg);
-  color: var(--cream);
-  font-family: 'Manrope', sans-serif;
-  font-size: 15px;
+  background: var(--ivory);
+  color: var(--text);
+  font-family: 'Manrope', Arial, sans-serif;
+  font-size: 16px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
 
-.page { width: 100%; background: var(--bg); overflow: hidden; position: relative; }
+.page { width: 100%; overflow: hidden; }
 
-h1, h2, h3 { font-family: 'Instrument Serif', serif; font-weight: 400; color: var(--cream); }
+h1, h2 { font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; color: var(--text); }
 
 .gold-text {
-  background: var(--gold-text);
+  background-image: var(--gold-dark);
   -webkit-background-clip: text; background-clip: text;
   color: transparent; -webkit-text-fill-color: transparent;
 }
+
+/* ── TOP BANNER (Fortschritt) ── */
+.topbar { background: var(--gold-grad); color: var(--text); padding: 18px 22px; text-align: left; }
+.topbar-labels {
+  display: flex; justify-content: space-between; align-items: baseline;
+  font-weight: 800; font-size: 12px; letter-spacing: .1em; text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.topbar-track { height: 4px; border-radius: 999px; background: rgba(16,38,30,.2); overflow: hidden; }
+.topbar-fill { height: 100%; width: 90%; border-radius: 999px; background: var(--text); }
+
+/* ── SEKTIONEN (hell, mit weichen Übergängen) ── */
+section.block { padding: 72px 22px; text-align: center; }
+.s-ivory { background: var(--ivory); }
+.s-beige { background: var(--beige); background-image: linear-gradient(var(--ivory), rgba(250,246,239,0) 90px); }
+.s-dark  { background: var(--emerald); color: var(--beige); background-image: linear-gradient(var(--beige), rgba(242,233,218,0) 100px); }
+.s-tan   { background: var(--tan); background-image: linear-gradient(var(--emerald), rgba(17,46,31,0) 120px); }
 
 .eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: .16em;
-  text-transform: uppercase;
-  background: var(--gold-text);
-  -webkit-background-clip: text; background-clip: text;
-  color: transparent; -webkit-text-fill-color: transparent;
-  margin-bottom: 16px;
+  display: inline-flex; align-items: center; gap: 12px;
+  font-size: 11px; font-weight: 800; letter-spacing: .19em; text-transform: uppercase;
+  color: #8B7239; margin-bottom: 16px;
 }
-.eyebrow::after { content: ''; display: block; width: 40px; height: 1px; background: var(--sand); opacity: .6; -webkit-text-fill-color: initial; }
+.eyebrow::after { content: ''; display: block; width: 40px; height: 1px; background: currentColor; opacity: .5; }
+.s-dark .eyebrow { color: #CBAB73; }
 
-section { position: relative; padding: 72px 22px; text-align: center; }
-section.bg-alt { background: var(--bg-alt); }
-section + section { border-top: 1px solid var(--hairline); }
+.block h1, .block h2 { line-height: 1.1; letter-spacing: -.02em; margin: 0 auto 20px; }
+.block h1 { font-size: clamp(30px, 7.5vw, 44px); max-width: 24ch; }
+.block h2 { font-size: clamp(30px, 7vw, 42px); max-width: 28ch; }
+.s-dark h2 { color: var(--beige); }
+.s-dark .gold-text { background-image: var(--gold-grad); }
 
-.block h2 { font-size: clamp(28px, 6vw, 40px); line-height: 1.2; letter-spacing: -0.02em; margin: 0 auto 20px; max-width: 30ch; }
-
-p.lead { font-size: 16px; line-height: 1.65; color: var(--cream-soft); max-width: 40ch; margin: 0 auto 20px; }
+p.lead { font-size: 16px; line-height: 1.65; color: var(--text); max-width: 40ch; margin: 0 auto 20px; }
 p.lead:last-of-type { margin-bottom: 32px; }
-p.lead b, p.lead strong { color: var(--cream); font-weight: 700; }
+p.lead strong { font-weight: 700; }
+.s-dark p.lead { color: var(--beige); }
 
 .video-wrap {
-  width: 100%; max-width: 400px; margin: 0 auto 32px;
-  border-radius: 10px; overflow: hidden; border: 1px solid var(--hairline);
+  width: 100%; max-width: 420px; margin: 0 auto 8px;
+  border-radius: 10px; overflow: hidden;
+  border: 1px solid rgba(139,114,57,.25);
+  box-shadow: 0 8px 24px rgba(16,38,30,.18);
 }
 
-.microtext { font-size: 13px; color: var(--cream-soft); margin-top: 16px; }
+.microtext { font-size: 13px; color: var(--muted); margin-top: 16px; }
+.s-dark .microtext { color: rgba(242,233,218,.7); }
 
-/* ── BUTTONS ── */
+/* ── BUTTONS: eine Pille, Gold-Verlauf, dunkler Text ── */
 .cal-buttons { display: flex; flex-direction: column; gap: 14px; align-items: center; margin-top: 8px; }
-@keyframes pulse-btn {
-  0%, 100% { transform: scale(1);    box-shadow: 0 6px 28px rgba(138,106,58,.45); }
-  50%      { transform: scale(1.04); box-shadow: 0 14px 40px rgba(201,162,77,.65); }
+@keyframes pulse {
+  0%, 100% { transform: scale(1);    box-shadow: 0 6px 24px rgba(139,114,57,.35); }
+  50%      { transform: scale(1.04); box-shadow: 0 14px 40px rgba(203,171,115,.6); }
 }
-.cal-btn {
+.btn {
   display: flex; align-items: center; justify-content: center; gap: 10px;
-  width: 100%; max-width: 340px; min-height: 56px; padding: 0 24px;
-  background: var(--gold-btn);
-  color: var(--bg);
-  text-decoration: none;
-  font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 14px;
-  letter-spacing: .05em; text-transform: uppercase;
+  width: 100%; max-width: 340px; min-height: 54px; padding: 0 24px;
+  background: var(--gold-grad); color: var(--text);
+  font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 14px;
+  letter-spacing: .05em; text-transform: uppercase; text-decoration: none; text-align: center;
   border: none; border-radius: 999px; cursor: pointer;
-  animation: pulse-btn 2.2s ease-in-out infinite;
+  animation: pulse 2.2s ease-in-out infinite;
 }
-.cal-btn:hover { animation-play-state: paused; opacity: .92; }
-.cal-btn svg { width: 18px; height: 18px; flex-shrink: 0; }
-.cal-btn-emoji { font-size: 16px; line-height: 1; flex-shrink: 0; }
+.btn:hover { animation-play-state: paused; opacity: .92; }
+.btn svg { width: 18px; height: 18px; flex-shrink: 0; }
+.btn-emoji { font-size: 16px; line-height: 1; flex-shrink: 0; }
 
 /* ── FOOTER ── */
-.site-footer { background: var(--bg); border-top: 1px solid var(--hairline); padding: 28px 22px; text-align: center; }
-.footer-logo {
-  display: block;
-  width: 170px; height: 17px;
-  margin: 0 auto 16px;
-  background: var(--gold-text);
-  -webkit-mask-image: url('Bilder/Logo-mask.png');
-  mask-image: url('Bilder/Logo-mask.png');
-  -webkit-mask-size: contain; mask-size: contain;
-  -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
-  -webkit-mask-position: center; mask-position: center;
+.site-footer {
+  background: var(--emerald); background-image: linear-gradient(var(--tan), rgba(222,208,179,0) 70px);
+  padding: 64px 22px 32px; text-align: center; font-size: 12px; color: rgba(242,233,218,.6);
 }
-.footer-links { display: flex; justify-content: center; gap: 20px; list-style: none; margin-bottom: 10px; }
-.footer-links a { color: var(--cream-soft); text-decoration: none; font-size: 12px; letter-spacing: .04em; }
-.footer-links a:hover { color: var(--cream); text-decoration: underline; }
-.footer-copyright { font-size: 12px; color: var(--cream-soft); }
+.site-footer img { display: block; width: 150px; margin: 0 auto 14px; }
+.site-footer a { color: inherit; margin: 0 8px; text-decoration: none; }
+.site-footer a:hover { color: var(--beige); text-decoration: underline; }
+.site-footer p { margin-top: 10px; }
 
 @media (min-width: 900px) {
-  section { padding: 100px 60px; }
   body { font-size: 17px; }
-  .block h2 { font-size: clamp(32px, 3.4vw, 46px); }
+  section.block { padding: 100px 60px; }
+  .block h1 { font-size: clamp(40px, 4vw, 56px); max-width: 26ch; }
+  .block h2 { font-size: clamp(34px, 3.4vw, 46px); }
   p.lead { font-size: 18px; max-width: 52ch; }
-  .cal-buttons { flex-direction: row; flex-wrap: wrap; justify-content: center; }
-  .cal-btn { width: auto; min-width: 260px; font-size: 15px; }
   .video-wrap { max-width: 560px; }
+  .cal-buttons { flex-direction: row; flex-wrap: wrap; justify-content: center; }
+  .btn { width: auto; min-width: 260px; max-width: none; font-size: 15px; }
 }
 </style>
 </head>
@@ -143,20 +145,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <main class="page">
 
-  <!-- ── PROGRESS ── -->
-  <section style="padding:22px; text-align:left; background:var(--gold-btn);">
-    <div style="display:flex; justify-content:space-between; align-items:baseline; font-family:'Manrope',sans-serif; font-weight:800; font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:var(--bg); margin-bottom:10px;">
+  <!-- ── TOP BANNER / FORTSCHRITT ── -->
+  <div class="topbar">
+    <div class="topbar-labels">
       <span>Nur noch ein Schritt</span>
       <span>100 %</span>
     </div>
-    <div style="height:4px; border-radius:999px; background:rgba(13,36,32,0.25); overflow:hidden;">
-      <div style="height:100%; width:90%; border-radius:999px; background:var(--bg);"></div>
+    <div class="topbar-track">
+      <div class="topbar-fill"></div>
     </div>
-  </section>
+  </div>
 
   <!-- ── INTRO / VIDEO ── -->
-  <section class="block bg-alt">
-    <h1 style="font-size:clamp(26px,6.5vw,38px); line-height:1.15; margin-bottom:20px;">Achtung! Nur noch <span class="gold-text">ein Schritt</span>, um deine Anmeldung abzuschließen.</h1>
+  <section class="block s-ivory">
+    <h1>Achtung! Nur noch <span class="gold-text">ein Schritt</span>, um deine Anmeldung abzuschließen.</h1>
 
     <p class="lead">Schau dir kurz das Video an und folge den Schritten unten.</p>
 
@@ -166,16 +168,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
 
   <!-- ── SCHRITT 1: KALENDER ── -->
-  <section class="block">
+  <section class="block s-beige">
     <span class="eyebrow">Schritt 1</span>
     <h2>Trage dir jetzt den <span class="gold-text">Termin in deinen Kalender</span> und tritt unserer exklusiven <span class="gold-text">Telegram Community</span> bei:</h2>
 
     <p class="lead">Klicke hier, um dir den Termin in den Kalender einzutragen. Wenn du LIVE dabei bist, erlebst du die volle Energie der Masterclass und kannst deine Fragen stellen - was in einer Aufzeichnung nicht möglich ist.</p>
 
-    <p class="lead">Die Masterclass findet am <strong>1. Oktober</strong> von <strong>11 bis 13 Uhr</strong> statt.</p>
+    <p class="lead">Die Masterclass findet am <strong>12. November</strong> von <strong>11 bis 13 Uhr</strong> statt.</p>
 
     <div class="cal-buttons">
-      <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Feminess%20Webinar%20%E2%80%93%20Energy%20for%20Million&dates=20261001T090000Z/20261001T110000Z&details=Dein%20Webinar-Termin%20mit%20Feminess.%20Den%20Zugangslink%20erh%C3%A4ltst%20du%20per%20E-Mail.&location=Online%20(Link%20per%20E-Mail)" target="_blank" rel="noopener" class="cal-btn">
+      <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Feminess%20Webinar%20%E2%80%93%20Energy%20for%20Million&dates=20261112T100000Z/20261112T120000Z&details=Dein%20Webinar-Termin%20mit%20Feminess.%20Den%20Zugangslink%20erh%C3%A4ltst%20du%20per%20E-Mail.&location=Online%20(Link%20per%20E-Mail)" target="_blank" rel="noopener" class="btn">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <rect x="3" y="4" width="18" height="18" rx="2"/>
           <line x1="16" y1="2" x2="16" y2="6"/>
@@ -184,15 +186,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </svg>
         Google Kalender
       </a>
-      <a href="webinar-termin.ics" download class="cal-btn">
-        <span class="cal-btn-emoji" aria-hidden="true">📅</span>
+      <a href="webinar-termin.ics" download class="btn">
+        <span class="btn-emoji" aria-hidden="true">📅</span>
         Sonstige Kalender
       </a>
     </div>
   </section>
 
   <!-- ── SCHRITT 2: TELEGRAM ── -->
-  <section class="block bg-alt">
+  <section class="block s-dark">
     <span class="eyebrow">Schritt 2</span>
     <h2>Warte nicht auf das Webinar.<br>Fang <span class="gold-text">jetzt</span> an.</h2>
 
@@ -205,7 +207,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p class="lead">Raus aus dem Kopf, in dem du sonst allein bist. Rein in einen geschützten Raum, der dich trägt und in deine volle Energie bringt, ohne dass du dich erklären musst.</p>
 
     <div class="cal-buttons">
-      <a href="https://t.me/+jMPD3ni3hgo0YWU6" target="_blank" rel="noopener" class="cal-btn">
+      <a href="https://t.me/+jMPD3ni3hgo0YWU6" target="_blank" rel="noopener" class="btn">
         <svg viewBox="0 0 24 24" fill="currentColor">
           <path d="M21.05 3.16 2.7 10.3c-1.24.5-1.24 1.2-.23 1.5l4.7 1.47 1.8 5.5c.22.6.4.85.8.85.35 0 .5-.16.7-.35l1.9-1.85 4.75 3.5c.87.48 1.5.23 1.72-.8l3.12-14.7c.3-1.27-.48-1.85-1.31-1.55Zm-11.3 10.8-.4 4.2-1.6-4.9 9.4-8.5c.24-.2-.05-.32-.36-.13L8.1 12.3Z"/>
         </svg>
@@ -217,12 +219,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
 
   <!-- ── SCHRITT 3: UMFRAGE ── -->
-  <section class="block">
+  <section class="block s-tan">
     <span class="eyebrow">Schritt 3</span>
     <h2>Fülle jetzt die <span class="gold-text">Umfrage</span> aus, damit wir das Webinar gezielt auf deine <span class="gold-text">Wünsche</span> und <span class="gold-text">Herausforderungen</span> anpassen können:</h2>
 
     <div class="cal-buttons">
-      <a href="https://forms.gle/G33o4ZvN9FreosLb8" target="_blank" rel="noopener" class="cal-btn">
+      <a href="https://forms.gle/G33o4ZvN9FreosLb8" target="_blank" rel="noopener" class="btn">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M9 4h6a1 1 0 0 1 1 1v1H8V5a1 1 0 0 1 1-1Z"/>
           <rect x="5" y="6" width="14" height="15" rx="2"/>
@@ -236,12 +238,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <!-- ── FOOTER ── -->
   <footer class="site-footer">
-    <span class="footer-logo" role="img" aria-label="Feminess"></span>
-    <ul class="footer-links">
-      <li><a href="https://feminess.github.io/Datenschutz/">Datenschutzerklärung</a></li>
-      <li><a href="https://feminess.github.io/Impressum/">Impressum</a></li>
-    </ul>
-    <div class="footer-copyright">© 2026 FEMINESS – MARINA HENZE</div>
+    <img src="../Bilder/Feminess-Logo-Gold.png" alt="Feminess">
+    <div>
+      <a href="https://feminess.github.io/Datenschutz/">Datenschutzerklärung</a>
+      <a href="https://feminess.github.io/Impressum/">Impressum</a>
+    </div>
+    <p>© 2026 FEMINESS – MARINA HENZE</p>
   </footer>
 
 </main>
