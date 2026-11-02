@@ -187,8 +187,6 @@ html{font-synthesis:none}
 .h2-fit{width:fit-content;max-width:100%}
 @media(max-width:800px){.aber-light{font-size:1.4em}}
 .h-center{display:block;text-align:right}
-.bio-img{display:block;width:170px;height:170px;aspect-ratio:1/1;object-fit:cover;object-position:50% 22%;border-radius:50%;margin:0 auto 20px;border:3px solid var(--gold-soft);box-shadow:0 10px 30px rgba(18,35,29,.15)}
-.scene-bio{padding:20px 20px 26px}
 .rows .row{text-align:center}
 .ll{font-family:var(--serif);font-weight:400;font-size:1.5em;line-height:1}
 .aber.schluss{font-size:1.2em;line-height:1}
@@ -196,6 +194,12 @@ html{font-synthesis:none}
 @media(min-width:801px){.script-line.sl-left{font-size:min(6.4rem,calc(min(1120px,100vw - 42px)/11.8))!important;width:min(1120px,calc(100vw - 42px));max-width:none;margin-left:calc((100% - min(1120px,100vw - 42px))/2)!important;margin-right:0!important;text-align:center;line-height:1.7!important}}
 @media(max-width:800px){.script-line.sl-left{font-size:min(2.6rem,calc(100vw/11.4))!important;padding:.5em .8em;margin-left:-21px!important;margin-right:-21px!important;width:auto;max-width:none}}
 .keepcase{text-transform:none;letter-spacing:.14em}
+.scene-bio{position:relative;display:flex;flex-direction:column;justify-content:flex-end;min-height:560px;padding:28px 26px;color:#f5efe5;background-color:var(--forest);background-repeat:no-repeat;background-size:cover;background-position:50% 8%;border-radius:4px 20px 20px 4px;overflow:hidden}
+.scene-bio.bio-marina{background-image:linear-gradient(180deg,rgba(8,26,21,0) 38%,rgba(8,26,21,.72) 62%,rgba(8,26,21,.94) 100%),url("marina-portrait.jpg")}
+.scene-bio.bio-vera{background-image:linear-gradient(180deg,rgba(8,26,21,0) 38%,rgba(8,26,21,.72) 62%,rgba(8,26,21,.94) 100%),url("vera-portrait.jpg")}
+.scene-bio strong{background-image:var(--gold-metal-dark);margin-bottom:8px;font-size:2rem}
+.scene-bio{text-shadow:0 1px 10px rgba(0,0,0,.35)}
+@media(max-width:800px){.scene-bio{min-height:500px}}
 .statement-xl{font-size:clamp(2.1rem,4.8vw,4rem);line-height:1.1;margin:46px 0 0}
 .lead-gap{margin-top:44px}
 .statement-ink{font-size:clamp(2.25rem,5vw,4.6rem);line-height:1.05;letter-spacing:-.025em;margin-top:40px;background-image:none;-webkit-background-clip:border-box;background-clip:border-box;-webkit-text-fill-color:var(--ink);color:var(--ink)}
@@ -443,8 +447,8 @@ h2.big-h2-end{margin:34px 0 0}
     <div class="eyebrow">Marina &amp; Vera</div>
     <h2>Wir werden dir nicht erzählen, dass du einfach nur mehr an dich glauben musst.</h2>
     <div class="scenes">
-      <div class="scene scene-bio"><img class="bio-img" src="marina-portrait.jpg" alt="Marina" loading="lazy"><strong>Marina</strong>begleitet seit über 20 Jahren Frauen und hat mit ihren Unternehmen Millionenumsätze aufgebaut. Mehr als 20.000 Frauen waren bereits in ihren Räumen.</div>
-      <div class="scene scene-bio"><img class="bio-img" src="vera-portrait.jpg" alt="Vera" loading="lazy"><strong>Vera</strong>ist seit 22 Jahren selbstständig, davon 14 Jahre im Vertrieb, Expertin für Verkaufspsychologie und hat Millionenumsätze im Sales geschrieben.</div>
+      <div class="scene scene-bio bio-marina" role="img" aria-label="Marina"><strong>Marina</strong>begleitet seit über 20 Jahren Frauen und hat mit ihren Unternehmen Millionenumsätze aufgebaut. Mehr als 20.000 Frauen waren bereits in ihren Räumen.</div>
+      <div class="scene scene-bio bio-vera" role="img" aria-label="Vera"><strong>Vera</strong>ist seit 22 Jahren selbstständig, davon 14 Jahre im Vertrieb, Expertin für Verkaufspsychologie und hat Millionenumsätze im Sales geschrieben.</div>
     </div>
   </div></div>
 </section>
