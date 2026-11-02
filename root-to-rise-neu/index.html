@@ -86,6 +86,8 @@ a{text-decoration:none}
 .pill{display:inline-block;border:1px solid var(--gold);color:var(--gold-dark);border-radius:40px;padding:7px 16px;margin:6px 0 22px;font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
 .timeline{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:40px}
 .stage{padding:40px 36px;border-radius:20px;color:#f5efe5;background-image:var(--ov-dark),var(--img);background-size:cover;background-position:center}
+.timeline-single{grid-template-columns:1fr}
+.stage .pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));column-gap:36px}
 .stage h3{font-size:clamp(2.8rem,5vw,4.4rem);margin-bottom:8px}
 .stage .pill{color:var(--gold-soft)}
 .stage .lead{color:rgba(255,255,255,.9)}
@@ -316,23 +318,17 @@ h2.big-h2-end{margin:34px 0 0}
     <h2>Keine weitere <span class="fb">„Du musst nur positiv denken“</span> Nummer.</h2>
     <p class="lead">Wir reden nicht sechs Monate darüber, was du irgendwann mal machen könntest.</p>
     <p class="lead">Wir gehen mit dir zu deinem großen Wunsch, zur echten Entscheidung und dann mitten rein ins Leben.</p>
-    <div class="timeline">
+    <div class="timeline timeline-single">
       <div class="stage stage-root">
         <h3>ROOT</h3>
         <span class="pill">Woche 1–9 · Mit Marina</span>
         <p class="lead">Was willst du wirklich und was steht dir noch im Weg?</p>
+        <div class="pillars">
         <div class="pillar"><strong>VISION</strong><div class="serif">Die Freiheit, groß zu träumen.</div><p>Was willst du in diesem Leben noch alles erleben, erreichen und haben? Und was wäre möglich, wenn du dir dabei keine Grenzen setzen würdest?</p></div>
         <div class="pillar"><strong>IDENTITÄT</strong><div class="serif">Die Freiheit, du selbst zu sein.</div><p>Nicht mehr die brave Tochter, die perfekte Mutter oder die Frau, die es allen recht macht. Sondern endlich so sein, wie du wirklich bist. Ohne dich ständig erklären zu müssen.</p></div>
         <div class="pillar"><strong>MUT</strong><div class="serif">Die Freiheit, deinen eigenen Weg zu gehen.</div><p>Die Entscheidung treffen, vor der du dich schon ewig drückst. Auch wenn andere den Kopf schütteln und dein Herz bis zum Hals klopft.</p></div>
+        </div>
         <p class="closing">Jede Woche 2 Stunden live.</p>
-      </div>
-      <div class="stage stage-rise">
-        <h3>RISE</h3>
-        <span class="pill">Woche 10–26 · Mit Vera oder Marina</span>
-        <p class="lead">Jetzt wird aus deinem Plan dein echtes Leben.</p>
-        <div class="pillar"><strong>WACHSTUM</strong><div class="serif">Die Freiheit, über dich hinauszuwachsen.</div><p>Du entdeckst, was alles in dir steckt. Meisterst Herausforderungen, die dir früher Angst gemacht haben, und bist plötzlich stolz auf Dinge, die du dir selbst nie zugetraut hättest.</p></div>
-        <div class="pillar"><strong>FÜLLE</strong><div class="serif">Die Freiheit, das Leben in vollen Zügen zu genießen.</div><p>Geld, das dir Möglichkeiten eröffnet. Liebe, die dich glücklich macht. Zeit für spontane Abenteuer. Und diese Momente, in denen du denkst: „Verdammt, ist das Leben schön!“</p></div>
-        <p class="closing">Jede Woche 1 Stunde live.</p>
       </div>
     </div>
   </div>
@@ -349,6 +345,23 @@ h2.big-h2-end{margin:34px 0 0}
     <p class="statement">Eine Entscheidung ist noch nicht das ganze Leben.</p>
     <p class="statement" style="margin-top:8px">Aber sie kann viel in Bewegung bringen.</p>
   </div></div>
+</section>
+
+<section class="section cream">
+  <div class="wrap">
+    <div class="timeline timeline-single">
+      <div class="stage stage-rise">
+        <h3>RISE</h3>
+        <span class="pill">Woche 10–26 · Mit Vera oder Marina</span>
+        <p class="lead">Jetzt wird aus deinem Plan dein echtes Leben.</p>
+        <div class="pillars">
+        <div class="pillar"><strong>WACHSTUM</strong><div class="serif">Die Freiheit, über dich hinauszuwachsen.</div><p>Du entdeckst, was alles in dir steckt. Meisterst Herausforderungen, die dir früher Angst gemacht haben, und bist plötzlich stolz auf Dinge, die du dir selbst nie zugetraut hättest.</p></div>
+        <div class="pillar"><strong>FÜLLE</strong><div class="serif">Die Freiheit, das Leben in vollen Zügen zu genießen.</div><p>Geld, das dir Möglichkeiten eröffnet. Liebe, die dich glücklich macht. Zeit für spontane Abenteuer. Und diese Momente, in denen du denkst: „Verdammt, ist das Leben schön!“</p></div>
+        </div>
+        <p class="closing">Jede Woche 1 Stunde live.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section class="section cream">
