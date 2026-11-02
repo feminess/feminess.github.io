@@ -1,19 +1,19 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Feminess//Energy for Million//DE
+PRODID:-//Feminess//ROOT TO RISE//DE
 BEGIN:VEVENT
-UID:energy-for-million-20261112@feminess.de
+UID:root-to-rise-20261112@feminess.de
 DTSTAMP:20261102T000000Z
 DTSTART:20261112T100000Z
 DTEND:20261112T120000Z
-SUMMARY:Feminess Webinar – Energy for Million
+SUMMARY:ROOT TO RISE – Free & Live Webinar
 DESCRIPTION:Dein Webinar-Termin mit Feminess. Den Zugangslink erhältst du per E-Mail.
 LOCATION:Online (Link per E-Mail)
 STATUS:CONFIRMED
 BEGIN:VALARM
 TRIGGER:-PT30M
 ACTION:DISPLAY
-DESCRIPTION:Energy for Million startet in 30 Minuten
+DESCRIPTION:ROOT TO RISE startet in 30 Minuten
 END:VALARM
 END:VEVENT
 END:VCALENDAR
