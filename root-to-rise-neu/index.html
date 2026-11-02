@@ -181,7 +181,6 @@ html{font-synthesis:none}
 .section.sec-tight-b{padding-bottom:40px}
 .section.sec-tight-t{padding-top:50px}
 .section.sec-tight-t2{padding-top:36px}
-@media(min-width:801px){.script-line.sl-left{margin-left:0!important;margin-right:auto!important;text-align:left}}
 .statement-mid{font-size:clamp(1.9rem,4vw,3.1rem);line-height:1.15}
 .quote .ql{display:block;font-family:var(--sans)!important;font-size:clamp(1.08rem,2vw,1.3rem);line-height:1.65;font-weight:400;background:none;-webkit-text-fill-color:rgba(255,255,255,.86);color:rgba(255,255,255,.86);padding:0 .3em .15em}
 .h2-fit{width:fit-content;max-width:100%}
@@ -192,6 +191,9 @@ html{font-synthesis:none}
 .rows .row:nth-child(2),.rows .row:nth-child(4){text-align:center}
 .ll{font-family:var(--serif);font-weight:400;font-size:1.25em;line-height:1}
 .aber.schluss{font-size:1.2em;line-height:1}
+.nw2{white-space:nowrap}
+@media(min-width:801px){.script-line.sl-left{font-size:min(6.4rem,calc(min(1120px,100vw - 42px)/11.8))!important;width:min(1120px,calc(100vw - 42px));max-width:none;margin-left:calc((100% - min(1120px,100vw - 42px))/2)!important;margin-right:0!important;text-align:center;line-height:1.7!important}}
+@media(max-width:800px){.script-line.sl-left{font-size:min(2.6rem,calc(100vw/11.4))!important;padding:.5em .8em;margin-left:-21px!important;margin-right:-21px!important;width:auto;max-width:none}}
 .statement-xl{font-size:clamp(2.1rem,4.8vw,4rem);line-height:1.1;margin:46px 0 0}
 .lead-gap{margin-top:44px}
 .statement-ink{font-size:clamp(2.25rem,5vw,4.6rem);line-height:1.05;letter-spacing:-.025em;margin-top:40px;background-image:none;-webkit-background-clip:border-box;background-clip:border-box;-webkit-text-fill-color:var(--ink);color:var(--ink)}
@@ -387,7 +389,7 @@ h2.big-h2-end{margin:34px 0 0}
     <p class="lead">Montag klingelt der Wecker und alles läuft wieder wie vorher.</p>
     <p class="lead">Bei ROOT TO RISE kommt nach der Entscheidung nicht das große „Viel Erfolg dann!“.</p>
     <p class="lead">Sondern weitere 17 Wochen, in denen wir dich bei deinen echten Schritten begleiten.</p>
-    <p class="statement script-line sl-left">Nicht nur wissen, was du willst.<br>Sondern anfangen, es zu leben.</p>
+    <p class="statement script-line sl-left"><span class="nw2">Nicht nur wissen, was du willst.</span><br><span class="nw2">Sondern anfangen, es zu leben.</span></p>
   </div></div>
 </section>
 
