@@ -63,9 +63,11 @@ h1, h2 { font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; colo
 /* ── SEKTIONEN (hell, mit weichen Übergängen) ── */
 section.block { padding: 72px 22px; text-align: center; }
 .s-ivory { background: var(--ivory); }
-.s-beige { background: var(--beige); background-image: linear-gradient(var(--ivory), rgba(250,246,239,0) 90px); }
+.s-beige { background: var(--beige); }
 section.s-ivory { padding-bottom: 24px; }
 section.s-beige { padding-top: 40px; }
+section.s-intro { padding-bottom: 0; }
+section.s-beige:not(.s-intro) { padding-top: 24px; }
 .s-dark  { background: var(--emerald); color: var(--beige); }
 .s-tan   { background: var(--tan); }
 
@@ -170,7 +172,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 
   <!-- ── INTRO / VIDEO ── -->
-  <section class="block s-ivory">
+  <section class="block s-beige s-intro">
     <h1>Achtung! Nur noch <span class="gold-text">wenige Schritte</span>, um deine Anmeldung abzuschließen.</h1>
   </section>
 
