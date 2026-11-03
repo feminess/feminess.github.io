@@ -277,8 +277,10 @@ h2.big-h2-end{margin:34px 0 0}
 .pcard p{margin:0;color:rgba(255,255,255,.82);font-size:1rem}
 .i-goldspheres .offer-card{background:rgba(255,253,248,.3);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border:1px solid rgba(243,223,168,.35);box-shadow:none;color:#f5efe5}
 .i-goldspheres .offer-card .features li{border-bottom-color:rgba(243,223,168,.3)}
-.master-rtr{background:linear-gradient(rgba(10,18,14,.5),rgba(10,18,14,.62)),url("master-bg.webp") 62% center/cover no-repeat #1a1a14;background-attachment:scroll,fixed;color:#f5efe5}
-@media(max-width:800px){.master-rtr{background-attachment:scroll}}
+.master-rtr{background:#1a1a14;color:#f5efe5;position:relative}
+.master-rtr>.master-bg{position:sticky;top:0;width:100%;height:100vh;height:100lvh;margin-bottom:-100vh;margin-bottom:-100lvh;background:linear-gradient(rgba(10,18,14,.5),rgba(10,18,14,.62)),url("master-bg.webp") 62% center/cover no-repeat;z-index:0;pointer-events:none;margin-top:-110px}
+@media(max-width:800px){.master-rtr>.master-bg{margin-top:-72px}}
+.master-rtr>*:not(.master-bg){position:relative;z-index:1}
 .master-intro{max-width:900px;margin-bottom:56px}
 .mi-eyebrow{font-size:clamp(1.05rem,2vw,1.25rem);line-height:1.6;color:#F3DFA8;margin-bottom:14px}
 .mi-title{font-size:clamp(2.8rem,6vw,5.2rem);line-height:.95;letter-spacing:-.03em;color:#FAF6EF;margin-bottom:28px}
@@ -362,6 +364,7 @@ h2.big-h2-end{margin:34px 0 0}
 </section>
 
 <section class="section master-rtr" id="reise">
+  <div class="master-bg"></div>
   <div class="wrap">
     <div class="master-intro">
       <div class="mi-eyebrow">Deine nächsten 7 Wochen</div>
