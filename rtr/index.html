@@ -282,15 +282,22 @@ h2.big-h2-end{margin:34px 0 0}
 .master-intro{max-width:900px;margin-bottom:56px}
 .mi-eyebrow{font-size:clamp(1.05rem,2vw,1.25rem);line-height:1.6;color:#F3DFA8;margin-bottom:14px}
 .mi-title{font-size:clamp(2.8rem,6vw,5.2rem);line-height:.95;letter-spacing:-.03em;color:#FAF6EF;margin-bottom:28px}
-.mi-title .gl{background-image:linear-gradient(110deg,#E2C37A 0%,#F3DFA8 50%,#E2C37A 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;padding-bottom:.06em}
+.mi-title .gl{background-image:linear-gradient(110deg,#D4A93F 0%,#F3DFA8 50%,#D4A93F 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;padding-bottom:.06em}
 .mi-lead{font-size:clamp(1.08rem,2vw,1.3rem);line-height:1.65;color:rgba(255,255,255,.9)}
-.mi-statement{font-family:var(--serif);font-size:clamp(1.5rem,3vw,2.2rem);line-height:1.25;color:#F3DFA8;margin:30px 0 0}
+.mi-statement{font-family:var(--serif);font-size:clamp(1.5rem,3vw,2.2rem);line-height:1.25;color:#fff;margin:30px 0 0}
 .final-sec .eyebrow{background-image:none;-webkit-text-fill-color:#fff;color:#fff}
 .final-sec h2{background-image:var(--gold-metal-dark);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;padding-bottom:.08em}
 .mach{font-size:clamp(2.75rem,4.6vw,4.25rem);line-height:1.05;letter-spacing:-.025em;color:#f5efe5;text-align:center;margin:0 0 28px}
 .mach-eyebrow{margin-left:auto;margin-right:auto;text-align:center}
 .mach-gold{display:block;text-align:center;font-size:1.4em;line-height:1.1;margin-top:.12em;padding:0 3px .08em;background-image:linear-gradient(90deg,#c9a24d 0%,#f3dfa8 50%,#c9a24d 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
 .moments{margin-top:44px}
+.statement.ink,.statement.wh,.quote.wh{background-image:none}
+.statement.ink{-webkit-text-fill-color:var(--ink);color:var(--ink)}
+.statement.wh,.quote.wh{-webkit-text-fill-color:#fff;color:#fff}
+.gd,.gk{padding:0 .04em .06em;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+.gd{background-image:linear-gradient(110deg,#D4A93F 0%,#F3DFA8 50%,#D4A93F 100%)}
+.gk{background-image:linear-gradient(110deg,#6b4f1d 0%,#9a7424 50%,#6b4f1d 100%)}
+.mi-statement .gl{background-image:linear-gradient(110deg,#D4A93F 0%,#F3DFA8 50%,#D4A93F 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
 .i-palm .statement{background-image:linear-gradient(90deg,#5a4216,#7a5a22 50%,#5a4216)}
 .pcards{margin-top:0}
 .pcard{background:rgba(250,246,239,.74);color:var(--ink);border:1px solid rgba(255,255,255,.35);border-left:1px solid rgba(255,255,255,.35);border-radius:16px;box-shadow:none;padding:36px 30px 40px;max-width:none;flex:1 1 300px}
@@ -335,7 +342,7 @@ h2.big-h2-end{margin:34px 0 0}
     <h2>Aber diesmal soll es nicht bei „Irgendwann“ bleiben.</h2>
     <p class="lead">Freitag voller Energie. Samstag voller Pläne. Montag klingelt der Wecker und plötzlich läuft alles wieder wie vorher.</p>
     <p class="lead">Alte Gewohnheiten, Zweifel und der ganz normale Alltag sind schneller zurück, als dir lieb ist.</p>
-    <p class="statement">Genau deshalb gibt es ROOT TO RISE.</p>
+    <p class="statement ink">Genau deshalb gibt es <span class="gk">ROOT TO RISE.</span></p>
     <p class="lead" style="margin-top:26px">Damit aus „Yes, ich will mehr!“ echte Schritte zu deinem Ziel werden und du in sieben Wochen stolz auf Dinge zurückblickst, die du endlich angepackt hast.</p>
   </div></div>
 </section>
@@ -350,7 +357,7 @@ h2.big-h2-end{margin:34px 0 0}
       <div class="moment">Du gönnst dir mehr vom Leben, ohne ständig ein schlechtes Gewissen zu haben.</div>
       <div class="moment">Und du schaust in den Spiegel und denkst:<br><span class="fb">„Yes. Auf die Frau bin ich stolz!“</span></div>
     </div>
-    <p class="statement statement-mid" style="margin-top:40px">Nicht, weil plötzlich alles perfekt ist. Sondern weil du angefangen hast, dein Leben nach deinen eigenen Vorstellungen zu gestalten.</p>
+    <p class="statement statement-mid wh" style="margin-top:40px">Nicht, weil plötzlich alles perfekt ist. Sondern weil du angefangen hast, dein <span class="gd">Leben nach deinen eigenen Vorstellungen</span> zu gestalten.</p>
   </div>
 </section>
 
@@ -358,10 +365,10 @@ h2.big-h2-end{margin:34px 0 0}
   <div class="wrap">
     <div class="master-intro">
       <div class="mi-eyebrow">Deine nächsten 7 Wochen</div>
-      <h2 class="mi-title">Deine Wünsche sind groß. <span class="gl">Jetzt werden deine Entscheidungen es auch.</span></h2>
+      <h2 class="mi-title">Deine Wünsche sind groß. Jetzt werden <span class="gl">deine Entscheidungen</span> es auch.</h2>
       <p class="mi-lead">Keine 52 Videos. Kein weiterer Kurs, der ungesehen auf deiner Festplatte landet.</p>
       <p class="mi-lead">Sondern sieben Wochen persönliche Live-Begleitung, in denen du erkennst, was dich bisher zurückgehalten hat, alte Muster veränderst und anfängst, dein Leben nach deinen eigenen Vorstellungen zu gestalten.</p>
-      <p class="mi-statement">5 Säulen. 7 Wochen. Dein Leben nach deinen Regeln.</p>
+      <p class="mi-statement">5 Säulen. 7 Wochen. <span class="gl">Dein Leben nach deinen Regeln.</span></p>
     </div>
     <div class="pcards">
   <div class="pcard"><b>01 · VISION</b><h3>Die Freiheit, groß zu träumen.</h3><p>Was willst du in diesem Leben noch alles erleben, erreichen und haben? Und was wäre möglich, wenn du dir dabei keine Grenzen setzen würdest?</p></div>
@@ -375,7 +382,7 @@ h2.big-h2-end{margin:34px 0 0}
 
 <section class="section cream sec-tight-t">
   <div class="wrap"><div class="narrow center">
-    <p class="statement statement-mid" style="margin-top:0">Und das Beste: Du fängst nicht erst nach den sieben Wochen an, dein Leben zu verändern.</p>
+    <p class="statement statement-mid ink" style="margin-top:0">Und das Beste: Du fängst <span class="gk">nicht erst nach den sieben Wochen</span> an, dein Leben zu verändern.</p>
     <p class="lead" style="margin-top:26px">Du setzt deine Erkenntnisse direkt um, triffst Entscheidungen, die du bisher aufgeschoben hast, und machst Dinge anders als bisher. Marina &amp; Vera begleiten dich dabei – vom ersten bis zum letzten Tag.</p>
   </div></div>
 </section>
@@ -401,7 +408,7 @@ h2.big-h2-end{margin:34px 0 0}
   <div class="wrap"><div class="narrow center">
     <div class="eyebrow">Dein nächstes Kapitel beginnt hier.</div>
     <h2>ROOT TO RISE</h2>
-    <p class="statement statement-mid" style="margin-top:0">7 Wochen, in denen du anfängst, dein Leben nach deinen eigenen Regeln zu gestalten.</p>
+    <p class="statement statement-mid ink" style="margin-top:0">7 Wochen, in denen du anfängst, dein Leben <span class="gk">nach deinen eigenen Regeln</span> zu gestalten.</p>
     <p class="price price-light"><span class="gold-num">333 EUR</span><span class="price-sub">einmalig</span></p>
     <p class="lead">7 Wochen persönliche Live-Begleitung mit Marina &amp; Vera.</p>
     <p class="lead">Du musst niemanden um Erlaubnis fragen. Du musst nicht warten, bis alles perfekt ist.</p>
@@ -420,7 +427,7 @@ h2.big-h2-end{margin:34px 0 0}
     <p class="lead">Du hast heute gesehen, was möglich wäre.</p>
     <p class="lead">Jetzt kannst du wieder warten, bis irgendwann alles passt.</p>
     <p class="lead">Oder du entscheidest, dass dein Leben nicht länger auf irgendwann warten muss.</p>
-    <p class="quote serif-q" style="margin-top:34px;margin-bottom:0">Du hast nur dieses eine Leben.</p>
+    <p class="quote serif-q wh" style="margin-top:34px;margin-bottom:0">Du hast nur dieses eine Leben.</p>
     <p class="statement script-line">Wie hot soll es werden?</p>
     <a class="btn" href="#checkout">Yes. Ab jetzt!</a>
   </div></div>
