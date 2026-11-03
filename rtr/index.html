@@ -275,6 +275,20 @@ h2.big-h2-end{margin:34px 0 0}
 .pcard p{margin:0;color:rgba(255,255,255,.82);font-size:1rem}
 .i-goldspheres .offer-card{background:rgba(255,253,248,.3);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border:1px solid rgba(243,223,168,.35);box-shadow:none;color:#f5efe5}
 .i-goldspheres .offer-card .features li{border-bottom-color:rgba(243,223,168,.3)}
+.master-rtr{background:linear-gradient(rgba(10,18,14,.5),rgba(10,18,14,.62)),url("master-bg.webp") 62% center/cover no-repeat #1a1a14;background-attachment:scroll,fixed;color:#f5efe5}
+@media(max-width:800px){.master-rtr{background-attachment:scroll}}
+.master-intro{max-width:900px;margin-bottom:56px}
+.mi-eyebrow{font-size:clamp(1.05rem,2vw,1.25rem);line-height:1.6;color:#F3DFA8;margin-bottom:14px}
+.mi-title{font-size:clamp(2.8rem,6vw,5.2rem);line-height:.95;letter-spacing:-.03em;color:#FAF6EF;margin-bottom:28px}
+.mi-title .gl{background-image:linear-gradient(110deg,#E2C37A 0%,#F3DFA8 50%,#E2C37A 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;padding-bottom:.06em}
+.mi-lead{font-size:clamp(1.08rem,2vw,1.3rem);line-height:1.65;color:rgba(255,255,255,.9)}
+.mi-statement{font-family:var(--serif);font-size:clamp(1.5rem,3vw,2.2rem);line-height:1.25;color:#F3DFA8;margin:30px 0 0}
+.pcards{margin-top:0}
+.pcard{background:rgba(250,246,239,.74);color:var(--ink);border:1px solid rgba(255,255,255,.35);border-left:1px solid rgba(255,255,255,.35);border-radius:16px;box-shadow:none;padding:36px 30px 40px;max-width:none;flex:1 1 300px}
+.pcard b{display:block;font:800 .95rem/1 var(--sans);letter-spacing:.14em;color:#8B6A22;margin:0 0 12px}
+.pcard h3{font-family:var(--serif);font-size:clamp(1.9rem,3vw,2.3rem);line-height:.98;letter-spacing:-.03em;margin:0 0 14px}
+.pcard p{color:var(--ink);font-size:1.05rem;line-height:1.45;margin:0}
+@media(min-width:1000px){.pcard{flex:0 1 calc(33.333% - 14px)}}
 </style>
 </head>
 <body>
@@ -330,21 +344,21 @@ h2.big-h2-end{margin:34px 0 0}
   </div>
 </section>
 
-<section class="section cream bg bg-light i-cliffsun" id="reise">
+<section class="section master-rtr" id="reise">
   <div class="wrap">
-    <div class="narrow">
-      <div class="eyebrow">Deine nächsten 7 Wochen</div>
-      <h2>Deine Wünsche sind groß. Jetzt werden deine Entscheidungen es auch.</h2>
-      <p class="lead">Keine 52 Videos. Kein weiterer Kurs, der ungesehen auf deiner Festplatte landet.</p>
-      <p class="lead">Sondern sieben Wochen persönliche Live-Begleitung, in denen du erkennst, was dich bisher zurückgehalten hat, alte Muster veränderst und anfängst, dein Leben nach deinen eigenen Vorstellungen zu gestalten.</p>
-      <p class="statement">5 Säulen. 7 Wochen. Dein Leben nach deinen Regeln.</p>
+    <div class="master-intro">
+      <div class="mi-eyebrow">Deine nächsten 7 Wochen</div>
+      <h2 class="mi-title">Deine Wünsche sind groß. <span class="gl">Jetzt werden deine Entscheidungen es auch.</span></h2>
+      <p class="mi-lead">Keine 52 Videos. Kein weiterer Kurs, der ungesehen auf deiner Festplatte landet.</p>
+      <p class="mi-lead">Sondern sieben Wochen persönliche Live-Begleitung, in denen du erkennst, was dich bisher zurückgehalten hat, alte Muster veränderst und anfängst, dein Leben nach deinen eigenen Vorstellungen zu gestalten.</p>
+      <p class="mi-statement">5 Säulen. 7 Wochen. Dein Leben nach deinen Regeln.</p>
     </div>
     <div class="pcards">
-  <div class="pcard"><strong>01 · VISION</strong><div class="serif">Die Freiheit, groß zu träumen.</div><p>Was willst du in diesem Leben noch alles erleben, erreichen und haben? Und was wäre möglich, wenn du dir dabei keine Grenzen setzen würdest?</p></div>
-  <div class="pcard"><strong>02 · IDENTITÄT</strong><div class="serif">Die Freiheit, du selbst zu sein.</div><p>Nicht mehr die brave Tochter, die perfekte Mutter oder die Frau, die es allen recht macht. Sondern endlich so sein, wie du wirklich bist. Ohne dich ständig erklären zu müssen.</p></div>
-  <div class="pcard"><strong>03 · MUT</strong><div class="serif">Die Freiheit, deinen eigenen Weg zu gehen.</div><p>Die Entscheidung treffen, vor der du dich schon ewig drückst. Auch wenn andere den Kopf schütteln und dein Herz bis zum Hals klopft.</p></div>
-  <div class="pcard"><strong>04 · WACHSTUM</strong><div class="serif">Die Freiheit, über dich hinauszuwachsen.</div><p>Du entdeckst, was alles in dir steckt. Meisterst Herausforderungen, die dir früher Angst gemacht haben, und bist plötzlich stolz auf Dinge, die du dir selbst nie zugetraut hättest.</p></div>
-  <div class="pcard"><strong>05 · FÜLLE</strong><div class="serif">Die Freiheit, das Leben in vollen Zügen zu genießen.</div><p>Geld, das dir Möglichkeiten eröffnet. Liebe, die dich glücklich macht. Zeit für spontane Abenteuer. Und diese Momente, in denen du denkst: „Oh ja, ist das Leben schön!“</p></div>
+  <div class="pcard"><b>01 · VISION</b><h3>Die Freiheit, groß zu träumen.</h3><p>Was willst du in diesem Leben noch alles erleben, erreichen und haben? Und was wäre möglich, wenn du dir dabei keine Grenzen setzen würdest?</p></div>
+  <div class="pcard"><b>02 · IDENTITÄT</b><h3>Die Freiheit, du selbst zu sein.</h3><p>Nicht mehr die brave Tochter, die perfekte Mutter oder die Frau, die es allen recht macht. Sondern endlich so sein, wie du wirklich bist. Ohne dich ständig erklären zu müssen.</p></div>
+  <div class="pcard"><b>03 · MUT</b><h3>Die Freiheit, deinen eigenen Weg zu gehen.</h3><p>Die Entscheidung treffen, vor der du dich schon ewig drückst. Auch wenn andere den Kopf schütteln und dein Herz bis zum Hals klopft.</p></div>
+  <div class="pcard"><b>04 · WACHSTUM</b><h3>Die Freiheit, über dich hinauszuwachsen.</h3><p>Du entdeckst, was alles in dir steckt. Meisterst Herausforderungen, die dir früher Angst gemacht haben, und bist plötzlich stolz auf Dinge, die du dir selbst nie zugetraut hättest.</p></div>
+  <div class="pcard"><b>05 · FÜLLE</b><h3>Die Freiheit, das Leben in vollen Zügen zu genießen.</h3><p>Geld, das dir Möglichkeiten eröffnet. Liebe, die dich glücklich macht. Zeit für spontane Abenteuer. Und diese Momente, in denen du denkst: „Oh ja, ist das Leben schön!“</p></div>
 </div>
   </div>
 </section>
