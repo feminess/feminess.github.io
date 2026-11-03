@@ -258,6 +258,21 @@ h2.big-h2-end{margin:34px 0 0}
 .countdown-light span{color:var(--gold-dark)}
 .small{font-size:.85rem;color:var(--muted);margin-top:18px}
 .checkout-slot{margin-top:30px;padding:60px 30px;border:2px dashed var(--gold);border-radius:20px;color:var(--muted);background:rgba(255,255,255,.5)}
+.i-spheresilk.offer-strip.bg-light{background-image:linear-gradient(180deg,rgba(255,253,248,.66),rgba(255,253,248,.78)),var(--img)}
+.offer-strip{padding-top:140px}
+.offer-strip .eyebrow{background-image:linear-gradient(90deg,#6b4f1d,#8a6a3a 50%,#6b4f1d)}
+.offer-strip::before{content:"";position:absolute;left:0;right:0;top:0;height:110px;background:linear-gradient(180deg,#0e2924 0%,rgba(14,41,36,.5) 45%,rgba(14,41,36,0) 100%);pointer-events:none}
+.offer-strip .wrap{position:relative}
+.offer-strip .lead{color:var(--ink)}
+.i-palm.bg-light.palm-warm{background-image:linear-gradient(180deg,rgba(245,239,229,.2),rgba(245,239,229,.34)),var(--img)}
+.i-cliffsun.bg-light{background-image:linear-gradient(180deg,rgba(255,253,248,.82),rgba(255,253,248,.9)),var(--img)}
+.pcards{display:flex;flex-wrap:wrap;justify-content:center;gap:20px;margin-top:44px}
+.pcard{flex:1 1 320px;max-width:360px;padding:30px 28px;background:var(--forest);color:#f5efe5;border-radius:4px 20px 20px 4px;border-left:3px solid #C9A24D;box-shadow:var(--shadow)}
+.pcard strong{display:block;width:fit-content;font-size:clamp(1.3rem,2.4vw,1.7rem);letter-spacing:.14em;line-height:1.3;margin-bottom:12px;padding-bottom:.1em;background-image:var(--gold-metal-dark);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+.pcard .serif{font-family:var(--serif);font-size:clamp(1.5rem,2.6vw,1.9rem);line-height:1.2;margin-bottom:10px}
+.pcard p{margin:0;color:rgba(255,255,255,.82);font-size:1rem}
+.i-goldspheres .offer-card{background:rgba(255,253,248,.3);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border:1px solid rgba(243,223,168,.35);box-shadow:none;color:#f5efe5}
+.i-goldspheres .offer-card .features li{border-bottom-color:rgba(243,223,168,.3)}
 </style>
 </head>
 <body>
@@ -277,18 +292,18 @@ h2.big-h2-end{margin:34px 0 0}
   </div></div>
 </header>
 
-<section class="section dark bg bg-dark i-spheresilk offer-strip">
+<section class="section cream bg bg-light i-spheresilk offer-strip">
   <div class="wrap"><div class="narrow center">
     <div class="eyebrow">Die besondere 7-Wochen-Live-Edition</div>
     <p class="lead">7 Wochen LIVE mit Marina &amp; Vera. Für Frauen, die nicht länger nur von ihrem MEHR träumen, sondern endlich dafür losgehen.</p>
-    <p class="price"><span class="gold-num">333 €</span><span class="price-sub">einmalig</span></p>
+    <p class="price price-light"><span class="gold-num">333 €</span><span class="price-sub">einmalig</span></p>
     <a class="btn" href="#checkout">Yes, ich bin dabei!</a>
-    <p class="cd-label">Dieses exklusive Angebot endet in:</p>
-    <div class="countdown" data-end="2026-11-14T12:00:00+01:00"><div><b data-u="d">00</b><span>Tage</span></div><div><b data-u="h">00</b><span>Stunden</span></div><div><b data-u="m">00</b><span>Minuten</span></div><div><b data-u="s">00</b><span>Sekunden</span></div></div>
+    <p class="cd-label cd-label-light">Dieses exklusive Angebot endet in:</p>
+    <div class="countdown countdown-light" data-end="2026-11-14T12:00:00+01:00"><div><b data-u="d">00</b><span>Tage</span></div><div><b data-u="h">00</b><span>Stunden</span></div><div><b data-u="m">00</b><span>Minuten</span></div><div><b data-u="s">00</b><span>Sekunden</span></div></div>
   </div></div>
 </section>
 
-<section class="section cream bg bg-light i-palm">
+<section class="section cream bg bg-light i-palm palm-warm">
   <div class="wrap"><div class="narrow center">
     <div class="eyebrow">Du weißt jetzt, dass du MEHR willst.</div>
     <h2>Aber diesmal soll es nicht bei „Irgendwann“ bleiben.</h2>
@@ -322,17 +337,13 @@ h2.big-h2-end{margin:34px 0 0}
       <p class="lead">Sondern sieben Wochen persönliche Live-Begleitung, in denen du erkennst, was dich bisher zurückgehalten hat, alte Muster veränderst und anfängst, dein Leben nach deinen eigenen Vorstellungen zu gestalten.</p>
       <p class="statement">5 Säulen. 7 Wochen. Dein Leben nach deinen Regeln.</p>
     </div>
-    <div class="timeline timeline-single">
-      <div class="stage stage-root">
-        <div class="pillars">
-          <div class="pillar"><strong>01 · VISION</strong><div class="serif">Die Freiheit, groß zu träumen.</div><p>Was willst du in diesem Leben noch alles erleben, erreichen und haben? Und was wäre möglich, wenn du dir dabei keine Grenzen setzen würdest?</p></div>
-          <div class="pillar"><strong>02 · IDENTITÄT</strong><div class="serif">Die Freiheit, du selbst zu sein.</div><p>Nicht mehr die brave Tochter, die perfekte Mutter oder die Frau, die es allen recht macht. Sondern endlich so sein, wie du wirklich bist. Ohne dich ständig erklären zu müssen.</p></div>
-          <div class="pillar"><strong>03 · MUT</strong><div class="serif">Die Freiheit, deinen eigenen Weg zu gehen.</div><p>Die Entscheidung treffen, vor der du dich schon ewig drückst. Auch wenn andere den Kopf schütteln und dein Herz bis zum Hals klopft.</p></div>
-          <div class="pillar"><strong>04 · WACHSTUM</strong><div class="serif">Die Freiheit, über dich hinauszuwachsen.</div><p>Du entdeckst, was alles in dir steckt. Meisterst Herausforderungen, die dir früher Angst gemacht haben, und bist plötzlich stolz auf Dinge, die du dir selbst nie zugetraut hättest.</p></div>
-          <div class="pillar"><strong>05 · FÜLLE</strong><div class="serif">Die Freiheit, das Leben in vollen Zügen zu genießen.</div><p>Geld, das dir Möglichkeiten eröffnet. Liebe, die dich glücklich macht. Zeit für spontane Abenteuer. Und diese Momente, in denen du denkst: „Oh ja, ist das Leben schön!“</p></div>
-        </div>
-      </div>
-    </div>
+    <div class="pcards">
+  <div class="pcard"><strong>01 · VISION</strong><div class="serif">Die Freiheit, groß zu träumen.</div><p>Was willst du in diesem Leben noch alles erleben, erreichen und haben? Und was wäre möglich, wenn du dir dabei keine Grenzen setzen würdest?</p></div>
+  <div class="pcard"><strong>02 · IDENTITÄT</strong><div class="serif">Die Freiheit, du selbst zu sein.</div><p>Nicht mehr die brave Tochter, die perfekte Mutter oder die Frau, die es allen recht macht. Sondern endlich so sein, wie du wirklich bist. Ohne dich ständig erklären zu müssen.</p></div>
+  <div class="pcard"><strong>03 · MUT</strong><div class="serif">Die Freiheit, deinen eigenen Weg zu gehen.</div><p>Die Entscheidung treffen, vor der du dich schon ewig drückst. Auch wenn andere den Kopf schütteln und dein Herz bis zum Hals klopft.</p></div>
+  <div class="pcard"><strong>04 · WACHSTUM</strong><div class="serif">Die Freiheit, über dich hinauszuwachsen.</div><p>Du entdeckst, was alles in dir steckt. Meisterst Herausforderungen, die dir früher Angst gemacht haben, und bist plötzlich stolz auf Dinge, die du dir selbst nie zugetraut hättest.</p></div>
+  <div class="pcard"><strong>05 · FÜLLE</strong><div class="serif">Die Freiheit, das Leben in vollen Zügen zu genießen.</div><p>Geld, das dir Möglichkeiten eröffnet. Liebe, die dich glücklich macht. Zeit für spontane Abenteuer. Und diese Momente, in denen du denkst: „Oh ja, ist das Leben schön!“</p></div>
+</div>
   </div>
 </section>
 
