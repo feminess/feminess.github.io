@@ -1714,7 +1714,7 @@ document.addEventListener('mouseleave',function(e){if(e.clientY<10&&!exitShown&&
 })();/* Mobil: Amsterdam Four fuellt die Breite, letzte Zeile min. 2 Woerter */
 (function(){
 var sel='.italic,.hero .sub,.final p.center-lines b';
-function list(){return [].slice.call(document.querySelectorAll(sel))}
+function list(){return [].slice.call(document.querySelectorAll(sel)).filter(function(e){return !e.closest(".marina")})}
 function lines(e){var r=document.createRange();r.selectNodeContents(e);var s={},bad=0,mx=e.clientWidth-30;[].forEach.call(r.getClientRects(),function(x){if(x.width>2){s[Math.round(x.top/6)]=1;if(x.width>mx)bad=1}});return bad?99:Object.keys(s).length}
 function nb(e){if(e.getAttribute('data-nb')||e.querySelector('br'))return;e.setAttribute('data-nb','1');var w=e.textContent.trim().split(/\s+/);if(w.length>3){var l=w.pop();e.textContent=w.join(' ')+' '+l}}
 function fit(e){
