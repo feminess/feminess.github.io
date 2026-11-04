@@ -306,7 +306,7 @@ h2.big-h2-end{margin:34px 0 0}
 .statement.ink,.statement.wh,.quote.wh{background-image:none}
 .statement.ink{-webkit-text-fill-color:var(--ink);color:var(--ink)}
 .statement.wh,.quote.wh{-webkit-text-fill-color:#fff;color:#fff}
-.gd,.gk{padding:0 .04em .06em;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+.gd,.gk{white-space:nowrap;padding:0 .04em .06em;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
 .gd{background-image:linear-gradient(110deg,#E6BE5A 0%,#FBEBB8 50%,#E6BE5A 100%)}
 .gk{background-image:linear-gradient(110deg,#B88F3B 0%,#CFA94F 50%,#B88F3B 100%)}
 .mi-statement .gl{background-image:linear-gradient(110deg,#E6BE5A 0%,#FBEBB8 50%,#E6BE5A 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
@@ -320,7 +320,10 @@ h2.big-h2-end{margin:34px 0 0}
 .i-sunset{--img:url("sunset.webp");background-position:center}
 @media(max-width:800px){.i-sunset{--img:url("sunset-m.webp")}}
 .i-sunset.terrace-soft.bg-light{background-image:linear-gradient(180deg,rgba(255,253,248,.66),rgba(255,253,248,.76)),var(--img);background-size:cover;background-position:center}
-@media(max-width:800px){.i-sunset.terrace-soft.bg-light{background-image:linear-gradient(180deg,rgba(255,253,248,.78) 0%,rgba(255,253,248,.55) 22%,rgba(255,253,248,.42) 55%,rgba(255,253,248,.62) 100%),var(--img);background-position:center}}
+@media(max-width:800px){.i-sunset.terrace-soft.bg-light{background-image:linear-gradient(180deg,rgba(255,253,248,.78) 0%,rgba(255,253,248,.55) 22%,rgba(255,253,248,.52) 55%,rgba(255,253,248,.66) 100%),var(--img);background-position:center}}
+.statement.big-st{font-size:clamp(1.8rem,3.6vw,2.7rem)}
+.statement.gold-all{background-image:linear-gradient(110deg,#E6BE5A 0%,#FBEBB8 50%,#E6BE5A 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;padding-bottom:.06em}
+@media(max-width:800px){.h2-irgend{font-size:calc(100vw/10.3);text-wrap:balance}}
 .i-palm .statement{background-image:linear-gradient(110deg,#B88F3B 0%,#CFA94F 50%,#B88F3B 100%)}
 .pcards{margin-top:0}
 .pcard{background:rgba(250,246,239,.74);color:var(--ink);border:1px solid rgba(255,255,255,.35);border-left:1px solid rgba(255,255,255,.35);border-radius:16px;box-shadow:none;padding:36px 30px 40px;max-width:none;flex:1 1 300px}
@@ -362,10 +365,10 @@ h2.big-h2-end{margin:34px 0 0}
 <section class="section cream bg bg-light i-sunset terrace-soft">
   <div class="wrap"><div class="narrow center">
     <div class="eyebrow">Du weißt jetzt, dass du MEHR willst.</div>
-    <h2>Aber diesmal soll es nicht bei „Irgendwann“ bleiben.</h2>
+    <h2 class="h2-irgend">Aber diesmal soll es nicht bei „Irgendwann“ bleiben.</h2>
     <p class="lead">Freitag voller Energie. Samstag voller Pläne. Montag klingelt der Wecker und plötzlich läuft alles wieder wie vorher.</p>
     <p class="lead">Alte Gewohnheiten, Zweifel und der ganz normale Alltag sind schneller zurück, als dir lieb ist.</p>
-    <p class="statement ink">Genau deshalb gibt es <span class="gk">ROOT to RISE.</span></p>
+    <p class="statement ink big-st">Genau deshalb gibt es <span class="gk">ROOT to RISE.</span></p>
     <p class="lead" style="margin-top:26px">Damit aus „Yes, ich will mehr!“ echte Schritte zu deinem Ziel werden und du in sieben Wochen stolz auf Dinge zurückblickst, die du endlich angepackt hast.</p>
   </div></div>
 </section>
@@ -380,7 +383,7 @@ h2.big-h2-end{margin:34px 0 0}
       <div class="moment">Du gönnst dir mehr vom Leben, ohne ständig ein schlechtes Gewissen zu haben.</div>
       <div class="moment">Und du schaust in den Spiegel und denkst:<br><span class="fb">„Yes. Auf die Frau bin ich stolz!“</span></div>
     </div>
-    <p class="statement statement-mid wh" style="margin-top:40px">Nicht, weil plötzlich alles perfekt ist. Sondern weil du angefangen hast, dein <span class="gd">Leben nach deinen eigenen Vorstellungen</span> zu gestalten.</p>
+    <p class="statement statement-mid gold-all" style="margin-top:40px">Nicht, weil plötzlich alles perfekt ist. Sondern weil du angefangen hast, dein Leben nach deinen eigenen Vorstellungen zu gestalten.</p>
   </div>
 </section>
 
