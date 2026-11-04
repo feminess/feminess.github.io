@@ -600,6 +600,29 @@ h1 em, h2 em, h3 em { font-style: normal; color: inherit; }
 @media (min-width:900px){ .section-includes { background:#f5efe5 !important; } }
 .includes-headline { color:#10261E !important; }
 .includes-intro { color:#2C4734 !important; }
+
+/* ── Redesign im webinar-Stil ── */
+.hero-confirm { position:relative; padding-bottom:110px; }
+.hero-confirm::after { content:''; position:absolute; left:0; right:0; bottom:0; height:140px; background:linear-gradient(to bottom, rgba(17,46,31,0), #f5efe5); pointer-events:none; }
+.hero-confirm { background: linear-gradient(rgba(8,22,16,.5), rgba(8,22,16,.72)), url('img/hero-mobile.webp') center/cover no-repeat #112E1F !important; }
+@media (min-width:900px){ .hero-confirm { background: linear-gradient(rgba(8,22,16,.5), rgba(8,22,16,.72)), url('img/hero-desktop.webp') center/cover no-repeat #112E1F !important; } }
+.hero-confirm > * { position:relative; z-index:1; }
+.section-includes { padding:56px 0 70px; }
+.includes-intro { color:#8B7239 !important; letter-spacing:.2em; }
+.includes-headline { font-size:clamp(44px,11vw,76px) !important; line-height:.92 !important; letter-spacing:-0.055em !important; text-transform:uppercase; }
+.includes-headline .gold-text { color:#B8923F !important; -webkit-text-fill-color:#B8923F !important; }
+.include-item { background: linear-gradient(rgba(8,26,21,.25), rgba(8,26,21,.4)), url('../root-to-rise/greensilk-m.webp') center/cover no-repeat #102b24 !important; border-radius:22px; padding:26px 24px; }
+.include-item-body h3 { font-size:clamp(34px,8vw,44px); line-height:1; }
+.value-summary { background: linear-gradient(rgba(8,22,16,.62), rgba(8,22,16,.78)), url('../Bilder/FEMINESS_gold_silk_oben_links_1zu1_highres.png') center/cover no-repeat #112E1F !important; border:2px solid #C9A24D; border-radius:22px; }
+.section-cta-2 { padding:0 0 72px; background:#112E1F !important; }
+.cta-photo { height:520px; background:url('img/marina.png') center 18%/cover no-repeat; -webkit-mask-image:linear-gradient(to bottom, transparent 0%, #000 22%, #000 55%, transparent 100%); mask-image:linear-gradient(to bottom, transparent 0%, #000 22%, #000 55%, transparent 100%); margin-bottom:-170px; position:relative; }
+.section-cta-2 .container { position:relative; z-index:1; }
+.section-cta-2 h2 { font-size:clamp(46px,11vw,80px) !important; line-height:.92 !important; letter-spacing:-0.055em !important; text-transform:uppercase; }
+@media (min-width:900px){ .cta-photo{ height:640px; max-width:520px; margin:0 auto -200px; } }
+.includes-headline { font-size:clamp(34px,8.6vw,76px) !important; }
+.cta-photo { height:440px; margin-bottom:-20px !important; -webkit-mask-image:linear-gradient(to bottom, transparent 0%, #000 20%, #000 50%, transparent 95%); mask-image:linear-gradient(to bottom, transparent 0%, #000 20%, #000 50%, transparent 95%); }
+@media (min-width:900px){ .cta-photo{ height:560px; margin:0 auto -20px !important; } }
+.section-cta-2 h2 { line-height:1.04 !important; }
 </style>
 </head>
 <body>
@@ -704,6 +727,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- ── ZWEITE CTA ── -->
 <section class="section-cta-2">
+  <div class="cta-photo" role="img" aria-label="Marina Henze"></div>
   <div class="container">
     <h2>Jetzt <span class="gold-text">VIP-Upgrade</span> sichern<br><em>bevor es zu spät ist.</em></h2>
     <p>Dieses Angebot gilt nur auf dieser Seite und nur einmal.<br>Sobald du weitergehst, ist es weg.</p>
