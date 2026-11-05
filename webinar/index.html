@@ -1654,7 +1654,7 @@ window._load_script = function(url, callback, isSubmit) {
         stylesheetLink.rel = 'stylesheet';
         stylesheetLink.href = 'https://cdn.jsdelivr.net/npm/intl-tel-input@25.2.0/build/css/intlTelInput.css';
         document.head.appendChild(stylesheetLink);
-        window._load_script('https://cdn.jsdelivr.net/npm/intl-tel-input@25.2.0/build/js/intlTelInput.min.js', function() {
+        window._load_script('https://cdn.jsdelivr.net/npm/intl-tel-input@25.2.0/build/js/intlTelInputWithUtils.min.js', function() {
             inputPhone.setAttribute("name", "phone-iti");
             iti = intlTelInput(inputPhone, {
                 hiddenInput: function(telInputName) { return { phone: 'phone' }; },
