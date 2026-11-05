@@ -151,6 +151,31 @@ p.lead strong { font-weight: 700; }
   .cal-buttons { flex-direction: row; flex-wrap: wrap; justify-content: center; }
   .btn { width: auto; min-width: 260px; max-width: none; font-size: 15px; }
 }
+
+/* ── Design wie /webinar-vip/: dunkler Hero mit Glow, abwechselnd hell/dunkel ── */
+.site-header { background: #0c2a20; border-bottom: 1px solid rgba(255,255,255,.1); }
+.site-header .wrap { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 16px 24px; }
+.site-header img { height: 24px; width: auto; display: block; }
+.header-info { font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #fff; text-align: right; }
+@media (max-width: 680px) {
+  .site-header .wrap { flex-direction: column; gap: 10px; padding: 14px 24px; }
+  .header-info { text-align: center; white-space: nowrap; font-size: clamp(8px, 2.9vw, 11px); letter-spacing: .03em; }
+}
+.s-beige.s-intro, .s-dark { background: radial-gradient(ellipse at top, #2a5644, transparent 62%), #0c2a20; color: #fff; }
+.s-beige.s-intro h1, .s-dark h2 { color: #fff; }
+.s-beige.s-intro .gold-text, .s-dark .gold-text { background-image: var(--gold-grad); }
+.s-dark p.lead { color: rgba(255,255,255,.88); }
+.s-dark .microtext { color: rgba(255,255,255,.7); }
+.s-beige { background: #faf6ee; }
+.s-tan { background: #f2eadd; }
+section.s-beige.s-intro { padding-top: 64px; padding-bottom: 72px; }
+.s-intro .video-wrap { border-radius: 18px; border: 1px solid rgba(201,162,77,.3); box-shadow: 0 20px 60px rgba(0,0,0,.35); }
+section.s-beige:not(.s-intro) { padding-top: 72px; }
+.site-footer { background: #092219; }
+@media (min-width: 900px) {
+  section.s-beige.s-intro { padding-top: 84px; padding-bottom: 100px; }
+  section.s-beige:not(.s-intro) { padding-top: 100px; }
+}
 </style>
 </head>
 <body>
@@ -160,6 +185,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
 <main class="page">
+
+  <!-- ── HEADER ── -->
+  <header class="site-header">
+    <div class="wrap">
+      <img src="../Bilder/Feminess-Logo-Gold.png" alt="Feminess">
+      <p class="header-info">ROOT to RISE · 15. November 2026 · 10–12 Uhr</p>
+    </div>
+  </header>
 
   <!-- ── TOP BANNER / FORTSCHRITT ── -->
   <div class="topbar">
