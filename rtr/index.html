@@ -334,6 +334,10 @@ h2.big-h2-end{margin:34px 0 0}
 .i-closing{--img:url("closing.webp");background-position:center}
 .i-closing.i-palm.bg-light{background-image:linear-gradient(180deg,rgba(245,239,229,.58),rgba(245,239,229,.7)),var(--img);background-size:cover;background-position:center}
 @media(max-width:800px){.i-closing.i-palm.bg-light{background-image:linear-gradient(180deg,rgba(245,239,229,.7) 0%,rgba(245,239,229,.34) 30%,rgba(245,239,229,.34) 55%,rgba(245,239,229,.72) 100%),var(--img);background-position:75% center}}
+.h2-final{font-size:clamp(2.6rem,5.4vw,5rem)}
+.quote.serif-q.one-life{font-size:clamp(2.1rem,4.4vw,3.4rem)}
+@media(max-width:800px){.h2-final{font-size:calc((100vw - 28px)/8.55);white-space:nowrap;margin-left:-8px;margin-right:-8px}
+.quote.serif-q.one-life{font-size:calc((100vw - 28px)/10.3);white-space:nowrap;margin-left:-8px;margin-right:-8px}}
 .i-palm .statement{background-image:linear-gradient(110deg,#B8923F 0%,#C9A24D 50%,#B8923F 100%)}
 .pcards{margin-top:0}
 .pcard{background:rgba(250,246,239,.74);color:var(--ink);border:1px solid rgba(255,255,255,.35);border-left:1px solid rgba(255,255,255,.35);border-radius:16px;box-shadow:none;padding:36px 30px 40px;max-width:none;flex:1 1 300px}
@@ -460,11 +464,11 @@ h2.big-h2-end{margin:34px 0 0}
 <section class="section dark bg bg-dark i-spheresilk final-sec">
   <div class="wrap"><div class="narrow center">
     <div class="eyebrow">Noch ein letzter Gedanke</div>
-    <h2>Du wirst nicht jünger.<br>Deine Wünsche auch nicht.</h2>
+    <h2 class="h2-final"><span class="l1">Du wirst nicht jünger.</span><br><span class="l2">Deine Wünsche auch nicht.</span></h2>
     <p class="lead">Du hast heute gesehen, was möglich wäre.</p>
     <p class="lead">Jetzt kannst du wieder warten, bis irgendwann alles passt.</p>
     <p class="lead">Oder du entscheidest, dass dein Leben nicht länger auf irgendwann warten muss.</p>
-    <p class="quote serif-q wh" style="margin-top:34px;margin-bottom:0">Du hast nur dieses eine Leben.</p>
+    <p class="quote serif-q wh one-life" style="margin-top:34px;margin-bottom:0">Du hast nur dieses eine Leben.</p>
     <p class="statement script-line sl-hot">Wie hot soll es werden?</p>
     <a class="btn" href="#checkout">Yes. Ab jetzt!</a>
   </div></div>
